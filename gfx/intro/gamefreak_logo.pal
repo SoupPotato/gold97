@@ -1,0 +1,23 @@
+; Ditto's color as it turns into the Game Freak logo.
+; Fade from pink to orange.
+; One color per step.
+
+	RGB 20, 15, 00
+	RGB 20, 15, 00
+	RGB 20, 15, 00
+	RGB 20, 15, 00
+
+	RGB 20, 15, 00
+	RGB 20, 15, 00
+	RGB 20, 15, 00
+	RGB 20, 15, 00
+
+	RGB 20, 15, 00
+	RGB 20, 15, 00
+	RGB 20, 15, 00
+	RGB 20, 15, 00
+
+	RGB 20, 15, 00
+	RGB 20, 15, 00
+	RGB 20, 15, 00
+	RGB 20, 15, 00

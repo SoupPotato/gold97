@@ -1,0 +1,25 @@
+language: c
+os:
+  - linux
+  - osx
+install:
+  - |-
+    path="$(pwd)"; cd;
+    git clone https://github.com/rednex/rgbds &&
+    cd rgbds &&
+    sudo make install && 
+    cd - && 
+    rm -rf rgbds && 
+    cd "$path"
+before_script:
+  - |-
+    function check_status() {
+      if ! git diff-index --quiet --ignore-submodules=all HEAD --; then
+        echo 'Uncommitted changes detected:';
+        git diff-index HEAD --;
+        return 1;
+      fi;
+    }
+script:
+  - make -j2 compare
+  - check_status

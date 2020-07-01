@@ -1,0 +1,44 @@
+1.14
+- fixed typo when trying to enter battle club without battle pass
+- gave curstraw/curpan curse via level-up
+- removed unneeded data for crystal exclusive movesets
+- all pokemon that should be able to can now learn toxic
+2.0
+- new type chart, option to return to final game chart
+- changed typings for many beta pokemon to match the demo
+- revamped movesets for many pokemon more closely inspired by the demo
+2.01
+- minor fixes
+2.02
+- fixed bugged tilesets for several cave maps
+- removed all instances of Flail and Reversal from level-up movesets- those moves don't calculate damage correctly since editing the type chart, don't know how to fix it yet, only affects a few pokemon
+2.03
+- fixed a few typos 
+- changed menu options for type chart to "SW97" and "FINAL"
+- reduced encounter level of Mew from 10 to 5, so the wild Mew won't know Transform yet, which causes the game to treat it as if it was a Ditto when caught
+2.04
+- fixed a few typos
+2.05
+- fixed a few typos
+- made clock reset easier, just hold down+b+select on title screen
+- added brightpowder item to zapdos room
+2.10
+- fixed warp points for Marts in Blue Forest and Nutype City
+- replaced female rocket grunt and officer trainer sprites with sprites from new beta assets
+- added text for bookshelves and computer in honto ruins lab
+- redesigned Falkner's gym to match beta assets
+- tweaked shading and design for sage and pokefan trainer sprites
+- fixed a few tileset issues for kanto map and West City
+- added text to West City Docks clarifying player to return after defeating Bugsy
+- added arrows pointing to the entrance of Silent Hills
+- added new text for trainer in Silent Town pokecenter after Time Capsule opens
+3.00
+- Difficulty curve adjustment! The biggest thing people have asked for. Many trainers in the 2nd half of the game have difficulty adjustments.
+- fixed some dialogue for phone calls on trivia about Bill
+- Qwilfish learns thunder wave at level 12 instead of 10 so it isn't at the same time as water gun
+- added text to empty trash can in team rocket boat
+- boardwalk is built now as soon as slowpoke well event is complete, doesn't require stepping onto route 116
+- slightly adjusted stats for Numbpuff, Aquarius
+- a few minor item ball placement changes
+
+I think I'm about done making changes to this for now. Will still fix any minor bugs that are found but I believe it's feature complete at this point. Maybe I'll come back to it in the future, pretty happy with what I've made though.

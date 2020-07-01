@@ -1,0 +1,81 @@
+; BG
+	RGB 31, 31, 31
+	RGB 29, 26, 19
+	RGB 30, 19, 10
+	RGB 00, 00, 00
+; suicune color above
+	RGB 31, 31, 31
+	RGB 29, 26, 19
+	RGB 24, 20, 10
+	RGB 00, 00, 00
+; crystal version text above
+	RGB 31, 31, 31
+	RGB 29, 26, 19
+	RGB 24, 20, 10
+	RGB 00, 00, 00
+; top part of pokemon logo
+	RGB 31, 31, 31
+	RGB 29, 26, 19
+	RGB 24, 20, 10
+	RGB 00, 00, 00
+
+	RGB 31, 31, 31
+	RGB 29, 26, 19
+	RGB 24, 20, 10
+	RGB 00, 00, 00
+
+	RGB 31, 31, 31
+	RGB 29, 26, 19
+	RGB 24, 20, 10
+	RGB 00, 00, 00
+
+	RGB 31, 31, 31
+	RGB 29, 26, 19
+	RGB 24, 20, 10
+	RGB 00, 00, 00
+
+	RGB 31, 31, 31
+	RGB 29, 26, 19
+	RGB 24, 20, 10
+	RGB 00, 00, 00
+
+; OBJ
+	RGB 31, 31, 31
+	RGB 31, 31, 31
+	RGB 31, 31, 31
+	RGB 31, 31, 31
+; crystal color above
+	RGB 31, 31, 31
+	RGB 00, 00, 00
+	RGB 00, 00, 00
+	RGB 00, 00, 00
+
+	RGB 31, 31, 31
+	RGB 00, 00, 00
+	RGB 00, 00, 00
+	RGB 00, 00, 00
+
+	RGB 31, 31, 31
+	RGB 00, 00, 00
+	RGB 00, 00, 00
+	RGB 00, 00, 00
+
+	RGB 31, 31, 31
+	RGB 00, 00, 00
+	RGB 00, 00, 00
+	RGB 00, 00, 00
+
+	RGB 31, 31, 31
+	RGB 00, 00, 00
+	RGB 00, 00, 00
+	RGB 00, 00, 00
+
+	RGB 31, 31, 31
+	RGB 00, 00, 00
+	RGB 00, 00, 00
+	RGB 00, 00, 00
+
+	RGB 31, 31, 31
+	RGB 00, 00, 00
+	RGB 00, 00, 00
+	RGB 00, 00, 00
