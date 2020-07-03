@@ -2382,13 +2382,14 @@ CruiseEvosAttacks:
 	db 1, GROWL
 	db 7, BUBBLE
 	db 10, MIST
-	db 16, POWDER_SNOW
-	db 19, SWIFT
+	db 13, WATER_GUN
+	db 19, POWDER_SNOW
+	db 22, SWIFT
 	db 25, BUBBLEBEAM
-	db 28, SAFEGUARD
+	db 31, SAFEGUARD
 	db 34, AURORA_BEAM
-	db 39, BODY_SLAM
-	db 45, HYDRO_PUMP
+	db 37, BODY_SLAM
+	db 43, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 AqualloEvosAttacks:
@@ -2400,13 +2401,14 @@ AqualloEvosAttacks:
 	db 1, MIST
 	db 7, BUBBLE
 	db 10, MIST
-	db 16, POWDER_SNOW
-	db 21, SWIFT
-	db 27, BUBBLEBEAM
-	db 32, SAFEGUARD
-	db 38, AURORA_BEAM
-	db 45, BODY_SLAM
-	db 51, HYDRO_PUMP
+	db 13, WATER_GUN
+	db 20, POWDER_SNOW
+	db 24, SWIFT
+	db 28, BUBBLEBEAM
+	db 35, SAFEGUARD
+	db 39, AURORA_BEAM
+	db 43, BODY_SLAM
+	db 50, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 AquariusEvosAttacks:
@@ -2417,14 +2419,14 @@ AquariusEvosAttacks:
 	db 1, MIST
 	db 7, BUBBLE
 	db 10, MIST
-	db 16, POWDER_SNOW
-	db 21, SWIFT
-	db 27, BUBBLEBEAM
-	db 32, SAFEGUARD
-	db 36, CONFUSE_RAY
-	db 43, AURORA_BEAM
-	db 50, BODY_SLAM
-	db 57, HYDRO_PUMP
+	db 13, WATER_GUN
+	db 20, POWDER_SNOW
+	db 24, SWIFT
+	db 28, BUBBLEBEAM
+	db 36, SAFEGUARD
+	db 41, AURORA_BEAM
+	db 46, BODY_SLAM
+	db 54, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 TangEvosAttacks:
@@ -3267,14 +3269,16 @@ CurstrawEvosAttacks:
 	db 1, TACKLE
 	db 1, PSYWAVE
 	db 6, SPITE
-	db 11, CONFUSE_RAY
+	db 10, FAINT_ATTACK
 	db 15, CURSE
 	db 19, MEAN_LOOK
-	db 25, PSYBEAM
-	db 30, BODY_SLAM
-	db 36, PAIN_SPLIT
-	db 42, PERISH_SONG
+	db 24, PSYBEAM
+	db 28, CONFUSE_RAY
+	db 33, BODY_SLAM
+	db 37, PAIN_SPLIT
+	db 42, SHADOW_BALL
 	db 46, TAKE_DOWN
+	db 50, PERISH_SONG
 	db 0 ; no more level-up moves
 
 CurpanEvosAttacks:
@@ -3282,15 +3286,18 @@ CurpanEvosAttacks:
 	db 1, GROWL
 	db 1, TACKLE
 	db 1, PSYWAVE
-	db 7, SPITE
-	db 14, CONFUSE_RAY
-	db 19, CURSE
-	db 21, MEAN_LOOK
-	db 27, PSYBEAM
-	db 32, BODY_SLAM
-	db 39, PAIN_SPLIT
-	db 45, PERISH_SONG
-	db 49, TAKE_DOWN
+	db 6, SPITE
+	db 10, FAINT_ATTACK
+	db 15, CURSE
+	db 19, MEAN_LOOK
+	db 24, PSYBEAM
+	db 28, CONFUSE_RAY
+	db 29, CRUNCH
+	db 35, BODY_SLAM
+	db 43, PAIN_SPLIT
+	db 50, SHADOW_BALL
+	db 58, TAKE_DOWN
+	db 65, PERISH_SONG
 	db 0 ; no more level-up moves
 
 GrowliteEvosAttacks:

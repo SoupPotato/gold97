@@ -49,17 +49,6 @@ TrainerSchoolboyTommy:
 	closetext
 	end
 
-TrainerSchoolboyJohnny:
-	trainer SCHOOLBOY, JOHNNY, EVENT_BEAT_SCHOOLBOY_JOHNNY, SchoolboyJohnnySeenText, SchoolboyJohnnyBeatenText, 0, .Script
-
-.Script:
-	endifjustbattled
-	opentext
-	writetext SchoolboyJohnnyAfterBattleText
-	waitbutton
-	closetext
-	end
-
 TrainerSchoolboyBilly:
 	trainer SCHOOLBOY, BILLY, EVENT_BEAT_SCHOOLBOY_BILLY, SchoolboyBillySeenText, SchoolboyBillyBeatenText, 0, .Script
 
@@ -129,31 +118,6 @@ SchoolboyTommyBeatenText:
 	line "homework!"
 	done
 
-SchoolboyTommyAfterBattleText:
-	text "Sayonara! I just"
-	line "learned that in my"
-	cont "Japanese class."
-	done
-
-SchoolboyJohnnySeenText:
-	text "We're on a field"
-	line "trip to LAVENDER"
-
-	para "RADIO TOWER for"
-	line "social studies."
-	done
-
-SchoolboyJohnnyBeatenText:
-	text "You're wickedly"
-	line "tough!"
-	done
-
-SchoolboyJohnnyAfterBattleText:
-	text "I'm tired of walk-"
-	line "ing. I need to"
-	cont "take a break."
-	done
-
 SchoolboyBillySeenText:
 	text "My favorite class"
 	line "is gym!"
@@ -165,6 +129,12 @@ SchoolboyBillyBeatenText:
 	done
 
 SchoolboyBillyAfterBattleText:
+	text "If #MON were a"
+	line "subject at school,"
+	cont "I'd be the best!"
+	done
+	
+SchoolboyTommyAfterBattleText:
 	text "If #MON were a"
 	line "subject at school,"
 	cont "I'd be the best!"
@@ -189,10 +159,9 @@ Route15_MapEvents:
 	db 1 ; bg events
 	bg_event 19,  9, BGEVENT_READ, Route15Sign
 
-	db 6 ; object events
+	db 5 ; object events
 	object_event 10, 10, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerSchoolboyKipp, -1
 	object_event 15, 13, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSchoolboyTommy, -1
-	object_event 33, 10, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSchoolboyJohnny, -1
 	object_event 27, 10, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSchoolboyBilly, -1
 	object_event 20, 10, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerTeacherHillary, -1
 	object_event 12,  5, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route15PPUp, EVENT_ROUTE_15_PP_UP

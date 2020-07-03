@@ -12,34 +12,75 @@ KurtsHouse_MapScripts:
 	callback MAPCALLBACK_OBJECTS, .KurtCallback
 	
 .SceneFalknerVisit
-	applymovement PLAYER, WalkUpToFalkner
-	showemote EMOTE_SHOCK, KURTSHOUSE_FALKNER, 15
-	applymovement KURTSHOUSE_FALKNER, FalknerWalksToYou
-	opentext
-	writetext FalknerGreets
-	waitbutton
-	closetext
-	applymovement KURTSHOUSE_FALKNER, FalknerLeaves
-	playsound SFX_EXIT_BUILDING
-	disappear KURTSHOUSE_FALKNER
-	clearevent EVENT_VIOLET_GYM_FALKNER
-	pause 15
+	checkevent EVENT_GOT_5F_SAGE_BLESSING
+	iftrue .Falknerapproves
+	checkevent EVENT_FALKNER_AT_GYM
+	iftrue .SceneKurtsHouseNothing
+	checkevent EVENT_TALKED_TO_KURT_AND_FALKNER
+	iftrue .SceneKurtsHouseNothing
+	setevent EVENT_TALKED_TO_KURT_AND_FALKNER
 	applymovement PLAYER, WalkUpToKurt
-	pause 15
 	opentext
 	writetext KurtTalks
 	waitbutton
 	closetext
+	turnobject KURTSHOUSE_KURT1, RIGHT
+	opentext
+	writetext KurttoFalkner
+	waitbutton
+	closetext
+	turnobject KURTSHOUSE_FALKNER, LEFT
+	pause 15
+	applymovement KURTSHOUSE_FALKNER, FalknerWalksToYou
+	turnobject PLAYER, RIGHT
+	turnobject KURTSHOUSE_KURT1, DOWN
+	faceplayer
+	opentext
+	writetext FalknerTalks
+	waitbutton
+	closetext
+	applymovement KURTSHOUSE_FALKNER, FalknerWalksBack
+	pause 15
+	applymovement PLAYER, WalkAway
+	end
 	
+.Falknerapproves
+	applymovement PLAYER, WalkUpToKurt
+	turnobject KURTSHOUSE_FALKNER, DOWN
+	showemote EMOTE_SHOCK, KURTSHOUSE_FALKNER, 15
+	applymovement KURTSHOUSE_FALKNER, FalknerWalksToYou
+	turnobject PLAYER, RIGHT
+	opentext
+	writetext FalknerTalks2
+	waitbutton
+	closetext	
+	turnobject PLAYER, DOWN
+	applymovement KURTSHOUSE_FALKNER, FalknerLeaves
+	playsound SFX_EXIT_BUILDING
+	disappear KURTSHOUSE_FALKNER
+	setevent EVENT_FALKNER_AT_GYM
+	pause 15
+	turnobject PLAYER, UP
+	opentext
+	writetext KurtICanMakeBalls
+	waitbutton	
+	verbosegiveitem LURE_BALL
+	iffalse .NoRoomForLureBall
+	closetext
+	setevent EVENT_KURT_GAVE_YOU_LURE_BALL
 	setscene SCENE_KURTS_HOUSE_NOTHING
+	end
+	
+.NoRoomForLureBall:
+	closetext
 	end
 	
 .SceneKurtsHouseNothing:
 	end
 
 .KurtCallback:
-	checkevent EVENT_GOT_5F_SAGE_BLESSING
-	iffalse .Done
+	checkevent EVENT_FALKNER_AT_GYM
+	iftrue .Falknergone
 	checkflag ENGINE_KURT_MAKING_BALLS
 	iftrue .MakingBalls
 	disappear KURTSHOUSE_KURT2
@@ -49,48 +90,16 @@ KurtsHouse_MapScripts:
 .MakingBalls:
 	disappear KURTSHOUSE_KURT1
 	appear KURTSHOUSE_KURT2
-.Done:
+.Falknergone:
+	disappear KURTSHOUSE_FALKNER
 	return
+
 
 Kurt1:
 	faceplayer
 	opentext
-	checkevent EVENT_KURT_GAVE_YOU_LURE_BALL
-	iftrue .GotLureBall
 	checkevent EVENT_GOT_5F_SAGE_BLESSING
-	iftrue .GotBlessing
-	writetext UnknownText_0x18e473
-	waitbutton
-	closetext
-;	special FadeOutMusic
-;	setevent EVENT_AZALEA_TOWN_SLOWPOKETAIL_ROCKET
-;	checkcode VAR_FACING
-;	ifequal UP, .RunAround
-;	turnobject PLAYER, DOWN
-;	playsound SFX_FLY
-;	applymovement KURTSHOUSE_KURT1, MovementData_0x18e466
-;	playsound SFX_EXIT_BUILDING
-;	disappear KURTSHOUSE_KURT1
-;	waitsfx
-;	special RestartMapMusic
-	end
-
-;.RunAround:
-;	turnobject PLAYER, DOWN
-;	playsound SFX_FLY
-;	applymovement KURTSHOUSE_KURT1, MovementData_0x18e46c
-;	playsound SFX_EXIT_BUILDING
-;	disappear KURTSHOUSE_KURT1
-;	waitsfx
-;	special RestartMapMusic
-;	end
-
-.GotBlessing:
-	writetext UnknownText_0x18e615
-	buttonsound
-	verbosegiveitem LURE_BALL
-	iffalse .NoRoomForBall
-	setevent EVENT_KURT_GAVE_YOU_LURE_BALL
+	iffalse .notdonetower
 .GotLureBall:
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	iftrue .WaitForApricorns
@@ -108,9 +117,6 @@ Kurt1:
 	iftrue .GiveHeavyBall
 	checkevent EVENT_GAVE_KURT_PNK_APRICORN
 	iftrue .GiveLoveBall
-	checkevent EVENT_CAN_GIVE_GS_BALL_TO_KURT
-	iftrue .CanGiveGSBallToKurt
-.NoGSBall:
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
 	iftrue .CheckApricorns
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_3
@@ -136,6 +142,12 @@ Kurt1:
 	iftrue .ThatTurnedOutGreat
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_3
 	iftrue .IMakeBallsFromApricorns
+	closetext
+	end
+	
+.notdonetower
+	writetext KurtHeadToTower
+	waitbutton
 	closetext
 	end
 
@@ -279,64 +291,9 @@ Kurt1:
 	clearevent EVENT_GAVE_KURT_PNK_APRICORN
 	jump ._ThatTurnedOutGreat
 
-.CanGiveGSBallToKurt:
-	checkevent EVENT_GAVE_GS_BALL_TO_KURT
-	iftrue .GaveGSBallToKurt
-	checkitem GS_BALL
-	iffalse .NoGSBall
-	writetext UnknownText_0x18e8ab
-	waitbutton
-	closetext
-	setevent EVENT_GAVE_GS_BALL_TO_KURT
-	takeitem GS_BALL
-	setflag ENGINE_KURT_MAKING_BALLS
-	end
-
-.GaveGSBallToKurt:
-	checkflag ENGINE_KURT_MAKING_BALLS
-	iffalse .NotMakingBalls
-	writetext UnknownText_0x18e934
-	waitbutton
-	writetext UnknownText_0x18e949
-	waitbutton
-	closetext
-	end
-
-.NotMakingBalls:
-	writetext UnknownText_0x18e95c
-	waitbutton
-	closetext
-	setevent EVENT_FOREST_IS_RESTLESS
-	clearevent EVENT_CAN_GIVE_GS_BALL_TO_KURT
-	clearevent EVENT_GAVE_GS_BALL_TO_KURT
-	special FadeOutMusic
-	pause 20
-	showemote EMOTE_SHOCK, KURTSHOUSE_KURT1, 30
-	checkcode VAR_FACING
-	ifequal UP, .GSBallRunAround
-	turnobject PLAYER, DOWN
-	playsound SFX_FLY
-	;applymovement KURTSHOUSE_KURT1, MovementData_0x18e466
-	jump .KurtHasLeftTheBuilding
-
-.GSBallRunAround:
-	turnobject PLAYER, DOWN
-	playsound SFX_FLY
-	applymovement KURTSHOUSE_KURT1, MovementData_0x18e46c
-.KurtHasLeftTheBuilding:
-	playsound SFX_EXIT_BUILDING
-	disappear KURTSHOUSE_KURT1
-	clearevent EVENT_AZALEA_TOWN_KURT
-	waitsfx
-	special RestartMapMusic
-	setmapscene AZALEA_TOWN, SCENE_AZALEATOWN_KURT_RETURNS_GS_BALL
-	end
-
 Kurt2:
 	faceplayer
 	opentext
-	checkevent EVENT_GAVE_GS_BALL_TO_KURT
-	iftrue KurtScript_ImCheckingItNow
 KurtMakingBallsScript:
 	checkevent EVENT_BUGGING_KURT_TOO_MUCH
 	iffalse Script_FirstTimeBuggingKurt
@@ -354,19 +311,12 @@ Script_FirstTimeBuggingKurt:
 	setevent EVENT_BUGGING_KURT_TOO_MUCH
 	end
 
-KurtScript_ImCheckingItNow:
-	writetext UnknownText_0x18e934
-	waitbutton
-	turnobject KURTSHOUSE_KURT2, UP
-	writetext UnknownText_0x18e949
+Falkner:
+	faceplayer
+	opentext
+	writetext FalknerNotDoneTower
 	waitbutton
 	closetext
-	end
-
-
-
-
-Falkner:
 	end
 
 KurtsHouseOakPhoto:
@@ -382,25 +332,32 @@ KurtsHouseRadio:
 	jumpstd radio2
 	
 WalkUpToKurt:
+	step UP
+	step UP
 	step RIGHT
 	step UP
-	step_end
-
-WalkUpToFalkner:
-	slow_step UP
-	slow_step UP
+	step UP
 	step_end
 	
 FalknerWalksToYou:
+	step DOWN
 	step LEFT
-	turn_head DOWN
+	step_end
+	
+FalknerWalksBack:
+	step RIGHT
+	step UP
 	step_end
 	
 FalknerLeaves:
-	step RIGHT
+	step DOWN
+	step LEFT
 	step DOWN
 	step DOWN
 	step DOWN
+	step_end
+	
+WalkAway:
 	step DOWN
 	step_end
 
@@ -412,29 +369,6 @@ MovementData_0x18e46c:
 	big_step DOWN
 	big_step DOWN
 	step_end
-
-UnknownText_0x18e473:
-	text "Climb the 5 FLOOR"
-	line "TOWER."
-	para "It is a great test"
-	line "of your potential"
-	cont "as a trainer."
-	done
-
-UnknownText_0x18e615:
-	text "You have learned"
-	line "of the ways of"
-	cont "#MON."
-	para "I would be honored"
-	line "to provide"
-	cont "assistance to you."
-	para "I can build"
-	line "#BALLS. Special"
-	para "custom ones that"
-	line "may prove useful."
-	para "Here, I'll give"
-	line "one to you now."
-	done
 
 UnknownText_0x18e6c9:
 	text "KURT: I make BALLS"
@@ -497,49 +431,6 @@ UnknownText_0x18e863:
 	cont "to be able to."
 	done
 
-UnknownText_0x18e8ab:
-	text "Wh-what is that?"
-
-	para "I've never seen"
-	line "one before."
-
-	para "It looks a lot"
-	line "like a # BALL,"
-
-	para "but it appears to"
-	line "be something else."
-
-	para "Let me check it"
-	line "for you."
-	done
-
-UnknownText_0x18e934:
-	text "I'm checking it"
-	line "now."
-	done
-
-UnknownText_0x18e949:
-	text "Ah-ha! I see!"
-	line "So…"
-	done
-
-UnknownText_0x18e95c:
-	text "<PLAYER>!"
-
-	para "This BALL started"
-	line "to shake while I"
-	cont "was checking it."
-
-	para "There must be"
-	line "something to this!"
-	done
-
-
-
-KurtsHouseSlowpokeText:
-	text "SLOWPOKE: …"
-	line "Yawn?"
-	done
 
 KurtsHouseOakPhotoText:
 	text "It's KURT standing"
@@ -555,115 +446,124 @@ KurtsHouseLeafeonStatueText:
 	cont "tector."
 	done
 	
-FalknerGreets:
-	text "FALKNER: Well who"
-	line "might you be?"
-	para "<PLAY_G>, hm?"
-	line "What brings you"
-	cont "here?"
-	para "Well, I'm sure"
-	line "it's because I'm"
-	para "not where I should"
-	line "be right now."
-	para "I'll get on back"
-	line "to the GYM so you"
-	para "can challenge me"
-	line "for a badge."
-	para "…"
-	para "Hm?"
-	para "You're not taking"
-	line "the #MON LEAGUE"
-	cont "challenge?"
-	para "What brings you"
-	line "to OLD CITY then?"
-	para "…"
-	para "Wow, it's very"
-	line "impressive that"
-	para "PROF.OAK has asked"
-	line "you to go out and"
-	para "help him research"
-	line "#MON."
-	para "But I see the"
-	line "glimmer in your"
-	cont "eye!"
-	para "You look like you"
-	line "might have what it"
-	para "takes to challenge"
-	line "me to a battle."
-	para "If you feel the"
-	line "urge to start your"
-	para "own LEAGUE"
-	line "challenge,"
-	para "feel free to stop"
-	line "by to take me on!"
-	para "You should talk"
-	line "about it with my"
-	cont "friend KURT here."
-	para "KURT has always"
-	line "been great at"
-	para "seeing the"
-	line "potential in"
-	cont "trainers."
-	para "Anyways, I'll be"
-	line "on my way now."
-	para "I hope I'll be"
-	line "seeing you soon!"
-	
+FalknerNotDoneTower:
+	text "Receive the"
+	line "ELDER's blessing"
+	cont "and then I will"
+	cont "accept your"
+	cont "challenge."	
 	done
 	
 KurtTalks:
-	text "KURT: I could tell"
-	line "when you walked"
-	cont "in the room."
-	para "You have great"
-	line "potential as a"
-	cont "trainer."
-	para "FALKNER could tell"
-	line "as well."
-	para "And your mission"
-	line "to help PROF.OAK"
-	cont "is admirable."
-	para "I strongly suggest"
-	line "you take the"
-	para "LEAGUE challenge"
-	line "while traveling."
-	para "It's a great"
-	line "opportunity for"
-	para "trainers to build"
-	line "the bond between"
-	para "them and their"
-	line "#MON."
-	para "But apart from"
-	line "that, I want to"
-	para "help you with your"
-	line "research by"
-	para "providing you with"
-	line "something that can"
-	para "help you catch"
-	line "#MON."
-	para "But I request that"
-	line "you prove yourself"
-	cont "first."
-	para "OLD CITY's 5 FLOOR"
-	line "TOWER is a sacred"
-	para "place where I"
-	line "spent many years"
-	para "strengthening my"
-	line "understanding of"
-	para "the relationship"
-	line "between people and"
-	cont "#MON."
-	para "I ask that you"
-	line "climb this tower."
-	para "There are lessons"
-	line "to be learned"
-	para "on each floor of"
-	line "the tower."
-	para "Make sure you take"
-	line "time to understand"
-	cont "them as you climb."
-	para "Do this, then"
-	line "return to me."
+	text "KURT: Hmm?"
+	para "<PLAY_G>,"
+	line "I presume?"
+	
+	para "PROF.OAK told me"
+	line "you would be"
+	cont "coming."
+		
+	para "That old coot"
+	line "always acts before"
+	cont "he thinks..."
+	
+	para "Anyhow, OAK has"
+	line "said good things"
+	cont "about you..."
+	cont "So that's all I"
+	cont "need to know."
+	
+	para "The best way to"
+	line "complete the"
+	cont "POKEDEX would be"
+	cont "to take the"
+	cont "#MON league"
+	cont "challenge."
+	
+	para "There are many"
+	line "GYMs across NIHON"
+
+	para "and taking on each"
+	line "one will be a"
+	cont "difficult task."
+	done
+	
+KurttoFalkner:
+	text "FALKNER here"
+	line "happens to own the"
+	cont "GYM in this town."
+	done
+	
+FalknerTalks:	
+	text "FALKNER: Well who"
+	line "might you be?"
+	
+	para "<PLAY_G>, hm?"
+	line "What brings you"
+	cont "here?"
+	
+	para "..."
+	
+	para "Ah, so you're tak"
+	line "-ing the #MON"
+	cont "League Challenge."
+	
+	para "My name is"
+	line "FALKNER."
+	
+	para "I'm the GYM LEADER"
+	line "of this town."
+	
+	para "If you wish to cha"
+	line "-llenge me, you"
+	cont "must first prove"
+	cont "yourself at the"
+	cont "5 FLOOR TOWER."
+	
+	para "If you receive the"
+	line "ELDER's blessing,"
+	cont "I will accept your"
+	cont "challenge."	
+	done
+	
+FalknerTalks2:
+	text "FALKNER: Oh good,"
+	line "The ELDER has"
+	cont "given you his"
+	cont "blessing."
+	
+	para "Very well, I"
+	line "accept your chal"
+	cont "-lenge."
+	
+	para "I shall return to"
+	line "the GYM and await"
+	cont "for your arrival."
+	done
+	
+KurtHeadToTower:
+	text "Head to the"
+	line "TOWER."
+	
+	para "It is north"
+	line "from here."
+	done
+
+	
+KurtICanMakeBalls:
+	text "Well done com-"
+	line "pleting the tower."
+	
+	para "OAK was right"
+	line "about you..."
+	
+	para "So I will make"
+	line "special #BALLs"
+	cont "for you if you"
+	cont "bring me APRICORN."
+	
+	para "Here, I'll give"
+	line "one to you now."
 	done
 
 KurtsHouse_MapEvents:
@@ -675,16 +575,10 @@ KurtsHouse_MapEvents:
 
 	db 0 ; coord events
 
-	db 7 ; bg events
-	bg_event  6,  0, BGEVENT_READ, KurtsHouseRadio
-	bg_event 14,  0, BGEVENT_READ, KurtsHouseOakPhoto
-	bg_event 15,  0, BGEVENT_READ, KurtsHouseOakPhoto
+	db 1 ; bg events
 	bg_event  5,  1, BGEVENT_READ, KurtsHouseBookshelf
-	bg_event  2,  0, BGEVENT_READ, KurtsHouseBookshelf
-	bg_event  3,  0, BGEVENT_READ, KurtsHouseBookshelf
-	bg_event  7,  0, BGEVENT_READ, KurtsHouseLeafeonStatue
 
 	db 3 ; object events
 	object_event  4,  2, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Kurt1, EVENT_KURTS_HOUSE_KURT_1
 	object_event 15,  4, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Kurt2, EVENT_KURTS_HOUSE_KURT_2
-	object_event  4,  3, SPRITE_FALKNER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Falkner, EVENT_KURTS_HOUSE_FALKNER
+	object_event  6,  2, SPRITE_FALKNER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Falkner, EVENT_KURTS_HOUSE_FALKNER

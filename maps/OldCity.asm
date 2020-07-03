@@ -1,5 +1,4 @@
 	const_def 2 ; object constants
-;	const OldCity_EARL
 	const OldCity_LASS
 	const OldCity_SUPER_NERD
 	const OldCity_GRAMPS
@@ -7,17 +6,29 @@
 	const OldCity_FRUIT_TREE
 	const OldCity_POKE_BALL1
 	const OldCity_POKE_BALL2
+	const OldCity_GRAMPS2
+	const OldCity_GUARD1
+	const OldCity_GUARD2
 
 OldCity_MapScripts:
 	db 0 ; scene scripts
 
-	db 1 ; callbacks
+	db 2 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
+	callback MAPCALLBACK_OBJECTS, .grampsgone
 
 .FlyPoint:
 	setflag ENGINE_FLYPOINT_VIOLET
 	return
-
+	
+.grampsgone
+	checkevent EVENT_TALKED_TO_KURT_AND_FALKNER
+	iftrue .gone
+	return
+	
+.gone
+	disappear OldCity_GRAMPS2
+	return
 
 OldCityLassScript:
 	jumptextfaceplayer OldCityLassText
@@ -27,6 +38,12 @@ OldCitySuperNerdScript:
 
 OldCityGrampsScript:
 	jumptextfaceplayer OldCityGrampsText
+	
+OldCityGrampsScript2:
+	jumptextfaceplayer OldCityGramps2Text
+	
+OldCityGuard:
+	jumptextfaceplayer OldCityGuardText
 
 OldCityYoungsterScript:
 	jumptextfaceplayer OldCityYoungsterText
@@ -121,15 +138,37 @@ OldCityGrampsText:
 	line "in parades and"
 	cont "other events."
 	done
+	
+OldCityGramps2Text:
+	text "I'm sorry..."
+	para "The TOWER is being"
+	line "cleaned right now."
+
+	para "Please come back"
+	line "later."
+	done
+	
+OldCityGuardText:
+	text "The GYM LEADER"
+	para "is absent right"
+	line "now."
+
+	para "Please come back"
+	line "later."
+	done
 
 OldCityYoungsterText:
 	text "Behind me is the"
 	line "5 FLOOR TOWER!"
-	para "But getting to it"
-	line "can be difficult"
-	para "because of this"
-	line "tree that's in the"
-	cont "way."
+	
+	para "Many trainers try"
+	line "to climb it to get"
+	cont "the ELDER's bles"
+	cont "-sing."
+	
+	para "Without it, you"
+	line "cant challenge the"
+	cont "GYM."
 	done
 
 OldCitySignText:
@@ -211,3 +250,4 @@ OldCity_MapEvents:
 	object_event 17, 17, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OldCityFruitTree, -1
 	object_event 16,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, OldCityPPUp, EVENT_OLD_CITY_PP_UP
 	object_event 23,  5, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, OldCityRareCandy, EVENT_OLD_CITY_RARE_CANDY
+	object_event  9, 19, SPRITE_GRAMPS, SPRITEMOVEDATA_STILL, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, OldCityGrampsScript2, 0

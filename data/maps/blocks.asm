@@ -130,9 +130,6 @@ Route30_Blocks:
 Route26_Blocks:
 	INCBIN "maps/Route26.blk"
 
-Route42_Blocks:
-	INCBIN "maps/Route42.blk"
-
 Route34_Blocks:
 	INCBIN "maps/Route34.blk"
 
@@ -277,7 +274,6 @@ Route39_Blocks:
 PlayersHouse1F_Blocks:
 	INCBIN "maps/PlayersHouse1F.blk"
 
-Route42EcruteakGate_Blocks:
 Route32RuinsOfAlphGate_Blocks:
 IlexForestAzaleaGate_Blocks:
 Route7SaffronGate_Blocks:

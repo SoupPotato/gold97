@@ -41,6 +41,12 @@ JohtoWaterWildMons:
 	db 18, MARILL
 	db 18, SEAKING
 	
+	map_id ROUTE_8
+	db 6 percent ; encounter rate
+	db 15, GOLDEEN
+	db 18, POLIWAG
+	db 18, MARILL
+	
 	map_id ROUTE_43
 	db 6 percent ; encounter rate
 	db 15, GOLDEEN

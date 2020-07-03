@@ -39,7 +39,7 @@ PhoneContacts:
 	phone LASS,         DANA1,              ROUTE_38,         ANYTIME, DanaPhoneScript1,    ANYTIME, DanaPhoneScript2
 	phone SCHOOLBOY,    CHAD1,              ROUTE_38,         ANYTIME, ChadPhoneScript1,    ANYTIME, ChadPhoneScript2
 	phone POKEFANM,     DEREK1,             ROUTE_39,         ANYTIME, DerekPhoneScript1,   ANYTIME, DerekPhoneScript2
-	phone FISHER,       TULLY1,             ROUTE_42,         ANYTIME, TullyPhoneScript1,   ANYTIME, TullyPhoneScript2
+	phone FISHER,       TULLY1,             ROUTE_8,          ANYTIME, TullyPhoneScript1,   ANYTIME, TullyPhoneScript2
 	phone POKEMANIAC,   BRENT1,             ROUTE_43,         ANYTIME, BrentPhoneScript1,   ANYTIME, BrentPhoneScript2
 	phone PICNICKER,    TIFFANY3,           ROUTE_43,         ANYTIME, TiffanyPhoneScript1, ANYTIME, TiffanyPhoneScript2
 	phone BIRD_KEEPER,  VANCE1,             ROUTE_44,         ANYTIME, VancePhoneScript1,   ANYTIME, VancePhoneScript2

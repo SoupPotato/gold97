@@ -306,36 +306,18 @@ MediumDorisAfterBattleText:
 EcruteakGym_MapEvents:
 	db 0, 0 ; filler
 
-	db 33 ; warp events
+	db 15 ; warp events
 	warp_event  2,  9, AZALEA_TOWN, 5
 	warp_event  3,  9, AZALEA_TOWN, 9
 	warp_event  2,  7, ECRUTEAK_GYM, 4
-	warp_event  1,  0, ECRUTEAK_GYM, 3
-	warp_event  2,  0, ECRUTEAK_GYM, 3
-	warp_event  3,  0, ECRUTEAK_GYM, 3
-	warp_event  6,  0, ECRUTEAK_GYM, 3
-	warp_event 13,  0, ECRUTEAK_GYM, 3
 	warp_event 17,  4, ECRUTEAK_GYM, 3
-	warp_event  0,  0, ECRUTEAK_GYM, 3
-	warp_event  4,  0, ECRUTEAK_GYM, 3
-	warp_event  5,  0, ECRUTEAK_GYM, 3
-	warp_event  7,  0, ECRUTEAK_GYM, 3
-	warp_event 12,  0, ECRUTEAK_GYM, 3
-	warp_event 14,  0, ECRUTEAK_GYM, 3
-	warp_event  8,  0, ECRUTEAK_GYM, 3
 	warp_event 16,  4, ECRUTEAK_GYM, 3
-	warp_event 10,  0, ECRUTEAK_GYM, 3
-	warp_event 15,  0, ECRUTEAK_GYM, 3
 	warp_event  6,  4, ECRUTEAK_GYM, 3
 	warp_event  6,  5, ECRUTEAK_GYM, 3
 	warp_event  7,  8, ECRUTEAK_GYM, 3
 	warp_event  6,  8, ECRUTEAK_GYM, 3
-	warp_event 18,  0, ECRUTEAK_GYM, 3
-	warp_event 17,  0, ECRUTEAK_GYM, 3
 	warp_event  2,  4, ECRUTEAK_GYM, 3
 	warp_event  3,  4, ECRUTEAK_GYM, 3
-	warp_event 19,  0, ECRUTEAK_GYM, 3
-	warp_event 16,  0, ECRUTEAK_GYM, 3
 	warp_event 17,  6, ECRUTEAK_GYM, 3
 	warp_event 17,  7, ECRUTEAK_GYM, 3
 	warp_event 12,  8, ECRUTEAK_GYM, 3

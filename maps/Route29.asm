@@ -8,6 +8,7 @@
 	const ROUTE29_POKE_BALL
 	const ROUTE29_POKE_BALL_2
 	const ROUTE29_TEACHER2
+	const ROUTE29_FLEDELING
 
 Route29_MapScripts:
 	db 2 ; scene scripts
@@ -20,6 +21,17 @@ Route29_MapScripts:
 	end
 
 .DummyScene1:
+	end
+	
+TrainerFledglingHugo:
+	trainer FLEDGLING, HUGO, EVENT_BEAT_FLEDGLING_HUGO, FledglingHugoSeenText, FledglingHugoBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext FledglingHugoAfterBattleText
+	waitbutton
+	closetext
 	end
 	
 TrainerTeacherColette:
@@ -383,6 +395,22 @@ TeacherColetteAfterBattleText:
 	line "enough to make"
 	cont "your heart melt?"
 	done
+	
+FledglingHugoSeenText:
+	text "Um..."
+	para "Are you a new"
+	line "trainer too?"
+	done
+
+FledglingHugoBeatenText:
+	text "Wow, you dont seem"
+	line "new..."
+	done
+
+FledglingHugoAfterBattleText:
+	text "How did you get"
+	line "so good?"
+	done
 
 Route29_MapEvents:
 	db 0, 0 ; filler
@@ -405,7 +433,7 @@ Route29_MapEvents:
 	bg_event 34, 27, BGEVENT_READ, SilentHillsEntranceSign
 	bg_event 38, 22, BGEVENT_READ, DebugSign
 
-	db 9 ; object events
+	db 10 ; object events
 	object_event 45, 31, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CatchingTutorialDudeScript, -1
 	object_event 34, 25, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route29YoungsterScript, -1
 	object_event 39, 27, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route29TeacherScript, -1
@@ -414,4 +442,5 @@ Route29_MapEvents:
 	object_event  4, 28, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route29CooltrainerMScript, -1
 	object_event 45, 24, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route29Potion, EVENT_ROUTE_29_POTION
 	object_event 14, 32, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route29Potion2, EVENT_ROUTE_29_POTION_2
-	object_event  6,  9, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerTeacherColette, -1
+	object_event  6,  9, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerTeacherColette, -1
+	object_event  9, 16, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerFledglingHugo, -1

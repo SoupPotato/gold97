@@ -505,9 +505,9 @@ InitRoamMons:
 	ld [wRoamMon2Level], a
 
 ; raikou starting map
-	ld a, GROUP_ROUTE_42
+	ld a, GROUP_ROUTE_41
 	ld [wRoamMon1MapGroup], a
-	ld a, MAP_ROUTE_42
+	ld a, MAP_ROUTE_41
 	ld [wRoamMon1MapNumber], a
 
 ; entei starting map

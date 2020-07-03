@@ -4,6 +4,8 @@
 	const ROUTE8_SCHOOLBOY
 	const ROUTE8_LASS
 	const ROUTE8_GRAMPS
+	const ROUTE8_FISHER
+	const ROUTE8_FISHER1
 
 Route8_MapScripts:
 	db 0 ; scene scripts
@@ -186,6 +188,132 @@ Route8GrampsScript:
 	waitbutton
 	closetext
 	end
+	
+TrainerFisherTully:
+	trainer FISHER, TULLY1, EVENT_BEAT_FISHER_TULLY, FisherTullySeenText, FisherTullyBeatenText, 0, .Script
+
+.Script:
+	writecode VAR_CALLERID, PHONE_FISHER_TULLY
+	endifjustbattled
+	opentext
+	checkflag ENGINE_TULLY
+	iftrue .WantsBattle
+	checkflag ENGINE_TULLY_HAS_WATER_STONE
+	iftrue .HasWaterStone
+	checkcellnum PHONE_FISHER_TULLY
+	iftrue .NumberAccepted
+	checkevent EVENT_TULLY_ASKED_FOR_PHONE_NUMBER
+	iftrue .AskedAlready
+	writetext FisherTullyAfterBattleText
+	buttonsound
+	setevent EVENT_TULLY_ASKED_FOR_PHONE_NUMBER
+	scall .AskNumber1
+	jump .AskForNumber
+
+.AskedAlready:
+	scall .AskNumber2
+.AskForNumber:
+	askforphonenumber PHONE_FISHER_TULLY
+	ifequal PHONE_CONTACTS_FULL, .PhoneFull
+	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
+	trainertotext FISHER, TULLY1, MEM_BUFFER_0
+	scall .RegisteredNumber
+	jump .NumberAccepted
+
+.WantsBattle:
+	scall .Rematch
+	winlosstext FisherTullyBeatenText, 0
+	copybytetovar wTullyFightCount
+	ifequal 3, .Fight3
+	ifequal 2, .Fight2
+	ifequal 1, .Fight1
+	ifequal 0, .LoadFight0
+.Fight3:
+	checkevent EVENT_RESTORED_POWER_TO_KANTO
+	iftrue .LoadFight3
+.Fight2:
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .LoadFight2
+.Fight1:
+	checkevent EVENT_CLEARED_ROCKET_HIDEOUT
+	iftrue .LoadFight1
+.LoadFight0:
+	loadtrainer FISHER, TULLY1
+	startbattle
+	reloadmapafterbattle
+	loadvar wTullyFightCount, 1
+	clearflag ENGINE_TULLY
+	end
+
+.LoadFight1:
+	loadtrainer FISHER, TULLY2
+	startbattle
+	reloadmapafterbattle
+	loadvar wTullyFightCount, 2
+	clearflag ENGINE_TULLY
+	end
+
+.LoadFight2:
+	loadtrainer FISHER, TULLY3
+	startbattle
+	reloadmapafterbattle
+	loadvar wTullyFightCount, 3
+	clearflag ENGINE_TULLY
+	end
+
+.LoadFight3:
+	loadtrainer FISHER, TULLY4
+	startbattle
+	reloadmapafterbattle
+	clearflag ENGINE_TULLY
+	end
+
+.HasWaterStone:
+	scall .Gift
+	verbosegiveitem WATER_STONE
+	iffalse .NoRoom
+	clearflag ENGINE_TULLY_HAS_WATER_STONE
+	setevent EVENT_TULLY_GAVE_WATER_STONE
+	jump .NumberAccepted
+
+.NoRoom:
+	jump .PackFull
+
+.AskNumber1:
+	jumpstd asknumber1m
+	end
+
+.AskNumber2:
+	jumpstd asknumber2m
+	end
+
+.RegisteredNumber:
+	jumpstd registerednumberm
+	end
+
+.NumberAccepted:
+	jumpstd numberacceptedm
+	end
+
+.NumberDeclined:
+	jumpstd numberdeclinedm
+	end
+
+.PhoneFull:
+	jumpstd phonefullm
+	end
+
+.Rematch:
+	jumpstd rematchm
+	end
+
+.Gift:
+	jumpstd giftm
+	end
+
+.PackFull:
+	jumpstd packfullm
+	end
 
 Route8UndergroundPathSign:
 	jumptext Route8UndergroundPathSignText
@@ -293,6 +421,28 @@ Route8UndergroundPathSignText:
 	para "#MON for"
 	line "protection."
 	done
+	
+FisherTullySeenText:
+	text "Let me demonstrate"
+	line "the power of the"
+	cont "#MON I caught!"
+	done
+
+FisherTullyBeatenText:
+	text "What? That's not"
+	line "right."
+	done
+
+FisherTullyAfterBattleText:
+	text "I want to become"
+	line "the trainer CHAMP"
+
+	para "using the #MON"
+	line "I caught."
+
+	para "That's the best"
+	line "part of fishing!"
+	done
 
 Route8_MapEvents:
 	db 0, 0 ; filler
@@ -305,11 +455,12 @@ Route8_MapEvents:
 	db 1 ; bg events
 	bg_event 10,  6, BGEVENT_READ, Route8UndergroundPathSign
 
-	db 5 ; object events
+	db 6 ; object events
 	object_event 40,  6, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route8FruitTree, -1
 	object_event 12, 10, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerYoungsterJoey, -1
 	object_event 24,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerSchoolboyDudley, -1
 	object_event 12,  6, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerLassConnie, -1
 	object_event  8,  7, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route8GrampsScript, EVENT_ECRUTEAK_CITY_GRAMPS
+	object_event 20, 13, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerFisherTully, -1
 
 

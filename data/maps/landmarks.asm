@@ -74,7 +74,6 @@ Landmarks:
 	landmark  12, 100, TohjoFallsName
 	landmark  20,  68, Route28Name
 	landmark  70,  42, TinTowerName
-	landmark  92,  44, Route42Name
 	landmark 108,  28, LakeOfRageName
 	landmark 120,  44, Route44Name
 	landmark 132,  64, Route45Name
@@ -188,7 +187,6 @@ Route38Name:         db "ROUTE 108@"
 Route39Name:         db "ROUTE 109@"
 Route40Name:         db "ROUTE 110@"
 Route41Name:         db "ROUTE 111@"
-Route42Name:         db "ROUTE 42@"
 Route43Name:         db "BOARDWALK@"
 Route44Name:         db "ROUTE 44@"
 Route45Name:         db "ROUTE 45@"

@@ -10,7 +10,23 @@ LoadSpecialMapPalette:
 	jr z, .radio_tower
 	cp TILESET_MANSION
 	jr z, .mansion_mobile
+	ld a, [wMapNumber]
+	cp MAP_ROUTE_35
+	jr z, .GetMapNumber
+	cp MAP_AZALEA_TOWN
+	jr z, .GetMapNumber
+	cp MAP_ROUTE_33
+	jr z, .GetMapNumber
 	jr .do_nothing
+	
+.GetMapNumber
+	ld a, [wMapGroup]
+	cp GROUP_ROUTE_35
+	jr z, .SandOverBrownBGPalette
+	cp GROUP_AZALEA_TOWN
+	jr z, .SandOverBrownBGPalette
+	cp GROUP_ROUTE_33
+	jr z, .SandOverBrownBGPalette
 
 .pokecom_2f
 	call LoadPokeComPalette
@@ -44,6 +60,20 @@ LoadSpecialMapPalette:
 .do_nothing
 	and a
 	ret
+	
+.SandOverBrownBGPalette:
+	ld hl, SandOverRock
+	ld a, [wTimeOfDayPal]
+	maskbits NUM_DAYTIMES
+	ld bc, 8 palettes
+	call AddNTimes
+	ld de, wBGPals1
+	ld a, BANK(wBGPals1)
+	call FarCopyWRAM
+	scf
+	ret
+	
+INCLUDE "gfx/tilesets/bg_tiles_special_pals.pal"
 
 LoadPokeComPalette:
 	ld a, BANK(wBGPals1)
@@ -55,7 +85,6 @@ LoadPokeComPalette:
 
 PokeComPalette:
 INCLUDE "gfx/tilesets/pokecom_center.pal"
-
 
 
 LoadIcePathPalette:
@@ -119,3 +148,73 @@ LoadMansionPalette:
 
 MansionPalette2:
 INCLUDE "gfx/tilesets/mansion_2.pal"
+
+LoadSpecialOWMapPalettes:
+	ld a, [wMapNumber]
+	cp MAP_ROUTE_33
+	jr z, .GetMapNumber
+	
+.GetMapNumber
+	ld a, [wMapGroup]
+	cp GROUP_ROUTE_33
+	jr z, .SandOverBrownBGPalette
+	
+.do_nothing
+    and a
+    ret
+	
+.SandOverBrownBGPalette:
+	ld a, [wTimeOfDayPal]
+	maskbits NUM_DAYTIMES
+	ld a, BANK(wBGPals1)
+	ld de, wBGPals1
+	ld hl, SandOverRock
+	ld bc, 8 palettes
+	call FarCopyWRAM
+    scf
+    ret
+	
+LoadSpecialMapOBPalette:
+	ld a, [wMapNumber]
+	cp MAP_ROUTE_35
+	jr z, .GetMapNumber
+	cp MAP_AZALEA_TOWN
+	jr z, .GetMapNumber
+	cp MAP_ROUTE_33
+	jr z, .GetMapNumber
+	jr .do_nothing
+
+
+.GetMapNumber
+	ld a, [wMapGroup]
+	cp GROUP_ROUTE_35
+	jr z, .SandOverTreeOBPalette
+	cp GROUP_AZALEA_TOWN
+	jr z, .SandOverTreeOBPalette
+	cp GROUP_ROUTE_33
+	jr z, .SandOverTreeOBPalette
+	
+
+.do_nothing
+    and a
+    ret
+
+.SandOverTreeOBPalette:
+	ld a, [wTimeOfDayPal]
+	maskbits NUM_DAYTIMES
+	ld bc, 8 palettes
+    ld hl, SandOverTree
+	jr .finish
+
+	
+.finish
+	call AddNTimes
+    ld de, wOBPals1
+    ld bc, 8 palettes
+	ld a, BANK(wOBPals1)
+    call FarCopyWRAM
+    scf
+    ret
+
+; Special Overworld Pals
+INCLUDE "gfx/overworld/npc_sprites_special.pal"

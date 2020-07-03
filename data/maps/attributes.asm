@@ -204,8 +204,6 @@ ENDM
 	map_attributes Route41, ROUTE_41, $35, NORTH | SOUTH
 	connection north, CinnabarIsland, CINNABAR_ISLAND, 0
 	connection south, BlackthornCity, BLACKTHORN_CITY, -5
-	
-	map_attributes Route42, ROUTE_42, $05, 0
 
 	map_attributes Route43, ROUTE_43, $07, NORTH | SOUTH
 	connection north, MahoganyTown, MAHOGANY_TOWN, 3
@@ -437,7 +435,6 @@ ENDM
 	map_attributes MahoganyRedGyaradosSpeechHouse, MAHOGANY_RED_GYARADOS_SPEECH_HOUSE, $00, 0
 	map_attributes MahoganyGym, MAHOGANY_GYM, $00, 0
 	map_attributes MahoganyPokecenter1F, MAHOGANY_POKECENTER_1F, $00, 0
-	map_attributes Route42EcruteakGate, ROUTE_42_ECRUTEAK_GATE, $00, 0
 	map_attributes DiglettsCave, DIGLETTS_CAVE, $09, 0
 	map_attributes MountMoon, MOUNT_MOON, $1D, 0
 	map_attributes UndergroundPath, UNDERGROUND_PATH, $09, 0

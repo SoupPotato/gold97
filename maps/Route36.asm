@@ -43,34 +43,6 @@ Route36_MapScripts:
 	appear ROUTE36_ARTHUR
 	return
 
-
-
-;Route36RockSmashGuyScript:
-;	faceplayer
-;	opentext
-;	checkevent EVENT_GOT_TM08_ROCK_SMASH
-;	iftrue .AlreadyGotRockSmash
-;	checkevent EVENT_FOUGHT_BIPETAL
-;	iftrue .ClearedBipetal
-;	writetext RockSmashGuyText1
-;	waitbutton
-;	closetext
-;	end
-;
-;.ClearedBipetal:
-;	writetext RockSmashGuyText2
-;	buttonsound
-;	verbosegiveitem HM_ROCK_SMASH
-;	iffalse .NoRoomForTM
-;	setevent EVENT_GOT_TM08_ROCK_SMASH
-;.AlreadyGotRockSmash:
-;	writetext RockSmashGuyText3
-;	waitbutton
-;.NoRoomForTM:
-;	closetext
-;	end
-
-
 TrainerCamperSamuel:
 	trainer CAMPER, SAMUEL, EVENT_BEAT_YOUNGSTER_SAMUEL, CamperSamuelSeenText, CamperSamuelBeatenText, 0, .Script
 
@@ -248,6 +220,17 @@ TrainerPsychicMark:
 	endifjustbattled
 	opentext
 	writetext PsychicMarkAfterBattleText
+	waitbutton
+	closetext
+	end
+	
+TrainerFledglingJohnny:
+	trainer FLEDGLING, JOHNNY, EVENT_BEAT_FLEDGLING_JOHNNY, FledglingJohnnySeenText, FledglingJohnnyBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext FledglingJohnnyAfterBattleText
 	waitbutton
 	closetext
 	end
@@ -434,150 +417,33 @@ Route36SilverLossText
 	
 Route36RivalBeforeText:
 	text "<PLAY_G>!"
-	para "You gotta check"
-	line "out WEST CITY!"
-	para "There's a giant"
-	line "MART and a RADIO"
-	cont "TOWER, and…"
-	para "Oh, yeah!"
+
 	para "I've started the"
 	line "LEAGUE challenge!"
+	
 	para "I heard you have,"
-	line "too, <PLAY_G>!"
+	line "too!"
+	
 	para "This will be a"
 	line "great way to show"
-	para "the world how"
-	line "my team is the"
-	para "strongest there"
-	line "is!"
-	para "I've also been out"
-	line "catching some"
-	cont "#MON!"
-	para "Have you? Let's"
-	line "battle to see"
-	cont "whose are better!"
+	cont "the world how my"
+	cont "team is the strong"
+	cont "-est there is!"
+
+	para "Let's battle to"
+	line "see which of us"
+	cont "is better!"
 	done
 	
 Route36RivalAfterText:
 	text "Whew! It was good"
 	line "catching up with"
 	cont "you, <PLAY_G>!"
+	
 	para "I'm heading back"
 	line "into the city!"
+	
 	para "See you around!"
-	done
-
-UseSquirtbottleText:
-	text "It's a weird tree."
-	line "Use SQUIRTBOTTLE?"
-	done
-
-UsedSquirtbottleText:
-	text "<PLAYER> used the"
-	line "SQUIRTBOTTLE."
-	done
-
-BipetalAttackedText:
-	text "The weird tree"
-	line "doesn't like the"
-	cont "SQUIRTBOTTLE!"
-
-	para "The weird tree"
-	line "attacked!"
-	done
-
-FloriaText1:
-	text "I'm the FLOWER"
-	line "SHOP's FLORIA!"
-
-	para "Listen, listen!"
-
-	para "When I sprinkled"
-	line "water on that"
-
-	para "wiggly tree, it"
-	line "jumped right up!"
-
-	para "It just has to be"
-	line "a #MON."
-
-	para "I bet it would be"
-	line "shocked out of its"
-
-	para "disguise if you"
-	line "soaked it!"
-
-	para "I know! I'll tell"
-	line "my sis and borrow"
-	cont "her water bottle!"
-	done
-
-FloriaText2:
-	text "When I told my sis"
-	line "about the jiggly"
-
-	para "tree, she said"
-	line "it's dangerous."
-
-	para "If I beat WHITNEY,"
-	line "I wonder if she'll"
-
-	para "lend me her water"
-	line "bottle…"
-	done
-
-RockSmashGuyText1:
-	text "Wa-hey!"
-
-	para "I was going to"
-	line "snap that tree"
-
-	para "with my straight-"
-	line "arm punch."
-
-	para "But I couldn't!"
-	line "I'm a failure!"
-	done
-
-RockSmashGuyText2:
-	text "Did you clear that"
-	line "wretched tree?"
-
-	para "I'm impressed!"
-	line "I want you to"
-	cont "have this."
-	done
-
-UnknownText_0x19451a:
-	text "<PLAYER> received"
-	line "TM08."
-	done
-
-RockSmashGuyText3:
-	text "That happens to be"
-	line "ROCK SMASH."
-
-	para "You can shatter"
-	line "rocks with just a"
-
-	para "single well-aimed"
-	line "smack."
-
-	para "If any rocks are"
-	line "in your way, just"
-	cont "smash 'em up!"
-	done
-
-UnknownText_0x1945b8:
-	text "An odd tree is"
-	line "blocking the way"
-	cont "to GOLDENROD CITY."
-
-	para "I wanted to go see"
-	line "the huge #MON"
-
-	para "CENTER they just"
-	line "opened…"
 	done
 
 Route36LassText:
@@ -750,6 +616,22 @@ YoungsterIanAfterText:
 	text "I guess I gotta"
 	line "try even harder."
 	done
+	
+FledglingJohnnySeenText:
+	text "Do you like bird"
+	line "#MON?"
+	done
+
+FledglingJohnnyBeatenText:
+	text "You're wickedly"
+	line "tough!"
+	done
+
+FledglingJohnnyAfterBattleText:
+	text "I'm tired of train-"
+	line "ing. I need to"
+	cont "take a break."
+	done
 
 
 Route36_MapEvents:
@@ -768,7 +650,7 @@ Route36_MapEvents:
 	bg_event 32, 10, BGEVENT_READ, Route36TrainerTips1
 	bg_event 18,  4, BGEVENT_READ, Route36GameHouse
 
-	db 8 ; object events
+	db 9 ; object events
 	object_event  8, 9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerPsychicMark, -1
 	object_event 29,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TrainerSchoolboyAlan1, -1
 	object_event 50,  7, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route36LassScript, -1
@@ -777,3 +659,4 @@ Route36_MapEvents:
 	object_event  1,  1, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route36SilverTalkScript, EVENT_ROUTE_36_SILVER
 	object_event 12, 11, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerCamperSamuel, -1
 	object_event 20,  8, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerYoungsterIan, -1
+	object_event 34,  9, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINCLOCKWISE, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerFledglingJohnny, -1

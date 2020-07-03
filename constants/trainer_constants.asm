@@ -126,7 +126,6 @@ KRIS EQU __enum__
 	const ALAN1
 	const JACK1
 	const KIPP
-	const JOHNNY
 	const DANNY
 	const TOMMY
 	const DUDLEY
@@ -729,5 +728,7 @@ KRIS EQU __enum__
 	const EARNEST
 	const HIDALGO
 	const PAULSON
+	const HUGO
+	const JOHNNY
 
 NUM_TRAINER_CLASSES EQU __enum__

@@ -48,7 +48,6 @@ MapScenes::
 	scene_var ECRUTEAK_POKECENTER_1F,                      wEcruteakPokecenter1FSceneID
 	scene_var ECRUTEAK_GYM,                                wEcruteakGymSceneID
 	scene_var MAHOGANY_TOWN,                               wMahoganyTownSceneID
-	scene_var ROUTE_42,                                    wRoute42SceneID
 	scene_var CIANWOOD_CITY,                               wCianwoodCitySceneID
 	scene_var BATTLE_TOWER_1F,                             wBattleTower1FSceneID
 	scene_var BATTLE_TOWER_BATTLE_ROOM,                    wBattleTowerBattleRoomSceneID
