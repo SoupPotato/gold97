@@ -3,6 +3,7 @@
 	const AQUA2F_ROCKET3
 	const AQUA2F_POKEFAN_M
 	const AQUA2F_POKEFAN_F
+	const AQUA2F_WHITNEY
 
 OlivineLighthouse2F_MapScripts:
 	db 0 ; scene scripts
@@ -14,6 +15,7 @@ TrainerGruntM1:
 	trainer GRUNTM, GRUNTM_1, EVENT_BEAT_ROCKET_GRUNTM_1, GruntM1SeenText, GruntM1BeatenText, 0, .Script
 
 .Script:
+	clearevent WHITNEY_DEFEATS_ROCKETS
 	opentext
 	writetext TrainerGruntM1WhenTalkText
 	waitbutton
@@ -31,8 +33,33 @@ TrainerGruntM1:
 	special FadeOutPalettes
 	special HealParty
 	pause 15
-	warp ECRUTEAK_CITY, 6, 28
+	applymovement AQUA2F_WHITNEY, WhitneyToPlayerAfterRocket
+	turnobject AQUA2F_WHITNEY, UP
+	opentext
+	writetext WhitneyWayToGoText
+	waitbutton
+	closetext
+	applymovement AQUA2F_WHITNEY, WhitneyAwayfromPlayerAfterRocket
+	disappear AQUA2F_WHITNEY
+	setevent WHITNEY_DEFEATS_ROCKETS
 	end
+	
+	
+WhitneyToPlayerAfterRocket:
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step_end
+	
+WhitneyAwayfromPlayerAfterRocket:
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
+	step_end
 
 TrainerGruntM3:
 	trainer GRUNTM, GRUNTM_3, EVENT_BEAT_ROCKET_GRUNTM_3, GruntM3SeenText, GruntM3BeatenText, 0, .Script
@@ -93,6 +120,36 @@ Aqua2FExhibit1Text:
 	line "#MON."
 	done
 
+WhitneyWayToGoText:
+	text "Way to go"
+	line "<PLAY_G>!"
+	
+	para "You really showed"
+	line "them who's boss!"
+	
+	para "TEAM ROCKET won't"
+	line "hurt any of these"
+	cont "aquatic #MON"
+	cont "anymore."
+	
+	para "Hey, you're act"
+	line "-ually pretty"
+	cont "strong!"
+	
+	para "Why don't you come"
+	line "to my GYM later?"
+	
+	para "I would love to"
+	line "battle you!"
+	
+	para "Speaking of which,"
+	line "I better get back"
+	cont "to the GYM."
+	
+	para "See ya!"
+	done
+	
+
 Aqua2FExhibit2Text:
 	text "NEW EXHIBIT COMING"
 	line "SOON"
@@ -122,26 +179,21 @@ GruntM1BeatenText:
 	done
 
 TrainerGruntM1WhenTalkText:
-	text "Yeah, TEAM ROCKET"
-	line "was broken up"
-	cont "a year ago."
+	text "Drat!"
+	para "I can't beleive"
+	line "our plan was"
+	cont "foiled by a kid!"
 
-	para "But we continued"
-	line "our activities"
-	cont "underground."
+	para "This is"
+	line "embarrassing"
 
-	para "Now you can have"
-	line "fun watching us"
-	cont "stir up trouble!"
+	para "But no matter."
 	
-	para "We don't need this"
-	line "place! There are"
-	para "plenty of other"
-	line "avenues for us to"
-	cont "make some money."
-	para "Our ambitions are"
-	line "bigger than cash,"
-	cont "though!"
+	para "There are plenty "
+	line "of other avenues"
+	cont "for us to fund"
+	cont "our operations."
+
 	para "You haven't seen"
 	line "the last of us!"
 	done
@@ -208,8 +260,9 @@ OlivineLighthouse2F_MapEvents:
 	bg_event  7,  3, BGEVENT_READ, Aqua2FExhibit2Script
 	bg_event 11,  3, BGEVENT_READ, Aqua2FExhibit3Script
 
-	db 4 ; object events
+	db 5 ; object events
 	object_event 15,  4, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 0, TrainerGruntM1, EVENT_MAHOGANY_TOWN_POKEFAN_M_BLOCKS_GYM
 	object_event  5,  4, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 4, TrainerGruntM3, EVENT_MAHOGANY_TOWN_POKEFAN_M_BLOCKS_GYM
 	object_event  7,  6, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AquaPokefanMScript, -1
 	object_event 10,  4, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AquaPokefanFScript, -1
+	object_event  9,  5, SPRITE_WHITNEY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, WhitneyAquariumScript, WHITNEY_DEFEATS_ROCKETS

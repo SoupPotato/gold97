@@ -624,6 +624,8 @@ InitializeEventsScript:
 	setevent EVENT_ROUTE8_GIRL_IN_CAVE
 	setevent EVENT_ECRUTEAK_SCARED_LASS
 	setevent WHITNEY_FIGHTING_ROCKETS
+	setevent ROCKETS_FIGHTING_WHITNEY
+	setevent WHITNEY_DEFEATS_ROCKETS
 	return
 
 AskNumber1MScript:

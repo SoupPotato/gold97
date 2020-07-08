@@ -5,40 +5,98 @@
 	const AQUA1F_YOUNGSTER
 	const AQUA1F_LASS
 	const AQUA1F_WHITNEY
+	const AQUA1F_ROCKET3
+	const AQUA1F_ROCKETF2
+	const AQUA1F_ROCKET4
+	const AQUA1F_ROCKETF22 ;fighting whitney
+	const AQUA1F_ROCKET42 ;fighting whitney
 
 OlivineLighthouse1F_MapScripts:
 	db 1 ; scene scripts
-	scene_script SceneWhitneyEnters 
+	scene_script .SceneWhitneyEnters 
 
 	db 0 ; callbacks
 	
 
+.SceneWhitneyEnters:
+	priorityjump .WhitneyEntersEvent
+	end	
 
-SceneWhitneyEnters:
-	checkevent WHITNEY_FIGHTING_ROCKETS
-	iffalse .SceneNothing
-	checkevent EVENT_MAHOGANY_TOWN_POKEFAN_M_BLOCKS_GYM
-	iftrue .SceneNothing
+
+.WhitneyEntersEvent
+	pause 15
 	playsound SFX_ENTER_DOOR
+	moveobject AQUA1F_WHITNEY, 13, 7
 	appear AQUA1F_WHITNEY
+	turnobject AQUA1F_WHITNEY, UP
+	applymovement AQUA1F_WHITNEY, WhitneyDummyMovement
 	pause 15
 	applymovement AQUA1F_WHITNEY, WhitneyToCenter
 	opentext
 	writetext WhitneyThisisTerribleText
 	waitbutton
 	closetext
-	
+	pause 6
+	turnobject AQUA1F_WHITNEY, RIGHT
+	pause 6
+	turnobject AQUA1F_WHITNEY, UP
+	pause 6
+	turnobject AQUA1F_WHITNEY, DOWN
+	pause 6
+	showemote EMOTE_SHOCK, AQUA1F_WHITNEY, 15
+	applymovement AQUA1F_WHITNEY, WhitneyToPlayer
+	opentext
+	writetext WhitneyIRememberYouText
+	waitbutton
+	closetext
+	applymovement AQUA1F_WHITNEY, WhitneyToRockets
+	showemote EMOTE_SHOCK, AQUA1F_ROCKET3, 15
+	turnobject AQUA1F_WHITNEY, UP
+	applymovement AQUA1F_ROCKET4, RocketMtoWhitney
+	turnobject AQUA1F_ROCKET4, UP
+	turnobject AQUA1F_WHITNEY, DOWN
+	applymovement AQUA1F_ROCKETF2, RocketFtoWhitney
+	turnobject AQUA1F_WHITNEY, LEFT
+	opentext
+	writetext WhitneyWontGoEasyOnYouText
+	waitbutton
+	closetext
+	setscene SCENE_AQUARIUM_ROCKET_TAKEOVER_1F_NOTHING
 	clearevent WHITNEY_FIGHTING_ROCKETS
+	setevent EVENT_AQUARIUM_ROCKETS_IDLE
+	clearevent ROCKETS_FIGHTING_WHITNEY
 	end
+
 	
-.SceneNothing:
-	end
+WhitneyDummyMovement:
+	step_end
 	
 	
 WhitneyToCenter:
 	step UP
 	step UP
 	step LEFT
+	step_end
+	
+WhitneyToPlayer:
+	step DOWN
+	step_end
+	
+WhitneyToRockets:
+	step UP
+	step LEFT
+	step LEFT
+	step_end
+	
+RocketMtoWhitney
+	big_step RIGHT
+	big_step RIGHT
+	step RIGHT
+	step_end
+	
+RocketFtoWhitney
+	big_step RIGHT
+	big_step RIGHT
 	step_end
 
 TrainerGruntM2:
@@ -122,6 +180,18 @@ Aqua1FExhibit3Script:
 	
 Aqua1FExhibit4Script:
 	jumptext Aqua1FExhibit4Text
+	
+WhitneyAquariumScript:
+	jumptext WhitneyIwillHandlethisText
+	
+RocketGruntWhitney1Script:
+	jumptext RocketGruntWhitney1Text
+	
+RocketGruntWhitney2Script:
+	jumptext RocketGruntWhitney2Text
+	
+RocketGruntWhitney3Script:
+	jumptext RocketGruntWhitney3Text
 	
 Aqua1FExhibit1Text:
 	text "KRABBY like to"
@@ -208,6 +278,49 @@ GruntF1SeenText:
 WhitneyThisisTerribleText:
 	text "Oh no!"
 	line "This is terrible!"
+	done
+	
+WhitneyIRememberYouText:
+	text "Hey! I remember"
+	line "you from the MINE!"
+	
+	para "Listen,"
+	
+	para "TEAM ROCKET are"
+	line "trying to take"
+	cont "the AQUARIUM!"
+	
+	para "Those meanies!"
+	
+	para "As GYM LEADER,"
+	line "I cannot allow it."
+	
+	para "Can you help me"
+	line "fight them off?"
+	
+	para "Their commander"
+	line "must be on the"
+	cont "2nd Floor..."
+	
+	para "Lets get em'!"
+	done
+	
+WhitneyWontGoEasyOnYouText:
+	text "...giggle..."
+	
+	para "Don't expect me to"
+	line "go easy on you"
+	cont "just because I'm"
+	cont "a cutie!"
+	done
+	
+WhitneyIwillHandlethisText:
+	text "I'll handle these"
+	line "jerks..."
+	
+	para "You go after the"
+	line "commander!"
+	done
 
 GruntF1BeatenText:
 	text "You rotten brat!"
@@ -251,6 +364,28 @@ AquaLassNoRocketsText:
 	line "too many exhibits"
 	cont "yet."
 	done
+	
+RocketGruntWhitney1Text:
+	text "Get lost, brat!"
+	done
+	
+RocketGruntWhitney2Text:
+	text "Who do you think"
+	line "you are?"
+	
+	para "Find your own"
+	line "place to rob!"
+	done
+	
+RocketGruntWhitney3Text:
+	text "Gah!"
+	
+	para "She's cute but she"
+	line "is tough!"
+	
+	para "Especially that"
+	line "MILTANK."
+	done
 
 OlivineLighthouse1F_MapEvents:
 	db 0, 0 ; filler
@@ -260,8 +395,7 @@ OlivineLighthouse1F_MapEvents:
 	warp_event 13,  7, ECRUTEAK_CITY, 6
 	warp_event  0,  7, OLIVINE_LIGHTHOUSE_2F, 1
 
-	db 1 ; coord events
-	coord_event 12,  7, SCENE_DEFAULT, SceneWhitneyEnters
+	db 0 ; coord events
 
 	db 4 ; bg events
 	bg_event  1,  3, BGEVENT_READ, Aqua1FExhibit1Script
@@ -270,10 +404,15 @@ OlivineLighthouse1F_MapEvents:
 	bg_event  4,  1, BGEVENT_READ, Aqua1FExhibit4Script
 
 
-	db 6 ; object events
+	db 11 ; object events
 	object_event 15,  5, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AquaReceptionistScript, -1
-	object_event 10,  4, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerGruntM2, EVENT_MAHOGANY_TOWN_POKEFAN_M_BLOCKS_GYM
+	object_event  7,  4, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerGruntM2, EVENT_MAHOGANY_TOWN_POKEFAN_M_BLOCKS_GYM
 	object_event  5,  7, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerGruntF1, EVENT_MAHOGANY_TOWN_POKEFAN_M_BLOCKS_GYM
 	object_event 13,  2, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AquaYoungsterScript, -1
 	object_event  3,  5, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AquaLassScript, -1
-	object_event  13, 17, SPRITE_WHITNEY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
+	object_event 10,  5, SPRITE_WHITNEY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, WhitneyAquariumScript, WHITNEY_FIGHTING_ROCKETS
+	object_event 10,  4, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RocketGruntWhitney1Script, EVENT_MAHOGANY_TOWN_POKEFAN_M_BLOCKS_GYM
+	object_event  7,  5, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RocketGruntWhitney2Script, EVENT_AQUARIUM_ROCKETS_IDLE
+	object_event  7,  6, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RocketGruntWhitney3Script, EVENT_AQUARIUM_ROCKETS_IDLE
+	object_event  9,  5, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RocketGruntWhitney2Script, ROCKETS_FIGHTING_WHITNEY
+	object_event 10,  6, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RocketGruntWhitney3Script, ROCKETS_FIGHTING_WHITNEY
