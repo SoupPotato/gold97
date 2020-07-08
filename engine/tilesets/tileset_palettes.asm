@@ -10,23 +10,27 @@ LoadSpecialMapPalette:
 	jr z, .radio_tower
 	cp TILESET_MANSION
 	jr z, .mansion_mobile
-	ld a, [wMapNumber]
-	cp MAP_ROUTE_35
-	jr z, .GetMapNumber
-	cp MAP_AZALEA_TOWN
-	jr z, .GetMapNumber
-	cp MAP_ROUTE_33
-	jr z, .GetMapNumber
-	jr .do_nothing
-	
-.GetMapNumber
 	ld a, [wMapGroup]
 	cp GROUP_ROUTE_35
+	jr nz, .not_route_35
+	ld a, [wMapNumber]
+	cp MAP_ROUTE_35
 	jr z, .SandOverBrownBGPalette
+.not_route_35
+	ld a, [wMapGroup]
 	cp GROUP_AZALEA_TOWN
+	jr nz, .not_azalea_town
+	ld a, [wMapNumber]
+	cp MAP_AZALEA_TOWN
 	jr z, .SandOverBrownBGPalette
+.not_azalea_town
+	ld a, [wMapGroup]
 	cp GROUP_ROUTE_33
+	jr nz, .do_nothing
+	ld a, [wMapNumber]
+	cp MAP_ROUTE_33
 	jr z, .SandOverBrownBGPalette
+
 
 .pokecom_2f
 	call LoadPokeComPalette
@@ -175,24 +179,28 @@ LoadSpecialOWMapPalettes:
     ret
 	
 LoadSpecialMapOBPalette:
-	ld a, [wMapNumber]
-	cp MAP_ROUTE_35
-	jr z, .GetMapNumber
-	cp MAP_AZALEA_TOWN
-	jr z, .GetMapNumber
-	cp MAP_ROUTE_33
-	jr z, .GetMapNumber
-	jr .do_nothing
-
-
-.GetMapNumber
 	ld a, [wMapGroup]
 	cp GROUP_ROUTE_35
-	jr z, .SandOverTreeOBPalette
+	jr nz, .not_route35
+	ld a, [wMapNumber]
+	cp MAP_ROUTE_35
+	jp z, .SandOverTreeOBPalette
+	
+.not_route35
+	ld a, [wMapGroup]
 	cp GROUP_AZALEA_TOWN
-	jr z, .SandOverTreeOBPalette
+	jr nz, .not_azalea
+	ld a, [wMapNumber]
+	cp MAP_AZALEA_TOWN
+	jp z, .SandOverTreeOBPalette
+	
+.not_azalea
+	ld a, [wMapGroup]
 	cp GROUP_ROUTE_33
-	jr z, .SandOverTreeOBPalette
+	jr nz, .do_nothing
+	ld a, [wMapNumber]
+	cp MAP_ROUTE_33
+	jp z, .SandOverTreeOBPalette
 	
 
 .do_nothing

@@ -12,7 +12,7 @@ GoldenrodGym_MapScripts:
 	callback MAPCALLBACK_OBJECTS, .whitneynothere
 	
 .whitneynothere
-	checkevent EVENT_BURNED_TOWER_1F_EUSINE
+	checkevent EVENT_WHITNEY_BACK_IN_GYM
 	iffalse .gone
 	return
 	
@@ -21,7 +21,6 @@ GoldenrodGym_MapScripts:
 	disappear GOLDENRODGYM_LASS1
 	disappear GOLDENRODGYM_LASS2
 	disappear GOLDENRODGYM_BUENA1
-	disappear GOLDENRODGYM_GYM_GUY
 	return
 
 
@@ -123,8 +122,8 @@ TrainerBeautySamantha:
 GoldenrodGymGuyScript:
 	faceplayer
 	opentext
-	checkevent EVENT_BURNED_TOWER_1F_EUSINE
-	iftrue .whitneynothere
+	checkevent EVENT_WHITNEY_BACK_IN_GYM
+	iffalse .whitneynothere
 	checkevent EVENT_BEAT_WHITNEY
 	iftrue .GoldenrodGymGuyWinScript
 	writetext GoldenrodGymGuyText
@@ -319,15 +318,14 @@ BeautySamanthaAfterBattleText:
 GoldenrodGymGuyTextNotHere:
 	text "Yo! CHAMP in"
 	line "making!"
-	para "WHITNEY is known"
-	line "around town for"
-	para "always being busy"
-	line "and involved in"
-	para "helping with local"
-	line "issues."
-	para "What I'm saying is"
-	line "she's not here"
-	cont "right now!"
+	
+	para "WHITNEY isn't here"
+	line "right now."
+	
+	para "She's always busy"
+	line "helping with local"
+	cont "issues."
+
 	para "Something must be"
 	line "going down around"
 	cont "town."
@@ -356,8 +354,8 @@ GoldenrodGym_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  2, 17, ECRUTEAK_CITY, 7
-	warp_event  3, 17, ECRUTEAK_CITY, 13
+	warp_event  2, 17, ECRUTEAK_CITY, 11
+	warp_event  3, 17, ECRUTEAK_CITY, 12
 
 	db 0 ; coord events
 
@@ -370,4 +368,4 @@ GoldenrodGym_MapEvents:
 	object_event  4,  8, SPRITE_LASS, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerLassCarrie, 0
 	object_event 11,  3, SPRITE_LASS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerLassBridget, 0
 	object_event 17,  8, SPRITE_BUENA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBeautySamantha, 0
-	object_event  5, 15, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodGymGuyScript, 0
+	object_event  5, 15, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodGymGuyScript, -1

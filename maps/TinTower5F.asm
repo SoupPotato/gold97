@@ -142,25 +142,31 @@ Text_5FSage:
 	text "Welcome to the top"
 	line "of the 5 FLOOR"
 	cont "TOWER."
+	
 	para "This is a sacred"
 	line "place that should"
-	para "only be visited"
-	line "by those willing"
-	para "to show proper"
-	line "respect."
+	cont "only be visited by"
+	cont "those willing to"
+	cont "show proper re"
+	cont "-spect."
+	
 	para "I understand that"
-	line "KURT has asked"
-	para "you to scale its"
-	line "floors."
-	para "I hope you can"
-	line "go forward with"
-	para "the knowledge and"
-	line "understanding of"
-	para "how to properly"
-	line "treat #MON."
-	para "Return now to see"
-	line "KURT. You have my"
-	cont "blessing."
+	line "FALKNER has asked"
+	cont "you to scale its"
+	cont "floors."
+	
+	para "I hope you can go"
+	line "forward with the"
+	cont "knowledge and"
+	cont "understanding of"
+	cont "how to properly"
+	cont "treat #MON."
+	
+	para "You may return to"
+	line "FALKNER."
+	
+	para "You have my"
+	line "blessing."
 	done
 
 SproutTower5FSign:

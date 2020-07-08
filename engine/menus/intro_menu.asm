@@ -649,7 +649,7 @@ OakSpeech:
 	call RotateThreePalettesRight
 	call ClearTileMap
 
-	ld a, ANCHORAGE
+	ld a, GROWLITE
 	ld [wCurSpecies], a
 	ld [wCurPartySpecies], a
 	call GetBaseData
@@ -709,7 +709,7 @@ OakText1:
 OakText2:
 	text_far _OakText2
 	text_asm
-	ld a, ANCHORAGE
+	ld a, GROWLITE
 	call PlayMonCry
 	call WaitSFX
 	ld hl, OakText3

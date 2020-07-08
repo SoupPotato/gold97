@@ -2639,8 +2639,12 @@ wKantoBattleClubB1FSceneID::					  db
 wKantoBattleClub1FSceneID::						  db
 wUndergroundPathSceneID::						  db
 wSaffronGymSceneID::							  db
+wRoute8SceneID::                                 db 
+wEcruteakCitySceneID::                             db 
+wOlivineLighthouse1FID::						db
+wOlivineLighthouse2FID::						db
 
-	ds 28
+	ds 24
 
 ; fight counts
 wJackFightCount::    db ; d9f2

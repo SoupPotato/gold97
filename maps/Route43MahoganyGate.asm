@@ -57,8 +57,8 @@ Route43MahoganyGate_MapEvents:
 	db 4 ; warp events
 	warp_event  4,  0, ROUTE_43, 1
 	warp_event  5,  0, ROUTE_43, 2
-	warp_event  4,  7, ECRUTEAK_CITY, 11
-	warp_event  5,  7, ECRUTEAK_CITY, 12
+	warp_event  4,  7, ECRUTEAK_CITY, 9
+	warp_event  5,  7, ECRUTEAK_CITY, 10
 
 	db 0 ; coord events
 

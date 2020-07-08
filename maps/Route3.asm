@@ -44,6 +44,16 @@ TrainerYoungsterJimmy:
 	closetext
 	end
 
+TrainerEngineerHarris:
+	trainer ENGINEER, HARRIS, EVENT_BEAT_ENGINEER_HARRIS, EngineerHarrisSeenText, EngineerHarrisBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext EngineerHarrisAfterBattleText
+	waitbutton
+	closetext
+	end
 
 Route26FruitTree:
 	fruittree FRUITTREE_ROUTE_26
@@ -121,7 +131,26 @@ YoungsterJimmyAfterBattleText:
 	line "policy."
 	done
 
+EngineerHarrisSeenText:
+	text "Hey!"
+	
+	para "You seen my"
+	line "wrench anywhere?"
+	done
+	
+EngineerHarrisBeatenText:
+	text "I just can't find"
+	line "it..."
+	
+	para "Wait..."
+	
+	para "It's in my hand!"
+	done
 
+EngineerHarrisAfterBattleText:
+	text "Well, that was"
+	line "embarrassing..."
+	done
 
 
 Route3_MapEvents:
@@ -140,7 +169,7 @@ Route3_MapEvents:
 	bg_event 35,  8, BGEVENT_ITEM, Route2HiddenFullRestore
 	bg_event 15, 13, BGEVENT_ITEM, Route2HiddenRevive
 
-	db 7 ; object events
+	db 8 ; object events
 	object_event 43, 12, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerFirebreatherOtis, -1
 	object_event  8, 13, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerYoungsterWarren, -1
 	object_event 12, 11, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerYoungsterJimmy, -1
@@ -148,4 +177,5 @@ Route3_MapEvents:
 	object_event 31,  5, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route2DireHit, EVENT_ROUTE_2_DIRE_HIT
 	object_event 24,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route2Carbos, EVENT_ROUTE_2_CARBOS
 	object_event 16,  9, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route2Elixer, EVENT_ROUTE_2_ELIXER
+	object_event 46,  9, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerEngineerHarris, -1
 

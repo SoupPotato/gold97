@@ -115,52 +115,43 @@ UnknownText_0x69555:
 
 	para "PROF.OAK asked me"
 	line "to find you."
-
-	para "He has another"
-	line "favor to ask."
-
-	para "Would you take"
-	line "this #MON EGG?"
 	
-	para "It would benefit"
-	line "our research to"
-	para "learn a bit more"
-	line "about how baby"
-	para "#MON interact"
-	line "with other"
-	para "#MON and how"
-	line "this affects their"
-	cont "growth."
+	para "It would help our"
+	line "research to learn"
+	
+	para "more about how"
+	line "baby #MON"
+	
+	para "learn and grow"
+	line "under the care of"
+	cont "a Trainer."
+	
 	para "So could you keep"
-	line "this egg with you?"
+	line "this EGG with you?"
 	done
 
 UnknownText_0x695c5:
-	text "What's in the egg?"
-	para "Well, we thought"
-	line "we'd keep that a"
-	cont "surprise!"
+	text "Thank you,"
+	line "<PLAY_G>."
+	
 	para "I'm sure it could"
-	line "be a helpful"
-	para "addition to your"
-	line "party!"
-	para "Consider it a"
-	line "gift!"
-	para "Also, did you hear"
-	line "that BILL is in"
-	cont "town?"
+	line "be a helpful add"
+	cont "-ition to your"
+	cont "party!"
+	
+	para "Also, I heard that"
+	line "BILL is in town!"
+	
 	para "If you don't know,"
 	line "BILL created the"
 	cont "PC storage system!"
-	para "He's highly"
-	line "respected among"
-	para "#MON"
-	line "researchers."
+	
 	para "You should pay him"
 	line "a visit if you've"
 	cont "got a chance."
-	para "Anyways, I'm off!"
-	line "See you around!"
+	
+	para "Well, I'm off,"
+	line "Good luck!"
 	done
 
 UnknownText_0x69693:

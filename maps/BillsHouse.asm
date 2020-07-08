@@ -8,7 +8,29 @@
 BillsHouse_MapScripts:
 	db 0 ; scene scripts
 
-	db 0 ; callbacks
+	db 2 ; callbacks
+	callback MAPCALLBACK_OBJECTS, .birdstatue
+	callback MAPCALLBACK_OBJECTS, .dragonstatue
+	
+.birdstatue
+	checkevent EVENT_SHOWED_PICHU_TO_BILLS_GRANDPA
+	iffalse .birdgone
+	return
+	
+.birdgone
+	disappear EARLMUSEUM_BIRD
+	return
+	
+.dragonstatue
+	checkevent EVENT_SHOWED_GROWLITHE_VULPIX_TO_BILLS_GRANDPA
+	iffalse .dragongone
+	return
+	
+.dragongone
+	disappear EARLMUSEUM_DRAGON
+	disappear EARLMUSEUM_LASS
+	disappear EARLMUSEUM_POKEFAN_M
+	return
 	
 BirdScript:
 	opentext

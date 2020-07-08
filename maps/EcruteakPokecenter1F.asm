@@ -91,44 +91,38 @@ EcruteakPokecenter1FPlayerMovement1:
 
 EcruteakPokecenter1F_BillText1:
 	text "Oh dear, oh dear."
+	
 	para "She's not here"
 	line "either!"
-	para "I've looked"
-	line "everywhere!"
+	
 	para "Oh dear, oh dear."
+	
 	para "Excuse me, son."
 	line "You wouldn't have"
-	para "happened to see"
-	line "a young girl come"
-	para "through here,"
-	line "have you?"
+	cont "happened to see a"
+	cont "young girl come"
+	cont "through here?"
+	
 	para "It's my"
 	line "granddaughter."
+	
 	para "I can't find her"
 	line "anywhere!"
-	para "She's gone missing"
-	line "and I can't find"
-	cont "her."
-	para "…"
+
 	para "Oh, no. I hope she"
-	line "didn't get trapped"
-	cont "in the MINE…"
-	para "Listen, there's an"
-	line "old MINE just west"
-	para "of town that has"
-	line "become a popular"
-	para "spot for kids to"
-	line "run off to play"
-	cont "at."
-	para "But it's obviously"
-	line "not safe!"
-	para "Could you go look"
-	line "there to see if"
-	para "my granddaughter"
-	line "could be stuck"
-	cont "inside?"
-	para "I don't know where"
-	line "else she could be."
+	line "didn't wander into"
+	cont "in that dreaded"
+	cont "MINE…"
+	
+	para "Could you check?"
+
+	para "There is an old"
+	line "MINE just outside"
+	cont "the city."
+	
+	para "I pray she didn't"
+	line "go there..."
+
 	para "Oh dear, oh dear."
 	done
 

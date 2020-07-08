@@ -104,4 +104,8 @@ MapScenes::
 	scene_var KANTO_BATTLE_CLUB_1F,						   wKantoBattleClub1FSceneID
 	scene_var UNDERGROUND_PATH,							   wUndergroundPathSceneID
 	scene_var SAFFRON_GYM,								   wSaffronGymSceneID
+	scene_var ROUTE_8,								  	   wRoute8SceneID
+	scene_var ECRUTEAK_CITY,							   wEcruteakCitySceneID
+	scene_var OLIVINE_LIGHTHOUSE_1F,							   wOlivineLighthouse1FID
+	scene_var OLIVINE_LIGHTHOUSE_2F,							   wOlivineLighthouse2FID
 	db -1

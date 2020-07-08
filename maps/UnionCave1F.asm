@@ -8,37 +8,40 @@
 	const UNIONCAVE1F_TWIN
 	const UNIONCAVE1F_COOLTRAINERF
 	const UNIONCAVE1F_POKEMANIAC
+	const UNIONCAVE1F_TWIN2
 
 UnionCave1F_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
+
 GirlInMineScript:
+	setmapscene ROUTE_8, SCENE_ROUTE8_GIRL_AND_GRAMPS
 	faceplayer
 	opentext
 	writetext Text_FoundMe
 	waitbutton
 	closetext
-	setevent EVENT_ECRUTEAK_CITY_GRAMPS
 	setevent EVENT_WISE_TRIOS_ROOM_WISE_TRIO_1
+	clearevent EVENT_MAHOGANY_TOWN_POKEFAN_M_BLOCKS_GYM
 	clearevent EVENT_ECRUTEAK_GYM_GRAMPS
 	clearevent EVENT_WISE_TRIOS_ROOM_WISE_TRIO_2
-	setevent EVENT_BURNED_TOWER_MORTY
-	checkevent EVENT_MAHOGANY_TOWN_POKEFAN_M_BLOCKS_GYM
-	iftrue .AlreadySavedAquarium
-	playsound SFX_ENTER_DOOR
+	clearevent EVENT_ROUTE8_GIRL_IN_CAVE
 	special FadeOutPalettes
 	wait 10
-	warpfacing UP, ECRUTEAK_ITEMFINDER_HOUSE, 4, 7
+	warpfacing DOWN, UNION_CAVE_1F, 2, 14
+	opentext
+	writetext Text_WayOut
+	waitbutton
+	closetext
 	end
 	
-.AlreadySavedAquarium:
-	clearevent EVENT_BURNED_TOWER_1F_EUSINE
-	playsound SFX_ENTER_DOOR
-	special FadeOutPalettes
-	wait 10
-	warpfacing UP, ECRUTEAK_ITEMFINDER_HOUSE, 4, 7
+GirlInMineScript2:	
+	opentext
+	writetext Text_WayOut
+	waitbutton
+	closetext
 	end
 
 UnionCave1FGreatBall:
@@ -126,30 +129,43 @@ Text_FoundMe:
 	cont "here?"
 	para "Let's go!"
 	done
+	
+Text_WayOut:
+	text "Yay!"
+	
+	para "We found the way"
+	line "out!"
+	
+	para "Let's go find"
+	line "Grandpa!"
+	done
 
 UnionCave1F_MapEvents:
 	db 0, 0 ; filler
 
-	db 5 ; warp events
-	warp_event  3,  1, ROUTE_8, 1
-	warp_event 17,  3, UNION_CAVE_B1F, 3
-	warp_event 29,  3, UNION_CAVE_B1F, 4
-	warp_event 39, 11, UNION_CAVE_B1F, 7
-	warp_event 37, 15, UNION_CAVE_B1F, 8
+	db 7 ; warp events
+	warp_event  2, 15, ROUTE_8, 1
+	warp_event 31,  5, UNION_CAVE_B1F, 3
+	warp_event 43,  5, UNION_CAVE_B1F, 4
+	warp_event 53, 13, UNION_CAVE_B1F, 7
+	warp_event 51, 17, UNION_CAVE_B1F, 8
+	warp_event  3, 11, UNION_CAVE_1F, 7
+	warp_event 17,  3, UNION_CAVE_1F, 6
 
 	db 0 ; coord events
 
 	db 0 ; bg events
 
 	db 10 ; object events
-	object_event 14,  0, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, UnionCave1FGreatBall, EVENT_UNION_CAVE_1F_GREAT_BALL
-	object_event  1,  8, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, UnionCave1FXAttack, EVENT_UNION_CAVE_1F_X_ATTACK
-	object_event  1, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, UnionCave1FPotion, EVENT_UNION_CAVE_1F_POTION
-	object_event 23, 15, SPRITE_MINELR, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, UnionCave1FBoulder, -1
-	object_event 35,  9, SPRITE_MINEUD, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, UnionCave1FBoulder, -1
-	object_event  5, 10, SPRITE_MINEUD, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, UnionCave1FBoulder, -1
-	object_event  8, 14, SPRITE_TWIN, SPRITEMOVEDATA_SPINRANDOM_FAST, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GirlInMineScript, EVENT_WISE_TRIOS_ROOM_WISE_TRIO_1
-	object_event 10,  8, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerCooltrainerfEmma, -1
-	object_event 19,  6, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TrainerPokemaniacLarry, -1
+	object_event 28,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, UnionCave1FGreatBall, EVENT_UNION_CAVE_1F_GREAT_BALL
+	object_event 15, 10, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, UnionCave1FXAttack, EVENT_UNION_CAVE_1F_X_ATTACK
+	object_event 15, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, UnionCave1FPotion, EVENT_UNION_CAVE_1F_POTION
+	object_event 37, 17, SPRITE_MINELR, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, UnionCave1FBoulder, -1
+	object_event 49, 11, SPRITE_MINEUD, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, UnionCave1FBoulder, -1
+	object_event 19, 12, SPRITE_MINEUD, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, UnionCave1FBoulder, -1
+	object_event 22, 16, SPRITE_TWIN, SPRITEMOVEDATA_SPINRANDOM_FAST, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GirlInMineScript, EVENT_WISE_TRIOS_ROOM_WISE_TRIO_1
+	object_event 24, 10, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerCooltrainerfEmma, -1
+	object_event 33,  8, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TrainerPokemaniacLarry, -1
+	object_event 2, 13, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GirlInMineScript2,EVENT_ROUTE8_GIRL_IN_CAVE
 
 

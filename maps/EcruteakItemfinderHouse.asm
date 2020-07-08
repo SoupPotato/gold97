@@ -1,6 +1,6 @@
 	const_def 2 ; object constants
-	const ECRUTEAKITEMFINDERHOUSE_COOLTRAINER_M
-	const ECRUTEAKITEMFINDERHOUSE_POKEDEX
+	const HOUSE_GRAMPS
+	const HOUSE_TWIN
 
 EcruteakItemfinderHouse_MapScripts:
 	db 0 ; scene scripts

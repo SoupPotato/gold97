@@ -90,10 +90,10 @@ ENDM
 	map_const RUINS_OF_ALPH_OMANYTE_CHAMBER,                4,  5 ; 25
 	map_const RUINS_OF_ALPH_AERODACTYL_CHAMBER,             4,  5 ; 26
 	map_const RUINS_OF_ALPH_INNER_CHAMBER,                 10, 14 ; 27
-	map_const UNION_CAVE_1F,                               20,  9 ; 37
-	map_const UNION_CAVE_B1F,                              20,  9 ; 38
-	map_const UNION_CAVE_B2F,                              10,  9 ; 39
-	map_const SLOWPOKE_WELL_B1F,                           10,  9 ; 40
+	map_const UNION_CAVE_1F,                               28, 11 ; 37
+	map_const UNION_CAVE_B1F,                              22, 11 ; 38
+	map_const UNION_CAVE_B2F,                              12, 11 ; 39
+	map_const SLOWPOKE_WELL_B1F,                            9,  9 ; 40
 	map_const SLOWPOKE_WELL_B2F,                           10,  9 ; 41
 	map_const OLIVINE_LIGHTHOUSE_3F,                       30,  9 ; 44
 	map_const MAHOGANY_MART_1F,                             4,  4 ; 48
@@ -134,8 +134,8 @@ ENDM
 	map_const DRAGONS_DEN_1F,                               5, 18 ; 80
 	map_const TOHJO_FALLS,                                 15,  9 ; 83
 	map_const DIGLETTS_CAVE,                               30,  9 ; 84
-	map_const MOUNT_MOON,                                  15,  9 ; 85
-	map_const ROCK_TUNNEL_1F,                              20,  9 ; 87
+	map_const MOUNT_MOON,                                  17, 11 ; 85
+	map_const ROCK_TUNNEL_1F,                              22, 11 ; 87
 	map_const ROCK_TUNNEL_B1F,                             20,  9 ; 88
 	map_const SAFARI_ZONE_FUCHSIA_GATE_BETA,                5,  4 ; 89
 	map_const SAFARI_ZONE_BETA,                            20, 18 ; 90

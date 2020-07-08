@@ -15,7 +15,7 @@ JohtoGrassWildMons:
 	db 2, PIDGEY
 	db 2, RATTATA
 	db 4, PIDGEY
-	db 3, MEOWSY
+	db 3, HOPPIP
 	db 4, RATTATA
 	db 4, HOPPIP
 	db 4, HOPPIP
@@ -23,7 +23,7 @@ JohtoGrassWildMons:
 	db 2, PIDGEY
 	db 2, RATTATA
 	db 4, PIDGEY
-	db 3, MEOWSY
+	db 3, HOPPIP
 	db 4, RATTATA
 	db 4, HOPPIP
 	db 4, HOPPIP
@@ -31,7 +31,7 @@ JohtoGrassWildMons:
 	db 2, HOOTHOOT
 	db 2, RATTATA
 	db 4, HOOTHOOT
-	db 3, MEOWSY
+	db 3, RATTATA
 	db 4, RATTATA
 	db 4, HOOTHOOT
 	db 4, HOOTHOOT
@@ -156,16 +156,16 @@ JohtoGrassWildMons:
 	db 8, BELLSPROUT
 	db 9, GROWLITE
 	db 7, PIDGEY
-	db 8, PIDGEY
-	db 10, PIDGEY
+	db 8, TANG
+	db 10, TANG
 	; day
 	db 8, HOPPIP
 	db 8, CHIX
 	db 8, BELLSPROUT
 	db 9, GROWLITE
 	db 7, PIDGEY
-	db 8, PIDGEY
-	db 10, PIDGEY
+	db 8, TANG
+	db 10, TANG
 	; nite
 	db 8, SPINARAK
 	db 8, ODDISH
@@ -180,7 +180,7 @@ JohtoGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 12, MAREEP
-	db 13, RINRING
+	db 13, PONITTLE
 	db 13, KOTORA
 	db 14, HOPPIP
 	db 12, HOPPIP
@@ -188,7 +188,7 @@ JohtoGrassWildMons:
 	db 14, EXEGGCUTE
 	; day
 	db 12, MAREEP
-	db 13, RINRING
+	db 13, PONITTLE
 	db 13, KOTORA
 	db 14, HOPPIP
 	db 12, HOPPIP
@@ -385,16 +385,16 @@ JohtoGrassWildMons:
 	db 12, GROWLITE
 	db 12, GROWLITE
 	; nite
-	db 14, MEOWTH
+	db 14, ABRA
 	db 12, DROWZEE
 	db 13, HOOTHOOT
-	db 12, MEOWTH
+	db 12, ABRA
 	db 14, HOOTHOOT
 	db 12, HOUNDOUR
 	db 12, HOUNDOUR
 
 	map_id SLOWPOKE_WELL_B1F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 8 percent, 8 percent, 8 percent ; encounter rates: morn/day/nite
 	; morn
 	db 14, ZUBAT
 	db 15, ZUBAT
@@ -421,7 +421,7 @@ JohtoGrassWildMons:
 	db 16, SLOWPOKE
 
 	map_id SLOWPOKE_WELL_B2F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 8 percent, 8 percent, 8 percent ; encounter rates: morn/day/nite
 	; morn
 	db 14, ZUBAT
 	db 15, ZUBAT
@@ -450,83 +450,83 @@ JohtoGrassWildMons:
 	map_id ROUTE_2
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 11, LEDYBA
-	db 12, CATERPIE
-	db 12, CATERPIE
-	db 12, WEEDLE
-	db 11, CUBONE
-	db 13, WEEDLE
-	db 13, WEEDLE
+	db 16, IGGLYBUFF
+	db 17, METAPOD
+	db 18, SPEAROW
+	db 16, SPEAROW
+	db 18, CUBONE
+	db 20, BUTTERFREE
+	db 19, JIGGLYPUFF
 	; day
-	db 11, CATERPIE
-	db 12, CATERPIE
-	db 12, CATERPIE
-	db 12, WEEDLE
-	db 11, CUBONE
-	db 13, WEEDLE
-	db 13, WEEDLE
+	db 16, IGGLYBUFF
+	db 17, METAPOD
+	db 18, SPEAROW
+	db 16, SPEAROW
+	db 18, CUBONE
+	db 20, BUTTERFREE
+	db 19, JIGGLYPUFF
 	; nite
-	db 11, SPINARAK
-	db 12, HOOTHOOT
-	db 12, CATERPIE
-	db 12, WEEDLE
-	db 11, CUBONE
-	db 13, WEEDLE
-	db 13, WEEDLE
+	db 16, IGGLYBUFF
+	db 17, SPINARAK
+	db 18, NOCTOWL
+	db 18, HOOTHOOT
+	db 18, POLIWAG
+	db 20, ARIADOS
+	db 19, JIGGLYPUFF
 	
 	map_id DIGLETTS_CAVE
-	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	db 8 percent, 8 percent, 8 percent ; encounter rates: morn/day/nite
 	; morn
-	db 11, ZUBAT
-	db 12, DIGLETT
-	db 12, POLIWAG
-	db 12, QUAGSIRE
-	db 11, GRIMER
-	db 13, ZUBAT
-	db 13, ZUBAT
+	db 18, ZUBAT
+	db 19, DIGLETT
+	db 19, MANKEY
+	db 19, QUAGSIRE
+	db 18, GRIMER
+	db 22, GOLBAT
+	db 22, GOLBAT
 	; day
-	db 11, ZUBAT
-	db 12, DIGLETT
-	db 12, POLIWAG
-	db 12, QUAGSIRE
-	db 11, GRIMER
-	db 13, ZUBAT
-	db 13, ZUBAT
+	db 18, ZUBAT
+	db 19, DIGLETT
+	db 19, MANKEY
+	db 19, QUAGSIRE
+	db 18, GRIMER
+	db 22, GOLBAT
+	db 22, GOLBAT
 	; nite
-	db 11, ZUBAT
-	db 12, DIGLETT
-	db 12, POLIWAG
-	db 12, QUAGSIRE
-	db 11, GRIMER
-	db 13, ZUBAT
-	db 13, ZUBAT
+	db 18, ZUBAT
+	db 19, DIGLETT
+	db 19, POLIWAG
+	db 19, QUAGSIRE
+	db 18, GRIMER
+	db 22, GOLBAT
+	db 22, GOLBAT
 	
 	map_id OLIVINE_LIGHTHOUSE_3F
-	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	db 8 percent, 8 percent, 8 percent ; encounter rates: morn/day/nite
 	; morn
-	db 11, ZUBAT
-	db 12, DIGLETT
-	db 12, POLIWAG
-	db 12, QUAGSIRE
-	db 11, GRIMER
-	db 13, ZUBAT
-	db 13, ZUBAT
+	db 18, ZUBAT
+	db 19, DIGLETT
+	db 19, MANKEY
+	db 19, QUAGSIRE
+	db 18, GRIMER
+	db 22, GOLBAT
+	db 22, GOLBAT
 	; day
-	db 11, ZUBAT
-	db 12, DIGLETT
-	db 12, POLIWAG
-	db 12, QUAGSIRE
-	db 11, GRIMER
-	db 13, ZUBAT
-	db 13, ZUBAT
+	db 18, ZUBAT
+	db 19, DIGLETT
+	db 19, MANKEY
+	db 19, QUAGSIRE
+	db 18, GRIMER
+	db 22, GOLBAT
+	db 22, GOLBAT
 	; nite
-	db 11, ZUBAT
-	db 12, DIGLETT
-	db 12, POLIWAG
-	db 12, QUAGSIRE
-	db 11, GRIMER
-	db 13, ZUBAT
-	db 13, ZUBAT
+	db 18, ZUBAT
+	db 19, DIGLETT
+	db 19, POLIWAG
+	db 19, QUAGSIRE
+	db 18, GRIMER
+	db 22, GOLBAT
+	db 22, GOLBAT
 
 	map_id RUINS_OF_ALPH_INNER_CHAMBER
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
@@ -628,7 +628,7 @@ JohtoGrassWildMons:
 	db 17, FARFETCH_D
 	db 18, FARFETCH_D
 	; nite
-	db 15, DODUO
+	db 15, MURKROW
 	db 16, SANDSHREW
 	db 16, NATU
 	db 16, MAREEP

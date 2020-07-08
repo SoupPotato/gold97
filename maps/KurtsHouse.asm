@@ -475,7 +475,7 @@ KurtTalks:
 	
 	para "The best way to"
 	line "complete the"
-	cont "POKEDEX would be"
+	cont "#DEX would be"
 	cont "to take the"
 	cont "#MON league"
 	cont "challenge."

@@ -229,25 +229,21 @@ Text_RootingText:
 	done
 	
 DaisySpeechText:
-	text "The boy who"
-	line "brought you"
-	cont "here…"
-	para "That's my little"
+	text "Oh, are you leav"
+	line "-ing on a journey?"
+	
+	para "BLUE is my little"
 	line "brother."
+	
 	para "In other words…"
+	
 	para "I'm PROF.OAK's"
 	line "granddaughter!"
-	para "Grandpa's a"
-	line "fantastic"
-	cont "researcher!"
-	para "I'm so happy I can"
-	line "help him out."
-	para "But he'd get full"
-	line "of himself if he"
-	para "heard that, so"
-	line "don't tell him!"
-	para "…But he can be a"
-	line "little forgetful."
+	
+	para "If Granpa gave you"
+	line "a task, I would"
+	cont "like to help out."
+
 	para "He was also"
 	line "supposed to give"
 	cont "you this!"
@@ -256,32 +252,30 @@ DaisySpeechText:
 DaisySpeechText2:
 	text "The MAP CARD"
 	line "lets you view"
-	para "a map right in"
-	line "your #GEAR!"
-	para "It's incredibly"
-	line "helpful if you"
-	para "want to see"
-	line "where you're"
-	cont "going."
-	para "I'll also throw"
-	line "in a few"
-	para "#BALLs to"
-	line "help out."
+	cont "a map right in"
+	cont "your #GEAR!"
+	
+	para "Now..."
+	line "How can I help?"
+	
+	para "..."
+	
+	para "Oh I know!"	
 	done
 
 DaisySpeechText3:
-	text "But like Grandpa"
-	line "said, if you need"
-	para "more #BALLs,"
-	line "you can find them"
-	para "at just about any"
-	line "MART."
-	para "Also, we can't"
-	line "have your mother"
-	para "worrying, so make"
-	line "sure to say"
-	para "goodbye before"
-	line "you leave town."
+	text "You can catch"
+	line "#MON with"
+	cont "those."
+	
+	para "If you run out of"
+	line "#BALLS you can"
+	cont "buy more at any"
+	cont "town MART."
+	
+	para "Good luck,"
+	line "<PLAY_G>!"
+	
 	para "I'll be rooting"
 	line "for you!"
 	done
@@ -330,11 +324,12 @@ TimeToBattle:
 	done
 	
 Text_InBack:
-	text "PROF.OAK just got"
-	line "back in. He's"
-	para "waiting for you"
-	line "right through the"
-	para "door in the back."
+	text "PROF.OAK just"
+	line "returned."
+	
+	para "He's waiting for"
+	line "you through the"
+	cont "door in the back."
 	done
 
 ElmEntranceAideText:

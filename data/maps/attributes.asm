@@ -371,10 +371,10 @@ ENDM
 	map_attributes RuinsOfAlphAerodactylChamber, RUINS_OF_ALPH_AERODACTYL_CHAMBER, $00, 0
 	map_attributes RuinsOfAlphInnerChamber, RUINS_OF_ALPH_INNER_CHAMBER, $00, 0
 	map_attributes RuinsOfAlphResearchCenter, RUINS_OF_ALPH_RESEARCH_CENTER, $00, 0
-	map_attributes UnionCave1F, UNION_CAVE_1F, $1D, 0
-	map_attributes UnionCaveB1F, UNION_CAVE_B1F, $1D, 0
-	map_attributes UnionCaveB2F, UNION_CAVE_B2F, $1D, 0
-	map_attributes SlowpokeWellB1F, SLOWPOKE_WELL_B1F, $2E, 0
+	map_attributes UnionCave1F, UNION_CAVE_1F, $09, 0
+	map_attributes UnionCaveB1F, UNION_CAVE_B1F, $09, 0
+	map_attributes UnionCaveB2F, UNION_CAVE_B2F, $09, 0
+	map_attributes SlowpokeWellB1F, SLOWPOKE_WELL_B1F, $09, 0
 	map_attributes SlowpokeWellB2F, SLOWPOKE_WELL_B2F, $09, 0
 	map_attributes OlivineLighthouse1F, OLIVINE_LIGHTHOUSE_1F, $00, 0
 	map_attributes OlivineLighthouse2F, OLIVINE_LIGHTHOUSE_2F, $00, 0
@@ -436,9 +436,9 @@ ENDM
 	map_attributes MahoganyGym, MAHOGANY_GYM, $00, 0
 	map_attributes MahoganyPokecenter1F, MAHOGANY_POKECENTER_1F, $00, 0
 	map_attributes DiglettsCave, DIGLETTS_CAVE, $09, 0
-	map_attributes MountMoon, MOUNT_MOON, $1D, 0
+	map_attributes MountMoon, MOUNT_MOON, $09, 0
 	map_attributes UndergroundPath, UNDERGROUND_PATH, $09, 0
-	map_attributes RockTunnel1F, ROCK_TUNNEL_1F, $1D, 0
+	map_attributes RockTunnel1F, ROCK_TUNNEL_1F, $09, 0
 	map_attributes RockTunnelB1F, ROCK_TUNNEL_B1F, $09, 0
 	map_attributes SafariZoneFuchsiaGateBeta, SAFARI_ZONE_FUCHSIA_GATE_BETA, $00, 0
 	map_attributes SafariZoneBeta, SAFARI_ZONE_BETA, $00, 0

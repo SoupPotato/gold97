@@ -25,17 +25,9 @@ TrainerGruntM1:
 	special FadeInQuickly
 	pause 30
 	setevent EVENT_MAHOGANY_TOWN_POKEFAN_M_BLOCKS_GYM; this is the event for the rocket objects
+	setevent EVENT_BURNED_TOWER_MORTY
+	setevent EVENT_WHITNEY_BACK_IN_GYM
 	clearflag ENGINE_ROCKETS_IN_MAHOGANY
-	checkevent EVENT_WISE_TRIOS_ROOM_WISE_TRIO_2
-	iffalse .AlreadyRescuedGirl
-	special FadeOutPalettes
-	special HealParty
-	pause 15
-	warp ECRUTEAK_CITY, 6, 28
-	end
-
-.AlreadyRescuedGirl:
-	clearevent EVENT_BURNED_TOWER_1F_EUSINE
 	special FadeOutPalettes
 	special HealParty
 	pause 15

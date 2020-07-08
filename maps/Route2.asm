@@ -17,7 +17,16 @@ Route2_MapScripts:
 	setevent EVENT_CINNABAR_ROCKS_CLEARED
 	return
 
+TrainerJugglerDwayne:
+	trainer JUGGLER, DWAYNE, EVENT_BEAT_JUGGLER_DWAYNE, JugglerDwayneSeenText, JugglerDwayneBeatenText, 0, .Script
 
+.Script:
+	endifjustbattled
+	opentext
+	writetext JugglerDwayneAfterBattleText
+	waitbutton
+	closetext
+	end
 
 TrainerBugCatcherDoug:
 	trainer BUG_CATCHER, DOUG, EVENT_BEAT_BUG_CATCHER_DOUG, BugCatcherDougSeenText, BugCatcherDougBeatenText, 0, .Script
@@ -73,8 +82,6 @@ BugCatcherDougAfterBattleText:
 	para "I love how they"
 	line "feel!"
 	done
-	
-
 
 HikerRussellSeenText:
 	text "I'm trying to walk"
@@ -89,6 +96,20 @@ HikerRussellAfterBattleText:
 	text "I think I'll stick"
 	line "around here and"
 	cont "rest for a while."
+	done
+	
+JugglerDwayneSeenText:
+	text "Can you keep your"
+	line "eyes on the BALL?"
+	done
+
+JugglerDwayneBeatenText:
+	text "I tripped!"
+	done
+
+JugglerDwayneAfterBattleText:
+	text "Juggling is a"
+	line "difficult task."
 	done
 
 Route2SignText:
@@ -112,8 +133,9 @@ Route2_MapEvents:
 	bg_event  6, 28, BGEVENT_READ, Route2Sign
 
 
-	db 4 ; object events
+	db 5 ; object events
 	object_event  4, 26, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TrainerBugCatcherDoug, -1
-	object_event  8, 19, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TrainerHikerRussell, -1
+	object_event  8, 19, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerHikerRussell, -1
 	object_event  4, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route2MaxPotion, EVENT_ROUTE_2_MAX_POTION
-	object_event  4, 21, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route2FruitTree, -1
+	object_event  5, 22, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route2FruitTree, -1
+	object_event  6,  8, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerJugglerDwayne, -1

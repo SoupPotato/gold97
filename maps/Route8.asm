@@ -5,158 +5,69 @@
 	const ROUTE8_LASS
 	const ROUTE8_GRAMPS
 	const ROUTE8_FISHER
-	const ROUTE8_FISHER1
+	const ROUTE8_POKEFANM
+	const ROUTE8_TWIN
 
 Route8_MapScripts:
-	db 0 ; scene scripts
-
+	db 2 ; scene scripts
+	scene_script .DummyScene0 ; SCENE_ROUTE8_NOTHING
+	scene_script SceneFoundGirlScript ; SCENE_ROUTE8_GIRL
+	
 	db 0 ; callbacks
+	
+.DummyScene0:
+	end
+
+SceneFoundGirlScript:
+	checkevent EVENT_ROUTE8_GIRL_IN_CAVE
+	iftrue .SceneRoute8Nothing
+	applymovement PLAYER, WalkDown
+	turnobject PLAYER, LEFT
+	playsound SFX_ENTER_DOOR
+	moveobject ROUTE8_TWIN, 9, 5
+	appear ROUTE8_TWIN
+	showemote EMOTE_SHOCK, ROUTE8_GRAMPS, 15
+	applymovement ROUTE8_TWIN, WalkDownGirl
+	turnobject ROUTE8_TWIN, LEFT
+	applymovement ROUTE8_GRAMPS, WalkUpGramps
+	turnobject ROUTE8_GRAMPS, RIGHT
+	opentext
+	writetext GrampsRelievedText
+	waitbutton
+	closetext
+	opentext
+	writetext GirlText
+	waitbutton
+	closetext
+	applymovement ROUTE8_GRAMPS, WalkDownGramps
+	turnobject ROUTE8_GRAMPS, RIGHT
+	opentext
+	writetext GrampsAnnoyedText
+	waitbutton
+	closetext
+	setevent EVENT_ECRUTEAK_CITY_GRAMPS
+	setevent EVENT_ROUTE8_GIRL_SAVED
+	setevent EVENT_BURNED_TOWER_MORTY
+	setevent EVENT_ROUTE8_GIRL_IN_CAVE
+	clearevent EVENT_ECRUTEAK_SCARED_LASS
+	setmapscene ECRUTEAK_CITY, SCENE_ECRUTEAK_ROCKET_TAKEOVER
+	special FadeOutPalettes
+	wait 10
+	warpfacing UP, ECRUTEAK_ITEMFINDER_HOUSE, 4, 7
+	end
+	
+.SceneRoute8Nothing:
+	end
 	
 TrainerYoungsterJoey:
 	trainer YOUNGSTER, JOEY1, EVENT_BEAT_YOUNGSTER_JOEY, YoungsterJoey1SeenText, YoungsterJoey1BeatenText, 0, .Script
 
 .Script:
-	writecode VAR_CALLERID, PHONE_YOUNGSTER_JOEY
 	endifjustbattled
 	opentext
-	checkflag ENGINE_JOEY
-	iftrue .Rematch
-	checkcellnum PHONE_YOUNGSTER_JOEY
-	iftrue .NumberAccepted
-	checkevent EVENT_JOEY_ASKED_FOR_PHONE_NUMBER
-	iftrue .AskAgain
 	writetext YoungsterJoey1AfterText
-	buttonsound
-	setevent EVENT_JOEY_ASKED_FOR_PHONE_NUMBER
-	scall .AskNumber1
-	jump .RequestNumber
-
-.AskAgain:
-	scall .AskNumber2
-.RequestNumber:
-	askforphonenumber PHONE_YOUNGSTER_JOEY
-	ifequal PHONE_CONTACTS_FULL, .PhoneFull
-	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
-	trainertotext YOUNGSTER, JOEY1, MEM_BUFFER_0
-	scall .RegisteredNumber
-	jump .NumberAccepted
-
-.Rematch:
-	scall .RematchStd
-	winlosstext YoungsterJoey1BeatenText, 0
-	copybytetovar wJoeyFightCount
-	ifequal 4, .Fight4
-	ifequal 3, .Fight3
-	ifequal 2, .Fight2
-	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
-.Fight4:
-	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .LoadFight4
-.Fight3:
-	checkevent EVENT_BEAT_CHUCK
-	iftrue .LoadFight3
-.Fight2:
-	checkevent EVENT_BEAT_JASMINE
-	iftrue .LoadFight2
-.Fight1:
-	checkevent EVENT_BEAT_MORTY
-	iftrue .LoadFight1
-.LoadFight0:
-	loadtrainer YOUNGSTER, JOEY1
-	startbattle
-	reloadmapafterbattle
-	loadvar wJoeyFightCount, 1
-	clearflag ENGINE_JOEY
-	end
-
-.LoadFight1:
-	loadtrainer YOUNGSTER, JOEY2
-	startbattle
-	reloadmapafterbattle
-	loadvar wJoeyFightCount, 2
-	clearflag ENGINE_JOEY
-	end
-
-.LoadFight2:
-	loadtrainer YOUNGSTER, JOEY3
-	startbattle
-	reloadmapafterbattle
-	loadvar wJoeyFightCount, 3
-	clearflag ENGINE_JOEY
-	end
-
-.LoadFight3:
-	loadtrainer YOUNGSTER, JOEY4
-	startbattle
-	reloadmapafterbattle
-	loadvar wJoeyFightCount, 4
-	clearflag ENGINE_JOEY
-	end
-
-.LoadFight4:
-	loadtrainer YOUNGSTER, JOEY5
-	startbattle
-	reloadmapafterbattle
-	clearflag ENGINE_JOEY
-	checkevent EVENT_JOEY_HP_UP
-	iftrue .GiveHPUp
-	checkevent EVENT_GOT_HP_UP_FROM_JOEY
-	iftrue .done
-	scall .RematchGift
-	verbosegiveitem HP_UP
-	iffalse .PackFull
-	setevent EVENT_GOT_HP_UP_FROM_JOEY
-	jump .NumberAccepted
-
-.done
-	end
-
-.GiveHPUp:
-	opentext
-	writetext YoungsterJoeyText_GiveHPUpAfterBattle
 	waitbutton
-	verbosegiveitem HP_UP
-	iffalse .PackFull
-	clearevent EVENT_JOEY_HP_UP
-	setevent EVENT_GOT_HP_UP_FROM_JOEY
-	jump .NumberAccepted
-
-.AskNumber1:
-	jumpstd asknumber1m
-	end
-
-.AskNumber2:
-	jumpstd asknumber2m
-	end
-
-.RegisteredNumber:
-	jumpstd registerednumberm
-	end
-
-.NumberAccepted:
-	jumpstd numberacceptedm
-	end
-
-.NumberDeclined:
-	jumpstd numberdeclinedm
-	end
-
-.PhoneFull:
-	jumpstd phonefullm
-	end
-
-.RematchStd:
-	jumpstd rematchm
-	end
-
-.PackFull:
-	setevent EVENT_JOEY_HP_UP
-	jumpstd packfullm
-	end
-
-.RematchGift:
-	jumpstd rematchgiftm
+	closetext
 	end
 
 TrainerSchoolboyDudley:
@@ -193,126 +104,22 @@ TrainerFisherTully:
 	trainer FISHER, TULLY1, EVENT_BEAT_FISHER_TULLY, FisherTullySeenText, FisherTullyBeatenText, 0, .Script
 
 .Script:
-	writecode VAR_CALLERID, PHONE_FISHER_TULLY
 	endifjustbattled
 	opentext
-	checkflag ENGINE_TULLY
-	iftrue .WantsBattle
-	checkflag ENGINE_TULLY_HAS_WATER_STONE
-	iftrue .HasWaterStone
-	checkcellnum PHONE_FISHER_TULLY
-	iftrue .NumberAccepted
-	checkevent EVENT_TULLY_ASKED_FOR_PHONE_NUMBER
-	iftrue .AskedAlready
 	writetext FisherTullyAfterBattleText
-	buttonsound
-	setevent EVENT_TULLY_ASKED_FOR_PHONE_NUMBER
-	scall .AskNumber1
-	jump .AskForNumber
-
-.AskedAlready:
-	scall .AskNumber2
-.AskForNumber:
-	askforphonenumber PHONE_FISHER_TULLY
-	ifequal PHONE_CONTACTS_FULL, .PhoneFull
-	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
-	trainertotext FISHER, TULLY1, MEM_BUFFER_0
-	scall .RegisteredNumber
-	jump .NumberAccepted
-
-.WantsBattle:
-	scall .Rematch
-	winlosstext FisherTullyBeatenText, 0
-	copybytetovar wTullyFightCount
-	ifequal 3, .Fight3
-	ifequal 2, .Fight2
-	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
-.Fight3:
-	checkevent EVENT_RESTORED_POWER_TO_KANTO
-	iftrue .LoadFight3
-.Fight2:
-	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .LoadFight2
-.Fight1:
-	checkevent EVENT_CLEARED_ROCKET_HIDEOUT
-	iftrue .LoadFight1
-.LoadFight0:
-	loadtrainer FISHER, TULLY1
-	startbattle
-	reloadmapafterbattle
-	loadvar wTullyFightCount, 1
-	clearflag ENGINE_TULLY
+	waitbutton
+	closetext
 	end
+	
+TrainerHikerParry:
+	trainer HIKER, PARRY, EVENT_BEAT_HIKER_PARRY, HikerParry3SeenText, HikerParry3BeatenText, 0, .Script
 
-.LoadFight1:
-	loadtrainer FISHER, TULLY2
-	startbattle
-	reloadmapafterbattle
-	loadvar wTullyFightCount, 2
-	clearflag ENGINE_TULLY
-	end
-
-.LoadFight2:
-	loadtrainer FISHER, TULLY3
-	startbattle
-	reloadmapafterbattle
-	loadvar wTullyFightCount, 3
-	clearflag ENGINE_TULLY
-	end
-
-.LoadFight3:
-	loadtrainer FISHER, TULLY4
-	startbattle
-	reloadmapafterbattle
-	clearflag ENGINE_TULLY
-	end
-
-.HasWaterStone:
-	scall .Gift
-	verbosegiveitem WATER_STONE
-	iffalse .NoRoom
-	clearflag ENGINE_TULLY_HAS_WATER_STONE
-	setevent EVENT_TULLY_GAVE_WATER_STONE
-	jump .NumberAccepted
-
-.NoRoom:
-	jump .PackFull
-
-.AskNumber1:
-	jumpstd asknumber1m
-	end
-
-.AskNumber2:
-	jumpstd asknumber2m
-	end
-
-.RegisteredNumber:
-	jumpstd registerednumberm
-	end
-
-.NumberAccepted:
-	jumpstd numberacceptedm
-	end
-
-.NumberDeclined:
-	jumpstd numberdeclinedm
-	end
-
-.PhoneFull:
-	jumpstd phonefullm
-	end
-
-.Rematch:
-	jumpstd rematchm
-	end
-
-.Gift:
-	jumpstd giftm
-	end
-
-.PackFull:
-	jumpstd packfullm
+.Script:
+	endifjustbattled
+	opentext
+	writetext HikerParryAfterBattleText
+	waitbutton
+	closetext
 	end
 
 Route8UndergroundPathSign:
@@ -396,22 +203,6 @@ YoungsterJoey1AfterText:
 	cont "matter what!"
 	done
 
-
-YoungsterJoeyText_GiveHPUpAfterBattle:
-	text "I lost again…"
-	line "Gee, you're tough!"
-
-	para "Oh yeah, I almost"
-	line "forgot that I had"
-	cont "to give you this."
-
-	para "Use it to get even"
-	line "tougher, OK?"
-
-	para "I'm going to get"
-	line "tougher too."
-	done
-
 Route8UndergroundPathSignText:
 	text "BOULDER MINES"
 	para "Dangerous mining"
@@ -443,6 +234,78 @@ FisherTullyAfterBattleText:
 	para "That's the best"
 	line "part of fishing!"
 	done
+	
+HikerParry3SeenText:
+	text "My #MON are"
+	line "power packed!"
+	done
+
+HikerParry3BeatenText:
+	text "Wahahah! I'm the"
+	line "big loser!"
+	done
+
+HikerParryAfterBattleText:
+	text "I'm not much good"
+	line "at thinking, see?"
+
+	para "So, I just plow"
+	line "ahead with power!"
+	done
+	
+GrampsRelievedText:
+	text "Oh thank heavens!"
+	
+	para "You're safe!"
+
+	para "How many times do"
+	line "I have to tell"
+	cont "you..."
+	
+	para "Don't wander off"
+	line "where I can't find"
+	cont "you!"
+	done
+	
+GirlText:
+	text "Oh Grandpa..."
+	
+	para "I was only"
+	line "playing hide-and"
+	cont "-seek!"
+	
+	para "I had lots of fun!"
+	done
+	
+GrampsAnnoyedText:
+	text "Honestly,"
+	line "this lass..."
+	
+	para "But she is safe"
+	line "thankfully..."
+	
+	para "Thank you Trainer,"
+	
+	para "Let's head back to"
+	line "to my house for"
+	cont "now..."
+	done
+
+WalkDown:
+	step DOWN
+	step_end
+	
+WalkDownGirl:
+	step DOWN
+	step_end
+	
+WalkUpGramps:
+	step UP
+	step_end
+	
+WalkDownGramps:
+	step DOWN
+	step_end
 
 Route8_MapEvents:
 	db 0, 0 ; filler
@@ -450,17 +313,20 @@ Route8_MapEvents:
 	db 1 ; warp events
 	warp_event  9,  5, UNION_CAVE_1F, 1
 
-	db 0 ; coord events
+	db 1 ; coord events
+	coord_event  9,  6, SCENE_ROUTE8_GIRL_AND_GRAMPS, SceneFoundGirlScript
 
 	db 1 ; bg events
 	bg_event 10,  6, BGEVENT_READ, Route8UndergroundPathSign
 
-	db 6 ; object events
+	db 8 ; object events
 	object_event 40,  6, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route8FruitTree, -1
 	object_event 12, 10, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerYoungsterJoey, -1
-	object_event 24,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerSchoolboyDudley, -1
+	object_event 24,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSchoolboyDudley, -1
 	object_event 12,  6, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerLassConnie, -1
 	object_event  8,  7, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route8GrampsScript, EVENT_ECRUTEAK_CITY_GRAMPS
 	object_event 20, 13, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerFisherTully, -1
+	object_event 36, 12, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerHikerParry, -1
+	object_event  9,  0, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ROUTE8_GIRL_SAVED
 
 

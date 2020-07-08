@@ -8,14 +8,30 @@
 	const ECRUTEAKCITY_GRAMPS3
 	const ECRUTEAKCITY_ROCKET1
 	const ECRUTEAKCITY_ROCKET2
+	const ECRUTEAKCITY_ROCKET3
+	const ECRUTEAKCITY_ROCKET4
+	const ECRUTEAKCITY_LASS3
 
 EcruteakCity_MapScripts:
-	db 0 ; scene scripts
+	db 2 ; scene scripts
+	scene_script .DummyScene0 ; SCENE_ROUTE8_NOTHING
+	scene_script SceneRocketTakeOverScript ; SCENE_ROUTE8_GIRL
 
-	db 2 ; callbacks
+	db 3 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
 	callback MAPCALLBACK_TILES, .ClearTekuCityRocks
-
+	callback MAPCALLBACK_OBJECTS, .rockets
+	
+.rockets
+	checkevent EVENT_BURNED_TOWER_MORTY
+	iffalse .canfight
+	return
+	
+.canfight
+	disappear ECRUTEAKCITY_ROCKET1
+	disappear ECRUTEAKCITY_ROCKET1
+	return
+	
 .ClearTekuCityRocks:
 	checkevent EVENT_CINNABAR_ROCKS_CLEARED
 	iftrue .Done
@@ -31,6 +47,49 @@ EcruteakCity_MapScripts:
 .FlyPoint:
 	setflag ENGINE_FLYPOINT_ECRUTEAK
 	return
+	
+.DummyScene0:
+	end
+	
+SceneRocketTakeOverScript:
+	checkevent EVENT_MAHOGANY_TOWN_POKEFAN_M_BLOCKS_GYM
+	iftrue .SceneEcruteakNothing
+	checkevent EVENT_ECRUTEAK_SCARED_LASS
+	iftrue .SceneEcruteakNothing
+	opentext
+	writetext RocketsAreCommin
+	waitbutton
+	closetext
+	showemote EMOTE_SHOCK, PLAYER, 15
+	turnobject PLAYER, RIGHT
+	applymovement PLAYER, WalkToCenter
+	applymovement ECRUTEAKCITY_LASS3, LassRun1
+	pause 6
+	turnobject ECRUTEAKCITY_LASS3, RIGHT
+	pause 6
+	turnobject ECRUTEAKCITY_LASS3, LEFT
+	pause 6
+	turnobject ECRUTEAKCITY_LASS3, RIGHT
+	pause 6
+	turnobject ECRUTEAKCITY_LASS3, LEFT
+	pause 6
+	turnobject ECRUTEAKCITY_LASS3, DOWN
+	pause 6
+	turnobject ECRUTEAKCITY_LASS3, UP
+	pause 6
+	opentext
+	writetext RocketsAreCommin2
+	waitbutton
+	closetext
+	applymovement ECRUTEAKCITY_LASS3, LassRun2
+	disappear ECRUTEAKCITY_LASS3
+	setevent EVENT_ECRUTEAK_SCARED_LASS
+	setmapscene OLIVINE_LIGHTHOUSE_1F, SCENE_AQUARIUM_ROCKET_TAKEOVER_1F
+	end
+	
+.SceneEcruteakNothing:
+	end
+
 
 EcruteakCityGramps1Script:
 	jumptextfaceplayer EcruteakCityGramps1Text
@@ -118,43 +177,83 @@ EcruteakCityMartSign:
 
 EcruteakCityHiddenHyperPotion:
 	hiddenitem HYPER_POTION, EVENT_ECRUTEAK_CITY_HIDDEN_HYPER_POTION
+	
+EcruteakCityRocketTrainer1Script:
+	trainer GRUNTM, GRUNTM_32, EVENT_BEAT_TEKU_CITY_GRUNT1, EcruteakCityRocket1SeenText, EcruteakCityRocket1BeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext EcruteakCityRocket1AfterBattleText
+	waitbutton
+	closetext
+	end
+	
+EcruteakCityRocketTrainer2Script:
+	trainer GRUNTM, GRUNTM_33, EVENT_BEAT_TEKU_CITY_GRUNT2, EcruteakCityRocket2SeenText, EcruteakCityRocket2BeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext EcruteakCityRocket2AfterBattleText
+	waitbutton
+	closetext
+	end
+	
+EcruteakCityRocket1SeenText:
+	text "Hey kid!"
+	
+	para "What do you think"
+	line "you're doing?"
+	
+	para "This place is off"
+	line "limits!"
+	done
+
+EcruteakCityRocket1BeatenText:
+	text "What happened?"
+	done
+
+EcruteakCityRocket1AfterBattleText:
+	text "Don't bother going"
+	line "inside."
+
+	para "There's nothing a"
+	line "kid like you can"
+	cont "do."
+	done
+	
+EcruteakCityRocket2SeenText:
+	text "Hold it!"
+	
+	para "Kids should'nt"
+	line "get in our way!"
+	done
+
+EcruteakCityRocket2BeatenText:
+	text "W-who are you?"
+	done
+
+EcruteakCityRocket2AfterBattleText:
+	text "The AQUARIUM"
+	line "should have a lot"
+	cont "#MON for us to"
+	cont "sell off!"
+	done
 
 EcruteakCityRocket1Text:
-	text "Stay out of the"
-	line "AQUARIUM if you"
-	para "know what's good"
-	line "for you, kid!"
+	text "Move aside?"
+	
+	para "Sorry kid, we"
+	line "grown-ups have"
+	cont "buisness here!"
 	done
 	
 EcruteakCityRocket2Text:
-	text "Hehehehe!"
-	para "This place has to"
-	line "be full of rare"
-	para "#MON we can"
-	line "sell off to the"
-	cont "highest bidder!"
+	para "What do you want?"
 	
-	done
-
-UnusedMissingDaughterText:
-; unused
-	text "Oh, no. Oh, no…"
-
-	para "My daughter is"
-	line "missing."
-
-	para "No… She couldn't"
-	line "have gone to the"
-	cont "BURNED TOWER."
-
-	para "I told her not to"
-	line "go near it…"
-
-	para "People seem to"
-	line "disappear there…"
-
-	para "Oh, what should I"
-	line "do…?"
+	para "Go play in the"
+	line "MINES or somthing."	
 	done
 
 EcruteakCityGramps1Text:
@@ -305,27 +404,62 @@ BurnedTowerSignText:
 TekuCityDocksText:
 	text "TEKU CITY DOCKS"
 	done
+	
+RocketsAreCommin:
+	text "...Eeek!"
+	done
+	
+RocketsAreCommin2:
+	text "Help!"
+	
+	para "TEAM ROCKET "
+	line "trying to take"
+	cont "over the AQUARIUM!"
+	done
+	
+WalkToCenter:
+	step RIGHT
+	step_end
+	
+LassRun1:
+	big_step LEFT
+	big_step LEFT
+	big_step UP
+	big_step UP
+	big_step UP
+	big_step UP
+	big_step LEFT
+	step_end
+	
+LassRun2:
+	big_step UP
+	big_step UP
+	big_step UP
+	big_step UP
+	big_step UP
+	big_step UP
+	step_end
 
 EcruteakCity_MapEvents:
 	db 0, 0 ; filler
 
-	db 14 ; warp events
+	db 13 ; warp events
 	warp_event 22, 31, TEKU_PORT_PASSAGE, 1
 	warp_event 23, 31, TEKU_PORT_PASSAGE, 2
 	warp_event 31, 10, ECRUTEAK_POKECENTER_1F, 1
 	warp_event  7, 17, ECRUTEAK_BLISSEY_SPEECH_HOUSE, 1
-	warp_event  7, 27, OLIVINE_LIGHTHOUSE_1F, 2
-	warp_event 31, 16, ECRUTEAK_MART, 1
-	warp_event 10, 11, GOLDENROD_GYM, 1
-	warp_event 15, 17, ECRUTEAK_ITEMFINDER_HOUSE, 1
 	warp_event  6, 27, OLIVINE_LIGHTHOUSE_1F, 1
-	warp_event  9, 11, ROUTE_38_ECRUTEAK_GATE, 4
+	warp_event  7, 27, OLIVINE_LIGHTHOUSE_1F, 1
+	warp_event 31, 16, ECRUTEAK_MART, 1
+	warp_event 15, 17, ECRUTEAK_ITEMFINDER_HOUSE, 1
 	warp_event 22,  1, ROUTE_43_MAHOGANY_GATE, 3
 	warp_event 23,  1, ROUTE_43_MAHOGANY_GATE, 4
+	warp_event 10, 11, GOLDENROD_GYM, 1
 	warp_event 11, 11, GOLDENROD_GYM, 2
 	warp_event 33, 20, VIOLET_KYLES_HOUSE, 1
 
-	db 0 ; coord events
+	db 1 ; coord events
+	coord_event 15, 18, SCENE_ECRUTEAK_ROCKET_TAKEOVER, SceneRocketTakeOverScript
 
 	db 9 ; bg events
 	bg_event 18, 21, BGEVENT_READ, EcruteakCitySign
@@ -338,7 +472,7 @@ EcruteakCity_MapEvents:
 	bg_event 33, 13, BGEVENT_ITEM, EcruteakCityHiddenHyperPotion
 	bg_event 24, 29, BGEVENT_READ, TekuCityDocksSign
 
-	db 9 ; object events
+	db 12 ; object events
 	object_event 14, 21, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakCityGramps1Script, -1
 	object_event 19,  9, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakCityGramps2Script, -1
 	object_event 28, 27, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, EcruteakCityLass1Script, -1
@@ -346,7 +480,10 @@ EcruteakCity_MapEvents:
 	object_event  9, 30, SPRITE_SAILOR, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, EcruteakCityFisherScript, -1
 	object_event 10, 14, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, EcruteakCityYoungsterScript, -1
 	object_event 22, 13, SPRITE_SAILOR, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, EcruteakCityGramps3Script, -1
-	object_event  5, 28, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakCityRocket1Script, EVENT_MAHOGANY_TOWN_POKEFAN_M_BLOCKS_GYM
-	object_event  8, 28, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakCityRocket2Script, EVENT_MAHOGANY_TOWN_POKEFAN_M_BLOCKS_GYM
+	object_event  5, 28, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, EcruteakCityRocketTrainer1Script, EVENT_MAHOGANY_TOWN_POKEFAN_M_BLOCKS_GYM
+	object_event  8, 28, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 1, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, EcruteakCityRocketTrainer2Script, EVENT_MAHOGANY_TOWN_POKEFAN_M_BLOCKS_GYM
+	object_event  6, 28, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakCityRocket1Script, EVENT_BURNED_TOWER_MORTY
+	object_event  7, 28, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakCityRocket2Script, EVENT_BURNED_TOWER_MORTY
+	object_event  22, 22, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ECRUTEAK_SCARED_LASS
 
 	

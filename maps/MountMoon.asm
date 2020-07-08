@@ -31,15 +31,15 @@ MountMoon_MapEvents:
 	db 0, 0 ; filler
 
 	db 3 ; warp events
-	warp_event  3,  1, ROCK_TUNNEL_B1F, 1
-	warp_event 17,  9, UNION_CAVE_B2F, 1
-	warp_event 17, 13, ROCK_TUNNEL_B1F, 5
+	warp_event  5,  3, ROCK_TUNNEL_B1F, 1
+	warp_event 19, 11, UNION_CAVE_B2F, 1
+	warp_event 19, 15, ROCK_TUNNEL_B1F, 5
 
 	db 0 ; coord events
 
 	db 0 ; bg events
 
 	db 3 ; object events
-	object_event 22, 7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, UnionCave1FAwakening, EVENT_UNION_CAVE_1F_AWAKENING
-	object_event 16, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, MountMoonTMGigaDrain, EVENT_ROUTE_44_ULTRA_BALL
-	object_event  2, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, MountMoonDomeFossil, EVENT_ROUTE_44_MAX_REPEL
+	object_event 24,  9, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, UnionCave1FAwakening, EVENT_UNION_CAVE_1F_AWAKENING
+	object_event 18, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, MountMoonTMGigaDrain, EVENT_ROUTE_44_ULTRA_BALL
+	object_event  4, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, MountMoonDomeFossil, EVENT_ROUTE_44_MAX_REPEL

@@ -338,10 +338,6 @@ ElmDirectionsScript:
 	waitbutton
 	closetext
 	opentext
-	writetext ElmDirectionsText2
-	waitbutton
-	closetext
-	opentext
 	writetext ElmDirectionsText3
 	waitbutton
 	closetext
@@ -688,10 +684,11 @@ ElmText_Accepted2:
 	done
 	
 Text_SilverTakeThisOne:
-	text "You sure you chose"
-	line "right, <PLAY_G>?"
-	para "This #MON looks"
-	line "much stronger!"
+	text "This #MON looks"
+	line "strong!"
+	
+	para "I will take this"
+	line "one."
 	done
 	
 Text_SilverGetCruise:
@@ -715,99 +712,15 @@ Text_Best:
 	cont "one!"
 	done
 
-Text_OakDream:
-	text "OAK: To make a"
-	line "complete guide on"
-	para "all of the #MON"
-	line "in the world…"
-	para "That was my dream!"
-	line "But #MON are"
-	para "being discovered"
-	line "even as we speak!"
-	para "I don't have"
-	line "enough time left"
-	cont "in this world."
-	para "So you two are"
-	line "going to help me"
-	cont "fulfill my dream!"
-	para "And to do that,"
-	line "you'll need your"
-	cont "own #MON!"
-	para "There on the"
-	line "table are three"
-	cont "#BALLs."
-	para "Each of you,"
-	line "choose one to be"
-	para "your own partner"
-	line "#MON!"
-	done
-	
-Text_RivalGenerous:
-	text "<RIVAL>: I'll"
-	line "let you choose"
-	para "first, <PLAY_G>,"
-	line "because I'm a"
-	para "generous kind of"
-	line "guy!"
-	done
-
 Lab_GetDexText:
 	text "<PLAYER> received"
 	line "#DEX!"
 	done
 	
-Text_OakSpeech:
-	text "OAK: Indeed! I am"
-	line "PROF.OAK! You've"
-	para "got quite the"
-	line "mouth on you!"
-	para "It is indeed I"
-	line "who called you"
-	cont "here!"
-	para "Won't you listen"
-	line "for a while?"
-	para "One year ago, in"
-	line "KANTO, I entrusted"
-	para "two boys with a"
-	line "#MON and a"
-	para "#DEX each to"
-	line "assist in my"
-	cont "reasearch."
-	para "In the end, they"
-	line "did an astounding"
-	cont "job!"
-	para "They succeeded in"
-	line "documenting 150"
-	para "species of"
-	line "#MON!"
-	para "However… It is"
-	line "a vast world we"
-	para "live in! New"
-	line "#MON are being"
-	para "found all over"
-	line "NIHON!"
-	para "Therefore, I moved"
-	line "my lab from KANTO"
-	para "to here, SILENT"
-	line "TOWN, to further"
-	cont "my research."
-	para "Because, you see,"
-	line "in this new place,"
-	para "new #MON will"
-	line "be found."
-	para "I'll be hard at"
-	line "work researching,"
-	para "but as you have"
-	line "noticed, I'm"
-	cont "growing old."
-	para "My grandson BLUE"
-	line "and my AIDEs help,"
-	para "but it's not quite"
-	line "enough!"
-	para "<PLAY_G>!"
-	para "<RIVAL>!"
-	para "Please help me"
-	line "research #MON!"
+ElmText_Intro:
+	text "OAK: <PLAY_G>!"
+	line "There you are!"
+
 	done
 	
 Text_OakIsOld:
@@ -816,11 +729,106 @@ Text_OakIsOld:
 	para "geezer is PROF."
 	line "OAK…"
 	done
+	
+Text_OakSpeech:
+	text "OAK: Haha!"
+	
+	para "Indeed young man,"
+	line "but Im not that"
+	cont "old yet!"
+	
+	para "I have called you"
+	line "both here for an"
+	cont "important task..."
 
-ElmText_Intro:
-	text "OAK: <PLAY_G>!"
-	line "There you are!"
+	para "Since I was a "
+	line "young boy, I have"
+	cont "dreamed of having"
+	cont "a complete guide"
+	cont "on every species"
+	cont "of #MON."
+	
+	para "However..."
+	para "More and more are"
+	line "being discovered"
+	cont "every day!"
+	
+	para "But my age is"
+	line "catching on me..."
+	
+	para "So!"
+	
+	para "I would like you"
+	line "two to carry out"
+	cont "my research."
+	done
 
+Text_Interesting:
+	text "<RIVAL>: Wow!"
+
+	para "You want us to"
+	line "find and catch a"
+	cont "bunch of #MON"
+	cont "for you!?"
+	
+	para "As many as we"
+	line "want?"
+	done
+	
+BlueText_Pokedex:
+	text "BLUE: That's"
+	line "right!"
+	
+	para "It won't be easy"
+	line "however."
+	
+	para "I tried to com"
+	line "-plete the #DEX"
+	cont "once..."
+	
+	para "But I got too"
+	line "arrogant…"
+	
+	para "I focused too much"
+	line "being the best"
+	cont "trainer, I lost"
+	cont "sight of my goal."
+	
+	para "So I help Gramps"
+	line "with his research"
+	cont "now."
+	
+	para "Here! Take this"
+	line "#DEX!"
+
+	para "It automatically"
+	line "records data on"
+	para "#MON you've"
+	line "seen or caught!"
+	done
+	
+Text_OakDream:
+	text "OAK: Now all you"
+	line "need is a partner"
+	cont "#MON for your"
+	cont "journey."
+	
+	para "There are three"
+	line "#BALLs on the"
+	cont "table."
+	
+	para "Both of you can"
+	line "choose one to be"
+	cont "your companion!"	
+	done
+	
+Text_RivalGenerous:
+	text "<RIVAL>: You"
+	line "can choose first"
+	cont "<PLAY_G>..."
+	
+	para "I want some time"
+	line "to decide."
 	done
 
 ElmText_Accepted:
@@ -829,41 +837,6 @@ ElmText_Accepted:
 	para "I appreciate you"
 	line "helping out my"
 	cont "grandpa."
-	done
-
-BlueText_Pokedex:
-	text "BLUE: I used to"
-	line "want to be the"
-	para "world's best"
-	line "#MON trainer."
-	para "But when I got"
-	line "too arrogant…"
-	para "There was someone"
-	line "who showed me"
-	cont "humility."
-	para "<PLAY_G>, you"
-	line "remind me of him."
-	para "And <RIVAL>!"
-	line "You remind me of"
-	cont "myself!"
-	para "Right, though!"
-	para "I have something"
-	line "for you both!"
-	para "Here! Take this"
-	line "#DEX!"
-	para "It automatically"
-	line "records data on"
-	para "#MON you've"
-	line "seen or caught!"
-	done
-
-Text_Interesting:
-	text "<RIVAL>: Hey,"
-	line "<PLAY_G>!"
-
-	para "This just got"
-	line "interesting!"
-
 	done
 
 ElmText_GotAnEmail:
@@ -975,45 +948,19 @@ ReceivedStarterText:
 
 ElmDirectionsText1:
 	text "ROUTE 101 and"
-	line "SILENT HILLS would"
-	
-	para "be great places to"
-	line "start looking for"
-	
-	para "#MON. If you"
-	line "want to get some"
-	
-	para "#BALLs, you"
-	line "should head"
-	
-	para "towards OLD CITY,"
-	line "the next town over"
-	
-	para "to pick some up at"
-	line "their MART."
+	line "SILENT HILLS would"	
+	cont "be great places to"
+	cont "start looking for"
+	cont "#MON."
 	
 	para "I'm sure you'll do"
 	line "great!"
 
 	para "But just in case,"
 	line "here's my phone"
-
-	para "number. Call me if"
-	line "anything comes up!"
-	done
-
-ElmDirectionsText2:
-	text "If your #MON is"
-	line "hurt, you should"
-
-	para "heal it with the"
-	line "#MON CENTER"
-	
-	para "just behind the"
-	line "lab."
-
-	para "Feel free to use"
-	line "it anytime."
+	cont "number."
+	para "Call me if any"
+	line "-thing comes up!"
 	done
 
 ElmDirectionsText3:
@@ -1043,108 +990,6 @@ ElmPokeBallText:
 ElmsLabHealingMachineText1:
 	text "I wonder what this"
 	line "does?"
-	done
-
-ElmsLabHealingMachineText2:
-	text "Would you like to"
-	line "heal your #MON?"
-	done
-
-ElmAfterTheftText1:
-	text "ELM: <PLAY_G>, this"
-	line "is terrible…"
-
-	para "Oh, yes, what was"
-	line "MR.#MON's big"
-	cont "discovery?"
-	done
-
-ElmAfterTheftText2:
-	text "<PLAYER> handed"
-	line "the MYSTERY EGG to"
-	cont "PROF.ELM."
-	done
-
-ElmAfterTheftText3:
-	text "ELM: This?"
-	done
-
-ElmAfterTheftText4:
-	text "But… Is it a"
-	line "#MON EGG?"
-
-	para "If it is, it is a"
-	line "great discovery!"
-	done
-
-ElmAfterTheftText5:
-	text "ELM: What?!?"
-
-	para "PROF.OAK gave you"
-	line "a #DEX?"
-
-	para "<PLAY_G>, is that"
-	line "true? Th-that's"
-	cont "incredible!"
-
-	para "He is superb at"
-	line "seeing the poten-"
-	cont "tial of people as"
-	cont "trainers."
-
-	para "Wow, <PLAY_G>. You"
-	line "may have what it"
-
-	para "takes to become"
-	line "the CHAMPION."
-
-	para "You seem to be"
-	line "getting on great"
-	cont "with #MON too."
-
-	para "You should take"
-	line "the #MON GYM"
-	cont "challenge."
-
-	para "The closest GYM"
-	line "would be the one"
-	cont "in VIOLET CITY."
-	done
-
-ElmAfterTheftText6:
-	text "…<PLAY_G>. The"
-	line "road to the"
-
-	para "championship will"
-	line "be a long one."
-
-	para "Before you leave,"
-	line "make sure that you"
-	cont "talk to your mom."
-	done
-
-ElmStudyingEggText:
-	text "ELM: Don't give"
-	line "up! I'll call if"
-
-	para "I learn anything"
-	line "about that EGG!"
-	done
-
-ElmAideHasEggText:
-	text "ELM: <PLAY_G>?"
-	line "Didn't you meet my"
-	cont "assistant?"
-
-	para "He should have met"
-	line "you with the EGG"
-
-	para "at VIOLET CITY's"
-	line "#MON CENTER."
-
-	para "You must have just"
-	line "missed him. Try to"
-	cont "catch him there."
 	done
 
 ElmWaitingEggHatchText:
@@ -1223,6 +1068,7 @@ ElmGiveTicketText1:
 	para "See? It's an"
 	line "S.S.TICKET."
 	done
+
 ElmGiveTicketText2:
 	text "The docks in WEST"
 	line "CITY take boats"

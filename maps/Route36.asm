@@ -7,6 +7,9 @@
 	const ROUTE36_SILVER
 	const ROUTE36_YOUNGSTER3
 	const ROUTE36_YOUNGSTER4
+	const ROUTE36_BUG_CATCHER
+	const ROUTE36_FISHER1
+	const ROUTE36_FISHER2
 
 
 Route36_MapScripts:
@@ -14,9 +17,17 @@ Route36_MapScripts:
 	scene_script .DummyScene0 ; SCENE_ROUTE36_NOTHING
 	scene_script .DummyScene1 ; SCENE_ROUTE36_SILVER
 
-	db 2 ; callbacks
+	db 3 ; callbacks
 	callback MAPCALLBACK_OBJECTS, .ArthurCallback
 	callback MAPCALLBACK_NEWMAP, .CheckMomCall
+	callback MAPCALLBACK_TILES, .Route35ClearTree
+	
+.Route35ClearTree
+	checkevent EVENT_ROUTE36_GARDENER
+	iftrue .Done
+	changeblock  33, 07, $07 ; tree
+.Done:
+	return
 
 .CheckMomCall:
 	checkevent EVENT_TALKED_TO_MOM_AFTER_MYSTERY_EGG_QUEST
@@ -42,6 +53,27 @@ Route36_MapScripts:
 .ArthurAppears:
 	appear ROUTE36_ARTHUR
 	return
+	
+GardenerScript:
+	faceplayer
+	opentext
+	checkevent EVENT_GOT_HM01_CUT
+	iftrue .chopped
+	writetext GardenerTreeText
+	waitbutton
+	closetext
+	turnobject ROUTE36_FISHER1, UP
+	end
+	
+.chopped
+	writetext GardenerTreeChoppedText
+	waitbutton
+	closetext
+	applymovement ROUTE36_FISHER2, GardenerWalkAway
+	setevent EVENT_ROUTE36_TREE_CHOPPED
+	disappear ROUTE36_FISHER2
+	end
+	
 
 TrainerCamperSamuel:
 	trainer CAMPER, SAMUEL, EVENT_BEAT_YOUNGSTER_SAMUEL, CamperSamuelSeenText, CamperSamuelBeatenText, 0, .Script
@@ -402,6 +434,15 @@ Route36RivalBattleExitMovement:
 	step UP
 	step_end
 	
+GardenerWalkAway:
+	step UP
+	fast_jump_step LEFT
+	fast_jump_step LEFT
+	fast_jump_step LEFT
+	step DOWN
+	fast_jump_step LEFT
+	step_end
+	
 Route36SilverWinText:
 	text "Wow! Looks like"
 	line "you've been"
@@ -632,6 +673,29 @@ FledglingJohnnyAfterBattleText:
 	line "ing. I need to"
 	cont "take a break."
 	done
+	
+GardenerTreeText:
+	text "Bah!"
+	para "This tree is block"
+	line "-ing the path!"
+	
+	para "I think I can chop"
+	line "it down but it's"
+	cont "gonna take some"
+	cont "time..."
+	done
+	
+GardenerTreeChoppedText:
+	text "Ha!"
+	para "I finally got that"
+	line "tree chopped down."
+	
+	para "Now I can get to"
+	line "WEST CITY at last."
+	
+	para "See ya kid,"
+	line "and good luck!"
+	done
 
 
 Route36_MapEvents:
@@ -650,7 +714,7 @@ Route36_MapEvents:
 	bg_event 32, 10, BGEVENT_READ, Route36TrainerTips1
 	bg_event 18,  4, BGEVENT_READ, Route36GameHouse
 
-	db 9 ; object events
+	db 11 ; object events
 	object_event  8, 9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerPsychicMark, -1
 	object_event 29,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TrainerSchoolboyAlan1, -1
 	object_event 50,  7, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route36LassScript, -1
@@ -660,3 +724,5 @@ Route36_MapEvents:
 	object_event 12, 11, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerCamperSamuel, -1
 	object_event 20,  8, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerYoungsterIan, -1
 	object_event 34,  9, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINCLOCKWISE, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerFledglingJohnny, -1
+	object_event 33,  7, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GardenerScript, EVENT_ROUTE36_GARDENER
+	object_event 33,  6, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GardenerScript, EVENT_ROUTE36_GARDENER_CHOPPED

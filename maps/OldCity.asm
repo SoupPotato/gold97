@@ -7,8 +7,6 @@
 	const OldCity_POKE_BALL1
 	const OldCity_POKE_BALL2
 	const OldCity_GRAMPS2
-	const OldCity_GUARD1
-	const OldCity_GUARD2
 
 OldCity_MapScripts:
 	db 0 ; scene scripts
@@ -41,9 +39,6 @@ OldCityGrampsScript:
 	
 OldCityGrampsScript2:
 	jumptextfaceplayer OldCityGramps2Text
-	
-OldCityGuard:
-	jumptextfaceplayer OldCityGuardText
 
 OldCityYoungsterScript:
 	jumptextfaceplayer OldCityYoungsterText

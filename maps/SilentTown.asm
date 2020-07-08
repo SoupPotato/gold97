@@ -357,17 +357,15 @@ Text_ItsDangerousToGoAlone:
 	cont "#MON!"
 
 	para "Wild #MON"
-	line "jump out of the"
-
-	para "grass on the way"
-	line "to the next town."
+	line "might attack you!"
 	
 	para "You need your own"
 	line "#MON for"
 	cont "protection!"
 	
-	para "Ah! Wait, are you"
-	line "perhaps…?"
+	para "Oh?"
+	
+	para "Are you perhaps…?"
 	
 	para "…Come with me!"
 	done
@@ -418,9 +416,12 @@ SilentTownRivalText1:
 	done
 
 SilentTownRivalText2:
-	text "You got one too?!"
-	line "Man, that's no"
-	cont "fun! Hmph!"
+	text "..."
+	para "You got one too?!"
+	para "Man, that's no"
+	line "fun!"
+	
+	para "Hmph!"
 	
 	para "Well, I'm off to"
 	line "OAK's!"

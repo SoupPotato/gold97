@@ -158,13 +158,13 @@ SlowpokeWellB1F_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event 11, 13, AZALEA_TOWN, 6
-	warp_event 11,  7, SLOWPOKE_WELL_B2F, 1
+	warp_event  9, 11, AZALEA_TOWN, 6
+	warp_event  9,  1, SLOWPOKE_WELL_B2F, 1
 
 	db 0 ; coord events
 
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event 10, 10, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SlowpokeWellB1FSilverScript, EVENT_GOT_SQUIRTBOTTLE
+	object_event  8,  8, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SlowpokeWellB1FSilverScript, EVENT_GOT_SQUIRTBOTTLE
 

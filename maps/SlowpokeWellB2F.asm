@@ -56,7 +56,6 @@ RocketEncounterScript:
 	winlosstext GruntM4SeenText, GruntM4BeatenText
 	loadtrainer GRUNTM, GRUNTM_4
 	startbattle
-	dontrestartmapmusic
 	reloadmapafterbattle
 	jump .returnfrombattle
 
@@ -73,6 +72,8 @@ RocketEncounterScript:
 	pause 15
 	special FadeInQuickly
 	pause 15
+	applymovement SLOWPOKEB2F_OAK, OakSteptoSpeech
+	pause 30
 	applymovement SLOWPOKEB2F_OAK, OakReadyForSpeech
 	opentext
 	writetext OakSpeechText
@@ -99,7 +100,6 @@ RocketEncounterScript:
 	setscene SCENE_SLOWPOKE2_NOTHING
 	setmapscene ELM_ENTRANCE, SCENE_ELM_ENTRANCE_NOTHING
 	clearevent EVENT_EXPLODING_TRAP_21
-	playmapmusic
 	end
 
 SlowpokeWellB1FNPCScript:
@@ -139,9 +139,12 @@ BlueLeavesMovement:
 	step DOWN
 	step_end
 
+OakSteptoSpeech:
+	step UP
+	step UP
+	step_end
+
 OakReadyForSpeech:
-	step UP
-	step UP
 	step RIGHT
 	step RIGHT
 	turn_head DOWN
@@ -158,8 +161,9 @@ OakStepUpMovement:
 	step_end
 	
 OakStepBackMovement:
+	fix_facing
 	step DOWN
-	turn_head UP
+	remove_fixed_facing
 	step_end
 	
 RocketWalksToSilver:
@@ -234,30 +238,37 @@ SlowpokeWellB2FGymGuyText_GotKingsRock:
 	done
 	
 OakSpeechText:
-	text "OAK: This research"
-	line "trip didn't go as"
+	text "OAK: Well..."
+	
+	para "This research trip"
+	line "didn't go as"
 	cont "planned…"
-	para "But!"
-	para "It is far more"
-	line "important that we"
-	para "rescued the"
-	line "SLOWPOKE that live"
-	para "in this WELL from"
-	line "losing their TAILs"
-	cont "to TEAM ROCKET."
-	para "I'm going to see"
-	line "if I can find any"
-	para "information about"
-	line "why TEAM ROCKET"
-	cont "has returned."
-	para "This could be bad."
-	line "BLUE and I will"
-	cont "return to the lab."
+	
+	para "Regardless..."
+	
+	para "We have rescued"
+	line "the SLOWPOKE."
+	
+	para "Now they can live"
+	line "without losing"
+	cont "their TAILs to"
+	cont "TEAM ROCKET."
+	
+	para "But TEAM ROCKET"
+	line "returning..."
+	
+	para "After three years,"
+	line "why now?"
+	
+	para "BLUE, we best re"
+	line "-turn to the lab"
+	cont "and investigate."
+	
 	para "<PLAY_G>, <RIVAL>!"
-	line "You two should go"
-	para "ahead and continue"
-	line "your LEAGUE"
-	cont "CHALLENGE."
+	line "You two should go"	
+	cont "ahead and continue"
+	cont "your journey."
+	
 	para "If you need me,"
 	line "you know where"
 	cont "I'll be."
@@ -267,27 +278,42 @@ BlueOutText:
 	text "BLUE: Thanks for"
 	line "your help today,"
 	cont "guys."
+	
+	para "Hopefully me and"
+	line "Gramps can find"
+	cont "out what these"
+	cont "guys are up to."	
 	done
 	
 SilverOutText:
 	text "<RIVAL>: See ya"
 	line "around, <PLAY_G>!"
+	
+	para "Don't fall too far"
+	line "behind!"
 	done
 
 RocketsPlan:
-	text "This doesn't"
+	text "Hmph!"
+	
+	para "This doesn't"
 	line "really matter."
+	
 	para "TEAM ROCKET is"
 	line "already so far"
-	para "along with our"
-	line "plan that small"
-	para "setbacks like this"
-	line "mean nothing!"
+	cont "along with it's"
+	cont "plan!"
+	
+	para "A small setback"
+	line "like this means"
+	cont "nothing!"
+	
 	para "You'll soon see"
 	line "the fruits of our"
-	para "labor when all"
-	line "#MON are under"
+	cont "labor when all"
+	cont "#MON are under"
 	cont "our control!"
+	
 	para "Team, retreat!"
 	done
 
@@ -309,12 +335,14 @@ WeDoWhatWeWantText:
 WeAreAllTrainersText:
 	text "<RIVAL>: BLUE,"
 	line "<PLAY_G>, and I"
-	cont "are trainers!"
-	para "We sure could stop"
-	line "you!"
+	cont "are all trainers!"
+	
+	para "We can beat you"
+	line "easily!"
+	
 	para "My #MON are"
 	line "stronger than"
-	cont "anyone's!"
+	cont "anyone elses!"
 	done
 	
 WellSeeText:
@@ -325,9 +353,11 @@ WellSeeText:
 
 BlueProblemText:
 	text "BLUE: <PLAY_G>!"
-	line "It's a good thing"
-	para "you and <RIVAL>"
-	line "showed up!"
+	
+	para "It's a good thing"
+	line "you and <RIVAL>"
+	cont "showed up!"
+	
 	para "We've got a"
 	line "problem!"
 	done
@@ -336,18 +366,18 @@ OakStopThisText:
 	text "OAK: You people"
 	line "are hurting these"
 	cont "innocent SLOWPOKE!"
+	
 	para "It's not right to"
 	line "cut their TAILs"
-	para "off to sell them"
-	line "for profit!"
+	cont "off to sell them"
+	cont "for profit!"
 	done
 
 SlowpokeWellB2F_MapEvents:
 	db 0, 0 ; filler
 
-	db 2 ; warp events
+	db 1 ; warp events
 	warp_event  8, 15, SLOWPOKE_WELL_B1F, 2
-	warp_event  9, 15, SLOWPOKE_WELL_B1F, 2
 
 	db 1 ; coord events
 	coord_event  9, 10, SCENE_DEFAULT, RocketEncounterScript
@@ -357,7 +387,7 @@ SlowpokeWellB2F_MapEvents:
 
 	db 8 ; object events
 	object_event 11,  8, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SlowpokeWellB1FNPCScript, EVENT_RIVAL_BURNED_TOWER
-	object_event  9,  8, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SlowpokeWellB1FNPCScript, EVENT_RIVAL_BURNED_TOWER
+	object_event  9,  8, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SlowpokeWellB1FNPCScript, EVENT_RIVAL_BURNED_TOWER
 	object_event  8,  8, SPRITE_OAK, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SlowpokeWellB1FNPCScript, EVENT_RIVAL_BURNED_TOWER
 	object_event  8,  5, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SlowpokeWellB1FNPCScript, EVENT_RIVAL_BURNED_TOWER
 	object_event 12,  5, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SlowpokeWellB1FNPCScript, EVENT_RIVAL_BURNED_TOWER

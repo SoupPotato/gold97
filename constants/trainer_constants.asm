@@ -303,6 +303,8 @@ KRIS EQU __enum__
 	const GRUNTM_29
 	const GRUNTM_30
 	const GRUNTM_31
+	const GRUNTM_32
+	const GRUNTM_33
 
 	trainerclass GENTLEMAN ; 20
 	const PRESTON
@@ -466,7 +468,6 @@ KRIS EQU __enum__
 	const BENJAMIN
 	const ERIK
 	const MICHAEL
-	const PARRY1
 	const TIMOTHY
 	const BAILEY
 	const ANTHONY3
@@ -476,16 +477,13 @@ KRIS EQU __enum__
 	const KENNY
 	const JIM
 	const DANIEL
-	const PARRY2
-	const PARRY3
+	const PARRY
 	const ANTHONY4
 	const ANTHONY5
 
 	trainerclass BIKER ; 2d
 	const BIKER_BENNY
 	const KAZU
-	const DWAYNE
-	const HARRIS
 	const ZEKE
 	const CHARLES
 	const RILEY
@@ -517,6 +515,7 @@ KRIS EQU __enum__
 	const IRWIN2
 	const IRWIN3
 	const IRWIN4
+	const DWAYNE
 
 	trainerclass BLACKBELT_T ; 32
 	const KENJI1
@@ -704,6 +703,7 @@ KRIS EQU __enum__
 	const LANDON
 	const RICARDO
 	const MARKSON
+	const HARRIS
 	
 	trainerclass SPORTSMAN
 	const JACOB

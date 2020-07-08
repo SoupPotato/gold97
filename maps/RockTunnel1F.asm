@@ -54,25 +54,25 @@ RockTunnel1F_MapEvents:
 	db 0, 0 ; filler
 
 	db 8 ; warp events
-	warp_event  3,  3, UNION_CAVE_B1F, 1
-	warp_event 13,  3, UNION_CAVE_B1F, 2
-	warp_event 31,  3, UNION_CAVE_B1F, 5
-	warp_event 21,  5, ROCK_TUNNEL_B1F, 2
-	warp_event 37,  5, ROCK_TUNNEL_B1F, 3
-	warp_event  3, 15, ROCK_TUNNEL_B1F, 4
-	warp_event 35, 13, ROCK_TUNNEL_B1F, 6
-	warp_event 35, 11, UNION_CAVE_B1F, 6
+	warp_event  5,  5, UNION_CAVE_B1F, 1
+	warp_event 15,  5, UNION_CAVE_B1F, 2
+	warp_event 33,  5, UNION_CAVE_B1F, 5
+	warp_event 23,  7, ROCK_TUNNEL_B1F, 2
+	warp_event 39,  7, ROCK_TUNNEL_B1F, 3
+	warp_event  5, 17, ROCK_TUNNEL_B1F, 4
+	warp_event 37, 15, ROCK_TUNNEL_B1F, 6
+	warp_event 37, 13, UNION_CAVE_B1F, 6
 
 	db 0 ; coord events
 
 	db 2 ; bg events
-	bg_event 29,  1, BGEVENT_ITEM, RockTunnel1FHiddenXAccuracy
-	bg_event 26,  8, BGEVENT_ITEM, RockTunnel1FHiddenXDefend
+	bg_event 31,  3, BGEVENT_ITEM, RockTunnel1FHiddenXAccuracy
+	bg_event 28, 10, BGEVENT_ITEM, RockTunnel1FHiddenXDefend
 
 	db 5 ; object events
-	object_event  8, 17, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RockTunnel1FElixer, EVENT_ROCK_TUNNEL_1F_ELIXER
-	object_event 39,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RockTunnel1FTMSteelWing, EVENT_ROCK_TUNNEL_1F_TM_STEEL_WING
-	object_event 16, 16, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RockTunnel1FBoulder, -1
-	object_event 15,  1, SPRITE_WHITNEY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RockTunnelWhitneyScript, EVENT_BURNED_TOWER_MORTY
-	object_event 37, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RockTunnel1FHeartStone, EVENT_PICKED_UP_GOLD_BERRY_FROM_AERODACTYL_ITEM_ROOM
+	object_event 10, 19, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RockTunnel1FElixer, EVENT_ROCK_TUNNEL_1F_ELIXER
+	object_event 41,  8, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RockTunnel1FTMSteelWing, EVENT_ROCK_TUNNEL_1F_TM_STEEL_WING
+	object_event 18, 18, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RockTunnel1FBoulder, -1
+	object_event 17,  3, SPRITE_WHITNEY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RockTunnelWhitneyScript, EVENT_BURNED_TOWER_MORTY
+	object_event 39, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RockTunnel1FHeartStone, EVENT_PICKED_UP_GOLD_BERRY_FROM_AERODACTYL_ITEM_ROOM
 

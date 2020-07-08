@@ -45,6 +45,5 @@ PhoneContacts:
 	phone BIRD_KEEPER,  VANCE1,             ROUTE_44,         ANYTIME, VancePhoneScript1,   ANYTIME, VancePhoneScript2
 	phone FISHER,       WILTON1,            ROUTE_44,         ANYTIME, WiltonPhoneScript1,  ANYTIME, WiltonPhoneScript2
 	phone BLACKBELT_T,  KENJI3,             ROUTE_45,         ANYTIME, KenjiPhoneScript1,   ANYTIME, KenjiPhoneScript2
-	phone HIKER,        PARRY1,             ROUTE_45,         ANYTIME, ParryPhoneScript1,   ANYTIME, ParryPhoneScript2
 	phone PICNICKER,    ERIN1,              ROUTE_46,         ANYTIME, ErinPhoneScript1,    ANYTIME, ErinPhoneScript2
 	phone TRAINER_NONE, PHONECONTACT_BUENA, GOLDENROD_DEPT_STORE_ROOF, ANYTIME, BuenaPhoneScript1, ANYTIME, BuenaPhoneScript2

@@ -4,12 +4,42 @@
 	const AQUA1F_ROCKETF1
 	const AQUA1F_YOUNGSTER
 	const AQUA1F_LASS
+	const AQUA1F_WHITNEY
 
 OlivineLighthouse1F_MapScripts:
-	db 0 ; scene scripts
+	db 1 ; scene scripts
+	scene_script SceneWhitneyEnters 
 
 	db 0 ; callbacks
 	
+
+
+SceneWhitneyEnters:
+	checkevent WHITNEY_FIGHTING_ROCKETS
+	iffalse .SceneNothing
+	checkevent EVENT_MAHOGANY_TOWN_POKEFAN_M_BLOCKS_GYM
+	iftrue .SceneNothing
+	playsound SFX_ENTER_DOOR
+	appear AQUA1F_WHITNEY
+	pause 15
+	applymovement AQUA1F_WHITNEY, WhitneyToCenter
+	opentext
+	writetext WhitneyThisisTerribleText
+	waitbutton
+	closetext
+	
+	clearevent WHITNEY_FIGHTING_ROCKETS
+	end
+	
+.SceneNothing:
+	end
+	
+	
+WhitneyToCenter:
+	step UP
+	step UP
+	step LEFT
+	step_end
 
 TrainerGruntM2:
 	trainer GRUNTM, GRUNTM_2, EVENT_BEAT_ROCKET_GRUNTM_2, GruntM2SeenText, GruntM2BeatenText, 0, .Script
@@ -174,6 +204,10 @@ GruntF1SeenText:
 	para "Don't get in our"
 	line "way, kid!"
 	done
+	
+WhitneyThisisTerribleText:
+	text "Oh no!"
+	line "This is terrible!"
 
 GruntF1BeatenText:
 	text "You rotten brat!"
@@ -222,11 +256,12 @@ OlivineLighthouse1F_MapEvents:
 	db 0, 0 ; filler
 
 	db 3 ; warp events
-	warp_event 12,  7, ECRUTEAK_CITY, 9
-	warp_event 13,  7, ECRUTEAK_CITY, 5
+	warp_event 12,  7, ECRUTEAK_CITY, 5
+	warp_event 13,  7, ECRUTEAK_CITY, 6
 	warp_event  0,  7, OLIVINE_LIGHTHOUSE_2F, 1
 
-	db 0 ; coord events
+	db 1 ; coord events
+	coord_event 12,  7, SCENE_DEFAULT, SceneWhitneyEnters
 
 	db 4 ; bg events
 	bg_event  1,  3, BGEVENT_READ, Aqua1FExhibit1Script
@@ -235,9 +270,10 @@ OlivineLighthouse1F_MapEvents:
 	bg_event  4,  1, BGEVENT_READ, Aqua1FExhibit4Script
 
 
-	db 5 ; object events
+	db 6 ; object events
 	object_event 15,  5, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AquaReceptionistScript, -1
 	object_event 10,  4, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerGruntM2, EVENT_MAHOGANY_TOWN_POKEFAN_M_BLOCKS_GYM
 	object_event  5,  7, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerGruntF1, EVENT_MAHOGANY_TOWN_POKEFAN_M_BLOCKS_GYM
 	object_event 13,  2, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AquaYoungsterScript, -1
 	object_event  3,  5, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AquaLassScript, -1
+	object_event  13, 17, SPRITE_WHITNEY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1

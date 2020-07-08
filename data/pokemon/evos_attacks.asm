@@ -3456,16 +3456,20 @@ MimeJrEvosAttacks:
 	db EVOLVE_HAPPINESS, TR_ANYTIME, MR__MIME
 	db 0 ; no more evolutions
 	db 1, BARRIER
-	db 6, CONFUSION
-	db 9, SUBSTITUTE
-	db 13, MEDITATE
-	db 17, DOUBLESLAP
+	db 1, CHARM
+	db 5, CONFUSION
+	db 9, MEDITATE
+	db 13, DOUBLESLAP
+	db 17, MIMIC
+    db 17, PSYWAVE
 	db 21, LIGHT_SCREEN
-	db 22, REFLECT
-	db 27, ENCORE
-	db 30, PSYBEAM
-	db 35, BATON_PASS
-	db 40, SAFEGUARD
+	db 21, REFLECT
+	db 25, PSYBEAM
+	db 29, ENCORE
+	db 33, SUBSTITUTE
+	db 37, PSYCHIC_M
+	db 41, BATON_PASS
+	db 46, SAFEGUARD
 	db 0 ; no more level-up moves
 
 SmeargleEvosAttacks:

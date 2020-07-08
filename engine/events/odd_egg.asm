@@ -23,13 +23,13 @@ _GiveOddEgg:
 .not_done
 
 	; Break when [hRandom] <= de.
-	ldh a, [hRandom + 1]
+	ld a, [hRandom + 1]
 	cp d
 	jr c, .done
 	jr z, .ok
 	jr .next
 .ok
-	ldh a, [hRandom + 0]
+	ld a, [hRandom + 0]
 	cp e
 	jr c, .done
 	jr z, .done
@@ -39,7 +39,7 @@ _GiveOddEgg:
 .done
 
 	ld hl, OddEggs
-	ld a, OddEgg1End - OddEgg1
+	ld a, OddEgg2 - OddEgg1
 	call AddNTimes
 
 	ld de, wOddEggSpecies
