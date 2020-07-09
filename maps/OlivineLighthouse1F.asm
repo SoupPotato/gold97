@@ -64,7 +64,6 @@ OlivineLighthouse1F_MapScripts:
 	setscene SCENE_AQUARIUM_ROCKET_TAKEOVER_1F_NOTHING
 	clearevent WHITNEY_FIGHTING_ROCKETS
 	setevent EVENT_AQUARIUM_ROCKETS_IDLE
-	clearevent ROCKETS_FIGHTING_WHITNEY
 	end
 
 	
@@ -284,7 +283,7 @@ WhitneyIRememberYouText:
 	text "Hey! I remember"
 	line "you from the MINE!"
 	
-	para "Listen,"
+	para "Listen..."
 	
 	para "TEAM ROCKET are"
 	line "trying to take"
@@ -302,7 +301,7 @@ WhitneyIRememberYouText:
 	line "must be on the"
 	cont "2nd Floor..."
 	
-	para "Lets get em'!"
+	para "Lets get 'em!"
 	done
 	
 WhitneyWontGoEasyOnYouText:
@@ -414,5 +413,5 @@ OlivineLighthouse1F_MapEvents:
 	object_event 10,  4, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RocketGruntWhitney1Script, EVENT_MAHOGANY_TOWN_POKEFAN_M_BLOCKS_GYM
 	object_event  7,  5, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RocketGruntWhitney2Script, EVENT_AQUARIUM_ROCKETS_IDLE
 	object_event  7,  6, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RocketGruntWhitney3Script, EVENT_AQUARIUM_ROCKETS_IDLE
-	object_event  9,  5, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RocketGruntWhitney2Script, ROCKETS_FIGHTING_WHITNEY
-	object_event 10,  6, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RocketGruntWhitney3Script, ROCKETS_FIGHTING_WHITNEY
+	object_event  9,  5, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RocketGruntWhitney2Script, WHITNEY_FIGHTING_ROCKETS
+	object_event 10,  6, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RocketGruntWhitney3Script, WHITNEY_FIGHTING_ROCKETS

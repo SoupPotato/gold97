@@ -21,8 +21,8 @@ FalknerGroup:
 WhitneyGroup:
 	; WHITNEY (1)
 	db "WHITNEY@", TRAINERTYPE_MOVES; used
-	db 16, CLEFAIRY,   DOUBLESLAP, MIMIC, ENCORE, METRONOME
-	db 18, MILTANK,    ROLLOUT, ATTRACT, STOMP, MILK_DRINK
+	db 19, CLEFAIRY,   DOUBLESLAP, MIMIC, ENCORE, METRONOME
+	db 23, MILTANK,    ROLLOUT, ATTRACT, STOMP, MILK_DRINK
 	db -1 ; end
 
 BugsyGroup:
@@ -573,9 +573,9 @@ BirdKeeperGroup:
 
 	; BIRD_KEEPER (3)
 	db "BRYAN@", TRAINERTYPE_NORMAL ;used, route 35 / 103
-	db 13, PIDGEY
-	db 14, PIDGEOTTO
-	db 14, FARFETCH_D
+	db 18, PIDGEY
+	db 19, PIDGEOTTO
+	db 19, FARFETCH_D
 	db -1 ; end
 
 	; BIRD_KEEPER (4)
@@ -686,14 +686,14 @@ LassGroup:
 
 	; LASS (1)
 	db "CARRIE@", TRAINERTYPE_MOVES ; used, teku gym
-	db 15, SNUBBULL,   SCARY_FACE, CHARM, BITE, LICK
+	db 20, SNUBBULL,   SCARY_FACE, CHARM, BITE, LICK
 	db -1 ; end
 
 	; LASS (2)
 	db "BRIDGET@", TRAINERTYPE_NORMAL ; used, teku gym
-	db 14, JIGGLYPUFF
-	db 15, IGGLYBUFF
-	db 15, JIGGLYPUFF
+	db 18, JIGGLYPUFF
+	db 16, IGGLYBUFF
+	db 18, JIGGLYPUFF
 	db -1 ; end
 
 	; LASS (3)
@@ -1076,8 +1076,8 @@ BeautyGroup:
 
 	; BEAUTY (2)
 	db "SAMANTHA@", TRAINERTYPE_MOVES ; used, teku gym
-	db 16, MEOWSY,     SCRATCH, GROWL, BITE, PAY_DAY
-	db 16, MEOWTH,     SCRATCH, GROWL, BITE, SLASH
+	db 18, MEOWSY,     SCRATCH, GROWL, BITE, PAY_DAY
+	db 18, MEOWTH,     SCRATCH, GROWL, BITE, SLASH
 	db -1 ; end
 
 	; BEAUTY (3)
@@ -1258,20 +1258,20 @@ PokemaniacGroup:
 GruntMGroup:
 	; GRUNTM (1)
 	db "GRUNT@", TRAINERTYPE_NORMAL; used, aquarium/lighthouse2f
-	db 12, EKANS
-	db 13, RINRING
+	db 19, EKANS
+	db 20, RINRING
 	db -1 ; end
 
 	; GRUNTM (2)
 	db "GRUNT@", TRAINERTYPE_NORMAL; used, aquarium/lighthouse
-	db  12, SPINARAK
-	db  12, RATTATA
+	db  17, SPINARAK
+	db  18, RATTATA
 	db -1 ; end
 
 	; GRUNTM (3)
 	db "GRUNT@", TRAINERTYPE_NORMAL; used, aquarium/lighthouse
-	db 12, ZUBAT
-	db 13, KOFFING
+	db 18, ZUBAT
+	db 18, KOFFING
 	db -1 ; end
 
 	; GRUNTM (4)
@@ -1444,15 +1444,15 @@ GruntMGroup:
 	
 	; GRUNTM (31)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 12, RATTATA
-	db 12, GRIMBY
+	db 17, RATTATA
+	db 17, GRIMBY
 	db -1 ; end
 	
 	; GRUNTM (31)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 11, ZUBAT
-	db 11, RATTATA
-	db 13, DROWZEE
+	db 16, ZUBAT
+	db 16, RATTATA
+	db 18, DROWZEE
 	db -1 ; end
 
 GentlemanGroup:
@@ -1589,8 +1589,8 @@ BugCatcherGroup:
 
 	; BUG_CATCHER (12)
 	db "DOUG@", TRAINERTYPE_NORMAL ;used route 2
-	db 17, BUTTERFREE
-	db 17, BEEDRILL
+	db 19, BUTTERFREE
+	db 19, BEEDRILL
 	db -1 ; end
 
 	; BUG_CATCHER (13)
@@ -2302,7 +2302,7 @@ HikerGroup:
 	db "RUSSELL@", TRAINERTYPE_NORMAL ;used, route 2
 	db  18, DIGLETT
 	db  18, GEODUDE
-	db  20, DUGTRIO
+	db  22, DUGTRIO
 	db -1 ; end
 
 	; HIKER (3)
@@ -2501,7 +2501,7 @@ FirebreatherGroup:
 	db "OTIS@", TRAINERTYPE_NORMAL ;used, route 2
 	db 18, MAGBY
 	db 18, KOFFING
-	db 19, MAGMAR
+	db 20, MAGMAR
 	db -1 ; end
 
 	; FIREBREATHER (2)
@@ -2786,8 +2786,8 @@ PicnickerGroup:
 
 	; PICNICKER (4)
 	db "KIM@", TRAINERTYPE_NORMAL ; used, route 35 / 103
-	db 15, TRITALES
-	db 17, VULPIX
+	db 17, TRITALES
+	db 19, VULPIX
 	db -1 ; end
 
 	; PICNICKER (5)
@@ -2951,9 +2951,9 @@ CamperGroup:
 
 	; CAMPER (3)
 	db "IVAN@", TRAINERTYPE_NORMAL ; used, route 35 / 103
-	db 15, DIGLETT
-	db 16, ZUBAT
 	db 18, DIGLETT
+	db 18, ZUBAT
+	db 19, DIGLETT
 	db -1 ; end
 
 	; CAMPER (4)
@@ -3492,8 +3492,8 @@ OfficerGroup:
 GruntFGroup:
 	; GRUNTF (1)
 	db "GRUNT@", TRAINERTYPE_NORMAL; used,  aquarium/lighthouse
-	db 11, GRIMBY
-	db 13, GRIMER
+	db 16, GRIMBY
+	db 18, GRIMER
 	db -1 ; end
 
 	; GRUNTF (2)
@@ -3558,8 +3558,8 @@ EngineerGroup:; use super nerd sprite
 	; BIKER (4)
 	db "HARRIS@", TRAINERTYPE_MOVES ;unused
 	db 20, PICHU,	THUNDERSHOCK, CHARM, SWEET_KISS, THUNDER_WAVE
-	db 18, PIKACHU,	THUNDERSHOCK, QUICK_ATTACK, DOUBLE_TEAM, THUNDER_WAVE
-	db 20, MAGNEMITE, THUNDERSHOCK, SUPERSONIC, TACKLE, SONICBOOM
+	db 20, PIKACHU,	THUNDERSHOCK, QUICK_ATTACK, DOUBLE_TEAM, THUNDER_WAVE
+	db 22, MAGNEMITE, THUNDERSHOCK, SUPERSONIC, TACKLE, SONICBOOM
 	db -1 ; end
 
 SportsmanGroup:; use cooltrainer m sprite

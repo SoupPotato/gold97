@@ -23,18 +23,20 @@ TrainerGruntM1:
 	special FadeBlackQuickly
 	special ReloadSpritesNoPalettes
 	disappear AQUA2F_ROCKET1
+	disappear AQUA2F_ROCKET3
 	pause 15
 	special FadeInQuickly
-	pause 30
+	clearflag ENGINE_ROCKETS_IN_MAHOGANY
+	pause 8
+	special PlayMapMusic
 	setevent EVENT_MAHOGANY_TOWN_POKEFAN_M_BLOCKS_GYM; this is the event for the rocket objects
 	setevent EVENT_BURNED_TOWER_MORTY
 	setevent EVENT_WHITNEY_BACK_IN_GYM
-	clearflag ENGINE_ROCKETS_IN_MAHOGANY
-	special FadeOutPalettes
-	special HealParty
-	pause 15
+	setevent WHITNEY_FIGHTING_ROCKETS
+	appear AQUA2F_WHITNEY
 	applymovement AQUA2F_WHITNEY, WhitneyToPlayerAfterRocket
 	turnobject AQUA2F_WHITNEY, UP
+	turnobject PLAYER, DOWN
 	opentext
 	writetext WhitneyWayToGoText
 	waitbutton
@@ -132,10 +134,11 @@ WhitneyWayToGoText:
 	cont "aquatic #MON"
 	cont "anymore."
 	
-	para "Hey, you're act"
-	line "-ually pretty"
-	cont "strong!"
+	para "Hey..."
 	
+	para "You're actually"
+	line "pretty strong!"
+
 	para "Why don't you come"
 	line "to my GYM later?"
 	
@@ -185,7 +188,7 @@ TrainerGruntM1WhenTalkText:
 	cont "foiled by a kid!"
 
 	para "This is"
-	line "embarrassing"
+	line "embarrassing..."
 
 	para "But no matter."
 	

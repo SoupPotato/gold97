@@ -169,44 +169,44 @@ Whitney_GoodLuck:
 	done
 
 WhitneyBeforeText:
-	text "Hi! I'm WHITNEY!"
+	text "Yay!"
 
-	para "But I sure know"
-	line "who you are,"
-	cont "<PLAY_G>!"
-	para "You've already"
-	line "made quite a"
-	para "name for yourself"
-	line "around town!"
-	para "Usually it's me"
-	line "who tries to help"
-	para "out when something"
-	line "has gone wrong,"
-	para "but it seems like"
-	line "you've shown that"
-	para "you're able to get"
-	line "things taken care"
-	cont "of, too!"
-	para "So I want to truly"
-	line "thank you!"
-	para "But I know that's"
-	line "not why you're"
-	cont "here."
-	para "You're here for a"
-	line "battle!"
-	para "And I can"
-	line "definitely deliver"
-	cont "on that!"
+	para "You came after"
+	line "all!"
+
+	para "Thanks again for"
+	line "help at the"
+	cont "AQUARIUM."
+	
+	para "But now it's"
+	line "different!"
+	
+	para "So..."
+	
+	para "Ahem..."
+	
+	para "I am WHITNEY."
+	
+	para "Everyone was into"
+	line "#MON so I"
+	cont "got into them too!"
+	
+	para "My cute #MON"
+	line "will stomp you"
+	cont "flat!"
+	
+	para "...giggle.."
+
+	para "Think you can"
+	line "beat me?"
 	done
 
 WhitneyShouldntBeSoSeriousText:
-	text "Ha!"
-	para "I see you're good"
-	line "at battling, as"
-	cont "well!"
+	text "Wowie!"
+	para "You're even"
+	line "stronger than I"
+	cont "thought!"
 	done
-
-
 
 PlayerReceivedPlainBadgeText:
 	text "<PLAYER> received"
@@ -232,14 +232,6 @@ WhitneyAttractText:
 	para "Isn't it just per-"
 	line "fect for a cutie"
 	cont "like me?"
-	done
-
-WhitneyGoodCryText:
-	text "Ah, that was a"
-	line "good cry!"
-
-	para "Come for a visit"
-	line "again! Bye-bye!"
 	done
 
 LassCarrieSeenText:

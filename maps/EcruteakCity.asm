@@ -84,6 +84,7 @@ SceneRocketTakeOverScript:
 	applymovement ECRUTEAKCITY_LASS3, LassRun2
 	disappear ECRUTEAKCITY_LASS3
 	setevent EVENT_ECRUTEAK_SCARED_LASS
+	setmapscene OLIVINE_LIGHTHOUSE_1F, SCENE_DEFAULT
 	end
 	
 .SceneEcruteakNothing:

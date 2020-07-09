@@ -6,26 +6,46 @@
 	const ROUTE35_FRUIT_TREE
 	const ROUTE35_POKE_BALL
 	const ROUTE35_FISHER
+	const ROUTE35_SLOWPOKE1
+	const ROUTE35_SLOWPOKE2
 
 Route35_MapScripts:
 	db 2 ; scene scripts
 	scene_script .Scene35SlowpokeTail ; SCENE_DEFAULT
 	scene_script .Scene35Nothing ;
 
-	db 1 ; callbacks
-	callback MAPCALLBACK_TILES, .Route35ClearRocks
-	
-.Route35ClearRocks:
-	checkflag ENGINE_PLAINBADGE
-	iftrue .Done
-	changeblock  11, 29, $0A ; rock
-.Done:
-	return
+	db 0 ; callbacks
 
 .Scene35SlowpokeTail
 	end
 
 .Scene35Nothing
+	end
+	
+Route35SlowpokeScript:
+	opentext
+	writetext Route35SlowpokeText1
+	pause 60
+	writetext Route35SlowpokeText2
+	cry SLOWPOKE
+	waitbutton
+	closetext
+	end
+	
+Route35SlowpokeGuyScript:
+	faceplayer
+	opentext
+	checkevent EVENT_BEAT_WHITNEY
+	iftrue .slowpokegone
+	writetext SlowpokeGuyText1
+	waitbutton
+	closetext
+	end
+	
+.slowpokegone
+	writetext SlowpokeGuyText2
+	waitbutton
+	closetext
 	end
 
 SlowpokeVendor:
@@ -264,11 +284,43 @@ JugglerIrwinAfterBattleText:
 	para "But your prowess"
 	line "electrified me!"
 	done
+	
+Route35SlowpokeText1:
+	text "SLOWPOKE: …"
+
+	para "<……> <……> <……>"
+	done
+
+Route35SlowpokeText2:
+	text "<……> <……>Yawn?"
+	done
 
 Route35SignText:
 	text "ROUTE 103"
 	para "WEST CITY -"
 	line "BIRDON TOWN"
+	done
+	
+SlowpokeGuyText1:
+	text "Yeah..."
+	
+	para "These SLOWPOKE"
+	line "are always lazing"
+	cont "around here."
+	
+	para "It might be a"
+	line "while before the"
+	cont "road is clear..."
+	done
+	
+SlowpokeGuyText2:
+	text "Looks like the"
+	line "SLOWPOKE have"
+	cont "finally left."
+	
+	para "You can get to"
+	line "BIRDON TOWN now"
+	cont "if you want."
 	done
 
 Route35_MapEvents:
@@ -284,7 +336,7 @@ Route35_MapEvents:
 	db 1 ; bg events
 	bg_event  6, 44, BGEVENT_READ, Route35Sign
 
-	db 7 ; object events
+	db 10 ; object events
 	object_event 11,  9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerCamperIvan, -1
 	object_event  6, 23, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerPicnickerKim, -1
 	object_event 10, 44, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperBryan, -1
@@ -292,3 +344,6 @@ Route35_MapEvents:
 	object_event 14, 31, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route35FruitTree, -1
 	object_event 15, 30, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route35TMRollout, EVENT_ROUTE_35_TM_ROLLOUT
 	object_event  8, 13, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SlowpokeTailSalesmanScript, EVENT_RIVAL_BURNED_TOWER
+	object_event 10, 28, SPRITE_SLOWPOKE, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route35SlowpokeScript, EVENT_BEAT_WHITNEY
+	object_event 11, 28, SPRITE_SLOWPOKE, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route35SlowpokeScript, EVENT_BEAT_WHITNEY
+	object_event  8, 30, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route35SlowpokeGuyScript, -1

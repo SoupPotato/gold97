@@ -396,56 +396,56 @@ JohtoGrassWildMons:
 	map_id SLOWPOKE_WELL_B1F
 	db 8 percent, 8 percent, 8 percent ; encounter rates: morn/day/nite
 	; morn
-	db 14, ZUBAT
-	db 15, ZUBAT
-	db 14, SLOWPOKE
-	db 15, SLOWPOKE
 	db 16, ZUBAT
+	db 17, ZUBAT
+	db 17, SLOWPOKE
 	db 16, SLOWPOKE
-	db 16, SLOWPOKE
+	db 17, ZUBAT
+	db 18, SLOWPOKE
+	db 20, SLOWPOKE
 	; day
-	db 14, ZUBAT
-	db 15, ZUBAT
-	db 14, SLOWPOKE
-	db 15, SLOWPOKE
 	db 16, ZUBAT
+	db 17, ZUBAT
+	db 17, SLOWPOKE
 	db 16, SLOWPOKE
-	db 16, SLOWPOKE
+	db 17, ZUBAT
+	db 18, SLOWPOKE
+	db 20, SLOWPOKE
 	; nite
-	db 14, ZUBAT
-	db 15, ZUBAT
-	db 14, SLOWPOKE
-	db 15, SLOWPOKE
 	db 16, ZUBAT
+	db 17, ZUBAT
+	db 17, SLOWPOKE
 	db 16, SLOWPOKE
-	db 16, SLOWPOKE
+	db 17, ZUBAT
+	db 18, SLOWPOKE
+	db 20, SLOWPOKE
 
 	map_id SLOWPOKE_WELL_B2F
 	db 8 percent, 8 percent, 8 percent ; encounter rates: morn/day/nite
 	; morn
-	db 14, ZUBAT
-	db 15, ZUBAT
-	db 14, SLOWPOKE
-	db 15, SLOWPOKE
 	db 16, ZUBAT
+	db 17, ZUBAT
+	db 17, SLOWPOKE
 	db 16, SLOWPOKE
-	db 16, SLOWPOKE
+	db 17, ZUBAT
+	db 18, SLOWPOKE
+	db 20, SLOWPOKE
 	; day
-	db 14, ZUBAT
-	db 15, ZUBAT
-	db 14, SLOWPOKE
-	db 15, SLOWPOKE
 	db 16, ZUBAT
+	db 17, ZUBAT
+	db 17, SLOWPOKE
 	db 16, SLOWPOKE
-	db 16, SLOWPOKE
+	db 17, ZUBAT
+	db 18, SLOWPOKE
+	db 20, SLOWPOKE
 	; nite
-	db 14, ZUBAT
-	db 15, ZUBAT
-	db 14, SLOWPOKE
-	db 15, SLOWPOKE
 	db 16, ZUBAT
+	db 17, ZUBAT
+	db 17, SLOWPOKE
 	db 16, SLOWPOKE
-	db 16, SLOWPOKE
+	db 17, ZUBAT
+	db 18, SLOWPOKE
+	db 20, SLOWPOKE
 	
 	map_id ROUTE_2
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -612,29 +612,29 @@ JohtoGrassWildMons:
 	map_id ROUTE_33
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 15, DODUO
-	db 16, SANDSHREW
+	db 17, DODUO
+	db 18, SANDSHREW
 	db 16, NATU
+	db 18, MAREEP
 	db 16, MAREEP
-	db 15, MAREEP
-	db 17, FARFETCH_D
 	db 18, FARFETCH_D
+	db 20, FARFETCH_D
 	; day
-	db 15, DODUO
-	db 16, SANDSHREW
+	db 17, DODUO
+	db 18, SANDSHREW
 	db 16, NATU
+	db 18, MAREEP
 	db 16, MAREEP
-	db 15, MAREEP
-	db 17, FARFETCH_D
 	db 18, FARFETCH_D
+	db 20, FARFETCH_D
 	; nite
-	db 15, MURKROW
-	db 16, SANDSHREW
+	db 17, MURKROW
+	db 18, SANDSHREW
 	db 16, NATU
+	db 18, MAREEP
 	db 16, MAREEP
-	db 15, MAREEP
-	db 17, TWINBORUS
 	db 18, TWINBORUS
+	db 20, TWINBORUS
 
 	map_id ROUTE_30
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite

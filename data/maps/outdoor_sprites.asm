@@ -279,6 +279,7 @@ AzaleaGroupSprites:
 	; max 9 of 9 walking sprites
 	db SPRITE_POKE_BALL
 	db SPRITE_FRUIT_TREE
+	db SPRITE_SLOWPOKE
 	db 0 ;end
 
 GoldenrodGroupSprites:
