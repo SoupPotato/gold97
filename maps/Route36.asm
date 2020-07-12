@@ -430,6 +430,9 @@ Route36SuicuneMovement:
 	remove_sliding
 	step_end
 	
+Route36Greatball:
+	itemball GREAT_BALL
+	
 Route36RivalBattleExitMovement:
 	step UP
 	step_end
@@ -714,7 +717,7 @@ Route36_MapEvents:
 	bg_event 32, 10, BGEVENT_READ, Route36TrainerTips1
 	bg_event 18,  4, BGEVENT_READ, Route36GameHouse
 
-	db 11 ; object events
+	db 12 ; object events
 	object_event  8, 9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerPsychicMark, -1
 	object_event 29,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TrainerSchoolboyAlan1, -1
 	object_event 50,  7, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route36LassScript, -1
@@ -726,3 +729,4 @@ Route36_MapEvents:
 	object_event 34,  9, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINCLOCKWISE, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerFledglingJohnny, -1
 	object_event 33,  7, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GardenerScript, EVENT_ROUTE36_GARDENER
 	object_event 33,  6, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GardenerScript, EVENT_ROUTE36_GARDENER_CHOPPED
+	object_event 33,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route36Greatball, EVENT_ROUTE_36_GREATBALL	

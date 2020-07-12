@@ -233,7 +233,7 @@ OldCity_MapEvents:
 	bg_event  8, 14, BGEVENT_READ, EarlsPokemonAcademySign
 	bg_event 28, 28, BGEVENT_READ, OldCityPokecenterSign
 	bg_event  4, 26, BGEVENT_READ, OldCityMartSign
-	bg_event 22,  4, BGEVENT_ITEM, OldCityHiddenHyperPotion
+	bg_event 14, 11, BGEVENT_ITEM, OldCityHiddenHyperPotion
 	bg_event  4, 32, BGEVENT_READ, KurtsHouseSign
 	bg_event 26, 22, BGEVENT_READ, BillsHouseSign2
 
@@ -242,7 +242,7 @@ OldCity_MapEvents:
 	object_event 24, 18, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WANDER, 1, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OldCitySuperNerdScript, -1
 	object_event 15, 25, SPRITE_GRAMPS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OldCityGrampsScript, -1
 	object_event 10, 21, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, OldCityYoungsterScript, -1
-	object_event 17, 17, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OldCityFruitTree, -1
+	object_event 23, 21, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OldCityFruitTree, -1
 	object_event 16,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, OldCityPPUp, EVENT_OLD_CITY_PP_UP
 	object_event 23,  5, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, OldCityRareCandy, EVENT_OLD_CITY_RARE_CANDY
 	object_event  9, 19, SPRITE_GRAMPS, SPRITEMOVEDATA_STILL, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, OldCityGrampsScript2, 0

@@ -182,30 +182,6 @@ Route29Sign2:
 	
 SilentHillsEntranceSign:
 	jumptext SilentHillsEntranceSignText
-	
-DebugSign:
-;	setflag ENGINE_RADIO_CARD
-;	setflag ENGINE_ZEPHYRBADGE
-;	setflag ENGINE_HIVEBADGE
-;	setflag ENGINE_PLAINBADGE
-;	setflag ENGINE_FOGBADGE
- ;	setflag ENGINE_MINERALBADGE
-;	setflag ENGINE_STORMBADGE
-;	setflag ENGINE_RISINGBADGE
-;	setflag ENGINE_GLACIERBADGE
-;	giveitem HM_FLY
-;	giveitem HM_WATERFALL
-;	giveitem HM_SURF
-;	giveitem HM_CUT
-;	giveitem HM_STRENGTH
-;	giveitem HM_WHIRLPOOL
-;	giveitem TM_FLASH
-;	giveitem HM_ROCK_SMASH
-;	giveitem RARE_CANDY, 99
-;	giveitem MASTER_BALL, 99
-	clearevent EVENT_BEAT_SAGE_NICO
-	jumptext DebugSignText
-	end
 
 Route29FruitTree:
 	fruittree FRUITTREE_ROUTE_29
@@ -215,6 +191,12 @@ Route29Potion:
 	
 Route29Potion2:
 	itemball POTION
+	
+Route29Pokeball:
+	itemball POKE_BALL
+	
+Route29Ether:
+	itemball ETHER
 
 DudeMovementData1a:
 	step UP
@@ -427,13 +409,12 @@ Route29_MapEvents:
 	coord_event 45, 28, SCENE_ROUTE29_CATCH_TUTORIAL, Route29Tutorial1
 	coord_event 45, 29, SCENE_ROUTE29_CATCH_TUTORIAL, Route29Tutorial2
 
-	db 4 ; bg events
+	db 3 ; bg events
 	bg_event 42, 28, BGEVENT_READ, Route29Sign1
 	bg_event 10, 22, BGEVENT_READ, Route29Sign2
 	bg_event 34, 27, BGEVENT_READ, SilentHillsEntranceSign
-	bg_event 38, 22, BGEVENT_READ, DebugSign
 
-	db 10 ; object events
+	db 12 ; object events
 	object_event 45, 31, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CatchingTutorialDudeScript, -1
 	object_event 34, 25, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route29YoungsterScript, -1
 	object_event 39, 27, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route29TeacherScript, -1
@@ -441,6 +422,8 @@ Route29_MapEvents:
 	object_event  8, 25, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route29FisherScript, -1
 	object_event  4, 28, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route29CooltrainerMScript, -1
 	object_event 45, 24, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route29Potion, EVENT_ROUTE_29_POTION
-	object_event 14, 32, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route29Potion2, EVENT_ROUTE_29_POTION_2
+	object_event 13, 23, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route29Potion2, EVENT_ROUTE_29_POTION_2
 	object_event  6,  9, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerTeacherColette, -1
 	object_event  9, 16, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerFledglingHugo, -1
+	object_event 24, 32, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route29Pokeball, EVENT_ROUTE_29_POKEBALL
+	object_event 16,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route29Ether, EVENT_ROUTE_29_ETHER

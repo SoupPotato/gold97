@@ -315,7 +315,7 @@ Route37_MapEvents:
 	db 3 ; bg events
 	bg_event 45, 28, BGEVENT_READ, Route37Sign
 	bg_event  7,  4, BGEVENT_READ, Route37Sign2
-	bg_event 21, 13, BGEVENT_ITEM, Route37HiddenEther
+	bg_event 21, 14, BGEVENT_ITEM, Route37HiddenEther
 
 	db 10 ; object events
 	object_event 34, 18, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerBeautyVictoria, -1
