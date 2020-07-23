@@ -81,19 +81,18 @@ DocksSailorScript:
 	
 DocksRocket1Text:
 	text "Just an innocent"
-	line "DOCK worker"
-	para "bringing in some"
-	line "cargo!"
+	line "DOCK worker bring"
+	cont "-ing in some"
+	cont "cargo!"
+	
 	para "Nothing weird"
 	line "going on here!"
 	done
 	
 DocksRocket2Text:
-	text "The CAPTAIN is"
-	line "onboard working on"
-	para "the logistics of"
-	line "the final shipment"
-	cont "here at the DOCKS."
+	text "The final shipment"
+	line "was just loaded."
+
 	para "We're almost ready"
 	line "to ditch this"
 	cont "place!"
@@ -103,11 +102,10 @@ DocksRocket3Text:
 	text "Finally, our"
 	line "operations here"
 	cont "are almost done!"
-	para "I can't wait to"
-	line "get back to the"
-	para "east side of NIHON"
-	line "where it's much"
-	cont "cooler!"
+	
+	para "Maybe now we can"
+	line "go someplace less"
+	cont "hot."
 	done
 	
 DocksRocket4Text:
@@ -182,8 +180,7 @@ DocksSailorText:
 Route5_MapEvents:
 	db 0, 0 ; filler
 
-	db 4 ; warp events
-	warp_event  1, 27, ROUTE_5_UNDERGROUND_PATH_ENTRANCE, 1
+	db 3 ; warp events
 	warp_event  6, 31, ROUTE_5_SAFFRON_GATE, 1
 	warp_event  7, 31, ROUTE_5_SAFFRON_GATE, 2
 	warp_event 13,  5, VIRIDIAN_GYM, 1
@@ -193,15 +190,15 @@ Route5_MapEvents:
 	db 0 ; bg events
 
 	db 11 ; object events
-	object_event  8,  2, SPRITE_ROCKET, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DocksRocket1Script, EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
-	object_event  5, 15, SPRITE_ROCKET, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DocksRocket2Script, EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
-	object_event 14, 13, SPRITE_ROCKET, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DocksRocket3Script, EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
-	object_event  4,  8, SPRITE_ROCKET, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DocksRocket4Script, EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
-	object_event  5, 24, SPRITE_ROCKET, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DocksRocket5Script, EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
-	object_event 12, 19, SPRITE_ROCKET, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DocksRocket6Script, EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
+	object_event  8,  2, SPRITE_ROCKET, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DocksRocket1Script, EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
+	object_event  5, 15, SPRITE_ROCKET, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DocksRocket2Script, EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
+	object_event 14, 13, SPRITE_ROCKET, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DocksRocket3Script, EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
+	object_event  4,  8, SPRITE_ROCKET, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DocksRocket4Script, EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
+	object_event  5, 24, SPRITE_ROCKET, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DocksRocket5Script, EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
+	object_event 12, 19, SPRITE_ROCKET, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DocksRocket6Script, EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
 	object_event 13,  5, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 0, TrainerGruntM29, EVENT_CLEARED_SLOWPOKE_WELL
-	object_event  5, 22, SPRITE_FISHING_GURU, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DocksGuruScript, EVENT_FLORIA_AT_FLOWER_SHOP
-	object_event 14, 19, SPRITE_SAILOR, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DocksSailorScript, EVENT_FLORIA_AT_FLOWER_SHOP
+	object_event  5, 22, SPRITE_FISHING_GURU, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DocksGuruScript, EVENT_FLORIA_AT_FLOWER_SHOP
+	object_event 14, 19, SPRITE_SAILOR, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DocksSailorScript, EVENT_FLORIA_AT_FLOWER_SHOP
 	object_event  8, 13, SPRITE_FISHER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DocksFisherScript, EVENT_FLORIA_AT_FLOWER_SHOP
-	object_event  7,  5, SPRITE_FISHING_GURU, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DocksGuru2Script, EVENT_FLORIA_AT_FLOWER_SHOP
+	object_event  7,  5, SPRITE_FISHING_GURU, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DocksGuru2Script, EVENT_FLORIA_AT_FLOWER_SHOP
 

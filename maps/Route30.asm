@@ -1,10 +1,9 @@
 	const_def 2 ; object constants
 	const ROUTE30_YOUNGSTER3
 	const ROUTE30_YOUNGSTER4
-	;const ROUTE30_FRUIT_TREE1
-	;const ROUTE30_FRUIT_TREE2
 	const ROUTE30_COOLTRAINER_F
 	const ROUTE30_POKE_BALL
+	const ROUTE30_POKE_BALL2
 
 Route30_MapScripts:
 	db 0 ; scene scripts
@@ -46,8 +45,11 @@ MrPokemonsHouseSign:
 Route30TrainerTips:
 	jumptext Route30TrainerTipsText
 
-Route30Antidote:
-	itemball ANTIDOTE
+Route30MaxEther:
+	itemball MAX_ETHER
+	
+Route30PoisonStone:
+	itemball POISON_STONE
 
 Route30FruitTree1:
 	fruittree FRUITTREE_ROUTE_30_1
@@ -55,8 +57,8 @@ Route30FruitTree1:
 Route30FruitTree2:
 	fruittree FRUITTREE_ROUTE_30_2
 
-Route30HiddenPotion:
-	hiddenitem POTION, EVENT_ROUTE_30_HIDDEN_POTION
+Route30HiddenHyperPotion:
+	hiddenitem HYPER_POTION, EVENT_ROUTE_30_HIDDEN_HYPER_POTION
 
 
 
@@ -145,17 +147,13 @@ Route30_MapEvents:
 
 	db 0 ; coord events
 
-	db 5 ; bg events
+	db 2 ; bg events
 	bg_event  6, 28, BGEVENT_READ, Route30Sign
-	bg_event 13, 21, BGEVENT_READ, MrPokemonsHouseDirectionsSign
-	bg_event 12, 21, BGEVENT_READ, MrPokemonsHouseSign
-	bg_event 11, 21, BGEVENT_READ, Route30TrainerTips
-	bg_event 13, 31, BGEVENT_ITEM, Route30HiddenPotion
+	bg_event 19, 28, BGEVENT_ITEM, Route30HiddenHyperPotion
 
-	db 4 ; object events
+	db 5 ; object events
 	object_event  8, 15, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerYoungsterMikey, -1
 	object_event  7, 22, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route30YoungsterScript, -1
-	;object_event 14,  6, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route30FruitTree1, -1
-	;object_event 12,  2, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route30FruitTree2, -1
 	object_event 10,  6, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route30CooltrainerFScript, -1
-	object_event 14,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route30Antidote, EVENT_ROUTE_30_ANTIDOTE
+	object_event 14,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route30MaxEther, EVENT_ROUTE_30_MAX_ETHER
+	object_event 17, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route30PoisonStone, EVENT_ROUTE_30_POISON_STONE

@@ -1,6 +1,6 @@
 	db VOLBEAR ; 156
 
-	db  58,  68,  65,  76,  76,  65
+	db  63,  70,  65,  76,  76,  55
 	;   hp  atk  def  spd  sat  sdf
 
 	db FIRE, FIRE ; type

@@ -107,3 +107,4 @@ TypeMatchups:; actually beta types
 	db FIGHTING,  GHOST,     NO_EFFECT
 
 	db -1 ; end
+	

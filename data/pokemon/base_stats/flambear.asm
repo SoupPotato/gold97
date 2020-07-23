@@ -1,6 +1,6 @@
 	db FLAMBEAR ; 155
 
-	db  39,  52,  48,  60,  60,  50
+	db  45,  54,  50,  60,  60,  40
 	;   hp  atk  def  spd  sat  sdf
 
 	db FIRE, FIRE ; type

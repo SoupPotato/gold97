@@ -650,9 +650,10 @@ _CGB_TrainerCard:
 	ld a, PRYCE
 	call GetTrainerPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
-	ld a, PREDEFPAL_CGB_BADGE
-	call GetPredefPal
-	call LoadHLPaletteIntoDE
+	ld hl, .BadgePalettes
+	ld bc, 8 palettes
+	ld a, BANK(wOBPals1)
+	call FarCopyWRAM
 
 	; fill screen with opposite-gender palette for the card border
 	hlcoord 0, 0, wAttrMap
@@ -726,7 +727,7 @@ _CGB_TrainerCard:
 	call ApplyAttrMap
 	call ApplyPals
 	ld a, $1
-	ldh [hCGBPalUpdate], a
+	ld [hCGBPalUpdate], a
 	ret
 
 _CGB_MoveList:

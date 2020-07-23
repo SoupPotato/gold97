@@ -638,7 +638,7 @@ GoldenrodUndergroundGrampsText:
 GoldenrodUnderground_MapEvents:
 	db 0, 0 ; filler
 
-	db 11 ; warp events
+	db 12 ; warp events
 	warp_event  6,  0, GOLDENROD_DEPT_STORE_ELEVATOR, 1
 	warp_event 18,  2, GOLDENROD_BIKE_SHOP, 1
 	warp_event 12,  6, GOLDENROD_UNDERGROUND, 4
@@ -650,6 +650,7 @@ GoldenrodUnderground_MapEvents:
 	warp_event  2, 20, GOLDENROD_UNDERGROUND, 10
 	warp_event 28, 35, GOLDENROD_UNDERGROUND, 9
 	warp_event 29, 35, GOLDENROD_UNDERGROUND, 9
+	warp_event  7, 20, GOLDENROD_CITY, 16
 
 	db 0 ; coord events
 

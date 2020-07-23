@@ -35,6 +35,12 @@ JohtoWaterWildMons:
 	db 18, QUAGSIRE
 	db 15, QUAGSIRE
 	
+	map_id CIANWOOD_CITY
+	db 6 percent ; encounter rate
+	db 22, TENTACOOL
+	db 20, OSUNFISH
+	db 24, TENTACRUEL
+	
 	map_id ROUTE_7
 	db 6 percent ; encounter rate
 	db 15, GOLDEEN
@@ -115,9 +121,9 @@ JohtoWaterWildMons:
 	
 	map_id ROUTE_4
 	db 6 percent ; encounter rate
-	db 18, TENTACOOL
-	db 15, TENTACOOL
-	db 18, TENTACRUEL
+	db 20, TENTACOOL
+	db 25, OSUNFISH
+	db 25, TENTACRUEL
 	
 	map_id ROUTE_5
 	db 4 percent ; encounter rate
@@ -127,9 +133,9 @@ JohtoWaterWildMons:
 	
 	map_id ILEX_FOREST
 	db 4 percent ; encounter rate
-	db 18, PSYDUCK
-	db 15, PSYDUCK
-	db 18, GOLDUCK
+	db 25, PSYDUCK
+	db 25, POLIWAG
+	db 25, GOLDUCK
 	
 	map_id OLIVINE_CITY
 	db 4 percent ; encounter rate

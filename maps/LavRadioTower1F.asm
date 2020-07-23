@@ -1,14 +1,32 @@
 	const_def 2 ; object constants
-	const LAVRADIOTOWER1F_RECEPTIONIST
+	const HONDO_ROCKETBASE_KEY_GRUNT
 	const LAVRADIOTOWER1F_OFFICER
 	const LAVRADIOTOWER1F_SUPER_NERD1
 	const LAVRADIOTOWER1F_GENTLEMAN
 	const LAVRADIOTOWER1F_SUPER_NERD2
+	const HONDO_ROCKETBASE_POKEBALL
 
 LavRadioTower1F_MapScripts:
 	db 0 ; scene scripts
 
-	db 0 ; callbacks
+	db 1 ; callbacks
+	callback MAPCALLBACK_OBJECTS, .Key
+	
+.Key
+	checkevent EVENT_HONDO_ROCKET_RUNS_AWAY
+	iftrue .keydropped
+	disappear HONDO_ROCKETBASE_POKEBALL
+	return
+	
+.keydropped
+	checkevent EVENT_HONDO_ROCKET_SHIP_KEY
+	iftrue .keyobtained
+	appear HONDO_ROCKETBASE_POKEBALL
+	return
+	
+.keyobtained
+	disappear HONDO_ROCKETBASE_POKEBALL
+	return
 
 LavRadioTower1FReceptionistScript:
 	faceplayer
@@ -21,8 +39,6 @@ LavRadioTower1FReceptionistScript:
 	end
 
 .GiveKey:
-	checkevent EVENT_MADE_WHITNEY_CRY
-	iftrue .AlreadyGotKey
 	writetext LavRadioTower1FReceptionistTextKeyTime
 	waitbutton
 	closetext
@@ -37,18 +53,26 @@ LavRadioTower1FReceptionistScript:
 	opentext
 	writetext RocketKey_AfterText
 	waitbutton
-	verbosegiveitem BASEMENT_KEY
-	writetext RocketKey_AfterText2
-	waitbutton
 	closetext
-	setevent EVENT_MADE_WHITNEY_CRY
+	setevent EVENT_HONDO_ROCKET_RUNS_AWAY
+	appear HONDO_ROCKETBASE_POKEBALL
+	applymovement HONDO_ROCKETBASE_KEY_GRUNT, Runforyourlife
+	disappear HONDO_ROCKETBASE_KEY_GRUNT
 	end
 	
-.AlreadyGotKey:
-	writetext RocketKey_Afterwards
-	waitbutton
-	closetext
-	end
+Runforyourlife
+	big_step RIGHT
+	big_step RIGHT
+	big_step RIGHT
+	big_step DOWN
+	big_step RIGHT
+	big_step RIGHT
+	big_step RIGHT
+	big_step RIGHT
+	step_end
+	
+HondoBaseKey:
+	itemball BASEMENT_KEY
 
 LavRadioTower1FOfficerScript:
 	faceplayer
@@ -256,10 +280,6 @@ RocketKey_AfterText:
 	line "will have my head"
 	cont "for this!"
 	done
-
-RocketKey_AfterText2:
-	text "Get out of here!"
-	done
 	
 RocketKey_Afterwards:
 	text "Don't talk to me!"
@@ -278,9 +298,10 @@ LavRadioTower1F_MapEvents:
 	bg_event 16,  2, BGEVENT_READ, LavRadioTower1FDirectory
 	bg_event  6,  1, BGEVENT_READ, LavRadioTower1FPokeFluteSign
 
-	db 5 ; object events
-	object_event  9,  4, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LavRadioTower1FReceptionistScript, EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
-	object_event 17,  4, SPRITE_BIRD, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LavRadioTower1FOfficerScript, EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
-	object_event 11,  2, SPRITE_ROCKET, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LavRadioTower1FSuperNerd1Script, EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
+	db 6 ; object events
+	object_event  9,  4, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LavRadioTower1FReceptionistScript, EVENT_HONDO_ROCKET_RUNS_AWAY
+	object_event 17,  4, SPRITE_BIRD, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LavRadioTower1FOfficerScript, EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
+	object_event 11,  2, SPRITE_ROCKET, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LavRadioTower1FSuperNerd1Script, EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
 	object_event 19,  4, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LavRadioTower1FGentlemanScript, EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
-	object_event 15,  4, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LavRadioTower1FSuperNerd2Script, EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
+	object_event 15,  4, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LavRadioTower1FSuperNerd2Script,EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
+	object_event  9, 4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, HondoBaseKey, EVENT_HONDO_ROCKET_SHIP_KEY

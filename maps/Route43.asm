@@ -176,137 +176,14 @@ TrainerFisherMarvin:
 	end
 
 TrainerPicnickerTiffany:
-	trainer PICNICKER, TIFFANY3, EVENT_BEAT_PICNICKER_TIFFANY, PicnickerTiffanySeenText, PicnickerTiffanyBeatenText, 0, .Script
+	trainer PICNICKER, TIFFANY1, EVENT_BEAT_PICNICKER_TIFFANY, PicnickerTiffanySeenText, PicnickerTiffanyBeatenText, 0, .Script
 
 .Script:
-	writecode VAR_CALLERID, PHONE_PICNICKER_TIFFANY
 	endifjustbattled
 	opentext
-	checkflag ENGINE_TIFFANY
-	iftrue .WantsBattle
-	checkflag ENGINE_TIFFANY_HAS_PINK_BOW
-	iftrue .HasPinkBow
-	checkcellnum PHONE_PICNICKER_TIFFANY
-	iftrue .NumberAccepted
-	checkpoke CLEFAIRY
-	iffalse .NoClefairy
-	checkevent EVENT_TIFFANY_ASKED_FOR_PHONE_NUMBER
-	iftrue .AskedAlready
 	writetext PicnickerTiffanyWantsPicnicText
-	buttonsound
-	setevent EVENT_TIFFANY_ASKED_FOR_PHONE_NUMBER
-	scall .AskNumber1
-	jump .AskForNumber
-
-.AskedAlready:
-	scall .AskNumber2
-.AskForNumber:
-	askforphonenumber PHONE_PICNICKER_TIFFANY
-	ifequal PHONE_CONTACTS_FULL, .PhoneFull
-	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
-	trainertotext PICNICKER, TIFFANY3, MEM_BUFFER_0
-	scall .RegisteredNumber
-	jump .NumberAccepted
-
-.WantsBattle:
-	scall .Rematch
-	winlosstext PicnickerTiffanyBeatenText, 0
-	copybytetovar wTiffanyFightCount
-	ifequal 3, .Fight3
-	ifequal 2, .Fight2
-	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
-.Fight3:
-	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .LoadFight3
-.Fight2:
-	checkevent EVENT_CLEARED_RADIO_TOWER
-	iftrue .LoadFight2
-.Fight1:
-	checkevent EVENT_BEAT_PRYCE
-	iftrue .LoadFight1
-.LoadFight0:
-	loadtrainer PICNICKER, TIFFANY3
-	startbattle
-	reloadmapafterbattle
-	loadvar wTiffanyFightCount, 1
-	clearflag ENGINE_TIFFANY
-	end
-
-.LoadFight1:
-	loadtrainer PICNICKER, TIFFANY1
-	startbattle
-	reloadmapafterbattle
-	loadvar wTiffanyFightCount, 2
-	clearflag ENGINE_TIFFANY
-	end
-
-.LoadFight2:
-	loadtrainer PICNICKER, TIFFANY2
-	startbattle
-	reloadmapafterbattle
-	loadvar wTiffanyFightCount, 3
-	clearflag ENGINE_TIFFANY
-	end
-
-.LoadFight3:
-	loadtrainer PICNICKER, TIFFANY4
-	startbattle
-	reloadmapafterbattle
-	clearflag ENGINE_TIFFANY
-	end
-
-.HasPinkBow:
-	scall .Gift
-	verbosegiveitem PINK_BOW
-	iffalse .NoRoom
-	clearflag ENGINE_TIFFANY_HAS_PINK_BOW
-	setevent EVENT_TIFFANY_GAVE_PINK_BOW
-	jump .NumberAccepted
-
-.NoRoom:
-	jump .PackFull
-
-.NoClefairy:
-	writetext PicnickerTiffanyClefairyText
 	waitbutton
 	closetext
-	end
-
-.AskNumber1:
-	jumpstd asknumber1f
-	end
-
-.AskNumber2:
-	jumpstd asknumber2f
-	end
-
-.RegisteredNumber:
-	jumpstd registerednumberf
-	end
-
-.NumberAccepted:
-	jumpstd numberacceptedf
-	end
-
-.NumberDeclined:
-	jumpstd numberdeclinedf
-	end
-
-.PhoneFull:
-	jumpstd phonefullf
-	end
-
-.Rematch:
-	jumpstd rematchf
-	end
-
-.Gift:
-	jumpstd giftf
-	end
-
-.PackFull:
-	jumpstd packfullf
 	end
 
 Route43Sign1:
@@ -534,11 +411,11 @@ Route43_MapEvents:
 	bg_event 12, 40, BGEVENT_READ, Route43TrainerTips
 
 	db 7 ; object events
-	object_event 15, 15, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerFledglingHidalgo, -1
-	object_event  9, 35, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerPokemaniacBrent, -1
-	object_event  8, 10, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerPokemaniacRon, -1
+	object_event 15, 16, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerFledglingHidalgo, -1
+	object_event  9, 32, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TrainerPokemaniacBrent, -1
+	object_event  8, 11, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerPokemaniacRon, -1
 	object_event  4, 16, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerFisherMarvin, -1
-	object_event  9, 26, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerPicnickerTiffany, -1
+	object_event  7, 23, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerPicnickerTiffany, -1
 	object_event  8, 42, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerCamperSpencer, -1
 	;object_event  4, 23, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route43FruitTree, -1
-	object_event 13, 24, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerInstructorCliff, -1
+	object_event 13, 24, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerInstructorCliff, -1

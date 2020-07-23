@@ -396,56 +396,56 @@ JohtoGrassWildMons:
 	map_id SLOWPOKE_WELL_B1F
 	db 8 percent, 8 percent, 8 percent ; encounter rates: morn/day/nite
 	; morn
-	db 16, ZUBAT
 	db 17, ZUBAT
-	db 17, SLOWPOKE
-	db 16, SLOWPOKE
-	db 17, ZUBAT
+	db 18, ZUBAT
 	db 18, SLOWPOKE
-	db 20, SLOWPOKE
+	db 17, SLOWPOKE
+	db 18, ZUBAT
+	db 19, TURBAN
+	db 20, TURBAN
 	; day
-	db 16, ZUBAT
 	db 17, ZUBAT
-	db 17, SLOWPOKE
-	db 16, SLOWPOKE
-	db 17, ZUBAT
+	db 18, ZUBAT
 	db 18, SLOWPOKE
-	db 20, SLOWPOKE
+	db 17, SLOWPOKE
+	db 18, ZUBAT
+	db 19, TURBAN
+	db 20, TURBAN
 	; nite
-	db 16, ZUBAT
 	db 17, ZUBAT
-	db 17, SLOWPOKE
-	db 16, SLOWPOKE
-	db 17, ZUBAT
+	db 18, ZUBAT
 	db 18, SLOWPOKE
-	db 20, SLOWPOKE
+	db 17, SLOWPOKE
+	db 18, ZUBAT
+	db 19, TURBAN
+	db 20, TURBAN
 
 	map_id SLOWPOKE_WELL_B2F
 	db 8 percent, 8 percent, 8 percent ; encounter rates: morn/day/nite
 	; morn
-	db 16, ZUBAT
 	db 17, ZUBAT
-	db 17, SLOWPOKE
-	db 16, SLOWPOKE
-	db 17, ZUBAT
+	db 18, ZUBAT
 	db 18, SLOWPOKE
-	db 20, SLOWPOKE
+	db 17, SLOWPOKE
+	db 18, ZUBAT
+	db 19, TURBAN
+	db 20, TURBAN
 	; day
-	db 16, ZUBAT
 	db 17, ZUBAT
-	db 17, SLOWPOKE
-	db 16, SLOWPOKE
-	db 17, ZUBAT
+	db 18, ZUBAT
 	db 18, SLOWPOKE
-	db 20, SLOWPOKE
+	db 17, SLOWPOKE
+	db 18, ZUBAT
+	db 19, TURBAN
+	db 20, TURBAN
 	; nite
-	db 16, ZUBAT
 	db 17, ZUBAT
-	db 17, SLOWPOKE
-	db 16, SLOWPOKE
-	db 17, ZUBAT
+	db 18, ZUBAT
 	db 18, SLOWPOKE
-	db 20, SLOWPOKE
+	db 17, SLOWPOKE
+	db 18, ZUBAT
+	db 19, TURBAN
+	db 20, TURBAN
 	
 	map_id ROUTE_2
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -531,29 +531,29 @@ JohtoGrassWildMons:
 	map_id RUINS_OF_ALPH_INNER_CHAMBER
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
+	db 20, UNOWN
+	db 20, UNOWN
+	db 20, UNOWN
+	db 20, UNOWN
+	db 20, UNOWN
+	db 20, UNOWN
+	db 20, UNOWN
 	; day
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
+	db 20, UNOWN
+	db 20, UNOWN
+	db 20, UNOWN
+	db 20, UNOWN
+	db 20, UNOWN
+	db 20, UNOWN
+	db 20, UNOWN
 	; nite
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
+	db 20, UNOWN
+	db 20, UNOWN
+	db 20, UNOWN
+	db 20, UNOWN
+	db 20, UNOWN
+	db 20, UNOWN
+	db 20, UNOWN
 	
 	map_id RUINS_OF_ALPH_OUTSIDE
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -585,29 +585,29 @@ JohtoGrassWildMons:
 	map_id ROUTE_4
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 12, SPEAROW
-	db 13, SPEAROW
-	db 13, PIDGEY
-	db 13, TANGELA
-	db 12, DODUO
-	db 14, DODUO
-	db 14, DODUO
+	db 23, TANG
+	db 24, SPEAROW
+	db 22, SPEAROW
+	db 23, TANGELA
+	db 24, TANGELA
+	db 24, FEAROW
+	db 26, FEAROW
 	; day
-	db 12, SPEAROW
-	db 13, SPEAROW
-	db 13, PIDGEY
-	db 13, TANGELA
-	db 12, DODUO
-	db 14, DODUO
-	db 14, DODUO
+	db 23, TANG
+	db 24, SPEAROW
+	db 22, SPEAROW
+	db 23, TANGELA
+	db 24, TANGELA
+	db 24, FEAROW
+	db 26, FEAROW
 	; nite
-	db 12, SPEAROW
-	db 13, SPEAROW
-	db 13, PIDGEY
-	db 13, TANGELA
-	db 12, HOUNDOUR
-	db 14, CLEFAIRY
-	db 14, CLEFAIRY
+	db 23, TANG
+	db 24, VENONAT
+	db 22, VENONAT
+	db 23, TANGELA
+	db 24, TANGELA
+	db 24, VENOMOTH
+	db 26, VENOMOTH
 
 	map_id ROUTE_33
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -639,83 +639,83 @@ JohtoGrassWildMons:
 	map_id ROUTE_30
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	db 15, DODUO
-	db 15, RATTATA
-	db 14, NATU
-	db 15, MAREEP
-	db 15, MAREEP
-	db 14, MAGNEMITE
-	db 15, MAGNEMITE
+	db 28, DODUO
+	db 27, RATTATA
+	db 28, NATU
+	db 28, FLAAFFY
+	db 26, MAREEP
+	db 28, MAGNEMITE
+	db 27, MAGNEMITE
 	; day
-	db 15, DODUO
-	db 15, RATTATA
-	db 14, NATU
-	db 15, MAREEP
-	db 15, MAREEP
-	db 14, MAGNEMITE
-	db 15, MAGNEMITE
+	db 28, DODUO
+	db 27, RATTATA
+	db 28, NATU
+	db 28, FLAAFFY
+	db 26, MAREEP
+	db 28, MAGNEMITE
+	db 27, MAGNEMITE
 	; nite
-	db 15, DODUO
-	db 15, RATTATA
-	db 14, NATU
-	db 15, MAREEP
-	db 15, MAREEP
-	db 14, MAGNEMITE
-	db 15, MAGNEMITE
+	db 28, MURKROW
+	db 27, TWINBORUS
+	db 28, NATU
+	db 28, FLAAFFY
+	db 26, GIRAFARIG
+	db 28, MAGNEMITE
+	db 27, MAGNEMITE
 	
 	map_id ROUTE_31
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	db 15, PARAS
-	db 15, PIDGEY
-	db 14, HOPPIP
-	db 15, DROWZEE
-	db 15, DITTO
-	db 14, PIKACHU
-	db 15, EEVEE
+	db 27, PARAS
+	db 28, PIDGEY
+	db 29, DROWZEE
+	db 29, PIDGEOTTO
+	db 28, DITTO
+	db 28, PIKACHU
+	db 27, EEVEE
 	; day
-	db 15, PARAS
-	db 15, PIDGEY
-	db 14, HOPPIP
-	db 15, DROWZEE
-	db 15, DITTO
-	db 14, PIKACHU
-	db 15, EEVEE
+	db 27, PARAS
+	db 28, PIDGEY
+	db 29, DROWZEE
+	db 29, PIDGEOTTO
+	db 28, DITTO
+	db 28, PIKACHU
+	db 27, EEVEE
 	; nite
-	db 15, PARAS
-	db 15, HOOTHOOT
-	db 14, HOPPIP
-	db 15, DROWZEE
-	db 15, DITTO
-	db 14, PIKACHU
-	db 15, EEVEE
+	db 27, PARAS
+	db 28, HOOTHOOT
+	db 29, DROWZEE
+	db 29, NOCTOWL
+	db 28, DITTO
+	db 28, PIKACHU
+	db 27, EEVEE
 
 	map_id ILEX_FOREST
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	db 15, PARAS
-	db 15, SPEAROW
-	db 14, HOPPIP
-	db 17, SKIPLOOM
-	db 15, SUNFLORA
-	db 14, AIPOM
-	db 15, AIPOM
+	db 27, WEEPINBELL
+	db 27, PARASECT
+	db 28, HOPPIP
+	db 28, SKIPLOOM
+	db 28, SUNFLORA
+	db 30, AIPOM
+	db 30, AIPOM
 	; day
-	db 15, PARAS
-	db 15, SPEAROW
-	db 14, HOPPIP
-	db 17, SKIPLOOM
-	db 15, HOPPIP
-	db 14, AIPOM
-	db 15, AIPOM
+	db 27, WEEPINBELL
+	db 27, PARASECT
+	db 28, HOPPIP
+	db 28, SKIPLOOM
+	db 28, SUNFLORA
+	db 30, AIPOM
+	db 30, AIPOM
 	; nite
-	db 15, PARAS
-	db 15, HOOTHOOT
-	db 14, HOPPIP
-	db 17, SKIPLOOM
-	db 15, MURKROW
-	db 14, AIPOM
-	db 15, AIPOM
+	db 27, WEEPINBELL
+	db 27, GLOOM
+	db 28, HOPPIP
+	db 28, SKIPLOOM
+	db 28, SUNFLORA
+	db 30, AIPOM
+	db 30, AIPOM
 	
 	map_id ROUTE_38
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite

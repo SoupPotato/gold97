@@ -164,7 +164,6 @@ TrainerGruntM22:
 
 
 CaptainRocketScript:
-	special FadeOutMusic
 	pause 15
 	faceplayer
 	opentext
@@ -205,29 +204,11 @@ CaptainRocketScript:
 	winlosstext CaptainRWinText, CaptainRLossText
 	loadtrainer EXECUTIVEM, EXECUTIVEM_1
 	startbattle
-	dontrestartmapmusic
 	reloadmapafterbattle
 	opentext
 	writetext CaptainRAfterText
 	waitbutton
 	closetext
-;between these comments is end of demo text that can be removed
-;	opentext
-;	writetext Text_EndDemo
-;	waitbutton
-;	closetext
-;	opentext
-;	writetext Text_ReceivedMineralBadgeDemo
-;	playsound SFX_GET_BADGE
-;	waitsfx
-;	setflag ENGINE_MINERALBADGE
-;	verbosegiveitem HM_FLY
-;	closetext
-;	opentext
-;	writetext Text_EndDemo2
-;	waitbutton
-;	closetext
-; comment
 	special FadeOutPalettes
 	special HealParty
 	pause 15
@@ -356,27 +337,26 @@ GruntM22BeatenText:
 	done
 
 GruntM22AfterBattleText:
-	text "Ha! Just cause you"
-	line "beat me doesn't"
-	para "mean I'll let you"
-	line "pass!"
-	para "Mainly because I"
-	line "can't!"
-	para "The door's locked"
-	line "and I don't have"
-	cont "a SHIP KEY!"
-	para "Actually, I don't"
-	line "think anyone on"
-	para "this boat other"
-	line "than the CAPTAIN"
-	cont "has one."
-	para "And you can't get"
-	line "to him without it!"
-	para "Looks like you'll"
-	line "have to get one"
-	para "off some TEAM"
-	line "ROCKET member from"
-	cont "somewhere else!"
+	text "You may have won."
+	
+	para "But you can't get"
+	line "into the CAPTAIN's"
+	cont "cabin without the"
+	cont "SHIP KEY!"
+
+	para "Some other grunt"
+	line "probably has it."
+	
+	para "Maybe here on the"
+	line "on the SHIP..."
+	cont "or not..."
+	cont "...who knows?"
+	
+	para "Once the rest of"
+	line "crew return from"
+	cont "the HONTO base,"
+	cont "we are outta here!"
+		
 	done
 
 GruntM11SeenText:
@@ -395,10 +375,9 @@ GruntM11AfterBattleText:
 	text "Really, I'm not up"
 	line "to anything"
 	cont "important."
-	para "I just like being"
-	line "a part of the ship"
-	para "crew so I can ride"
-	line "on it."
+	
+	para "I just like to"
+	line "ride on a ship!"
 	done
 
 GruntM25SeenText:
@@ -436,7 +415,7 @@ GruntM13BeatenText:
 GruntM13AfterBattleText:
 	text "You must have ice"
 	line "in your veins to"
-	cont "dis TEAM ROCKET."
+	cont "diss TEAM ROCKET."
 	done
 
 UnknownText_0x7c5b0:
@@ -455,22 +434,22 @@ UnknownText_0x7c5d6:
 CaptainRBeforeText:
 	text "I'm impressed that"
 	line "you've reached me."
-	para "And I'm"
-	line "disappointed that"
-	para "none of my crew"
-	line "could stop you."
-	para "Useless, they are."
+	
+	para "It seems my crew"
+	line "couldn't stop you."
+	
+	para "Useless grunts..."
+	
 	para "But our operations"
 	line "here are finished."
-	para "We're retreating"
-	line "back to our base."
+
 	para "Our plan will"
 	line "continue as"
 	cont "scheduled."
 	done
 	
 CaptainRTellsImposterOff:
-	text "IMPOSTER OAK!"
+	text "PROF. OAK!"
 	done
 	
 ImposterOakIsShocked:
@@ -479,39 +458,41 @@ ImposterOakIsShocked:
 	done
 	
 CaptainRTellsImposterOff2:
-	text "CAPTAIN: Leave me"
-	line "now."
-	para "I wish to be alone"
-	line "with our friend."
+	text "CAPTAIN: You have"
+	line "your orders."
+	para "Leave us."
 	done
 	
 ImposterOakIsShocked2:
-	text "IMPOSTER OAK: Aye,"
-	line "CAPTAIN!"
+	text "IMPOSTER OAK: Yes,"
+	line "Sir!"
 	done
 	
 CaptainRFinishesSpeech:
 	text "…"
-	para "And I see you've"
+	para "I see you've"
 	line "met our IMPOSTER"
 	cont "OAK."
-	para "I know you're not"
-	line "fooled."
+
 	para "I wouldn't expect"
-	line "you to be."
+	line "you to be fooled."
+	
 	para "But it's not you"
-	line "I have to"
+	line "we need to"
 	cont "convince."
-	para "He'll be of more"
-	line "use to us soon."
-	para "As for now, we're"
-	line "about to set sail."
-	para "But not before I"
-	line "dispose of you!"
+	
+	para "Our plans are none"
+	line "of your buisness."
+	
+	para "Nosey children"
+	line "need to be"
+	cont "punished!"
 	done
 
 CaptainRWinText:
-	text "You're good."
+	text "Hmm..."
+	para "Impressive for a"
+	line "child."
 	done
 	
 CaptainRLossText:
@@ -519,32 +500,26 @@ CaptainRLossText:
 	done
 	
 CaptainRAfterText:
-	text "Hm. I see what a"
-	line "challenge you can"
-	cont "pose."
+	text "Your #MON are"
+	line "quite strong..."
+
 	para "But our shipments"
 	line "are complete."
+	
 	para "We have the"
 	line "materials we need"
-	para "to begin the"
-	line "construction of"
-	para "our ultimate"
-	line "weapon!"
-	para "And this weapon"
-	line "does no physical"
-	cont "damage, no."
-	para "But soon, it will"
-	line "empower us to take"
-	para "control of all"
-	line "#MON!"
-	para "And you've slowed"
-	line "that plan."
-	para "But you haven't"
-	line "stopped it!"
-	para "You'll be hearing"
-	line "more from us soon!"
-	para "In fact, everyone"
-	line "will!"
+	cont "for our ultimate"
+	cont "weapon!"
+
+	para "Soon, we will have"
+	line "total control of"
+	cont "all #MON"
+	cont "globally!"
+
+	para "Farwell child."
+	
+	para "Im sure our paths"
+	line "will cross again."
 	done
 
 
@@ -687,8 +662,8 @@ CaptainBeckons:
 ViridianGym_MapEvents:
 	db 0, 0 ; filler
 
-	db 16 ; warp events
-	warp_event  3,  1, ROUTE_5, 4
+	db 17 ; warp events
+	warp_event  3,  1, ROUTE_5, 3
 	warp_event  3,  8, VIRIDIAN_GYM, 3
 	warp_event 13,  1, VIRIDIAN_GYM, 2
 	warp_event 13, 12, VIRIDIAN_GYM, 5
@@ -704,6 +679,7 @@ ViridianGym_MapEvents:
 	warp_event 29, 29, VIRIDIAN_GYM, 15
 	warp_event 35, 22, VIRIDIAN_GYM, 14
 	warp_event 39, 22, VIRIDIAN_GYM, 14
+	warp_event  2, 18, VIRIDIAN_GYM, 6
 
 	db 2 ; coord events
 	coord_event  3,  2, SCENE_DEFAULT, RocketGreetingsScript
@@ -717,14 +693,14 @@ ViridianGym_MapEvents:
 	db 11 ; object events
 	object_event 11,  3, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerGruntM11, -1
 	object_event 31,  4, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerGruntM13, -1
-	object_event -6,  2, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
+	object_event -6,  2, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
 	object_event 28, 30, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerGruntM22, -1
 	object_event 35, 15, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CaptainRocketScript, -1
 	object_event  3, 16, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerGruntM25, -1
-	object_event  1, 26, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerGruntF3, -1
+	object_event  1, 26, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerGruntF3, -1
 	object_event 26, 23, SPRITE_PHARMACIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerBurglarEddie, -1
 	object_event  4, 26, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, ViridianGymSmokeBall, EVENT_GOLDENROD_UNDERGROUND_SWITCH_ROOM_ENTRANCES_SMOKE_BALL
-	object_event 35, 19, SPRITE_SURGE, SPRITEMOVEDATA_STANDING_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
+	object_event 35, 19, SPRITE_SURGE, SPRITEMOVEDATA_STANDING_RIGHT, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
 	object_event  1, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, ViridianGymAmuletCoin, EVENT_OLIVINE_LIGHTHOUSE_6F_SUPER_POTION
 
 

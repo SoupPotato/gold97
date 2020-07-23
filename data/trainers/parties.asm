@@ -36,9 +36,9 @@ BugsyGroup:
 MortyGroup:
 	; MORTY (1)
 	db "ENOKI@", TRAINERTYPE_MOVES; used
-	db 21, CURSTRAW,     PSYWAVE, CURSE, CONFUSE_RAY, MEAN_LOOK
-	db 20, HAUNTER,    NIGHT_SHADE, SHADOW_BALL, MEAN_LOOK, CONFUSE_RAY
-	db 21, GENGAR,     HYPNOSIS, SHADOW_BALL, MEAN_LOOK, DREAM_EATER
+	db 22, CURSTRAW,     PSYWAVE, CURSE, CONFUSE_RAY, MEAN_LOOK
+	db 24, HAUNTER,    NIGHT_SHADE, SHADOW_BALL, MEAN_LOOK, CONFUSE_RAY
+	db 26, GENGAR,     HYPNOSIS, SHADOW_BALL, MEAN_LOOK, DREAM_EATER
 	db -1 ; end
 
 PryceGroup:
@@ -52,9 +52,9 @@ PryceGroup:
 JasmineGroup:
 	; JASMINE (1)
 	db "JASMINE@", TRAINERTYPE_MOVES; used
-	db 26, MAGNEMITE,  THUNDERBOLT, SUPERSONIC, SONICBOOM, THUNDER_WAVE
-	db 28, MAGNETON,  THUNDERBOLT, SUPERSONIC, SONICBOOM, THUNDER_WAVE
-	db 32, STEELIX,    SCREECH, SANDSTORM, ROCK_THROW, IRON_TAIL
+	db 28, MAGNEMITE,  THUNDERBOLT, SUPERSONIC, SONICBOOM, THUNDER_WAVE
+	db 31, MAGNETON,  THUNDERBOLT, SUPERSONIC, SONICBOOM, THUNDER_WAVE
+	db 34, STEELIX,    SCREECH, SANDSTORM, ROCK_THROW, IRON_TAIL
 	db -1 ; end
 
 ChuckGroup:
@@ -345,8 +345,8 @@ YoungsterGroup:
 
 	; YOUNGSTER (2)
 	db "MIKEY@", TRAINERTYPE_NORMAL; used, route 30
-	db  20, PIDGEOTTO
-	db  19, RATICATE
+	db  28, PIDGEOTTO
+	db  29, RATICATE
 	db -1 ; end
 
 	; YOUNGSTER (3)
@@ -580,10 +580,10 @@ BirdKeeperGroup:
 
 	; BIRD_KEEPER (4)
 	db "THEO@", TRAINERTYPE_NORMAL ; used, lighthouse 3f/endon cave 2f
-	db 17, PIDGEY
-	db 17, PIDGEY
-	db 19, PIDGEY
-	db 18, FARFETCH_D
+	db 20, PIDGEY
+	db 20, PIDGEY
+	db 20, PIDGEY
+	db 21, FARFETCH_D
 	db -1 ; end
 
 	; BIRD_KEEPER (5)
@@ -608,7 +608,7 @@ BirdKeeperGroup:
 
 	; BIRD_KEEPER (8)
 	db "HANK@", TRAINERTYPE_NORMAL ; used, route 4
-	db 14, PIDGEY
+	db 21, PIDGEY
 	db 21, PIDGEOTTO
 	db -1 ; end
 
@@ -799,10 +799,10 @@ JanineGroup:
 CooltrainerMGroup:
 	; COOLTRAINERM (1)
 	db "NICK@", TRAINERTYPE_MOVES ; used, lighthouse 3f/endon cave 2f
-	db 17, HOUNDOUR, EMBER, ROAR, DOUBLE_TEAM, BITE
-	db 16, WOLFAN, BITE, POWDER_SNOW, SWAGGER, PROTECT
-	db 18, ANIMON,  TRANSFORM, NO_MOVE, NO_MOVE, NO_MOVE
-	db 17, POLIWHIRL, SURF, WATER_GUN, HYPNOSIS, DOUBLESLAP
+	db 19, HOUNDOUR, EMBER, ROAR, DOUBLE_TEAM, BITE
+	db 18, WOLFAN, BITE, POWDER_SNOW, SWAGGER, PROTECT
+	db 20, ANIMON,  TRANSFORM, NO_MOVE, NO_MOVE, NO_MOVE
+	db 19, POLIWHIRL, SURF, WATER_GUN, HYPNOSIS, DOUBLESLAP
 	db -1 ; end
 
 	; COOLTRAINERM (2)
@@ -934,12 +934,12 @@ CooltrainerMGroup:
 CooltrainerFGroup:
 	; COOLTRAINERF (1)
 	db "GWEN@", TRAINERTYPE_NORMAL ;used, ilex forest
-	db 17, FLAREON
-	db 17, VAPOREON
-	db 17, JOLTEON
-	db 17, UMBREON
-	db 17, ESPEON
-	db 17, LEAFEON
+	db 25, FLAREON
+	db 25, VAPOREON
+	db 25, JOLTEON
+	db 25, UMBREON
+	db 25, ESPEON
+	db 25, LEAFEON
 	db -1 ; end
 
 	; COOLTRAINERF (2)
@@ -1195,15 +1195,15 @@ PokemaniacGroup:
 
 	; POKEMANIAC (6)
 	db "BRENT@", TRAINERTYPE_NORMAL; used, boardwalk
-	db 17, LICKITUNG
-	db 17, SLOWBRO
-	db 17, TURBAN
+	db 19, LICKITUNG
+	db 19, SLOWBRO
+	db 19, TURBAN
 	db -1 ; end
 
 	; POKEMANIAC (7)
 	db "RON@", TRAINERTYPE_NORMAL ; used, boardwalk
-	db 17, NIDOKING
-	db 17, NIDOQUEEN
+	db 19, NIDOKING
+	db 19, NIDOQUEEN
 	db -1 ; end
 
 	; POKEMANIAC (8)
@@ -1276,9 +1276,9 @@ GruntMGroup:
 
 	; GRUNTM (4)
 	db "GRUNT@", TRAINERTYPE_NORMAL ; used, slowpoke well battle
-	db 16, GRIMBY
-	db 17, GRIMER
-	db 17, MEOWTH
+	db 20, GRIMBY
+	db 21, GRIMER
+	db 21, MEOWTH
 	db -1 ; end
 
 	; GRUNTM (5)
@@ -1319,9 +1319,9 @@ GruntMGroup:
 
 	; GRUNTM (11)
 	db "GRUNT@", TRAINERTYPE_NORMAL ;used, rocket boat
-	db 19, GRIMER
-	db 19, KOFFING
-	db 20, RATICATE
+	db 23, GRIMER
+	db 23, KOFFING
+	db 25, RATICATE
 	db -1 ; end
 
 	; GRUNTM (12)
@@ -1332,7 +1332,8 @@ GruntMGroup:
 
 	; GRUNTM (13)
 	db "GRUNT@", TRAINERTYPE_NORMAL ;used, rocket boat
-	db 20, CURSTRAW
+	db 24, CURSTRAW
+	db 26, CURSTRAW
 	db -1 ; end
 
 	; GRUNTM (14)
@@ -1387,13 +1388,13 @@ GruntMGroup:
 
 	; GRUNTM (22)
 	db "GRUNT@", TRAINERTYPE_NORMAL ;used, rocket ship
-	db 20, GOLBAT
+	db 28, GOLBAT
 	db -1 ; end
 
 	; GRUNTM (23)
 	db "GRUNT@", TRAINERTYPE_NORMAL ;used, key giver in honto base
-	db 20, GOLBAT
-	db 19, WOLFAN
+	db 25, GOLBAT
+	db 26, WOLFAN
 	db -1 ; end
 
 	; GRUNTM (24)
@@ -1404,8 +1405,8 @@ GruntMGroup:
 
 	; GRUNTM (25)
 	db "GRUNT@", TRAINERTYPE_NORMAL ;used, rocket ship
-	db 18, KOFFING
-	db 17, RINRING
+	db 25, KOFFING
+	db 26, RINRING
 	db -1 ; end
 
 	; GRUNTM (26)
@@ -1427,8 +1428,8 @@ GruntMGroup:
 
 	; GRUNTM (29) ;used rocket guarding the ship at the docks
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db  19, MEOWTH
-	db  20, RATICATE
+	db  23, MEOWTH
+	db  25, RATICATE
 	db -1 ; end
 
 	; GRUNTM (30)
@@ -1458,8 +1459,8 @@ GruntMGroup:
 GentlemanGroup:
 	; GENTLEMAN (1)
 	db "PRESTON@", TRAINERTYPE_NORMAL ;used, olivine gym
-	db 20, MAGNEMITE
-	db 20, MAGNEMITE
+	db 28, MAGNEMITE
+	db 28, MAGNEMITE
 	db -1 ; end
 
 	; GENTLEMAN (2)
@@ -1480,7 +1481,7 @@ GentlemanGroup:
 
 	; GENTLEMAN (5)
 	db "ALFRED@", TRAINERTYPE_NORMAL ;used, olivine gym
-	db 22, ANCHORAGE
+	db 30, ANCHORAGE
 	db -1 ; end
 
 SkierGroup:
@@ -1538,8 +1539,8 @@ BugCatcherGroup:
 
 	; BUG_CATCHER (4)
 	db "WADE@", TRAINERTYPE_NORMAL; used, route 31, only did first party
-	db  20, LEDIAN
-	db  21, BUTTERFREE
+	db  28, LEDIAN
+	db  30, BUTTERFREE
 	db -1 ; end
 
 	; BUG_CATCHER (5)
@@ -1627,22 +1628,22 @@ BugCatcherGroup:
 
 	; BUG_CATCHER (19)
 	db "WAYNE@", TRAINERTYPE_NORMAL; used, ilex forest
-	db 19, PARAS
-	db 21, LEDIAN
+	db 28, PARAS
+	db 30, LEDIAN
 	db -1 ; end
 
 FisherGroup:
 	; FISHER (1)
 	db "JUSTIN@", TRAINERTYPE_NORMAL ;used on route 7
-	db  5, MAGIKARP
-	db  5, MAGIKARP
-	db  5, MAGIKARP
-	db 14, GYARADOS
+	db 15, MAGIKARP
+	db 15, MAGIKARP
+	db 15, MAGIKARP
+	db 12, GYARADOS
 	db -1 ; end
 
 	; FISHER (2)
 	db "RALPH@", TRAINERTYPE_NORMAL ;used on route 7, check parties and events for new battles later 
-	db 13, GOLDEEN
+	db 15, GOLDEEN
 	db -1 ; end
 
 	; FISHER (3)
@@ -1667,7 +1668,7 @@ FisherGroup:
 
 	; FISHER (6)
 	db "MARVIN@", TRAINERTYPE_NORMAL ; used, boardwalk
-	db 10, KINGOLD
+	db 18, KINGOLD
 	db 18, GOLDEEN
 	db 20, SEAKING
 	db -1 ; end
@@ -1812,16 +1813,16 @@ SwimmerMGroup:
 
 	; SWIMMERM (3)
 	db "RANDALL@", TRAINERTYPE_NORMAL; used, route 4
-	db 18, SHELLDER
-	db 20, WARTORTLE
-	db 18, SHELLDER
+	db 22, SHELLDER
+	db 24, WARTORTLE
+	db 22, SHELLDER
 	db -1 ; end
 
 	; SWIMMERM (4)
-	db "CHARLIE@", TRAINERTYPE_NORMAL;unused, in sailorhuey
-	db 21, SHELLDER
-	db 19, TENTACOOL
-	db 19, TENTACRUEL
+	db "CHARLIE@", TRAINERTYPE_NORMAL; used, route 4
+	db 24, SHELLDER
+	db 22, OSUNFISH
+	db 22, TENTACRUEL
 	db -1 ; end
 
 	; SWIMMERM (5)
@@ -1941,14 +1942,16 @@ SwimmerMGroup:
 
 SwimmerFGroup:
 	; SWIMMERF (1)
-	db "ELAINE@", TRAINERTYPE_NORMAL; unused, in sailorhuey
-	db 21, STARYU
+	db "ELAINE@", TRAINERTYPE_NORMAL; used, route 4
+	db 25, STARYU
+	db 25, PSYDUCK
 	db -1 ; end
 
 	; SWIMMERF (2)
-	db "PAULA@", TRAINERTYPE_NORMAL; unused, in sailorhuey
-	db 19, STARYU
-	db 19, SHELLDER
+	db "PAULA@", TRAINERTYPE_NORMAL; used, route 4
+	db 24, STARYU
+	db 24, SHELLDER
+	db 24, TURBAN
 	db -1 ; end
 
 	; SWIMMERF (3)
@@ -2065,7 +2068,7 @@ SailorGroup:
 
 	; SAILOR (3)
 	db "TERRELL@", TRAINERTYPE_NORMAL ; used, lighthouse 3f/endon cave 2f
-	db 19, POLIWHIRL
+	db 23, POLIWHIRL
 	db -1 ; end
 
 	; SAILOR (4)
@@ -2169,7 +2172,7 @@ SuperNerdGroup:
 
 	; SUPER_NERD (7)
 	db "TOM@", TRAINERTYPE_NORMAL ;used, olivine gym
-	db 21, MAGNETON
+	db 30, MAGNETON
 	db -1 ; end
 
 	; SUPER_NERD (8)
@@ -2294,8 +2297,8 @@ GuitaristGroup:
 HikerGroup:
 	; HIKER (1)
 	db "ANTHONY@", TRAINERTYPE_NORMAL; used, route 31, only did first party
-	db 20, MACHOKE
-	db 21, PHANPY
+	db 29, MACHOKE
+	db 28, PHANPY
 	db -1 ; end
 
 	; HIKER (2)
@@ -2314,8 +2317,8 @@ HikerGroup:
 
 	; HIKER (4)
 	db "LEONARD@", TRAINERTYPE_NORMAL ;used, ilex forest
-	db 20, GRAVELER
-	db 21, MACHOKE
+	db 28, GRAVELER
+	db 28, MACHOKE
 	db -1 ; end
 
 	; HIKER (5)
@@ -2484,8 +2487,8 @@ BurglarGroup:
 
 	; BURGLAR (2)
 	db "EDDIE@", TRAINERTYPE_MOVES ;used, ship
-	db 17, GROWLITHE,  ROAR, EMBER, LEER, TAKE_DOWN
-	db 19, KOFFING,    TACKLE, SMOG, SLUDGE, SMOKESCREEN
+	db 26, GROWLITHE,  BITE, FLAME_WHEEL, REVERSAL, LEER
+	db 26, KOFFING,    SLUDGE, SELFDESTRUCT, FAINT_ATTACK, SMOKESCREEN
 	db -1 ; end
 
 	; BURGLAR (3)
@@ -2518,14 +2521,15 @@ FirebreatherGroup:
 
 	; FIREBREATHER (4)
 	db "BURT@", TRAINERTYPE_NORMAL ;used, route 33
-	db 20, KOFFING
-	db 19, VULPIX
+	db 26, KOFFING
+	db 27, VULPIX
 	db -1 ; end
 
 	; FIREBREATHER (5)
 	db "BILL@", TRAINERTYPE_NORMAL ;used, ilex forest
-	db 19, VULPIX
-	db 20, PONYTA
+	db 29, VULPIX
+	db 29, PONYTA
+	db 32, NINETALES
 	db -1 ; end
 
 	; FIREBREATHER (6)
@@ -2664,9 +2668,9 @@ BlackbeltGroup:
 ExecutiveMGroup:
 	; EXECUTIVEM (1)
 	db "EXECUTIVE@", TRAINERTYPE_MOVES ;used, ship captain
-	db 21, KOFFING,    TACKLE, SLUDGE, SMOKESCREEN, HAZE
-	db 22, CURSTRAW,   MEAN_LOOK, CONFUSE_RAY, PSYWAVE, SPITE
-	db 24, HOUNDOOM,   EMBER, SMOG, BITE, FAINT_ATTACK
+	db 28, KOFFING,    SELFDESTRUCT, SLUDGE, SMOKESCREEN, HAZE
+	db 28, CURSTRAW,   MEAN_LOOK, CONFUSE_RAY, PSYBEAM, FAINT_ATTACK
+	db 30, HOUNDOOM,   EMBER, MUD_SLAP, BITE, FIRE_SPIN
 	db -1 ; end
 
 	; EXECUTIVEM (2)
@@ -2797,14 +2801,14 @@ PicnickerGroup:
 
 	; PICNICKER (6)
 	db "HOPE@", TRAINERTYPE_NORMAL ; used, route 4
-	db 19, FLAAFFY
-	db 18, KOTORA
+	db 23, FLAAFFY
+	db 24, KOTORA
 	db -1 ; end
 
 	; PICNICKER (7)
 	db "SHARON@", TRAINERTYPE_NORMAL ; used, route 4
-	db 19, PONYTA
-	db 20, BIPETAL
+	db 23, PONYTA
+	db 23, BIPETAL
 	db -1 ; end
 
 	; PICNICKER (8)
@@ -2861,11 +2865,11 @@ PicnickerGroup:
 
 	; PICNICKER (16)
 	db "TIFFANY@", TRAINERTYPE_MOVES; used, boardwalk
-	db 20, CLEFAIRY,   ENCORE, SING, DOUBLESLAP, MINIMIZE
+	db 22, CLEFAIRY,   ENCORE, SING, DOUBLESLAP, MINIMIZE
 	db -1 ; end
 
 	; PICNICKER (17)
-	db "TIFFANY@", TRAINERTYPE_MOVES
+	db "TIFFANY@", TRAINERTYPE_MOVES; ;free to use
 	db 26, CLEFAIRY,   ENCORE, DOUBLESLAP, MINIMIZE, METRONOME
 	db -1 ; end
 
@@ -2882,7 +2886,7 @@ PicnickerGroup:
 	db -1 ; end
 
 	; PICNICKER (20)
-	db "TIFFANY@", TRAINERTYPE_MOVES
+	db "TIFFANY@", TRAINERTYPE_MOVES ;free to use
 	db 30, CLEFAIRY,   ENCORE, SING, DOUBLESLAP, MINIMIZE
 	db -1 ; end
 
@@ -2924,7 +2928,7 @@ PicnickerGroup:
 	db -1 ; end
 
 	; PICNICKER (26)
-	db "TIFFANY@", TRAINERTYPE_MOVES
+	db "TIFFANY@", TRAINERTYPE_MOVES; free to use
 	db 43, CLEFAIRY,   METRONOME, ENCORE, MOONLIGHT, MINIMIZE
 	db -1 ; end
 
@@ -3054,9 +3058,9 @@ CamperGroup:
 
 	; CAMPER (19)
 	db "SPENCER@", TRAINERTYPE_NORMAL ; used, boardwalk
-	db 17, SANDSHREW
-	db 19, SANDSLASH
-	db 19, ZUBAT
+	db 18, SANDSHREW
+	db 20, SANDSLASH
+	db 20, ZUBAT
 	db -1 ; end
 
 	; CAMPER (20)
@@ -3202,14 +3206,14 @@ MediumGroup:
 
 	; MEDIUM (6)
 	db "REBECCA@", TRAINERTYPE_MOVES ;used, birdon gym
-	db 18, CURSTRAW, PSYWAVE, SPITE, FAINT_ATTACK, CURSE
-	db 18, GASTLY,	LICK, CURSE, HYPNOSIS, MEAN_LOOK
+	db 21, CURSTRAW, PSYWAVE, SPITE, FAINT_ATTACK, CURSE
+	db 21, GASTLY,	NIGHT_SHADE, CURSE, HYPNOSIS, MEAN_LOOK
 	db -1 ; end
 
 	; MEDIUM (7)
 	db "DORIS@", TRAINERTYPE_MOVES ;used, birdon gym
-	db 19, GASTLY, LICK, CURSE, HYPNOSIS, MEAN_LOOK
-	db 19, GASTLY, LICK, CURSE, HYPNOSIS, MEAN_LOOK
+	db 22, GASTLY, NIGHT_SHADE, CURSE, HYPNOSIS, MEAN_LOOK
+	db 22, GASTLY, NIGHT_SHADE, CURSE, HYPNOSIS, MEAN_LOOK
 	db -1 ; end
 
 BoarderGroup:
@@ -3498,14 +3502,14 @@ GruntFGroup:
 
 	; GRUNTF (2)
 	db "GRUNT@", TRAINERTYPE_NORMAL ;used, ship entrance ambush
-	db 18, EKANS
-	db 18, KOFFING
+	db 24, EKANS
+	db 25, KOFFING
 	db -1 ; end
 
 	; GRUNTF (3)
 	db "GRUNT@", TRAINERTYPE_NORMAL ;used, ship
-	db 18, ODDISH
-	db 19, GLOOM
+	db 26, GLOOM
+	db 26, WEEPINBELL
 	db -1 ; end
 
 	; GRUNTF (4)
@@ -3585,8 +3589,8 @@ SportsmanGroup:; use cooltrainer m sprite
 	
 	; SPORTSMAN (4)
 	db "BRYSON@", TRAINERTYPE_NORMAL ;used, route 7
-	db 13, DODUO
-	db 14, SCYTHER
+	db 18, DODUO
+	db 19, SCYTHER
 	db -1 ; end
 	
 SoldierGroup:; use officer sprite
@@ -3615,8 +3619,8 @@ SoldierGroup:; use officer sprite
 InstructorGroup:; use gentleman sprite
 	; INSTRUCTOR (1)
 	db "CLIFF@", TRAINERTYPE_NORMAL ;used, boardwalk
-	db 17, NATU
-	db 19, XATU
+	db 20, NATU
+	db 20, XATU
 	db -1 ; end
 	
 	; INSTRUCTOR (2)
@@ -3655,14 +3659,14 @@ FledglingGroup:; use bug catcher sprite
 	
 	; FLEDGLING (3)
 	db "HIDALGO@", TRAINERTYPE_NORMAL ;used, boardwalk / route 43
-	db 17, DIGLETT
-	db 18, POLIWAG
+	db 20, DIGLETT
+	db 20, POLIWAG
 	db -1 ; end
 	
 	; FLEDGLING (4)
 	db "PAULSON@", TRAINERTYPE_NORMAL ;used, route 31
-	db 21, HOUNDOUR
-	db 20, MARILL
+	db 28, HOUNDOUR
+	db 30, MARILL
 	db -1 ; end
 	
 	; FLEDGLING (5)

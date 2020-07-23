@@ -161,6 +161,9 @@ Route35Sign:
 
 Route35TMRollout:
 	itemball TM_ROLLOUT
+	
+Route35SuperPotion:
+	itemball SUPER_POTION
 
 Route35FruitTree:
 	fruittree FRUITTREE_ROUTE_35
@@ -336,7 +339,7 @@ Route35_MapEvents:
 	db 1 ; bg events
 	bg_event  6, 44, BGEVENT_READ, Route35Sign
 
-	db 10 ; object events
+	db 11 ; object events
 	object_event 11,  9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerCamperIvan, -1
 	object_event  6, 23, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerPicnickerKim, -1
 	object_event 10, 44, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperBryan, -1
@@ -347,3 +350,4 @@ Route35_MapEvents:
 	object_event 10, 28, SPRITE_SLOWPOKE, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route35SlowpokeScript, EVENT_BEAT_WHITNEY
 	object_event 11, 28, SPRITE_SLOWPOKE, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route35SlowpokeScript, EVENT_BEAT_WHITNEY
 	object_event  8, 30, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route35SlowpokeGuyScript, -1
+	object_event 15, 10, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route35SuperPotion, EVENT_ROUTE_35_SUPER_POTION

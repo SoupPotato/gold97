@@ -6,6 +6,7 @@
 	const SLOWPOKEB2F_ROCKET2
 	const SLOWPOKEB2F_ROCKET3
 	const SLOWPOKEB2F_GYM_GUY
+	const SLOWPOKEB2F_ELDER
 
 SlowpokeWellB2F_MapScripts:
 	db 2 ; scene scripts
@@ -95,14 +96,24 @@ RocketEncounterScript:
 	disappear SLOWPOKEB2F_BLUE
 	disappear SLOWPOKEB2F_OAK
 	disappear SLOWPOKEB2F_SILVER
+	applymovement SLOWPOKEB2F_ELDER, EldertoPlayerMovement
+	turnobject PLAYER, UP
+	opentext
+	writetext ElderThisSurfText
+	waitbutton
+	verbosegiveitem HM_SURF
+	setevent EVENT_GOT_HM03_SURF
+	writetext ElderThisSurfText2
+	waitbutton
+	closetext
+	applymovement SLOWPOKEB2F_ELDER, EldertExitMovement
+	disappear SLOWPOKEB2F_ELDER
+	turnobject PLAYER, DOWN
 	setevent EVENT_RIVAL_BURNED_TOWER
 	setevent EVENT_CINNABAR_ROCKS_CLEARED
 	setscene SCENE_SLOWPOKE2_NOTHING
 	setmapscene ELM_ENTRANCE, SCENE_ELM_ENTRANCE_NOTHING
-	clearevent EVENT_EXPLODING_TRAP_21
-	end
-
-SlowpokeWellB1FNPCScript:
+	clearevent EVENT_EXPLODING_TRAP_21	
 	end
 	
 OakLeavesMovement:
@@ -187,6 +198,23 @@ OneStepUp:
 	step UP
 	step_end
 	
+EldertoPlayerMovement:
+	slow_step DOWN
+	slow_step DOWN
+	slow_step DOWN
+	slow_step DOWN
+	step_end
+	
+EldertExitMovement:
+	slow_step LEFT
+	slow_step DOWN
+	slow_step DOWN
+	slow_step DOWN
+	slow_step DOWN
+	slow_step DOWN
+	slow_step DOWN
+	slow_step DOWN
+	step_end
 
 SlowpokeWellB2FGymGuyScript:
 	faceplayer
@@ -372,6 +400,55 @@ OakStopThisText:
 	cont "off to sell them"
 	cont "for profit!"
 	done
+	
+ElderThisSurfText:
+	text "Ah!"
+	
+	para "Thank you for"
+	line "saving the"
+	cont "SLOWPOKE!"
+	
+	para "I am the village"
+	line "elder."
+	
+	para "I was paying"
+	line "a visit to the"
+	cont "SLOWPOKE when"
+	cont "those three thugs"
+	cont "appeared."
+	
+	para "They began cutting"
+	line "off the poor "
+	cont "SLOWPOKE's tails!"
+	
+	para "I was about to"
+	line "chase them off but"
+	cont "you saved me the"
+	cont "trouble."
+	
+	para "I must thank you"
+	line "somehow..."
+	
+	para "Please take this,"
+	line "don't be shy, now."
+	done
+	
+ElderThisSurfText2:
+	text "That HM contains"
+	line "SURF."
+	
+	para "It will allow your"
+	line "you #MON to"
+	cont "sail across water."
+	
+	para "May it serve you"
+	line "well."
+	
+	para "I shall return to"
+	line "my house now."
+	
+	para "Goodbye."
+	done
 
 SlowpokeWellB2F_MapEvents:
 	db 0, 0 ; filler
@@ -381,15 +458,16 @@ SlowpokeWellB2F_MapEvents:
 
 	db 1 ; coord events
 	coord_event  9, 10, SCENE_DEFAULT, RocketEncounterScript
-
+	
 
 	db 0 ; bg events
 
-	db 8 ; object events
-	object_event 11,  8, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SlowpokeWellB1FNPCScript, EVENT_RIVAL_BURNED_TOWER
-	object_event  9,  8, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SlowpokeWellB1FNPCScript, EVENT_RIVAL_BURNED_TOWER
-	object_event  8,  8, SPRITE_OAK, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SlowpokeWellB1FNPCScript, EVENT_RIVAL_BURNED_TOWER
-	object_event  8,  5, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SlowpokeWellB1FNPCScript, EVENT_RIVAL_BURNED_TOWER
-	object_event 12,  5, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SlowpokeWellB1FNPCScript, EVENT_RIVAL_BURNED_TOWER
-	object_event 10,  5, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SlowpokeWellB1FNPCScript, EVENT_RIVAL_BURNED_TOWER
+	db 9 ; object events
+	object_event 11,  8, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_BURNED_TOWER
+	object_event  9,  8, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_BURNED_TOWER
+	object_event  8,  8, SPRITE_OAK, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_BURNED_TOWER
+	object_event  8,  5, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_BURNED_TOWER
+	object_event 12,  5, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_BURNED_TOWER
+	object_event 10,  5, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_BURNED_TOWER
 	object_event  4,  2, SPRITE_GYM_GUY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SlowpokeWellB2FGymGuyScript, EVENT_EXPLODING_TRAP_21
+	object_event 10,  3, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GOT_HM03_SURF

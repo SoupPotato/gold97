@@ -6,6 +6,8 @@ LoadSpecialMapPalette:
 	jr z, .ice_path
 	cp TILESET_HOUSE
 	jr z, .house
+	cp TILESET_TRADITIONAL_HOUSE
+	jr z, .traditional_house
 	cp TILESET_RADIO_TOWER
 	jr z, .radio_tower
 	cp TILESET_MANSION
@@ -26,9 +28,16 @@ LoadSpecialMapPalette:
 .not_azalea_town
 	ld a, [wMapGroup]
 	cp GROUP_ROUTE_33
-	jr nz, .do_nothing
+	jr nz, .not_route_33
 	ld a, [wMapNumber]
 	cp MAP_ROUTE_33
+	jr z, .SandOverBrownBGPalette
+.not_route_33
+	ld a, [wMapGroup]
+	cp GROUP_ROUTE_30
+	jr nz, .do_nothing
+	ld a, [wMapNumber]
+	cp MAP_ROUTE_30
 	jr z, .SandOverBrownBGPalette
 
 
@@ -45,7 +54,8 @@ LoadSpecialMapPalette:
 	call LoadIcePathPalette
 	scf
 	ret
-
+	
+.traditional_house
 .house
 	call LoadHousePalette
 	scf
@@ -197,9 +207,17 @@ LoadSpecialMapOBPalette:
 .not_azalea
 	ld a, [wMapGroup]
 	cp GROUP_ROUTE_33
-	jr nz, .do_nothing
+	jr nz, .not_route_33
 	ld a, [wMapNumber]
 	cp MAP_ROUTE_33
+	jp z, .SandOverTreeOBPalette
+	
+.not_route_33
+	ld a, [wMapGroup]
+	cp GROUP_ROUTE_30
+	jr nz, .do_nothing
+	ld a, [wMapNumber]
+	cp MAP_ROUTE_30
 	jp z, .SandOverTreeOBPalette
 	
 

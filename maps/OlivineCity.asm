@@ -36,7 +36,6 @@ OlivineCityRivalSceneTop:
 	writetext OlivineCityRivalText
 	waitbutton
 	closetext
-	;applymovement PLAYER, MovementData_0x1a88f4
 	applymovement OLIVINECITY_OLIVINE_RIVAL, MovementData_0x1a88db
 	turnobject PLAYER, LEFT
 	applymovement OLIVINECITY_OLIVINE_RIVAL, MovementData_0x1a88db2
@@ -159,32 +158,29 @@ MovementData_0x1a88f7:
 OlivineCityRivalText:
 	text "<PLAY_G>!"
 	para "It's been a while!"
+	
 	para "You just got"
 	line "through NIHON"
 	cont "FOREST, right?"
-	para "It's a tough place."
-	para "But it's filled"
-	line "with #MON!"
+
 	para "I'm actually not"
 	line "in the mood to"
 	cont "battle right now."
+	
 	para "I'm headed back"
 	line "out to the FOREST"
 	para "to look for more"
 	line "#MON!"
-	para "Can't miss the"
-	line "opportunity to"
-	para "look for the"
-	line "strongest #MON"
-	cont "to add to my team!"
-	para "This city's pretty"
-	line "cool, though!"
-	para "There's a GYM"
-	line "LEADER that uses"
-	cont "the STEEL-TYPE!"
-	para "I'd never even"
-	line "heard of that type"
-	cont "before!"
+	
+	para "By the way,"
+	
+	para "This city's GYM"
+	line "uses the"
+	cont "STEEL-TYPE."
+	
+	para "So you better be"
+	line "strong enough!"
+	
 	para "Anyways, I'm off!"
 	line "See you around!"
 	done
@@ -269,7 +265,7 @@ OlivineCity_MapEvents:
 	bg_event  8, 14, BGEVENT_READ, OlivineCityMartSign
 
 	db 4 ; object events
-	object_event 10, 31, SPRITE_JANINE, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineCitySailor1Script, -1
+	object_event  8, 30, SPRITE_JANINE, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineCitySailor1Script, -1
 	object_event 24,  9, SPRITE_STANDING_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OlivineCityStandingYoungsterScript, -1
 	object_event 26, 25, SPRITE_FISHER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineCitySailor2Script, -1
 	object_event  7,  8, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_OLIVINE_CITY

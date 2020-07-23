@@ -11,6 +11,8 @@
 	const ECRUTEAKCITY_ROCKET3
 	const ECRUTEAKCITY_ROCKET4
 	const ECRUTEAKCITY_LASS3
+	const ECRUTEAKCITY_WORKER1
+	const ECRUTEAKCITY_WORKER2
 
 EcruteakCity_MapScripts:
 	db 2 ; scene scripts
@@ -35,12 +37,7 @@ EcruteakCity_MapScripts:
 .ClearTekuCityRocks:
 	checkevent EVENT_CINNABAR_ROCKS_CLEARED
 	iftrue .Done
-	changeblock 21,  7, $25 ; fence
-	changeblock 23,  7, $25 ; fence
-	changeblock 25,  7, $25 ; fence
-	changeblock 21,  5, $07 ; water
-	changeblock 23,  5, $07 ; water
-	changeblock 25,  5, $07 ; water
+	changeblock 23,  5, $80 ; water
 .Done:
 	return
 
@@ -90,6 +87,16 @@ SceneRocketTakeOverScript:
 .SceneEcruteakNothing:
 	end
 
+WorkerScript;
+	faceplayer
+	opentext
+	writetext WorkerText
+	waitbutton
+	closetext
+	turnobject ECRUTEAKCITY_WORKER2, UP
+	turnobject ECRUTEAKCITY_WORKER1, UP
+	end
+	
 
 EcruteakCityGramps1Script:
 	jumptextfaceplayer EcruteakCityGramps1Text
@@ -150,12 +157,7 @@ EcruteakCitySign:
 	jumptext EcruteakCitySignText
 
 TinTowerSign:
-	checkevent EVENT_CINNABAR_ROCKS_CLEARED
-	iftrue .TinTowerSign2
 	jumptext TinTowerSignText
-	
-.TinTowerSign2
-	jumptext TinTowerSignText2
 
 EcruteakGymSign:
 	jumptext EcruteakGymSignText
@@ -363,18 +365,6 @@ EcruteakCitySignText:
 	done
 
 TinTowerSignText:
-	text "COMING SOON!"
-	para "BOARDWALK and"
-	line "BOARDWALK GAME"
-	cont "CORNER!"
-	para "A walkable seaside"
-	line "connection from"
-	para "TEKU CITY to HONTO"
-	line "TOWN, with games"
-	cont "and prizes galore!"
-	done
-
-TinTowerSignText2:
 	text "North to BOARDWALK"
 	line "and BOARDWALK"
 	cont "GAME CORNER!"
@@ -415,6 +405,15 @@ RocketsAreCommin2:
 	para "TEAM ROCKET "
 	line "trying to take"
 	cont "over the AQUARIUM!"
+	done
+	
+WorkerText:
+	text "Those ROCKET thugs"
+	line "damaged the bridge"
+	cont "to the GATE..."
+	
+	para "We need some time"
+	line "to repair it."
 	done
 	
 WalkToCenter:
@@ -472,7 +471,7 @@ EcruteakCity_MapEvents:
 	bg_event 33, 13, BGEVENT_ITEM, EcruteakCityHiddenHyperPotion
 	bg_event 24, 29, BGEVENT_READ, TekuCityDocksSign
 
-	db 12 ; object events
+	db 14 ; object events
 	object_event 14, 21, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakCityGramps1Script, -1
 	object_event 19,  9, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakCityGramps2Script, -1
 	object_event 28, 27, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, EcruteakCityLass1Script, -1
@@ -485,5 +484,7 @@ EcruteakCity_MapEvents:
 	object_event  6, 28, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakCityRocket1Script, EVENT_BURNED_TOWER_MORTY
 	object_event  7, 28, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakCityRocket2Script, EVENT_BURNED_TOWER_MORTY
 	object_event  22, 22, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ECRUTEAK_SCARED_LASS
+	object_event 22,  6, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, WorkerScript, EVENT_CINNABAR_ROCKS_CLEARED
+	object_event 23,  6, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, WorkerScript, EVENT_CINNABAR_ROCKS_CLEARED
 
 	

@@ -403,11 +403,11 @@ Route31CooltrainerMScript:
 Route31FruitTree:
 	fruittree FRUITTREE_ROUTE_31
 
-Route31Potion:
-	itemball SUPER_POTION
+Route31FullHeal:
+	itemball FULL_HEAL
 
-Route31PokeBall:
-	itemball POKE_BALL
+Route31UltraBall:
+	itemball ULTRA_BALL
 	
 Route34MovementData_DayCareManWalksBackInside:
 	slow_step LEFT
@@ -545,10 +545,10 @@ Route31_MapEvents:
 	db 9 ; warp events
 	warp_event  8,  5, NEW_ECRUTEAK_GATE_SOUTH, 3
 	warp_event  9,  5, NEW_ECRUTEAK_GATE_SOUTH, 4
-	warp_event 16, 12, ILEX_FOREST, 1
-	warp_event 16, 13, ILEX_FOREST, 2
-	warp_event 23,  8, ILEX_FOREST, 3
-	warp_event 23,  9, ILEX_FOREST, 4
+	warp_event 15, 12, ILEX_FOREST, 1
+	warp_event 15, 13, ILEX_FOREST, 2
+	warp_event 24,  8, ILEX_FOREST, 3
+	warp_event 24,  9, ILEX_FOREST, 4
 	warp_event 33,  5, DAY_CARE, 1
 	warp_event 36,  5, DAY_CARE, 3
 	warp_event  9, 10, ROUTE_32_POKECENTER_1F, 1
@@ -562,15 +562,14 @@ Route31_MapEvents:
 	bg_event 10, 10, BGEVENT_READ, Route31PokecenterSign
 
 	db 11 ; object events
-	;object_event 52, 11, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route31MailRecipientScript, -1
 	object_event  7, 13, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route31YoungsterScript, -1
 	object_event 24,  5, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerBugCatcherWade1, -1
-	object_event 42, 12, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route31CooltrainerMScript, -1
+	object_event 41, 10, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route31CooltrainerMScript, -1
 	object_event  4, 11, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route31FruitTree, -1
-	object_event 11,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route31Potion, EVENT_ROUTE_31_POTION
-	object_event 33, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route31PokeBall, EVENT_ROUTE_31_POKE_BALL
+	object_event 11,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route31FullHeal, EVENT_ROUTE_31_FULL_HEAL
+	object_event 33, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route31UltraBall, EVENT_ROUTE_31_ULTRA_BALL
 	object_event 38,  6, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DayCareManScript_Outside, EVENT_DAY_CARE_MAN_ON_ROUTE_34
 	object_event 40,  7, SPRITE_DAY_CARE_MON_1, SPRITEMOVEDATA_POKEMON, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DayCareMon1Script, EVENT_DAY_CARE_MON_1
 	object_event 42,  6, SPRITE_DAY_CARE_MON_2, SPRITEMOVEDATA_POKEMON, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DayCareMon2Script, EVENT_DAY_CARE_MON_2
-	object_event 49,  5, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerHikerAnthony, -1
+	object_event 50,  8, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerHikerAnthony, -1
 	object_event  4,  9, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerFledglingPaulson, -1

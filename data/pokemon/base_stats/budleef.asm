@@ -1,6 +1,6 @@
 	db BUDLEEF ; 153
 
-	db  60,  62,  80,  60,  63,  80
+	db  62,  55,  80,  55,  63,  80
 	;   hp  atk  def  spd  sat  sdf
 
 	db GRASS, GRASS ; type

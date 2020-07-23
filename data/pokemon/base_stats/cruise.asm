@@ -1,6 +1,6 @@
 	db CRUISE ; 158
 
-	db  50,  45,  64,  43,  65,  48
+	db  50,  45,  52,  35,  62,  60
 	;   hp  atk  def  spd  sat  sdf
 
 	db WATER, WATER ; type

@@ -120,7 +120,7 @@ MahoganyTown_MapEvents:
 
 	db 5 ; warp events
 	warp_event 15,  4, VIRIDIAN_MART, 1
-	warp_event  3,  7, MAHOGANY_RED_GYARADOS_SPEECH_HOUSE, 1
+	warp_event  1,  7, MAHOGANY_RED_GYARADOS_SPEECH_HOUSE, 1
 	warp_event 16, 11, RUINS_OF_ALPH_RESEARCH_CENTER, 1
 	warp_event  3, 12, MAHOGANY_POKECENTER_1F, 1
 	warp_event  4,  3, LAV_RADIO_TOWER_1F, 1

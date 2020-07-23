@@ -8,7 +8,6 @@ CeruleanGym_MapScripts:
 
 
 VermilionSnorlax:
-	;faceplayer
 	opentext
 	writetext SnorlaxText
 	yesorno
@@ -16,15 +15,14 @@ VermilionSnorlax:
 	writetext SnorlaxText2
 	waitbutton
 	closetext
-	pause 20
+	pause 10
 	opentext
 	writetext SnorlaxText3
 	cry SNORLAX
 	pause 15
 	closetext
 	setevent EVENT_VERMILION_CITY_SNORLAX
-;	writecode VAR_BATTLETYPE, BATTLETYPE_ROAMING
-	loadwildmon SNORLAX, 20
+	loadwildmon SNORLAX, 30
 	startbattle
 	disappear CERULEAN_GYM_SNORLAX
 	reloadmapafterbattle
@@ -64,8 +62,8 @@ CeruleanGym_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  4, 15, ILEX_FOREST, 7
-	warp_event  5, 15, ILEX_FOREST, 8
+	warp_event  4, 15, ILEX_FOREST, 5
+	warp_event  5, 15, ILEX_FOREST, 6
 
 	db 0 ; coord events
 

@@ -1,6 +1,6 @@
 	db AQUALLO ; 159
 
-	db  65,  65,  80,  58,  70,  63
+	db  75,  60,  70,  45,  77,  77
 	;   hp  atk  def  spd  sat  sdf
 
 	db WATER, WATER ; type

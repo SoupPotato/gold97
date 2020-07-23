@@ -128,6 +128,9 @@ Route8UndergroundPathSign:
 Route8FruitTree:
 	fruittree FRUITTREE_ROUTE_8
 	
+Route8ParlyzHeal:
+	itemball PARLYZ_HEAL
+	
 Route8GrampsText:
 	text "Oh, good! You're"
 	line "here!"
@@ -319,7 +322,7 @@ Route8_MapEvents:
 	db 1 ; bg events
 	bg_event 10,  6, BGEVENT_READ, Route8UndergroundPathSign
 
-	db 8 ; object events
+	db 9 ; object events
 	object_event 40,  6, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route8FruitTree, -1
 	object_event 12, 10, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerYoungsterJoey, -1
 	object_event 24,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSchoolboyDudley, -1
@@ -328,5 +331,5 @@ Route8_MapEvents:
 	object_event 20, 13, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerFisherTully, -1
 	object_event 36, 12, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerHikerParry, -1
 	object_event  9,  0, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ROUTE8_GIRL_SAVED
-
+	object_event 18,  8, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route8ParlyzHeal, EVENT_ROUTE_8_PARLYZ_HEAL
 

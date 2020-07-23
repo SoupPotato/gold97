@@ -16,8 +16,9 @@ Route33_MapScripts:
 	scene_script .SceneRoute33Gardener ; SCENE_DEFAULT
 	scene_script .SceneRoute33Nothing ;
 
-	db 1 ; callbacks
+	db 2 ; callbacks
 	callback MAPCALLBACK_OBJECTS, .Tuscany
+	callback MAPCALLBACK_TILES, .Flowers
 
 
 .SceneRoute33Gardener
@@ -25,6 +26,13 @@ Route33_MapScripts:
 
 .SceneRoute33Nothing
 	end
+	
+.Flowers:
+	checkevent EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
+	iftrue .Done
+	changeblock 53, 13, $8b ; water
+.Done:
+	return
 
 .Tuscany:
 	checkflag ENGINE_ZEPHYRBADGE
@@ -427,7 +435,7 @@ Route33_MapEvents:
 	object_event 52, 11, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route33GardenerWateringScript, EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
 	object_event 59,  2, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerSupernerdSam, -1
 	object_event 12, 12, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerHikerDaniel, -1
-	object_event 82, 13, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerFirebreatherBurt, -1
+	object_event 82, 13, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerFirebreatherBurt, -1
 	object_event 45,  8, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerCamperElliot, -1
 	object_event 24, 13, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route33TeacherScript, -1
 	object_event 76, 10, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TrainerOfficerDirk, -1

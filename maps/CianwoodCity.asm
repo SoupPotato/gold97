@@ -5,6 +5,7 @@
 	const CIANWOODCITY_ROCK1
 	const CIANWOODCITY_ROCK3
 	const CIANWOODCITY_POKEFAN_F
+	const CIANWOODCITY_BALL
 
 
 CianwoodCity_MapScripts:
@@ -46,9 +47,9 @@ CianwoodCityUnusedScript:
 
 CianwoodCitySign:
 	jumptext CianwoodCitySignText
-
-CianwoodGymSign:
-	jumptext CianwoodGymSignText
+	
+CianwoodHiddenWaterStone:
+	hiddenitem WATER_STONE, EVENT_SOUTH_POINT_HIDDEN_WATER_STONE
 
 CianwoodPharmacySign:
 	jumpstd martsign
@@ -71,9 +72,7 @@ CianwoodCityHiddenRevive:
 	hiddenitem REVIVE, EVENT_CIANWOOD_CITY_HIDDEN_REVIVE
 
 CianwoodCityHiddenMaxEther:
-	hiddenitem MAX_ETHER, EVENT_CIANWOOD_CITY_HIDDEN_MAX_ETHER
-
-
+	itemball MAX_ETHER
 
 ChucksWifeFlySpeechText:
 	text "The climate on"
@@ -188,34 +187,34 @@ CianwoodCity_MapEvents:
 	db 0, 0 ; filler
 
 	db 11 ; warp events
-	warp_event 20, 24, MANIAS_HOUSE, 1
-	warp_event 16, 13, ICE_PATH_B2F_BLACKTHORN_SIDE, 1
-	warp_event 31, 16, CIANWOOD_POKECENTER_1F, 1
-	warp_event 17, 24, PEWTER_MART, 1
-	warp_event 31, 25, CIANWOOD_PHOTO_STUDIO, 1
-	warp_event 33, 11, ROUTE_7_SAFFRON_GATE, 1
-	warp_event 24, 12, POKE_SEERS_HOUSE, 1
-	warp_event 28,  5, ROUTE_5_SAFFRON_GATE, 3
-	warp_event 29,  5, ROUTE_5_SAFFRON_GATE, 4
-	warp_event 28, 31, ROUTE_15_FUCHSIA_GATE, 1
-	warp_event 29, 31, ROUTE_15_FUCHSIA_GATE, 2
+	warp_event 22, 24, MANIAS_HOUSE, 1
+	warp_event 18, 13, ICE_PATH_B2F_BLACKTHORN_SIDE, 1
+	warp_event 33, 16, CIANWOOD_POKECENTER_1F, 1
+	warp_event 19, 24, PEWTER_MART, 1
+	warp_event 33, 25, CIANWOOD_PHOTO_STUDIO, 1
+	warp_event 35, 11, ROUTE_7_SAFFRON_GATE, 1
+	warp_event 26, 12, POKE_SEERS_HOUSE, 1
+	warp_event 30,  5, ROUTE_5_SAFFRON_GATE, 3
+	warp_event 31,  5, ROUTE_5_SAFFRON_GATE, 4
+	warp_event 30, 31, ROUTE_15_FUCHSIA_GATE, 1
+	warp_event 31, 31, ROUTE_15_FUCHSIA_GATE, 2
 
 	db 0 ; coord events
 
-	db 8 ; bg events
-	bg_event 26, 20, BGEVENT_READ, CianwoodCitySign
-	bg_event 15, 12, BGEVENT_READ, CianwoodGymSign
-	bg_event 32, 16, BGEVENT_READ, CianwoodPokecenterSign
-	bg_event 18, 24, BGEVENT_READ, CianwoodPharmacySign
-	bg_event 14, 24, BGEVENT_READ, CianwoodPhotoStudioSign
-	bg_event 28, 16, BGEVENT_READ, CianwoodPokeSeerSign
-	bg_event 32, 27, BGEVENT_ITEM, CianwoodCityHiddenRevive
-	bg_event 13, 23, BGEVENT_ITEM, CianwoodCityHiddenMaxEther
+	db 7 ; bg events
+	bg_event 28, 20, BGEVENT_READ, CianwoodCitySign
+	bg_event 23, 33, BGEVENT_ITEM, CianwoodHiddenWaterStone
+	bg_event 34, 16, BGEVENT_READ, CianwoodPokecenterSign
+	bg_event 20, 24, BGEVENT_READ, CianwoodPharmacySign
+	bg_event 16, 24, BGEVENT_READ, CianwoodPhotoStudioSign
+	bg_event 30, 16, BGEVENT_READ, CianwoodPokeSeerSign
+	bg_event 35, 27, BGEVENT_ITEM, CianwoodCityHiddenRevive
 
-	db 6 ; object events
-	object_event 27, 14, SPRITE_FISHING_GURU, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CianwoodCityYoungster, -1
-	object_event 23, 24, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodCityPokefanM, -1
-	object_event 22, 19, SPRITE_ROCKER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodCityLass, -1
-	object_event 19, 18, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodCityRock, -1
-	object_event 18, 19, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodCityRock, -1
-	object_event 22, 24, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodCityChucksWife, -1
+	db 7 ; object events
+	object_event 27, 15, SPRITE_FISHING_GURU, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CianwoodCityYoungster, -1
+	object_event 16, 29, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodCityPokefanM, -1
+	object_event 27, 22, SPRITE_ROCKER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodCityLass, -1
+	object_event 19, 19, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodCityRock, -1
+	object_event 17, 18, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodCityRock, -1
+	object_event 15, 29, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodCityChucksWife, -1
+	object_event 7,  26, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, CianwoodCityHiddenMaxEther, EVENT_CIANWOOD_CITY_HIDDEN_MAX_ETHER

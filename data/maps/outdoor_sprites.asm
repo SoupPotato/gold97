@@ -310,6 +310,7 @@ CianwoodGroupSprites:
 	; 9 of max 9 walking sprites
 	db SPRITE_FRUIT_TREE
 	db SPRITE_ROCK
+	db SPRITE_POKE_BALL
 	db 0 ; end
 
 OlivineGroupSprites:
@@ -349,20 +350,22 @@ LakeOfRageGroupSprites:
 
 MahoganyGroupSprites:
 	db SPRITE_SCIENTIST
-	db SPRITE_YOUNGSTER
 	db SPRITE_LASS
 	db SPRITE_SUPER_NERD
 	db SPRITE_COOLTRAINER_M
 	db SPRITE_POKEFAN_M
-	db SPRITE_BUG_CATCHER
 	db SPRITE_COOLTRAINER_F
 	db SPRITE_FISHER
+	db SPRITE_SWIMMER_GUY
+	db SPRITE_SWIMMER_GIRL
 	; max 9 of 9 walking sprites
 	db SPRITE_GENTLEMAN
 	db SPRITE_POKE_BALL
 	db SPRITE_FRUIT_TREE
 	db SPRITE_MONSTER
 	db SPRITE_SWIMMER_GUY
+	db SPRITE_YOUNGSTER
+	db SPRITE_BUG_CATCHER
 	db 0 ;end
 
 BlackthornGroupSprites:

@@ -1,6 +1,6 @@
 	db AQUARIUS ; 160
 
-	db  85, 85, 100,  78,  90,  83
+	db  100, 80, 90,  65,  95,  100
 	;   hp  atk  def  spd  sat  sdf
 
 	db WATER, WATER ; type

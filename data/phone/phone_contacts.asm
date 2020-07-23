@@ -41,7 +41,6 @@ PhoneContacts:
 	phone POKEFANM,     DEREK1,             ROUTE_39,         ANYTIME, DerekPhoneScript1,   ANYTIME, DerekPhoneScript2
 	phone FISHER,       TULLY1,             ROUTE_8,          ANYTIME, TullyPhoneScript1,   ANYTIME, TullyPhoneScript2
 	phone POKEMANIAC,   BRENT1,             ROUTE_43,         ANYTIME, BrentPhoneScript1,   ANYTIME, BrentPhoneScript2
-	phone PICNICKER,    TIFFANY3,           ROUTE_43,         ANYTIME, TiffanyPhoneScript1, ANYTIME, TiffanyPhoneScript2
 	phone BIRD_KEEPER,  VANCE1,             ROUTE_44,         ANYTIME, VancePhoneScript1,   ANYTIME, VancePhoneScript2
 	phone FISHER,       WILTON1,            ROUTE_44,         ANYTIME, WiltonPhoneScript1,  ANYTIME, WiltonPhoneScript2
 	phone BLACKBELT_T,  KENJI3,             ROUTE_45,         ANYTIME, KenjiPhoneScript1,   ANYTIME, KenjiPhoneScript2
