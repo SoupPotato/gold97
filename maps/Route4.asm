@@ -195,12 +195,6 @@ SwimmermCharlieAfterBattleText:
 	line "just floating like"
 	cont "this?"
 	done
-
-SwimmermGeorgeSeenText:
-	text "I'm a bit tired."
-	line "If I win, lend me"
-	cont "your #MON."
-	done
 	
 SwimmermRandallSeenText:
 	text "Hey, you're young"

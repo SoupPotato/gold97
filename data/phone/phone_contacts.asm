@@ -37,7 +37,6 @@ PhoneContacts:
 	phone SCHOOLBOY,    ALAN1,              ROUTE_36,         ANYTIME, AlanPhoneScript1,    ANYTIME, AlanPhoneScript2
 	phone TRAINER_NONE, PHONE_00,           N_A,              0,       UnusedPhoneScript,   0,       UnusedPhoneScript
 	phone LASS,         DANA1,              ROUTE_38,         ANYTIME, DanaPhoneScript1,    ANYTIME, DanaPhoneScript2
-	phone SCHOOLBOY,    CHAD1,              ROUTE_38,         ANYTIME, ChadPhoneScript1,    ANYTIME, ChadPhoneScript2
 	phone POKEFANM,     DEREK1,             ROUTE_39,         ANYTIME, DerekPhoneScript1,   ANYTIME, DerekPhoneScript2
 	phone FISHER,       TULLY1,             ROUTE_8,          ANYTIME, TullyPhoneScript1,   ANYTIME, TullyPhoneScript2
 	phone POKEMANIAC,   BRENT1,             ROUTE_43,         ANYTIME, BrentPhoneScript1,   ANYTIME, BrentPhoneScript2

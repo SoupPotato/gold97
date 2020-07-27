@@ -126,14 +126,65 @@ TrainerCooltrainerfKelly:
 	waitbutton
 	closetext
 	end
+	
+TrainerCooltrainerfIrene:
+	trainer COOLTRAINERF, IRENE, EVENT_BEAT_COOLTRAINERF_IRENE, CooltrainerfIreneSeenText, CooltrainerfIreneBeatenText, 0, .Script
 
-;CianwoodGymMovement_ChuckChucksBoulder:
-;	set_sliding
-;	big_step LEFT
-;	big_step UP
-;	fast_jump_step RIGHT
-;	remove_sliding
-;	step_end
+.Script:
+	endifjustbattled
+	opentext
+	writetext CooltrainerfIreneAfterText
+	waitbutton
+	closetext
+	end
+	
+TrainerCooltrainerfJulia:
+	trainer COOLTRAINERF, JULIA, EVENT_BEAT_COOLTRAINERF_JULIA, CooltrainerfJuliaSeenText, CooltrainerfJuliaBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext CooltrainerfJuliaAfterText
+	waitbutton
+	closetext
+	end
+	
+TrainerCooltrainermBen:
+	trainer COOLTRAINERM, BEN, EVENT_BEAT_COOLTRAINERM_BEN, CooltrainermBenSeenText, CooltrainermBenBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext CooltrainermBenAfterBattleText
+	waitbutton
+	closetext
+	end
+	
+TrainerCooltrainermRob:
+	trainer COOLTRAINERM, ROB, EVENT_BEAT_COOLTRAINERM_ROB, CooltrainermRobSeenText, CooltrainermRobBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext CooltrainermRobAfterBattleText
+	waitbutton
+	closetext
+	end
+	
+LightSwitch:
+	opentext
+	writetext ItsASwitch
+	yesorno
+	iffalse .no
+	closetext
+	special FadeOutPalettes
+	special FadeInPalettes
+	special FadeOutPalettes
+	special FadeInPalettes
+	end
+.no
+	closetext
+	end
 
 
 CooltrainerfKellySeenText:
@@ -194,45 +245,39 @@ CianwoodGymGuyWinText2:
 	done
 
 ChuckIntroText1:
-	text "Heh."
-	para "You've traveled a"
-	line "long way from"
-	cont "home, haven't you?"
-	para "You've experienced"
-	line "a lot of new"
-	cont "things."
-	para "Met a lot of"
-	line "people."
-	para "Faced a lot of"
-	line "challenges."
-	para "…"
-	para "But have you"
-	line "faced the sheer"
-	para "power that finds"
-	line "its strength in"
-	cont "the dark?"
+	text "Tch..."
+	
+	para "Another trainer"
+	line "wants some pain?"
+
+	para "Fine!"
+
+	para "I only became GYM"
+	line "LEADER because my"
+	cont "old man retired."
+	
 	para "DARK type #MON"
-	line "possess a power"
-	cont "like none other."
-	para "Even in the short"
-	line "time that I've"
-	cont "been a GYM LEADER,"
-	para "I've learned much"
-	line "about what they"
-	cont "are capable of."
-	para "I will show you"
-	line "now."
+	line "got a bad rep that"
+	cont "I can resonate"
+	cont "with, ya know?"
+	
+
+	para "Still want some,"
+	line "punk?"
+	
+	para "Then put em' up!"
 	done
 
 
 ChuckLossText:
-	text "Hm. I lost."
+	text "Tch!"
+	para "I lost."
 
-	para "This is"
-	line "unexpected."
-	para "But it proves you"
-	line "are worthy to earn"
-	cont "DUSKBADGE."
+	para "You ain't no push-"
+	line "over."
+	
+	para "I guess you get"
+	line "the DUSKBADGE."
 	done
 
 GetStormBadgeText:
@@ -241,20 +286,22 @@ GetStormBadgeText:
 	done
 
 ChuckExplainBadgeText:
-	text "DUSKBADGE makes"
-	line "all #MON up to"
-
-	para "L70 obey, even"
-	line "traded ones."
+	text "The DUSKBADGE"
+	line "makes all #MON"
+	cont "up to Level 70"
+	cont "obey..."
+	
+	para "Or else..."
 
 	para "Your #MON can"
-	line "now use ROCK SMASH"
+	line "use ROCK SMASH"
+	cont "when you're not in"
+	cont "a battle too!"
 
-	para "when you're not in"
-	line "a battle."
-
-	para "Here, have this as"
-	line "well."
+	para "I guess I'm in a"
+	line "good mood."
+	
+	para "Take this as well."
 	done
 
 ChuckExplainTMText:
@@ -263,33 +310,126 @@ ChuckExplainTMText:
 
 	para "It causes damage,"
 	line "and also can steal"
-	para "an opponent's held"
-	line "item."
+	cont "an opponent's held"
+	cont "item."
+	
+	para "Take what is right"
+	line "-fully yours."
+	
+	para "That's what I say"
 	done
 
 ChuckAfterText:
 	text "That was a good"
 	line "battle."
+	
 	para "Your challenge was"
 	line "worth my time."
+	done
+	
+CooltrainerfIreneSeenText:
+	text "Kyaaah!"
+	line "Someone found me!"
+	done
+
+CooltrainerfIreneBeatenText:
+	text "Ohhh!"
+	line "Too strong!"
+	done
+
+CooltrainerfIreneAfterText:
+	text "The dark can be"
+	line "scary."
+
+	para "But it can be"
+	line "safe too."
+	done
+	
+CooltrainerfJuliaSeenText:
+	text "Do you believe in"
+	line "bad luck?"
+	done
+
+CooltrainerfJuliaBeatenText:
+	text "I certainly have"
+	line "bad luck!"
+	done
+
+CooltrainerfJuliaAfterText:
+	text "I wonder if these"
+	line "switches even"
+	cont "work?"
+	done
+	
+CooltrainermBenSeenText:
+	text "You need to master"
+	line "the dark to get"
+	cont "past this GYM!"
+	done
+
+CooltrainermBenBeatenText:
+	text "Too bright!"
+	done
+
+CooltrainermBenAfterBattleText:
+	text "Would be nice if"
+	line "lights were"
+	cont "working..."
+	done
+	
+CooltrainermRobSeenText:
+	text "Did you know"	
+	line "Light and Dark"
+	cont "are parallels?"
+	done
+
+CooltrainermRobBeatenText:
+	text "Can't see..."
+	done
+
+CooltrainermRobAfterBattleText:
+	text "Which do you"
+	line "prefere?"
+	
+	para "Light or Dark?"
+	done
+	
+ItsASwitch:
+	text "Looks like a"
+	line "LIGHT SWITCH..."
+	
+	para "It says 'FAULTY'."
+	
+	para "Push it anyway?"
 	done
 
 CianwoodGym_MapEvents:
 	db 0, 0 ; filler
 
-	db 2 ; warp events
-	warp_event  6, 35, FUCHSIA_CITY, 3
-	warp_event  7, 35, FUCHSIA_CITY, 12
+	db 3 ; warp events
+	warp_event 10, 23, FUCHSIA_CITY, 3
+	warp_event 11, 23, FUCHSIA_CITY, 10
+	warp_event  8, 13, CIANWOOD_GYM, 1
 
 	db 0 ; coord events
 
-	db 2 ; bg events
-	bg_event  5, 33, BGEVENT_READ, CianwoodGymStatue
-	bg_event  8, 33, BGEVENT_READ, CianwoodGymStatue
+	db 8 ; bg events
+	bg_event  9, 21, BGEVENT_READ, CianwoodGymStatue
+	bg_event 12, 21, BGEVENT_READ, CianwoodGymStatue
+	bg_event 11, 18, BGEVENT_READ, LightSwitch
+	bg_event  9,  0, BGEVENT_READ, LightSwitch
+	bg_event 21,  2, BGEVENT_READ, LightSwitch
+	bg_event 17,  8, BGEVENT_READ, LightSwitch
+	bg_event  1, 12, BGEVENT_READ, LightSwitch
+	bg_event 21, 12, BGEVENT_READ, LightSwitch
 
-	db 4 ; object events
-	object_event  0,  1, SPRITE_CHUCK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CianwoodGymChuckScript, -1
-	object_event  9, 33, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CianwoodGymGuyScript2, -1
-	object_event  8, 17, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerCooltrainermAaron, -1
-	object_event  8,  1, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerCooltrainerfKelly, -1
+	db 8 ; object events
+	object_event 10, 11, SPRITE_CHUCK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CianwoodGymChuckScript, -1
+	object_event  8, 21, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CianwoodGymGuyScript2, -1
+	object_event 20, 14, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerCooltrainermAaron, -1
+	object_event 23,  3, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerCooltrainerfKelly, -1
+	object_event  5, 11, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerCooltrainerfIrene, -1
+	object_event  7,  1, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerCooltrainerfJulia, -1
+	object_event 15,  7, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerCooltrainermBen, -1
+	object_event  3, 17, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerCooltrainermRob, -1
 

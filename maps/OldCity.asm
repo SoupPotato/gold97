@@ -162,8 +162,8 @@ OldCityYoungsterText:
 	cont "-sing."
 	
 	para "Without it, you"
-	line "cant challenge the"
-	cont "GYM."
+	line "can't challenge"
+	cont "the GYM."
 	done
 
 OldCitySignText:

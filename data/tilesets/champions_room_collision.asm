@@ -62,3 +62,5 @@
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 3d
 	tilecoll WALL, FLOOR, WALL, WALL ; 3e
 	tilecoll FLOOR, WALL, WALL, WALL ; 3f
+	tilecoll WALL, HOP_DOWN, WALL, WALL ; 40
+	tilecoll HOP_DOWN, HOP_DOWN, WALL, WALL ; 41

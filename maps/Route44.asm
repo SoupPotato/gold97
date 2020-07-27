@@ -4,7 +4,6 @@
 	const ROUTE44_YOUNGSTER1
 	const ROUTE44_SUPER_NERD
 	const ROUTE44_YOUNGSTER2
-	const ROUTE44_FRUIT_TREE
 
 Route44_MapScripts:
 	db 0 ; scene scripts
@@ -153,98 +152,6 @@ TrainerPsychicPhil:
 	closetext
 	end
 
-TrainerFisherWilton1:
-	trainer FISHER, WILTON1, EVENT_BEAT_FISHER_WILTON, FisherWilton1SeenText, FisherWilton1BeatenText, 0, .Script
-
-.Script:
-	writecode VAR_CALLERID, PHONE_FISHER_WILTON
-	endifjustbattled
-	opentext
-	checkflag ENGINE_WILTON
-	iftrue .WantsBattle
-	checkflag ENGINE_WILTON_HAS_ITEM
-	iftrue .HasItem
-	checkcellnum PHONE_FISHER_WILTON
-	iftrue Route44NumberAcceptedM
-	checkevent EVENT_WILTON_ASKED_FOR_PHONE_NUMBER
-	iftrue .AskedAlready
-	writetext FisherWiltonHugePoliwagText
-	buttonsound
-	setevent EVENT_WILTON_ASKED_FOR_PHONE_NUMBER
-	scall Route44AskNumber1M
-	jump .AskForNumber
-
-.AskedAlready:
-	scall Route44AskNumber2M
-.AskForNumber:
-	askforphonenumber PHONE_FISHER_WILTON
-	ifequal PHONE_CONTACTS_FULL, Route44PhoneFullM
-	ifequal PHONE_CONTACT_REFUSED, Route44NumberDeclinedM
-	trainertotext FISHER, WILTON1, MEM_BUFFER_0
-	scall Route44RegisteredNumberM
-	jump Route44NumberAcceptedM
-
-.WantsBattle:
-	scall Route44RematchM
-	winlosstext FisherWilton1BeatenText, 0
-	copybytetovar wWiltonFightCount
-	ifequal 2, .Fight2
-	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
-.Fight2:
-	checkevent EVENT_RESTORED_POWER_TO_KANTO
-	iftrue .LoadFight2
-.Fight1:
-	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .LoadFight1
-.LoadFight0:
-	loadtrainer FISHER, WILTON1
-	startbattle
-	reloadmapafterbattle
-	loadvar wWiltonFightCount, 1
-	clearflag ENGINE_WILTON
-	end
-
-.LoadFight1:
-	loadtrainer FISHER, WILTON2
-	startbattle
-	reloadmapafterbattle
-	loadvar wWiltonFightCount, 2
-	clearflag ENGINE_WILTON
-	end
-
-.LoadFight2:
-	loadtrainer FISHER, WILTON3
-	startbattle
-	reloadmapafterbattle
-	clearflag ENGINE_WILTON
-	end
-
-.HasItem:
-	scall Route44GiftM
-	checkevent EVENT_WILTON_HAS_ULTRA_BALL
-	iftrue .UltraBall
-	checkevent EVENT_WILTON_HAS_GREAT_BALL
-	iftrue .GreatBall
-	checkevent EVENT_WILTON_HAS_POKE_BALL
-	iftrue .PokeBall
-.UltraBall:
-	verbosegiveitem ULTRA_BALL
-	iffalse .Route44PackFullM
-	jump .ItemReceived
-
-.GreatBall:
-	verbosegiveitem GREAT_BALL
-	iffalse .Route44PackFullM
-	jump .ItemReceived
-
-.PokeBall:
-	verbosegiveitem POKE_BALL
-	iffalse .Route44PackFullM
-.ItemReceived:
-	clearflag ENGINE_WILTON_HAS_ITEM
-	jump Route44NumberAcceptedM
-
 .Route44PackFullM:
 	jump Route44PackFullM
 
@@ -277,36 +184,6 @@ Route44Sign1:
 
 Route44Sign2:
 	jumptext Route44Sign2Text
-
-Route44FruitTree:
-	fruittree FRUITTREE_ROUTE_44
-
-
-
-Route44HiddenElixer:
-	hiddenitem ELIXER, EVENT_ROUTE_44_HIDDEN_ELIXER
-
-FisherWilton1SeenText:
-	text "Aack! You made me"
-	line "lose a POLIWAG!"
-
-	para "What are you going"
-	line "to do about it?"
-	done
-
-FisherWilton1BeatenText:
-	text "Just forget about"
-	line "it."
-	done
-
-FisherWiltonHugePoliwagText:
-	text "That POLIWAG that"
-	line "got away…"
-	cont "It was huge."
-
-	para "I swear it must've"
-	line "been 16 feet long!"
-	done
 
 FisherEdgarSeenText:
 	text "I fish until I"
@@ -426,15 +303,11 @@ Route44_MapEvents:
 
 	db 0 ; coord events
 
-	db 3 ; bg events
+	db 2 ; bg events
 	bg_event 53,  7, BGEVENT_READ, Route44Sign1
 	bg_event  6, 10, BGEVENT_READ, Route44Sign2
-	bg_event 32,  9, BGEVENT_ITEM, Route44HiddenElixer
 
-	db 6 ; object events
-	object_event 35,  3, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerFisherWilton1, -1
-	object_event 19, 13, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerFisherEdgar, -1
+	db 4 ; object events
 	object_event 10,  9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerPsychicPhil, -1
 	object_event 43,  2, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerPokemaniacZach, -1
 	object_event 51,  5, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerBirdKeeperVance1, -1
-	object_event  9,  5, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route44FruitTree, -1

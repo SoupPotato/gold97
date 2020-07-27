@@ -295,8 +295,8 @@ Route36RuinsOfAlphGate_MapEvents:
 	db 4 ; warp events
 	warp_event  4,  0, ROUTE_32, 1
 	warp_event  5,  0, ROUTE_32, 2
-	warp_event  4,  7, FUCHSIA_CITY, 8
-	warp_event  5,  7, FUCHSIA_CITY, 9
+	warp_event  4,  7, FUCHSIA_CITY, 7
+	warp_event  5,  7, FUCHSIA_CITY, 8
 
 	db 4 ; coord events
 	coord_event 3, 1, SCENE_DEFAULT, R36GateMoveIntoPlace1
@@ -309,4 +309,4 @@ Route36RuinsOfAlphGate_MapEvents:
 	db 3 ; object events
 	object_event  0,  4, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route36RuinsOfAlphGateOfficerScript, -1
 	object_event  7,  5, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 1, 2, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, Route36RuinsOfAlphGateGrampsScript, -1
-	object_event  4,  9, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GAVE_KENYA
+	object_event  4,  9, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GAVE_KENYA

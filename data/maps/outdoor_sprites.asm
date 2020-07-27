@@ -168,7 +168,7 @@ FuchsiaGroupSprites:
 	db SPRITE_SURGE
 	db SPRITE_MONSTER
 	db SPRITE_FAIRY
-	db SPRITE_BIRD
+	db SPRITE_CHUCK
 	; 9 of max 9 wallking sprites
 	db SPRITE_ROCKET
 	db SPRITE_POKEFAN_F
@@ -315,7 +315,7 @@ CianwoodGroupSprites:
 
 OlivineGroupSprites:
 	db SPRITE_SILVER
-	db SPRITE_GRAMPS
+	db SPRITE_BUENA
 	db SPRITE_LASS
 	db SPRITE_BUG_CATCHER
 	db SPRITE_COOLTRAINER_M

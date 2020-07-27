@@ -212,6 +212,8 @@ KRIS EQU __enum__
 	const STEVE
 	const ALLEN
 	const DARIN
+	const BEN
+	const ROB
 
 	trainerclass COOLTRAINERF ; 1c
 	const GWEN
@@ -235,6 +237,7 @@ KRIS EQU __enum__
 	const REENA2
 	const REENA3
 	const CARA
+	const JULIA
 
 	trainerclass BEAUTY ; 1d
 	const SAMANTHA
@@ -249,7 +252,6 @@ KRIS EQU __enum__
 	const ANGELICA
 	const KENDRA
 	const VERONICA
-	const JULIA
 	const THERESA
 	const VALERIE
 	const OLIVIA
@@ -259,7 +261,6 @@ KRIS EQU __enum__
 	const ANDREW
 	const CALVIN
 	const SHANE
-	const BEN
 	const BRENT1
 	const RON
 	const ETHAN
@@ -326,7 +327,6 @@ KRIS EQU __enum__
 
 	trainerclass BUG_CATCHER ; 24
 	const DON
-	const ROB
 	const ED
 	const WADE1
 	const BUG_CATCHER_BENNY

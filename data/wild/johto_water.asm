@@ -140,26 +140,32 @@ JohtoWaterWildMons:
 	map_id OLIVINE_CITY
 	db 4 percent ; encounter rate
 	db 18, TENTACOOL
-	db 15, TENTACOOL
+	db 15, MANTINE
 	db 18, TENTACRUEL
+	
+	map_id ROUTE_39
+	db 4 percent ; encounter rate
+	db 25, POLIWAG
+	db 28, GOLDEEN
+	db 25, QWILFISH
 	
 	map_id ROUTE_40
 	db 4 percent ; encounter rate
-	db 18, TENTACOOL
-	db 15, TENTACOOL
-	db 18, TENTACRUEL
+	db 25, TENTACOOL
+	db 27, SEEL
+	db 25, SHELLDER
 	
 	map_id ROUTE_41
 	db 4 percent ; encounter rate
-	db 18, TENTACOOL
-	db 15, TENTACRUEL
-	db 18, MANTINE
+	db 28, SHELLDER
+	db 28, MANTINE
+	db 28, STARYU
 	
 	map_id ROUTE_21
 	db 4 percent ; encounter rate
-	db 18, TENTACOOL
-	db 15, TENTACOOL
-	db 18, TENTACRUEL
+	db 25, TENTACOOL
+	db 25, MANTINE
+	db 28, TENTACRUEL
 
 	map_id ICE_PATH_1F
 	db 4 percent ; encounter rate
@@ -169,9 +175,21 @@ JohtoWaterWildMons:
 
 	map_id DRAGONS_DEN_B1F
 	db 4 percent ; encounter rate
-	db 18, TENTACOOL
-	db 15, TENTACOOL
-	db 18, TENTACRUEL
+	db 28, SEEL
+	db 28, DEWGONG
+	db 25, DRATINI
+	
+	map_id CINNABAR_ISLAND
+	db 4 percent ; encounter rate
+	db 28, SHELLDER
+	db 28, MANTINE
+	db 28, STARYU
+	
+	map_id ROUTE_32
+	db 4 percent ; encounter rate
+	db 30, POLIWAG
+	db 30, REMORAID
+	db 32, POLIWHIRL
 	
 	map_id NATIONAL_PARK
 	db 4 percent ; encounter rate
@@ -181,15 +199,15 @@ JohtoWaterWildMons:
 	
 	map_id WHIRL_ISLAND_B1F
 	db 4 percent ; encounter rate
-	db 20, MAGIKARP
-	db 22, GYARADOS
-	db 21, HORSEA
+	db 30, MAGIKARP
+	db 28, GYARADOS
+	db 30, HORSEA
 	
 	map_id WHIRL_ISLAND_B2F
 	db 4 percent ; encounter rate
-	db 20, MAGIKARP
-	db 22, GYARADOS
-	db 21, HORSEA
+	db 30, MAGIKARP
+	db 28, GYARADOS
+	db 30, HORSEA
 	
 	map_id ROUTE_34
 	db 6 percent ; encounter rate

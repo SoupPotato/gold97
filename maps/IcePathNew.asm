@@ -45,57 +45,50 @@ IcePathNewPryceScript:
 
 PryceGreetingText:
 	text "Ah, hello."
+	
 	para "It's not often"
 	line "that I get any"
 	cont "visitors here."
+	
 	para "My name is PRYCE."
+	
 	para "I am the GYM"
 	line "LEADER in BLUE"
 	cont "FOREST."
-	para "But often I like"
-	line "to get away from"
-	para "my GYM and come"
-	line "train deep in"
-	cont "this cave."
-	para "Live among the"
-	line "ICE #MON in"
-	para "order to truly"
-	line "understand them."
+	
+	para "This CAVE is where"
+	line "I come to train"
+	cont "and discipline"
+	cont "myself."
+	
 	para "…"
-	para "I also understand"
-	line "if you would like"
-	para "me to resume my"
-	line "post at my GYM."
-	para "I will do that"
-	line "in due time."
+	
+	para "A challenge?"
+	
+	para "It will have to"
+	line "wait."
+	
 	para "I have family that"
 	line "live up on NORTH"
 	cont "ISLAND."
+	
 	para "I have already"
 	line "informed them that"
-	para "I would be coming"
-	line "to visit."
-	para "I will not back"
-	line "out on that"
-	cont "promise."
-	para "I hope you"
-	line "understand."
-	para "…"
-	para "I can sense that"
-	line "you possess a"
-	para "great deal of"
-	line "respect for"
-	cont "#MON."
-	para "I admire that."
-	para "Please, when you"
-	line "get a chance, come"
-	para "visit me and my"
-	line "family on NORTH"
-	cont "ISLAND."
-	para "I will return to"
-	line "the GYM once I"
-	para "have completed my"
-	line "visit."
+	cont "I would be coming"
+	cont "to visit."
+
+	para "Family is very"
+	line "important."
+
+	para "If you insist on a"
+	line "battle, come visit"
+	cont "my family home in"
+	cont "NORTH ISLAND."
+
+	para "I will then return"
+	line "to the GYM once I"
+	cont "have completed my"
+	cont "visit."
 	done
 
 PryceLeavesMovement:
@@ -126,7 +119,7 @@ IcePathNew_MapEvents:
 	db 0 ; bg events
 
 	db 5 ; object events
-	object_event 26, 31, SPRITE_PRYCE, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, IcePathNewPryceScript, EVENT_HERDED_FARFETCHD
+	object_event 26, 31, SPRITE_PRYCE, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, IcePathNewPryceScript, EVENT_HERDED_FARFETCHD
 	object_event  5, 14, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IcePathNewTMSwagger, EVENT_OLIVINE_LIGHTHOUSE_5F_TM_SWAGGER
 	object_event 14, 14, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IcePathNewMaxEther, EVENT_ROUTE_43_MAX_ETHER
 	object_event 18, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IcePathNewMaxRevive, EVENT_ROUTE_44_MAX_REVIVE

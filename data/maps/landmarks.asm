@@ -45,9 +45,9 @@ Landmarks:
 	landmark 124,  60, DarkCaveName
 	landmark 128,  52, Route40Name
 	landmark 140,  52, BlackthornCityName
-	landmark 139,  51, IcePathName
+	landmark 136,  46, IcePathName
 	landmark 140,  40, Route41Name
-	landmark 139,  39, WhirlIslandsName
+	landmark 132,  36, WhirlIslandsName
 	landmark 140,  28, CinnabarIslandName
 	landmark 140,  68, Route32Name
 	landmark 140,  84, FuchsiaCityName

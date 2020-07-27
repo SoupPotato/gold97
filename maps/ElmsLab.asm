@@ -693,7 +693,7 @@ Text_SilverTakeThisOne:
 	
 Text_SilverGetCruise:
 	text "<RIVAL> received"
-	line "MARATEE!"
+	line "CRUIZE!"
 	done
 	
 Text_SilverGetFlambear:
@@ -915,7 +915,7 @@ TakeFlambearText:
 
 TakeCruiseText:
 	text "OAK: Do you want"
-	line "MARATEE, the"
+	line "CRUIZE, the"
 	cont "water #MON?"
 	done
 

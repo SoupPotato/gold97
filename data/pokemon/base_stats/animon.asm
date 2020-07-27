@@ -1,6 +1,6 @@
 	db ANIMON ; 207
 
-	db  58,  58,  58,  58,  58,  58
+	db  76,  48,  58, 104,  48,  58
 	;   hp  atk  def  spd  sat  sdf
 
 	db NORMAL, NORMAL ; type

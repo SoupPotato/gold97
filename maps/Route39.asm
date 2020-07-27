@@ -5,91 +5,45 @@
 	const ROUTE39_PSYCHIC_NORMAN
 	const ROUTE39_FRUIT_TREE
 	const ROUTE39_POKEFAN_F2
+	const ROUTE39_STANDING_YOUNGSTER
+	const ROUTE39_BUENA2
 
 Route39_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
+	
+TrainerSailorHarry:
+	trainer SAILOR, HARRY, EVENT_BEAT_SAILOR_HARRY, SailorHarrySeenText, SailorHarryBeatenText, 0, .Script
+
+.Script
+	endifjustbattled
+	opentext
+	writetext SailorHarryAfterBattleText
+	waitbutton
+	closetext
+	end
+
+TrainerSchoolboyChad1:
+	trainer SCHOOLBOY, CHAD1, EVENT_BEAT_SCHOOLBOY_CHAD, SchoolboyChad1SeenText, SchoolboyChad1BeatenText, 0, .Script
+
+.Script
+	endifjustbattled
+	opentext
+	writetext SchoolboyChad1AfterBattleText
+	waitbutton
+	closetext
 
 
 TrainerPokefanmDerek:
 	trainer POKEFANM, DEREK1, EVENT_BEAT_POKEFANM_DEREK, PokefanmDerekSeenText, PokefanmDerekBeatenText, 0, .Script
 
-.Script:
-	writecode VAR_CALLERID, PHONE_POKEFANM_DEREK
+.Script
 	endifjustbattled
 	opentext
-	checkflag ENGINE_DEREK_HAS_NUGGET
-	iftrue .HasNugget
-	checkcellnum PHONE_POKEFANM_DEREK
-	iftrue .NumberAccepted
-	checkpoke PIKACHU
-	iffalse .WantsPikachu
-	checkevent EVENT_DEREK_ASKED_FOR_PHONE_NUMBER
-	iftrue .AskedAlready
 	writetext PokefanMDerekText_NotBragging
-	buttonsound
-	setevent EVENT_DEREK_ASKED_FOR_PHONE_NUMBER
-	scall .AskNumber1
-	jump .AskForNumber
-
-.AskedAlready:
-	scall .AskNumber2
-.AskForNumber:
-	askforphonenumber PHONE_POKEFANM_DEREK
-	ifequal PHONE_CONTACTS_FULL, .PhoneFull
-	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
-	trainertotext POKEFANM, DEREK1, MEM_BUFFER_0
-	scall .RegisteredNumber
-	jump .NumberAccepted
-
-.HasNugget:
-	scall .Gift
-	verbosegiveitem NUGGET
-	iffalse .NoRoom
-	clearflag ENGINE_DEREK_HAS_NUGGET
-	jump .NumberAccepted
-
-.NoRoom:
-	jump .PackFull
-
-.WantsPikachu:
-	writetext PokefanMDerekPikachuIsItText
 	waitbutton
 	closetext
-	end
-
-.AskNumber1:
-	jumpstd asknumber1m
-	end
-
-.AskNumber2:
-	jumpstd asknumber2m
-	end
-
-.RegisteredNumber:
-	jumpstd registerednumberm
-	end
-
-.NumberAccepted:
-	jumpstd numberacceptedm
-	end
-
-.NumberDeclined:
-	jumpstd numberdeclinedm
-	end
-
-.PhoneFull:
-	jumpstd phonefullm
-	end
-
-.Gift:
-	jumpstd giftm
-	end
-
-.PackFull:
-	jumpstd packfullm
-	end
 
 TrainerPokefanfRuth:
 	trainer POKEFANF, RUTH, EVENT_BEAT_POKEFANF_RUTH, PokefanfRuthSeenText, PokefanfRuthBeatenText, 0, .Script
@@ -305,7 +259,49 @@ BeautyValerieAfterBattleText:
 	cont "soothe my nerves."
 	done
 	
-	
+SailorHarrySeenText:
+	text "I've been over-"
+	line "seas, so I know"
+
+	para "about all sorts of"
+	line "#MON!"
+	done
+
+SailorHarryBeatenText:
+	text "Your skill is"
+	line "world class!"
+	done
+
+SailorHarryAfterBattleText:
+	text "All kinds of peo-"
+	line "ple around the"
+
+	para "world live happily"
+	line "with #MON."
+	done
+
+SchoolboyChad1SeenText:
+	text "Let me try some-"
+	line "thing I learned"
+	cont "today."
+	done
+
+SchoolboyChad1BeatenText:
+	text "I didn't study"
+	line "enough, I guess."
+	done
+
+SchoolboyChad1AfterBattleText:
+	text "I have to take so"
+	line "many tests, I"
+
+	para "don't have much"
+	line "time for #MON."
+
+	para "So when I do get"
+	line "to play, I really"
+	cont "concentrate."
+	done	
 
 Route39SignText:
 	text "ROUTE 39"
@@ -345,16 +341,17 @@ Route39_MapEvents:
 
 	db 0 ; coord events
 
-	db 4 ; bg events
+	db 3 ; bg events
 	bg_event  4, 56, BGEVENT_READ, Route39TrainerTips
 	bg_event 14, 28, BGEVENT_READ, MoomooFarmSign
-	bg_event  1, 79, BGEVENT_READ, Route39Sign
 	bg_event  4, 35, BGEVENT_ITEM, Route39HiddenNugget
 
-	db 6 ; object events
-	object_event  4, 63, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerBeautyValerie, -1
-	object_event  9, 52, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerPokefanmDerek, -1
-	object_event 14, 36, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerPokefanfRuth, -1
+	db 8 ; object events
+	object_event 12, 56, SPRITE_BUENA, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBeautyValerie, -1
+	object_event 10, 46, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerPokefanmDerek, -1
+	object_event  6, 22, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerPokefanfRuth, -1
 	object_event  5, 31, SPRITE_STANDING_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerPsychicNorman, -1
 	object_event 10, 23, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route39FruitTree, -1
-	object_event  4, 49, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TrainerPokefanfJaime, -1
+	object_event  5, 63, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TrainerPokefanfJaime, -1
+	object_event  6, 84, SPRITE_STANDING_YOUNGSTER, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSchoolboyChad1, -1
+	object_event  8,  7, SPRITE_SAILOR, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerSailorHarry, -1

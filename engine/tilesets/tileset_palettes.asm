@@ -1,44 +1,86 @@
 LoadSpecialMapPalette:
 	ld a, [wMapTileset]
 	cp TILESET_POKECOM_CENTER
-	jr z, .pokecom_2f
+	jp z, .pokecom_2f
 	cp TILESET_ICE_PATH
-	jr z, .ice_path
+	jp z, .ice_path
 	cp TILESET_HOUSE
-	jr z, .house
+	jp z, .house
 	cp TILESET_TRADITIONAL_HOUSE
-	jr z, .traditional_house
+	jp z, .traditional_house
 	cp TILESET_RADIO_TOWER
-	jr z, .radio_tower
+	jp z, .radio_tower
 	cp TILESET_MANSION
-	jr z, .mansion_mobile
+	jp z, .mansion_mobile
 	ld a, [wMapGroup]
 	cp GROUP_ROUTE_35
-	jr nz, .not_route_35
+	jp nz, .not_route_35
 	ld a, [wMapNumber]
 	cp MAP_ROUTE_35
-	jr z, .SandOverBrownBGPalette
+	jp z, .SandOverBrownBGPalette
 .not_route_35
 	ld a, [wMapGroup]
 	cp GROUP_AZALEA_TOWN
-	jr nz, .not_azalea_town
+	jp nz, .not_azalea_town
 	ld a, [wMapNumber]
 	cp MAP_AZALEA_TOWN
-	jr z, .SandOverBrownBGPalette
+	jp z, .SandOverBrownBGPalette
 .not_azalea_town
 	ld a, [wMapGroup]
 	cp GROUP_ROUTE_33
-	jr nz, .not_route_33
+	jp nz, .not_route_33
 	ld a, [wMapNumber]
 	cp MAP_ROUTE_33
-	jr z, .SandOverBrownBGPalette
+	jp z, .SandOverBrownBGPalette
 .not_route_33
 	ld a, [wMapGroup]
 	cp GROUP_ROUTE_30
-	jr nz, .do_nothing
+	jp nz, .not_route_30
 	ld a, [wMapNumber]
 	cp MAP_ROUTE_30
-	jr z, .SandOverBrownBGPalette
+	jp z, .SandOverBrownBGPalette	
+.not_route_30
+	ld a, [wMapGroup]
+	cp GROUP_ROUTE_40
+	jp nz, .not_route_40
+	ld a, [wMapNumber]
+	cp MAP_ROUTE_40
+	jp z, .SnowOverGreyBGPalette
+.not_route_40
+	ld a, [wMapGroup]
+	cp GROUP_BLACKTHORN_CITY
+	jr nz, .not_blackthorn_city
+	ld a, [wMapNumber]
+	cp MAP_BLACKTHORN_CITY
+	jr z, .SnowOverGreyBGPalette
+.not_blackthorn_city
+	ld a, [wMapGroup]
+	cp GROUP_MAHOGANY_GYM
+	jr nz, .not_mahogany_gym
+	ld a, [wMapNumber]
+	cp MAP_MAHOGANY_GYM
+	jr z, .ice_path
+.not_mahogany_gym
+	ld a, [wMapGroup]
+	cp GROUP_CINNABAR_ISLAND
+	jr nz, .not_cinnabar_island
+	ld a, [wMapNumber]
+	cp MAP_CINNABAR_ISLAND
+	jr z, .SnowOverGreyBGPalette
+.not_cinnabar_island
+	ld a, [wMapGroup]
+	cp GROUP_ROUTE_41
+	jr nz, .not_route_41
+	ld a, [wMapNumber]
+	cp MAP_ROUTE_41
+	jr z, .SnowOverGreyBGPalette
+.not_route_41
+	ld a, [wMapGroup]
+	cp GROUP_ROUTE_32
+	jr nz, .do_nothing
+	ld a, [wMapNumber]
+	cp MAP_ROUTE_32
+	jr z, .SnowOverGreyBGPalette
 
 
 .pokecom_2f
@@ -77,6 +119,18 @@ LoadSpecialMapPalette:
 	
 .SandOverBrownBGPalette:
 	ld hl, SandOverRock
+	ld a, [wTimeOfDayPal]
+	maskbits NUM_DAYTIMES
+	ld bc, 8 palettes
+	call AddNTimes
+	ld de, wBGPals1
+	ld a, BANK(wBGPals1)
+	call FarCopyWRAM
+	scf
+	ret
+	
+.SnowOverGreyBGPalette:
+	ld hl, SnowOverGrey
 	ld a, [wTimeOfDayPal]
 	maskbits NUM_DAYTIMES
 	ld bc, 8 palettes
@@ -215,11 +269,34 @@ LoadSpecialMapOBPalette:
 .not_route_33
 	ld a, [wMapGroup]
 	cp GROUP_ROUTE_30
-	jr nz, .do_nothing
+	jr nz, .not_route_30
 	ld a, [wMapNumber]
 	cp MAP_ROUTE_30
 	jp z, .SandOverTreeOBPalette
 	
+.not_route_30
+	ld a, [wMapGroup]
+	cp GROUP_ROUTE_40
+	jr nz, .not_route_40
+	ld a, [wMapNumber]
+	cp MAP_ROUTE_40
+	jp z, .SnowOverTreeOBPalette
+	
+.not_route_40
+	ld a, [wMapGroup]
+	cp GROUP_BLACKTHORN_CITY
+	jr nz, .not_blackthorn_city
+	ld a, [wMapNumber]
+	cp MAP_BLACKTHORN_CITY
+	jp z, .SnowOverTreeOBPalette
+	
+.not_blackthorn_city
+	ld a, [wMapGroup]
+	cp GROUP_ROUTE_32
+	jr nz, .do_nothing
+	ld a, [wMapNumber]
+	cp MAP_ROUTE_32
+	jp z, .SnowOverTreeOBPalette
 
 .do_nothing
     and a
@@ -230,6 +307,13 @@ LoadSpecialMapOBPalette:
 	maskbits NUM_DAYTIMES
 	ld bc, 8 palettes
     ld hl, SandOverTree
+	jr .finish
+	
+.SnowOverTreeOBPalette:
+	ld a, [wTimeOfDayPal]
+	maskbits NUM_DAYTIMES
+	ld bc, 8 palettes
+    ld hl, SnowOverTree
 	jr .finish
 
 	

@@ -36,8 +36,8 @@ Route29Route46Gate_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
-	warp_event  4,  0, ROUTE_41, 3
-	warp_event  5,  0, ROUTE_41, 4
+	warp_event  4,  0, ROUTE_41, 2
+	warp_event  5,  0, ROUTE_41, 3
 	warp_event  4,  7, BLACKTHORN_CITY, 9
 	warp_event  5,  7, BLACKTHORN_CITY, 10
 

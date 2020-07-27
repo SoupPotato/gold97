@@ -10,9 +10,8 @@
 	const FUCHSIACITY_BIRD
 	const FUCHSIACITY_FAIRY
 	const FUCHSIACITY_BLOCKROCKET1
-	const FUCHSIACITY_BLOCKROCKET2
+	const FUCHSIACITY_OKENA
 	const FUCHSIACITY_BLOCKROCKET3
-	const FUCHSIACITY_BLOCKROCKET4
 	const FUCHSIACITY_IMPOSTER
 	const FUCHSIACITY_HQBLOCKROCKET
 	const FUCHSIACITY_NATIONALBLOCKROCKET
@@ -44,6 +43,10 @@ ImposterIntro1:
 	end
 	
 ImposterIntro2:
+	opentext
+	writetext ImposterText1
+	waitbutton
+	closetext
 	showemote EMOTE_SHOCK, PLAYER, 15
 	special FadeOutMusic
 	pause 5
@@ -51,14 +54,11 @@ ImposterIntro2:
 	jump ImposterSceneScript
 	end
 	
-ImposterSceneScript:
+ImposterSceneScript:	
 	moveobject FUCHSIACITY_TEACHER, 27, 23
 	moveobject FUCHSIACITY_TWIN, 29, 23
 	moveobject FUCHSIACITY_ROCKER, 28, 24
 	moveobject FUCHSIACITY_POKEFAN_M, 27, 25
-	appear FUCHSIACITY_POKEFAN_M
-	appear FUCHSIACITY_ROCKER
-	appear FUCHSIACITY_TWIN
 	applymovement PLAYER, ImposterSceneMove2
 	turnobject FUCHSIACITY_POKEFAN_M, RIGHT
 	applymovement PLAYER, ImposterSceneMove2_5
@@ -71,14 +71,11 @@ ImposterSceneScript:
 	pause 3
 	turnobject FUCHSIACITY_POKEFAN_M, UP
 	pause 30
-	opentext
-	writetext ImposterText1
-	waitbutton
-	closetext
 	moveobject FUCHSIACITY_IMPOSTER, 29, 19
 	appear FUCHSIACITY_IMPOSTER
 	applymovement FUCHSIACITY_IMPOSTER, ImposterWalksDown
 	pause 10
+	playmusic MUSIC_ROCKET_HIDEOUT
 	opentext
 	writetext ImposterText2
 	waitbutton
@@ -99,9 +96,29 @@ ImposterSceneScript:
 	pause 10
 	applymovement FUCHSIACITY_IMPOSTER, ImposterWalksUp
 	disappear FUCHSIACITY_IMPOSTER
+	special FadeBlackQuickly
+	special ReloadSpritesNoPalettes
+	disappear FUCHSIACITY_TEACHER
+	disappear FUCHSIACITY_TWIN
+	disappear FUCHSIACITY_ROCKER
+	disappear FUCHSIACITY_POKEFAN_M
+	pause 15
+	special FadeInQuickly
+	appear FUCHSIACITY_OKENA
+	playmusic MUSIC_CHERRYGROVE_CITY
+	applymovement FUCHSIACITY_OKENA, OkenaWalksUP
+	turnobject PLAYER, LEFT
+	opentext
+	writetext OkenaText
+	waitbutton
+	turnobject FUCHSIACITY_OKENA, DOWN
+	writetext OkenaText2
+	waitbutton
+	closetext
+	applymovement FUCHSIACITY_OKENA, OkenaWalksAway
+	disappear FUCHSIACITY_OKENA
 	setevent EVENT_ILEX_FOREST_APPRENTICE
 	setscene SCENE_DEFAULT
-	playmusic MUSIC_CELADON_CITY
 	end
 
 
@@ -226,31 +243,6 @@ FuchsiaCityBlockRocket1:
 	closetext
 	end
 	
-FuchsiaCityBlockRocket2:
-	faceplayer
-	opentext
-	checkevent EVENT_BLACKTHORN_CITY_SUPER_NERD_DOES_NOT_BLOCK_GYM
-	iftrue .BlockRocket2AfterBase
-	checkevent EVENT_ILEX_FOREST_APPRENTICE
-	iftrue .BlockRocket2AfterImposter
-	writetext BlockRocket2BeforeText
-	waitbutton
-	closetext
-	end
-	
-.BlockRocket2AfterBase
-	writetext BlockRocket2AfterBaseText
-	waitbutton
-	closetext
-	end
-
-	
-.BlockRocket2AfterImposter
-	writetext BlockRocket2AfterText
-	waitbutton
-	closetext
-	end
-	
 FuchsiaCityBlockRocket3:
 	faceplayer
 	opentext
@@ -274,33 +266,7 @@ FuchsiaCityBlockRocket3:
 	writetext BlockRocket3AfterText
 	waitbutton
 	closetext
-	end
-	
-FuchsiaCityBlockRocket4:
-	faceplayer
-	opentext
-	checkevent EVENT_BLACKTHORN_CITY_SUPER_NERD_DOES_NOT_BLOCK_GYM
-	iftrue .BlockRocket4AfterBase
-	checkevent EVENT_ILEX_FOREST_APPRENTICE
-	iftrue .BlockRocket4AfterImposter
-	writetext BlockRocket4BeforeText
-	waitbutton
-	closetext
-	end
-	
-.BlockRocket4AfterBase
-	writetext BlockRocket4AfterBaseText
-	waitbutton
-	closetext
-	end
-
-	
-.BlockRocket4AfterImposter
-	writetext BlockRocket4AfterText
-	waitbutton
-	closetext
-	end
-	
+	end	
 
 FuchsiaCitySign:
 	jumptext FuchsiaCitySignText
@@ -407,6 +373,25 @@ ImposterWalksUp:
 	step LEFT
 	step_end
 	
+OkenaWalksUP:
+	big_step UP
+	big_step UP
+	big_step LEFT
+	big_step LEFT
+	big_step UP
+	big_step UP
+	big_step UP
+	step_end
+
+
+OkenaWalksAway:
+	big_step DOWN
+	big_step DOWN
+	big_step LEFT
+	big_step LEFT
+	big_step LEFT
+	step_end
+	
 FuchsiaCityNationalBlockRocketAfterBaseText:
 	text "I always feel left"
 	line "out…"
@@ -486,19 +471,6 @@ BlockRocket1AfterText:
 	line "PROF.OAK?"
 	done
 	
-BlockRocket2BeforeText:
-	text "You don't want"
-	line "to leave town."
-	para "We've got a"
-	line "special guest"
-	cont "coming soon!"
-	done
-	
-BlockRocket2AfterText:
-	text "Our research will"
-	line "benefit the world!"
-	done
-	
 BlockRocket3BeforeText:
 	text "There's nothing"
 	line "south of here!"
@@ -511,17 +483,6 @@ BlockRocket3AfterText:
 	line "PROF.OAK!"
 	done
 	
-BlockRocket4BeforeText:
-	text "It's almost time"
-	line "for the world to"
-	cont "hear our plan!"
-	done
-	
-BlockRocket4AfterText:
-	text "We're doing great"
-	line "things, didn't you"
-	cont "hear?"
-	done
 	
 ImposterText1:
 	text "Citizens of STAND"
@@ -532,53 +493,64 @@ ImposterText2:
 	text "It is I, the"
 	line "world-renowned"
 	cont "PROF.OAK!"
+	
 	para "I have some"
-	line "exciting news"
-	para "about a break-"
-	line "through in #MON"
-	cont "research!"
+	line "exciting news!"
+	
 	para "I have partnered"
 	line "with TEAM ROCKET"
-	para "to bring to you"
-	line "this new"
+	cont "to bring to you a"
+	cont "wonderful peice of"
 	cont "technology!"
 	done
 	
 ImposterText3:
 	text "Do not be alarmed!"
-	para "TEAM ROCKET is"
-	line "doing great work"
-	para "in developing a"
-	line "high-powered radio"
-	para "signal that is"
-	line "able to read the"
-	para "thoughts of"
-	line "#MON!"
+	
+	para "We are developing"
+	line "a radio signal"
+	cont "that is capable of"
+	cont "reading the minds"
+	cont "of #MON!"
+	
 	para "And this signal is"
 	line "being developed"
-	para "right here in"
-	line "STAND CITY!"
-	para "Though the signal"
-	line "might have the"
-	para "effect of making"
-	line "#MON that are"
-	para "exposed to it feel"
-	line "unwell…"
-	para "…"
-	para "But just ignore"
-	line "that!"
-	para "They'll be fine!"
-	para "The results of"
-	line "this research will"
-	para "allow us a greater"
-	line "understanding of"
-	para "#MON than ever"
-	line "before!"
+	cont "right here in"
+	cont "STAND CITY!"
+	
+	para "Rumors of this"
+	line "signal making"
+	cont"#MON unwell are"
+	cont "pure nonsense."
+
+	para "They will be fine!"
+	
 	para "And you can trust"
 	line "me, because as you"
-	para "can see, I am"
-	line "PROF.OAK."
+	cont "can see..."
+	
+	para "I am PROF.OAK!"
+	
 	para "That is all!"
+	done
+	
+OkenaText:
+	text "Tch..."
+	
+	para "What a bother..."
+	
+	para "First that storm"
+	line "and now some old"
+	cont "guy wants to make"
+	cont "a signal in my"
+	cont "town?"
+	done
+	
+OkenaText2:
+	text "Well I ain't"
+	line "having it!"
+	cont "I need my peace"
+	cont "and quiet!"
 	done
 
 FuchsiaCityRockerText:
@@ -780,18 +752,16 @@ NoLitteringSignText:
 FuchsiaCity_MapEvents:
 	db 0, 0 ; filler
 
-	db 13 ; warp events
+	db 11 ; warp events
 	warp_event 35, 26, FUCHSIA_MART, 1
 	warp_event 16, 21, SAFARI_ZONE_MAIN_OFFICE, 1
 	warp_event 34, 31, CIANWOOD_GYM, 1
 	warp_event 26, 29, BILLS_BROTHERS_HOUSE, 1
 	warp_event 33, 20, FUCHSIA_POKECENTER_1F, 1
 	warp_event 17, 31, SAFARI_ZONE_WARDENS_HOME, 1
-	warp_event  1,  0, SAFARI_ZONE_FUCHSIA_GATE_BETA, 3 ; inaccessible
 	warp_event 30, 13, ROUTE_36_RUINS_OF_ALPH_GATE, 3
 	warp_event 31, 13, ROUTE_36_RUINS_OF_ALPH_GATE, 4
 	warp_event  6, 17, ROUTE_36_NATIONAL_PARK_GATE, 4
-	warp_event  0,  0, ROUTE_19_FUCHSIA_GATE, 2
 	warp_event 35, 31, CIANWOOD_GYM, 2
 	warp_event 24, 17, STAND_POKE, 1
 
@@ -800,10 +770,9 @@ FuchsiaCity_MapEvents:
 	coord_event  34, 32, SCENE_FUCHSIA_CITY_IMPOSTER, ImposterIntro1
 	coord_event  35, 32, SCENE_FUCHSIA_CITY_IMPOSTER, ImposterIntro2
 
-	db 12 ; bg events
+	db 11 ; bg events
 	bg_event 36, 20, BGEVENT_READ, FuchsiaCitySign
 	bg_event 32, 35, BGEVENT_READ, FuchsiaGymSign
-	bg_event 25, 15, BGEVENT_READ, SafariZoneOfficeSign
 	bg_event 24, 20, BGEVENT_READ, WardensHomeSign
 	bg_event  8,  8, BGEVENT_READ, SafariZoneClosedSign
 	bg_event 18, 21, BGEVENT_READ, NoLitteringSign
@@ -814,7 +783,7 @@ FuchsiaCity_MapEvents:
 	bg_event 16, 16, BGEVENT_READ, SafariZoneSkarmorySign
 	bg_event 10, 20, BGEVENT_READ, SafariZoneGolduckSign
 
-	db 17 ; object events
+	db 16 ; object events
 	object_event 28, 21, SPRITE_ROCKER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, FuchsiaCityRocker, -1
 	object_event 14, 10, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, FuchsiaCityPokefanM, -1
 	object_event 14, 17, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, FuchsiaCityTwin, -1
@@ -823,13 +792,12 @@ FuchsiaCity_MapEvents:
 	object_event 20,  8, SPRITE_MONSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ILEX_FOREST_FARFETCHD
 	object_event  7, 21, SPRITE_MONSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ILEX_FOREST_FARFETCHD
 	object_event  7,  6, SPRITE_MONSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ILEX_FOREST_FARFETCHD
-	object_event 15, 14, SPRITE_BIRD, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ILEX_FOREST_FARFETCHD
+	object_event 15, 14, SPRITE_BIRD, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ILEX_FOREST_FARFETCHD
 	object_event 12,  6, SPRITE_FAIRY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ILEX_FOREST_FARFETCHD
-	object_event 29, 34, SPRITE_ROCKET, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, FuchsiaCityBlockRocket1, EVENT_CLEARED_RADIO_TOWER
-	object_event 28, 34, SPRITE_ROCKET, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, FuchsiaCityBlockRocket2, EVENT_CLEARED_RADIO_TOWER
-	object_event 30, 35, SPRITE_ROCKET, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, FuchsiaCityBlockRocket3, EVENT_CLEARED_RADIO_TOWER
-	object_event 31, 34, SPRITE_ROCKET, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, FuchsiaCityBlockRocket4, EVENT_CLEARED_RADIO_TOWER
-	object_event -5, -5, SPRITE_SURGE, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
+	object_event 30, 35, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, FuchsiaCityBlockRocket1, EVENT_CLEARED_RADIO_TOWER
+	object_event 29, 28, SPRITE_CHUCK, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GOT_A_POKEMON_FROM_ELM
+	object_event 31, 35, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, FuchsiaCityBlockRocket3, EVENT_CLEARED_RADIO_TOWER
+	object_event -5, -5, SPRITE_SURGE, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, 0
 	object_event 17, 32, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, FuchsiaCityHQBlockRocket, EVENT_BEAT_CHUCK
 	object_event  6, 18, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, FuchsiaCityNationalBlockRocket, EVENT_CLEARED_RADIO_TOWER
 

@@ -8,6 +8,8 @@
 	const ROUTE32_OFFICER
 	const ROUTE32_WORKER1
 	const ROUTE32_WORKER2
+	const ROUTE32_FRUIT_TREE
+	const ROUTE32_POKE_BALL3
 
 Route32_MapScripts:
 	db 3 ; scene scripts
@@ -38,7 +40,6 @@ Route32_MapScripts:
 	return
 
 
-
 TrainerCamperRoland:
 	trainer CAMPER, ROLAND, EVENT_BEAT_CAMPER_ROLAND, CamperRolandSeenText, CamperRolandBeatenText, 0, .Script
 
@@ -50,125 +51,27 @@ TrainerCamperRoland:
 	closetext
 	end
 
+TrainerFisherWilton1:
+	trainer FISHER, WILTON1, EVENT_BEAT_FISHER_WILTON, FisherWilton1SeenText, FisherWilton1BeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext FisherWiltonHugePoliwagText
+	waitbutton
+	closetext
+	end
 
 TrainerPicnickerLiz1:
 	trainer PICNICKER, LIZ1, EVENT_BEAT_PICNICKER_LIZ, PicnickerLiz1SeenText, PicnickerLiz1BeatenText, 0, .Script
 
 .Script:
-	writecode VAR_CALLERID, PHONE_PICNICKER_LIZ
 	endifjustbattled
 	opentext
-	checkflag ENGINE_LIZ
-	iftrue .Rematch
-	checkcellnum PHONE_PICNICKER_LIZ
-	iftrue .NumberAccepted
-	checkevent EVENT_LIZ_ASKED_FOR_PHONE_NUMBER
-	iftrue .AskAgain
 	writetext PicnickerLiz1AfterText
-	buttonsound
-	setevent EVENT_LIZ_ASKED_FOR_PHONE_NUMBER
-	scall .AskNumber1
-	jump .AskForNumber
-
-.AskAgain:
-	scall .AskNumber2
-.AskForNumber:
-	askforphonenumber PHONE_PICNICKER_LIZ
-	ifequal PHONE_CONTACTS_FULL, .PhoneFull
-	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
-	trainertotext PICNICKER, LIZ1, MEM_BUFFER_0
-	scall .RegisteredNumber
-	jump .NumberAccepted
-
-.Rematch:
-	scall .RematchStd
-	winlosstext PicnickerLiz1BeatenText, 0
-	copybytetovar wLizFightCount
-	ifequal 4, .Fight4
-	ifequal 3, .Fight3
-	ifequal 2, .Fight2
-	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
-.Fight4:
-	checkevent EVENT_FAST_SHIP_CABINS_SE_SSE_GENTLEMAN
-	iftrue .LoadFight4
-.Fight3:
-	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .LoadFight3
-.Fight2:
-	checkevent EVENT_BEAT_ERIKA
-	iftrue .LoadFight2
-.Fight1:
-	checkevent EVENT_CLEARED_RADIO_TOWER
-	iftrue .LoadFight1
-.LoadFight0:
-	loadtrainer PICNICKER, LIZ1
-	startbattle
-	reloadmapafterbattle
-	loadvar wLizFightCount, 1
-	clearflag ENGINE_LIZ
+	waitbutton
+	closetext
 	end
-
-.LoadFight1:
-	loadtrainer PICNICKER, LIZ2
-	startbattle
-	reloadmapafterbattle
-	loadvar wLizFightCount, 2
-	clearflag ENGINE_LIZ
-	end
-
-.LoadFight2:
-	loadtrainer PICNICKER, LIZ3
-	startbattle
-	reloadmapafterbattle
-	loadvar wLizFightCount, 3
-	clearflag ENGINE_LIZ
-	end
-
-.LoadFight3:
-	loadtrainer PICNICKER, LIZ4
-	startbattle
-	reloadmapafterbattle
-	loadvar wLizFightCount, 4
-	clearflag ENGINE_LIZ
-	end
-
-.LoadFight4:
-	loadtrainer PICNICKER, LIZ5
-	startbattle
-	reloadmapafterbattle
-	clearflag ENGINE_LIZ
-	end
-
-.AskNumber1:
-	jumpstd asknumber1f
-	end
-
-.AskNumber2:
-	jumpstd asknumber2f
-	end
-
-.RegisteredNumber:
-	jumpstd registerednumberf
-	end
-
-.NumberAccepted:
-	jumpstd numberacceptedf
-	end
-
-.NumberDeclined:
-	jumpstd numberdeclinedf
-	end
-
-.PhoneFull:
-	jumpstd phonefullf
-	end
-
-.RematchStd:
-	jumpstd rematchf
-	end
-
-
 
 TrainerYoungsterGordon:
 	trainer YOUNGSTER, GORDON, EVENT_BEAT_YOUNGSTER_GORDON, YoungsterGordonSeenText, YoungsterGordonBeatenText, 0, .Script
@@ -218,21 +121,26 @@ FriedaScript:
 	closetext
 	end
 
-Route32GreatBall:
-	itemball GREAT_BALL
+Route32UltraBall:
+	itemball ULTRA_BALL
 
-Route32Repel:
-	itemball REPEL
+Route32MaxRepel:
+	itemball MAX_REPEL
 
 Route32Sign:
 	jumptext Route32SignText
 
+Route32FruitTree:
+	fruittree FRUITTREE_ROUTE_44
 
 Route32HiddenGreatBall:
 	hiddenitem GREAT_BALL, EVENT_ROUTE_32_HIDDEN_GREAT_BALL
 
 Route32HiddenSuperPotion:
 	hiddenitem SUPER_POTION, EVENT_ROUTE_32_HIDDEN_SUPER_POTION
+	
+Route32Elixer:
+	itemball ELIXER
 
 
 Route32OfficerScript:
@@ -245,39 +153,31 @@ Route32Worker2Script:
 	jumptextfaceplayer Route32Worker2Text
 
 Route32OfficerText:
-	text "A recent storm"
-	line "blew a large"
-	para "amount of snow"
-	line "down the hill and"
-	cont "into this gate."
-	para "The storm had"
-	line "damaged the doors"
-	para "and broken the"
-	line "windows."
-	para "They're working on"
-	line "getting it"
-	cont "repaired."
+	text "A recent storm has"
+	line "damaged this GATE."
+
+	para "We are working on"
+	line "getting it fixed."
+	
+	para "I kindly ask that"
+	line "please come back"
+	cont "later."
 	done
 	
 Route32Worker1Text:
 	text "Whew!"
-	para "STAND CITY is at"
-	line "a much lower"
-	para "altitude than"
-	line "BLUE FOREST."
-	para "Snow mixed with"
-	line "strong winds from"
-	para "a storm blowing"
-	line "down this hill was"
-	para "too much for this"
-	line "gate to handle!"
+	para "That storm was too"
+	line "much for this gate"
+	cont "to handle!"
 	done
 	
 Route32Worker2Text:
 	text "Be careful, kid!"
+	
 	para "There might be"
 	line "broken glass"
 	cont "around here."
+	
 	para "You should stay"
 	line "back until we're"
 	cont "done with repairs."
@@ -342,7 +242,27 @@ PicnickerLiz1AfterText:
 	line "nice chat too."
 	done
 
+FisherWilton1SeenText:
+	text "Aack! You made me"
+	line "lose a POLIWAG!"
 
+	para "What are you going"
+	line "to do about it?"
+	done
+
+FisherWilton1BeatenText:
+	text "Just forget about"
+	line "it."
+	done
+
+FisherWiltonHugePoliwagText:
+	text "That POLIWAG that"
+	line "got away…"
+	cont "It was huge."
+
+	para "I swear it must've"
+	line "been 16 feet long!"
+	done
 
 MeetFriedaText:
 	text "FRIEDA: Yahoo!"
@@ -406,7 +326,6 @@ Route32_MapEvents:
 	db 2 ; warp events
 	warp_event 10, 47, ROUTE_36_RUINS_OF_ALPH_GATE, 1
 	warp_event 11, 47, ROUTE_36_RUINS_OF_ALPH_GATE, 2
-;	warp_event 10, 43, ROUTE_32_POKECENTER_1F, 2
 
 
 	db 0 ; coord events
@@ -415,15 +334,18 @@ Route32_MapEvents:
 	db 3 ; bg events
 	bg_event  8,  2, BGEVENT_READ, Route32Sign
 	bg_event 14, 47, BGEVENT_ITEM, Route32HiddenGreatBall
-	bg_event 14,  4, BGEVENT_ITEM, Route32HiddenSuperPotion
+	bg_event 16, 18, BGEVENT_ITEM, Route32HiddenSuperPotion
 
-	db 9 ; object events
-	object_event 10,  7, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerYoungsterGordon, -1
-	object_event 13, 39, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerCamperRoland, -1
-	object_event  7, 30, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerPicnickerLiz1, -1
-	object_event  5,  5, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route32GreatBall, EVENT_ROUTE_32_GREAT_BALL
-	object_event 10, 14, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FriedaScript, EVENT_ROUTE_32_FRIEDA_OF_FRIDAY
-	object_event  5, 47, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route32Repel, EVENT_ROUTE_32_REPEL
+	db 13 ; object events
+	object_event 10,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerYoungsterGordon, -1
+	object_event  8, 36, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerCamperRoland, -1
+	object_event 13, 28, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerPicnickerLiz1, -1
+	object_event  5, 38, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route32UltraBall, EVENT_ROUTE_32_GREAT_BALL
+	object_event  7, 22, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FriedaScript, EVENT_ROUTE_32_FRIEDA_OF_FRIDAY
+	object_event 13, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route32MaxRepel, EVENT_ROUTE_32_REPEL
 	object_event 10, 46, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 3, Route32OfficerScript, EVENT_BLACKTHORN_CITY_SUPER_NERD_BLOCKS_GYM
 	object_event 11, 47, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 3, Route32Worker1Script, EVENT_BLACKTHORN_CITY_SUPER_NERD_BLOCKS_GYM
 	object_event 13, 47, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 3, Route32Worker2Script, EVENT_BLACKTHORN_CITY_SUPER_NERD_BLOCKS_GYM
+	object_event  3, 16, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route32FruitTree, -1
+	object_event 11, 42, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route32Elixer, EVENT_ROUTE_32_REPEL
+	object_event  4, 36, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerFisherWilton1, -1

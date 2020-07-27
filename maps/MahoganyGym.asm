@@ -1,8 +1,8 @@
 	const_def 2 ; object constants
 	const MAHOGANYGYM_PRYCE
 	const MAHOGANYGYM_BUENA1
-;	const MAHOGANYGYM_ROCKER1
-;	const MAHOGANYGYM_BUENA2
+	const MAHOGANYGYM_ROCKER1
+	const MAHOGANYGYM_BUENA2
 	const MAHOGANYGYM_ROCKER2
 	const MAHOGANYGYM_ROCKER3
 	const MAHOGANYGYM_GYM_GUY
@@ -79,6 +79,27 @@ TrainerSkierRoxanne:
 	closetext
 	end
 
+TrainerSkierClarissa:
+	trainer SKIER, CLARISSA, EVENT_BEAT_SKIER_CLARISSA, SkierClarissaSeenText, SkierClarissaBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext SkierClarissaAfterBattleText
+	waitbutton
+	closetext
+	end
+
+TrainerBoarderRonald:
+	trainer BOARDER, RONALD, EVENT_BEAT_BOARDER_RONALD, BoarderRonaldSeenText, BoarderRonaldBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext BoarderRonaldAfterBattleText
+	waitbutton
+	closetext
+	end
 
 TrainerBoarderBrad:
 	trainer BOARDER, BRAD, EVENT_BEAT_BOARDER_BRAD, BoarderBradSeenText, BoarderBradBeatenText, 0, .Script
@@ -136,29 +157,20 @@ MahoganyGymStatue:
 
 MahoganyGymGuyNotAroundText:
 	text "Hey, kid!"
+	
 	para "PRYCE is an ice-"
 	line "cold battler!"
-	para "But he's got a"
-	line "heart of gold."
-	para "He cares about his"
-	line "#MON and he"
-	para "cares about his"
-	line "family."
-	para "He spends his days"
-	line "in serious"
-	para "training in the"
-	line "DEEPWATER PASSAGE."
-	para "What I'm trying to"
-	line "say is that he's"
-	cont "not here often."
-	para "It might be a"
-	line "while before he"
-	cont "returns."
-	para "If you want to"
-	line "battle, it might"
-	para "do you good to"
-	line "go look for him."
-	done
+	
+	para "Unfortunatly, he's"
+	line "away, training at"
+	cont "DEEPWATER PASSAGE."
+	
+	para "It's a cave not"
+	line "too far from here."
+	
+	para "Maybe you could go"
+	line "ask him for a"
+	cont "battle..."
 
 PryceText_Intro:
 	text "So nice to see"
@@ -166,36 +178,27 @@ PryceText_Intro:
 	
 	para "#MON have many"
 	line "experiences in"
-
-	para "their lives, just"
-	line "like we do. "
+	cont "their lives, just"
+	cont "like we do. "
 
 	para "I, too, have seen"
 	line "and suffered much"
 	cont "in my life."
 	
-	para "That is why I have"
-	line "decided in my old"
-	para "age to focus on"
-	line "what is important."
-	
-	para "#MON. Family."
-	
-	para "These are the"
-	line "things I cherish."
+	para "That is why family"
+	line "is important."
 	
 	para "Make sure you make"
 	line "time for things"
 	cont "that you cherish."
 	
 	para "A good battle,"
-	line "however, is still"
+	line "however, is also"
+	cont "an important"
+	cont "experience."
 	
-	para "an important"
-	line "experience."
-	
-	para "Here, let me show"
-	line "you what I mean."
+	para "Come child, we"
+	line "shall do so..."
 	done
 
 
@@ -258,7 +261,6 @@ PryceText_CherishYourPokemon:
 	para "Cherish your time"
 	line "together!"
 	done
-
 
 BoarderBradSeenText:
 	text "This GYM has a"
@@ -357,6 +359,41 @@ MahoganyGymGuyWinText:
 	para "bridged the gen-"
 	line "eration gap!"
 	done
+	
+SkierClarissaSeenText:
+	text "Check out my"
+	line "parallel turn!"
+	done
+
+SkierClarissaBeatenText:
+	text "No! You made me"
+	line "wipe out!"
+	done
+
+SkierClarissaAfterBattleText:
+	text "I shouldn't have"
+	line "been bragging"
+	cont "about my skiing…"
+	done
+	
+BoarderRonaldSeenText:
+	text "I'll freeze your"
+	line "#MON, so you"
+	cont "can't do a thing!"
+	done
+
+BoarderRonaldBeatenText:
+	text "Darn. I couldn't"
+	line "do a thing."
+	done
+
+BoarderRonaldAfterBattleText:
+	text "I think there's a"
+	line "move a #MON"
+
+	para "can use while it's"
+	line "frozen."
+	done
 
 MahoganyGym_MapEvents:
 	db 0, 0 ; filler
@@ -371,11 +408,11 @@ MahoganyGym_MapEvents:
 	bg_event  3, 15, BGEVENT_READ, MahoganyGymStatue
 	bg_event  6, 15, BGEVENT_READ, MahoganyGymStatue
 
-	db 5 ; object events
+	db 7 ; object events
 	object_event  3,  2, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, MahoganyGymPryceScript, EVENT_PRYCE_IN_GYM
-	object_event  9, 10, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerSkierRoxanne, -1
-;	object_event  0, 17, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerBoarderRonald, -1
-;	object_event  9, 17, SPRITE_LASS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerSkierClarissa, -1
-	object_event  5,  7, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerBoarderBrad, -1
-	object_event  0,  2, SPRITE_ROCKER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerBoarderDouglas, -1
+	object_event  9,  9, SPRITE_BUENA, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerSkierRoxanne, EVENT_PRYCE_IN_GYM
+	object_event  9,  2, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerBoarderRonald, EVENT_PRYCE_IN_GYM
+	object_event  0, 17, SPRITE_BUENA, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerSkierClarissa, EVENT_PRYCE_IN_GYM
+	object_event  5,  7, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerBoarderBrad, EVENT_PRYCE_IN_GYM
+	object_event  0,  2, SPRITE_ROCKER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerBoarderDouglas, EVENT_PRYCE_IN_GYM
 	object_event  7, 15, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, MahoganyGymGuyScript, -1

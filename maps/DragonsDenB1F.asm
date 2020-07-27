@@ -420,14 +420,12 @@ TwinsLeaandpia2AfterBattleText:
 DragonsDenB1F_MapEvents:
 	db 0, 0 ; filler
 
-	db 2 ; warp events
-	warp_event  9, 31, PALLET_TOWN, 5
-	warp_event  3, 25, DRAGON_SHRINE, 1
+	db 1 ; warp events
+	warp_event 10, 31, PALLET_TOWN, 5
 
 	db 0 ; coord events
 
-	db 4 ; bg events
-	bg_event  3, 27, BGEVENT_READ, DragonShrineSignpost
+	db 3 ; bg events
 	bg_event 33, 29, BGEVENT_ITEM, DragonsDenB1FHiddenRevive
 	bg_event  6,  4, BGEVENT_ITEM, DragonsDenB1FHiddenMaxPotion
 	bg_event 28, 16, BGEVENT_ITEM, DragonsDenB1FHiddenMaxElixer
@@ -440,4 +438,4 @@ DragonsDenB1F_MapEvents:
 	object_event  2, 13, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerTwinsLeaandpia2, -1
 	object_event 19, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DragonsDenB1FCalcium, EVENT_DRAGONS_DEN_B1F_CALCIUM
 	object_event 26, 31, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DragonsDenB1FMaxElixer, EVENT_DRAGONS_DEN_B1F_MAX_ELIXER
-	object_event 24, 25, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerInstructorRand, -1
+	object_event 24, 25, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerInstructorRand, -1

@@ -360,7 +360,7 @@ ENDM
 	map_const SAFARI_ZONE_WARDENS_HOME,                    10,  4 ; 12
 	map_const SAFARI_ZONE_WARDENS_HOME_2F,                 10,  4 ; 12
 	map_const ROUTE_34,                                    10, 27 ;  1
-	map_const CIANWOOD_GYM,                                 5, 18 ;  5
+	map_const CIANWOOD_GYM,                                12, 12 ;  5
 	map_const STAND_POKE,									4,  4 ; derp
 	map_const ROUTE_36_NATIONAL_PARK_GATE,                  5,  4 ; 17
 
