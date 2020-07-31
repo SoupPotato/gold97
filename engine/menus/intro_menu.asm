@@ -954,8 +954,7 @@ Intro_PlacePlayerSprite:
 
 CrystalIntroSequence:
 	callfar Copyright_GFPresents
-	jr c, StartTitleScreen
-	farcall CrystalIntro
+	;jr c, StartTitleScreen
 
 StartTitleScreen:
 	ldh a, [rSVBK]
