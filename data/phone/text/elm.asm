@@ -221,10 +221,9 @@ ElmPhoneRocketText:
 	line "things going?"
 
 	para "I called because"
-	line "something weird is"
-
-	para "happening with the"
-	line "radio broadcasts."
+	line "something odd is"
+	cont "happening with the"
+	cont "radio broadcasts."
 
 	para "They were talking"
 	line "about TEAM ROCKET."
@@ -234,25 +233,27 @@ ElmPhoneRocketText:
 	cont "about it?"
 
 	para "..."
+	
 	para "Hm? You just dealt"
 	line "with TEAM ROCKET"
-	para "in their base in"
-	line "STAND CITY?"
-	para "You'll have to"
-	line "tell me all about"
-	cont "that soon!"
-	para "Do you know where"
-	line "they were planning"
-	cont "to go after that?"
-	para "If these weird"
-	line "radio broadcasts"
-	para "are anything to go"
-	line "by, I'd check the"
-	para "JOPM RADIO TOWER"
-	line "in WEST CITY."
+	cont "in STAND CITY?"
+
+	para "What could they be"
+	line "up to?"
+
+	para "If these odd radio"
+	line "broadcasts are"
+	cont "anything to go by,"
+	
+	para "I'd check the"
+	line "JOPM RADIO TOWER"
+	cont "in WEST CITY."
+	
+	para "I will try and"
+	line "do what I can from"
+	cont "my end."
+	
 	para "Keep me updated!"
-	line "I'm rooting for"
-	cont "you and <RIVAL>!"
 	done
 
 ElmPhoneGiftText:

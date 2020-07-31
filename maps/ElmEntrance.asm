@@ -18,16 +18,9 @@ ElmEntrance_MapScripts:
 	end
 	
 .SceneHeadToTheBack:
-	turnobject PLAYER, UP
-	opentext
-	writetext Text_InBack
-	waitbutton
-	closetext
-	applymovement PLAYER, CatchUp_Movement
 	follow ELMENTRANCE_BLUE, PLAYER
 	applymovement ELMENTRANCE_BLUE, Movement_BlueToBack
 	stopfollow
-	applymovement ELMENTRANCE_BLUE, Movement_BlueThroughDoor
 	playsound SFX_ENTER_DOOR
 	disappear ELMENTRANCE_BLUE
 	applymovement PLAYER, Movement_PlayerThroughDoor
@@ -123,9 +116,6 @@ DoorLockedScript:
 	
 DaisyStopsScript1:
 	applymovement ELMENTRANCE_DAISY, DaisyWalksUp1
-	jump .DaisySpeech
-
-.DaisySpeech:
 	opentext
 	writetext DaisySpeechText
 	buttonsound
@@ -134,10 +124,8 @@ DaisyStopsScript1:
 	setflag ENGINE_MAP_CARD
 	writetext DaisySpeechText2
 	buttonsound
-	itemtotext POKE_BALL, MEM_BUFFER_1
-	scall DaisyScript_ReceiveTheBalls
-	giveitem POKE_BALL, 5
-	itemnotify
+	verbosegiveitem POTION
+	verbosegiveitem POKE_BALL, 5
 	writetext DaisySpeechText3
 	waitbutton
 	closetext
@@ -153,12 +141,8 @@ DaisyStopsScript1:
 .mapcardname
 	db "MAP CARD@"
 	
-
 DaisyStopsScript2:
 	applymovement ELMENTRANCE_DAISY, DaisyWalksUp2
-	jump .DaisySpeech
-	
-.DaisySpeech:
 	opentext
 	writetext DaisySpeechText
 	buttonsound
@@ -167,10 +151,8 @@ DaisyStopsScript2:
 	setflag ENGINE_MAP_CARD
 	writetext DaisySpeechText2
 	buttonsound
-	itemtotext POKE_BALL, MEM_BUFFER_1
-	scall DaisyScript_ReceiveTheBalls
-	giveitem POKE_BALL, 5
-	itemnotify
+	verbosegiveitem POTION
+	verbosegiveitem POKE_BALL, 5
 	writetext DaisySpeechText3
 	waitbutton
 	closetext
@@ -185,15 +167,6 @@ DaisyStopsScript2:
 
 .mapcardname
 	db "MAP CARD@"
-	
-DaisyScript_ReceiveTheBalls:
-	jumpstd receiveitem
-	end
-	
-
-	
-ElmEntranceBlueScript:
-	jumptextfaceplayer Text_InBack
 	
 ElmEntranceDaisyScript:
 	jumptextfaceplayer Text_RootingText
@@ -235,11 +208,6 @@ DaisySpeechText:
 	para "BLUE is my little"
 	line "brother."
 	
-	para "In other words…"
-	
-	para "I'm PROF.OAK's"
-	line "granddaughter!"
-	
 	para "If Granpa gave you"
 	line "a task, I would"
 	cont "like to help out."
@@ -264,9 +232,13 @@ DaisySpeechText2:
 	done
 
 DaisySpeechText3:
-	text "You can catch"
-	line "#MON with"
-	cont "those."
+	text "A POTION can heal"
+	line "your #MON if"
+	cont "they are hurt,"
+	
+	para "and #BALLS"
+	line "allow you to catch"
+	cont "wild #MON."
 	
 	para "If you run out of"
 	line "#BALLS you can"
@@ -321,15 +293,6 @@ TimeToBattle:
 	line "them!"
 	para "I'm not gonna hold"
 	line "back!"
-	done
-	
-Text_InBack:
-	text "PROF.OAK just"
-	line "returned."
-	
-	para "He's waiting for"
-	line "you through the"
-	cont "door in the back."
 	done
 
 ElmEntranceAideText:
@@ -418,14 +381,11 @@ Movement_BlueToBack:
 	step UP
 	step UP
 	step UP
-	step_end
-	
-Movement_BlueThroughDoor:
+	step UP
 	step UP
 	step_end
-	
+
 Movement_PlayerThroughDoor:
-	step UP
 	step UP
 	step_end
 
@@ -464,7 +424,7 @@ ElmEntrance_MapEvents:
 	db 4 ; object events
 	object_event  6, 13, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ElmEntranceAideScript, -1
 	object_event  3,  4, SPRITE_SILVER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ElmEntranceSilverScript, EVENT_RIVAL_ELM_ENTRANCE
-	object_event  4, 13, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ElmEntranceBlueScript, EVENT_BLUE_ELM_ENTRANCE
+	object_event  4, 14, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BLUE_ELM_ENTRANCE
 	object_event  1, 13, SPRITE_DAISY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ElmEntranceDaisyScript, EVENT_DAISY_ELM_ENTRANCE
 
 	

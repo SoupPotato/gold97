@@ -15,7 +15,25 @@
 TeamRocketBaseB2F_MapScripts:
 	db 0 ; scene scripts
 
-	db 0 ; callbacks
+	db 1 ; callbacks
+	callback MAPCALLBACK_TILES, .DamagedSystem
+	
+.DamagedSystem:
+	checkevent EVENT_ROCKET_MACHINE_DAMAGED
+	iffalse .Done
+	changeblock 13, 13, $85 ; damage
+	changeblock 15, 13, $85 ; damage
+	changeblock 17, 13, $85 ; damage
+	changeblock 11, 15, $82 ; damage
+	changeblock 13, 17, $84 ; damage
+	changeblock 17, 17, $84 ; damage	
+	changeblock 11, 19, $86 ; damage
+	changeblock 13, 19, $83 ; damage
+	changeblock 15, 19, $87 ; damage
+	changeblock 17, 19, $83 ; damage
+	changeblock 19, 19, $88 ; damage
+.Done:
+	return
 	
 ImposterCompEncounter:
 	showemote EMOTE_SHOCK, TEAMROCKETBASEB2F_SILVER, 20
@@ -89,7 +107,7 @@ TrainerGruntM10:
 	
 
 TrainerGruntM14:
-	trainer GRUNTM, GRUNTM_14, EVENT_BEAT_ROCKET_GRUNTM_14, GruntM14SeenText, GruntM14BeatenText, 0, .Script
+	trainer GRUNTF, GRUNTF_7, EVENT_BEAT_ROCKET_GRUNTM_14, GruntM14SeenText, GruntM14BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -219,15 +237,6 @@ TeamRocketBaseB2FComputerPower_loop:
 	writetext PasswordEntered
 .PowerYesOrNo1:
 	yesorno
-	iftrue .PowerYesOrNo2
-	writetext ReturningToPowerMenu
-	waitbutton
-	jump TeamRocketBaseB2FComputerPower_loop
-	
-.PowerYesOrNo2
-	writetext AreYouSurePowerText
-	pause 30
-	yesorno
 	iftrue .ShutdownTime
 	writetext ReturningToPowerMenu
 	waitbutton
@@ -277,24 +286,53 @@ TeamRocketBaseB2FComputerPower_loop:
 	closetext
 	playsound SFX_ZAP_CANNON
 	earthquake 80
+	special FadeOutPalettes
+	changeblock 13, 13, $85 ; damage
+	changeblock 15, 13, $85 ; damage
+	special FadeInPalettes
+	reloadmappart
 	waitsfx
 	playsound SFX_ZAP_CANNON
 	earthquake 80
+	special FadeOutPalettes
+	changeblock 17, 13, $85 ; damage
+	changeblock 11, 15, $82 ; damage
+	special FadeInPalettes
+	reloadmappart
 	waitsfx
 	playsound SFX_ZAP_CANNON
 	earthquake 80
+	special FadeOutPalettes
+	changeblock 13, 17, $84 ; damage
+	changeblock 17, 17, $84 ; damage
+	special FadeInPalettes
+	reloadmappart	
 	waitsfx
 	pause 15
 	playsound SFX_JUMP_OVER_LEDGE
 	applymovement TEAMROCKETBASEB2F_RAITORA, RaitoraJumpsDown
 	playsound SFX_MEGA_PUNCH
 	earthquake 80
+	special FadeOutPalettes
+	changeblock 11, 19, $86 ; damage
+	changeblock 13, 19, $83 ; damage
+	special FadeInPalettes
+	reloadmappart
 	waitsfx
 	playsound SFX_MEGA_PUNCH
 	earthquake 80
+	special FadeOutPalettes
+	changeblock 19, 19, $88 ; damage
+	special FadeInPalettes
+	reloadmappart
 	waitsfx
 	playsound SFX_MEGA_PUNCH
 	earthquake 80
+	special FadeOutPalettes
+	changeblock 15, 19, $87 ; damage
+	changeblock 17, 19, $83 ; damage
+	special FadeInPalettes
+	reloadmappart
 	playsound SFX_SHUT_DOWN_PC
 	waitsfx
 	playsound SFX_SHUT_DOWN_PC
@@ -325,19 +363,20 @@ TeamRocketBaseB2FComputerPower_loop:
 	waitbutton
 	closetext
 	pause 15
+	applymovement TEAMROCKETBASEB2F_GRUNTM8, TeamRocketGuyStepsBack
 	turnobject TEAMROCKETBASEB2F_GRUNTM8, DOWN
 	opentext
 	writetext WhatHaveYouDoneText2
 	waitbutton
 	closetext
 	applymovement TEAMROCKETBASEB2F_GRUNTM8, TeamRocketGuyLeaves
-	turnobject TEAMROCKETBASEB2F_SILVER, DOWN
+	turnobject TEAMROCKETBASEB2F_SILVER, LEFT
 	showemote EMOTE_SHOCK, TEAMROCKETBASEB2F_SILVER, 20
 	opentext
 	writetext WaitGottaFindOut
 	waitbutton
 	closetext
-	applymovement TEAMROCKETBASEB2F_SILVER, TeamRocketGuyLeaves
+	applymovement TEAMROCKETBASEB2F_SILVER, SilverLeaves
 	disappear TEAMROCKETBASEB2F_GRUNTM8
 	disappear TEAMROCKETBASEB2F_GRUNTM9
 	disappear TEAMROCKETBASEB2F_GRUNTM10
@@ -348,6 +387,7 @@ TeamRocketBaseB2FComputerPower_loop:
 	disappear TEAMROCKETBASEB2F_SCIENTISTMITCH
 	disappear TEAMROCKETBASEB2F_SILVER
 	setevent EVENT_BLACKTHORN_CITY_SUPER_NERD_DOES_NOT_BLOCK_GYM
+	setevent EVENT_ROCKET_MACHINE_DAMAGED
 	jumpstd radiotowerrockets
 	end
 
@@ -388,15 +428,21 @@ TeamRocketBaseB2FComputerConsole_cancel:
 	end
 	
 TeamRocketGuyLeaves:
+	big_step LEFT
+	big_step LEFT
+	big_step LEFT
+	big_step LEFT
+	big_step LEFT
+	big_step LEFT
+	step_end
+	
+SilverLeaves:	
 	step DOWN
-	step LEFT
-	step LEFT
-	step LEFT
-	step LEFT
-	step LEFT
-	step LEFT
-	step LEFT
-	step LEFT
+	big_step LEFT
+	big_step LEFT
+	big_step LEFT
+	big_step LEFT
+	big_step LEFT
 	step_end
 	
 ImposterRunsOff:
@@ -430,12 +476,18 @@ SilverWalksLeftToMachine:
 	step_end
 	
 TeamRocketGuyWalksUp:
-	step UP
-	step UP
-	step UP
-	step UP
+	big_step UP
+	big_step UP
+	big_step UP
+	big_step UP
 	step RIGHT
 	step UP
+	step_end
+	
+TeamRocketGuyStepsBack
+	fix_facing
+	step DOWN
+	remove_fixed_facing
 	step_end
 	
 RaitoraJumpsUp:
@@ -450,13 +502,10 @@ WaitGottaFindOut:
 	text "<RIVAL>: Wait!"
 	line "There's still"
 	cont "more!?"
+	
 	para "Come on,"
 	line "<PLAY_G>!"
-	para "I'm going to find"
-	line "out what that"
-	cont "means!"
-	para "You should come"
-	line "too!"
+
 	para "We have to take"
 	line "these guys out,"
 	cont "once and for all!"
@@ -464,19 +513,17 @@ WaitGottaFindOut:
 	
 WhatHaveYouDoneText:
 	text "EXECUTIVE: No!"
+	
 	para "What have you"
 	line "done?!"
+	
 	para "You've destroyed"
 	line "all of our hard"
 	cont "work!"
-	para "GIOVANNI is"
-	line "going to be"
-	para "furious when he"
-	line "finds out!"
-	para "But he'll be even"
-	line "more furious at"
-	para "you two if he ever"
-	line "meets you!"
+	
+	para "GIOVANNI will be"
+	line "furious when he"
+	cont "finds out!"
 	done
 	
 WhatHaveYouDoneText2:
@@ -484,12 +531,12 @@ WhatHaveYouDoneText2:
 	para "I had hoped it"
 	line "wouldn't have to"
 	cont "come to this."
+	
 	para "But TEAM ROCKET is"
-	line "not out yet!"
-	para "We have one final"
-	line "plan."
-	para "And we intend to"
-	line "use it!"
+	line "not finished yet!"
+	
+	para "We still have one"
+	line "final plan."	
 	done
 	
 RaitoraDestroyedTheThing:
@@ -526,23 +573,19 @@ WowItsShuttingDown:
 	line "<PLAYER>!"
 	para "You got it to turn"
 	line "off!"
-	para "You know what I've"
-	line "found out?"
-	para "This machine was"
+	
+	para "This thing was"
 	line "going to be able"
-	para "to control the"
-	line "minds of #MON!"
-	para "That's what TEAM"
-	line "ROCKET's plan was"
-	cont "all along!"
-	para "I can't believe"
-	line "that's what they"
-	cont "were going to do!"
-	para "It's terrible!"
+	cont "to control the"
+	cont "minds of #MON!"
+	
+	para "How despicable..."
+
 	para "I don't think"
 	line "it's enough to"
-	para "just turn this"
-	line "thing off!"
+	cont "just turn this"
+	cont "thing off!"
+	
 	para "It needs to be"
 	line "destroyed!"
 	done
@@ -550,25 +593,25 @@ WowItsShuttingDown:
 HowDidYouKidsGetDownHereText:
 	text "IMPOSTER OAK: Hey!"
 	line "How'd you kids get"
-	cont "down here!"
-	para "No one who is un-"
-	line "authorized should"
-	para "be anywhere near"
-	line "this machine!"
+	cont "down here!?"
+	
+	para "No unauthorized"
+	line "personnel should"
+	cont "be anywhere near"
+	cont "this machine!"
+	
 	para "It is a very"
 	line "powerful antenna,"
-	para "and it takes a"
-	line "very long time to"
+	cont "that takes time to"
 	cont "reach full power!"
+	
 	para "Well, I guess it"
-	line "doesn't matter,"
-	para "since you can't"
-	line "turn it off unless"
-	para "you know the"
-	line "password!"
-	para "And there's no way"
-	line "you could figure"
-	cont "that out!"
+	line "doesn't matter."
+	
+	para "You can't turn it"
+	line "off unless you"
+	cont "know the password!"
+	
 	para "I gotta tell the"
 	line "boss that we have"
 	cont "intruders!"
@@ -599,20 +642,8 @@ SystemShuttingDown:
 	text "REQUEST CONFIRMED"
 	para "SYSTEM POWER"
 	line "SHUTTING DOWN"
-	para "---------"
-	para "--------"
-	para "-------"
-	para "------"
-	para "-----"
-	para "----"
-	para "---"
-	para "--"
-	para "-"
-	done
-	
-AreYouSurePowerText:
-	text "ARE YOU ABSOLUTELY"
-	line "SURE?"
+	para ".................."
+	line ".................."
 	done
 	
 ReturningToPowerMenu:
@@ -874,14 +905,14 @@ TeamRocketBaseB2F_MapEvents:
 
 	db 12 ; object events
 	object_event  7, 19, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TeamRocketBaseB2FTMThief, EVENT_TEAM_ROCKET_BASE_B2F_TM_THIEF
-	object_event  3, 16, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerGruntM8, EVENT_BLACKTHORN_CITY_SUPER_NERD_DOES_NOT_BLOCK_GYM
-	object_event 19,  6, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerGruntM9, EVENT_BLACKTHORN_CITY_SUPER_NERD_DOES_NOT_BLOCK_GYM
-	object_event 25,  4, SPRITE_ROCKET, SPRITEMOVEDATA_SPINRANDOM_FAST, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerGruntM10, EVENT_BLACKTHORN_CITY_SUPER_NERD_DOES_NOT_BLOCK_GYM
-	object_event 27, 13, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerGruntM14, EVENT_BLACKTHORN_CITY_SUPER_NERD_DOES_NOT_BLOCK_GYM
-	object_event  2,  6, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerGruntM15, EVENT_BLACKTHORN_CITY_SUPER_NERD_DOES_NOT_BLOCK_GYM
-	object_event 25, 25, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerGruntM16, EVENT_BLACKTHORN_CITY_SUPER_NERD_DOES_NOT_BLOCK_GYM
+	object_event  3, 16, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerGruntM8, EVENT_BLACKTHORN_CITY_SUPER_NERD_DOES_NOT_BLOCK_GYM
+	object_event 19,  6, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerGruntM9, EVENT_BLACKTHORN_CITY_SUPER_NERD_DOES_NOT_BLOCK_GYM
+	object_event 25,  4, SPRITE_ROCKET, SPRITEMOVEDATA_SPINRANDOM_FAST, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerGruntM10, EVENT_BLACKTHORN_CITY_SUPER_NERD_DOES_NOT_BLOCK_GYM
+	object_event 27, 13, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerGruntM14, EVENT_BLACKTHORN_CITY_SUPER_NERD_DOES_NOT_BLOCK_GYM
+	object_event  2,  6, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerGruntM15, EVENT_BLACKTHORN_CITY_SUPER_NERD_DOES_NOT_BLOCK_GYM
+	object_event 21, 24, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerGruntM16, EVENT_BLACKTHORN_CITY_SUPER_NERD_DOES_NOT_BLOCK_GYM
 	object_event  6, 26, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerScientistRoss, EVENT_BLACKTHORN_CITY_SUPER_NERD_DOES_NOT_BLOCK_GYM
 	object_event 26, 27, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerScientistMitch, EVENT_BLACKTHORN_CITY_SUPER_NERD_DOES_NOT_BLOCK_GYM
-	object_event 11, 21, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_RIGHT, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ILEX_FOREST_LASS
-	object_event 13, 20, SPRITE_SURGE, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ILEX_FOREST_LASS
-	object_event -5, -5, SPRITE_GROWLITHE, SPRITEMOVEDATA_POKEMON, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ILEX_FOREST_LASS
+	object_event 11, 21, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_RIGHT, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ILEX_FOREST_LASS
+	object_event 13, 20, SPRITE_SURGE, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ILEX_FOREST_LASS
+	object_event -5, -5, SPRITE_GROWLITHE, SPRITEMOVEDATA_POKEMON, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ILEX_FOREST_LASS

@@ -2,7 +2,6 @@
 	const SPROUTTOWER3F_SAGE1
 	const SPROUTTOWER3F_SAGE2
 	const SPROUTTOWER3F_SAGE3
-	const SPROUTTOWER3F_SAGE4
 
 
 SproutTower3F_MapScripts:
@@ -17,36 +16,6 @@ SproutTower3F_MapScripts:
 
 .DummyScene1:
 	end
-
-
-;SageLiScript:
-;	faceplayer
-;	opentext
-;	checkevent EVENT_GOT_HM05_FLASH
-;	iftrue .GotFlash
-;	writetext SageLiSeenText
-;	waitbutton
-;	closetext
-;	winlosstext SageLiBeatenText, 0
-;	loadtrainer SAGE, LI
-;	startbattle
-;	reloadmapafterbattle
-;	opentext
-;	writetext SageLiTakeThisFlashText
-;	buttonsound
-;	verbosegiveitem TM_FLASH
-;	setevent EVENT_GOT_HM05_FLASH
-;	setevent EVENT_BEAT_SAGE_LI
-;	writetext SageLiFlashExplanationText
-;	waitbutton
-;	closetext
-;	end
-
-;.GotFlash:
-;	writetext SageLiAfterBattleText
-;	waitbutton
-;	closetext
-;	end
 
 SproutTower3FSign:
 	setevent EVENT_READ_5F3F_SIGN
@@ -140,35 +109,6 @@ SagePingAfterBattleText:
 	cont "bird of legend."
 	done
 	
-TrainerSageEdmond:
-	trainer SAGE, EDMOND, EVENT_BEAT_SAGE_EDMOND, SageEdmondSeenText, SageEdmondBeatenText, 0, .Script
-
-.Script:
-	endifjustbattled
-	opentext
-	writetext SageEdmondAfterBattleText
-	waitbutton
-	closetext
-	end
-
-
-SageEdmondSeenText:
-	text "I sense that a"
-	line "long journey"
-	cont "awaits you."
-	done
-
-SageEdmondBeatenText:
-	text "This was but a"
-	line "step."
-	done
-
-SageEdmondAfterBattleText:
-	text "Are you ready for"
-	line "what you will be"
-	cont "called to do?"
-	done
-	
 TrainerSageNeal:
 	trainer SAGE, NEAL, EVENT_BEAT_SAGE_NEAL, SageNealSeenText, SageNealBeatenText, 0, .Script
 
@@ -204,18 +144,17 @@ SproutTower3F_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  7,  7, SPROUT_TOWER_2F, 2
-	warp_event  0,  1, TIN_TOWER_4F, 1
+	warp_event 11,  5, SPROUT_TOWER_2F, 2
+	warp_event 10,  1, TIN_TOWER_4F, 1
 
 	db 0 ; coord events
 
 
 	db 1 ; bg events
-	bg_event 4, 1, BGEVENT_READ, SproutTower3FSign
+	bg_event  4,  1, BGEVENT_READ, SproutTower3FSign
 
-	db 4 ; object events
-	object_event  2,  3, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerSageJeffrey, EVENT_OLD_CITY_EARL
-	object_event  5,  5, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerSagePing, EVENT_OLD_CITY_EARL
-	object_event  4,  4, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerSageEdmond, EVENT_OLD_CITY_EARL
-	object_event  3,  4, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerSageNeal, EVENT_OLD_CITY_EARL
+	db 3 ; object events
+	object_event  1, 10, SPRITE_SAGE, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerSageJeffrey, EVENT_OLD_CITY_EARL
+	object_event  7,  9, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerSagePing, EVENT_OLD_CITY_EARL
+	object_event  7,  1, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerSageNeal, EVENT_OLD_CITY_EARL
 

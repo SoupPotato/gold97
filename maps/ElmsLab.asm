@@ -444,38 +444,6 @@ ElmJumpRightScript:
 	opentext
 	end
 
-AideScript_WalkPotion1:
-	applymovement ELMSLAB_ELMS_AIDE, AideWalksRight1
-	turnobject PLAYER, DOWN
-	scall AideScript_GivePotion
-	applymovement ELMSLAB_ELMS_AIDE, AideWalksLeft1
-	end
-
-AideScript_WalkPotion2:
-	applymovement ELMSLAB_ELMS_AIDE, AideWalksRight2
-	turnobject PLAYER, DOWN
-	scall AideScript_GivePotion
-	applymovement ELMSLAB_ELMS_AIDE, AideWalksLeft2
-	end
-
-AideScript_GivePotion:
-	opentext
-	writetext AideText_GiveYouPotion
-	buttonsound
-	verbosegiveitem POTION
-	writetext AideText_AlwaysBusy
-	waitbutton
-	closetext
-	setscene SCENE_ELMSLAB_NOTHING
-	end
-
-
-AideScript_AfterTheft:
-	writetext AideText_AfterTheft
-	waitbutton
-	closetext
-	end
-
 ElmsAideScript:
 	faceplayer
 	opentext
@@ -734,7 +702,7 @@ Text_OakSpeech:
 	text "OAK: Haha!"
 	
 	para "Indeed young man,"
-	line "but Im not that"
+	line "but I'm not that"
 	cont "old yet!"
 	
 	para "I have called you"
@@ -1224,11 +1192,9 @@ ElmsLab_MapEvents:
 	warp_event  4,  7, ELM_ENTRANCE, 3
 
 
-	db 4 ; coord events
+	db 2 ; coord events
 	coord_event  3,  7, SCENE_ELMSLAB_CANT_LEAVE, LabTryToLeaveScript
 	coord_event  4,  7, SCENE_ELMSLAB_CANT_LEAVE, LabTryToLeaveScript
-	coord_event  3,  7, SCENE_ELMSLAB_AIDE_GIVES_POTION, AideScript_WalkPotion1
-	coord_event  4,  7, SCENE_ELMSLAB_AIDE_GIVES_POTION, AideScript_WalkPotion2
 
 	db 7 ; bg events
 	bg_event  0,  1, BGEVENT_READ, ElmsLabBookshelf
@@ -1241,7 +1207,7 @@ ElmsLab_MapEvents:
 
 	db 7 ; object events
 	object_event  4,  2, SPRITE_ELM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ProfElmScript, -1
-	object_event  7,  6, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ElmsAideScript, EVENT_ELMS_AIDE_IN_LAB
+	object_event  6,  6, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ElmsAideScript, EVENT_ELMS_AIDE_IN_LAB
 	object_event  5,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FlambearPokeBallScript, EVENT_FLAMBEAR_POKEBALL_IN_ELMS_LAB
 	object_event  6,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CruisePokeBallScript, EVENT_CRUISE_POKEBALL_IN_ELMS_LAB
 	object_event  7,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CHIKORITAPokeBallScript, EVENT_CHIKORITA_POKEBALL_IN_ELMS_LAB

@@ -10,7 +10,7 @@
 	const FUCHSIACITY_BIRD
 	const FUCHSIACITY_FAIRY
 	const FUCHSIACITY_BLOCKROCKET1
-	const FUCHSIACITY_OKENA
+	const FUCHSIACITY_OKERA
 	const FUCHSIACITY_BLOCKROCKET3
 	const FUCHSIACITY_IMPOSTER
 	const FUCHSIACITY_HQBLOCKROCKET
@@ -104,21 +104,23 @@ ImposterSceneScript:
 	disappear FUCHSIACITY_POKEFAN_M
 	pause 15
 	special FadeInQuickly
-	appear FUCHSIACITY_OKENA
+	appear FUCHSIACITY_OKERA
 	playmusic MUSIC_CHERRYGROVE_CITY
-	applymovement FUCHSIACITY_OKENA, OkenaWalksUP
+	applymovement FUCHSIACITY_OKERA, OkenaWalksUP
 	turnobject PLAYER, LEFT
 	opentext
 	writetext OkenaText
 	waitbutton
-	turnobject FUCHSIACITY_OKENA, DOWN
+	turnobject FUCHSIACITY_OKERA, DOWN
 	writetext OkenaText2
 	waitbutton
 	closetext
-	applymovement FUCHSIACITY_OKENA, OkenaWalksAway
-	disappear FUCHSIACITY_OKENA
+	applymovement FUCHSIACITY_OKERA, OkenaWalksAway
+	disappear FUCHSIACITY_OKERA
 	setevent EVENT_ILEX_FOREST_APPRENTICE
 	setscene SCENE_DEFAULT
+	setevent EVENT_OKERA_AT_BASE
+	setevent EVENT_IMPOSTER_FIGHTING_OKERA
 	end
 
 

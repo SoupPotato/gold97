@@ -44,8 +44,8 @@ SilentTownPokecenterSign:
 	jumpstd pokecentersign
 	
 SilentTown_RivalGreets:
-	applymovement SilentTown_SILVER, Movement_SilverComesFromTheShadows_NBT
-	applymovement PLAYER, Movement_PlayerTurnsHead
+	applymovement SilentTown_SILVER, RivalMeetsPlayer
+	turnobject PLAYER, RIGHT
 	special FadeOutMusic
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	opentext
@@ -57,7 +57,7 @@ SilentTown_RivalGreets:
 	writetext SilentTownRivalText2
 	waitbutton
 	closetext
-	applymovement SilentTown_SILVER, Movement_SilverPushesYouAway_NBT
+	applymovement SilentTown_SILVER, RivalGoesToLab
 	disappear SilentTown_SILVER
 	setscene SCENE_TEACHER_STOPS
 	special FadeOutMusic
@@ -70,7 +70,7 @@ SilentTown_RivalGreets:
 	setmapscene RADIO_TOWER_6F, SCENE_RADIOTOWER6F_NOTHING; this makes it so the giovanni scene plays, was missed for a while
 	end
 
-SilentTown_TeacherStopsYouScene2:
+BlueStopsYouScene1:
 	playmusic MUSIC_SHOW_ME_AROUND
 	opentext
 	writetext Text_WaitPlayer
@@ -80,73 +80,55 @@ SilentTown_TeacherStopsYouScene2:
 	turnobject PLAYER, RIGHT
 	moveobject SilentTown_BLUE, 7, 9
 	appear SilentTown_BLUE
-	applymovement SilentTown_BLUE, Movement_TeacherRunsToYou1_NBT
-	opentext
-	writetext Text_WhatDoYouThinkYoureDoing
-	waitbutton
-	closetext
-	follow SilentTown_BLUE, PLAYER
-	applymovement SilentTown_BLUE, Movement_TeacherBringsYouBack1_NBT
-	stopfollow
+	applymovement SilentTown_BLUE, BlueStopsPlayer1
 	opentext
 	writetext Text_ItsDangerousToGoAlone
 	waitbutton
 	closetext
-	follow SilentTown_BLUE, PLAYER
-	applymovement SilentTown_BLUE, Movement_BlueTakesToLab
-	stopfollow
-	applymovement SilentTown_BLUE, Movement_BlueIntoLab
-	playsound SFX_ENTER_DOOR
-	disappear SilentTown_BLUE
 	setevent EVENT_RIVAL_ELM_ENTRANCE
 	setmapscene ELM_ENTRANCE, SCENE_HEAD_TO_THE_BACK
 	setmapscene ELMS_LAB, SCENE_DEFAULT
 	clearevent EVENT_BLUE_ELM_ENTRANCE
-	applymovement PLAYER, Movement_PlayerIntoLab
+	follow SilentTown_BLUE, PLAYER
+	applymovement SilentTown_BLUE, BlueTakesPlayerToLab1
+	stopfollow
+	playsound SFX_ENTER_DOOR
+	disappear SilentTown_BLUE
+	applymovement PLAYER, PlayerEntersLab
 	playsound SFX_ENTER_DOOR
 	special FadeOutPalettes
 	warpfacing UP, ELM_ENTRANCE, 4, 15
 	end
 
-SilentTown_TeacherStopsYouScene1:
+BlueStopsYouScene2:
 	playmusic MUSIC_SHOW_ME_AROUND
 	opentext
 	writetext Text_WaitPlayer
 	waitbutton
 	closetext
 	showemote EMOTE_SHOCK, PLAYER, 15
-	applymovement PLAYER, Movement_OneDown
 	turnobject PLAYER, RIGHT
 	moveobject SilentTown_BLUE, 7, 9
 	appear SilentTown_BLUE
-	applymovement SilentTown_BLUE, Movement_TeacherRunsToYou1_NBT
-	opentext
-	writetext Text_WhatDoYouThinkYoureDoing
-	waitbutton
-	closetext
-	follow SilentTown_BLUE, PLAYER
-	applymovement SilentTown_BLUE, Movement_TeacherBringsYouBack1_NBT
-	stopfollow
+	applymovement SilentTown_BLUE, BlueStopsPlayer2
 	opentext
 	writetext Text_ItsDangerousToGoAlone
 	waitbutton
 	closetext
-	follow SilentTown_BLUE, PLAYER
-	applymovement SilentTown_BLUE, Movement_BlueTakesToLab
-	stopfollow
-	applymovement SilentTown_BLUE, Movement_BlueIntoLab
-	playsound SFX_ENTER_DOOR
-	disappear SilentTown_BLUE
 	setevent EVENT_RIVAL_ELM_ENTRANCE
 	setmapscene ELM_ENTRANCE, SCENE_HEAD_TO_THE_BACK
 	setmapscene ELMS_LAB, SCENE_DEFAULT
 	clearevent EVENT_BLUE_ELM_ENTRANCE
-	applymovement PLAYER, Movement_PlayerIntoLab
+	follow SilentTown_BLUE, PLAYER
+	applymovement SilentTown_BLUE, BlueTakesPlayerToLab2
+	stopfollow
+	playsound SFX_ENTER_DOOR
+	disappear SilentTown_BLUE
+	applymovement PLAYER, PlayerEntersLab
 	playsound SFX_ENTER_DOOR
 	special FadeOutPalettes
 	warpfacing UP, ELM_ENTRANCE, 4, 15
 	end
-
 
 SilentTownRivalScript:
 	faceplayer
@@ -196,20 +178,7 @@ SilentTownTeacherScript:
 	end
 
 SilentTownFisherScript:
-	jumptextfaceplayer Text_ElmDiscoveredNewMon
-
-SilentTownSilverScript:
-	opentext
-	writetext SilentTownRivalText1
-	waitbutton
-	closetext
-	showemote EMOTE_SHOCK, SilentTown_SILVER, 15
-	opentext
-	writetext SilentTownRivalText2
-	waitbutton
-	closetext
-	applymovement SilentTown_SILVER, Movement_SilverPushesYouAway_NBT
-	end
+	jumptextfaceplayer Text_OakDiscoveredNewMon
 
 SilentTownSign:
 	jumptext SilentTownSignText
@@ -217,45 +186,55 @@ SilentTownSign:
 SilentTownPlayersHouseSign:
 	jumptext SilentTownPlayersHouseSignText
 
-SilentTownElmsLabSign:
-	jumptext SilentTownElmsLabSignText
+SilentTownOaksLabSign:
+	jumptext SilentTownOaksLabSignText
 
-SilentTownElmsHouseSign:
-	jumptext SilentTownElmsHouseSignText
+SilentTownRivalsHouseSign:
+	jumptext SilentTownRivalsHouseSignText
 	
-Movement_PlayerIntoLab
+BlueTakesPlayerToLab1:
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
 	step RIGHT
 	step UP
 	step_end
 	
-Movement_BlueIntoLab
+BlueTakesPlayerToLab2:
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step DOWN
+	step DOWN
+	step DOWN
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
 	step UP
 	step_end
 	
-Movement_BlueTakesToLab
-	step RIGHT
-	step DOWN
-	step DOWN
-	step DOWN
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step_end
-	
-Movement_OneDown:
-	step DOWN
-	step_end
-	
-Movement_MoveFromDoor:
-	step DOWN
-	step_end
-
-Movement_TeacherRunsToYou1_NBT:
+BlueStopsPlayer1:
+	step UP
 	step LEFT
 	step LEFT
 	step LEFT
@@ -263,51 +242,15 @@ Movement_TeacherRunsToYou1_NBT:
 	step LEFT
 	step_end
 
-Movement_TeacherRunsToYou2_NBT:
+BlueStopsPlayer2:
 	step LEFT
 	step LEFT
 	step LEFT
 	step LEFT
 	step LEFT
-	turn_head DOWN
 	step_end
 
-Movement_TeacherBringsYouBack1_NBT:
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	turn_head LEFT
-	step_end
-
-Movement_TeacherBringsYouBack2_NBT:
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	turn_head LEFT
-	step_end
-
-Movement_SilverPushesYouAway_NBT:
-	turn_head RIGHT
-	step RIGHT
-	turn_head DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step_end
-
-Movement_SilverShovesYouOut_NBT:
-	turn_head UP
-	fix_facing
-	jump_step DOWN
-	remove_fixed_facing
-	step_end
-
-Movement_SilverComesFromTheShadows_NBT:
+RivalMeetsPlayer:
 	step UP
 	step UP
 	step UP
@@ -316,8 +259,17 @@ Movement_SilverComesFromTheShadows_NBT:
 	step LEFT
 	step_end
 	
-Movement_PlayerTurnsHead:
-	turn_head RIGHT
+RivalGoesToLab:
+	step RIGHT
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step_end
+	
+PlayerEntersLab:
+	step UP
 	step_end
 	
 Text_Study101:
@@ -346,13 +298,11 @@ Text_WaitPlayer:
 	text "Wait! Stop!"
 	done
 
-Text_WhatDoYouThinkYoureDoing:
+Text_ItsDangerousToGoAlone:
 	text "What do you think"
 	line "you're doing?"
-	done
-
-Text_ItsDangerousToGoAlone:
-	text "It's dangerous to"
+	
+	para "It's dangerous to"
 	line "go out without a"
 	cont "#MON!"
 
@@ -393,7 +343,7 @@ Text_CallMomOnGear:
 	line "you're doing."
 	done
 
-Text_ElmDiscoveredNewMon:
+Text_OakDiscoveredNewMon:
 	text "Yo, <PLAYER>!"
 
 	para "I hear PROF.OAK"
@@ -437,11 +387,11 @@ SilentTownPlayersHouseSignText:
 	text "<PLAYER>'s House"
 	done
 
-SilentTownElmsLabSignText:
+SilentTownOaksLabSignText:
 	text "OAK #MON LAB"
 	done
 
-SilentTownElmsHouseSignText:
+SilentTownRivalsHouseSignText:
 	text "<RIVAL>'s House"
 	done
 
@@ -458,15 +408,15 @@ SilentTown_MapEvents:
 
 
 	db 3 ; coord events
-	coord_event  1,  8, SCENE_TEACHER_STOPS, SilentTown_TeacherStopsYouScene1
-	coord_event  1,  9, SCENE_TEACHER_STOPS, SilentTown_TeacherStopsYouScene2
+	coord_event  1,  8, SCENE_TEACHER_STOPS, BlueStopsYouScene1
+	coord_event  1,  9, SCENE_TEACHER_STOPS, BlueStopsYouScene2
 	coord_event  5,  5, SCENE_DEFAULT, SilentTown_RivalGreets
 
 	db 5 ; bg events
 	bg_event 16,  5, BGEVENT_READ, SilentTownSign
 	bg_event  8,  4, BGEVENT_READ, SilentTownPlayersHouseSign
-	bg_event 10, 11, BGEVENT_READ, SilentTownElmsLabSign
-	bg_event  6, 12, BGEVENT_READ, SilentTownElmsHouseSign
+	bg_event 10, 11, BGEVENT_READ, SilentTownOaksLabSign
+	bg_event  6, 12, BGEVENT_READ, SilentTownRivalsHouseSign
 	bg_event 14,  4, BGEVENT_READ, SilentTownPokecenterSign
 
 	db 4 ; object events

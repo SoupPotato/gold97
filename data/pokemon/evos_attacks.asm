@@ -3483,16 +3483,17 @@ DonphanEvosAttacks:
 
 Porygon2EvosAttacks:
 	db 0 ; no more evolutions
-	db 1, CONVERSION2
 	db 1, TACKLE
+	db 1, DEFENSE_CURL
 	db 1, CONVERSION
-	db 9, AGILITY
+	db 9, THUNDERSHOCK
 	db 12, PSYBEAM
-	db 20, RECOVER
-	db 24, DEFENSE_CURL
-	db 32, LOCK_ON
+	db 20, CONVERSION2
+	db 24, AGILITY
+	db 32, RECOVER
 	db 36, TRI_ATTACK
-	db 44, ZAP_CANNON
+	db 44, LOCK_ON
+	db 48, ZAP_CANNON
 	db 0 ; no more level-up moves
 
 MimeJrEvosAttacks:

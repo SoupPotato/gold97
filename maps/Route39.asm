@@ -33,6 +33,7 @@ TrainerSchoolboyChad1:
 	writetext SchoolboyChad1AfterBattleText
 	waitbutton
 	closetext
+	end
 
 
 TrainerPokefanmDerek:
@@ -44,6 +45,7 @@ TrainerPokefanmDerek:
 	writetext PokefanMDerekText_NotBragging
 	waitbutton
 	closetext
+	end
 
 TrainerPokefanfRuth:
 	trainer POKEFANF, RUTH, EVENT_BEAT_POKEFANF_RUTH, PokefanfRuthSeenText, PokefanfRuthBeatenText, 0, .Script

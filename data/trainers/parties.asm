@@ -300,19 +300,21 @@ LtSurgeGroup:
 ScientistGroup:
 	; SCIENTIST (1)
 	db "ROSS@", TRAINERTYPE_NORMAL; used, base b2f
-	db 24, PORYGON
-	db 26, PORYGON2
+	db 38, PORYGON
+	db 38, PORYGON2
 	db -1 ; end
 
 	; SCIENTIST (2)
 	db "MITCH@", TRAINERTYPE_NORMAL; used, base b2f
-	db 26, DITTO
-	db 27, ANIMON
+	db 37, DITTO
+	db 39, ANIMON
 	db -1 ; end
 
 	; SCIENTIST (3)
 	db "JED@", TRAINERTYPE_NORMAL; used, radio tower 3f
-	db 33, MAGNETON
+	db 40, KOTORA
+	db 42, MAGNETON
+	db 42, RAITORA
 	db -1 ; end
 
 	; SCIENTIST (4)
@@ -575,9 +577,9 @@ BirdKeeperGroup:
 
 	; BIRD_KEEPER (3)
 	db "BRYAN@", TRAINERTYPE_NORMAL ;used, route 35 / 103
-	db 18, PIDGEY
-	db 19, PIDGEOTTO
-	db 19, FARFETCH_D
+	db 16, PIDGEY
+	db 16, PIDGEY
+	db 16, FARFETCH_D
 	db -1 ; end
 
 	; BIRD_KEEPER (4)
@@ -1308,21 +1310,21 @@ GruntMGroup:
 
 	; GRUNTM (8)
 	db "GRUNT@", TRAINERTYPE_NORMAL; used, base b2f
-	db 26, KOFFING
-	db 28, GOLBAT
+	db 38, WEEZING
+	db 39, GOLBAT
 	db -1 ; end
 
 	; GRUNTM (9)
 	db "GRUNT@", TRAINERTYPE_NORMAL; used, base b2f
-	db 26, RATICATE
-	db 27, KOFFING
+	db 39, GRIMER
+	db 42, MUK
 	db -1 ; end
 
 	; GRUNTM (10)
 	db "GRUNT@", TRAINERTYPE_NORMAL; used, base b2f
-	db 26, NIDORINO
-	db 28, NIDOKING
-	db 27, GOLEM
+	db 38, NIDORINO
+	db 40, NIDOKING
+	db 40, GOLEM
 	db -1 ; end
 
 	; GRUNTM (11)
@@ -1334,8 +1336,8 @@ GruntMGroup:
 
 	; GRUNTM (12)
 	db "GRUNT@", TRAINERTYPE_NORMAL ;used, radio tower 1f
-	db 26, HOUNDOUR
-	db 28, RATICATE
+	db 40, KOTORA
+	db 40, PERSIAN
 	db -1 ; end
 
 	; GRUNTM (13)
@@ -1344,40 +1346,29 @@ GruntMGroup:
 	db 26, CURSTRAW
 	db -1 ; end
 
-	; GRUNTM (14)
-	db "GRUNT@", TRAINERTYPE_NORMAL; used, base b2f
-	db 28, RATICATE
-	db 27, PRIMEAPE
-	db -1 ; end
-
 	; GRUNTM (15)
 	db "GRUNT@", TRAINERTYPE_NORMAL; used, base b2f
-	db 28, PRIMEAPE
-	db 27, GOLBAT
+	db 39, PRIMEAPE
+	db 41, GOLBAT
 	db -1 ; end
 
 	; GRUNTM (16)
 	db "GRUNT@", TRAINERTYPE_NORMAL; used, base b2f
-	db 23, RATTATA
-	db 26, RATICATE
-	db 26, ARIADOS
+	db 37, RATICATE
+	db 37, BOMSEAL
+	db 38, ARIADOS
 	db -1 ; end
 
 	; GRUNTM (17)
 	db "GRUNT@", TRAINERTYPE_NORMAL; used, base b3f
-	db 29, BELLRING
+	db 42, BELLRING
 	db -1 ; end
 
 	; GRUNTM (18)
 	db "GRUNT@", TRAINERTYPE_NORMAL; used, base b3f
-	db 26, NOCTOWL
-	db 26, DROWZEE
-	db 27, HYPNO
-	db -1 ; end
-
-	; GRUNTM (19)
-	db "GRUNT@", TRAINERTYPE_NORMAL; used, base b3f
-	db 31, VENOMOTH
+	db 38, NOCTOWL
+	db 39, DROWZEE
+	db 40, HYPNO
 	db -1 ; end
 
 	; GRUNTM (20)
@@ -1389,9 +1380,8 @@ GruntMGroup:
 
 	; GRUNTM (21)
 	db "GRUNT@", TRAINERTYPE_NORMAL; used, base b3f
-	db 26, PLUCKROSS
-	db 27, TURBAN
-	db 29, GOLBAT
+	db 40, TURBAN
+	db 39, GOLBAT
 	db -1 ; end
 
 	; GRUNTM (22)
@@ -1405,22 +1395,16 @@ GruntMGroup:
 	db 26, WOLFAN
 	db -1 ; end
 
-	; GRUNTM (24)
-	db "GRUNT@", TRAINERTYPE_NORMAL; used, radio tower 2f
-	db 26, GRIMER
-	db 27, KOFFING
-	db -1 ; end
-
 	; GRUNTM (25)
 	db "GRUNT@", TRAINERTYPE_NORMAL ;used, rocket ship
 	db 25, KOFFING
-	db 26, RINRING
+	db 26, KOTORA
 	db -1 ; end
 
 	; GRUNTM (26)
 	db "GRUNT@", TRAINERTYPE_NORMAL; used, radio tower 2f
-	db 28, GOLBAT
-	db 27, NIDORINO
+	db 39, NIDORINO
+	db 41, SKARMORY
 	db -1 ; end
 
 	; GRUNTM (27)
@@ -1430,13 +1414,13 @@ GruntMGroup:
 
 	; GRUNTM (28)
 	db "GRUNT@", TRAINERTYPE_NORMAL; used, radio tower 4f
-	db 31, ARIADOS
-	db 32, BELLRING
+	db 42, ARIADOS
+	db 42, TAUROS
 	db -1 ; end
 
 	; GRUNTM (29) ;used rocket guarding the ship at the docks
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db  23, MEOWTH
+	db  23, KOTORA
 	db  25, RATICATE
 	db -1 ; end
 
@@ -1524,6 +1508,14 @@ SabrinaGroup:
 	db 39, IVYSAUR,     LEECH_SEED, RAZOR_LEAF, POISONPOWDER, SLEEP_POWDER
 	db 39, WARTORTLE,   RAIN_DANCE, WATER_GUN, BITE, RAPID_SPIN
 	db 39, CHARMELEON,   EMBER, SMOKESCREEN, FLAMETHROWER, RAGE
+	db -1 ; end
+	
+	; SABRINA (1)
+	db "OAK@", TRAINERTYPE_MOVES
+	db 40, ANIMON,   TRANSFORM, NO_MOVE, NO_MOVE, NO_MOVE
+	db 42, IVYSAUR,    LEECH_SEED, RAZOR_LEAF, SLUDGE_BOMB, SLEEP_POWDER
+	db 42, WARTORTLE,   RAIN_DANCE, SURF, BITE, RAPID_SPIN
+	db 42, CHARMELEON,   DRAGON_RAGE, SMOKESCREEN, FLAMETHROWER, RAGE
 	db -1 ; end
 
 BugCatcherGroup:
@@ -2681,9 +2673,10 @@ ExecutiveMGroup:
 
 	; EXECUTIVEM (2)
 	db "EXECUTIVE@", TRAINERTYPE_MOVES; used, base b1f
-	db 31, HOUNDOOM,   FLAMETHROWER, ROAR, BITE, FAINT_ATTACK
-	db 34, WEEZING,    TACKLE, SLUDGE_BOMB, SMOKESCREEN, TOXIC
-	db 34, CURPAN,   MEAN_LOOK, CONFUSE_RAY, PSYBEAM, SWAGGER
+	db 42, HOUNDOOM,  FLAMETHROWER, ROAR, BITE, IRON_TAIL
+	db 41, CROBAT,	  WING_ATTACK, CONFUSE_RAY, BITE, SLUDGE_BOMB
+	db 42, WEEZING,   THUNDERBOLT, SLUDGE_BOMB, SMOKESCREEN, EXPLOSION
+	db 43, CURPAN,    PAIN_SPLIT, CONFUSE_RAY, PSYBEAM, SHADOW_BALL
 	db -1 ; end
 
 	; EXECUTIVEM (3)
@@ -2943,8 +2936,8 @@ CamperGroup:
 	db "SAMUEL@", TRAINERTYPE_NORMAL; used, route 36
 	db  10, RATTATA
 	db  12, SANDSHREW
-	db  11, SPEAROW
-	db  11, SPEAROW
+	db  11, POLIWAG
+	db  11, PSYDUCK
 	db -1 ; end
 	
 	; CAMPER (1)
@@ -3145,10 +3138,10 @@ SageGroup:
 	db -1 ; end
 
 	; SAGE (7)
-	db "EDMOND@", TRAINERTYPE_NORMAL ;used
-	db  6, BELLSPROUT
-	db  8, ODDISH
-	db  8, GROWLITE
+	db "EDMOND@", TRAINERTYPE_MOVES ;used
+	db 19, GASTLY, NIGHT_SHADE, CURSE, HYPNOSIS, MEAN_LOOK
+	db 19, CURSTRAW, PSYWAVE, SPITE, FAINT_ATTACK, CURSE
+	db 20, HAUNTER, NIGHT_SHADE, CURSE, HYPNOSIS, MEAN_LOOK
 	db -1 ; end
 
 	; SAGE (8)
@@ -3170,9 +3163,11 @@ SageGroup:
 	db -1 ; end
 
 	; SAGE (11)
-	db "MASA@", TRAINERTYPE_NORMAL ;used
-	db 8, MIME_JR
-	db 10, RINRING
+	db "MASA@", TRAINERTYPE_MOVES ;used
+	db 18, GASTLY,	NIGHT_SHADE, CURSE, HYPNOSIS, MEAN_LOOK
+	db 20, GASTLY,	NIGHT_SHADE, CURSE, HYPNOSIS, MEAN_LOOK
+	db 18, CURSTRAW, PSYWAVE, SPITE, FAINT_ATTACK, CURSE
+	db 20, CURSTRAW, PSYWAVE, SPITE, FAINT_ATTACK, CURSE
 	db -1 ; end
 
 	; SAGE (12)
@@ -3528,8 +3523,27 @@ GruntFGroup:
 
 	; GRUNTF (5)
 	db "GRUNT@", TRAINERTYPE_NORMAL; used, radio tower 3f
-	db 31, EKANS
-	db 33, ARBOK
+	db 41, TANGELA
+	db 41, CLOYSTER
+	db -1 ; end
+	
+	; GRUNTF (6)
+	db "GRUNT@", TRAINERTYPE_NORMAL; used, base b3f
+	db 38, CUBONE
+	db 38, UMBREON
+	db 40, MAROWAK
+	db -1 ; end
+	
+	; GRUNTF (7)
+	db "GRUNT@", TRAINERTYPE_NORMAL; used, base b2f
+	db 38, WEEPINBELL
+	db 42, PRIMEAPE
+	db -1 ; end
+	
+	; GRUNTM (8)
+	db "GRUNT@", TRAINERTYPE_NORMAL; used, radio tower 2f
+	db 39, NIDORINA
+	db 41, DONPHAN
 	db -1 ; end
 
 MysticalmanGroup:

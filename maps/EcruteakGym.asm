@@ -4,6 +4,8 @@
 	const ECRUTEAKGYM_GRAMPS
 	const ECRUTEAKGYM_GRANNY1
 	const ECRUTEAKGYM_GRANNY2
+	const ECRUTEAKGYM_SAGE1
+	const ECRUTEAKGYM_SAGE2
 
 EcruteakGym_MapScripts:
 	db 2 ; scene scripts
@@ -19,7 +21,27 @@ EcruteakGym_MapScripts:
 .DummyScene:
 	end
 	
+TrainerSageEdmond:
+	trainer SAGE, EDMOND, EVENT_BEAT_SAGE_EDMOND, SageEdmondSeenText, SageEdmondBeatenText, 0, .Script
 
+.Script:
+	endifjustbattled
+	opentext
+	writetext SageEdmondAfterBattleText
+	waitbutton
+	closetext
+	end
+	
+TrainerSageMasa:
+	trainer SAGE, MASA, EVENT_BEAT_SAGE_MASA, SageMasaSeenText, SageMasaBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext SageMasaAfterBattleText
+	waitbutton
+	closetext
+	end
 
 TrainerMediumDoris:
 	trainer MEDIUM, DORIS, EVENT_BEAT_MEDIUM_DORIS, MediumDorisSeenText, MediumDorisBeatenText, 0, .Script
@@ -282,7 +304,19 @@ EcruteakGymGuyWinText:
 	cont "pure terror!"
 	done
 
+SageMasaSeenText:
+	text "I have little to"
+	line "say."
+	done
 
+SageMasaBeatenText:
+	text "…"
+	done
+
+SageMasaAfterBattleText:
+	text "Complete the"
+	line "task."
+	done
 
 MediumDorisSeenText:
 	text "Fufufufu…"
@@ -302,6 +336,23 @@ MediumDorisAfterBattleText:
 	line "that I predicted I"
 	cont "would lose to you."
 	done
+	
+SageEdmondSeenText:
+	text "I sense that a"
+	line "long journey"
+	cont "awaits you."
+	done
+
+SageEdmondBeatenText:
+	text "This was but a"
+	line "step."
+	done
+
+SageEdmondAfterBattleText:
+	text "Are you ready for"
+	line "what you will be"
+	cont "called to do?"
+	done
 
 EcruteakGym_MapEvents:
 	db 0, 0 ; filler
@@ -310,18 +361,18 @@ EcruteakGym_MapEvents:
 	warp_event  2,  9, AZALEA_TOWN, 5
 	warp_event  3,  9, AZALEA_TOWN, 9
 	warp_event  2,  7, ECRUTEAK_GYM, 4
-	warp_event 17,  4, ECRUTEAK_GYM, 3
-	warp_event 16,  4, ECRUTEAK_GYM, 3
-	warp_event  6,  4, ECRUTEAK_GYM, 3
-	warp_event  6,  5, ECRUTEAK_GYM, 3
-	warp_event  7,  8, ECRUTEAK_GYM, 3
-	warp_event  6,  8, ECRUTEAK_GYM, 3
-	warp_event  2,  4, ECRUTEAK_GYM, 3
-	warp_event  3,  4, ECRUTEAK_GYM, 3
-	warp_event 17,  6, ECRUTEAK_GYM, 3
-	warp_event 17,  7, ECRUTEAK_GYM, 3
+	warp_event 15,  4, ECRUTEAK_GYM, 3
+	warp_event 14,  4, ECRUTEAK_GYM, 3
+	warp_event  1,  4, ECRUTEAK_GYM, 3
+	warp_event 10,  7, ECRUTEAK_GYM, 3
 	warp_event 12,  8, ECRUTEAK_GYM, 3
+	warp_event 10,  8, ECRUTEAK_GYM, 3
+	warp_event  3,  5, ECRUTEAK_GYM, 3
+	warp_event  3,  4, ECRUTEAK_GYM, 3
+	warp_event 19,  4, ECRUTEAK_GYM, 3
+	warp_event 15,  2, ECRUTEAK_GYM, 3
 	warp_event 13,  8, ECRUTEAK_GYM, 3
+	warp_event 13,  7, ECRUTEAK_GYM, 3
 
 	db 0 ; coord events
 
@@ -329,9 +380,11 @@ EcruteakGym_MapEvents:
 	bg_event  1,  7, BGEVENT_READ, EcruteakGymStatue
 	bg_event  4,  7, BGEVENT_READ, EcruteakGymStatue
 
-	db 4 ; object events
-	object_event 16,  2, SPRITE_MORTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, EcruteakGymMortyScript, -1
-	object_event  0,  7, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, EcruteakGymGuyScript, -1
-	object_event  5,  6, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerMediumRebecca, -1
-	object_event 11,  5, SPRITE_GRANNY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerMediumDoris, -1
+	db 6 ; object events
+	object_event 10,  1, SPRITE_MORTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, EcruteakGymMortyScript, -1
+	object_event  5,  7, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, EcruteakGymGuyScript, -1
+	object_event  2,  2, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerMediumRebecca, -1
+	object_event 13,  6, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerMediumDoris, -1
+	object_event 17,  4, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerSageMasa, -1
+	object_event  6,  4, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerSageEdmond, -1
 

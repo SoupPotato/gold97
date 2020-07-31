@@ -139,8 +139,9 @@ SCENE_FINISHED EQU 1
 	const SCENE_MAHOGANYMART1F_LANCE_UNCOVERS_STAIRS ; 1
 
 ; wTeamRocketBaseB1FSceneID	
-	const_def 1
+	const_def 2
 	const SCENE_TEAMROCKETBASEB1F_NOTHING
+	const SCENE_EXECUTIVE
 
 ; wTeamRocketBaseB2FSceneID
 	const_def 1
