@@ -27,7 +27,7 @@ SpawnPoints:
 	spawn OLD_CITY,                27, 29
 	spawn ROUTE_31,                    9, 11
 	spawn AZALEA_TOWN,                15,  5
-	spawn CIANWOOD_CITY,              31, 17
+	spawn CIANWOOD_CITY,              33, 17
 	spawn GOLDENROD_CITY,             25, 15
 	spawn OLIVINE_CITY,                7,  9
 	spawn ROUTE_39,             	  13, 29

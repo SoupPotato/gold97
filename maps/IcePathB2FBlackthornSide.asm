@@ -39,8 +39,8 @@ IcePathB2FBlackthornSide_MapEvents:
 	db 4 ; warp events
 	warp_event  1, 17, CIANWOOD_CITY, 2
 	warp_event  3,  5, ICE_PATH_B1F, 1
-	warp_event 14, 17, ICE_PATH_B2F_MAHOGANY_SIDE, 8
-	warp_event 15, 17, ICE_PATH_B2F_MAHOGANY_SIDE, 8
+	warp_event 16, 17, ICE_PATH_B2F_MAHOGANY_SIDE, 8
+	warp_event 17, 17, ICE_PATH_B2F_MAHOGANY_SIDE, 8
 
 	db 0 ; coord events
 
@@ -49,4 +49,4 @@ IcePathB2FBlackthornSide_MapEvents:
 
 	db 2 ; object events
 	object_event  0, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IcePathB2FBlackthornSideTMRest, EVENT_ICE_PATH_B2F_BLACKTHORN_SIDE_TM_REST
-	object_event 14,  2, SPRITE_GROWLITHE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EnteiEvent, EVENT_RIVAL_AZALEA_TOWN
+	object_event 16,  2, SPRITE_GROWLITHE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EnteiEvent, EVENT_RIVAL_AZALEA_TOWN

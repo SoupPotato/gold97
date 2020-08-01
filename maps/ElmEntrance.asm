@@ -208,9 +208,10 @@ DaisySpeechText:
 	para "BLUE is my little"
 	line "brother."
 	
-	para "If Granpa gave you"
-	line "a task, I would"
-	cont "like to help out."
+	para "If Grandpa gave"
+	line "you a task, I would"
+	cont "would like to help"
+	cont "you out."
 
 	para "He was also"
 	line "supposed to give"

@@ -67,7 +67,7 @@ IcePathB2FMahoganySide_MapEvents:
 	db 0 ; coord events
 
 	db 1 ; bg events
-	bg_event 10, 25, BGEVENT_ITEM, IcePathB2FMahoganySideHiddenCarbos
+	bg_event  8, 28, BGEVENT_ITEM, IcePathB2FMahoganySideHiddenCarbos
 
 	db 2 ; object events
 ;	object_event 11,  3, SPRITE_BOULDER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IcePathB2FMahoganySideBoulder, EVENT_BOULDER_IN_ICE_PATH_1A

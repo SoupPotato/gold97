@@ -100,20 +100,23 @@ UndergroundSilverLeavesMovement:
 	
 UndergroundSilverBeforeText:
 	text "Hi, <PLAY_G>!"
-	para "…"
+	
 	para "You're about to"
 	line "climb MT.FUJI,"
 	cont "right?"
+	
 	para "It's been a long"
 	line "journey."
+	
 	para "We've both been"
 	line "through a lot."
+	
 	para "Are your #MON"
 	line "ready?"
-	para "Are my #MON"
-	line "ready?"
+
 	para "Let's face off,"
 	line "right here!"
+	
 	para "A battle between"
 	line "friends!"
 	done
@@ -129,59 +132,36 @@ UndergroundSilverLossText:
 UndergroundSilverAfterText:
 	text "You know what I've"
 	line "realized?"
+	
 	para "I was so excited"
 	line "to challenge the"
 	cont "LEAGUE."
+	
 	para "I wanted to have"
 	line "the strongest"
 	cont "#MON."
+	
 	para "I wanted to be the"
 	line "toughest trainer"
 	cont "there is."
-	para "I only wanted to"
-	line "defeat other"
-	para "trainers to prove"
-	line "how good I am."
+	
 	para "But dealing with"
 	line "TEAM ROCKET has"
 	cont "made me think."
-	para "They only saw"
-	line "#MON as tools"
-	cont "to be used."
-	para "And while their"
-	line "ambitions were"
-	para "evil, and mine had"
-	line "only been selfish,"
-	para "I realized that"
-	line "the way I thought"
-	para "about #MON was"
-	line "similar."
-	para "I saw my team only"
-	line "as a way to have"
-	cont "strength."
-	para "And training"
-	line "#MON shouldn't"
-	cont "be about that."
+
 	para "I've realized I"
 	line "need to treat my"
 	cont "team with love."
-	para "And I don't think"
+	
+	para "So, I don't think"
 	line "I'm quite ready to"
-	para "face the LEAGUE"
-	line "until I've worked"
-	para "on that more, and"
-	line "made sure my"
-	para "#MON are ready"
-	line "for the challenge."
-	para "So I'm going to do"
-	line "some more training"
-	cont "first."
-	para "I'm going to make"
-	line "sure me and my"
-	para "#MON are ready"
-	line "for the challenge,"
-	para "so we can battle"
-	line "as a team!"
+	cont "face the LEAGUE"
+	cont "until I've worked"
+	cont "on that."
+	
+	para "<PLAY_G>,"
+	line "good luck."
+	
 	para "I'll see you"
 	line "around soon."
 	done
@@ -189,11 +169,9 @@ UndergroundSilverAfterText:
 UndergroundPath_MapEvents:
 	db 0, 0 ; filler
 
-	db 4 ; warp events
+	db 2 ; warp events
 	warp_event 10, 33, VICTORY_ROAD_GATE, 3
-	warp_event 11, 33, VICTORY_ROAD_GATE, 4
 	warp_event 11,  1, CHERRYGROVE_CITY, 1
-	warp_event 12,  1, CHERRYGROVE_CITY, 2
 
 	db 1 ; coord events
 	coord_event 12,  7, SCENE_DEFAULT, RivalBattleFinal

@@ -79,59 +79,69 @@ KarensRoom_EnterMovement:
 	step_end
 
 KarenScript_KarenBeforeText:
-	text "Hi, there!"
+	text "Fwahaha!"
 
-	para "I am MISTY of the"
-	line "ELITE FOUR."
+	para "Your eyes do not"
+	line "deceive you!"
 
-	para "You're <PLAYER>?"
-	line "Well it's nice to"
-	cont "meet you."
+	para "It is I, GIOVANNI!"
+
+	para "While you may know"
+	line "my true identity,"
 	
-	para "But I'm not just"
-	line "here for friendly"
-	cont "greetings!"
+	para "I am also a valid"
+	line "member of the"
+	cont "ELITE FOUR!"
 	
-	para "My water #MON"
-	line "are ready to"
-	cont "battle."
-	para "And I'm ready to"
-	line "work with them to"
-	cont "defeat you!"
+	para "My ambition to"
+	line "restore my "
+	cont "organisation has"
+	cont "not changed,"
 	
-	para "Ready? I accept"
-	line "your challenge!"
+	para "but until then I"
+	line "will do what I"
+	cont "must to accomplish"
+	cont "it!"
+	
+	para "Now then,"
+	line "<PLAY_G>,"
+	
+	para "I hope you have"
+	line "prepared yourself."
+	
+	para "because your"
+	line "journey ends here!"
 	done
 
 KarenScript_KarenBeatenText:
-	text "Well, looks like"
-	line "you were ready to"
-	para "battle alongside"
-	line "your #MON as"
-	cont "well!"
+	text "Argh!"
+
+	para "It seems you are"
+	line "much stronger"
+	cont "than last time!"
 	done
 
 KarenScript_KarenDefeatText:
-	text "The best #MON"
-	line "trainers aren't"
-	para "the ones who pick"
-	line "the strongest"
-	cont "#MON."
-	para "They're the ones"
-	line "who battle with"
-	cont "their favorites,"
-	para "and build a bond"
-	line "between trainer"
-	cont "and #MON."
-	
-	para "And that's how"
-	line "they win."
-	
-	para "I think you've"
-	line "figured that out."
+	text "I loathe you."
 
-	para "Go on--the CHAM-"
-	line "PION is waiting."
+	para "But you have my"
+	line "respect."
+	
+	para "Perhaps if times"
+	line "were different,"
+	
+	para "we could have been"
+	line "allies..."
+	
+	para "Regardless..."
+	
+	para "You have defeated"
+	line "me."
+
+	para "Proceed ahead."
+	
+	para "The CHAMPION is"
+	line "waiting..."
 	done
 
 KarensRoom_MapEvents:
@@ -148,4 +158,4 @@ KarensRoom_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event  5,  7, SPRITE_MISTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, KarenScript_Battle, -1
+	object_event  5,  7, SPRITE_BROCK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, KarenScript_Battle, -1

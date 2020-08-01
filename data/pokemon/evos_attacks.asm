@@ -876,7 +876,7 @@ PoliwagEvosAttacks:
 
 PoliwhirlEvosAttacks:
 	db EVOLVE_ITEM, WATER_STONE, POLIWRATH
-	db EVOLVE_ITEM, KINGS_ROCK, POLITOED
+	db EVOLVE_ITEM, TRADE_STONE, POLITOED
 	db EVOLVE_TRADE, KINGS_ROCK, POLITOED
 	db 0 ; no more evolutions
 	db 1, BUBBLE
@@ -1137,7 +1137,7 @@ RapidashEvosAttacks:
 
 SlowpokeEvosAttacks:
 	db EVOLVE_LEVEL, 37, SLOWBRO
-	db EVOLVE_ITEM, KINGS_ROCK, SLOWKING
+	db EVOLVE_ITEM, TRADE_STONE, SLOWKING
 	db EVOLVE_TRADE, KINGS_ROCK, SLOWKING
 	db 0 ; no more evolutions
 	db 1, CURSE
@@ -1206,6 +1206,7 @@ MagnetonEvosAttacks:
 	db 0 ; no more level-up moves
 
 FarfetchDEvosAttacks:
+	db EVOLVE_LEVEL, 44, MADAME
 	db 0 ; no more evolutions
 	db 1, PECK
 	db 1, SAND_ATTACK
@@ -1396,7 +1397,7 @@ GengarEvosAttacks:
 	db 0 ; no more level-up moves
 
 OnixEvosAttacks:
-	db EVOLVE_ITEM, METAL_COAT, STEELIX
+	db EVOLVE_ITEM, TRADE_STONE, STEELIX
 	db EVOLVE_TRADE, METAL_COAT, STEELIX
 	db 0 ; no more evolutions
 	db 1, TACKLE
@@ -1605,6 +1606,7 @@ HitmonchanEvosAttacks:
 	db 0 ; no more level-up moves
 
 LickitungEvosAttacks:
+	db EVOLVE_LEVEL, 42, LICKILICKY
 	db 0 ; no more evolutions
 	db 1, LICK
 	db 6, DEFENSE_CURL
@@ -1755,7 +1757,7 @@ HorseaEvosAttacks:
 	db 0 ; no more level-up moves
 
 SeadraEvosAttacks:
-	db EVOLVE_ITEM, DRAGON_SCALE, KINGDRA
+	db EVOLVE_ITEM, TRADE_STONE, KINGDRA
 	db EVOLVE_TRADE, DRAGON_SCALE, KINGDRA
 	db 0 ; no more evolutions
     db 1, BUBBLE
@@ -1851,7 +1853,7 @@ MrMimeEvosAttacks:
 	db 0 ; no more level-up moves
 
 ScytherEvosAttacks:
-	db EVOLVE_ITEM, METAL_COAT, SCIZOR
+	db EVOLVE_ITEM, TRADE_STONE, SCIZOR
 	db EVOLVE_TRADE, METAL_COAT, SCIZOR
 	db 0 ; no more evolutions
 	db 1, QUICK_ATTACK
@@ -1915,6 +1917,7 @@ MagmarEvosAttacks:
 	db 0 ; no more level-up moves
 
 PinsirEvosAttacks:
+	db EVOLVE_LEVEL, 42, PLUCKROSS
 	db 0 ; no more evolutions
 	db 1, VICEGRIP
 	db 7, FOCUS_ENERGY
@@ -1979,6 +1982,8 @@ LaprasEvosAttacks:
 	db 0 ; no more level-up moves
 
 DittoEvosAttacks:
+	db EVOLVE_ITEM, TRADE_STONE, ANIMON
+	db EVOLVE_TRADE, METAL_COAT, ANIMON
 	db 0 ; no more evolutions
 	db 1, TRANSFORM
 	db 0 ; no more level-up moves
@@ -1989,6 +1994,7 @@ EeveeEvosAttacks:
 	db EVOLVE_ITEM, FIRE_STONE, FLAREON
 	db EVOLVE_HAPPINESS, TR_MORNDAY, ESPEON
 	db EVOLVE_HAPPINESS, TR_NITE, UMBREON
+	db EVOLVE_ITEM, LEAF_STONE, LEAFEON
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, TAIL_WHIP
@@ -2049,7 +2055,7 @@ FlareonEvosAttacks:
 	db 0 ; no more level-up moves
 
 PorygonEvosAttacks:
-	db EVOLVE_ITEM, UP_GRADE, PORYGON2
+	db EVOLVE_ITEM, TRADE_STONE, PORYGON2
 	db EVOLVE_TRADE, UP_GRADE, PORYGON2
 	db 0 ; no more evolutions
 	db 1, TACKLE
@@ -3124,7 +3130,7 @@ SnubbullEvosAttacks:
 	db 4, TAIL_WHIP
 	db 8, CHARM
 	db 13, BITE
-	db 19, PSYWAVE
+	db 19, HEADBUTT
 	db 26, SAFEGUARD
 	db 34, SWEET_KISS
 	db 43, DOUBLE_EDGE
@@ -3724,16 +3730,19 @@ BlisseyEvosAttacks:
 
 HoOhEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, SACRED_FIRE
-	db 11, SAFEGUARD
-	db 22, GUST
-	db 33, RECOVER
-	db 44, FIRE_BLAST
-	db 55, SUNNY_DAY
-	db 66, SWIFT
-	db 77, WHIRLWIND
-	db 88, ANCIENTPOWER
-	db 99, FUTURE_SIGHT
+	db 1, SWIFT
+	db 1, WHIRLWIND
+	db 9, GUST
+	db 15, DOUBLE_EDGE
+	db 23, PSYCHIC_M
+	db 29, SUNNY_DAY
+	db 37, FIRE_BLAST
+	db 43, SACRED_FIRE
+	db 50, ANCIENTPOWER
+	db 57, SAFEGUARD
+	db 65, RECOVER
+	db 71, FUTURE_SIGHT
+	db 79, SKY_ATTACK
 	db 0 ; no more level-up moves
 
 LeafeonEvosAttacks:

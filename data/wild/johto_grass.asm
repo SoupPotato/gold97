@@ -752,16 +752,16 @@ JohtoGrassWildMons:
 	db 30, ARBOK
 	db 29, PONYTA
 	db 30, PHANPY
-	db 30, MILTANK
-	db 32, RAPIDASH
+	db 30, TAUROS
+	db 32, TAUROS
 	; day
 	db 28, EKANS
 	db 28, FARFETCH_D
 	db 30, ARBOK
 	db 29, PONYTA
 	db 30, PHANPY
-	db 30, MILTANK
-	db 32, RAPIDASH
+	db 30, TAUROS
+	db 32, TAUROS
 	; nite
 	db 28, EKANS
 	db 28, FARFETCH_D
@@ -990,110 +990,110 @@ JohtoGrassWildMons:
 	map_id NATIONAL_PARK
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 22, LEDIAN
-	db 22, SKIPLOOM
-	db 20, SUNFLORA
-	db 21, SNUBBULL
-	db 22, FLAAFFY
-	db 22, CHANSEY
-	db 23, CHANSEY
+	db 34, SKIPLOOM
+	db 34, SNUBBULL
+	db 35, SUNFLORA
+	db 33, TOGEPI
+	db 34, SCYTHER
+	db 35, CHANSEY
+	db 36, CHANSEY
 	; day
-	db 22, PARAS
-	db 22, SKIPLOOM
-	db 20, VENONAT
-	db 21, SNUBBULL
-	db 22, FLAAFFY
-	db 22, CHANSEY
-	db 23, CHANSEY
+	db 34, SKIPLOOM
+	db 34, SNUBBULL
+	db 35, SUNFLORA
+	db 33, TOGEPI
+	db 34, SCYTHER
+	db 35, CHANSEY
+	db 36, CHANSEY
 	; nite
-	db 22, ARIADOS
-	db 22, SKIPLOOM
-	db 20, VENONAT
-	db 21, SNUBBULL
-	db 22, FLAAFFY
-	db 22, CHANSEY
-	db 23, CHANSEY
+	db 34, ARIADOS
+	db 34, CUBONE
+	db 35, NOCTOWL
+	db 33, TOGEPI
+	db 34, SCYTHER
+	db 35, CHANSEY
+	db 36, CHANSEY
 
 	map_id ICE_PATH_B1F
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	db 22, KOFFING
-	db 25, GRAVELER
-	db 20, RHYHORN
-	db 21, PHANPY
-	db 25, DONPHAN
-	db 22, MAGMAR
-	db 23, MAGMAR
+	db 37, KOFFING
+	db 38, GRAVELER
+	db 37, RHYHORN
+	db 39, MAGMAR
+	db 40, DONPHAN
+	db 40, WEEZING
+	db 40, MAGMAR
 	; day
-	db 22, KOFFING
-	db 25, GRAVELER
-	db 20, RHYHORN
-	db 21, PHANPY
-	db 25, DONPHAN
-	db 22, MAGMAR
-	db 23, MAGMAR
+	db 37, KOFFING
+	db 38, GRAVELER
+	db 37, RHYHORN
+	db 39, MAGMAR
+	db 40, DONPHAN
+	db 40, WEEZING
+	db 40, MAGMAR
 	; nite
-	db 22, KOFFING
-	db 25, GRAVELER
-	db 20, RHYHORN
-	db 21, PHANPY
-	db 25, DONPHAN
-	db 22, MAGMAR
-	db 23, MAGMAR
+	db 37, KOFFING
+	db 38, GRAVELER
+	db 37, RHYHORN
+	db 39, MAGMAR
+	db 40, DONPHAN
+	db 40, WEEZING
+	db 40, MAGMAR
 	
 	map_id ICE_PATH_B2F_BLACKTHORN_SIDE
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	db 22, GRIMER
-	db 25, GRAVELER
-	db 20, RHYHORN
-	db 21, PHANPY
-	db 25, DONPHAN
-	db 22, MAGMAR
-	db 23, MAGMAR
+	db 37, GRIMER
+	db 38, GRAVELER
+	db 37, RHYHORN
+	db 39, MAGMAR
+	db 40, DONPHAN
+	db 40, MUK
+	db 40, MAGMAR
 	; day
-	db 22, GRIMER
-	db 25, GRAVELER
-	db 20, RHYHORN
-	db 21, PHANPY
-	db 25, DONPHAN
-	db 22, MAGMAR
-	db 23, MAGMAR
+	db 37, GRIMER
+	db 38, GRAVELER
+	db 37, RHYHORN
+	db 39, MAGMAR
+	db 40, DONPHAN
+	db 40, MUK
+	db 40, MAGMAR
 	; nite
-	db 22, GRIMER
-	db 25, GRAVELER
-	db 20, RHYHORN
-	db 21, PHANPY
-	db 25, DONPHAN
-	db 22, MAGMAR
-	db 23, MAGMAR
+	db 37, GRIMER
+	db 38, GRAVELER
+	db 37, RHYHORN
+	db 39, MAGMAR
+	db 40, DONPHAN
+	db 40, MUK
+	db 40, MAGMAR
 	
 	map_id ICE_PATH_B2F_MAHOGANY_SIDE
-	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	db 22, GRIMER
-	db 25, GRAVELER
-	db 20, RHYHORN
-	db 21, PHANPY
-	db 25, BOMSEAL
-	db 22, MAGMAR
-	db 23, MAGMAR
+	db 37, GRIMER
+	db 38, GRAVELER
+	db 37, RHYHORN
+	db 39, MAGMAR
+	db 40, BOMSEAL
+	db 40, MAGMAR
+	db 42, STEELIX
 	; day
-	db 22, GRIMER
-	db 25, GRAVELER
-	db 20, RHYHORN
-	db 21, PHANPY
-	db 25, BOMSEAL
-	db 22, MAGMAR
-	db 23, MAGMAR
+	db 37, GRIMER
+	db 38, GRAVELER
+	db 37, RHYHORN
+	db 39, MAGMAR
+	db 40, BOMSEAL
+	db 40, MAGMAR
+	db 42, STEELIX
 	; nite
-	db 22, GRIMER
-	db 25, GRAVELER
-	db 20, RHYHORN
-	db 21, PHANPY
-	db 25, BOMSEAL
-	db 22, MAGMAR
-	db 23, MAGMAR
+	db 37, GRIMER
+	db 38, GRAVELER
+	db 37, RHYHORN
+	db 39, MAGMAR
+	db 40, BOMSEAL
+	db 40, MAGMAR
+	db 42, STEELIX
 
 	map_id WHIRL_ISLAND_B1F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
@@ -1179,136 +1179,136 @@ JohtoGrassWildMons:
 	map_id ROUTE_34
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 23, LEDIAN
-	db 24, SKIPLOOM
-	db 24, TANGELA
-	db 23, MANKEY
-	db 25, FLAAFFY
-	db 26, GROWLITHE
-	db 26, GROWLITHE
+	db 38, FARFETCH_D
+	db 39, SANDSLASH
+	db 38, PONYTA
+	db 41, DODRIO
+	db 41, RAPIDASH
+	db 40, MADAME
+	db 42, MADAME
 	; day
-	db 23, LEDIAN
-	db 24, SKIPLOOM
-	db 24, TANGELA
-	db 23, MANKEY
-	db 25, FLAAFFY
-	db 26, GROWLITHE
-	db 26, GROWLITHE
+	db 38, FARFETCH_D
+	db 39, SANDSLASH
+	db 38, PONYTA
+	db 41, DODRIO
+	db 41, RAPIDASH
+	db 40, MADAME
+	db 42, MADAME
 	; nite
-	db 23, LEDIAN
-	db 24, SKIPLOOM
-	db 24, TANGELA
-	db 23, MANKEY
-	db 25, FLAAFFY
-	db 26, GROWLITHE
-	db 26, GROWLITHE
+	db 38, CURSTRAW
+	db 39, VENOMOTH
+	db 38, TWINBORUS
+	db 41, NOCTOWL
+	db 41, GIRAFARIG
+	db 40, CURPAN
+	db 42, CURPAN
 	
 	map_id ROUTE_9
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 23, PIDGEOTTO
-	db 24, RATICATE
-	db 24, TANGELA
-	db 23, JIGGLYPUFF
-	db 25, SKARMORY
-	db 26, MR__MIME
-	db 26, MR__MIME
+	db 39, PIDGEOTTO
+	db 39, RATICATE
+	db 40, TANGELA
+	db 40, JIGGLYPUFF
+	db 43, SKARMORY
+	db 41, MR__MIME
+	db 42, MR__MIME
 	; day
-	db 23, PIDGEOTTO
-	db 24, RATICATE
-	db 24, TANGELA
-	db 23, JIGGLYPUFF
-	db 25, SKARMORY
-	db 26, MR__MIME
-	db 26, MR__MIME
+	db 39, PIDGEOTTO
+	db 39, RATICATE
+	db 40, TANGELA
+	db 40, JIGGLYPUFF
+	db 43, SKARMORY
+	db 41, MR__MIME
+	db 42, MR__MIME
 	; nite
-	db 23, PIDGEOTTO
-	db 24, RATICATE
-	db 24, TANGELA
-	db 23, JIGGLYPUFF
-	db 25, SKARMORY
-	db 26, MR__MIME
-	db 26, MR__MIME
+	db 39, NOCTOWL
+	db 39, RATICATE
+	db 40, GOLBAT
+	db 40, JIGGLYPUFF
+	db 43, SKARMORY
+	db 41, MR__MIME
+	db 42, MR__MIME
 	
 	map_id ROUTE_27
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 28, DODUO
-	db 28, ARBOK
-	db 30, RATICATE
-	db 30, GRAVELER
-	db 32, TAUROS
-	db 30, DODRIO
-	db 30, DODRIO
+	db 40, DODUO
+	db 42, ARBOK
+	db 42, RATICATE
+	db 42, GRAVELER
+	db 43, TAUROS
+	db 42, DODRIO
+	db 44, DODRIO
 	; day
-	db 28, DODUO
-	db 28, ARBOK
-	db 30, RATICATE
-	db 30, GRAVELER
-	db 32, TAUROS
-	db 30, DODRIO
-	db 30, DODRIO
+	db 40, DODUO
+	db 42, ARBOK
+	db 42, RATICATE
+	db 42, GRAVELER
+	db 43, TAUROS
+	db 42, DODRIO
+	db 44, DODRIO
 	; nite
-	db 28, QUAGSIRE
-	db 28, NOCTOWL
-	db 30, RATICATE
-	db 30, QUAGSIRE
-	db 32, NOCTOWL
-	db 32, NOCTOWL
-	db 32, NOCTOWL
+	db 40, QUAGSIRE
+	db 42, NOCTOWL
+	db 42, RATICATE
+	db 42, GRAVELER
+	db 43, NOCTOWL
+	db 42, MURKROW
+	db 44, MURKROW
 	
 	map_id VICTORY_ROAD
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	db 32, ONIX
-	db 32, GOLBAT
-	db 33, RHYHORN
-	db 33, DUGTRIO
-	db 34, DUGTRIO
-	db 34, KANGASKHAN
-	db 34, KANGASKHAN
+	db 42, ONIX
+	db 42, GOLBAT
+	db 43, RHYHORN
+	db 43, GRAVELER
+	db 44, DONPHAN
+	db 44, KANGASKHAN
+	db 46, KANGASKHAN
 	; day
-	db 32, ONIX
-	db 32, GOLBAT
-	db 33, RHYHORN
-	db 33, DUGTRIO
-	db 34, DUGTRIO
-	db 34, KANGASKHAN
-	db 34, KANGASKHAN
+	db 42, ONIX
+	db 42, GOLBAT
+	db 43, RHYHORN
+	db 43, GRAVELER
+	db 44, DONPHAN
+	db 44, KANGASKHAN
+	db 46, KANGASKHAN
 	; nite
-	db 32, ONIX
-	db 32, GOLBAT
-	db 33, RHYHORN
-	db 33, DUGTRIO
-	db 34, DUGTRIO
-	db 34, KANGASKHAN
-	db 34, KANGASKHAN
+	db 42, ONIX
+	db 42, GOLBAT
+	db 43, RHYHORN
+	db 43, GRAVELER
+	db 44, DONPHAN
+	db 44, KANGASKHAN
+	db 46, KANGASKHAN
 	
 	map_id VICTORY_ROAD_2F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	db 33, ONIX
-	db 33, GOLBAT
-	db 34, RHYHORN
-	db 34, DUGTRIO
-	db 35, DUGTRIO
-	db 35, KANGASKHAN
-	db 35, KANGASKHAN
+	db 43, RHYHORN
+	db 43, GOLBAT
+	db 44, MACHOKE
+	db 44, DUGTRIO
+	db 46, RHYDON
+	db 45, KANGASKHAN
+	db 46, KANGASKHAN
 	; day
-	db 33, ONIX
-	db 33, GOLBAT
-	db 34, RHYHORN
-	db 34, DUGTRIO
-	db 35, DUGTRIO
-	db 35, KANGASKHAN
-	db 35, KANGASKHAN
+	db 43, RHYHORN
+	db 43, GOLBAT
+	db 44, MACHOKE
+	db 44, DUGTRIO
+	db 46, RHYDON
+	db 45, KANGASKHAN
+	db 46, KANGASKHAN
 	; nite
-	db 33, ONIX
-	db 33, GOLBAT
-	db 34, RHYHORN
-	db 34, DUGTRIO
-	db 35, DUGTRIO
-	db 35, KANGASKHAN
-	db 35, KANGASKHAN
+	db 43, RHYHORN
+	db 43, GOLBAT
+	db 44, MACHOKE
+	db 44, DUGTRIO
+	db 46, RHYDON
+	db 45, KANGASKHAN
+	db 46, KANGASKHAN
 
 	db -1 ; end

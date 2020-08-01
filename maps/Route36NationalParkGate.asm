@@ -863,8 +863,8 @@ Route36NationalParkGate_MapEvents:
 	db 4 ; warp events
 	warp_event  0,  7, NATIONAL_PARK, 1
 	warp_event  1,  7, NATIONAL_PARK, 2
-	warp_event  8,  7, FUCHSIA_CITY, 8
-	warp_event  9,  7, FUCHSIA_CITY, 8
+	warp_event  8,  7, FUCHSIA_CITY, 9
+	warp_event  9,  7, FUCHSIA_CITY, 9
 
 	db 0 ; coord events
 

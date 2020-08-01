@@ -123,7 +123,7 @@ VictoryRoadGate_MapEvents:
 	warp_event  9, 17, ROUTE_14, 1
 	warp_event 10, 17, ROUTE_14, 1
 	warp_event  9,  0, UNDERGROUND_PATH, 1
-	warp_event 10,  0, UNDERGROUND_PATH, 2
+	warp_event 10,  0, UNDERGROUND_PATH, 1
 
 	db 1 ; coord events
 	coord_event 10, 11, SCENE_DEFAULT, VictoryRoadGateBadgeCheckScene

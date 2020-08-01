@@ -85,23 +85,26 @@ WillScript_WillBeforeText:
 
 	para "Allow me to intro-"
 	line "duce myself. I am"
-	cont "WILL."
+	cont "LORELEI."
 
-	para "I have trained all"
-	line "around the world,"
+	para "My freezing cold"
+	line "#MON have left"
 
-	para "making my psychic"
-	line "#MON powerful."
+	para "many challengers"
+	line "frozen with fear."
 
-	para "And, at last, I've"
-	line "been accepted into"
-	cont "the ELITE FOUR."
+	para "Ice-types are cold"
+	line "and ruthless but"
+	cont "also beautiful."
 
-	para "I can only keep"
-	line "getting better!"
+	para "Your #MON"
+	line "will be at my"
+	cont "mercy when they"
+	cont "frozen solid!"
 
-	para "Losing is not an"
-	line "option!"
+	para "Hehe..."
+	
+	para "Let us begin!"
 	done
 
 WillScript_WillBeatenText:
@@ -110,21 +113,18 @@ WillScript_WillBeatenText:
 	done
 
 WillScript_WillDefeatText:
-	text "Even though I was"
-	line "defeated, I won't"
-	cont "change my course."
+	text "Well done trainer."
 
-	para "I will continue"
-	line "battling until I"
+	para "But it will only"
+	line "get harder from"
+	cont "here."
 
-	para "stand above all"
-	line "trainers!"
-
-	para "Now, <PLAYER>, move"
-	line "on and experience"
-
-	para "the true ferocity"
-	line "of the ELITE FOUR."
+	para "Go."
+	
+	para "You have only"
+	line "experienced a"
+	cont "taste of the"
+	cont "ELITE FOUR."	
 	done
 
 WillsRoom_MapEvents:

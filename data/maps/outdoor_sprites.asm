@@ -173,6 +173,7 @@ FuchsiaGroupSprites:
 	db SPRITE_ROCKET
 	db SPRITE_POKEFAN_F
 	db SPRITE_TWIN
+	db SPRITE_BIRD
 	db SPRITE_OFFICER
 	db SPRITE_POKE_BALL
 	db SPRITE_FRUIT_TREE
@@ -204,6 +205,7 @@ NewBarkGroupSprites:
 	db SPRITE_BUG_CATCHER
 	db SPRITE_POKEFAN_F
 	; max 9 of 9 walking sprites
+	db SPRITE_COOLTRAINER_F
 	db SPRITE_POKE_BALL
 	db SPRITE_FRUIT_TREE
 	db 0 ;end

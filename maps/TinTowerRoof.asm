@@ -35,10 +35,11 @@ TinTowerHoOh:
 	clearevent EVENT_RIVAL_TEAM_ROCKET_BASE
 	clearevent EVENT_AZALEA_TOWN_SLOWPOKES
 	writecode VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
-	loadwildmon HO_OH, 30
+	loadwildmon HO_OH, 45
 ;	writecode VAR_BATTLETYPE, BATTLETYPE_LEGENDKANTO
 	startbattle
 	disappear TINTOWERROOF_HO_OH
+	setevent EVENT_RELEASED_THE_BEASTS
 	reloadmapafterbattle
 	setevent EVENT_SET_WHEN_FOUGHT_HO_OH
 	end
@@ -58,4 +59,4 @@ TinTowerRoof_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event  8,  8, SPRITE_HO_OH, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TinTowerHoOh, EVENT_TIN_TOWER_ROOF_HO_OH
+	object_event  9,  7, SPRITE_HO_OH, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TinTowerHoOh, EVENT_TIN_TOWER_ROOF_HO_OH
