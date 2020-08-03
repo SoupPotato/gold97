@@ -959,11 +959,21 @@ CrystalIntroSequence:
 StartTitleScreen:
 	ldh a, [rSVBK]
 	push af
-	ld a, BANK(wBGPals1)
+	ld a, BANK(wLYOverrides)
 	ldh [rSVBK], a
 
-	call .TitleScreen
-	call DelayFrame
+	call ChannelsOff
+	call SFXChannelsOff
+	farcall TitleScreen
+
+;; Play starting sound effect
+	;ld de, SFX_TITLE_SCREEN_ENTRANCE
+	;jp PlaySFX
+
+; Play the title screen music.
+	ld de, MUSIC_TITLE
+	call PlayMusic
+
 .loop
 	call RunTitleScreen
 	jr nc, .loop
@@ -1011,33 +1021,17 @@ StartTitleScreen:
 	dw CrystalIntroSequence
 	dw ResetClock
 
-.TitleScreen:
-	farcall _TitleScreen
-	ret
-
 RunTitleScreen:
 	ld a, [wJumptableIndex]
 	bit 7, a
 	jr nz, .done_title
 	call TitleScreenScene
-	farcall SuicuneFrameIterator
 	call DelayFrame
 	and a
 	ret
 
 .done_title
 	scf
-	ret
-
-Unreferenced_Function6292:
-	ldh a, [hVBlankCounter]
-	and $7
-	ret nz
-	ld hl, wLYOverrides + $5f
-	ld a, [hl]
-	dec a
-	ld bc, 2 * SCREEN_WIDTH
-	call ByteFill
 	ret
 
 TitleScreenScene:
@@ -1052,15 +1046,10 @@ TitleScreenScene:
 	jp hl
 
 .scenes
-	dw TitleScreenEntrance
+	;dw TitleScreenEntrance
 	dw TitleScreenTimer
 	dw TitleScreenMain
 	dw TitleScreenEnd
-
-.Unreferenced_NextScene:
-	ld hl, wJumptableIndex
-	inc [hl]
-	ret
 
 TitleScreenEntrance:
 ; Animate the logo:
@@ -1090,8 +1079,6 @@ TitleScreenEntrance:
 	inc hl
 	dec b
 	jr nz, .loop
-
-	farcall AnimateTitleCrystal
 	ret
 
 .done
