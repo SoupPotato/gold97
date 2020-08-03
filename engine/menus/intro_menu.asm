@@ -977,8 +977,8 @@ StartTitleScreen:
 	ld b, SCGB_DIPLOMA
 	call GetSGBLayout
 	call UpdateTimePals
-	ld a, [wIntroSceneFrameCounter]
-	cp $5
+	ld a, [wTitleScreenSelectedOption]
+	cp 5
 	jr c, .ok
 	xor a
 .ok

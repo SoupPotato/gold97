@@ -9,6 +9,14 @@ TitleScreen:
 	ld a, BANK(wLYOverrides)
 	ldh [rSVBK], a
 
+; Initialize variables
+	xor a
+	ld hl, wJumptableIndex
+	ld [hli], a ; wJumptableIndex
+	ld [hli], a ; wTitleScreenSelectedOption
+	ld [hli], a ; wTitleScreenTimer
+	ld [hl], a  ; wTitleScreenTimer + 1
+
 	call TitleScreenLoadGFX
 
 	call ChannelsOff
@@ -177,7 +185,7 @@ TitleScreenMain:
 	ld a, 1
 
 .done
-	ld [wIntroSceneFrameCounter], a
+	ld [wTitleScreenSelectedOption], a
 
 ; Return to the intro sequence.
 	ld hl, wJumptableIndex
@@ -202,7 +210,7 @@ TitleScreenMain:
 
 .clock_reset
 	ld a, 4
-	ld [wIntroSceneFrameCounter], a
+	ld [wTitleScreenSelectedOption], a
 
 ; Return to the intro sequence.
 	ld hl, wJumptableIndex
@@ -220,7 +228,7 @@ TitleScreenEnd:
 	ret nz
 
 	ld a, 2
-	ld [wIntroSceneFrameCounter], a
+	ld [wTitleScreenSelectedOption], a
 
 ; Back to the intro.
 	ld hl, wJumptableIndex
@@ -238,11 +246,6 @@ TitleScreenLoadGFX:
 	ldh [hSCX], a
 	ldh [hSCY], a
 	ldh [hBGMapMode], a
-	ld hl, wJumptableIndex
-	ld [hli], a ; wJumptableIndex
-	ld [hli], a ; wIntroSceneFrameCounter
-	ld [hli], a ; wTitleScreenTimer
-	ld [hl], a  ; wTitleScreenTimer + 1
 
 ; Decompress graphics
 	ld de, vTiles1
