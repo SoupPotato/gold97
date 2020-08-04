@@ -170,8 +170,8 @@ MonMenuIcons:
 	db ICON_BUG         ; SPINARAK
 	db ICON_BUG         ; ARIADOS
 	db ICON_BAT         ; CROBAT
-	db ICON_MONSTER     ; KOTORA
-	db ICON_MONSTER     ; RAITORA
+	db ICON_FOX         ; KOTORA
+	db ICON_FOX         ; RAITORA
 	db ICON_PIKACHU     ; PICHU
 	db ICON_CLEFAIRY    ; CLEFFA
 	db ICON_JIGGLYPUFF  ; IGGLYBUFF
@@ -183,7 +183,7 @@ MonMenuIcons:
 	db ICON_MONSTER     ; FLAAFFY
 	db ICON_MONSTER     ; AMPHAROS
 	db ICON_ODDISH      ; BELLOSSOM
-	db ICON_JIGGLYPUFF  ; MARILL
+	db ICON_CLEFAIRY    ; MARILL
 	db ICON_LAPRAS      ; BOMSEAL
 	db ICON_ODDISH      ; BIPETAL
 	db ICON_POLIWAG     ; POLITOED
@@ -195,7 +195,7 @@ MonMenuIcons:
 	db ICON_ODDISH      ; SUNFLORA
 	db ICON_FISH        ; OSUNFISH
 	db ICON_FISH        ; ANCHORAGE
-	db ICON_MONSTER     ; GROTESS
+	db ICON_FISH        ; GROTESS
 	db ICON_FOX         ; ESPEON
 	db ICON_FOX         ; UMBREON
 	db ICON_BIRD        ; MURKROW
@@ -225,7 +225,7 @@ MonMenuIcons:
 	db ICON_FOX         ; GROWLITE
 	db ICON_FISH        ; REMORAID
 	db ICON_FISH        ; OCTILLERY
-	db ICON_MONSTER     ; DELIBIRD
+	db ICON_BIRD        ; DELIBIRD
 	db ICON_FISH        ; MANTINE
 	db ICON_BIRD        ; SKARMORY
 	db ICON_FOX         ; HOUNDOUR

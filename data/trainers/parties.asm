@@ -206,21 +206,21 @@ WillGroup:
 	db -1 ; end
 
 PKMNTrainerGroup:
-	; CAL (1)
+	; CAL (1) ;unused
 	db "CAL@", TRAINERTYPE_NORMAL
 	db 10, CHIKORITA
 	db 10, FLAMBEAR
 	db 10, CRUISE
 	db -1 ; end
 
-	; CAL (2)
+	; CAL (2) ;unused
 	db "CAL@", TRAINERTYPE_NORMAL
 	db 30, BUDLEEF
 	db 30, VOLBEAR
 	db 30, AQUALLO
 	db -1 ; end
 
-	; CAL (3)
+	; CAL (3) ;unused
 	db "CAL@", TRAINERTYPE_NORMAL
 	db 50, MEGANIUM
 	db 50, DYNABEAR
@@ -436,7 +436,7 @@ SchoolboyGroup:
 	db -1 ; end
 
 	; SCHOOLBOY (5)
-	db "DANNY@", TRAINERTYPE_NORMAL
+	db "DANNY@", TRAINERTYPE_NORMAL ;unused
 	db 31, JYNX
 	db 31, ELECTABUZZ
 	db 31, MAGMAR
@@ -605,7 +605,7 @@ BirdKeeperGroup:
 	db 18, SPEAROW
 	db -1 ; end
 
-	; BIRD_KEEPER (7)
+	; BIRD_KEEPER (7) ;unused
 	db "VANCE@", TRAINERTYPE_NORMAL
 	db 25, PIDGEOTTO
 	db 25, PIDGEOTTO
@@ -670,13 +670,13 @@ BirdKeeperGroup:
 	db 42, MADAME, SWORDS_DANCE, WING_ATTACK, FLY, SLASH
 	db -1 ; end
 
-	; BIRD_KEEPER (18)
+	; BIRD_KEEPER (18) ;unused
 	db "VANCE@", TRAINERTYPE_NORMAL
 	db 32, PIDGEOTTO
 	db 32, PIDGEOTTO
 	db -1 ; end
 
-	; BIRD_KEEPER (19)
+	; BIRD_KEEPER (19) ;unused
 	db "VANCE@", TRAINERTYPE_MOVES
 	db 38, PIDGEOT,    TOXIC, QUICK_ATTACK, WHIRLWIND, FLY
 	db 38, PIDGEOT,    SWIFT, DETECT, STEEL_WING, FLY
@@ -838,7 +838,7 @@ CooltrainerMGroup:
 	db -1 ; end
 
 	; COOLTRAINERM (6)
-	db "GAVEN@", TRAINERTYPE_MOVES
+	db "GAVEN@", TRAINERTYPE_MOVES ;unused
 	db 35, VICTREEBEL, WRAP, TOXIC, ACID, RAZOR_LEAF
 	db 35, KINGLER,    BUBBLEBEAM, STOMP, GUILLOTINE, PROTECT
 	db 35, FLAREON,    SAND_ATTACK, QUICK_ATTACK, BITE, FIRE_SPIN
@@ -851,7 +851,7 @@ CooltrainerMGroup:
 	db 39, FLAREON,    NO_ITEM,      FLAMETHROWER, QUICK_ATTACK, BITE, FIRE_SPIN
 	db -1 ; end
 
-	; COOLTRAINERM (8)
+	; COOLTRAINERM (8) ;unused
 	db "RYAN@", TRAINERTYPE_MOVES
 	db 25, PIDGEOT,    SAND_ATTACK, QUICK_ATTACK, WHIRLWIND, WING_ATTACK
 	db 27, ELECTABUZZ, THUNDERPUNCH, LIGHT_SCREEN, SWIFT, SCREECH
@@ -961,7 +961,7 @@ CooltrainerFGroup:
 	db -1 ; end
 
 	; COOLTRAINERF (2)
-	db "LOIS@", TRAINERTYPE_MOVES
+	db "LOIS@", TRAINERTYPE_MOVES ; unused
 	db 25, SKIPLOOM,   SYNTHESIS, POISONPOWDER, MEGA_DRAIN, LEECH_SEED
 	db 25, NINETALES,  EMBER, QUICK_ATTACK, CONFUSE_RAY, SAFEGUARD
 	db -1 ; end
@@ -1008,7 +1008,7 @@ CooltrainerFGroup:
 	db -1 ; end
 
 	; COOLTRAINERF (9)
-	db "BETH@", TRAINERTYPE_MOVES
+	db "BETH@", TRAINERTYPE_MOVES ;unused
 	db 36, RAPIDASH,   STOMP, FIRE_SPIN, FURY_ATTACK, AGILITY
 	db -1 ; end
 
@@ -1251,7 +1251,7 @@ PokemaniacGroup:
 	db -1 ; end
 
 	; POKEMANIAC (13)
-	db "ZACH@", TRAINERTYPE_NORMAL
+	db "ZACH@", TRAINERTYPE_NORMAL ;unused
 	db 27, RHYHORN
 	db -1 ; end
 
@@ -1679,19 +1679,19 @@ FisherGroup:
 	db -1 ; end
 
 	; FISHER (8)
-	db "ANDRE@", TRAINERTYPE_NORMAL
+	db "ANDRE@", TRAINERTYPE_NORMAL ;unused
 	db 27, GYARADOS
 	db -1 ; end
 
 	; FISHER (9)
-	db "RAYMOND@", TRAINERTYPE_NORMAL
+	db "RAYMOND@", TRAINERTYPE_NORMAL ;unused
 	db 22, MAGIKARP
 	db 22, MAGIKARP
 	db 22, MAGIKARP
 	db 22, MAGIKARP
 	db -1 ; end
 
-	; FISHER (10)
+	; FISHER (10) 
 	db "WILTON@", TRAINERTYPE_NORMAL
 	db 33, GOLDEEN
 	db 33, REMORAID
@@ -1764,7 +1764,7 @@ FisherGroup:
 	db -1 ; end
 
 	; FISHER (21)
-	db "SCOTT@", TRAINERTYPE_NORMAL
+	db "SCOTT@", TRAINERTYPE_NORMAL ;unused
 	db 30, PLUCKROSS
 	db 30, PLUCKROSS
 	db 34, SEAKING
@@ -2609,7 +2609,7 @@ JugglerGroup:
 	db -1 ; end
 
 BlackbeltGroup:
-	; BLACKBELT_T (1)
+	; BLACKBELT_T (1) ;unused
 	db "KENJI@", TRAINERTYPE_NORMAL
 	db 27, ONIX
 	db 30, HITMONLEE
@@ -2740,7 +2740,7 @@ PsychicGroup:
 	db -1 ; end
 
 	; PSYCHIC_T (8)
-	db "PHIL@", TRAINERTYPE_MOVES
+	db "PHIL@", TRAINERTYPE_MOVES ;unused
 	db 24, NATU,       LEER, NIGHT_SHADE, FUTURE_SIGHT, CONFUSE_RAY
 	db 26, KADABRA,    DISABLE, PSYBEAM, RECOVER, FUTURE_SIGHT
 	db -1 ; end
@@ -3083,7 +3083,7 @@ CamperGroup:
 	db 34, GOLDUCK,    DISABLE, PSYCHIC_M, SURF, PSYCH_UP
 	db -1 ; end
 
-	; CAMPER (22)
+	; CAMPER (22) ;unused
 	db "QUENTIN@", TRAINERTYPE_NORMAL
 	db 30, FEAROW
 	db 30, PRIMEAPE

@@ -1606,7 +1606,7 @@ HitmonchanEvosAttacks:
 	db 0 ; no more level-up moves
 
 LickitungEvosAttacks:
-	db EVOLVE_LEVEL, 42, LICKILICKY
+	db EVOLVE_LEVEL, 33, LICKILICKY
 	db 0 ; no more evolutions
 	db 1, LICK
 	db 6, DEFENSE_CURL
@@ -1709,6 +1709,7 @@ ChanseyEvosAttacks:
 	db 0 ; no more level-up moves
 
 TangelaEvosAttacks:
+	db EVOLVE_LEVEL, 40, TANGROWTH
 	db 0 ; no more evolutions
 	db 1, ABSORB
 	db 1, CONSTRICT
@@ -3634,39 +3635,51 @@ RaikouEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, BITE
 	db 1, LEER
-	db 11, THUNDERSHOCK
-	db 21, ROAR
-	db 31, QUICK_ATTACK
-	db 41, SPARK
-	db 51, REFLECT
-	db 61, CRUNCH
-	db 71, THUNDER
+	db 8, THUNDERSHOCK
+	db 15, ROAR
+	db 22, QUICK_ATTACK
+	db 29, SPARK
+	db 36, REFLECT
+	db 43, CRUNCH
+	db 50, THUNDERBOLT
+	db 57, PSYCHIC
+	db 64, RAIN_DANCE
+	db 71, AMNESIA
+	db 78, THUNDER
 	db 0 ; no more level-up moves
 
 EnteiEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, BITE
 	db 1, LEER
-	db 11, EMBER
-	db 21, ROAR
-	db 31, FIRE_SPIN
-	db 41, STOMP
-	db 51, FLAMETHROWER
-	db 61, SWAGGER
-	db 71, FIRE_BLAST
+	db 8, EMBER
+	db 15, ROAR
+	db 22, FIRE_SPIN
+	db 29, STOMP
+	db 36, FLAME_WHEEL
+	db 43, SWAGGER
+	db 50, FLAMETHROWER
+	db 57, PSYCHIC
+	db 64, SUNNY_DAY
+	db 71, AMNESIA
+	db 78, FIRE_BLAST
 	db 0 ; no more level-up moves
 
 SuicuneEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, BITE
 	db 1, LEER
-	db 11, WATER_GUN
-	db 21, ROAR
-	db 31, GUST
-	db 41, BUBBLEBEAM
-	db 51, MIST
-	db 61, MIRROR_COAT
-	db 71, HYDRO_PUMP
+	db 8, BUBBLEBEAM
+	db 15, RAIN_DANCE
+	db 22, GUST
+	db 29, AURORA_BEAM
+	db 36, MIST
+	db 43, MIRROR_COAT
+	db 50, ICE_BEAM
+	db 57, PSYCHIC
+	db 64, HYDRO_PUMP
+	db 71, AMNESIA
+	db 78, BLIZZARD
 	db 0 ; no more level-up moves
 
 WolfanEvosAttacks:
@@ -3704,13 +3717,16 @@ WarfaruEvosAttacks:
 LickilickyEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, LICK
-	db 7, SUPERSONIC
-	db 15, DEFENSE_CURL
-	db 21, STOMP
-	db 28, WRAP
-	db 35, DISABLE
-	db 39, SLAM
-	db 45, SCREECH
+	db 6, DEFENSE_CURL
+	db 10, SUPERSONIC
+	db 15, WRAP
+	db 19, STOMP
+	db 24, DISABLE
+	db 28, SLAM
+	db 33, ROLLOUT
+	db 37, SCREECH
+	db 42, THRASH
+	db 46, AMNESIA
 	db 0 ; no more level-up moves
 
 BlisseyEvosAttacks:

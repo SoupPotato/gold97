@@ -668,25 +668,25 @@ JohtoGrassWildMons:
 	; morn
 	db 27, PARAS
 	db 28, PIDGEY
-	db 29, DROWZEE
 	db 29, PIDGEOTTO
 	db 28, DITTO
+	db 29, LICKITUNG
 	db 28, PIKACHU
 	db 27, EEVEE
 	; day
 	db 27, PARAS
 	db 28, PIDGEY
-	db 29, DROWZEE
 	db 29, PIDGEOTTO
 	db 28, DITTO
+	db 29, LICKITUNG
 	db 28, PIKACHU
 	db 27, EEVEE
 	; nite
 	db 27, PARAS
 	db 28, HOOTHOOT
-	db 29, DROWZEE
 	db 29, NOCTOWL
 	db 28, DITTO
+	db 29, LICKITUNG
 	db 28, PIKACHU
 	db 27, EEVEE
 
