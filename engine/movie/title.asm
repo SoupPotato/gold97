@@ -4,11 +4,6 @@ TITLE_BORDER_TILE EQU $1C
 TITLE_HOOH_TILE EQU $24
 
 TitleScreen:
-	ldh a, [rSVBK]
-	push af
-	ld a, BANK(wLYOverrides)
-	ldh [rSVBK], a
-
 ; Initialize variables
 	xor a
 	ld hl, wJumptableIndex
@@ -17,6 +12,8 @@ TitleScreen:
 	ld [hli], a ; wTitleScreenTimer
 	ld [hl], a  ; wTitleScreenTimer + 1
 
+; Prepare screen
+	farcall ClearSpriteAnims
 	call TitleScreenLoadGFX
 
 	call ChannelsOff
@@ -29,18 +26,21 @@ TitleScreen:
 ; Play the title screen music.
 	ld de, MUSIC_TITLE
 	call PlayMusic
+
+; Start actually drawing screen
+	xor a
+	ldh [hSCX], a
+	ldh [hSCY], a
+	call SetPalettes
+	call TitleScreenFireballs
+
 .loop
+	farcall PlaySpriteAnimationsAndDelayFrame
 	ld a, [wJumptableIndex]
 	bit 7, a
-	jr nz, .done
+	ret nz
 	call TitleScreenScene
-	call DelayFrame
 	jr .loop
-
-.done
-	pop af
-	ldh [rSVBK], a
-	ret
 
 TitleScreenScene:
 	ld e, a
@@ -54,55 +54,9 @@ TitleScreenScene:
 	jp hl
 
 .scenes
-	;dw TitleScreenEntrance
 	dw TitleScreenTimer
 	dw TitleScreenMain
 	dw TitleScreenEnd
-
-TitleScreenEntrance:
-; Animate the logo:
-; Move each line by 4 pixels until our count hits 0.
-	ldh a, [hSCX]
-	and a
-	jr z, .done
-	sub 4
-	ldh [hSCX], a
-
-; Lay out a base (all lines scrolling together).
-	ld e, a
-	ld hl, wLYOverrides
-	ld bc, 8 * 10 ; logo height
-	call ByteFill
-
-; Reversed signage for every other line's position.
-; This is responsible for the interlaced effect.
-	ld a, e
-	xor $ff
-	inc a
-
-	ld b, 8 * 10 / 2 ; logo height / 2
-	ld hl, wLYOverrides + 1
-.loop
-	ld [hli], a
-	inc hl
-	dec b
-	jr nz, .loop
-	ret
-
-.done
-; Next scene
-	ld hl, wJumptableIndex
-	inc [hl]
-	xor a
-	ldh [hLCDCPointer], a
-
-; Play the title screen music.
-	ld de, MUSIC_TITLE
-	call PlayMusic
-
-	ld a, $88
-	ldh [hWY], a
-	ret
 
 TitleScreenTimer:
 ; Next scene
@@ -235,16 +189,55 @@ TitleScreenEnd:
 	set 7, [hl]
 	ret
 
+TitleScreenFireballs:
+	ld hl, .Fireballs
+	ld d, 6
+.loop
+	push de
+	ld a, [hli]
+	ld e, a
+	ld a, [hli]
+	ld d, a
+	ld a, [hli]
+	ld b, a
+	ld a, [hli]
+	ld c, a
+	push hl
+	push bc
+	ld a, SPRITE_ANIM_INDEX_TITLE_FLAME
+	call _InitSpriteAnimStruct
+
+	ld hl, SPRITEANIMSTRUCT_0C
+	add hl, bc
+	pop de
+	ld a, d
+	ld [hli], a
+	ld a, e
+	ld [hli], a
+
+	pop hl
+	pop de
+	dec d
+	jr nz, .loop
+	ret
+
+.Fireballs:
+	; x pos, y pos, sine offset, speed
+	db $E0, $4C, $10, 2
+	db $A0, $58, $20, 3
+	db $90, $64, $30, 4
+	db $D0, $70, $00, 1
+	db $B0, $7C, $10, 2
+	db $00, $88, $20, 3
+
 TitleScreenLoadGFX:
 	call DisableLCD
 	call ClearPalettes
 	call ClearSprites
 	call ClearTileMap
 
-; Reset timing variables
+; Disable background updates
 	xor a
-	ldh [hSCX], a
-	ldh [hSCY], a
 	ldh [hBGMapMode], a
 
 ; Decompress graphics
@@ -337,8 +330,7 @@ TitleScreenLoadGFX:
 
 ; Commit everything
 	call EnableLCD
-	call WaitBGMap
-	jp SetPalettes
+	jp WaitBGMap
 
 DrawTitleGraphic:
 ; input:
