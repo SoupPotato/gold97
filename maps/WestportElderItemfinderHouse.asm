@@ -2,7 +2,7 @@
 	const HOUSE_GRAMPS
 	const HOUSE_TWIN
 
-EcruteakItemfinderHouse_MapScripts:
+WestportElderItemfinderHouse_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
@@ -111,7 +111,7 @@ EcruteakHistoryBookText:
 	done
 
 
-EcruteakItemfinderHouse_MapEvents:
+WestportElderItemfinderHouse_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events

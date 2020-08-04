@@ -463,10 +463,9 @@ BugCatchingContestant10BScript:
 	waitbutton
 	closetext
 	end
-
-UnusedBugCatchingContestExplanationSign:
-; duplicate of BugCatchingContestExplanationSign in Route35NationalParkGate.asm
-	jumptext UnusedBugCatchingContestExplanationText
+	
+BugCatchingContestExplanationSign:
+	jumptext BugCatchingContestExplanationText
 
 ExitBuildingMovement:
 	step DOWN
@@ -855,6 +854,26 @@ UnknownText_0x6b97f:
 	para "Here's the prize"
 	line "we were holding"
 	cont "for you."
+	done
+	
+BugCatchingContestExplanationText:
+	text "The Bug-Catching"
+	line "Contest is held on"
+
+	para "Tuesday, Thursday"
+	line "and Saturday."
+
+	para "Not only do you"
+	line "earn a prize just"
+
+	para "for participating,"
+	line "you also get to"
+
+	para "keep the bug"
+	line "#MON you may"
+
+	para "have at the end of"
+	line "the contest."
 	done
 
 Route36NationalParkGate_MapEvents:

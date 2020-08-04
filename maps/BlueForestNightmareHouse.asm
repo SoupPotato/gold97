@@ -2,12 +2,12 @@
 	const BLUEFORESTHOUSE_1_GRANNY
 	const BLUEFORESTHOUSE_1_ANIMON
 
-BlueForestHouse1_MapScripts:
+BlueForestNightmareHouse_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
-BlueForestHouse1GrannyScript:
+BlueForestNightmareHouseGrannyScript:
 	faceplayer
 	opentext
 	checkevent EVENT_GOT_TM50_NIGHTMARE
@@ -24,16 +24,16 @@ BlueForestHouse1GrannyScript:
 	closetext
 	end	
 
-BlueForestHouse1AnimonScript:
+BlueForestNightmareHouseAnimonScript:
 	faceplayer
 	opentext
-	writetext BlueForestHouse1MonText
+	writetext BlueForestNightmareHouseMonText
 	cry ANIMON
 	waitbutton
 	closetext
 	end
 	
-BlueForestHouse1MonText:
+BlueForestNightmareHouseMonText:
 	text "METTO:"
 	line "Uoi!"
 	done
@@ -63,7 +63,7 @@ Text_NightmareOutro:
 	cont "that are asleep."
 	done
 
-BlueForestHouse1_MapEvents:
+BlueForestNightmareHouse_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
@@ -75,5 +75,5 @@ BlueForestHouse1_MapEvents:
 	db 0 ; bg events
 
 	db 2 ; object events
-	object_event  8, 3, SPRITE_GRANNY, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BlueForestHouse1GrannyScript, -1
-	object_event  9, 6, SPRITE_GRIMER, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BlueForestHouse1AnimonScript, -1
+	object_event  8, 3, SPRITE_GRANNY, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BlueForestNightmareHouseGrannyScript, -1
+	object_event  9, 6, SPRITE_GRIMER, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BlueForestNightmareHouseAnimonScript, -1

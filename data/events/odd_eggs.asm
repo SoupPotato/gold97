@@ -266,7 +266,7 @@ OddEgg2:
 	bigdw 0
 	bigdw 0
 	db $9a, $aa ; DVs
-	db 35, 20, 10, 0 ; PP
+	db 30, 20, 25, 10 ; PP
 	db 20 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 5 ; Level
@@ -292,7 +292,7 @@ OddEgg2:
 	bigdw 0
 	bigdw 0
 	db $5a, $aa ; DVs
-	db 35, 20, 10, 0 ; PP
+	db 30, 20, 25, 10 ; PP
 	db 20 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 5 ; Level
@@ -318,7 +318,7 @@ OddEgg2:
 	bigdw 0
 	bigdw 0
 	db $aa, $aa ; DVs
-	db 35, 20, 10, 0 ; PP
+	db 30, 20, 25, 10 ; PP
 	db 20 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 5 ; Level
@@ -344,7 +344,7 @@ OddEgg2:
 	bigdw 0
 	bigdw 0
 	db $7a, $aa ; DVs
-	db 35, 20, 10, 0 ; PP
+	db 30, 20, 25, 10 ; PP
 	db 20 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 5 ; Level

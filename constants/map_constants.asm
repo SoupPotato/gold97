@@ -131,7 +131,6 @@ ENDM
 	map_const MOUNT_MOON,                                  17, 11 ; 85
 	map_const ROCK_TUNNEL_1F,                              22, 11 ; 87
 	map_const ROCK_TUNNEL_B1F,                             20,  9 ; 88
-	map_const SAFARI_ZONE_FUCHSIA_GATE_BETA,                5,  4 ; 89
 	map_const SAFARI_ZONE_BETA,                            20, 18 ; 90
 	map_const VICTORY_ROAD,                                20, 27 ; 91
 	map_const VICTORY_ROAD_2F,                             20, 27 ; 91
@@ -230,7 +229,6 @@ ENDM
 	map_const VIOLET_POKECENTER_1F,                         8,  4 ; 10
 	map_const ROUTE_32_RUINS_OF_ALPH_GATE,                  5,  4 ; 12
 	map_const ROUTE_35_GOLDENROD_GATE,                      5,  4 ; 14
-	map_const ROUTE_35_NATIONAL_PARK_GATE,                  4,  4 ; 15
 	map_const ROUTE_36_RUINS_OF_ALPH_GATE,                  5,  4 ; 16
 	map_const NEW_VIOLET_GATE_NORTH,                        5,  4 ; 18
 	map_const NEW_VIOLET_GATE_NORTH_2F,                     4,  3 ; 18
@@ -333,7 +331,6 @@ ENDM
 
 	newgroup                                                      ; 17
 
-	map_const ROUTE_13,                                    30,  9 ;  1
 	map_const ROUTE_18,                                    10,  9 ;  4
 	map_const FUCHSIA_CITY,                                20, 18 ;  5
 	map_const FUCHSIA_MART,                                 8,  4 ;  6
@@ -341,7 +338,6 @@ ENDM
 	map_const FUCHSIA_GYM,                                  5,  9 ;  8
 	map_const BILLS_BROTHERS_HOUSE,                         5,  4 ;  9
 	map_const FUCHSIA_POKECENTER_1F,                        8,  4 ; 10
-	map_const FUCHSIA_POKECENTER_2F_BETA,                   8,  4 ; 11
 	map_const SAFARI_ZONE_WARDENS_HOME,                    10,  4 ; 12
 	map_const SAFARI_ZONE_WARDENS_HOME_2F,                 10,  4 ; 12
 	map_const ROUTE_34,                                    10, 27 ;  1
@@ -380,7 +376,6 @@ ENDM
 	map_const CELADON_MANSION_ROOF,                         4,  6 ; 15
 	map_const CELADON_MANSION_ROOF_HOUSE,                   4,  4 ; 16
 	map_const CELADON_POKECENTER_1F,                        8,  4 ; 17
-	map_const CELADON_POKECENTER_2F_BETA,                   8,  4 ; 18
 	map_const CELADON_GAME_CORNER,                         10,  7 ; 19
 	map_const CELADON_GAME_CORNER_PRIZE_ROOM,               5,  4 ; 20
 	map_const CELADON_GYM,                                  5,  9 ; 21
@@ -415,7 +410,6 @@ ENDM
 	map_const BATTLE_TOWER_BATTLE_ROOM,                     4,  4 ; 12
 	map_const BATTLE_TOWER_ELEVATOR,                        2,  2 ; 13
 	map_const BATTLE_TOWER_HALLWAY,                        11,  2 ; 14
-	map_const ROUTE_40_BATTLE_TOWER_GATE,                   5,  4 ; 15
 	map_const BATTLE_TOWER_OUTSIDE,                        10, 14 ; 16
 	map_const ROUTE_5,                                     10, 18 ;  1
 	map_const ROUTE_5_SAFFRON_GATE,                         5,  4 ; 14
@@ -431,7 +425,7 @@ ENDM
 
 	map_const ROUTE_27,                                    30,  9 ;  2
 	map_const ROUTE_29,                                    26, 19 ;  3
-	map_const SILENT_TOWN,                                 10,  9 ;  4
+	map_const SILENT_TOWN,                                 10, 13 ;  4
 	map_const ELM_ENTRANCE,									4,  8 ; new
 	map_const ELMS_LAB,                                     5,  6 ;  5
 	map_const PLAYERS_HOUSE_1F,                             5,  4 ;  6
@@ -440,7 +434,6 @@ ENDM
 	map_const VIRIDIAN_POKECENTER_1F,                       8,  4 ;  9
 	map_const ROUTE_31_VIOLET_GATE,                         5,  4 ; 11
 	map_const ROUTE_31_VIOLET_GATE_2F,						4,  3 ; new gate floor
-	map_const ROUTE_14,                                    10,  5 ;  2
 
 	newgroup                                                      ; 25
 
@@ -461,7 +454,6 @@ ENDM
 
 	map_const CHERRYGROVE_MART,                             8,  4 ;  4
 	map_const CHERRYGROVE_POKECENTER_1F,                    8,  4 ;  5
-	map_const GUIDE_GENTS_HOUSE,                            4,  4 ;  7
 	map_const MR_POKEMONS_HOUSE,                            4,  4 ; 10
 	map_const CHERRYGROVE_CITY,                            10, 13 ;  3
 	map_const MOUNT_MOON_SQUARE,                           10,  9 ; 10

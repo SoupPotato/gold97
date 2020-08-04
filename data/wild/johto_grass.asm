@@ -371,7 +371,7 @@ JohtoGrassWildMons:
 	; morn
 	db 14, NIDORAN_F
 	db 14, NIDORAN_M
-	db 12, CHIX
+	db 12, GRIMBY
 	db 12, SANDSHREW
 	db 13, ABRA
 	db 12, GROWLITE
@@ -379,15 +379,15 @@ JohtoGrassWildMons:
 	; day
 	db 14, NIDORAN_F
 	db 14, NIDORAN_M
-	db 12, CHIX
+	db 12, GRIMBY
 	db 12, SANDSHREW
 	db 13, ABRA
 	db 12, GROWLITE
 	db 12, GROWLITE
 	; nite
 	db 14, ABRA
-	db 12, DROWZEE
-	db 13, HOOTHOOT
+	db 14, DROWZEE
+	db 12, GRIMBY
 	db 12, ABRA
 	db 14, HOOTHOOT
 	db 12, HOUNDOUR

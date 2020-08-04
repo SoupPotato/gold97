@@ -380,29 +380,30 @@ SilentTownRivalsHouseSignText:
 SilentTown_MapEvents:
 	db 0, 0 ; filler
 
-	db 6 ; warp events
-	warp_event 14, 11, ELM_ENTRANCE, 1
-	warp_event  5,  4, PLAYERS_HOUSE_1F, 1
-	warp_event 13,  4, VIRIDIAN_POKECENTER_1F, 1
-	warp_event  3, 12, ELMS_HOUSE, 1
-	warp_event 15, 11, ELM_ENTRANCE, 2
-	warp_event  9, 10, VERMILION_POKECENTER_1F, 1
+	db 7 ; warp events
+	warp_event 14, 19, ELM_ENTRANCE, 1
+	warp_event  5, 12, PLAYERS_HOUSE_1F, 1
+	warp_event 13, 12, VIRIDIAN_POKECENTER_1F, 1
+	warp_event  3, 20, ELMS_HOUSE, 1
+	warp_event 15, 19, ELM_ENTRANCE, 2
+	warp_event  9, 18, VERMILION_POKECENTER_1F, 1
+	warp_event  9,  5, VICTORY_ROAD_GATE, 1
 
 
 	db 3 ; coord events
-	coord_event  1,  8, SCENE_TEACHER_STOPS, BlueStopsYouScene1
-	coord_event  1,  9, SCENE_TEACHER_STOPS, BlueStopsYouScene2
-	coord_event  5,  5, SCENE_DEFAULT, SilentTown_RivalGreets
+	coord_event  1, 16, SCENE_TEACHER_STOPS, BlueStopsYouScene1
+	coord_event  1, 17, SCENE_TEACHER_STOPS, BlueStopsYouScene2
+	coord_event  5, 13, SCENE_DEFAULT, SilentTown_RivalGreets
 
 	db 5 ; bg events
-	bg_event 16,  5, BGEVENT_READ, SilentTownSign
-	bg_event  8,  4, BGEVENT_READ, SilentTownPlayersHouseSign
-	bg_event 10, 11, BGEVENT_READ, SilentTownOaksLabSign
-	bg_event  6, 12, BGEVENT_READ, SilentTownRivalsHouseSign
-	bg_event 14,  4, BGEVENT_READ, SilentTownPokecenterSign
+	bg_event 16, 13, BGEVENT_READ, SilentTownSign
+	bg_event  8, 12, BGEVENT_READ, SilentTownPlayersHouseSign
+	bg_event 10, 19, BGEVENT_READ, SilentTownOaksLabSign
+	bg_event  6, 20, BGEVENT_READ, SilentTownRivalsHouseSign
+	bg_event 14, 12, BGEVENT_READ, SilentTownPokecenterSign
 
 	db 4 ; object events
-	object_event  9,  6, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilentTownTeacherScript, -1
-	object_event 12, 13, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1,  0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SilentTownFisherScript, -1
-	object_event  7, 10, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilentTownRivalScript, EVENT_RIVAL_SILENT_TOWN
-	object_event  3,  9, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SilentTownBlueScript, EVENT_BLUE_SILENT_TOWN
+	object_event  9, 14, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilentTownTeacherScript, -1
+	object_event 12, 21, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1,  0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SilentTownFisherScript, -1
+	object_event  7, 18, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilentTownRivalScript, EVENT_RIVAL_SILENT_TOWN
+	object_event  3, 17, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SilentTownBlueScript, EVENT_BLUE_SILENT_TOWN

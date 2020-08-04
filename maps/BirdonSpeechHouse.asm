@@ -1,15 +1,15 @@
 	const_def 2 ; object constants
 	const CHERRYGROVEEVOLUTIONSPEECHHOUSE_LASS
 
-CherrygroveEvolutionSpeechHouse_MapScripts:
+BirdonSpeechHouse_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
-CherrygroveEvolutionSpeechHouseLassScript:
-	jumptextfaceplayer CherrygroveEvolutionSpeechHouseLassText
+BirdonSpeechHouseLassScript:
+	jumptextfaceplayer BirdonSpeechHouseLassText
 
-CherrygroveEvolutionSpeechHouseLassText:
+BirdonSpeechHouseLassText:
 	text "Many years ago, my"
 	line "mother told me of"
 	para "a mythical #MON"
@@ -30,7 +30,7 @@ CherrygroveEvolutionSpeechHouseLassText:
 	cont "beasts in person."
 	done
 
-CherrygroveEvolutionSpeechHouse_MapEvents:
+BirdonSpeechHouse_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
@@ -42,4 +42,4 @@ CherrygroveEvolutionSpeechHouse_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event  7,  5, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CherrygroveEvolutionSpeechHouseLassScript, -1
+	object_event  7,  5, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, BirdonSpeechHouseLassScript, -1

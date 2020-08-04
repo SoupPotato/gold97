@@ -1,12 +1,12 @@
 	const_def 2 ; object constants
 	const SUGARHOUSE_1_CLAIR
 
-SugarHouse1_MapScripts:
+KobanClairsHouse_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
-SugarHouse1ClairScript:
+KobanClairsHouseClairScript:
 	faceplayer
 	opentext
 	checkevent EVENT_SWITCH_14
@@ -108,11 +108,11 @@ DragonsAreGreatText:
 	line "way of life."
 	done
 
-SugarHouse1ClairText:
+KobanClairsHouseClairText:
 	text "yo sup"
 	done
 
-SugarHouse1_MapEvents:
+KobanClairsHouse_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
@@ -124,4 +124,4 @@ SugarHouse1_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event  7, 4, SPRITE_CLAIR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SugarHouse1ClairScript, EVENT_BLACKTHORN_CITY_GRAMPS_NOT_BLOCKING_DRAGONS_DEN
+	object_event  7, 4, SPRITE_CLAIR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KobanClairsHouseClairScript, EVENT_BLACKTHORN_CITY_GRAMPS_NOT_BLOCKING_DRAGONS_DEN

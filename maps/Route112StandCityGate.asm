@@ -3,17 +3,17 @@
 	const ROUTE36RUINSOFALPHGATE_GRAMPS
 	const ROUTE36RUINSOFALPHGATE_RIVAL
 
-Route36RuinsOfAlphGate_MapScripts:
+Route112StandCityGate_MapScripts:
 	db 2 ; scene scripts
-	scene_script .SceneRoute36RuinsOfAlphGateRival ; SCENE_DEFAULT
-	scene_script .SceneRoute36RuinsOfAlphGateNothing ;
+	scene_script .SceneRoute112StandCityGateRival ; SCENE_DEFAULT
+	scene_script .SceneRoute112StandCityGateNothing ;
 
 	db 0 ; callbacks
 
-.SceneRoute36RuinsOfAlphGateRival
+.SceneRoute112StandCityGateRival
 	end
 
-.SceneRoute36RuinsOfAlphGateNothing
+.SceneRoute112StandCityGateNothing
 	end
 	
 R36GateMoveIntoPlace1:
@@ -117,15 +117,15 @@ Route36GateRivalScript:
 	end
 
 	
-Route36RuinsOfAlphGateOfficerScript:
+Route112StandCityGateOfficerScript:
 ;	clearevent EVENT_ILEX_FOREST_FARFETCHD
 ;	setevent EVENT_CLEARED_RADIO_TOWER
 ;	setevent EVENT_BEAT_CHUCK
 ;	setevent EVENT_ILEX_FOREST_APPRENTICE
 ;	setevent EVENT_BLACKTHORN_CITY_SUPER_NERD_DOES_NOT_BLOCK_GYM
-	jumptextfaceplayer Route36RuinsOfAlphGateOfficerText
+	jumptextfaceplayer Route112StandCityGateOfficerText
 
-Route36RuinsOfAlphGateGrampsScript:
+Route112StandCityGateGrampsScript:
 	faceplayer
 	opentext
 	checkflag EVENT_BLACKTHORN_CITY_SUPER_NERD_DOES_NOT_BLOCK_GYM
@@ -273,7 +273,7 @@ StandCityIsDoingBetterText:
 	cont "feeling better."
 	done
 
-Route36RuinsOfAlphGateOfficerText:
+Route112StandCityGateOfficerText:
 	text "STAND CITY is"
 	line "known for its"
 	para "beautiful greenery"
@@ -289,7 +289,7 @@ StandCitySomethingIsUpText:
 	line "ROCKET."
 	done
 
-Route36RuinsOfAlphGate_MapEvents:
+Route112StandCityGate_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
@@ -307,6 +307,6 @@ Route36RuinsOfAlphGate_MapEvents:
 	db 0 ; bg events
 
 	db 3 ; object events
-	object_event  0,  4, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route36RuinsOfAlphGateOfficerScript, -1
-	object_event  7,  5, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 1, 2, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, Route36RuinsOfAlphGateGrampsScript, -1
+	object_event  0,  4, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route112StandCityGateOfficerScript, -1
+	object_event  7,  5, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 1, 2, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, Route112StandCityGateGrampsScript, -1
 	object_event  4,  9, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GAVE_KENYA

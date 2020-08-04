@@ -4,23 +4,23 @@
 	const ROUTE34ILEXFORESTGATE_LASS
 	const ROUTE34ILEXFORESTGATE_TEACHER2
 
-Route34IlexForestGate_MapScripts:
+Route113Route114Gate_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
-Route34IlexForestGateTeacherScript:
+Route113Route114GateTeacherScript:
 	faceplayer
 	opentext
 	checkevent EVENT_GOT_TM12_SWEET_SCENT
 	iftrue .GotSweetScent
-	writetext Route34IlexForestGateTeacherText
+	writetext Route113Route114GateTeacherText
 	buttonsound
 	verbosegiveitem TM_SWEET_SCENT
 	iffalse .NoRoom
 	setevent EVENT_GOT_TM12_SWEET_SCENT
 .GotSweetScent:
-	writetext Route34IlexForestGateTeacher_GotSweetScent
+	writetext Route113Route114GateTeacher_GotSweetScent
 	waitbutton
 .NoRoom:
 	closetext
@@ -28,20 +28,20 @@ Route34IlexForestGateTeacherScript:
 
 
 
-Route34IlexForestGateButterfreeScript:
+Route113Route114GateButterfreeScript:
 	opentext
-	writetext Route34IlexForestGateButterfreeText
+	writetext Route113Route114GateButterfreeText
 	cry BUTTERFREE
 	waitbutton
 	closetext
 	end
 
-Route34IlexForestGateLassScript:
-	jumptextfaceplayer Route34IlexForestGateLassText
+Route113Route114GateLassScript:
+	jumptextfaceplayer Route113Route114GateLassText
 
 
 
-Route34IlexForestGateTeacherText:
+Route113Route114GateTeacherText:
 	text "Isn't the air so"
 	line "fresh around here?"
 	para "#MON love sweet"
@@ -52,7 +52,7 @@ Route34IlexForestGateTeacherText:
 	para "Did you know?"
 	done
 
-Route34IlexForestGateTeacher_GotSweetScent:
+Route113Route114GateTeacher_GotSweetScent:
 	text "It's SWEET SCENT."
 
 	para "Use it wherever"
@@ -64,11 +64,11 @@ Route34IlexForestGateTeacher_GotSweetScent:
 
 
 
-Route34IlexForestGateButterfreeText:
+Route113Route114GateButterfreeText:
 	text "BUTTERFREE: Freeh!"
 	done
 
-Route34IlexForestGateLassText:
+Route113Route114GateLassText:
 	text "Where are you"
 	line "from?"
 	para "SILENT TOWN?"
@@ -77,7 +77,7 @@ Route34IlexForestGateLassText:
 	cont "here."
 	done
 
-Route34IlexForestGate_MapEvents:
+Route113Route114Gate_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
@@ -91,6 +91,6 @@ Route34IlexForestGate_MapEvents:
 	db 0 ; bg events
 
 	db 3 ; object events
-	object_event  0,  3, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route34IlexForestGateTeacherScript, EVENT_ROUTE_34_ILEX_FOREST_GATE_TEACHER_BEHIND_COUNTER
-	object_event  0,  4, SPRITE_BUTTERFREE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route34IlexForestGateButterfreeScript, -1
-	object_event  6,  4, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route34IlexForestGateLassScript, EVENT_ROUTE_34_ILEX_FOREST_GATE_LASS
+	object_event  0,  3, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route113Route114GateTeacherScript, EVENT_ROUTE_34_ILEX_FOREST_GATE_TEACHER_BEHIND_COUNTER
+	object_event  0,  4, SPRITE_BUTTERFREE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route113Route114GateButterfreeScript, -1
+	object_event  6,  4, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route113Route114GateLassScript, EVENT_ROUTE_34_ILEX_FOREST_GATE_LASS

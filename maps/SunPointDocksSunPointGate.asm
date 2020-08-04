@@ -1,29 +1,29 @@
 	const_def 2 ; object constants
 	const ROUTE5SAFFRONGATE_OFFICER
 
-Route5SaffronGate_MapScripts:
+SunPointDocksSunPointGate_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
 
-Route5SaffronGateOfficerScript:
+SunPointDocksSunPointGateOfficerScript:
 	faceplayer
 	opentext
 	checkevent EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
 	iftrue .NoMoreBadBoat
-	writetext Route5SaffronGateOfficerRocketsText
+	writetext SunPointDocksSunPointGateOfficerRocketsText
 	waitbutton
 	closetext
 	end
 
 .NoMoreBadBoat:
-	writetext Route5SaffronGateOfficerGoodText
+	writetext SunPointDocksSunPointGateOfficerGoodText
 	waitbutton
 	closetext
 	end
 
-Route5SaffronGateOfficerRocketsText:
+SunPointDocksSunPointGateOfficerRocketsText:
 	text "There's something"
 	line "strange going on"
 	cont "out at the DOCKS."
@@ -41,7 +41,7 @@ Route5SaffronGateOfficerRocketsText:
 	line "uneasy…"
 	done
 
-Route5SaffronGateOfficerGoodText:
+SunPointDocksSunPointGateOfficerGoodText:
 	text "SOUTH POINT DOCKS"
 	line "are always busy"
 	cont "and lively."
@@ -49,7 +49,7 @@ Route5SaffronGateOfficerGoodText:
 	line "to people-watch."
 	done
 
-Route5SaffronGate_MapEvents:
+SunPointDocksSunPointGate_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
@@ -63,4 +63,4 @@ Route5SaffronGate_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event  0,  4, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route5SaffronGateOfficerScript, -1
+	object_event  0,  4, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SunPointDocksSunPointGateOfficerScript, -1

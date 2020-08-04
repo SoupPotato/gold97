@@ -3,7 +3,7 @@
 	const NORTH_ISLAND_ROCKER
 	const NORTH_ISLAND_TEACHER
 
-CinnabarIsland_MapScripts:
+FrostPoint_MapScripts:
 	db 0 ; scene scripts
 
 	db 1 ; callbacks
@@ -14,22 +14,22 @@ CinnabarIsland_MapScripts:
 	return
 
 
-CinnabarIslandGymSign:
-	jumptext CinnabarIslandGymSignText
+FrostPointGymSign:
+	jumptext FrostPointGymSignText
 
-CinnabarIslandSign:
-	jumptext CinnabarIslandSignText
+FrostPointSign:
+	jumptext FrostPointSignText
 
-CinnabarIslandPokecenterSign:
+FrostPointPokecenterSign:
 	jumpstd pokecentersign
 	
-CinnabarIslandMartSign:
+FrostPointMartSign:
 	jumpstd martsign
 
-CinnabarIslandHiddenRareCandy:
+FrostPointHiddenRareCandy:
 	hiddenitem RARE_CANDY, EVENT_CINNABAR_ISLAND_HIDDEN_RARE_CANDY
 
-CinnabarIslandBlueTeleport:
+FrostPointBlueTeleport:
 	teleport_from
 	step_end
 	
@@ -75,19 +75,19 @@ NorthIslandTeacherText:
 	cont "whirlpools."
 	done
 
-CinnabarIslandGymSignText:
+FrostPointGymSignText:
 	text "DEEPWATER PASSAGE"
 	line "North Entrance"
 	done
 
-CinnabarIslandSignText:
+FrostPointSignText:
 	text "NORTH ISLAND"
 
 	para "The frigid land"
 	line "of hardy people"
 	done
 
-CinnabarIsland_MapEvents:
+FrostPoint_MapEvents:
 	db 0, 0 ; filler
 
 	db 5 ; warp events
@@ -100,11 +100,11 @@ CinnabarIsland_MapEvents:
 	db 0 ; coord events
 
 	db 5 ; bg events
-	bg_event 14, 12, BGEVENT_READ, CinnabarIslandPokecenterSign
-	bg_event 16,  8, BGEVENT_READ, CinnabarIslandMartSign
-	bg_event 12,  6, BGEVENT_READ, CinnabarIslandGymSign
-	bg_event  8, 14, BGEVENT_READ, CinnabarIslandSign
-	bg_event  8,  6, BGEVENT_ITEM, CinnabarIslandHiddenRareCandy
+	bg_event 14, 12, BGEVENT_READ, FrostPointPokecenterSign
+	bg_event 16,  8, BGEVENT_READ, FrostPointMartSign
+	bg_event 12,  6, BGEVENT_READ, FrostPointGymSign
+	bg_event  8, 14, BGEVENT_READ, FrostPointSign
+	bg_event  8,  6, BGEVENT_ITEM, FrostPointHiddenRareCandy
 
 	db 3 ; object events
 	object_event  8, 11, SPRITE_TWIN, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NorthIslandTwinScript, -1

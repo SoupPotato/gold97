@@ -8,7 +8,7 @@
 	const ROUTE8_POKEFANM
 	const ROUTE8_TWIN
 
-Route8_MapScripts:
+Route120_MapScripts:
 	db 2 ; scene scripts
 	scene_script .DummyScene0 ; SCENE_ROUTE8_NOTHING
 	scene_script SceneFoundGirlScript ; SCENE_ROUTE8_GIRL
@@ -20,7 +20,7 @@ Route8_MapScripts:
 
 SceneFoundGirlScript:
 	checkevent EVENT_ROUTE8_GIRL_IN_CAVE
-	iftrue .SceneRoute8Nothing
+	iftrue .SceneRoute120Nothing
 	applymovement PLAYER, WalkDown
 	turnobject PLAYER, LEFT
 	playsound SFX_ENTER_DOOR
@@ -56,7 +56,7 @@ SceneFoundGirlScript:
 	warpfacing UP, ECRUTEAK_ITEMFINDER_HOUSE, 4, 7
 	end
 	
-.SceneRoute8Nothing:
+.SceneRoute120Nothing:
 	end
 	
 TrainerYoungsterJoey:
@@ -92,10 +92,10 @@ TrainerLassConnie:
 	closetext
 	end
 	
-Route8GrampsScript:
+Route120GrampsScript:
 	faceplayer
 	opentext
-	writetext Route8GrampsText
+	writetext Route120GrampsText
 	waitbutton
 	closetext
 	end
@@ -122,16 +122,16 @@ TrainerHikerParry:
 	closetext
 	end
 
-Route8UndergroundPathSign:
-	jumptext Route8UndergroundPathSignText
+Route120UndergroundPathSign:
+	jumptext Route120UndergroundPathSignText
 
-Route8FruitTree:
+Route120FruitTree:
 	fruittree FRUITTREE_ROUTE_8
 	
-Route8ParlyzHeal:
+Route120ParlyzHeal:
 	itemball PARLYZ_HEAL
 	
-Route8GrampsText:
+Route120GrampsText:
 	text "Oh, good! You're"
 	line "here!"
 	para "Please help me"
@@ -206,7 +206,7 @@ YoungsterJoey1AfterText:
 	cont "matter what!"
 	done
 
-Route8UndergroundPathSignText:
+Route120UndergroundPathSignText:
 	text "BOULDER MINES"
 	para "Dangerous mining"
 	line "area!"
@@ -310,7 +310,7 @@ WalkDownGramps:
 	step DOWN
 	step_end
 
-Route8_MapEvents:
+Route120_MapEvents:
 	db 0, 0 ; filler
 
 	db 1 ; warp events
@@ -320,16 +320,16 @@ Route8_MapEvents:
 	coord_event  9,  6, SCENE_ROUTE8_GIRL_AND_GRAMPS, SceneFoundGirlScript
 
 	db 1 ; bg events
-	bg_event 10,  6, BGEVENT_READ, Route8UndergroundPathSign
+	bg_event 10,  6, BGEVENT_READ, Route120UndergroundPathSign
 
 	db 9 ; object events
-	object_event 40,  6, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route8FruitTree, -1
+	object_event 40,  6, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route120FruitTree, -1
 	object_event 12, 10, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerYoungsterJoey, -1
 	object_event 24,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSchoolboyDudley, -1
 	object_event 12,  6, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerLassConnie, -1
-	object_event  8,  7, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route8GrampsScript, EVENT_ECRUTEAK_CITY_GRAMPS
+	object_event  8,  7, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route120GrampsScript, EVENT_ECRUTEAK_CITY_GRAMPS
 	object_event 20, 13, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerFisherTully, -1
 	object_event 36, 12, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerHikerParry, -1
 	object_event  9,  0, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ROUTE8_GIRL_SAVED
-	object_event 18,  8, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route8ParlyzHeal, EVENT_ROUTE_8_PARLYZ_HEAL
+	object_event 18,  8, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route120ParlyzHeal, EVENT_ROUTE_8_PARLYZ_HEAL
 

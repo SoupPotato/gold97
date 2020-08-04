@@ -118,6 +118,7 @@ SanskritCoinCaseSpeechHouse_Blocks:
 BlueForestEmysHouse_Blocks:
 MoveDeletersHouse_Blocks:
 CeruleanPoliceStation_Blocks:
+GoldenrodHappinessRater_Blocks:
 WestportNameRater_Blocks:
 VermilionMagnetTrainSpeechHouse_Blocks: ;needs new name
 VermilionDiglettsCaveSpeechHouse_Blocks: ;needs new name
@@ -133,44 +134,40 @@ CianwoodBlisseySpeechHouse_Blocks: ;needs new name
 PokeSeersHouse_Blocks:
 Route110SandstormHouse_Blocks:
 MrPsychicsHouse_Blocks:
-Route5CleanseTagHouse_Blocks:
-GuideGentsHouse_Blocks:
-CherrygroveEvolutionSpeechHouse_Blocks:
-Route30BerryHouse_Blocks:
-EcruteakItemfinderHouse_Blocks:
-EcruteakBlisseySpeechHouse_Blocks:
-SugarHouse1_Blocks:
-BlueForestHouse1_Blocks:
-KantoHouse1_Blocks:
-KantoHouse2_Blocks:
-KantoHouse3_Blocks:
-KantoHouse4_Blocks:
+BirdonSpeechHouse_Blocks:
+Route104GardenersHouse_Blocks:
+WestportElderItemfinderHouse_Blocks:
+EcruteakBlisseySpeechHouse_Blocks: ;needs new name
+KobanClairsHouse_Blocks:
+BlueForestNightmareHouse_Blocks:
+KantoHouse1_Blocks:  ;needs new name
+KantoHouse2_Blocks:  ;needs new name
+KantoHouse3_Blocks:  ;needs new name
+KantoHouse4_Blocks:  ;needs new name
 	INCBIN "maps/House1.blk"
 
-Route38EcruteakGate_Blocks:
-NewEcruteakGateSouth_Blocks:
-SafariZoneFuchsiaGateBeta_Blocks:
-Route43MahoganyGate_Blocks:
-Route43Gate_Blocks:
-Route35GoldenrodGate_Blocks:
-Route36RuinsOfAlphGate_Blocks:
-Route34IlexForestGate_Blocks:
-Route6SaffronGate_Blocks:
-Route40BattleTowerGate_Blocks:
-Route2Gate_Blocks:
-Route29Route46Gate_Blocks:
-Route5SaffronGate_Blocks:
-Route15FuchsiaGate_Blocks:
-Route8SaffronGate_Blocks:
+Route109Route110Gate_Blocks:
+Route105Route106Gate_Blocks:
+Route43MahoganyGate_Blocks: ;needs new name
+Route43Gate_Blocks: ;needs new name
+Route103WestportGate_Blocks:
+Route112StandCityGate_Blocks:
+Route113Route114Gate_Blocks:
+Route6SaffronGate_Blocks: ;needs new name
+Route116Gate_Blocks:
+Route111BlueForestGate_Blocks:
+SunPointDocksSunPointGate_Blocks:
+Route119SunpointGate_Blocks:
+Route8SaffronGate_Blocks: ;needs new name
 	INCBIN "maps/NorthSouthGate.blk"
 	
-Route31VioletGate_Blocks:
-NewOlivineGateWest_Blocks:
+Route110PagotaGate_Blocks:
+Route107AlloyGate_Blocks:
 	INCBIN "maps/NorthSouth2FGate.blk"
 	
-Route31VioletGate2F_Blocks:
-NewVioletGateNorth2F_Blocks:
-NewOlivineGateWest2F_Blocks:
+Route110PagotaGate2F_Blocks:
+Route102WestPortGate2F_Blocks:
+Route107AlloyGate2F_Blocks:
 	INCBIN "maps/Gate2F.blk"
 
 ;BetaEcruteakCity_Blocks:
@@ -179,20 +176,17 @@ NewOlivineGateWest2F_Blocks:
 ;BetaCherrygroveCity_Blocks:
 ;	INCBIN "maps/unused/BetaCherrygroveCity.blk"
 
-CinnabarIsland_Blocks:
-	INCBIN "maps/CinnabarIsland.blk"
+FrostPoint_Blocks:
+	INCBIN "maps/FrostPoint.blk"
 
-Route4_Blocks:
-	INCBIN "maps/Route4.blk"
+Route118_Blocks:
+	INCBIN "maps/Route118.blk"
 
-Route8_Blocks:
-	INCBIN "maps/Route8.blk"
+Route120_Blocks:
+	INCBIN "maps/Route120.blk"
 
 ;BetaSproutTower3_Blocks:
 ;	INCBIN "maps/unused/BetaSproutTower3.blk"
-
-Route13_Blocks:
-	INCBIN "maps/Route13.blk"
 
 Route21_Blocks:
 	INCBIN "maps/Route21.blk"
@@ -232,7 +226,7 @@ Route19FuchsiaGate_Blocks:
 	INCBIN "maps/EastWestGate.blk"
 	
 Route16Gate_Blocks:
-NewVioletGateNorth_Blocks:
+Route102WestPortGate_Blocks:
 	INCBIN "maps/EastWestGate2.blk"
 
 ;BetaAzaleaTown_Blocks:
@@ -258,9 +252,6 @@ Route16FuchsiaSpeechHouse_Blocks:
 
 
 SECTION "Map Blocks 2", ROMX
-
-Route14_Blocks:
-	INCBIN "maps/Route14.blk"
 
 ;BetaSproutTower8_Blocks:
 ;	INCBIN "maps/unused/BetaSproutTower8.blk"
@@ -761,9 +752,6 @@ EcruteakTinTowerEntrance_Blocks:
 
 GoldenrodGameCorner_Blocks:
 	INCBIN "maps/GoldenrodGameCorner.blk"
-
-Route35NationalParkGate_Blocks:
-	INCBIN "maps/Route35NationalParkGate.blk"
 
 Route36NationalParkGate_Blocks:
 	INCBIN "maps/Route36NationalParkGate.blk"

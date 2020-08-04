@@ -2,18 +2,18 @@
 	const ROUTE29ROUTE46GATE_OFFICER
 	const ROUTE29ROUTE46GATE_YOUNGSTER
 
-Route29Route46Gate_MapScripts:
+Route111BlueForestGate_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
-Route29Route46GateOfficerScript:
-	jumptextfaceplayer Route29Route46GateOfficerText
+Route111BlueForestGateOfficerScript:
+	jumptextfaceplayer Route111BlueForestGateOfficerText
 
-Route29Route46GateYoungsterScript:
-	jumptextfaceplayer Route29Route46GateYoungsterText
+Route111BlueForestGateYoungsterScript:
+	jumptextfaceplayer Route111BlueForestGateYoungsterText
 
-Route29Route46GateOfficerText:
+Route111BlueForestGateOfficerText:
 	text "NIHON's known for"
 	line "having rough north"
 	cont "waters."
@@ -26,13 +26,13 @@ Route29Route46GateOfficerText:
 	line "unprepared!"
 	done
 
-Route29Route46GateYoungsterText:
+Route111BlueForestGateYoungsterText:
 	text "I hear rare"
 	line "#MON appear in"
 	cont "WHIRL ISLAND."
 	done
 
-Route29Route46Gate_MapEvents:
+Route111BlueForestGate_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
@@ -46,5 +46,5 @@ Route29Route46Gate_MapEvents:
 	db 0 ; bg events
 
 	db 2 ; object events
-	object_event  0,  4, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route29Route46GateOfficerScript, -1
-	object_event  6,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route29Route46GateYoungsterScript, -1
+	object_event  0,  4, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route111BlueForestGateOfficerScript, -1
+	object_event  6,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route111BlueForestGateYoungsterScript, -1

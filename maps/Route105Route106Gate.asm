@@ -2,25 +2,25 @@
 	const NEWECRUTEAKGATESOUTH_OFFICER
 	const NEWECRUTEAKGATESOUTH_ROCKER
 
-NewEcruteakGateSouth_MapScripts:
+Route105Route106Gate_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
-NewEcruteakGateSouthOfficerScript:
-	jumptextfaceplayer NewEcruteakGateSouthOfficerText
+Route105Route106GateOfficerScript:
+	jumptextfaceplayer Route105Route106GateOfficerText
 	
-NewEcruteakGateSouthRockerScript:
-	jumptextfaceplayer NewEcruteakGateSouthRockerText
+Route105Route106GateRockerScript:
+	jumptextfaceplayer Route105Route106GateRockerText
 
-NewEcruteakGateSouthOfficerText:
+Route105Route106GateOfficerText:
 	text "NIHON FOREST is"
 	line "a mysterious area."
 	para "Be sure to treat"
 	line "it with respect."
 	done
 
-NewEcruteakGateSouthRockerText:
+Route105Route106GateRockerText:
 	text "I like going for"
 	line "peaceful walks in"
 	cont "NIHON FOREST."
@@ -30,7 +30,7 @@ NewEcruteakGateSouthRockerText:
 	line "way around."
 	done
 
-NewEcruteakGateSouth_MapEvents:
+Route105Route106Gate_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
@@ -44,6 +44,6 @@ NewEcruteakGateSouth_MapEvents:
 	db 0 ; bg events
 
 	db 2 ; object events
-	object_event  0,  4, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, NewEcruteakGateSouthOfficerScript, -1
-	object_event  6,  3, SPRITE_ROCKER, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, NewEcruteakGateSouthRockerScript, -1
+	object_event  0,  4, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route105Route106GateOfficerScript, -1
+	object_event  6,  3, SPRITE_ROCKER, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route105Route106GateRockerScript, -1
 	

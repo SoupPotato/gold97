@@ -3,7 +3,7 @@
 	const ROUTE35GOLDENRODGATE_POKEFAN_F
 	const ROUTE35GOLDENRODGATE_FISHER
 
-Route35GoldenrodGate_MapScripts:
+Route103WestportGate_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
@@ -29,24 +29,24 @@ GiftSpearowOTName:
 
 	db 0 ; filler
 
-Route35GoldenrodGatePokefanFScript:
+Route103WestportGatePokefanFScript:
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_WHITNEY
 	iftrue .FoughtBipetal
-	writetext Route35GoldenrodGatePokefanFText
+	writetext Route103WestportGatePokefanFText
 	waitbutton
 	closetext
 	end
 
 .FoughtBipetal
-	writetext Route35GoldenrodGatePokefanFText_FoughtBipetal
+	writetext Route103WestportGatePokefanFText_FoughtBipetal
 	waitbutton
 	closetext
 	end
 
-Route35GoldenrodGateFisherScript:
-	jumptextfaceplayer Route35GoldenrodGateFisherText
+Route103WestportGateFisherScript:
+	jumptextfaceplayer Route103WestportGateFisherText
 
 UnknownText_0x69ddd:
 	text "WEST CITY kind of"
@@ -112,7 +112,7 @@ UnknownText_0x69fd9:
 	cont "what'd I say?"
 	done
 
-Route35GoldenrodGatePokefanFText:
+Route103WestportGatePokefanFText:
 	text "The ground north"
 	line "of here is prone"
 	para "to instability"
@@ -127,7 +127,7 @@ Route35GoldenrodGatePokefanFText:
 	line "now."
 	done
 
-Route35GoldenrodGatePokefanFText_FoughtBipetal:
+Route103WestportGatePokefanFText_FoughtBipetal:
 	text "The path ahead has"
 	line "been cleared."
 	para "That's good, since"
@@ -136,7 +136,7 @@ Route35GoldenrodGatePokefanFText_FoughtBipetal:
 	line "visit BIRDON TOWN."
 	done
 
-Route35GoldenrodGateFisherText:
+Route103WestportGateFisherText:
 	text "I wonder how many"
 	line "kinds of #MON"
 
@@ -150,7 +150,7 @@ Route35GoldenrodGateFisherText:
 	line "different kinds."
 	done
 
-Route35GoldenrodGate_MapEvents:
+Route103WestportGate_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
@@ -164,6 +164,6 @@ Route35GoldenrodGate_MapEvents:
 	db 0 ; bg events
 
 	db 3 ; object events
-	object_event  0,  4, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route35GoldenrodGatePokefanFScript, -1
+	object_event  0,  4, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route103WestportGatePokefanFScript, -1
 	object_event  6,  4, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, RandyScript, -1
-	object_event  3,  2, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route35GoldenrodGateFisherScript, -1
+	object_event  3,  2, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route103WestportGateFisherScript, -1

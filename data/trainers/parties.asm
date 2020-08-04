@@ -653,12 +653,12 @@ BirdKeeperGroup:
 	db 36, MADAME
 	db -1 ; end
 
-	; BIRD_KEEPER (15)
+	; BIRD_KEEPER (15) ; unused
 	db "PERRY@", TRAINERTYPE_NORMAL
 	db 34, FARFETCH_D
 	db -1 ; end
 
-	; BIRD_KEEPER (16)
+	; BIRD_KEEPER (16) ; unused
 	db "BRET@", TRAINERTYPE_NORMAL
 	db 32, PIDGEOTTO
 	db 32, FEAROW
@@ -3318,7 +3318,7 @@ PokefanMGroup:
 	db 35, PHANPY,     BERRY
 	db -1 ; end
 	
-	; POKEFANM (12)
+	; POKEFANM (12) ; unused
 	db "ALEX@", TRAINERTYPE_ITEM
 	db 29, NIDOKING,   BERRY
 	db 29, SLOWKING,   BERRY

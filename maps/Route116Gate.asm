@@ -3,42 +3,42 @@
 	const ROUTE2GATE_ROCKET1
 	const ROUTE2GATE_ROCKET2
 
-Route2Gate_MapScripts:
+Route116Gate_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 	
-Route2GateRocket1Script:
+Route116GateRocket1Script:
 	opentext
-	writetext Route2GateRocket1Text
+	writetext Route116GateRocket1Text
 	waitbutton
 	closetext
 	end
 	
-Route2GateRocket2Script:
+Route116GateRocket2Script:
 	opentext
-	writetext Route2GateRocket2Text
+	writetext Route116GateRocket2Text
 	waitbutton
 	closetext
 	end
 
-Route2GateScientistScript:
+Route116GateScientistScript:
 	faceplayer
 	opentext
 	checkevent EVENT_RIVAL_BURNED_TOWER
 	iftrue .NoAzaleaRockets
-	writetext Route2GateScientistText
+	writetext Route116GateScientistText
 	waitbutton
 	closetext
 	end
 
 .NoAzaleaRockets:
-	writetext Route2GateScientistTextNoRockets
+	writetext Route116GateScientistTextNoRockets
 	waitbutton
 	closetext
 	end
 	
-Route2GateRocket1Text:
+Route116GateRocket1Text:
 	text "Fufufufu…"
 	para "Our SLOWPOKE team"
 	line "should be back"
@@ -47,7 +47,7 @@ Route2GateRocket1Text:
 	cont "soon…"
 	done
 	
-Route2GateRocket2Text:
+Route116GateRocket2Text:
 	text "Hehehehe…"
 	para "No one will even"
 	line "notice the TAILs"
@@ -56,7 +56,7 @@ Route2GateRocket2Text:
 	cont "it's too late…"
 	done
 
-Route2GateScientistText:
+Route116GateScientistText:
 	text "These men look"
 	line "like members of"
 	cont "TEAM ROCKET."
@@ -68,7 +68,7 @@ Route2GateScientistText:
 	line "scare me…"
 	done
 	
-Route2GateScientistTextNoRockets:
+Route116GateScientistTextNoRockets:
 	text "Past here is a"
 	line "winding maze of"
 	para "trees and a tough"
@@ -77,7 +77,7 @@ Route2GateScientistTextNoRockets:
 	line "prepared!"
 	done
 
-Route2Gate_MapEvents:
+Route116Gate_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
@@ -91,7 +91,7 @@ Route2Gate_MapEvents:
 	db 0 ; bg events
 
 	db 3 ; object events
-	object_event  0,  4, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route2GateScientistScript, -1
-	object_event  4,  1, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route2GateRocket1Script, EVENT_RIVAL_BURNED_TOWER
-	object_event  5,  1, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route2GateRocket2Script, EVENT_RIVAL_BURNED_TOWER
+	object_event  0,  4, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route116GateScientistScript, -1
+	object_event  4,  1, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route116GateRocket1Script, EVENT_RIVAL_BURNED_TOWER
+	object_event  5,  1, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route116GateRocket2Script, EVENT_RIVAL_BURNED_TOWER
 	

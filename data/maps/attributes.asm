@@ -96,14 +96,12 @@ endc
 ENDM
 
 
-	map_attributes SilentTown, SILENT_TOWN, $05, NORTH | WEST | EAST
-	connection north, Route14, ROUTE_14, 0
-	connection west, Route101, ROUTE_29, -10
-	connection east, Route27, ROUTE_27, 0
+	map_attributes SilentTown, SILENT_TOWN, $05, WEST | EAST
+	connection west, Route101, ROUTE_29, -6
+	connection east, Route27, ROUTE_27, 4
 
-	map_attributes CherrygroveCity, CHERRYGROVE_CITY, $05, NORTH | SOUTH
+	map_attributes CherrygroveCity, CHERRYGROVE_CITY, $05, NORTH 
 	connection north, MountMoonSquare, MOUNT_MOON_SQUARE, 0
-	connection south, Route14, ROUTE_14, 0
 	
 	map_attributes MountMoonSquare, MOUNT_MOON_SQUARE, $6D, NORTH | SOUTH
 	connection north, Route23, ROUTE_23, 0
@@ -129,12 +127,12 @@ ENDM
 
 	map_attributes EcruteakCity, ECRUTEAK_CITY, $07, NORTH | WEST
 	connection north, Route43, ROUTE_43, 8
-	connection west, Route8, ROUTE_8, 0
+	connection west, Route120, ROUTE_8, 0
 
 	map_attributes MahoganyTown, MAHOGANY_TOWN, $07, NORTH | SOUTH | WEST | EAST
 	connection north, RuinsOfAlphOutside, RUINS_OF_ALPH_OUTSIDE, 0
 	connection south, Route43, ROUTE_43, -3
-	connection west, Route4, ROUTE_4, 0
+	connection west, Route118, ROUTE_4, 0
 	connection east, Route117, ROUTE_3, 0
 	
 	map_attributes RuinsOfAlphOutside, RUINS_OF_ALPH_OUTSIDE, $07, SOUTH
@@ -146,10 +144,10 @@ ENDM
 	connection west, Route110, ROUTE_40, 9
 
 	map_attributes Route27, ROUTE_27, $35, WEST | EAST
-	connection west, SilentTown, SILENT_TOWN, 0
+	connection west, SilentTown, SILENT_TOWN, -4
 
 	map_attributes Route101, ROUTE_29, $05, EAST
-	connection east, SilentTown, SILENT_TOWN, 10
+	connection east, SilentTown, SILENT_TOWN, 6
 
 	map_attributes Route105, ROUTE_30, $33, SOUTH | WEST
 	connection south, Route31, ROUTE_31, 0
@@ -189,7 +187,7 @@ ENDM
 	connection east, BlackthornCity, BLACKTHORN_CITY, -9
 
 	map_attributes Route111, ROUTE_41, $35, NORTH | SOUTH
-	connection north, CinnabarIsland, CINNABAR_ISLAND, 0
+	connection north, FrostPoint, CINNABAR_ISLAND, 0
 	connection south, BlackthornCity, BLACKTHORN_CITY, -5
 
 	map_attributes Route43, ROUTE_43, $07, NORTH | SOUTH
@@ -208,7 +206,7 @@ ENDM
 	map_attributes Route21, ROUTE_21, $07, NORTH
 	connection north, KobanIsland, PALLET_TOWN, 0
 
-	map_attributes CinnabarIsland, CINNABAR_ISLAND, $3C, SOUTH
+	map_attributes FrostPoint, CINNABAR_ISLAND, $3C, SOUTH
 	connection south, Route111, ROUTE_41, 0
 
 	map_attributes Route20, ROUTE_20, $35, WEST
@@ -235,15 +233,7 @@ ENDM
 	connection east, Route9, ROUTE_9, 9
 
 	map_attributes Route7, ROUTE_7, $07, EAST
-	connection east, Route8, ROUTE_8, 18
-
-	map_attributes Route14, ROUTE_14, $05, NORTH | SOUTH
-	connection north, CherrygroveCity, CHERRYGROVE_CITY, 0
-	connection south, SilentTown, SILENT_TOWN, 0
-
-	map_attributes Route13, ROUTE_13, $43, NORTH | SOUTH
-	connection north, Route12, ROUTE_12, 20
-	connection south, Route14, ROUTE_14, 0
+	connection east, Route120, ROUTE_8, 18
 
 	map_attributes Route12, ROUTE_12, $35, WEST
 	connection west, Route19, ROUTE_19, 9
@@ -275,10 +265,10 @@ ENDM
 	connection west, MahoganyTown, MAHOGANY_TOWN, 0
 	connection east, Route116, ROUTE_2, 0
 
-	map_attributes Route4, ROUTE_4, $07, EAST
+	map_attributes Route118, ROUTE_4, $07, EAST
 	connection east, MahoganyTown, MAHOGANY_TOWN, 0
 
-	map_attributes Route8, ROUTE_8, $07, WEST | EAST
+	map_attributes Route120, ROUTE_8, $07, WEST | EAST
 	connection west, Route7, ROUTE_7, -18
 	connection east, EcruteakCity, ECRUTEAK_CITY, 0
 
@@ -332,9 +322,9 @@ ENDM
 	map_attributes OlivineLighthouse3F, OLIVINE_LIGHTHOUSE_3F, $09, 0
 	map_attributes MahoganyMart1F, MAHOGANY_MART_1F, $00, 0
 	map_attributes SugarMart, SUGAR_MART, $00, 0
-	map_attributes SugarHouse1, SUGAR_HOUSE_1, $00, 0
+	map_attributes KobanClairsHouse, SUGAR_HOUSE_1, $00, 0
 	map_attributes SugarHouse2, SUGAR_HOUSE_2, $00, 0
-	map_attributes BlueForestHouse1, BLUEFOREST_HOUSE_1, $00, 0
+	map_attributes BlueForestNightmareHouse, BLUEFOREST_HOUSE_1, $00, 0
 	map_attributes TeamRocketBaseB1F, TEAM_ROCKET_BASE_B1F, $00, 0
 	map_attributes TeamRocketBaseB2F, TEAM_ROCKET_BASE_B2F, $00, 0
 	map_attributes TeamRocketBaseB3F, TEAM_ROCKET_BASE_B3F, $00, 0
@@ -376,7 +366,7 @@ ENDM
 	map_attributes AlloyGoodRodHouse, OLIVINE_GOOD_ROD_HOUSE, $00, 0
 	map_attributes OlivineCafe, OLIVINE_CAFE, $00, 0
 	map_attributes OlivineMart, OLIVINE_MART, $00, 0
-	map_attributes Route38EcruteakGate, ROUTE_38_ECRUTEAK_GATE, $00, 0
+	map_attributes Route109Route110Gate, ROUTE_38_ECRUTEAK_GATE, $00, 0
 	map_attributes Route39Barn, ROUTE_39_BARN, $00, 0
 	map_attributes SanskritCoinCaseSpeechHouse, MAHOGANY_RED_GYARADOS_SPEECH_HOUSE, $00, 0
 	map_attributes MahoganyGym, MAHOGANY_GYM, $00, 0
@@ -386,7 +376,6 @@ ENDM
 	map_attributes UndergroundPath, UNDERGROUND_PATH, $09, 0
 	map_attributes RockTunnel1F, ROCK_TUNNEL_1F, $09, 0
 	map_attributes RockTunnelB1F, ROCK_TUNNEL_B1F, $09, 0
-	map_attributes SafariZoneFuchsiaGateBeta, SAFARI_ZONE_FUCHSIA_GATE_BETA, $00, 0
 	map_attributes SafariZoneBeta, SAFARI_ZONE_BETA, $00, 0
 	map_attributes VictoryRoad, VICTORY_ROAD, $09, 0
 	map_attributes VictoryRoad2F, VICTORY_ROAD_2F, $09, 0
@@ -397,7 +386,7 @@ ENDM
 	map_attributes DanceTheatre, DANCE_THEATRE, $00, 0
 	map_attributes EcruteakMart, ECRUTEAK_MART, $00, 0
 	map_attributes EcruteakGym, ECRUTEAK_GYM, $00, 0
-	map_attributes EcruteakItemfinderHouse, ECRUTEAK_ITEMFINDER_HOUSE, $00, 0
+	map_attributes WestportElderItemfinderHouse, ECRUTEAK_ITEMFINDER_HOUSE, $00, 0
 	map_attributes BlackthornGym1F, BLACKTHORN_GYM_1F, $00, 0
 	map_attributes BlackthornGym2F, BLACKTHORN_GYM_2F, $00, 0
 	map_attributes BlackthornDragonSpeechHouse, BLACKTHORN_DRAGON_SPEECH_HOUSE, $00, 0
@@ -430,12 +419,12 @@ ENDM
 	map_attributes VioletKylesHouse, VIOLET_KYLES_HOUSE, $00, 0
 	map_attributes Route32RuinsOfAlphGate, ROUTE_32_RUINS_OF_ALPH_GATE, $00, 0
 	map_attributes Route32Pokecenter1F, ROUTE_32_POKECENTER_1F, $00, 0
-	map_attributes Route35GoldenrodGate, ROUTE_35_GOLDENROD_GATE, $00, 0
-	map_attributes Route35NationalParkGate, ROUTE_35_NATIONAL_PARK_GATE, $00, 0
-	map_attributes Route36RuinsOfAlphGate, ROUTE_36_RUINS_OF_ALPH_GATE, $00, 0
+	map_attributes Route103WestportGate, ROUTE_35_GOLDENROD_GATE, $00, 0
+	map_attributes Route112StandCityGate, ROUTE_36_RUINS_OF_ALPH_GATE, $00, 0
 	map_attributes Route36NationalParkGate, ROUTE_36_NATIONAL_PARK_GATE, $00, 0
 	map_attributes GoldenrodGym, GOLDENROD_GYM, $00, 0
 	map_attributes GoldenrodBikeShop, GOLDENROD_BIKE_SHOP, $00, 0
+	map_attributes GoldenrodHappinessRater, GOLDENROD_HAPPINESS_RATER, $00, 0
 	map_attributes BillsFamilysHouse, BILLS_FAMILYS_HOUSE, $00, 0
 	map_attributes GoldenrodMagnetTrainStation, GOLDENROD_MAGNET_TRAIN_STATION, $00, 0
 	map_attributes GoldenrodFlowerShop, GOLDENROD_FLOWER_SHOP, $00, 0
@@ -452,7 +441,7 @@ ENDM
 	map_attributes GoldenrodGameCorner, GOLDENROD_GAME_CORNER, $00, 0
 	map_attributes GoldenrodPokecenter1F, GOLDENROD_POKECENTER_1F, $00, 0
 	map_attributes IlexForestAzaleaGate, ILEX_FOREST_AZALEA_GATE, $00, 0
-	map_attributes Route34IlexForestGate, ROUTE_34_ILEX_FOREST_GATE, $00, 0
+	map_attributes Route113Route114Gate, ROUTE_34_ILEX_FOREST_GATE, $00, 0
 	map_attributes DayCare, DAY_CARE, $00, 0
 	map_attributes VermilionFishingSpeechHouse, VERMILION_FISHING_SPEECH_HOUSE, $00, 0
 	map_attributes VermilionPokecenter1F, VERMILION_POKECENTER_1F, $00, 0
@@ -496,7 +485,7 @@ ENDM
 	map_attributes FuchsiaPokecenter1F, FUCHSIA_POKECENTER_1F, $00, 0
 	map_attributes SafariZoneWardensHome, SAFARI_ZONE_WARDENS_HOME, $00, 0
 	map_attributes SafariZoneWardensHome2F, SAFARI_ZONE_WARDENS_HOME_2F, $00, 0
-	map_attributes Route15FuchsiaGate, ROUTE_15_FUCHSIA_GATE, $00, 0
+	map_attributes Route119SunpointGate, ROUTE_15_FUCHSIA_GATE, $00, 0
 	map_attributes LavenderPokecenter1F, LAVENDER_POKECENTER_1F, $00, 0
 	map_attributes PrycesFamilyHouse, LAVENDER_SPEECH_HOUSE, $00, 0
 	map_attributes FrostpointNameRater, LAVENDER_NAME_RATER, $00, 0
@@ -541,12 +530,11 @@ ENDM
 	map_attributes BattleTowerBattleRoom, BATTLE_TOWER_BATTLE_ROOM, $00, 0
 	map_attributes BattleTowerElevator, BATTLE_TOWER_ELEVATOR, $00, 0
 	map_attributes BattleTowerHallway, BATTLE_TOWER_HALLWAY, $00, 0
-	map_attributes Route40BattleTowerGate, ROUTE_40_BATTLE_TOWER_GATE, $00, 0
 	map_attributes BattleTowerOutside, BATTLE_TOWER_OUTSIDE, $05, 0
 	map_attributes ViridianGym, VIRIDIAN_GYM, $00, 0
 	map_attributes ViridianMart, VIRIDIAN_MART, $00, 0
 	map_attributes ViridianPokecenter1F, VIRIDIAN_POKECENTER_1F, $00, 0
-	map_attributes Route2Gate, ROUTE_2_GATE, $00, 0
+	map_attributes Route116Gate, ROUTE_2_GATE, $00, 0
 	map_attributes VictoryRoadGate, VICTORY_ROAD_GATE, $00, 0
 	map_attributes ElmEntrance, ELM_ENTRANCE, $00, 0
 	map_attributes ElmsLab, ELMS_LAB, $00, 0
@@ -554,7 +542,7 @@ ENDM
 	map_attributes PlayersHouse2F, PLAYERS_HOUSE_2F, $00, 0
 	map_attributes SilentHouse, ELMS_HOUSE, $00, 0
 	map_attributes Route110SandstormHouse, ROUTE_27_SANDSTORM_HOUSE, $00, 0
-	map_attributes Route29Route46Gate, ROUTE_29_ROUTE_46_GATE, $00, 0
+	map_attributes Route111BlueForestGate, ROUTE_29_ROUTE_46_GATE, $00, 0
 	map_attributes FightingDojo, FIGHTING_DOJO, $00, 0
 	map_attributes SaffronGym, SAFFRON_GYM, $00, 0
 	map_attributes SaffronMart, SAFFRON_MART, $00, 0
@@ -565,21 +553,20 @@ ENDM
 	map_attributes CopycatsHouse1F, COPYCATS_HOUSE_1F, $00, 0
 	map_attributes CopycatsHouse2F, COPYCATS_HOUSE_2F, $00, 0
 	map_attributes Route5UndergroundPathEntrance, ROUTE_5_UNDERGROUND_PATH_ENTRANCE, $00, 0
-	map_attributes Route5SaffronGate, ROUTE_5_SAFFRON_GATE, $00, 0
+	map_attributes SunPointDocksSunPointGate, ROUTE_5_SAFFRON_GATE, $00, 0
 	map_attributes CherrygroveMart, CHERRYGROVE_MART, $00, 0
 	map_attributes CherrygrovePokecenter1F, CHERRYGROVE_POKECENTER_1F, $00, 0
 	map_attributes CherrygroveGymSpeechHouse, CHERRYGROVE_GYM_SPEECH_HOUSE, $00, 0
-	map_attributes GuideGentsHouse, GUIDE_GENTS_HOUSE, $00, 0
-	map_attributes CherrygroveEvolutionSpeechHouse, CHERRYGROVE_EVOLUTION_SPEECH_HOUSE, $00, 0
-	map_attributes Route30BerryHouse, ROUTE_30_BERRY_HOUSE, $00, 0
+	map_attributes BirdonSpeechHouse, CHERRYGROVE_EVOLUTION_SPEECH_HOUSE, $00, 0
+	map_attributes Route104GardenersHouse, ROUTE_30_BERRY_HOUSE, $00, 0
 	map_attributes MrPokemonsHouse, MR_POKEMONS_HOUSE, $00, 0
-	map_attributes Route31VioletGate, ROUTE_31_VIOLET_GATE, $00, 0
-	map_attributes NewVioletGateNorth, NEW_VIOLET_GATE_NORTH, $00, 0
-	map_attributes NewEcruteakGateSouth, NEW_ECRUTEAK_GATE_SOUTH, $00, 0
-	map_attributes NewOlivineGateWest, NEW_OLIVINE_GATE_WEST, $00, 0
-	map_attributes NewOlivineGateWest2F, NEW_OLIVINE_GATE_WEST_2F, $00, 0
-	map_attributes Route31VioletGate2F, ROUTE_31_VIOLET_GATE_2F, $00, 0
-	map_attributes NewVioletGateNorth2F, NEW_VIOLET_GATE_NORTH_2F, $00, 0
+	map_attributes Route110PagotaGate, ROUTE_31_VIOLET_GATE, $00, 0
+	map_attributes Route102WestPortGate, NEW_VIOLET_GATE_NORTH, $00, 0
+	map_attributes Route105Route106Gate, NEW_ECRUTEAK_GATE_SOUTH, $00, 0
+	map_attributes Route107AlloyGate, NEW_OLIVINE_GATE_WEST, $00, 0
+	map_attributes Route107AlloyGate2F, NEW_OLIVINE_GATE_WEST_2F, $00, 0
+	map_attributes Route110PagotaGate2F, ROUTE_31_VIOLET_GATE_2F, $00, 0
+	map_attributes Route102WestPortGate2F, NEW_VIOLET_GATE_NORTH_2F, $00, 0
 	map_attributes TekuPort, TEKU_PORT, $0a, 0
 	map_attributes TekuPortPassage, TEKU_PORT_PASSAGE, $00, 0
 	map_attributes StandPoke, STAND_POKE, $00, 0

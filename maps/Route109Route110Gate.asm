@@ -1,15 +1,15 @@
 	const_def 2 ; object constants
 	const ROUTE38ECRUTEAKGATE_OFFICER
 
-Route38EcruteakGate_MapScripts:
+Route109Route110Gate_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
-Route38EcruteakGateOfficerScript:
-	jumptextfaceplayer Route38EcruteakGateOfficerText
+Route109Route110GateOfficerScript:
+	jumptextfaceplayer Route109Route110GateOfficerText
 
-Route38EcruteakGateOfficerText:
+Route109Route110GateOfficerText:
 	text "Where did you say"
 	line "you're from?"
 
@@ -22,7 +22,7 @@ Route38EcruteakGateOfficerText:
 	line "way to get here."
 	done
 
-Route38EcruteakGate_MapEvents:
+Route109Route110Gate_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
@@ -36,4 +36,4 @@ Route38EcruteakGate_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event  0,  4, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route38EcruteakGateOfficerScript, -1
+	object_event  0,  4, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route109Route110GateOfficerScript, -1

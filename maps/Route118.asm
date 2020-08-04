@@ -10,7 +10,7 @@
 	const ROUTE4_SWIMMERF
 	const ROUTE4_SWIMMERF2
 
-Route4_MapScripts:
+Route118_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
@@ -105,10 +105,10 @@ TrainerSwimmermCharlie:
 MtMoonSquareSign:
 	jumptext MtMoonSquareSignText
 
-Route4HPUp:
+Route118HPUp:
 	itemball HP_UP
 
-Route4HiddenUltraBall:
+Route118HiddenUltraBall:
 	hiddenitem ULTRA_BALL, EVENT_ROUTE_4_HIDDEN_ULTRA_BALL
 
 BirdKeeperHankSeenText:
@@ -257,7 +257,7 @@ MtMoonSquareSignText:
 	line "HONTO TOWN"
 	done
 
-Route4_MapEvents:
+Route118_MapEvents:
 	db 0, 0 ; filler
 
 	db 1 ; warp events
@@ -267,13 +267,13 @@ Route4_MapEvents:
 
 	db 2 ; bg events
 	bg_event  6, 10, BGEVENT_READ, MtMoonSquareSign
-	bg_event 16,  4, BGEVENT_ITEM, Route4HiddenUltraBall
+	bg_event 16,  4, BGEVENT_ITEM, Route118HiddenUltraBall
 
 	db 11 ; object events
 	object_event 66,  8, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperHank, -1
 	object_event  8, 12, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerPicnickerHope, -1
 	object_event 11,  9, SPRITE_LASS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerPicnickerSharon, -1
-	object_event  6,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route4HPUp, EVENT_ROUTE_4_HP_UP
+	object_event  6,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route118HPUp, EVENT_ROUTE_4_HP_UP
 	object_event 72,  4, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HontoTownRouteCooltrainermScript, -1
 	object_event 72,  5, SPRITE_MONSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HontoTownRouteMonsterScript, -1
 	object_event 17,  7, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route11FruitTree, -1

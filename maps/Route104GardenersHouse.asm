@@ -1,12 +1,12 @@
 	const_def 2 ; object constants
 	const ROUTE30BERRYHOUSE_POKEFAN_M
 
-Route30BerryHouse_MapScripts:
+Route104GardenersHouse_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
-Route30BerryHousePokefanMScript:
+Route104GardenersHousePokefanMScript:
 	faceplayer
 	opentext
 	checkevent EVENT_GOT_BERRY_FROM_ROUTE_30_HOUSE
@@ -23,7 +23,7 @@ Route30BerryHousePokefanMScript:
 	closetext
 	end
 
-Route30BerryHouseBookshelf:
+Route104GardenersHouseBookshelf:
 	jumpstd magazinebookshelf
 
 Route30BerrySpeechHouseMonEatBerriesText:
@@ -50,7 +50,7 @@ Route30BerrySpeechHouseCheckTreesText:
 	cont "trees to grow."
 	done
 
-Route30BerryHouse_MapEvents:
+Route104GardenersHouse_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
@@ -60,8 +60,8 @@ Route30BerryHouse_MapEvents:
 	db 0 ; coord events
 
 	db 2 ; bg events
-	bg_event  0,  0, BGEVENT_READ, Route30BerryHouseBookshelf
-	bg_event  1,  0, BGEVENT_READ, Route30BerryHouseBookshelf
+	bg_event  0,  0, BGEVENT_READ, Route104GardenersHouseBookshelf
+	bg_event  1,  0, BGEVENT_READ, Route104GardenersHouseBookshelf
 
 	db 1 ; object events
-	object_event  4,  3, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, Route30BerryHousePokefanMScript, -1
+	object_event  4,  3, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, Route104GardenersHousePokefanMScript, -1
