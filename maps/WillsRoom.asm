@@ -100,7 +100,7 @@ WillScript_WillBeforeText:
 	para "Your #MON"
 	line "will be at my"
 	cont "mercy when they"
-	cont "frozen solid!"
+	cont "are frozen solid!"
 
 	para "Hehe..."
 	

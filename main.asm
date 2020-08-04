@@ -537,7 +537,7 @@ SECTION "Special Phone Text", ROMX
 
 INCLUDE "data/phone/text/mom.asm"
 INCLUDE "data/phone/text/bill.asm"
-INCLUDE "data/phone/text/elm.asm"
+INCLUDE "data/phone/text/oak.asm"
 INCLUDE "data/phone/text/trainers.asm"
 
 

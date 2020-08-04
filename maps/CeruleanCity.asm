@@ -62,7 +62,7 @@ CeruleanCity_MapEvents:
 
 	db 3 ; bg events
 	bg_event  6,  4, BGEVENT_READ, CeruleanCityPokecenterSign
-	bg_event  9,  2, BGEVENT_ITEM, CeruleanCityHiddenBerserkGene
+	bg_event 16,  5, BGEVENT_ITEM, CeruleanCityHiddenBerserkGene
 	bg_event  7, 11, BGEVENT_READ, CeruleanCitySign
 
 	db 2 ; object events

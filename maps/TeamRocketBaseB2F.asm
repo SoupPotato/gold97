@@ -434,6 +434,7 @@ TeamRocketGuyLeaves:
 	big_step LEFT
 	big_step LEFT
 	big_step LEFT
+	big_step LEFT
 	step_end
 	
 SilverLeaves:	

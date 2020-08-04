@@ -209,9 +209,10 @@ DaisySpeechText:
 	line "brother."
 	
 	para "If Grandpa gave"
-	line "you a task, I would"
-	cont "would like to help"
-	cont "you out."
+	line "you a task,"
+	
+	para "I would like to"
+	line "help you."
 
 	para "He was also"
 	line "supposed to give"

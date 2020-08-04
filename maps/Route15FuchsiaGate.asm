@@ -31,8 +31,8 @@ Route15FuchsiaGate_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
-	warp_event  4,  0, CIANWOOD_CITY, 10
-	warp_event  5,  0, CIANWOOD_CITY, 11
+	warp_event  4,  0, CIANWOOD_CITY, 9
+	warp_event  5,  0, CIANWOOD_CITY, 10
 	warp_event  4,  7, ROUTE_7, 1
 	warp_event  5,  7, ROUTE_7, 2
 

@@ -255,7 +255,8 @@ EcruteakCityRocket2Text:
 	text "What do you want?"
 	
 	para "Go play in the"
-	line "MINES or something."	
+	line "MINES or"	
+	cont "something..."
 	done
 
 EcruteakCityGramps1Text:

@@ -75,18 +75,18 @@ EngineFlags:
 	engine_flag wVisitedSpawns, SPAWN_HOME
 	engine_flag wVisitedSpawns, SPAWN_DEBUG
 	engine_flag wVisitedSpawns, SPAWN_PALLET
-	engine_flag wVisitedSpawns, SPAWN_VIRIDIAN
+	engine_flag wVisitedSpawns, NUM_SPAWNS
 	engine_flag wVisitedSpawns, SPAWN_PEWTER
 	engine_flag wVisitedSpawns, SPAWN_CERULEAN ; $38
 	engine_flag wVisitedSpawns, SPAWN_ROCK_TUNNEL
 	engine_flag wVisitedSpawns, SPAWN_VERMILION
-	engine_flag wVisitedSpawns, SPAWN_LAVENDER
+	engine_flag wVisitedSpawns, NUM_SPAWNS
 	engine_flag wVisitedSpawns, SPAWN_SAFFRON
 	engine_flag wVisitedSpawns, SPAWN_CELADON
 	engine_flag wVisitedSpawns, SPAWN_FUCHSIA
 	engine_flag wVisitedSpawns, SPAWN_CINNABAR
 	engine_flag wVisitedSpawns, SPAWN_INDIGO ; $40
-	engine_flag wVisitedSpawns, SPAWN_NEW_BARK
+	engine_flag wVisitedSpawns, SPAWN_SILENT
 	engine_flag wVisitedSpawns, SPAWN_CHERRYGROVE
 	engine_flag wVisitedSpawns, SPAWN_VIOLET
 	engine_flag wVisitedSpawns, SPAWN_AZALEA
@@ -95,9 +95,9 @@ EngineFlags:
 	engine_flag wVisitedSpawns, SPAWN_OLIVINE
 	engine_flag wVisitedSpawns, SPAWN_ECRUTEAK ; $48
 	engine_flag wVisitedSpawns, SPAWN_MAHOGANY
-	engine_flag wVisitedSpawns, SPAWN_LAKE_OF_RAGE
+	engine_flag wVisitedSpawns, NUM_SPAWNS
 	engine_flag wVisitedSpawns, SPAWN_BLACKTHORN
-	engine_flag wVisitedSpawns, SPAWN_MT_SILVER
+	engine_flag wVisitedSpawns, NUM_SPAWNS
 	engine_flag wVisitedSpawns, NUM_SPAWNS ; unused
 
 	engine_flag wLuckyNumberShowFlag, LUCKYNUMBERSHOW_GAME_OVER_F

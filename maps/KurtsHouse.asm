@@ -19,7 +19,9 @@ KurtsHouse_MapScripts:
 	checkevent EVENT_TALKED_TO_KURT_AND_FALKNER
 	iftrue .SceneKurtsHouseNothing
 	setevent EVENT_TALKED_TO_KURT_AND_FALKNER
+	pause 5
 	applymovement PLAYER, WalkUpToKurt
+	pause 15
 	opentext
 	writetext KurtTalks
 	waitbutton
@@ -41,11 +43,12 @@ KurtsHouse_MapScripts:
 	closetext
 	applymovement KURTSHOUSE_FALKNER, FalknerWalksBack
 	pause 15
-	applymovement PLAYER, WalkAway
 	end
 	
 .Falknerapproves
+	pause 5
 	applymovement PLAYER, WalkUpToKurt
+	pause 15
 	turnobject KURTSHOUSE_FALKNER, DOWN
 	showemote EMOTE_SHOCK, KURTSHOUSE_FALKNER, 15
 	applymovement KURTSHOUSE_FALKNER, FalknerWalksToYou
@@ -355,19 +358,6 @@ FalknerLeaves:
 	step DOWN
 	step DOWN
 	step DOWN
-	step_end
-	
-WalkAway:
-	step DOWN
-	step_end
-
-MovementData_0x18e46c:
-	big_step RIGHT
-	big_step DOWN
-	big_step DOWN
-	big_step DOWN
-	big_step DOWN
-	big_step DOWN
 	step_end
 
 UnknownText_0x18e6c9:

@@ -26,7 +26,7 @@ VictoryRoadGateBadgeCheckScript:
 	opentext
 	writetext VictoryRoadGateOfficerText
 	buttonsound
-	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
+	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
 	iffalse .NoPokemonEvenYet
 	checkcode VAR_BADGES
 	ifgreater NUM_JOHTO_BADGES - 1, .AllEightBadges

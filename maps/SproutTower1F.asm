@@ -186,7 +186,7 @@ SproutTower1F_MapEvents:
 
 	db 3 ; warp events
 	warp_event  5, 11, OLD_CITY, 7
-	warp_event  6, 11, OLD_CITY, 12
+	warp_event  6, 11, OLD_CITY, 11
 	warp_event  0,  1, SPROUT_TOWER_2F, 1
 
 

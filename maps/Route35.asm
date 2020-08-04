@@ -49,6 +49,7 @@ Route35SlowpokeGuyScript:
 	end
 
 SlowpokeVendor:
+	faceplayer
 	turnobject PLAYER, UP
 	opentext
 	writetext Text_MillionDollarSlowpokeTail

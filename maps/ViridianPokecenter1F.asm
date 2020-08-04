@@ -10,7 +10,7 @@ ViridianPokecenter1F_MapScripts:
 	db 0 ; callbacks
 
 ViridianPokecenter1FNurseScript:
-	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
+	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
 	iffalse .NoPokemonScript
 	jumpstd pokecenternurse
 	
@@ -49,7 +49,7 @@ ViridianPokecenterMonScript:
 	faceplayer
 	opentext
 	writetext ViridianPokecenterMonText
-	cry HOUNDOOM
+	cry HOUNDOUR
 	waitbutton
 	closetext
 	end
@@ -63,7 +63,7 @@ NoPokemonText:
 	done
 	
 ViridianPokecenterMonText:
-	text "HOUNDOOM:"
+	text "HOUNDOUR:"
 	line "GRUFFF!"
 	done
 	
@@ -103,7 +103,7 @@ ViridianPokecenter1FCooltrainerFText:
 
 
 ViridianPokecenter1FBugCatcherText:
-	text "This is HOUNDOOM!"
+	text "This is HOUNDOUR!"
 	para "It's a #MON"
 	line "of a completely"
 	cont "new type."
@@ -126,4 +126,4 @@ ViridianPokecenter1F_MapEvents:
 	object_event  3,  4, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ViridianPokecenter1FCooltrainerMScript, -1
 	object_event  12, 7, SPRITE_GENTLEMAN, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ViridianPokecenter1FCooltrainerFScript, -1
 	object_event  9,  1, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ViridianPokecenter1FBugCatcherScript, -1
-	object_event  10, 1, SPRITE_GROWLITHE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ViridianPokecenterMonScript, -1
+	object_event  10, 1, SPRITE_GROWLITHE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ViridianPokecenterMonScript, -1

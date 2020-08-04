@@ -55,8 +55,8 @@ Route5SaffronGate_MapEvents:
 	db 4 ; warp events
 	warp_event  4,  0, ROUTE_5, 1
 	warp_event  5,  0, ROUTE_5, 2
-	warp_event  4,  7, CIANWOOD_CITY, 8
-	warp_event  5,  7, CIANWOOD_CITY, 9
+	warp_event  4,  7, CIANWOOD_CITY, 7
+	warp_event  5,  7, CIANWOOD_CITY, 8
 
 	db 0 ; coord events
 

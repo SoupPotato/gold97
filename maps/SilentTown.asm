@@ -31,12 +31,11 @@ SilentTown_MapScripts:
 .DummyScene0:
 	end
 
-
 .DummyScene1:
 	end
 	
 .FlyPoint:
-	setflag ENGINE_FLYPOINT_NEW_BARK
+	setflag ENGINE_FLYPOINT_SILENT
 	clearevent EVENT_FIRST_TIME_BANKING_WITH_MOM
 	return
 	
@@ -148,11 +147,9 @@ SilentTownBlueScript:
 SilentTownTeacherScript:
 	faceplayer
 	opentext
-	checkevent EVENT_TALKED_TO_MOM_AFTER_MYSTERY_EGG_QUEST
+	checkevent EVENT_TALKED_TO_MOM_AFTER_GETTING_POKEDEX
 	iftrue .CallMom
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
-	iftrue .TellMomYoureLeaving
-	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
+	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
 	iftrue .MonIsAdorable
 	writetext Text_GearIsImpressive
 	waitbutton
@@ -161,12 +158,6 @@ SilentTownTeacherScript:
 
 .MonIsAdorable:
 	writetext Text_YourMonIsAdorable
-	waitbutton
-	closetext
-	end
-
-.TellMomYoureLeaving:
-	writetext Text_TellMomIfLeaving
 	waitbutton
 	closetext
 	end
@@ -324,15 +315,6 @@ Text_YourMonIsAdorable:
 	text "Oh! Your #MON"
 	line "is adorable!"
 	cont "I wish I had one!"
-	done
-
-Text_TellMomIfLeaving:
-	text "Hi, <PLAY_G>!"
-	line "Leaving again?"
-
-	para "You should tell"
-	line "your mom if you"
-	cont "are leaving."
 	done
 
 Text_CallMomOnGear:

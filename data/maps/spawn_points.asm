@@ -8,13 +8,9 @@ SpawnPoints:
 ; entries correspond to SPAWN_* constants
 
 	spawn PLAYERS_HOUSE_2F,            3,  3
-	spawn VIRIDIAN_POKECENTER_1F,      5,  3
-
-	spawn VIRIDIAN_CITY,              23, 26
 	spawn PEWTER_CITY,                25, 19
 	spawn CERULEAN_CITY,               5,  5
 	spawn VERMILION_CITY,             17,  5
-	spawn LAVENDER_TOWN,               5,  6
 	spawn SAFFRON_CITY,               11,  5
 
 	spawn SILENT_TOWN,               5,  5
@@ -33,8 +29,5 @@ SpawnPoints:
 	spawn ROUTE_39,             	  13, 29
 	spawn ECRUTEAK_CITY,              31, 11
 	spawn MAHOGANY_TOWN,               3, 13
-	spawn LAKE_OF_RAGE,               21, 29
 	spawn BLACKTHORN_CITY,            13, 19
-	spawn SILVER_CAVE_OUTSIDE,        23, 20
 	spawn FAST_SHIP_CABINS_SW_SSW_NW,  6,  2
-	spawn N_A,                        -1, -1

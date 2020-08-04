@@ -20,7 +20,6 @@ OutdoorSprites:
 	dw FastShipGroupSprites
 	dw IndigoGroupSprites
 	dw FuchsiaGroupSprites
-	dw LavenderGroupSprites
 	dw SilverGroupSprites
 	dw CableClubGroupSprites
 	dw CeladonGroupSprites
@@ -127,21 +126,6 @@ CeladonGroupSprites:
 	db SPRITE_TEACHER
 	db SPRITE_SUPER_NERD
 	; 7 of 9 walking sprites
-	db SPRITE_POKE_BALL
-	db SPRITE_FRUIT_TREE
-	db 0 ; end
-
-LavenderGroupSprites:
-	db SPRITE_POKEFAN_M
-	db SPRITE_MACHOP
-	db SPRITE_GRAMPS
-	db SPRITE_YOUNGSTER
-	db SPRITE_FISHER
-	db SPRITE_TEACHER
-	db SPRITE_SUPER_NERD
-	db SPRITE_BIG_SNORLAX
-	db SPRITE_BIKER
-	; max 9 of 9 walking sprites
 	db SPRITE_POKE_BALL
 	db SPRITE_FRUIT_TREE
 	db 0 ; end
@@ -273,7 +257,7 @@ AzaleaGroupSprites:
 	db SPRITE_YOUNGSTER
 	db SPRITE_OFFICER
 	db SPRITE_POKEFAN_M
-	db SPRITE_BLACK_BELT
+	db SPRITE_BUG_CATCHER
 	db SPRITE_TEACHER
 	db SPRITE_SUPER_NERD
 	db SPRITE_LASS
@@ -322,7 +306,7 @@ OlivineGroupSprites:
 	db SPRITE_BUG_CATCHER
 	db SPRITE_COOLTRAINER_M
 	db SPRITE_SAILOR
-	db SPRITE_JANINE
+	db SPRITE_YOUNGSTER
 	db SPRITE_POKEFAN_M
 	db SPRITE_FISHER
 	; 9 of max 9 walking sprites
@@ -330,7 +314,7 @@ OlivineGroupSprites:
 	db SPRITE_FRUIT_TREE
 	db SPRITE_DAY_CARE_MON_1
 	db SPRITE_DAY_CARE_MON_2
-	db SPRITE_STANDING_YOUNGSTER
+	db SPRITE_JANINE
 	db SPRITE_POKEFAN_F
 	db 0 ; end
 
