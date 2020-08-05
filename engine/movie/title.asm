@@ -11,6 +11,7 @@ TitleScreen:
 	ld [hli], a ; wTitleScreenSelectedOption
 	ld [hli], a ; wTitleScreenTimer
 	ld [hl], a  ; wTitleScreenTimer + 1
+	ldh [hTitleScreenLastPressed], a
 
 ; Prepare screen
 	farcall ClearSpriteAnims
@@ -186,46 +187,47 @@ TitleScreenMain:
 	call TitleScreenRunTimer
 	jr z, .end
 
-; Save data can be deleted by pressing Up + B + Select.
 	call GetJoypad
 	ld hl, hJoyDown
+
+; Change to musical notes and back with Left + B
+	ld a, [hl]
+	and D_LEFT + B_BUTTON
+	cp  D_LEFT + B_BUTTON
+	jr nz, .reset_last_pressed
+
+	ldh a, [hTitleScreenLastPressed]
+	cp D_LEFT + B_BUTTON
+	jr z, .no_switch
+
+	ld a, [hl]
+	ldh [hTitleScreenLastPressed], a
+
+	ld hl, wTitleScreenSelectedOption
+	ld a, [hl]
+	xor 1
+	ld [hl], a
+
+	jp TitleScreenSwitchObjectGFX
+
+.reset_last_pressed
+	xor a
+	ldh [hTitleScreenLastPressed], a
+.no_switch
+
+; Save data can be deleted by pressing Up + B + Select.
 	ld a, [hl]
 	and D_UP + B_BUTTON + SELECT
 	cp  D_UP + B_BUTTON + SELECT
 	jr z, .delete_save_data
 
-; To bring up the clock reset dialog:
-
-; Hold Down + B + Select to initiate the sequence.
-	ldh a, [hClockResetTrigger]
-	cp $34
-	jr z, .clock_reset
-
+; To bring up the clock reset dialog, hold Down + B + Select
 	ld a, [hl]
 	and D_DOWN + B_BUTTON + SELECT
 	cp  D_DOWN + B_BUTTON + SELECT
-	jr nz, .check_start
-
-	ld a, $34
-	ldh [hClockResetTrigger], a
-	jr .check_start
-
-; Keep Select pressed, and hold Left + Up.
-; Then let go of Select.
-.check_clock_reset
-	bit SELECT_F, [hl]
-	jr nz, .check_start
-
-	xor a
-	ldh [hClockResetTrigger], a
-
-	ld a, [hl]
-	and D_LEFT + D_UP
-	cp  D_LEFT + D_UP
 	jr z, .clock_reset
 
 ; Press Start or A to start the game.
-.check_start
 	ld a, [hl]
 	and START | A_BUTTON
 	jr nz, .incave
@@ -355,6 +357,23 @@ TitleScreenFireballs:
 	db $B0, $7C, $10, 2
 	db $00, $88, $20, 3
 
+TitleScreenSwitchObjectGFX:
+	add a
+	ld l, a
+	ld h, 0
+	ld bc, .array
+	add hl, bc
+	ld a, [hli]
+	ld d, [hl]
+	ld e, a
+	ld hl, vTiles0
+	lb bc, BANK(TitleFlamesGFX), 8
+	jp Get2bpp
+
+.array
+	dw TitleFlamesGFX
+	dw TitleNotesGFX
+
 TitleScreenLoadGFX:
 	call DisableLCD
 	call ClearPalettes
@@ -373,9 +392,8 @@ TitleScreenLoadGFX:
 	call Decompress
 	ld hl, TitleHoohGFX
 	call Decompress
-	ld de, vTiles0
-	ld hl, TitleFlamesGFX
-	call Decompress
+	xor a
+	call TitleScreenSwitchObjectGFX
 
 ; Clear the background map
 	hlbgcoord 0, 0
@@ -499,7 +517,10 @@ TitleBorderGFX:
 INCBIN "gfx/title/border.2bpp.lz"
 
 TitleFlamesGFX:
-INCBIN "gfx/title/flames.2bpp.lz"
+INCBIN "gfx/title/flames.2bpp"
+
+TitleNotesGFX:
+INCBIN "gfx/title/notes.2bpp"
 
 TitleScreenFlamesPalette:
 INCBIN "gfx/title/flames.gbcpal"
