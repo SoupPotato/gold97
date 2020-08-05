@@ -48,6 +48,7 @@ DoAnimFrame:
 	dw .IntroUnown
 	dw .IntroUnownF
 	dw .IntroSuicuneAway
+	dw .TitleFlame
 
 .Null:
 	ret
@@ -841,6 +842,34 @@ DoAnimFrame:
 
 .Leafeon
 	farcall UpdateLeafeonPosition
+	ret
+
+.TitleFlame:
+	; Move a tad to the left
+	ld hl, SPRITEANIMSTRUCT_0D
+	add hl, bc
+	ld a, [hl]
+	ld d, a
+	ld hl, SPRITEANIMSTRUCT_XCOORD
+	add hl, bc
+	ld a, [hl]
+	sub d
+	ld [hl], a
+
+	; Set the y offset
+	ld a, d
+	add a
+	add a
+	ld d, a
+	ld hl, SPRITEANIMSTRUCT_0C
+	add hl, bc
+	ld a, [hl]
+	inc [hl]
+	inc [hl]
+	call .Sprites_Sine
+	ld hl, SPRITEANIMSTRUCT_YOFFSET
+	add hl, bc
+	ld [hl], a
 	ret
 
 .AnonymousJumptable:

@@ -1335,10 +1335,11 @@ wcf66:: db
 
 NEXTU ; cf64
 ; intro and title data
-wIntroSceneFrameCounter:: db
 UNION ; cf65
+wIntroSceneFrameCounter:: db
 wIntroSceneTimer:: db
 NEXTU ; cf65
+wTitleScreenSelectedOption:: db
 wTitleScreenTimer:: dw
 ENDU
 

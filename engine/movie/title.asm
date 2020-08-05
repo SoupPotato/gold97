@@ -1,279 +1,449 @@
-_TitleScreen:
-	call ClearBGPalettes
-	call ClearSprites
-	call ClearTileMap
+TITLE_LOGO_TILE EQU $80
+TITLE_COPYRIGHT_TILE EQU $0C
+TITLE_BORDER_TILE EQU $1C
+TITLE_HOOH_TILE EQU $24
 
-; Turn BG Map update off
+TitleScreen:
+; Initialize variables
 	xor a
-	ldh [hBGMapMode], a
-
-; Reset timing variables
 	ld hl, wJumptableIndex
 	ld [hli], a ; wJumptableIndex
-	ld [hli], a ; wIntroSceneFrameCounter
+	ld [hli], a ; wTitleScreenSelectedOption
 	ld [hli], a ; wTitleScreenTimer
 	ld [hl], a  ; wTitleScreenTimer + 1
 
-; Turn LCD off
-	call DisableLCD
+; Prepare screen
+	farcall ClearSpriteAnims
+	call TitleScreenLoadGFX
 
-; VRAM bank 1
-	ld a, 1
-	ldh [rVBK], a
-
-; Decompress running Suicune gfx
-	ld hl, TitleSuicuneGFX
-	ld de, vTiles1
-	call Decompress
-
-; Clear screen palettes
-	hlbgcoord 0, 0
-	ld bc, 20 * BG_MAP_WIDTH
-	xor a
-	call ByteFill
-
-; Fill tile palettes:
-
-; BG Map 1:
-
-; line 0 (copyright)
-	hlbgcoord 0, 0, vBGMap1
-	ld bc, BG_MAP_WIDTH
-	ld a, 7 ; palette
-	call ByteFill
-
-; BG Map 0:
-
-; Apply logo gradient:
-
-; lines 3-4
-	hlbgcoord 0, 1
-	ld bc, 2 * BG_MAP_WIDTH
-	ld a, 2
-	call ByteFill
-; line 5
-	hlbgcoord 0, 3
-	ld bc, BG_MAP_WIDTH
-	ld a, 3
-	call ByteFill
-; line 6
-	hlbgcoord 0, 4
-	ld bc, BG_MAP_WIDTH
-	ld a, 4
-	call ByteFill
-; line 7
-	hlbgcoord 0, 5
-	ld bc, BG_MAP_WIDTH
-	ld a, 5
-	call ByteFill
-; lines 8-9
-	hlbgcoord 0, 6
-	ld bc, 2 * BG_MAP_WIDTH
-	ld a, 6
-	call ByteFill
-
-; 'CRYSTAL VERSION'
-	hlbgcoord 5, 7
-	ld bc, NAME_LENGTH ; length of version text
-	ld a, 1
-	call ByteFill
-
-; Suicune gfx
-	hlbgcoord 0, 9
-	ld bc, 8 * BG_MAP_WIDTH ; the rest of the screen
-	ld a, 0 | VRAM_BANK_1
-	call ByteFill
-
-; Back to VRAM bank 0
-	ld a, $0
-	ldh [rVBK], a
-
-; Decompress logo
-	ld hl, TitleLogoGFX
-	ld de, vTiles1
-	call Decompress
-
-; Decompress background crystal
-	ld hl, TitleCrystalGFX
-	ld de, vTiles0
-	call Decompress
-
-; Clear screen tiles
-	hlbgcoord 0, 0
-	ld bc, 64 * BG_MAP_WIDTH
-	ld a, " "
-	call ByteFill
-
-; Draw Pokemon logo
-	hlcoord 0, 1
-	lb bc, 7, 40
-	ld d, $80
-	ld e, $14
-	call DrawTitleGraphic
-
-; Draw copyright text
-	hlbgcoord 3, 0, vBGMap1
-	lb bc, 1, 13
-	ld d, $20
-	ld e, $10
-	call DrawTitleGraphic
-
-; Initialize running Suicune?
-	ld d, $0
-	call LoadSuicuneFrame
-
-; Initialize background crystal
-	;call InitializeBackground
-
-; Save WRAM bank
-	ldh a, [rSVBK]
-	push af
-; WRAM bank 5
-	ld a, BANK(wBGPals1)
-	ldh [rSVBK], a
-
-; Update palette colors
-	ld hl, TitleScreenPalettes
-	ld de, wBGPals1
-	ld bc, 16 palettes
-	call CopyBytes
-
-	ld hl, TitleScreenPalettes
-	ld de, wBGPals2
-	ld bc, 16 palettes
-	call CopyBytes
-
-; Restore WRAM bank
-	pop af
-	ldh [rSVBK], a
-
-; LY/SCX trickery starts here
-
-	ldh a, [rSVBK]
-	push af
-	ld a, BANK(wLYOverrides)
-	ldh [rSVBK], a
-
-; Make alternating lines come in from opposite sides
-
-; (This part is actually totally pointless, you can't
-;  see anything until these values are overwritten!)
-
-	ld b, 80 / 2 ; alternate for 80 lines
-	ld hl, wLYOverrides
-.loop
-; $00 is the middle position
-	ld [hl], +112 ; coming from the left
-	inc hl
-	ld [hl], -112 ; coming from the right
-	inc hl
-	dec b
-	jr nz, .loop
-
-; Make sure the rest of the buffer is empty
-	ld hl, wLYOverrides + 80
-	xor a
-	ld bc, wLYOverridesEnd - (wLYOverrides + 80)
-	call ByteFill
-
-; Let LCD Stat know we're messing around with SCX
-	ld a, LOW(rSCX)
-	ldh [hLCDCPointer], a
-
-	pop af
-	ldh [rSVBK], a
-
-; Reset audio
 	call ChannelsOff
-	call EnableLCD
+	call SFXChannelsOff
 
-; Set sprite size to 8x16
-	ldh a, [rLCDC]
-	set rLCDC_SPRITE_SIZE, a
-	ldh [rLCDC], a
+; Temporarily replace color 3 of pokemon logo with red
+	ld hl, TitleScreenPalettes palette 1 color 2
+	ld de, wBGPals1 palette 0 color 2
+	ld bc, PAL_COLOR_SIZE
+	ld a, BANK(wBGPals1)
+	call FarCopyWRAM
 
-	ld a, +112
+; Start actually drawing screen
+	call TitleScreenFireballs
+	ld a, 152
 	ldh [hSCX], a
-	ld a, 8
-	ldh [hSCY], a
-	ld a, 7
-	ldh [hWX], a
-	ld a, -112
-	ldh [hWY], a
-
-	ld a, $1
-	ldh [hCGBPalUpdate], a
-
-; Update BG Map 0 (bank 0)
-	ldh [hBGMapMode], a
-
 	xor a
-	ld [wd002], a
+	ldh [hSCY], a
+	ld a, %00101010
+	call DmgToCgbBGPals
 
 ; Play starting sound effect
-	call SFXChannelsOff
 	ld de, SFX_TITLE_SCREEN_ENTRANCE
 	call PlaySFX
 
-	ret
+.loop
+	farcall PlaySpriteAnimationsAndDelayFrame
+	ld a, [wJumptableIndex]
+	bit 7, a
+	ret nz
+	call TitleScreenScene
+	jr .loop
 
-SuicuneFrameIterator:
-	ld hl, wd002
-	ld a, [hl]
-	ld c, a
-	inc [hl]
+TitleScreenScene:
+	ld e, a
+	ld d, 0
+	ld hl, .scenes
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	jp hl
 
-; Only do this once every eight frames
-	and %111
+.scenes
+	dw TitleScreenScrollin
+	dw TitleScreenFlash
+	dw TitleScreenBorder
+	dw TitleScreenGameTitle
+	dw TitleScreenCopyright
+	dw TitleScreenHooh
+	dw TitleScreenTimer
+	dw TitleScreenMain
+	dw TitleScreenEnd
+
+TitleScreenScrollin:
+	ldh a, [hSCX]
+	add 2
+	ldh [hSCX], a
+	ret nc
+
+	xor a
+	ldh [hSCX], a
+
+; Play the title screen music.
+	ld de, MUSIC_TITLE
+	call PlayMusic
+
+	ld de, 20
+	jp TitleScreenSetTimerNextScene
+
+TitleScreenFlash:
+	ld a, [wTitleScreenTimer]
+	ld c, 3
+	call SimpleDivide
+
+	and a
+	jr nz, .no_switch
+
+	ld a, %00000000
+	bit 0, b
+	jr z, .switch
+	ld a, %00101010
+.switch
+	call DmgToCgbBGPals
+
+.no_switch
+	call TitleScreenRunTimer
 	ret nz
 
-	ld a, c
-	and %11000
-	sla a
-	swap a
-	ld e, a
-	ld d, $0
-	ld hl, .Frames
-	add hl, de
-	ld d, [hl]
-	xor a
-	ldh [hBGMapMode], a
-	call LoadSuicuneFrame
-	ld a, $1
-	ldh [hBGMapMode], a
-	ld a, $3
-	ldh [hBGMapThird], a
+; Restore normal colors
+	ld hl, TitleScreenPalettes palette 0 color 2
+	ld de, wBGPals1 palette 0 color 2
+	ld bc, PAL_COLOR_SIZE
+	ld a, BANK(wBGPals1)
+	call FarCopyWRAM
+	ld a, %11100100
+	call DmgToCgbBGPals
+
+	ld de, 20
+	jp TitleScreenSetTimerNextScene
+
+TitleScreenBorder:
+	call TitleScreenRunTimer
+	ret nz
+
+; Draw tm
+	hlcoord 18, 6
+	ld a, TITLE_LOGO_TILE + 138
+	ld [hl], a
+
+; Draw border
+	hlcoord 0, 8
+	ld a, TITLE_BORDER_TILE
+	call DrawTitleBorder
+	hlcoord 0, 16
+	ld a, TITLE_BORDER_TILE + 4
+	call DrawTitleBorder
+
+	ld de, 20
+	jp TitleScreenSetTimerNextScene
+
+TitleScreenGameTitle:
+	call TitleScreenRunTimer
+	ret nz
+
+; Draw game title
+	hlcoord 6, 6
+	lb bc, 1, 9
+	lb de, TITLE_LOGO_TILE + 126, 9
+	call DrawTitleGraphic
+
+	ld de, 20
+	jp TitleScreenSetTimerNextScene
+
+TitleScreenCopyright:
+	call TitleScreenRunTimer
+	ret nz
+
+; Draw copyright text
+	hlcoord 3, 17
+	lb bc, 1, 13
+	lb de, TITLE_COPYRIGHT_TILE, 0
+	call DrawTitleGraphic
+
+	ld de, 20
+	jp TitleScreenSetTimerNextScene
+
+TitleScreenHooh:
+	call TitleScreenRunTimer
+	ret nz
+
+; Draw Ho-oh
+	hlcoord 7, 9
+	lb bc, 7, 7
+	lb de, TITLE_HOOH_TILE, 7
+	call DrawTitleGraphic
+
+	ld hl, wJumptableIndex
+	inc [hl]
 	ret
 
-.Frames:
-	db $80 ; vTiles3 tile $80
-	db $88 ; vTiles3 tile $88
-	db $00 ; vTiles5 tile $00
-	db $08 ; vTiles5 tile $08
+TitleScreenTimer:
+; Start a timer
+	ld de, 73 * 60 + 36
+	jp TitleScreenSetTimerNextScene
 
-LoadSuicuneFrame:
-	hlcoord 6, 9
-	ld b, 8
-.bgrows
-	ld c, 8
-.col
+TitleScreenMain:
+; Run the timer down.
+	call TitleScreenRunTimer
+	jr z, .end
+
+; Save data can be deleted by pressing Up + B + Select.
+	call GetJoypad
+	ld hl, hJoyDown
+	ld a, [hl]
+	and D_UP + B_BUTTON + SELECT
+	cp  D_UP + B_BUTTON + SELECT
+	jr z, .delete_save_data
+
+; To bring up the clock reset dialog:
+
+; Hold Down + B + Select to initiate the sequence.
+	ldh a, [hClockResetTrigger]
+	cp $34
+	jr z, .clock_reset
+
+	ld a, [hl]
+	and D_DOWN + B_BUTTON + SELECT
+	cp  D_DOWN + B_BUTTON + SELECT
+	jr nz, .check_start
+
+	ld a, $34
+	ldh [hClockResetTrigger], a
+	jr .check_start
+
+; Keep Select pressed, and hold Left + Up.
+; Then let go of Select.
+.check_clock_reset
+	bit SELECT_F, [hl]
+	jr nz, .check_start
+
+	xor a
+	ldh [hClockResetTrigger], a
+
+	ld a, [hl]
+	and D_LEFT + D_UP
+	cp  D_LEFT + D_UP
+	jr z, .clock_reset
+
+; Press Start or A to start the game.
+.check_start
+	ld a, [hl]
+	and START | A_BUTTON
+	jr nz, .incave
+	ret
+
+.incave
+	ld a, 0
+	jr .done
+
+.delete_save_data
+	ld a, 1
+
+.done
+	ld [wTitleScreenSelectedOption], a
+
+; Return to the intro sequence.
+	ld hl, wJumptableIndex
+	set 7, [hl]
+	ret
+
+.end
+; Next scene
+	ld hl, wJumptableIndex
+	inc [hl]
+
+; Fade out the title screen music
+	xor a
+	ld [wMusicFadeID], a
+	ld [wMusicFadeID + 1], a
+	ld hl, wMusicFade
+	ld [hl], 8 ; 1 second
+
+	ld hl, wTitleScreenTimer
+	inc [hl]
+	ret
+
+.clock_reset
+	ld a, 4
+	ld [wTitleScreenSelectedOption], a
+
+; Return to the intro sequence.
+	ld hl, wJumptableIndex
+	set 7, [hl]
+	ret
+
+TitleScreenEnd:
+; Wait until the music is done fading.
+
+	ld hl, wTitleScreenTimer
+	inc [hl]
+
+	ld a, [wMusicFade]
+	and a
+	ret nz
+
+	ld a, 2
+	ld [wTitleScreenSelectedOption], a
+
+; Back to the intro.
+	ld hl, wJumptableIndex
+	set 7, [hl]
+	ret
+
+TitleScreenSetTimerNextScene:
+	ld hl, wTitleScreenTimer
+	ld a, e
+	ld [hli], a
+	ld [hl], d
+
+	ld hl, wJumptableIndex
+	inc [hl]
+	ret
+
+TitleScreenRunTimer:
+	ld hl, wTitleScreenTimer
+	ld e, [hl]
+	inc hl
+	ld d, [hl]
+	ld a, e
+	or d
+	ret z
+
+	dec de
+	ld [hl], d
+	dec hl
+	ld [hl], e
+	ret
+
+TitleScreenFireballs:
+	ld hl, .Fireballs
+	ld d, 6
+.loop
+	push de
+	ld a, [hli]
+	ld e, a
+	ld a, [hli]
+	ld d, a
+	ld a, [hli]
+	ld b, a
+	ld a, [hli]
+	ld c, a
+	push hl
+	push bc
+	ld a, SPRITE_ANIM_INDEX_TITLE_FLAME
+	call _InitSpriteAnimStruct
+
+	ld hl, SPRITEANIMSTRUCT_0C
+	add hl, bc
+	pop de
 	ld a, d
 	ld [hli], a
-	inc d
-	dec c
-	jr nz, .col
-	ld a, SCREEN_WIDTH - 8
-	add l
-	ld l, a
-	ld a, 0
-	adc h
-	ld h, a
-	ld a, 8
-	add d
-	ld d, a
-	dec b
-	jr nz, .bgrows
+	ld a, e
+	ld [hli], a
+
+	pop hl
+	pop de
+	dec d
+	jr nz, .loop
 	ret
+
+.Fireballs:
+	; x pos, y pos, sine offset, speed
+	db $E0, $4C, $10, 2
+	db $A0, $58, $20, 3
+	db $90, $64, $30, 4
+	db $D0, $70, $00, 1
+	db $B0, $7C, $10, 2
+	db $00, $88, $20, 3
+
+TitleScreenLoadGFX:
+	call DisableLCD
+	call ClearPalettes
+	call ClearSprites
+	call ClearTileMap
+
+; Disable background updates
+	xor a
+	ldh [hBGMapMode], a
+
+; Decompress graphics
+	ld de, vTiles1
+	ld hl, TitleLogoGFX
+	call Decompress
+	ld hl, TitleBorderGFX
+	call Decompress
+	ld hl, TitleHoohGFX
+	call Decompress
+	ld de, vTiles0
+	ld hl, TitleFlamesGFX
+	call Decompress
+
+; Clear the background map
+	hlbgcoord 0, 0
+	ld bc, vBGMap1 - vBGMap0
+	ld a, $80 ; Will be loaded white
+	call ByteFill
+
+; Draw Pokemon logo
+	hlcoord 0, 0
+	lb bc, 7, 20
+	lb de, TITLE_LOGO_TILE, 20
+	call DrawTitleGraphic
+; ...except game title and tm
+	hlcoord 6, 6
+	ld bc, 9
+	ld a, $80
+	call ByteFill
+	ld bc, 3
+	add hl, bc
+	ld [hl], a
+
+; Fill tile palettes:
+	ld a, 1
+	ldh [rVBK], a
+
+; Logo
+	hlbgcoord 0, 0
+	ld bc, 7 * BG_MAP_WIDTH
+	ld a, 0
+	call ByteFill
+
+; 'GOLD VERSION'
+	hlbgcoord 6, 6
+	ld bc, 9 ; length of version text
+	ld a, 1
+	call ByteFill
+
+; Border, Ho-oh and copyright text
+	hlbgcoord 0, 8
+	ld bc, 10 * BG_MAP_WIDTH
+	ld a, 2
+	call ByteFill
+
+	ld a, 0
+	ldh [rVBK], a
+
+; Load palettes
+	ldh a, [rSVBK]
+	push af
+	ld a, BANK(wBGPals1)
+	ldh [rSVBK], a
+
+	ld hl, TitleScreenPalettes
+	ld de, wBGPals1
+	ld bc, 3 palettes
+	call CopyBytes
+
+	ld hl, TitleScreenFlamesPalette
+	ld de, wOBPals2
+	ld bc, 1 palettes
+	call CopyBytes
+
+	pop af
+	ldh [rSVBK], a
+
+; Commit everything
+	call EnableLCD
+	jp WaitBGMap
 
 DrawTitleGraphic:
 ; input:
@@ -304,74 +474,35 @@ DrawTitleGraphic:
 	jr nz, .bgrows
 	ret
 
-InitializeBackground:
-	ld hl, wVirtualOAMSprite00
-	ld d, -$22
-	ld e, $0
+DrawTitleBorder:
 	ld c, 5
 .loop
-	push bc
-	call .InitColumn
-	pop bc
-	ld a, $10
-	add d
-	ld d, a
+	push af
+	ld b, 4
+.loop_inner
+	ld [hli], a
+	inc a
+	dec b
+	jr nz, .loop_inner
+	pop af
 	dec c
 	jr nz, .loop
 	ret
 
-.InitColumn:
-	ld c, $6
-	ld b, $40
-.loop2
-	ld a, d
-	ld [hli], a ; y
-	ld a, b
-	ld [hli], a ; x
-	add $8
-	ld b, a
-	ld a, e
-	ld [hli], a ; tile id
-	inc e
-	inc e
-	ld a, 0 | PRIORITY
-	ld [hli], a ; attributes
-	dec c
-	jr nz, .loop2
-	ret
-
-AnimateTitleCrystal:
-; Move the title screen crystal downward until it's fully visible
-
-; Stop at y=6
-; y is really from the bottom of the sprite, which is two tiles high
-	ld hl, wVirtualOAMSprite00YCoord
-	ld a, [hl]
-	cp 6 + 2 * TILE_WIDTH
-	ret z
-
-; Move all 30 parts of the crystal down by 2
-	ld c, 30
-.loop
-	ld a, [hl]
-	add 2
-	ld [hli], a ; y
-rept SPRITEOAMSTRUCT_LENGTH + -1
-	inc hl
-endr
-	dec c
-	jr nz, .loop
-
-	ret
-
-TitleSuicuneGFX:
-INCBIN "gfx/title/suicune.2bpp.lz"
+TitleHoohGFX:
+INCBIN "gfx/title/hooh.2bpp.lz"
 
 TitleLogoGFX:
 INCBIN "gfx/title/logo.2bpp.lz"
 
-TitleCrystalGFX:
-INCBIN "gfx/title/crystal.2bpp.lz"
+TitleBorderGFX:
+INCBIN "gfx/title/border.2bpp.lz"
+
+TitleFlamesGFX:
+INCBIN "gfx/title/flames.2bpp.lz"
+
+TitleScreenFlamesPalette:
+INCBIN "gfx/title/flames.gbcpal"
 
 TitleScreenPalettes:
 INCLUDE "gfx/title/title.pal"

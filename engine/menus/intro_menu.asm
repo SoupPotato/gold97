@@ -954,26 +954,13 @@ Intro_PlacePlayerSprite:
 
 CrystalIntroSequence:
 	callfar Copyright_GFPresents
-	jr c, StartTitleScreen
-	farcall CrystalIntro
+	;jr c, StartTitleScreen
 
 StartTitleScreen:
-	ldh a, [rSVBK]
-	push af
-	ld a, BANK(wBGPals1)
-	ldh [rSVBK], a
-
-	call .TitleScreen
-	call DelayFrame
-.loop
-	call RunTitleScreen
-	jr nc, .loop
+	farcall TitleScreen
 
 	call ClearSprites
 	call ClearBGPalettes
-
-	pop af
-	ldh [rSVBK], a
 
 	ld hl, rLCDC
 	res rLCDC_SPRITE_SIZE, [hl] ; 8x8
@@ -990,8 +977,8 @@ StartTitleScreen:
 	ld b, SCGB_DIPLOMA
 	call GetSGBLayout
 	call UpdateTimePals
-	ld a, [wIntroSceneFrameCounter]
-	cp $5
+	ld a, [wTitleScreenSelectedOption]
+	cp 5
 	jr c, .ok
 	xor a
 .ok
@@ -1012,235 +999,6 @@ StartTitleScreen:
 	dw CrystalIntroSequence
 	dw ResetClock
 
-.TitleScreen:
-	farcall _TitleScreen
-	ret
-
-RunTitleScreen:
-	ld a, [wJumptableIndex]
-	bit 7, a
-	jr nz, .done_title
-	call TitleScreenScene
-	farcall SuicuneFrameIterator
-	call DelayFrame
-	and a
-	ret
-
-.done_title
-	scf
-	ret
-
-Unreferenced_Function6292:
-	ldh a, [hVBlankCounter]
-	and $7
-	ret nz
-	ld hl, wLYOverrides + $5f
-	ld a, [hl]
-	dec a
-	ld bc, 2 * SCREEN_WIDTH
-	call ByteFill
-	ret
-
-TitleScreenScene:
-	ld e, a
-	ld d, 0
-	ld hl, .scenes
-	add hl, de
-	add hl, de
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
-	jp hl
-
-.scenes
-	dw TitleScreenEntrance
-	dw TitleScreenTimer
-	dw TitleScreenMain
-	dw TitleScreenEnd
-
-.Unreferenced_NextScene:
-	ld hl, wJumptableIndex
-	inc [hl]
-	ret
-
-TitleScreenEntrance:
-; Animate the logo:
-; Move each line by 4 pixels until our count hits 0.
-	ldh a, [hSCX]
-	and a
-	jr z, .done
-	sub 4
-	ldh [hSCX], a
-
-; Lay out a base (all lines scrolling together).
-	ld e, a
-	ld hl, wLYOverrides
-	ld bc, 8 * 10 ; logo height
-	call ByteFill
-
-; Reversed signage for every other line's position.
-; This is responsible for the interlaced effect.
-	ld a, e
-	xor $ff
-	inc a
-
-	ld b, 8 * 10 / 2 ; logo height / 2
-	ld hl, wLYOverrides + 1
-.loop
-	ld [hli], a
-	inc hl
-	dec b
-	jr nz, .loop
-
-	farcall AnimateTitleCrystal
-	ret
-
-.done
-; Next scene
-	ld hl, wJumptableIndex
-	inc [hl]
-	xor a
-	ldh [hLCDCPointer], a
-
-; Play the title screen music.
-	ld de, MUSIC_TITLE
-	call PlayMusic
-
-	ld a, $88
-	ldh [hWY], a
-	ret
-
-TitleScreenTimer:
-; Next scene
-	ld hl, wJumptableIndex
-	inc [hl]
-
-; Start a timer
-	ld hl, wTitleScreenTimer
-	ld de, 73 * 60 + 36
-	ld [hl], e
-	inc hl
-	ld [hl], d
-	ret
-
-TitleScreenMain:
-; Run the timer down.
-	ld hl, wTitleScreenTimer
-	ld e, [hl]
-	inc hl
-	ld d, [hl]
-	ld a, e
-	or d
-	jr z, .end
-
-	dec de
-	ld [hl], d
-	dec hl
-	ld [hl], e
-
-; Save data can be deleted by pressing Up + B + Select.
-	call GetJoypad
-	ld hl, hJoyDown
-	ld a, [hl]
-	and D_UP + B_BUTTON + SELECT
-	cp  D_UP + B_BUTTON + SELECT
-	jr z, .delete_save_data
-
-; To bring up the clock reset dialog:
-
-; Hold Down + B + Select to initiate the sequence.
-	ldh a, [hClockResetTrigger]
-	cp $34
-	jr z, .clock_reset
-
-	ld a, [hl]
-	and D_DOWN + B_BUTTON + SELECT
-	cp  D_DOWN + B_BUTTON + SELECT
-	jr nz, .check_start
-
-	ld a, $34
-	ldh [hClockResetTrigger], a
-	jr .check_start
-
-; Keep Select pressed, and hold Left + Up.
-; Then let go of Select.
-.check_clock_reset
-	bit SELECT_F, [hl]
-	jr nz, .check_start
-
-	xor a
-	ldh [hClockResetTrigger], a
-
-	ld a, [hl]
-	and D_LEFT + D_UP
-	cp  D_LEFT + D_UP
-	jr z, .clock_reset
-
-; Press Start or A to start the game.
-.check_start
-	ld a, [hl]
-	and START | A_BUTTON
-	jr nz, .incave
-	ret
-
-.incave
-	ld a, 0
-	jr .done
-
-.delete_save_data
-	ld a, 1
-
-.done
-	ld [wIntroSceneFrameCounter], a
-
-; Return to the intro sequence.
-	ld hl, wJumptableIndex
-	set 7, [hl]
-	ret
-
-.end
-; Next scene
-	ld hl, wJumptableIndex
-	inc [hl]
-
-; Fade out the title screen music
-	xor a
-	ld [wMusicFadeID], a
-	ld [wMusicFadeID + 1], a
-	ld hl, wMusicFade
-	ld [hl], 8 ; 1 second
-
-	ld hl, wTitleScreenTimer
-	inc [hl]
-	ret
-
-.clock_reset
-	ld a, 4
-	ld [wIntroSceneFrameCounter], a
-
-; Return to the intro sequence.
-	ld hl, wJumptableIndex
-	set 7, [hl]
-	ret
-
-TitleScreenEnd:
-; Wait until the music is done fading.
-
-	ld hl, wTitleScreenTimer
-	inc [hl]
-
-	ld a, [wMusicFade]
-	and a
-	ret nz
-
-	ld a, 2
-	ld [wIntroSceneFrameCounter], a
-
-; Back to the intro.
-	ld hl, wJumptableIndex
-	set 7, [hl]
-	ret
-
 DeleteSaveData:
 	farcall _DeleteSaveData
 	jp Init
@@ -1248,47 +1006,6 @@ DeleteSaveData:
 ResetClock:
 	farcall _ResetClock
 	jp Init
-
-Unreferenced_Function639b:
-	; If bit 0 or 1 of [wTitleScreenTimer] is set, we don't need to be here.
-	ld a, [wTitleScreenTimer]
-	and %00000011
-	ret nz
-	ld bc, wSpriteAnim10
-	ld hl, SPRITEANIMSTRUCT_FRAME
-	add hl, bc ; over-the-top compicated way to load wc3ae into hl
-	ld l, [hl]
-	ld h, 0
-	add hl, hl
-	add hl, hl
-	ld de, .Data63ca
-	add hl, de
-	; If bit 2 of [wTitleScreenTimer] is set, get the second dw; else, get the first dw
-	ld a, [wTitleScreenTimer]
-	and %00000100
-	srl a
-	srl a
-	ld e, a
-	ld d, 0
-	add hl, de
-	add hl, de
-	ld a, [hli]
-	and a
-	ret z
-	ld e, a
-	ld d, [hl]
-	ld a, SPRITE_ANIM_INDEX_GS_TITLE_TRAIL
-	call _InitSpriteAnimStruct
-	ret
-
-.Data63ca:
-; frame 0 y, x; frame 1 y, x
-	db 11 * 8 + 4, 10 * 8,  0 * 8,      0 * 8
-	db 11 * 8 + 4, 13 * 8, 11 * 8 + 4, 11 * 8
-	db 11 * 8 + 4, 13 * 8, 11 * 8 + 4, 15 * 8
-	db 11 * 8 + 4, 17 * 8, 11 * 8 + 4, 15 * 8
-	db  0 * 8,      0 * 8, 11 * 8 + 4, 15 * 8
-	db  0 * 8,      0 * 8, 11 * 8 + 4, 11 * 8
 
 Copyright:
 	call ClearTileMap
