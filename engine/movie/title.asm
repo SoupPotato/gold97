@@ -122,7 +122,7 @@ TitleScreenBorder:
 
 ; Draw tm
 	hlcoord 18, 6
-	ld a, TITLE_LOGO_TILE + 138
+	ld a, (TITLE_LOGO_TILE + 138) & $ff
 	ld [hl], a
 
 ; Draw border
@@ -178,7 +178,7 @@ TitleScreenHooh:
 
 TitleScreenTimer:
 ; Start a timer
-	ld de, 73 * 60 + 36
+	ld de, 82 * 60 + 30
 	jp TitleScreenSetTimerNextScene
 
 TitleScreenMain:
