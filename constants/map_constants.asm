@@ -99,7 +99,6 @@ ENDM
 	map_const TEAM_ROCKET_BASE_B2F,                        15, 15 ; 50
 	map_const TEAM_ROCKET_BASE_B3F,                        15, 15 ; 51
 	map_const ILEX_FOREST,                                 25, 32 ; 52
-	map_const ROUTE_16,                                    10,  9 ;  2
 	map_const UNDERGROUND_PATH,                            10, 18 ; 86
 	map_const GOLDENROD_UNDERGROUND_SWITCH_ROOM_ENTRANCES, 15, 18 ; 54
 	map_const GOLDENROD_DEPT_STORE_B1F,                    10,  9 ; 55
@@ -170,7 +169,6 @@ ENDM
 	newgroup                                                      ;  6
 
 	map_const CINNABAR_POKECENTER_1F,                       8,  4 ;  1
-	map_const CINNABAR_POKECENTER_2F_BETA,                  8,  4 ;  2
 	map_const ROUTE_19_FUCHSIA_GATE,                        5,  4 ;  3
 	map_const SEAFOAM_GYM,                                  5,  4 ;  4
 	map_const CINNABAR_ISLAND,                             10,  9 ;  8
@@ -184,9 +182,7 @@ ENDM
 	map_const CERULEAN_GYM_BADGE_SPEECH_HOUSE,              4,  4 ;  1
 	map_const CERULEAN_POLICE_STATION,                      5,  4 ;  2
 	map_const CERULEAN_POKECENTER_1F,                       8,  4 ;  4
-	map_const CERULEAN_POKECENTER_2F_BETA,                  8,  4 ;  5
 	map_const CERULEAN_GYM,                                 5,  8 ;  6
-	map_const ROUTE_10_POKECENTER_2F_BETA,                  8,  4 ;  9
 	map_const POWER_PLANT,                                 10,  9 ; 10
 	map_const ROUTE_25,                                    10, 27 ; 16
 	map_const CERULEAN_CITY,                               10, 18 ; 17
@@ -227,7 +223,6 @@ ENDM
 	map_const EARLS_POKEMON_ACADEMY,                        4,  8 ;  8
 	map_const VIOLET_NICKNAME_SPEECH_HOUSE,                 4,  4 ;  9
 	map_const VIOLET_POKECENTER_1F,                         8,  4 ; 10
-	map_const ROUTE_32_RUINS_OF_ALPH_GATE,                  5,  4 ; 12
 	map_const ROUTE_35_GOLDENROD_GATE,                      5,  4 ; 14
 	map_const ROUTE_36_RUINS_OF_ALPH_GATE,                  5,  4 ; 16
 	map_const NEW_VIOLET_GATE_NORTH,                        5,  4 ; 18
@@ -272,7 +267,6 @@ ENDM
 	map_const VERMILION_CITY,                              20,  9 ;  3
 	map_const VERMILION_FISHING_SPEECH_HOUSE,               5,  4 ;  4
 	map_const VERMILION_POKECENTER_1F,                      8,  4 ;  5
-	map_const VERMILION_POKECENTER_2F_BETA,                 8,  4 ;  6
 	map_const POKEMON_FAN_CLUB,                             5,  4 ;  7
 	map_const VERMILION_MART,                               8,  4 ;  9
 	map_const VERMILION_DIGLETTS_CAVE_SPEECH_HOUSE,         5,  4 ; 10
@@ -297,7 +291,6 @@ ENDM
 	map_const PEWTER_NIDORAN_SPEECH_HOUSE,                  4,  4 ;  3
 	map_const PEWTER_GYM,                                   5,  4 ;  4
 	map_const PEWTER_POKECENTER_1F,                         8,  4 ;  6
-	map_const PEWTER_POKECENTER_2F_BETA,                    8,  4 ;  7
 	map_const PEWTER_SNOOZE_SPEECH_HOUSE,                   5,  4 ;  8
 	map_const CERULEAN_MART,                                8,  4 ;  7
 	map_const ROUTE_12,                                    10, 18 ;  2
@@ -347,7 +340,6 @@ ENDM
 
 	newgroup                                                      ; 18
 
-	map_const LAVENDER_POKECENTER_2F_BETA,                  8,  4 ;  6
 	map_const ROUTE_8_SAFFRON_GATE,                         5,  4 ; 13
 
 	newgroup                                                      ; 20
@@ -361,7 +353,6 @@ ENDM
 
 	newgroup                                                      ; 21
 
-	map_const ROUTE_17,                                    10, 45 ;  3
 	map_const CELADON_CITY,                                30, 27 ;  4
 	map_const CELADON_DEPT_STORE_1F,                        8,  4 ;  5
 	map_const CELADON_DEPT_STORE_2F,                        8,  4 ;  6
@@ -380,7 +371,6 @@ ENDM
 	map_const CELADON_GAME_CORNER_PRIZE_ROOM,               5,  4 ; 20
 	map_const CELADON_GYM,                                  5,  9 ; 21
 	map_const CELADON_CAFE,                                 6,  4 ; 22
-	map_const ROUTE_16_GATE,                                5,  4 ; 24
 	map_const ROUTE_17_ROUTE_18_GATE,                       5,  4 ; 26
 	map_const ROUTE_9,                                     20,  9 ; 13
 	map_const SILPH_CO_1F,                                 12,  8 ; 10
@@ -441,12 +431,10 @@ ENDM
 	map_const SAFFRON_GYM,                                 10,  9 ;  4
 	map_const SAFFRON_MART,                                 8,  4 ;  5
 	map_const SAFFRON_POKECENTER_1F,                        8,  4 ;  6
-	map_const SAFFRON_POKECENTER_2F_BETA,                   8,  4 ;  7
 	map_const MR_PSYCHICS_HOUSE,                            5,  4 ;  8
 	map_const SAFFRON_MAGNET_TRAIN_STATION,                10,  9 ;  9
 	map_const COPYCATS_HOUSE_1F,                            4,  4 ; 11
 	map_const COPYCATS_HOUSE_2F,                            5,  3 ; 12
-	map_const ROUTE_5_UNDERGROUND_PATH_ENTRANCE,            4,  4 ; 13
 	map_const ROUTE_10_SOUTH,                              20,  9 ;  3
 	map_const CERULEAN_TRADE_SPEECH_HOUSE,                  5,  4 ;  3
 

@@ -2,15 +2,15 @@
 	const NEWVIOLETGATENORTH_OFFICER
 	const NEWVIOLETGATENORTH_YOUNGSTER
 
-Route102WestPortGate_MapScripts:
+Route102WestportGate_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
-Route102WestPortGateOfficerScript:
-	jumptextfaceplayer Route102WestPortGateOfficerText
+Route102WestportGateOfficerScript:
+	jumptextfaceplayer Route102WestportGateOfficerText
 
-Route102WestPortGateOfficerText:
+Route102WestportGateOfficerText:
 	text "WEST CITY is a"
 	line "quickly growing"
 	para "metropolis that"
@@ -18,10 +18,10 @@ Route102WestPortGateOfficerText:
 	cont "for trainers."
 	done
 	
-Route102WestPortGateYoungsterScript:
-	jumptextfaceplayer Route102WestPortGateYoungsterText
+Route102WestportGateYoungsterScript:
+	jumptextfaceplayer Route102WestportGateYoungsterText
 
-Route102WestPortGateYoungsterText:
+Route102WestportGateYoungsterText:
 	text "Whew!"
 	para "The WEST CITY"
 	line "DEPT. STORE has an"
@@ -31,7 +31,7 @@ Route102WestPortGateYoungsterText:
 	done
 
 
-Route102WestPortGate_MapEvents:
+Route102WestportGate_MapEvents:
 	db 0, 0 ; filler
 
 	db 5 ; warp events
@@ -46,7 +46,7 @@ Route102WestPortGate_MapEvents:
 	db 0 ; bg events
 
 	db 2 ; object events
-	object_event  5,  2, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route102WestPortGateOfficerScript, -1
-	object_event  0,  1, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route102WestPortGateYoungsterScript, -1
+	object_event  5,  2, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route102WestportGateOfficerScript, -1
+	object_event  0,  1, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route102WestportGateYoungsterScript, -1
 
 	

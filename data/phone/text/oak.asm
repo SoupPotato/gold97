@@ -172,7 +172,7 @@ OakPhoneDisasterText:
 	cont "CITY."
 	
 	para "BIRDON TOWN is"
-	line "known for it's"
+	line "known for its"
 	cont "SLOWPOKE WELL."
 	
 	para "It would be a good"

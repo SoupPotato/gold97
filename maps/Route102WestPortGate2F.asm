@@ -1,13 +1,13 @@
 	const_def 2 ; object constants
 	const NEWVIOLETGATENORTH2F_FISHER
 
-Route102WestPortGate2F_MapScripts:
+Route102WestportGate2F_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
 	
-Route102WestPortGate2FFisherScript:
+Route102WestportGate2FFisherScript:
 	faceplayer
 	opentext
 	checkflag ENGINE_HIVEBADGE
@@ -18,12 +18,12 @@ Route102WestPortGate2FFisherScript:
 	end
 	
 .DocksOpen
-	writetext Route102WestPortGate2FFisherText
+	writetext Route102WestportGate2FFisherText
 	waitbutton
 	closetext
 	end
 
-Route102WestPortGate2FFisherText:
+Route102WestportGate2FFisherText:
 	text "The WEST CITY dock"
 	line "has resumed taking"
 	para "ferries out to"
@@ -43,10 +43,10 @@ DocksClosedText:
 	done
 	
 	
-Route102WestPortGate2FSign:
-	jumptext Route102WestPortGate2FSignText
+Route102WestportGate2FSign:
+	jumptext Route102WestportGate2FSignText
 	
-Route102WestPortGate2FSignText:
+Route102WestportGate2FSignText:
 	text "<PLAY_G> peeked"
 	line "through the"
 	cont "telescope!"
@@ -55,10 +55,10 @@ Route102WestPortGate2FSignText:
 	cont "of here!"
 	done
 
-Route102WestPortGate2FSign2:
-	jumptext Route102WestPortGate2FSign2Text
+Route102WestportGate2FSign2:
+	jumptext Route102WestportGate2FSign2Text
 	
-Route102WestPortGate2FSign2Text:
+Route102WestportGate2FSign2Text:
 	text "<PLAY_G> peeked"
 	line "through the"
 	cont "telescope!"
@@ -66,7 +66,7 @@ Route102WestPortGate2FSign2Text:
 	line "CITY RADIO TOWER?"
 	done
 	
-Route102WestPortGate2F_MapEvents:
+Route102WestportGate2F_MapEvents:
 	db 0, 0 ; filler
 
 	db 1 ; warp events
@@ -75,9 +75,9 @@ Route102WestPortGate2F_MapEvents:
 	db 0 ; coord events
 
 	db 2 ; bg events
-	bg_event 1,  0, BGEVENT_READ, Route102WestPortGate2FSign
-	bg_event 3,  0, BGEVENT_READ, Route102WestPortGate2FSign2
+	bg_event 1,  0, BGEVENT_READ, Route102WestportGate2FSign
+	bg_event 3,  0, BGEVENT_READ, Route102WestportGate2FSign2
 
 	db 1 ; object events
-	object_event  3,  3, SPRITE_FISHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route102WestPortGate2FFisherScript, -1
+	object_event  3,  3, SPRITE_FISHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route102WestportGate2FFisherScript, -1
 	

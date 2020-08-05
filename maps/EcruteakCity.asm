@@ -228,7 +228,7 @@ EcruteakCityRocket1AfterBattleText:
 EcruteakCityRocket2SeenText:
 	text "Hold it!"
 	
-	para "Kids should'nt"
+	para "Kids shouldn't"
 	line "get in our way!"
 	done
 
@@ -403,7 +403,7 @@ RocketsAreCommin:
 RocketsAreCommin2:
 	text "Help!"
 	
-	para "TEAM ROCKET "
+	para "TEAM ROCKET is"
 	line "trying to take"
 	cont "over the AQUARIUM!"
 	done

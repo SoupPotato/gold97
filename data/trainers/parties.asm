@@ -2446,25 +2446,25 @@ BikerGroup:
 	db 32, KOFFING
 	db -1 ; end
 
-	; BIKER (6)
+	; BIKER (6) ; unused
 	db "CHARLES@", TRAINERTYPE_NORMAL
 	db 30, KOFFING
 	db 30, CHARMELEON
 	db 30, WEEZING
 	db -1 ; end
 
-	; BIKER (7)
+	; BIKER (7) ; unused
 	db "RILEY@", TRAINERTYPE_NORMAL
 	db 34, WEEZING
 	db -1 ; end
 
-	; BIKER (8)
+	; BIKER (8) ; unused
 	db "JOEL@", TRAINERTYPE_NORMAL
 	db 32, MAGMAR
 	db 32, MAGMAR
 	db -1 ; end
 
-	; BIKER (9)
+	; BIKER (9) ; unused
 	db "GLENN@", TRAINERTYPE_NORMAL
 	db 28, KOFFING
 	db 30, MAGMAR
