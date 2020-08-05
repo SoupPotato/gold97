@@ -4,14 +4,14 @@ Copyright_GFPresents:
 	call ClearBGPalettes
 	call ClearTileMap
 	ld a, HIGH(vBGMap0)
-	ldh [hBGMapAddress + 1], a
+	ld [hBGMapAddress + 1], a
 	xor a ; LOW(vBGMap0)
-	ldh [hBGMapAddress], a
-	ldh [hJoyDown], a
-	ldh [hSCX], a
-	ldh [hSCY], a
+	ld [hBGMapAddress], a
+	ld [hJoyDown], a
+	ld [hSCX], a
+	ld [hSCY], a
 	ld a, $90
-	ldh [hWY], a
+	ld [hWY], a
 	call WaitBGMap
 	ld b, SCGB_GAMEFREAK_LOGO
 	call GetSGBLayout
@@ -27,7 +27,7 @@ Copyright_GFPresents:
 	call .GetGFLogoGFX
 .joy_loop
 	call JoyTextDelay
-	ldh a, [hJoyLast]
+	ld a, [hJoyLast]
 	and BUTTONS
 	jr nz, .pressed_button
 	ld a, [wJumptableIndex]
@@ -54,10 +54,10 @@ Copyright_GFPresents:
 	lb bc, BANK(GameFreakLogo), 28
 	call Get1bpp
 
-	ldh a, [rSVBK]
+	ld a, [rSVBK]
 	push af
 	ld a, BANK(wDecompressScratch)
-	ldh [rSVBK], a
+	ld [rSVBK], a
 
 	ld hl, IntroLogoGFX
 	ld de, wDecompressScratch
@@ -75,7 +75,7 @@ Copyright_GFPresents:
 	call Request2bpp
 
 	pop af
-	ldh [rSVBK], a
+	ld [rSVBK], a
 
 	farcall ClearSpriteAnims
 	depixel 10, 11, 4, 0
@@ -94,12 +94,12 @@ Copyright_GFPresents:
 	ld [wJumptableIndex], a
 	ld [wIntroSceneFrameCounter], a
 	ld [wIntroSceneTimer], a
-	ldh [hSCX], a
-	ldh [hSCY], a
+	ld [hSCX], a
+	ld [hSCY], a
 	ld a, $1
-	ldh [hBGMapMode], a
+	ld [hBGMapMode], a
 	ld a, $90
-	ldh [hWY], a
+	ld [hWY], a
 	lb de, %11100100, %11100100
 	call DmgToCgbObjPals
 	ret
@@ -304,18 +304,18 @@ GameFreakLogoScene4:
 	ld hl, GameFreakLogoPalettes
 	add hl, de
 	add hl, de
-	ldh a, [rSVBK]
+	ld a, [rSVBK]
 	push af
 	ld a, BANK(wOBPals2)
-	ldh [rSVBK], a
+	ld [rSVBK], a
 	ld a, [hli]
 	ld [wOBPals2 + 12], a
 	ld a, [hli]
 	ld [wOBPals2 + 13], a
 	pop af
-	ldh [rSVBK], a
+	ld [rSVBK], a
 	ld a, $1
-	ldh [hCGBPalUpdate], a
+	ld [hCGBPalUpdate], a
 	ret
 
 .asm_e47a3
