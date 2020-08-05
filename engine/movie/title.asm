@@ -28,11 +28,13 @@ TitleScreen:
 	call PlayMusic
 
 ; Start actually drawing screen
-	xor a
-	ldh [hSCX], a
-	ldh [hSCY], a
-	call SetPalettes
 	call TitleScreenFireballs
+	ld a, 152
+	ldh [hSCX], a
+	xor a
+	ldh [hSCY], a
+	ld a, %11100100
+	call DmgToCgbBGPals
 
 .loop
 	farcall PlaySpriteAnimationsAndDelayFrame
@@ -54,37 +56,96 @@ TitleScreenScene:
 	jp hl
 
 .scenes
+	dw TitleScreenScrollin
+	dw TitleScreenBorder
+	dw TitleScreenGameTitle
+	dw TitleScreenCopyright
+	dw TitleScreenHooh
 	dw TitleScreenTimer
 	dw TitleScreenMain
 	dw TitleScreenEnd
 
-TitleScreenTimer:
-; Next scene
+TitleScreenScrollin:
+	ldh a, [hSCX]
+	add 2
+	ldh [hSCX], a
+	ret nc
+
+	xor a
+	ldh [hSCX], a
+
+	ld de, 20
+	jp TitleScreenSetTimerNextScene
+
+TitleScreenBorder:
+	call TitleScreenRunTimer
+	ret nz
+
+; Draw tm
+	hlcoord 18, 6
+	ld a, TITLE_LOGO_TILE + 138
+	ld [hl], a
+
+; Draw border
+	hlcoord 0, 8
+	ld a, TITLE_BORDER_TILE
+	call DrawTitleBorder
+	hlcoord 0, 16
+	ld a, TITLE_BORDER_TILE + 4
+	call DrawTitleBorder
+
+	ld de, 20
+	jp TitleScreenSetTimerNextScene
+
+TitleScreenGameTitle:
+	call TitleScreenRunTimer
+	ret nz
+
+; Draw game title
+	hlcoord 6, 6
+	lb bc, 1, 9
+	lb de, TITLE_LOGO_TILE + 126, 9
+	call DrawTitleGraphic
+
+	ld de, 20
+	jp TitleScreenSetTimerNextScene
+
+TitleScreenCopyright:
+	call TitleScreenRunTimer
+	ret nz
+
+; Draw copyright text
+	hlcoord 3, 17
+	lb bc, 1, 13
+	lb de, TITLE_COPYRIGHT_TILE, 0
+	call DrawTitleGraphic
+
+	ld de, 20
+	jp TitleScreenSetTimerNextScene
+
+TitleScreenHooh:
+	call TitleScreenRunTimer
+	ret nz
+
+; Draw Ho-oh
+	hlcoord 7, 9
+	lb bc, 7, 7
+	lb de, TITLE_HOOH_TILE, 7
+	call DrawTitleGraphic
+
 	ld hl, wJumptableIndex
 	inc [hl]
-
-; Start a timer
-	ld hl, wTitleScreenTimer
-	ld de, 73 * 60 + 36
-	ld [hl], e
-	inc hl
-	ld [hl], d
 	ret
+
+TitleScreenTimer:
+; Start a timer
+	ld de, 73 * 60 + 36
+	jp TitleScreenSetTimerNextScene
 
 TitleScreenMain:
 ; Run the timer down.
-	ld hl, wTitleScreenTimer
-	ld e, [hl]
-	inc hl
-	ld d, [hl]
-	ld a, e
-	or d
+	call TitleScreenRunTimer
 	jr z, .end
-
-	dec de
-	ld [hl], d
-	dec hl
-	ld [hl], e
 
 ; Save data can be deleted by pressing Up + B + Select.
 	call GetJoypad
@@ -189,6 +250,31 @@ TitleScreenEnd:
 	set 7, [hl]
 	ret
 
+TitleScreenSetTimerNextScene:
+	ld hl, wTitleScreenTimer
+	ld a, e
+	ld [hli], a
+	ld [hl], d
+
+	ld hl, wJumptableIndex
+	inc [hl]
+	ret
+
+TitleScreenRunTimer:
+	ld hl, wTitleScreenTimer
+	ld e, [hl]
+	inc hl
+	ld d, [hl]
+	ld a, e
+	or d
+	ret z
+
+	dec de
+	ld [hl], d
+	dec hl
+	ld [hl], e
+	ret
+
 TitleScreenFireballs:
 	ld hl, .Fireballs
 	ld d, 6
@@ -260,29 +346,17 @@ TitleScreenLoadGFX:
 
 ; Draw Pokemon logo
 	hlcoord 0, 0
-	lb bc, 6, 40
+	lb bc, 7, 20
 	lb de, TITLE_LOGO_TILE, 20
 	call DrawTitleGraphic
-
-; Draw border
-	hlcoord 0, 8
-	ld a, TITLE_BORDER_TILE
-	call DrawTitleBorder
-	hlcoord 0, 16
-	ld a, TITLE_BORDER_TILE + 4
-	call DrawTitleBorder
-
-; Draw Ho-oh
-	hlcoord 7, 9
-	lb bc, 7, 7
-	lb de, TITLE_HOOH_TILE, 7
-	call DrawTitleGraphic
-
-; Draw copyright text
-	hlcoord 3, 17
-	lb bc, 1, 13
-	lb de, TITLE_COPYRIGHT_TILE, 0
-	call DrawTitleGraphic
+; ...except game title and tm
+	hlcoord 6, 6
+	ld bc, 9
+	ld a, $80
+	call ByteFill
+	ld bc, 3
+	add hl, bc
+	ld [hl], a
 
 ; Fill tile palettes:
 	ld a, 1
@@ -295,7 +369,7 @@ TitleScreenLoadGFX:
 	call ByteFill
 
 ; 'GOLD VERSION'
-	hlbgcoord 5, 7
+	hlbgcoord 6, 6
 	ld bc, 9 ; length of version text
 	ld a, 1
 	call ByteFill
@@ -321,7 +395,7 @@ TitleScreenLoadGFX:
 	call CopyBytes
 
 	ld hl, TitleScreenFlamesPalette
-	ld de, wOBPals1
+	ld de, wOBPals2
 	ld bc, 1 palettes
 	call CopyBytes
 
