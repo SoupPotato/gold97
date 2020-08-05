@@ -463,10 +463,9 @@ BugCatchingContestant10BScript:
 	waitbutton
 	closetext
 	end
-
-UnusedBugCatchingContestExplanationSign:
-; duplicate of BugCatchingContestExplanationSign in Route35NationalParkGate.asm
-	jumptext UnusedBugCatchingContestExplanationText
+	
+BugCatchingContestExplanationSign:
+	jumptext BugCatchingContestExplanationText
 
 ExitBuildingMovement:
 	step DOWN
@@ -856,6 +855,26 @@ UnknownText_0x6b97f:
 	line "we were holding"
 	cont "for you."
 	done
+	
+BugCatchingContestExplanationText:
+	text "The Bug-Catching"
+	line "Contest is held on"
+
+	para "Tuesday, Thursday"
+	line "and Saturday."
+
+	para "Not only do you"
+	line "earn a prize just"
+
+	para "for participating,"
+	line "you also get to"
+
+	para "keep the bug"
+	line "#MON you may"
+
+	para "have at the end of"
+	line "the contest."
+	done
 
 Route36NationalParkGate_MapEvents:
 	db 0, 0 ; filler
@@ -863,8 +882,8 @@ Route36NationalParkGate_MapEvents:
 	db 4 ; warp events
 	warp_event  0,  7, NATIONAL_PARK, 1
 	warp_event  1,  7, NATIONAL_PARK, 2
-	warp_event  8,  7, FUCHSIA_CITY, 8
-	warp_event  9,  7, FUCHSIA_CITY, 8
+	warp_event  8,  7, FUCHSIA_CITY, 9
+	warp_event  9,  7, FUCHSIA_CITY, 9
 
 	db 0 ; coord events
 

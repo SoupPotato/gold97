@@ -30,6 +30,16 @@ OlivineHouseBetaElderScript:
 	writetext OlivineElderStoryText
 	waitbutton
 	closetext
+	special FadeOutMusic
+	pause 20
+	cry HO_OH
+	playsound SFX_FLY
+	showemote EMOTE_SHOCK, OLIVINEHOUSEBETA_ELDER, 20
+	pause 15
+	opentext
+	writetext BirdIsTheWordText
+	waitbutton
+	closetext
 	checkcode VAR_FACING
 	ifequal UP, .ElderWalkAroundPlayer
 	applymovement OLIVINEHOUSEBETA_ELDER, ElderWalksOutMovement
@@ -40,6 +50,8 @@ OlivineHouseBetaElderScript:
 	clearevent EVENT_SLOWPOKE_WELL_SLOWPOKES
 	setmapscene OLD_CITY, SCENE_KURTS_HOUSE_LOCKED
 	setmapscene TIN_TOWER_5F, SCENE_HO_OH_EVENT
+	pause 15
+	special RestartMapMusic
 	end
 	
 .ElderWalkAroundPlayer
@@ -51,6 +63,8 @@ OlivineHouseBetaElderScript:
 	clearevent EVENT_SLOWPOKE_WELL_SLOWPOKES
 	setmapscene OLD_CITY, SCENE_KURTS_HOUSE_LOCKED
 	setmapscene TIN_TOWER_5F, SCENE_HO_OH_EVENT
+	pause 15
+	special RestartMapMusic
 	end
 	
 .NotBlessed
@@ -111,51 +125,71 @@ SometimesYouLiveLongEnough:
 	
 OlivineElderStoryText:
 	text "Listen closely…"
+	
 	para "Many years ago,"
 	line "NIHON was guarded"
-	para "by a noble bird,"
-	line "whose wings burned"
-	cont "hot as fire."
-	para "This bird made its"
-	line "nest at the top"
-	para "of the 5 FLOOR"
-	line "TOWER over in OLD"
-	cont "CITY."
-	para "This is where it"
-	line "roosted for many"
-	cont "years."
-	para "Some say it sat"
-	line "for centuries."
-	para "However, the bird"
-	line "became restless,"
-	para "and one fateful"
-	line "day, left the top"
-	cont "of the tower."
+	cont "by a noble bird,"
+	cont "whose wings were"
+	cont "donned a rainbow"
+	cont "of color."
+	
+	para "Legend tells it"
+	line "nested at what is"
+	cont "now known as the"
+	cont "5 FLOOR TOWER."
+	
+	para "However, the ever"
+	line "-growing malice,"
+	cont "within the region"
+	cont "made the bird grow"
+	cont "restless."
+	
+	para "No longer com"
+	line "-pelled to stay,"
+	cont "the bird left..."
+	
 	para "As it flew, ashes"
 	line "fell from its"
 	cont "wings."
+	
 	para "From these ashes"
 	line "rose three beasts,"
-	para "who were meant to"
-	line "keep watch over"
-	para "NIHON while the"
-	line "bird was away."
-	para "The beasts"
+	cont "tasked to keep"
+	cont "watch over NIHON"
+	cont "in the bird's"
+	cont "absence."
+	
+	para "The beasts then"
 	line "scattered, and"
-	para "no one has seen"
-	line "them since."
-	para "But it is known"
+	cont "none have seen"
+	cont "them since."
+	
+	para "But legend says"
 	line "that they have"
-	para "remained in NIHON,"
-	line "watching over it"
-	cont "in secret."
-	para "It is said that"
-	line "one day, the bird"
-	cont "shall return."
-	para "…"
-	para "I feel we are upon"
-	line "that day."
-	para "Could it be?"
+	cont "remained in NIHON,"
+	cont "watching over it"
+	cont "in secret,"
+	
+	para "and that a being"
+	line "of pure heart will"
+	cont "return the bird."
+	
+	para "I feel we may be"
+	line "upon that day"
+	cont "soon..."
+	done
+	
+BirdIsTheWordText:
+	text "C-could it be!?"
+	
+	para "The bird!"
+	
+	para "Come child, we"
+	line "must make haste to"
+	cont "the 5 FLOOR TOWER."
+	
+	para "The legend is"
+	line "being realised!"
 	done
 	
 OlivineHouseBetaElderAnotherTime:

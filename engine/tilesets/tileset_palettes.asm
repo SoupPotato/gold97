@@ -49,38 +49,38 @@ LoadSpecialMapPalette:
 .not_route_40
 	ld a, [wMapGroup]
 	cp GROUP_BLACKTHORN_CITY
-	jr nz, .not_blackthorn_city
+	jp nz, .not_blackthorn_city
 	ld a, [wMapNumber]
 	cp MAP_BLACKTHORN_CITY
-	jr z, .SnowOverGreyBGPalette
+	jp z, .SnowOverGreyBGPalette
 .not_blackthorn_city
 	ld a, [wMapGroup]
 	cp GROUP_MAHOGANY_GYM
-	jr nz, .not_mahogany_gym
+	jp nz, .not_mahogany_gym
 	ld a, [wMapNumber]
 	cp MAP_MAHOGANY_GYM
-	jr z, .ice_path
+	jp z, .ice_path
 .not_mahogany_gym
 	ld a, [wMapGroup]
 	cp GROUP_CINNABAR_ISLAND
-	jr nz, .not_cinnabar_island
+	jp nz, .not_cinnabar_island
 	ld a, [wMapNumber]
 	cp MAP_CINNABAR_ISLAND
-	jr z, .SnowOverGreyBGPalette
+	jp z, .SnowOverGreyBGPalette
 .not_cinnabar_island
 	ld a, [wMapGroup]
 	cp GROUP_ROUTE_41
-	jr nz, .not_route_41
+	jp nz, .not_route_41
 	ld a, [wMapNumber]
 	cp MAP_ROUTE_41
-	jr z, .SnowOverGreyBGPalette
+	jp z, .SnowOverGreyBGPalette
 .not_route_41
 	ld a, [wMapGroup]
 	cp GROUP_ROUTE_32
-	jr nz, .do_nothing
+	jp nz, .do_nothing
 	ld a, [wMapNumber]
 	cp MAP_ROUTE_32
-	jr z, .SnowOverGreyBGPalette
+	jp z, .SnowOverGreyBGPalette
 
 
 .pokecom_2f
@@ -93,6 +93,28 @@ LoadSpecialMapPalette:
 	and $7
 	cp INDOOR ; Hall of Fame
 	jr z, .do_nothing
+.BeastCave ;lava colors
+	ld a, [wMapGroup]
+	cp GROUP_ICE_PATH_B2F_BLACKTHORN_SIDE
+	jr nz, .not_B2F
+	ld a, [wMapNumber]
+	cp MAP_ICE_PATH_B2F_BLACKTHORN_SIDE
+	jr z, .LavaOverRedCoalOverBrownBGPalette
+.not_B2F	
+	ld a, [wMapGroup]
+	cp GROUP_ICE_PATH_B1F
+	jr nz, .not_B1F
+	ld a, [wMapNumber]
+	cp MAP_ICE_PATH_B1F
+	jr z, .LavaOverRedCoalOverBrownBGPalette
+.not_B1F
+	ld a, [wMapGroup]
+	cp GROUP_ICE_PATH_B2F_MAHOGANY_SIDE
+	jr nz, .ice
+	ld a, [wMapNumber]
+	cp MAP_ICE_PATH_B2F_MAHOGANY_SIDE
+	jr z, .LavaOverRedCoalOverBrownBGPalette
+.ice
 	call LoadIcePathPalette
 	scf
 	ret
@@ -135,6 +157,15 @@ LoadSpecialMapPalette:
 	maskbits NUM_DAYTIMES
 	ld bc, 8 palettes
 	call AddNTimes
+	ld de, wBGPals1
+	ld a, BANK(wBGPals1)
+	call FarCopyWRAM
+	scf
+	ret
+	
+.LavaOverRedCoalOverBrownBGPalette
+	ld hl, LavaOverRedCoalOverBrown
+	ld bc, 8 palettes
 	ld de, wBGPals1
 	ld a, BANK(wBGPals1)
 	call FarCopyWRAM

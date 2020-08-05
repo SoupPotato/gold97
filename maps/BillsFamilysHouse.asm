@@ -50,6 +50,8 @@ BillScript:
 	iffalse .Refused
 	verbosegiveitem HM_CUT
 	setevent EVENT_GOT_HM01_CUT
+	setevent EVENT_ROUTE36_GARDENER
+	clearevent EVENT_ROUTE36_GARDENER_CHOPPED
 	writetext BillImCountingOnYouText
 	waitbutton
 	closetext
@@ -270,8 +272,8 @@ BillsFamilysHouse_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  3,  7, OLD_CITY, 15
-	warp_event  4,  7, OLD_CITY, 15
+	warp_event  3,  7, OLD_CITY, 14
+	warp_event  4,  7, OLD_CITY, 14
 
 	db 0 ; coord events
 

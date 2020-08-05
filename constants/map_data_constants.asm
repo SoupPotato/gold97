@@ -76,8 +76,8 @@ const_value = -1
 	const SPAWN_VERMILION
 	const SPAWN_LAVENDER
 	const SPAWN_SAFFRON
-; johto
-	const SPAWN_NEW_BARK
+; johto                      ; DO NOT DELETE STRINGS ONLY RENAME
+	const SPAWN_SILENT
 	const SPAWN_PALLET
 	const SPAWN_CELADON
 	const SPAWN_FUCHSIA

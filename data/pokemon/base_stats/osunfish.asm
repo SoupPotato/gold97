@@ -1,6 +1,6 @@
 	db OSUNFISH ; 193
 
-	db  55,  45,  65,  75,  75,  85
+	db  35,  45,  45,  75,  65,  75
 	;   hp  atk  def  spd  sat  sdf
 
 	db WATER, WATER ; type

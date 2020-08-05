@@ -43,8 +43,6 @@ VioletGymFalknerScript:
 	checkcode VAR_BADGES
 	scall VioletGymActivateRockets
 .FightDone:
-	setevent EVENT_ROUTE36_GARDENER
-	clearevent EVENT_ROUTE36_GARDENER_CHOPPED
 	checkevent EVENT_GOT_TM31_MUD_SLAP
 	iftrue .SpeechAfterTM
 	setevent EVENT_BEAT_BIRD_KEEPER_ROD

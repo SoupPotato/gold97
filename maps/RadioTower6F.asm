@@ -21,19 +21,6 @@ RadioTower6fClefable:
 	end
 	
 RadioTower6fClefableTakeover:
-	checkflag ENGINE_ROCKETS_IN_RADIO_TOWER
-	iffalse .NormalClefableTemp
-	faceplayer
-	opentext
-	writetext ClefableScaredText
-	cry CLEFABLE
-	waitbutton
-	writetext ClefableScaredText2
-	waitbutton
-	closetext
-	end
-	
-.NormalClefableTemp
 	faceplayer
 	opentext
 	writetext RadioTower6FClefableText
@@ -45,14 +32,7 @@ RadioTower6fClefableTakeover:
 RadioTower6fGentleman:
 	faceplayer
 	opentext
-	checkflag ENGINE_ROCKETS_IN_RADIO_TOWER
-	iftrue .MidRocketTakeover6fGentleman
 	writetext RadioTower6fGentlemanText
-	waitbutton
-	closetext
-	end
-.MidRocketTakeover6fGentleman
-	writetext RadioTower6fGentlemanTextTakeover
 	waitbutton
 	closetext
 	end
@@ -95,9 +75,13 @@ GiovanniEncounter:
 	special FadeOutMusic
 	applymovement PLAYER, TwoStepsToGiovanni
 	pause 15
-	turnobject RADIOTOWER6F_GIOVANNI, DOWN
 	opentext
 	writetext GiovanniGreeting
+	waitbutton
+	closetext
+	applymovement RADIOTOWER6F_GIOVANNI, GiovanniToPlayer
+	opentext
+	writetext GiovanniSpeech
 	waitbutton
 	closetext
 	winlosstext GiovanniWinText, GiovanniLossText
@@ -105,6 +89,13 @@ GiovanniEncounter:
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
+	turnobject RADIOTOWER6F_GIOVANNI, DOWN
+	opentext
+	writetext GiovanniAfterText
+	waitbutton
+	closetext
+	applymovement RADIOTOWER6F_GIOVANNI, GiovanniLeaving
+	turnobject PLAYER, UP
 	opentext
 	writetext GiovanniExitingText
 	waitbutton
@@ -148,11 +139,23 @@ GiovanniEncounter:
 TwoStepsToGiovanni:
 	step DOWN
 	step DOWN
+	step DOWN
+	turn_head RIGHT
+	step_end
+	
+GiovanniToPlayer:
+	step UP
+	step LEFT
 	step LEFT
 	step DOWN
-	step DOWN
-	step RIGHT
-	turn_head UP
+	turn_head LEFT
+	step_end
+	
+GiovanniLeaving:
+	step UP
+	step LEFT
+	step UP
+	turn_head DOWN
 	step_end
 	
 DirectorWalks:
@@ -170,63 +173,60 @@ DirectorWalks2:
 	step_end
 	
 PlayerWalksToDirector:
-	step UP
 	step RIGHT
 	step_end
 	
 DirectorThanksText:
 	text "Oh, dear!"
+	
 	para "Where have those"
 	line "nasty TEAM ROCKET"
 	cont "members gone?"
-	para "Have they left?"
-	para "Hello, kid!"
-	line "Did you get rid"
-	cont "of them?"
-	para "Oh, you did?"
-	line "I am forever"
-	cont "grateful!"
-	para "They had kicked me"
-	line "out of my office,"
-	para "and my poor"
-	line "CLEFABLE was left"
-	cont "behind!"
-	para "I had no way to"
-	line "battle my way"
-	cont "back up!"
+	
+	para "I was being held"
+	line "captive in the"
+	cont "basement..."
+	
+	para "but suddenly those"
+	line "goons took off!"
+
+	para "My poor CLEFABLE"
+	line "was left all"
+	cont "alone!"
+	
 	para "I must give you"
 	line "something to show"
 	cont "my gratitude!"
-	para "Here, take this!"
+	
+	para "Please accept"
+	line "this!"
 	done
 	
 DirectorThanksText2:
 	text "With that move,"
 	line "your #MON can"
-	para "break rocks you"
-	line "may find blocking"
-	cont "certain locations."
+	cont "break rocks you"
+	cont "may find blocking"
+	cont "certain paths."
+	
 	para "I'm sure you'd"
 	line "get more use out"
 	cont "of it than me!"
+	
 	para "I don't ever want"
 	line "to leave this"
 	cont "office again!"
 	done
 	
-GiovanniExitingText:
-	text "I tell you now."
-	para "The world has not"
-	line "seen the end of"
-	cont "TEAM ROCKET."
-	para "We rose from the"
-	line "ashes before, and"
-	para "one day, we shall"
-	line "do it again!"
-	done
-	
 GiovanniWinText:
-	text "But how!?"
+	text "No! Not again!"
+	
+	para "My plans..."
+	
+	para "My efforts..."
+	
+	para "Was it all for"
+	line "naught!?"
 	done
 	
 GiovanniLossText:
@@ -234,81 +234,134 @@ GiovanniLossText:
 	done
 	
 GiovanniGreeting:
-	text "Ah."
-	para "I assume you are"
-	line "one of the two"
-	para "children I've been"
-	line "hearing about."
-	para "You must be the"
-	line "more courageous"
-	para "one if you've made"
-	line "your way to me."
-	para "Are you <RIVAL>?"
-	para "No, you must be"
-	line "<PLAY_G>."
-	para "Well, <PLAY_G>,"
-	line "do you understand"
-	para "why you stand here"
-	line "before me?"
-	para "I know why."
-	para "It is because you"
-	line "care for #MON"
-	para "from deep within"
-	line "your heart."
-	para "Most might call"
-	line "that admirable."
-	para "…"
-	para "I'd call it"
-	line "foolish."
-	para "#MON possess a"
-	line "power far greater"
-	para "than man could"
-	line "ever hope to have."
-	para "And it is the goal"
-	line "of an organization"
-	para "such as TEAM"
-	line "ROCKET to harness"
-	para "that power for its"
-	line "full potential."
-	para "If one can control"
-	line "#MON, one can"
-	cont "control the world."
-	para "But enough talk."
-	para "Prove to me that"
-	line "you are a worthy"
-	para "opponent, or do"
-	line "yourself a favor,"
-	para "and GET OUT OF MY"
-	line "WAY."
+	text "GIOVANNI: Ah."
+	para "You must be one of"
+	line "the two children"
+	cont "I've been hearing"
+	cont "about."
 	done
 	
+GiovanniSpeech:	
+	text "You must be very"
+	line "brave..."
+	
+	para "...or very"
+	line "foolish."
+	
+	para "I am the leader of"
+	line "TEAM ROCKET."
+	
+	para "I have endured"
+	line "much to restore"
+	cont "my organization to"
+	cont "it's former glory."
+	
+	para "And you, remind me"
+	line "of another certain"
+	cont "child I once"
+	cont "faced."
 
+	para "…"
+	
+	para "It truly angers"
+	line "me."
+
+	para "I know exactly"
+	line "what your flawed"
+	cont "intentions are."
+	
+	para "You wish to stop"
+	line "my plans."
+	
+	para "Well I won't allow"
+	line "it."
+	
+	para "Not again!"
+	
+	para "I, GIOVANNI the"
+	line "mighty LEADER of"
+	cont "TEAM ROCKET,"	
+	cont "will crush you!"	
+	done
+	
+GiovanniAfterText:
+	text "T-this can't be"
+	line "happening!"
+	
+	para "I have failed not"
+	line "once,"
+	
+	para "but TWICE!"
+	
+	para "Twice, I have"
+	line "tried to conquer"	
+	cont "the world..."
+	
+	para "Twice, I have"
+	line "failed..."	
+	
+	para "And both times to"
+	line "a child no less!"
+	
+	para "How can I possibly"
+	line "face my followers"
+	cont "like this?"
+	done
+	
+GiovanniExitingText:
+	text "Very well..."
+	
+	para "You have bested"
+	line "me."
+	
+	para "But TEAM ROCKET"
+	line "is not over..."	
+	
+	para "We will return"
+	line "someday."	
+	
+	para "And my plans will"
+	line "succeed."
+	
+	para "Until that day"
+	line "comes..."
+	
+	para "Prepare yourself"
+	line "for our next"
+	cont "meeting!"	
+	done
 	
 Executive6FSeenText:
-	text "EXECUTIVE: NO!"
-	para "NEVER AGAIN!"
+	text "EXECUTIVE: No!"
+
 	para "You will go no"
 	line "further!"
+	
 	para "Brats like you do"
 	line "not deserve an"
-	para "audience with our"
-	line "leader!"
-	para "You are going down"
-	line "RIGHT NOW!"
+	cont "audience with our"
+	cont "leader!"
+	
+	para "This ends here!"
 	done
 	
 Executive6FBeatenText:
-	text "…"
+	text "No!"
+	
+	para "GIOVANNI,"
+	line "forgive me!"
 	done
 	
 Executive6FAfterBattleText:
 	text "…"
+	
 	para "I have no anger"
 	line "left for you."
+	
 	para "If you would like"
 	line "to see GIOVANNI,"
-	para "he's right over"
-	line "there."
+	cont "he's right over"
+	cont "there."
 	done
 	
 RadioTower6FDirectorsOfficeSignText:
@@ -321,21 +374,6 @@ RadioTower6FClefableText:
 	line "Cleffa-fa!"
 	done
 
-ClefableScaredText:
-	text "CLEFABLE:"
-	line "Cl..cleffa?"
-	done
-	
-ClefableScaredText2:
-	text "It seems to be"
-	line "frightened…"
-	para "Also there's no"
-	line "way to talk to"
-	para "the scared cleffa,"
-	line "so you never see"
-	cont "this text…"
-	done
-
 RadioTower6fTeacherText:
 	text "This is the office"
 	line "of the DIRECTOR"
@@ -344,9 +382,10 @@ RadioTower6fTeacherText:
 	done
 	
 RadioTower6fTeacherTextTakeover:
-	text "Where'd the"
-	line "DIRECTOR go?"
-	para "I hope he's okay!"
+	text "Where did they do"
+	line "with the DIRECTOR?"
+	
+	para "I hope he's ok..."
 	done
 
 RadioTower6fGentlemanText:
@@ -358,13 +397,6 @@ RadioTower6fGentlemanText:
 	line "#MON alike"
 	cont "enjoy our shows."
 	done
-	
-RadioTower6fGentlemanTextTakeover:
-	text "I am missing right"
-	line "now, so you never"
-	cont "see this text"
-	done
-	
 
 RadioTower6F_MapEvents:
 	db 0, 0 ; filler
@@ -380,9 +412,9 @@ RadioTower6F_MapEvents:
 
 	db 6 ; object events
 	object_event  6,  2, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, RadioTower6fTeacher, -1
-	object_event  6,  6, SPRITE_GENTLEMAN, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, RadioTower6fGentleman, EVENT_GOLDENROD_CITY_CIVILIANS
-	object_event  1,  6, SPRITE_FAIRY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, RadioTower6fClefable, EVENT_GOLDENROD_CITY_CIVILIANS
-	object_event  0,  5, SPRITE_FAIRY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, RadioTower6fClefableTakeover, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
-	object_event  3,  6, SPRITE_BROCK, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, RadioTower6fGiovanni, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
-	object_event  2,  2, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerExecutive6F, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
+	object_event  6,  6, SPRITE_GENTLEMAN, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, RadioTower6fGentleman, EVENT_GOLDENROD_CITY_CIVILIANS
+	object_event  1,  6, SPRITE_FAIRY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RadioTower6fClefable, EVENT_GOLDENROD_CITY_CIVILIANS
+	object_event  0,  5, SPRITE_FAIRY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RadioTower6fClefableTakeover, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
+	object_event  6,  6, SPRITE_BROCK, SPRITEMOVEDATA_STANDING_LEFT, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RadioTower6fGiovanni, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
+	object_event  2,  2, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerExecutive6F, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
 

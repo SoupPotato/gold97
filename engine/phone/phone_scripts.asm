@@ -5,13 +5,11 @@ UnusedPhoneScript:
 ; Mom
 
 MomPhoneScript:
-	checkevent EVENT_TALKED_TO_MOM_AFTER_MYSTERY_EGG_QUEST
+	checkevent EVENT_TALKED_TO_MOM_AFTER_GETTING_POKEDEX
 	iftrue .bcec5
 	checkevent EVENT_DUDE_TALKED_TO_YOU
 	iftrue MomPhoneLectureScript
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
-	iftrue MomPhoneNoGymQuestScript
-	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
+	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
 	iftrue MomPhoneNoPokedexScript
 	jump MomPhoneNoPokemonScript
 
@@ -41,7 +39,6 @@ MomPhonePalette1:
 	ifequal GROUP_CIANWOOD_CITY, .cianwood
 	ifequal GROUP_PALLET_TOWN, .pallet
 	ifequal GROUP_FUCHSIA_CITY, .fuchsia
-	ifequal GROUP_LAKE_OF_RAGE, .silenthills
 ;	ifequal GROUP_INDIGO_PLATEAU, .mtfuji ;why doesn't this work???? where are these map group variables defined???????asdfasdf
 	farwritetext MomPhoneGenericAreaText
 	buttonsound
@@ -158,12 +155,8 @@ MomPhoneNoPokedexScript:
 	farwritetext MomPhoneNoPokedexText
 	end
 
-MomPhoneNoGymQuestScript:
-	farwritetext MomPhoneNoGymQuestText
-	end
-
 MomPhoneLectureScript:
-	setevent EVENT_TALKED_TO_MOM_AFTER_MYSTERY_EGG_QUEST
+	setevent EVENT_TALKED_TO_MOM_AFTER_GETTING_POKEDEX
 	setflag ENGINE_MOM_ACTIVE
 	specialphonecall SPECIALCALL_NONE
 	farwritetext MomPhoneLectureText
@@ -215,9 +208,9 @@ BillPhoneScript2:
 	waitbutton
 	end
 
-; Elm
+; Oak
 
-ElmPhoneScript1:
+OakPhoneScript1:
 	checkcode VAR_SPECIALPHONECALL
 	ifequal SPECIALCALL_POKERUS, .pokerus
 	checkevent EVENT_CLEARED_RADIO_TOWER
@@ -233,93 +226,87 @@ ElmPhoneScript1:
 	iftrue .eggunhatched
 	checkevent EVENT_ELMS_AIDE_IN_LAB
 	iftrue .assistant
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
-	iftrue .checkingegg
 	checkevent EVENT_ELM_CALLED_ABOUT_STOLEN_POKEMON
 	iftrue .stolen
 	checkevent EVENT_GOT_MYSTERY_EGG_FROM_MR_POKEMON
 	iftrue .sawmrpokemon
-	farwritetext ElmPhoneStartText
+	farwritetext OakPhoneStartText
 	end
 
 .sawmrpokemon
-	farwritetext ElmPhoneSawMrPokemonText
+	farwritetext OakPhoneSawMrPokemonText
 	end
 
 .stolen
-	farwritetext ElmPhonePokemonStolenText
-	end
-
-.checkingegg
-	farwritetext ElmPhoneCheckingEggText
+	farwritetext OakPhonePokemonStolenText
 	end
 
 .assistant
-	farwritetext ElmPhoneAssistantText
+	farwritetext OakPhoneAssistantText
 	end
 
 .eggunhatched
-	farwritetext ElmPhoneEggUnhatchedText
+	farwritetext OakPhoneEggUnhatchedText
 	end
 
 .egghatched
-	farwritetext ElmPhoneEggHatchedText
+	farwritetext OakPhoneEggHatchedText
 	setevent EVENT_TOLD_ELM_ABOUT_TOGEPI_OVER_THE_PHONE
 	end
 
 .discovery
-	farwritetext ElmPhoneRocketsText
+	farwritetext OakPhoneRocketsText
 	end
 
 .nextdiscovery
-	farwritetext ElmPhoneDiscovery2Text
+	farwritetext OakPhoneDiscovery2Text
 	end
 
 .pokerus
-	farwritetext ElmPhonePokerusText
+	farwritetext OakPhonePokerusText
 	specialphonecall SPECIALCALL_NONE
 	end
 	
 .elmafterradiotower
-	farwritetext ElmAfterRadioTower
+	farwritetext OakAfterRadioTower
 	end
 
-ElmPhoneScript2:
+OakPhoneScript2:
 	checkcode VAR_SPECIALPHONECALL
 	ifequal SPECIALCALL_ROBBED, .disaster
 	ifequal SPECIALCALL_ASSISTANT, .assistant
 	ifequal SPECIALCALL_WEIRDBROADCAST, .rocket
 	ifequal SPECIALCALL_SSTICKET, .gift
 	ifequal SPECIALCALL_MASTERBALL, .gift
-	farwritetext ElmPhonePokerusText
+	farwritetext OakPhonePokerusText
 	specialphonecall SPECIALCALL_NONE
 	end
 
 .disaster
-	farwritetext ElmPhoneDisasterText
+	farwritetext OakPhoneDisasterText
 	specialphonecall SPECIALCALL_NONE
 	setevent EVENT_ELM_CALLED_ABOUT_STOLEN_POKEMON
 	end
 
 .assistant
-	farwritetext ElmPhoneEggAssistantText
+	farwritetext OakPhoneEggAssistantText
 	specialphonecall SPECIALCALL_NONE
 	clearevent EVENT_ELMS_AIDE_IN_VIOLET_POKEMON_CENTER
 	setevent EVENT_ELMS_AIDE_IN_LAB
 	end
 
 .rocket
-	farwritetext ElmPhoneRocketText
+	farwritetext OakPhoneRocketText
 	specialphonecall SPECIALCALL_NONE
 	end
 
 .gift
-	farwritetext ElmPhoneGiftText
+	farwritetext OakPhoneGiftText
 	specialphonecall SPECIALCALL_NONE
 	end
 
 .unused
-	farwritetext ElmPhoneUnusedText
+	farwritetext OakPhoneUnusedText
 	specialphonecall SPECIALCALL_NONE
 	end
 

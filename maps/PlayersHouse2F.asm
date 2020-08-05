@@ -51,7 +51,7 @@ PlayersHousePosterScript:
 	describedecoration DECODESC_POSTER
 
 PlayersHouseRadioScript:
-	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
+	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
 	iftrue .NormalRadio
 	opentext
 	writetext PlayersRadioText1
@@ -73,7 +73,7 @@ PlayersHouseBookshelfScript:
 	jumpstd picturebookshelf
 
 PlayersHousePCScript:
-	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
+	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
 	iftrue .PlayersHousePC2
 	opentext
 	writetext PlayersRadioText2

@@ -510,11 +510,9 @@ NationalParkTrainerTipsText:
 NationalPark_MapEvents:
 	db 0, 0 ; filler
 
-	db 4 ; warp events
+	db 2 ; warp events
 	warp_event 32, 31, ROUTE_36_NATIONAL_PARK_GATE, 1
 	warp_event 33, 31, ROUTE_36_NATIONAL_PARK_GATE, 2
-	warp_event  6, 53, ROUTE_35_NATIONAL_PARK_GATE, 1
-	warp_event  7, 53, ROUTE_35_NATIONAL_PARK_GATE, 2
 
 	db 0 ; coord events
 

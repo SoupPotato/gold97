@@ -160,7 +160,7 @@ PokemonNames::
 	db "AQUALLO@@@"
 	db "AQUARIUS@@"
 	db "TANGTRIP@@"
-	db "GELANGLE@@"
+	db "GELANIA@@@"
 	db "HOOTHOOT@@"
 	db "NOCTOWL@@@"
 	db "LEDYBA@@@@"

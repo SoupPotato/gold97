@@ -245,7 +245,6 @@ BlackthornCity_MapEvents:
 	warp_event 19, 13, BLACKTHORN_EMYS_HOUSE, 1
 	warp_event 25,  6, BLACKTHORN_MART, 1
 	warp_event 13, 18, BLACKTHORN_POKECENTER_1F, 1
-	;warp_event 13, 18, ICE_PATH_1F, 1
 	warp_event  3, 22, MOVE_DELETERS_HOUSE, 1
 	warp_event 27, 11, BLUEFOREST_HOUSE_1, 1
 	warp_event  5,  5, DRAGONS_DEN_1F, 1

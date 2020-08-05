@@ -12,7 +12,6 @@ MapScenes::
 	scene_var POWER_PLANT,                                 wPowerPlantSceneID
 	scene_var CERULEAN_GYM,                                wCeruleanGymSceneID
 	scene_var ROUTE_25,                                    wRoute25SceneID
-	scene_var TRAINER_HOUSE_B1F,                           wTrainerHouseB1FSceneID
 	scene_var VICTORY_ROAD_GATE,                           wVictoryRoadGateSceneID
 	scene_var SAFFRON_MAGNET_TRAIN_STATION,                wSaffronMagnetTrainStationSceneID
 	scene_var ROUTE_16_GATE,                               wRoute16GateSceneID
@@ -33,7 +32,6 @@ MapScenes::
 	scene_var CHERRYGROVE_CITY,                            wCherrygroveCitySceneID
 	scene_var MR_POKEMONS_HOUSE,                           wMrPokemonsHouseSceneID
 	scene_var ROUTE_32,                                    wRoute32SceneID
-	scene_var ROUTE_35_NATIONAL_PARK_GATE,                 wRoute35NationalParkGateSceneID
 	scene_var ROUTE_36,                                    wRoute36SceneID
 	scene_var ROUTE_36_NATIONAL_PARK_GATE,                 wRoute36NationalParkGateSceneID
 	scene_var AZALEA_TOWN,                                 wAzaleaTownSceneID
@@ -73,7 +71,6 @@ MapScenes::
 	scene_var TEAM_ROCKET_BASE_B2F,                        wTeamRocketBaseB2FSceneID
 	scene_var TEAM_ROCKET_BASE_B3F,                        wTeamRocketBaseB3FSceneID
 	scene_var GOLDENROD_UNDERGROUND_SWITCH_ROOM_ENTRANCES, wGoldenrodUndergroundSwitchRoomEntrancesSceneID
-	scene_var SILVER_CAVE_ROOM_3,                          wSilverCaveRoom3SceneID ; unused
 	scene_var VICTORY_ROAD,                                wVictoryRoadSceneID
 	scene_var DRAGONS_DEN_B1F,                             wDragonsDenB1FSceneID
 	scene_var DRAGON_SHRINE,                               wDragonShrineSceneID

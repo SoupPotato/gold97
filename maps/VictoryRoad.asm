@@ -339,12 +339,12 @@ VictoryRoad_MapEvents:
 	db 0, 0 ; filler
 
 	db 9 ; warp events
-	warp_event  9, 51, CHERRYGROVE_CITY, 5
-	warp_event 17, 41, MOUNT_MOON_SQUARE, 1
-	warp_event  5, 33, MOUNT_MOON_SQUARE, 2
-	warp_event 29, 23, MOUNT_MOON_SQUARE, 3
-	warp_event 23, 15, MOUNT_MOON_SQUARE, 4
-	warp_event  5,  3, MOUNT_MOON_SQUARE, 5
+	warp_event  8, 51, CHERRYGROVE_CITY, 5
+	warp_event  4, 41, MOUNT_MOON_SQUARE, 1
+	warp_event  4, 33, MOUNT_MOON_SQUARE, 2
+	warp_event 26, 23, MOUNT_MOON_SQUARE, 3
+	warp_event 24, 15, MOUNT_MOON_SQUARE, 4
+	warp_event  8,  3, MOUNT_MOON_SQUARE, 5
 	warp_event 34, 25, VICTORY_ROAD, 8
 	warp_event 34, 42, VICTORY_ROAD, 7
 	warp_event 31,  2, VICTORY_ROAD_2F, 5
@@ -352,8 +352,8 @@ VictoryRoad_MapEvents:
 	db 0 ; coord events
 
 	db 2 ; bg events
-	bg_event 23, 22, BGEVENT_ITEM, VictoryRoadHiddenMaxPotion
-	bg_event  3, 40, BGEVENT_ITEM, VictoryRoadHiddenFullHeal
+	bg_event 37, 33, BGEVENT_ITEM, VictoryRoadHiddenMaxPotion
+	bg_event 19, 44, BGEVENT_ITEM, VictoryRoadHiddenFullHeal
 
 	db 14 ; object events
 	object_event 34,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoadTMEarthquake, EVENT_VICTORY_ROAD_TM_EARTHQUAKE
@@ -364,9 +364,9 @@ VictoryRoad_MapEvents:
 	object_event 13, 46, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerCooltrainermCody, -1
 	object_event 31, 44, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerCooltrainermJake, -1
 	object_event 24, 46, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerCooltrainerfJoyce, -1
-	object_event 18, 49, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerInstructorGeoff, -1
+	object_event 18, 49, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerInstructorGeoff, -1
 	object_event 10, 24, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerSwimmermHarold, -1
 	object_event 18, 25, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerSwimmerfLisa, -1
-	object_event 28, 24, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerEngineerDavidson, -1
-	object_event  3,  6, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerCooltrainermErick, -1
+	object_event 30, 25, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerEngineerDavidson, -1
+	object_event  2,  4, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerCooltrainermErick, -1
 	object_event 27, 11, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerCooltrainerfQuinn, -1

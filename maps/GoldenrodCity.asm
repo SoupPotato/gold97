@@ -355,21 +355,43 @@ SilverHasItFiguredOut:
 	
 SilverHasItFiguredOut2:
 	text "What?"
+	
 	para "I was right!"
+	
 	para "But you already"
 	line "got rid of them?"
+	
 	para "Man, I missed out"
 	line "on all the fun!"
+	
 	para "Well, I guess I"
 	line "had better get"
 	cont "back to training!"
+	
 	para "I only need one"
 	line "more GYM BADGE"
-	para "before I can climb"
-	line "MT.FUJI and take"
+	cont "before I can climb"
+	cont "MT.FUJI and take"
 	cont "on the LEAGUE!"
+	
 	para "Bet I can beat you"
 	line "to it!"
+	
+	para "One more thing..."
+	
+	para "There is an old"
+	line "sea captain in"
+	cont "NUTYPE CITY."
+	
+	para "He's got some"
+	line "relly interesting"
+	cont "stories!"
+	
+	para "Maybe you should"
+	line "hear one of them."
+	
+	para "Well, see you"
+	line "around!"
 	done
 	
 GoldenrodCityMonText:

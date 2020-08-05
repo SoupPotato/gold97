@@ -112,13 +112,6 @@ TrainerPokefanfJaime:
 	closetext
 	end
 
-Route39Sign:
-	setflag ENGINE_FLYPOINT_NEW_BARK
-	setflag ENGINE_FLYPOINT_AZALEA
-	setflag ENGINE_FLYPOINT_VIOLET
-	clearflag ENGINE_FLYPOINT_PALLET
-	jumptext Route39SignText
-
 MoomooFarmSign:
 	jumptext MoomooFarmSignText
 

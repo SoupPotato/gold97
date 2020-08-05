@@ -61,6 +61,10 @@ OlivineLighthouse1F_MapScripts:
 	writetext WhitneyWontGoEasyOnYouText
 	waitbutton
 	closetext
+	appear AQUA1F_ROCKETF22
+	appear AQUA1F_ROCKET42
+	disappear AQUA1F_ROCKETF2
+	disappear AQUA1F_ROCKET4
 	setscene SCENE_AQUARIUM_ROCKET_TAKEOVER_1F_NOTHING
 	clearevent WHITNEY_FIGHTING_ROCKETS
 	setevent EVENT_AQUARIUM_ROCKETS_IDLE

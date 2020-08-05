@@ -311,8 +311,8 @@ BillsHouse_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  2,  7, OLD_CITY, 13
-	warp_event  3,  7, OLD_CITY, 14
+	warp_event  2,  7, OLD_CITY, 12
+	warp_event  3,  7, OLD_CITY, 13
 
 	db 0 ; coord events
 

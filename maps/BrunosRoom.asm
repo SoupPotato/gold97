@@ -79,47 +79,58 @@ BrunosRoom_EnterMovement:
 	step_end
 
 BrunoScript_BrunoBeforeText:
-	text "I am BRUNO of the"
-	line "ELITE FOUR."
+	text "Oho!"
 
-	para "I always train to"
-	line "the extreme be-"
-	cont "cause I believe in"
-	cont "our potential."
+	para "So, old OAK has"
+	line "sent another child"
+	cont "on one of his"
+	cont "foolish errands..."
 
-	para "That is how we"
-	line "became strong."
+	para "I am AGATHA of"
+	line "the ELITE FOUR."
+	
+	para "My years have seen"
+	line "many travels and"
+	cont "turmoil."
+	
+	para "That old fool OAK"
+	line "just lives in his"
+	cont "childhood dreams."
+	
+	para "#MON have"
+	line "always been for"
+	cont "battling!"
 
-	para "Can you withstand"
-	line "our power?"
+	para "Tell me, child."
 
-	para "Hm? I see no fear"
-	line "in you. You look"
-
-	para "determined. Per-"
-	line "fect for battle!"
-
-	para "Ready, <PLAYER>?"
-	line "You will bow down"
-
-	para "to our overwhelm-"
-	line "ing power!"
-
-	para "Hoo hah!"
+	para "How far will your"
+	line "resolve take you"
+	cont "in your journey"
+	cont "to complete the"
+	cont "#DEX?"
+	
+	para "Let's find out."
+    line "Fufufufu..."
 	done
 
 BrunoScript_BrunoBeatenText:
-	text "Why? How could we"
-	line "lose?"
+	text "My gracious!"
+	
+	para "You certainly have"
+	line "it, my child."
 	done
 
 BrunoScript_BrunoDefeatText:
-	text "Having lost, I"
-	line "have no right to"
-	cont "say anything…"
-
-	para "Go face your next"
-	line "challenge!"
+	text "Hmm..."
+	
+	para "Perhaps that old"
+	line "fool does know"
+	cont "your potential."
+	
+	para "Run along now."
+	
+	para "Your journey is"
+	line "not yet over."
 	done
 
 BrunosRoom_MapEvents:
@@ -136,4 +147,4 @@ BrunosRoom_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event  5,  7, SPRITE_BRUNO, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, BrunoScript_Battle, -1
+	object_event  5,  7, SPRITE_BLAINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BrunoScript_Battle, -1

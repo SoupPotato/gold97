@@ -82,16 +82,22 @@ RocketEncounterScript:
 	closetext
 	applymovement SLOWPOKEB2F_OAK, OakLeavesMovement
 	turnobject SLOWPOKEB2F_BLUE, RIGHT
+	turnobject PLAYER, LEFT
+	turnobject SLOWPOKEB2F_SILVER, LEFT
 	opentext
 	writetext BlueOutText
 	waitbutton
 	closetext
+	turnobject PLAYER, DOWN
+	turnobject SLOWPOKEB2F_SILVER, DOWN
 	applymovement SLOWPOKEB2F_BLUE, BlueLeavesMovement
 	turnobject SLOWPOKEB2F_SILVER, LEFT
+	turnobject PLAYER, RIGHT
 	opentext
 	writetext SilverOutText
 	waitbutton
 	closetext
+	turnobject PLAYER, DOWN
 	applymovement SLOWPOKEB2F_SILVER, SilverLeavesMovement
 	disappear SLOWPOKEB2F_BLUE
 	disappear SLOWPOKEB2F_OAK

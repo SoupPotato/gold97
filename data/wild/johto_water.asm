@@ -229,14 +229,14 @@ JohtoWaterWildMons:
 	
 	map_id VICTORY_ROAD
 	db 4 percent ; encounter rate
-	db 23, MAGIKARP
-	db 25, GYARADOS
-	db 26, GYARADOS
+	db 38, SEAKING
+	db 38, GYARADOS
+	db 35, DRATINI
 	
 	map_id VICTORY_ROAD_2F
 	db 4 percent ; encounter rate
-	db 23, MAGIKARP
-	db 25, GYARADOS
-	db 26, GYARADOS
+	db 38, SEAKING
+	db 38, GYARADOS
+	db 35, DRATINI
 
 	db -1 ; end

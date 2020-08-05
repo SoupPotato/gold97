@@ -151,7 +151,7 @@ ElmCheckTogepiEgg:
 	iftrue ElmRocketsReturnedScript
 	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE ; why are we checking it again?
 	iftrue ElmWaitingEggHatchScript ; gonna make this about league challenge
-	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
+	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
 	iftrue ElmDescribesMrPokemonScript
 	writetext ElmText_LetYourMonBattleIt
 	waitbutton
@@ -192,7 +192,7 @@ ElmAfterLeagueInPerson:
 	end
 
 FlambearPokeBallScript:
-	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
+	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
 	iftrue LookAtElmPokeBallScript
 	turnobject ELMSLAB_ELM, DOWN
 	refreshscreen
@@ -234,7 +234,7 @@ FlambearPokeBallScript:
 	jump ElmDirectionsScript
 
 CruisePokeBallScript:
-	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
+	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
 	iftrue LookAtElmPokeBallScript
 	turnobject ELMSLAB_ELM, DOWN
 	refreshscreen
@@ -276,7 +276,7 @@ CruisePokeBallScript:
 	jump ElmDirectionsScript
 
 CHIKORITAPokeBallScript:
-	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
+	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
 	iftrue LookAtElmPokeBallScript
 	turnobject ELMSLAB_ELM, DOWN
 	refreshscreen
@@ -342,7 +342,7 @@ ElmDirectionsScript:
 	waitbutton
 	closetext
 	applymovement ELMSLAB_ELM, ElmBackFromTable
-	setevent EVENT_GOT_A_POKEMON_FROM_ELM
+	setevent EVENT_GOT_A_POKEMON_FROM_OAK
 	setevent EVENT_RIVAL_CHERRYGROVE_CITY
 	setscene SCENE_ELMSLAB_AIDE_GIVES_POTION
 	setmapscene SILENT_TOWN, SCENE_NEW_BARK_NOTHING

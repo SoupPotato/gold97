@@ -15,7 +15,7 @@ TrainerPicPointers::
 	dba_pic WillPic
 	dba_pic CalPic
 	dba_pic BrunoPic
-	dba_pic KarenPic
+	dba_pic BrockPic
 	dba_pic KogaPic
 	dba_pic ChampionPic
 	dba_pic BrockPic

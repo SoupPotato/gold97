@@ -32,7 +32,7 @@ MeetMomRightScript:
 	applymovement PLAYERSHOUSE1F_MOM1, MomWalksToPlayerMovement
 MeetMomScript:
 	opentext
-	writetext ElmsLookingForYouText
+	writetext OaksLookingForYouText
 	buttonsound
 	stringtotext GearName, MEM_BUFFER_1
 	scall PlayersHouse1FReceiveItemStd
@@ -122,19 +122,15 @@ MomScript:
 	opentext
 	checkevent EVENT_FIRST_TIME_BANKING_WITH_MOM
 	iftrue .FirstTimeBanking
-	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
+	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
 	iftrue .BankOfMom
-	;checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
-	;iftrue .GaveMysteryEgg
-	;checkevent EVENT_GOT_A_POKEMON_FROM_ELM
-	;iftrue .GotAPokemon
-	writetext HurryUpElmIsWaitingText
+	writetext HurryUpOakIsWaitingText
 	waitbutton
 	closetext
 	end
 
 .GotAPokemon:
-	writetext SoWhatWasProfElmsErrandText
+	writetext SoWhatWasProfOaksErrandText
 	waitbutton
 	closetext
 	end
@@ -148,7 +144,7 @@ MomScript:
 .GaveMysteryEgg:
 	setevent EVENT_FIRST_TIME_BANKING_WITH_MOM
 .BankOfMom:
-	setevent EVENT_TALKED_TO_MOM_AFTER_MYSTERY_EGG_QUEST
+	setevent EVENT_TALKED_TO_MOM_AFTER_GETTING_POKEDEX
 	special BankOfMom
 	waitbutton
 	closetext
@@ -202,7 +198,7 @@ FinalMomText:
 	cont "soon."
 	done
 
-ElmsLookingForYouText:
+OaksLookingForYouText:
 	text "Oh, <PLAYER>…!"
 	line "Your #MON"
 
@@ -283,7 +279,7 @@ InstructionsNextText:
 	
 	done
 
-HurryUpElmIsWaitingText:
+HurryUpOakIsWaitingText:
 	text "PROF.OAK told me"
 	line "he wanted to talk"
 	
@@ -293,7 +289,7 @@ HurryUpElmIsWaitingText:
 
 	done
 
-SoWhatWasProfElmsErrandText:
+SoWhatWasProfOaksErrandText:
 	text "So, what was PROF."
 	line "OAK's request?"
 
