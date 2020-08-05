@@ -19,13 +19,12 @@ TitleScreen:
 	call ChannelsOff
 	call SFXChannelsOff
 
-;; Play starting sound effect
-	;ld de, SFX_TITLE_SCREEN_ENTRANCE
-	;jp PlaySFX
-
-; Play the title screen music.
-	ld de, MUSIC_TITLE
-	call PlayMusic
+; Temporarily replace color 3 of pokemon logo with red
+	ld hl, TitleScreenPalettes palette 1 color 2
+	ld de, wBGPals1 palette 0 color 2
+	ld bc, PAL_COLOR_SIZE
+	ld a, BANK(wBGPals1)
+	call FarCopyWRAM
 
 ; Start actually drawing screen
 	call TitleScreenFireballs
@@ -33,8 +32,12 @@ TitleScreen:
 	ldh [hSCX], a
 	xor a
 	ldh [hSCY], a
-	ld a, %11100100
+	ld a, %00101010
 	call DmgToCgbBGPals
+
+; Play starting sound effect
+	ld de, SFX_TITLE_SCREEN_ENTRANCE
+	call PlaySFX
 
 .loop
 	farcall PlaySpriteAnimationsAndDelayFrame
@@ -57,6 +60,7 @@ TitleScreenScene:
 
 .scenes
 	dw TitleScreenScrollin
+	dw TitleScreenFlash
 	dw TitleScreenBorder
 	dw TitleScreenGameTitle
 	dw TitleScreenCopyright
@@ -73,6 +77,41 @@ TitleScreenScrollin:
 
 	xor a
 	ldh [hSCX], a
+
+; Play the title screen music.
+	ld de, MUSIC_TITLE
+	call PlayMusic
+
+	ld de, 20
+	jp TitleScreenSetTimerNextScene
+
+TitleScreenFlash:
+	ld a, [wTitleScreenTimer]
+	ld c, 3
+	call SimpleDivide
+
+	and a
+	jr nz, .no_switch
+
+	ld a, %00000000
+	bit 0, b
+	jr z, .switch
+	ld a, %00101010
+.switch
+	call DmgToCgbBGPals
+
+.no_switch
+	call TitleScreenRunTimer
+	ret nz
+
+; Restore normal colors
+	ld hl, TitleScreenPalettes palette 0 color 2
+	ld de, wBGPals1 palette 0 color 2
+	ld bc, PAL_COLOR_SIZE
+	ld a, BANK(wBGPals1)
+	call FarCopyWRAM
+	ld a, %11100100
+	call DmgToCgbBGPals
 
 	ld de, 20
 	jp TitleScreenSetTimerNextScene
