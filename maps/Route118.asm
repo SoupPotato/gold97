@@ -261,7 +261,7 @@ Route118_MapEvents:
 	db 0, 0 ; filler
 
 	db 1 ; warp events
-	warp_event  4, 11, ROUTE_7_SAFFRON_GATE, 4
+	warp_event  4, 11, ROUTE_118_SUNPOINT_GATE, 4
 
 	db 0 ; coord events
 

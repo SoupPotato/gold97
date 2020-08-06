@@ -55,8 +55,8 @@ BoardwalkTeknosGate_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
-	warp_event  4,  0, ROUTE_43, 1
-	warp_event  5,  0, ROUTE_43, 2
+	warp_event  4,  0, BOARDWALK, 1
+	warp_event  5,  0, BOARDWALK, 2
 	warp_event  4,  7, ECRUTEAK_CITY, 9
 	warp_event  5,  7, ECRUTEAK_CITY, 10
 

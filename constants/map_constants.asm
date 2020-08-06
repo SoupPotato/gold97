@@ -28,41 +28,41 @@ ENDM
 
 	newgroup                                                      ;  1
 
-	map_const ALLOY_POKECENTER_1F,                        8,  4 ;  1
-	map_const ALLOY_GYM,                                 10,  8 ;  2
-	map_const ALLOY_TIMS_HOUSE,                           5,  4 ;  3
-	map_const ALLOY_CAPTAINS_HOUSE,                           5,  4 ;  4
-	map_const ALLOY_PUNISHMENT_SPEECH_HOUSE,              5,  4 ;  5
-	map_const ALLOY_GOOD_ROD_HOUSE,                       5,  4 ;  6
-	map_const ALLOY_CAFE,                                 4,  4 ;  7
-	map_const ALLOY_MART,                                 8,  4 ;  8
-	map_const ROUTE_109_ROUTE_110_GATE,                       5,  4 ;  9
-	map_const ROUTE_108,                                    15,  9 ; 12
-	map_const ROUTE_109,                                    10, 45 ; 13
-	map_const ALLOY_CITY,                                20, 18 ; 14
-	map_const ROUTE_107_ALLOY_GATE,						5,  4 ; 15
+	map_const ALLOY_POKECENTER_1F,                          8,  4 ;  1
+	map_const ALLOY_GYM,                                   10,  8 ;  2
+	map_const ALLOY_TIMS_HOUSE,                             5,  4 ;  3
+	map_const ALLOY_CAPTAINS_HOUSE,                         5,  4 ;  4
+	map_const ALLOY_PUNISHMENT_SPEECH_HOUSE,                5,  4 ;  5
+	map_const ALLOY_GOOD_ROD_HOUSE,                         5,  4 ;  6
+	map_const ALLOY_CAFE,                                   4,  4 ;  7
+	map_const ALLOY_MART,                                   8,  4 ;  8
+	map_const ROUTE_109_ROUTE_110_GATE,                     5,  4 ;  9
+	map_const ROUTE_108,                                   15,  9 ; 12
+	map_const ROUTE_109,                                   10, 45 ; 13
+	map_const ALLOY_CITY,                                  20, 18 ; 14
+	map_const ROUTE_107_ALLOY_GATE,						    5,  4 ; 15
 	map_const ROUTE_107_ALLOY_GATE_2F,						4,  3 ; 15
-	map_const ROUTE_106,                                    30,  9 ;  2
-	map_const ROUTE_106_POKECENTER_1F,                       8,  4 ; 13
+	map_const ROUTE_106,                                   30,  9 ;  2
+	map_const ROUTE_106_POKECENTER_1F,                      8,  4 ; 13
 	map_const DAY_CARE,                                     5,  4 ; 24
 	map_const FIGHTING_DOJO,                                5,  6 ;  3
-	map_const ROUTE_109_POKECENTER_1F,                       8,  4 ;  8
+	map_const ROUTE_109_POKECENTER_1F,                      8,  4 ;  8
 
 	newgroup                                                      ;  2
 
-	map_const MAHOGANY_RED_GYARADOS_SPEECH_HOUSE,           5,  4 ;  1
-	map_const MAHOGANY_POKECENTER_1F,                       8,  4 ;  3
-	map_const MAHOGANY_TOWN,                               10,  9 ;  7
-	map_const ROUTE_2,                                     10, 18 ;  1
-	map_const ROUTE_3,                                     30,  9 ;  1
+	map_const SANSKRIT_COIN_CASE_SPEECH_HOUSE,              5,  4 ;  1
+	map_const SANSKRIT_POKECENTER_1F,                       8,  4 ;  3
+	map_const SANSKRIT_TOWN,                               10,  9 ;  7
+	map_const ROUTE_116,                                   10, 18 ;  1
+	map_const ROUTE_117,                                   30,  9 ;  1
 	map_const RUINS_OF_ALPH_OUTSIDE,                       10, 18 ; 22
-	map_const ROUTE_43,                                    10, 27 ;  5
-	map_const ROUTE_4,                                     35,  9 ; 12
-	map_const ROUTE_7_SAFFRON_GATE,                         5,  4 ; 25
+	map_const BOARDWALK,                                   10, 27 ;  5
+	map_const ROUTE_118,                                   35,  9 ; 12
+	map_const ROUTE_118_SUNPOINT_GATE,                      5,  4 ; 25
 	map_const RUINS_OF_ALPH_RESEARCH_CENTER,                4,  4 ; 28
-	map_const LAV_RADIO_TOWER_1F,                          10,  4 ; 12
-	map_const VIRIDIAN_MART,                                8,  4 ;  8
-	map_const GOLDENROD_GAME_CORNER,                       10,  7 ; 19
+	map_const SANSKRIT_ROCKET_HOUSE,                       10,  4 ; 12
+	map_const SANSKRIT_MART,                                8,  4 ;  8
+	map_const BOARDWALK_GAME_CORNER,                       10,  7 ; 19
 
 	newgroup                                                      ;  3
 

@@ -14,12 +14,12 @@
 	const ROUTE_35          ; 12
 	const AZALEA_TOWN       ; 0c
 	const SLOWPOKE_WELL     ; 0d
-	const ROUTE_2           ; 32
-	const ROUTE_3           ; 34
+	const ROUTE_116         ; 32
+	const ROUTE_117           ; 34
 	const LIGHTHOUSE        ; 1c
-	const MAHOGANY_TOWN     ; 24
+	const SANSKRIT_TOWN     ; 24
 	const RUINS_OF_ALPH     ; 09
-	const ROUTE_4           ; 36
+	const ROUTE_118           ; 36
 	const CIANWOOD_CITY     ; 21
 	const BURNED_TOWER      ; 18
 	const ROUTE_5           ; 3a
@@ -27,7 +27,7 @@
 	const UNION_CAVE        ; 0a
 	const ROUTE_8           ; 40
 	const ECRUTEAK_CITY     ; 16
-	const ROUTE_43          ; 25
+	const BOARDWALK          ; 25
 	const ROUTE_33          ; 0b
 	const ROUTE_30          ; 04
 	const ILEX_FOREST       ; 0e

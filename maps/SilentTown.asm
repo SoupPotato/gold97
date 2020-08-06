@@ -16,13 +16,13 @@ SilentTown_MapScripts:
 .ClearRocks:
 	checkevent EVENT_BEAT_ERIKA
 	iftrue .CheckNewBark2
-	changeblock  19,  7, $25 ; rock
+	changeblock  19, 15, $25 ; rock
 	return
 
 .CheckNewBark2:
 	checkevent EVENT_RELEASED_THE_BEASTS
 	iftrue .NewBarkRocksDone
-	changeblock  19,  7, $25 ; rock
+	changeblock  19, 15, $25 ; rock
 	return
 	
 .NewBarkRocksDone

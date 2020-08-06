@@ -1554,7 +1554,7 @@ BrentPhoneScript1:
 	farjump UnknownScript_0xa0998
 
 .WantsBattle:
-	landmarktotext ROUTE_43, MEM_BUFFER_2
+	landmarktotext BOARDWALK, MEM_BUFFER_2
 	farjump UnknownScript_0xa0a87
 
 BrentPhoneScript2:
@@ -1576,7 +1576,7 @@ BrentMondayMorning:
 	setflag ENGINE_BRENT_MONDAY_MORNING
 
 BrentWantsBattle:
-	landmarktotext ROUTE_43, MEM_BUFFER_2
+	landmarktotext BOARDWALK, MEM_BUFFER_2
 	setflag ENGINE_BRENT
 	farjump PhoneScript_WantsToBattle_Male
 
@@ -1601,11 +1601,11 @@ TiffanyPhoneScript1:
 	farjump UnknownScript_0xa09a0
 
 .WantsBattle:
-	landmarktotext ROUTE_43, MEM_BUFFER_2
+	landmarktotext BOARDWALK, MEM_BUFFER_2
 	farjump UnknownScript_0xa0a8c
 
 .HasItem:
-	landmarktotext ROUTE_43, MEM_BUFFER_2
+	landmarktotext BOARDWALK, MEM_BUFFER_2
 	farjump UnknownScript_0xa0ae5
 
 TiffanyPhoneScript2:
@@ -1637,7 +1637,7 @@ TiffanyTuesdayAfternoon:
 	setflag ENGINE_TIFFANY_TUESDAY_AFTERNOON
 
 TiffanyWantsBattle:
-	landmarktotext ROUTE_43, MEM_BUFFER_2
+	landmarktotext BOARDWALK, MEM_BUFFER_2
 	setflag ENGINE_TIFFANY
 	farjump PhoneScript_WantsToBattle_Female
 
@@ -1679,7 +1679,7 @@ TiffanysFamilyMembers:
 
 TiffanyHasPinkBow:
 	setflag ENGINE_TIFFANY_HAS_PINK_BOW
-	landmarktotext ROUTE_43, MEM_BUFFER_2
+	landmarktotext BOARDWALK, MEM_BUFFER_2
 	farjump PhoneScript_FoundItem_Female
 
 ; Vance

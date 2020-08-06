@@ -437,8 +437,8 @@ BoardwalkGameCorner_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event 10, 13, ROUTE_43, 7
-	warp_event 11, 13, ROUTE_43, 8
+	warp_event 10, 13, BOARDWALK, 7
+	warp_event 11, 13, BOARDWALK, 8
 
 	db 0 ; coord events
 

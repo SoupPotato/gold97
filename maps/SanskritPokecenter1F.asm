@@ -59,8 +59,8 @@ SanskritPokecenter1F_MapEvents:
 	db 0, 0 ; filler
 
 	db 3 ; warp events
-	warp_event  5,  7, MAHOGANY_TOWN, 4
-	warp_event  6,  7, MAHOGANY_TOWN, 4
+	warp_event  5,  7, SANSKRIT_TOWN, 4
+	warp_event  6,  7, SANSKRIT_TOWN, 4
 	warp_event  0,  7, POKECENTER_2F, 1
 
 	db 0 ; coord events

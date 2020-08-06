@@ -92,9 +92,9 @@ EngineFlags:
 	engine_flag wVisitedSpawns, SPAWN_AZALEA
 	engine_flag wVisitedSpawns, SPAWN_CIANWOOD
 	engine_flag wVisitedSpawns, SPAWN_GOLDENROD
-	engine_flag wVisitedSpawns, SPAWN_OLIVINE
+	engine_flag wVisitedSpawns, SPAWN_ALLOY
 	engine_flag wVisitedSpawns, SPAWN_ECRUTEAK ; $48
-	engine_flag wVisitedSpawns, SPAWN_MAHOGANY
+	engine_flag wVisitedSpawns, SPAWN_SANSKRIT
 	engine_flag wVisitedSpawns, NUM_SPAWNS
 	engine_flag wVisitedSpawns, SPAWN_BLACKTHORN
 	engine_flag wVisitedSpawns, NUM_SPAWNS

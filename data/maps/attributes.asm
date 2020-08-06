@@ -126,17 +126,17 @@ ENDM
 	connection east, Route108, ROUTE_108, 9
 
 	map_attributes TeknosCity, ECRUTEAK_CITY, $07, NORTH | WEST
-	connection north, Boardwalk, ROUTE_43, 8
+	connection north, Boardwalk, BOARDWALK, 8
 	connection west, Route120, ROUTE_8, 0
 
-	map_attributes SanskritTown, MAHOGANY_TOWN, $07, NORTH | SOUTH | WEST | EAST
+	map_attributes SanskritTown, SANSKRIT_TOWN, $07, NORTH | SOUTH | WEST | EAST
 	connection north, RuinsOfAlphOutside, RUINS_OF_ALPH_OUTSIDE, 0
-	connection south, Boardwalk, ROUTE_43, -3
-	connection west, Route118, ROUTE_4, 0
-	connection east, Route117, ROUTE_3, 0
+	connection south, Boardwalk, BOARDWALK, -3
+	connection west, Route118, ROUTE_118, 0
+	connection east, Route117, ROUTE_117, 0
 	
 	map_attributes RuinsOfAlphOutside, RUINS_OF_ALPH_OUTSIDE, $07, SOUTH
-	connection south, SanskritTown, MAHOGANY_TOWN, 0
+	connection south, SanskritTown, SANSKRIT_TOWN, 0
 
 	map_attributes BlueForest, BLACKTHORN_CITY, $3C, NORTH | SOUTH | WEST
 	connection north, Route111, ROUTE_41, 5
@@ -190,15 +190,15 @@ ENDM
 	connection north, FrostPoint, CINNABAR_ISLAND, 0
 	connection south, BlueForest, BLACKTHORN_CITY, -5
 
-	map_attributes Boardwalk, ROUTE_43, $07, NORTH | SOUTH
-	connection north, SanskritTown, MAHOGANY_TOWN, 3
+	map_attributes Boardwalk, BOARDWALK, $07, NORTH | SOUTH
+	connection north, SanskritTown, SANSKRIT_TOWN, 3
 	connection south, TeknosCity, ECRUTEAK_CITY, -8
 
 	map_attributes YoronCity, PEWTER_CITY, $35, EAST
 	connection east, YoronPoint, ROUTE_24, 9
 
-	map_attributes Route116, ROUTE_2, $65, WEST
-	connection west, Route117, ROUTE_3, 0
+	map_attributes Route116, ROUTE_116, $65, WEST
+	connection west, Route117, ROUTE_117, 0
 
 	map_attributes KobanIsland, PALLET_TOWN, $07, SOUTH
 	connection south, Route107, ROUTE_107, 0
@@ -251,12 +251,12 @@ ENDM
 	connection north, NagoVillage, CERULEAN_CITY, 0
 	connection east, CharredSummit, EASTWARD_SUMMIT, 9
 
-	map_attributes Route117, ROUTE_3, $65, WEST | EAST
-	connection west, SanskritTown, MAHOGANY_TOWN, 0
-	connection east, Route116, ROUTE_2, 0
+	map_attributes Route117, ROUTE_117, $65, WEST | EAST
+	connection west, SanskritTown, SANSKRIT_TOWN, 0
+	connection east, Route116, ROUTE_116, 0
 
-	map_attributes Route118, ROUTE_4, $07, EAST
-	connection east, SanskritTown, MAHOGANY_TOWN, 0
+	map_attributes Route118, ROUTE_118, $07, EAST
+	connection east, SanskritTown, SANSKRIT_TOWN, 0
 
 	map_attributes Route120, ROUTE_8, $07, WEST | EAST
 	connection west, Route119, ROUTE_7, -18
@@ -341,9 +341,9 @@ ENDM
 	map_attributes AlloyCafe, ALLOY_CAFE, $00, 0
 	map_attributes AlloyMart, ALLOY_MART, $00, 0
 	map_attributes Route109Route110Gate, ROUTE_109_ROUTE_110_GATE, $00, 0
-	map_attributes SanskritCoinCaseSpeechHouse, MAHOGANY_RED_GYARADOS_SPEECH_HOUSE, $00, 0
+	map_attributes SanskritCoinCaseSpeechHouse, ROUTE_110, $00, 0
 	map_attributes BlueForestGym, MAHOGANY_GYM, $00, 0
-	map_attributes SanskritPokecenter1F, MAHOGANY_POKECENTER_1F, $00, 0
+	map_attributes SanskritPokecenter1F, SANSKRIT_POKECENTER_1F, $00, 0
 	map_attributes EndonCave1F, DIGLETTS_CAVE, $09, 0
 	map_attributes BoulderMinesB4F, MOUNT_MOON, $09, 0
 	map_attributes CrownPass, UNDERGROUND_PATH, $09, 0
@@ -406,7 +406,7 @@ ENDM
 	map_attributes WestportDeptStore6F, GOLDENROD_DEPT_STORE_6F, $00, 0
 	map_attributes WestportDeptStoreElevator, GOLDENROD_DEPT_STORE_ELEVATOR, $00, 0
 	map_attributes WestportDeptStoreRoof, GOLDENROD_DEPT_STORE_ROOF, $24, 0
-	map_attributes BoardwalkGameCorner, GOLDENROD_GAME_CORNER, $00, 0
+	map_attributes BoardwalkGameCorner, BOARDWALK_GAME_CORNER, $00, 0
 	map_attributes WestpointPokecenter1F, GOLDENROD_POKECENTER_1F, $00, 0
 	map_attributes Route115KantoGate, ILEX_FOREST_AZALEA_GATE, $00, 0
 	map_attributes Route113Route114Gate, ROUTE_34_ILEX_FOREST_GATE, $00, 0
@@ -455,7 +455,7 @@ ENDM
 	map_attributes PrycesFamilyHouse, LAVENDER_SPEECH_HOUSE, $00, 0
 	map_attributes FrostpointNameRater, LAVENDER_NAME_RATER, $00, 0
 	map_attributes FrostpointMart, LAVENDER_MART, $00, 0
-	map_attributes SanskritRocketHouse, LAV_RADIO_TOWER_1F, $00, 0
+	map_attributes SanskritRocketHouse, SANSKRIT_ROCKET_HOUSE, $00, 0
 	map_attributes UrasoeParkUrasoeTrailGate, ROUTE_8_SAFFRON_GATE, $00, 0
 	map_attributes UrasoeTrailSuperRodHouse, ROUTE_12_SUPER_ROD_HOUSE, $00, 0
 	map_attributes Pokecenter2F, POKECENTER_2F, $00, 0
@@ -482,7 +482,7 @@ ENDM
 	map_attributes KantoGym, CELADON_GYM, $00, 0
 	map_attributes KantoLeftoversHouse, CELADON_CAFE, $00, 0
 	map_attributes CrownCityTrainerHouse, ROUTE_16_FUCHSIA_SPEECH_HOUSE, $00, 0
-	map_attributes Route118SunpointGate, ROUTE_7_SAFFRON_GATE, $00, 0
+	map_attributes Route118SunpointGate, ROUTE_118_SUNPOINT_GATE, $00, 0
 	map_attributes IsenStraitSeasidePathGate, ROUTE_17_ROUTE_18_GATE, $00, 0
 	map_attributes StandGym, CIANWOOD_GYM, $00, 0
 	map_attributes SunpointPokecenter1F, CIANWOOD_POKECENTER_1F, $00, 0
@@ -496,7 +496,7 @@ ENDM
 	map_attributes BattleTowerHallway, BATTLE_TOWER_HALLWAY, $00, 0
 	map_attributes BattleTowerOutside, BATTLE_TOWER_OUTSIDE, $05, 0
 	map_attributes RocketShipBase, VIRIDIAN_GYM, $00, 0
-	map_attributes SanskritMart, VIRIDIAN_MART, $00, 0
+	map_attributes SanskritMart, SANSKRIT_MART, $00, 0
 	map_attributes SilentPokecenter1F, VIRIDIAN_POKECENTER_1F, $00, 0
 	map_attributes Route116Gate, ROUTE_2_GATE, $00, 0
 	map_attributes VictoryRoadGate, VICTORY_ROAD_GATE, $00, 0

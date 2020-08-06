@@ -81,8 +81,8 @@ Route116Gate_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
-	warp_event  4,  0, ROUTE_2, 1
-	warp_event  5,  0, ROUTE_2, 2
+	warp_event  4,  0, ROUTE_116, 1
+	warp_event  5,  0, ROUTE_116, 2
 	warp_event  4,  7, AZALEA_TOWN, 7
 	warp_event  5,  7, AZALEA_TOWN, 8
 

@@ -447,7 +447,7 @@ JohtoGrassWildMons:
 	db 19, TURBAN
 	db 20, TURBAN
 	
-	map_id ROUTE_2
+	map_id ROUTE_116
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 16, IGGLYBUFF
@@ -582,7 +582,7 @@ JohtoGrassWildMons:
 	db 13, PIDGEY
 	db 13, PIDGEY
 
-	map_id ROUTE_4
+	map_id ROUTE_118
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 23, TANG

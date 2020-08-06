@@ -191,7 +191,7 @@ SunpointCity_MapEvents:
 	warp_event 33, 16, CIANWOOD_POKECENTER_1F, 1
 	warp_event 19, 24, PEWTER_MART, 1
 	warp_event 33, 25, CIANWOOD_PHOTO_STUDIO, 1
-	warp_event 35, 11, ROUTE_7_SAFFRON_GATE, 1
+	warp_event 35, 11, ROUTE_118_SUNPOINT_GATE, 1
 	warp_event 26, 12, POKE_SEERS_HOUSE, 1
 	warp_event 30,  5, ROUTE_5_SAFFRON_GATE, 3
 	warp_event 31,  5, ROUTE_5_SAFFRON_GATE, 4

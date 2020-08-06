@@ -11,7 +11,7 @@ Flypoints:
 	flypoint VIOLET,       OLD_CITY
 	flypoint GOLDENROD,    GOLDENROD_CITY
 	flypoint AZALEA,       AZALEA_TOWN
-	flypoint MAHOGANY,     MAHOGANY_TOWN
+	flypoint SANSKRIT,     SANSKRIT_TOWN
 	flypoint CIANWOOD,     CIANWOOD_CITY
 	flypoint ECRUTEAK,     ECRUTEAK_CITY
 	flypoint ALLOY,        ALLOY_CITY

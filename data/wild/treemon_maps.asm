@@ -8,7 +8,7 @@ TreeMonMaps:
 	treemon_map ROUTE_37,                  TREEMON_SET_ROUTE
 	treemon_map ROUTE_8,                   TREEMON_SET_ROUTE
 	treemon_map ROUTE_7,                   TREEMON_SET_LAKE
-	treemon_map ROUTE_4,                   TREEMON_SET_LAKE
+	treemon_map ROUTE_118,                   TREEMON_SET_LAKE
 	treemon_map ROUTE_108,                  TREEMON_SET_KANTO
 	treemon_map ROUTE_109,                  TREEMON_SET_KANTO
 	treemon_map ROUTE_34,                  TREEMON_SET_KANTO
@@ -18,7 +18,7 @@ TreeMonMaps:
 	treemon_map ROUTE_12,                  TREEMON_SET_ROUTE
 	treemon_map ROUTE_25,                  TREEMON_SET_ROUTE
 	treemon_map EASTWARD_SUMMIT,           TREEMON_SET_ROUTE
-	treemon_map ROUTE_3,                   TREEMON_SET_ROUTE
+	treemon_map ROUTE_117,                   TREEMON_SET_ROUTE
 	treemon_map RUINS_OF_ALPH_OUTSIDE,     TREEMON_SET_LAKE
 	treemon_map ECRUTEAK_CITY,             TREEMON_SET_CITY
 	treemon_map FUCHSIA_CITY,              TREEMON_SET_CITY
@@ -26,7 +26,7 @@ TreeMonMaps:
 	treemon_map VERMILION_CITY,            TREEMON_SET_CITY
 	treemon_map PEWTER_CITY,               TREEMON_SET_CITY
 	treemon_map ALLOY_CITY,              TREEMON_SET_CITY
-	treemon_map MAHOGANY_TOWN,             TREEMON_SET_TOWN
+	treemon_map SANSKRIT_TOWN,             TREEMON_SET_TOWN
 	treemon_map CERULEAN_CITY,             TREEMON_SET_TOWN
 	treemon_map PALLET_TOWN,               TREEMON_SET_LAKE
 	treemon_map ILEX_FOREST,               TREEMON_SET_FOREST

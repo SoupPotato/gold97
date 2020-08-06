@@ -289,8 +289,8 @@ SanskritRocketHouse_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event 16,  7, MAHOGANY_TOWN, 5
-	warp_event 17,  7, MAHOGANY_TOWN, 5
+	warp_event 16,  7, SANSKRIT_TOWN, 5
+	warp_event 17,  7, SANSKRIT_TOWN, 5
 
 	db 0 ; coord events
 

@@ -63,10 +63,10 @@ BoardwalkSanskritGate_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
-	warp_event  4,  0, ROUTE_43, 4
-	warp_event  5,  0, ROUTE_43, 5
-	warp_event  4,  7, ROUTE_43, 3
-	warp_event  5,  7, ROUTE_43, 6
+	warp_event  4,  0, BOARDWALK, 4
+	warp_event  5,  0, BOARDWALK, 5
+	warp_event  4,  7, BOARDWALK, 3
+	warp_event  5,  7, BOARDWALK, 6
 
 	db 0 ; coord events
 

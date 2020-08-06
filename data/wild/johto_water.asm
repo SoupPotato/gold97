@@ -17,13 +17,13 @@ JohtoWaterWildMons:
 	db 15, MAGIKARP
 	db 5, MAGIKARP
 
-	map_id ROUTE_2
+	map_id ROUTE_116
 	db 6 percent ; encounter rate
 	db 18, TENTACOOL
 	db 15, TENTACOOL
 	db 18, TENTACRUEL
 	
-	map_id ROUTE_3
+	map_id ROUTE_117
 	db 6 percent ; encounter rate
 	db 18, TENTACOOL
 	db 15, TENTACOOL
@@ -53,7 +53,7 @@ JohtoWaterWildMons:
 	db 18, POLIWAG
 	db 18, MARILL
 	
-	map_id ROUTE_43
+	map_id BOARDWALK
 	db 6 percent ; encounter rate
 	db 15, GOLDEEN
 	db 18, POLIWAG
@@ -119,7 +119,7 @@ JohtoWaterWildMons:
 	db 15, MAGIKARP
 	db 5, MAGIKARP
 	
-	map_id ROUTE_4
+	map_id ROUTE_118
 	db 6 percent ; encounter rate
 	db 20, TENTACOOL
 	db 25, OSUNFISH

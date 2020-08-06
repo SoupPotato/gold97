@@ -32,7 +32,7 @@ SpawnPoints:
 	spawn ALLOY_CITY,                7,  9
 	spawn ROUTE_109,             	  13, 29
 	spawn ECRUTEAK_CITY,              31, 11
-	spawn MAHOGANY_TOWN,               3, 13
+	spawn SANSKRIT_TOWN,               3, 13
 	spawn PLAYERS_HOUSE_2F,                        -1, -1 ;duplicate
 	spawn BLACKTHORN_CITY,            13, 19
 	spawn PLAYERS_HOUSE_2F,                        -1, -1 ;duplicate

@@ -37,5 +37,5 @@ PhoneContacts:
 	phone LASS,         DANA1,              ROUTE_108,         ANYTIME, DanaPhoneScript1,    ANYTIME, DanaPhoneScript2
 	phone POKEFANM,     DEREK1,             ROUTE_109,         ANYTIME, DerekPhoneScript1,   ANYTIME, DerekPhoneScript2
 	phone FISHER,       TULLY1,             ROUTE_8,          ANYTIME, TullyPhoneScript1,   ANYTIME, TullyPhoneScript2
-	phone POKEMANIAC,   BRENT1,             ROUTE_43,         ANYTIME, BrentPhoneScript1,   ANYTIME, BrentPhoneScript2
+	phone POKEMANIAC,   BRENT1,             BOARDWALK,         ANYTIME, BrentPhoneScript1,   ANYTIME, BrentPhoneScript2
 	phone TRAINER_NONE, PHONECONTACT_BUENA, GOLDENROD_DEPT_STORE_ROOF, ANYTIME, BuenaPhoneScript1, ANYTIME, BuenaPhoneScript2
