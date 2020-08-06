@@ -77,7 +77,6 @@ BlueStopsYouScene1:
 	closetext
 	showemote EMOTE_SHOCK, PLAYER, 15
 	turnobject PLAYER, RIGHT
-	moveobject SilentTown_BLUE, 7, 9
 	appear SilentTown_BLUE
 	applymovement SilentTown_BLUE, BlueStopsPlayer1
 	opentext
@@ -107,7 +106,6 @@ BlueStopsYouScene2:
 	closetext
 	showemote EMOTE_SHOCK, PLAYER, 15
 	turnobject PLAYER, RIGHT
-	moveobject SilentTown_BLUE, 7, 9
 	appear SilentTown_BLUE
 	applymovement SilentTown_BLUE, BlueStopsPlayer2
 	opentext
@@ -406,4 +404,4 @@ SilentTown_MapEvents:
 	object_event  9, 14, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilentTownTeacherScript, -1
 	object_event 12, 21, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1,  0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SilentTownFisherScript, -1
 	object_event  7, 18, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilentTownRivalScript, EVENT_RIVAL_SILENT_TOWN
-	object_event  3, 17, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SilentTownBlueScript, EVENT_BLUE_SILENT_TOWN
+	object_event  7, 17, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SilentTownBlueScript, EVENT_BLUE_SILENT_TOWN

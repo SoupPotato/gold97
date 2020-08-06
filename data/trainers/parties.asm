@@ -598,7 +598,7 @@ BirdKeeperGroup:
 	db 32, DODRIO
 	db -1 ; end
 
-	; BIRD_KEEPER (6)
+	; BIRD_KEEPER (6) ; unused
 	db "DENIS@", TRAINERTYPE_NORMAL
 	db 18, SPEAROW
 	db 20, FEAROW
@@ -623,14 +623,14 @@ BirdKeeperGroup:
 	db 46, PIDGEOT
 	db -1 ; end
 
-	; BIRD_KEEPER (10)
+	; BIRD_KEEPER (10) ; unused
 	db "BORIS@", TRAINERTYPE_NORMAL
 	db 30, DODUO
 	db 28, DODUO
 	db 32, DODRIO
 	db -1 ; end
 
-	; BIRD_KEEPER (11)
+	; BIRD_KEEPER (11) ; unused
 	db "BOB@", TRAINERTYPE_NORMAL
 	db 34, NOCTOWL
 	db -1 ; end
@@ -713,7 +713,7 @@ LassGroup:
 	db 27, BIPETAL
 	db -1 ; end
 
-	; LASS (5)
+	; LASS (5) ; unused
 	db "CONNIE@", TRAINERTYPE_NORMAL ;used route 8
 	db 14, MARILL
 	db -1 ; end
@@ -2073,12 +2073,12 @@ SailorGroup:
 	db -1 ; end
 
 	; SAILOR (4)
-	db "KENT@", TRAINERTYPE_MOVES
+	db "KENT@", TRAINERTYPE_MOVES ; unused
 	db 18, KRABBY,     BUBBLE, LEER, VICEGRIP, HARDEN
 	db 20, KRABBY,     BUBBLEBEAM, LEER, VICEGRIP, HARDEN
 	db -1 ; end
 
-	; SAILOR (5)
+	; SAILOR (5) ; unused
 	db "ERNEST@", TRAINERTYPE_NORMAL
 	db 18, MACHOP
 	db 18, MACHOP
@@ -2798,7 +2798,7 @@ PicnickerGroup:
 	db 19, VULPIX
 	db -1 ; end
 
-	; PICNICKER (5)
+	; PICNICKER (5) ; unused
 	db "CINDY@", TRAINERTYPE_NORMAL
 	db 36, NIDOQUEEN
 	db -1 ; end
@@ -2970,7 +2970,7 @@ CamperGroup:
 	db 18, MARILL
 	db -1 ; end
 
-	; CAMPER (5)
+	; CAMPER (5) ; unused
 	db "BARRY@", TRAINERTYPE_NORMAL
 	db 36, NIDOKING
 	db -1 ; end

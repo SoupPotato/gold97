@@ -12,8 +12,8 @@ Route102_Blocks:
 KantoCity_Blocks:
 	INCBIN "maps/KantoCity.blk"
 
-SaffronCity_Blocks:
-	INCBIN "maps/SaffronCity.blk"
+RyukyuCity_Blocks:
+	INCBIN "maps/RyukyuCity.blk"
 
 Route116_Blocks:
 	INCBIN "maps/Route116.blk"
@@ -81,8 +81,8 @@ AlloyGoodRodHouse_Blocks:
 SanskritCoinCaseSpeechHouse_Blocks:
 BlueForestEmysHouse_Blocks:
 MoveDeletersHouse_Blocks:
-CeruleanPoliceStation_Blocks:
-GoldenrodHappinessRater_Blocks:
+NagoImposterHouse_Blocks:
+WestportHappinessRater_Blocks:
 WestportNameRater_Blocks:
 NagoCharmanderHouse_Blocks:
 NagoSpeechHouse_Blocks:
@@ -232,8 +232,8 @@ CrownPokecenter1F_Blocks:
 KantoPokecenter1F_Blocks:
 	INCBIN "maps/Pokecenter1F.blk"
 
-EarlsArtHouse_Blocks:
-	INCBIN "maps/EarlsArtHouse.blk"
+PagotaTrainerSchool_Blocks:
+	INCBIN "maps/PagotaTrainerSchool.blk"
 
 WestportDeptStore1F_Blocks:
 KantoDeptStore1F_Blocks:
@@ -331,23 +331,14 @@ RuinsOfAlphOmanyteChamber_Blocks:
 RuinsOfAlphAerodactylChamber_Blocks:
 	INCBIN "maps/RuinsOfAlphPuzzleChamber.blk"
 
-SproutTower1F_Blocks:
-	INCBIN "maps/SproutTower1F.blk"
+BrassTower1F_Blocks:
+	INCBIN "maps/BrassTower1F.blk"
 
-;BetaSproutTowerCutOut1_Blocks:
-;	INCBIN "maps/unused/BetaSproutTowerCutOut1.blk"
+BrassTower2F_Blocks:
+	INCBIN "maps/BrassTower2F.blk"
 
-SproutTower2F_Blocks:
-	INCBIN "maps/SproutTower2F.blk"
-
-;BetaSproutTowerCutOut2_Blocks:
-;	INCBIN "maps/unused/BetaSproutTowerCutOut2.blk"
-
-SproutTower3F_Blocks:
-	INCBIN "maps/SproutTower3F.blk"
-
-;BetaSproutTowerCutOut3_Blocks:
-;	INCBIN "maps/unused/BetaSproutTowerCutOut3.blk"
+BrassTower3F_Blocks:
+	INCBIN "maps/BrassTower3F.blk"
 
 RadioTower1F_Blocks:
 	INCBIN "maps/RadioTower1F.blk"
@@ -367,163 +358,95 @@ RadioTower5F_Blocks:
 SilentTown_Blocks:
 	INCBIN "maps/SilentTown.blk"
 
-CherrygroveCity_Blocks:
-	INCBIN "maps/CherrygroveCity.blk"
+CrownCity_Blocks:
+	INCBIN "maps/CrownCity.blk"
 
-OldCity_Blocks:
+PagotaCity_Blocks:
 	INCBIN "maps/PagotaCity.blk"
 
-AzaleaTown_Blocks:
-	INCBIN "maps/AzaleaTown.blk"
+BirdonTown_Blocks:
+	INCBIN "maps/BirdonTown.blk"
 
-CianwoodCity_Blocks:
-	INCBIN "maps/CianwoodCity.blk"
+SunpointCity_Blocks:
+	INCBIN "maps/SunpointCity.blk"
 
-GoldenrodCity_Blocks:
-	INCBIN "maps/GoldenrodCity.blk"
+WestportCity_Blocks:
+	INCBIN "maps/WestportCity.blk"
 
-OlivineCity_Blocks:
-	INCBIN "maps/OlivineCity.blk"
+AlloyCity_Blocks:
+	INCBIN "maps/AlloyCity.blk"
 
-EcruteakCity_Blocks:
-	INCBIN "maps/EcruteakCity.blk"
+TeknosCity_Blocks:
+	INCBIN "maps/TeknosCity.blk"
 
-MahoganyTown_Blocks:
-	INCBIN "maps/MahoganyTown.blk"
+SanskritTown_Blocks:
+	INCBIN "maps/SanskritTown.blk"
 
-BlackthornCity_Blocks:
-	INCBIN "maps/BlackthornCity.blk"
+BlueForest_Blocks:
+	INCBIN "maps/BlueForest.blk"
 
-Route7_Blocks:
-	INCBIN "maps/Route7.blk"
+Route119_Blocks:
+	INCBIN "maps/Route119.blk"
 
-Route18_Blocks:
-	INCBIN "maps/Route18.blk"
+WestportUnderground_Blocks:
+	INCBIN "maps/WestportUnderground.blk"
 
-GoldenrodUnderground_Blocks:
-	INCBIN "maps/GoldenrodUnderground.blk"
+BrassTower4F_Blocks:
+	INCBIN "maps/BrassTower4F.blk"
 
-GoldenrodUndergroundSwitchRoomEntrances_Blocks:
-	INCBIN "maps/GoldenrodUndergroundSwitchRoomEntrances.blk"
+BrassTower5F_Blocks:
+	INCBIN "maps/BrassTower5F.blk"
 
-WestportDeptStoreB1F_Blocks:
-	INCBIN "maps/WestportDeptStoreB1F.blk"
+BrassTowerRoof_Blocks:
+	INCBIN "maps/BrassTowerRoof.blk"
 
-GoldenrodUndergroundWarehouse_Blocks:
-	INCBIN "maps/GoldenrodUndergroundWarehouse.blk"
+CharredSummitCave_Blocks:
+	INCBIN "maps/CharredSummitCave.blk"
 
-;BetaElevator_Blocks:
-;	INCBIN "maps/unused/BetaElevator.blk"
+JouleCave_Blocks:
+	INCBIN "maps/JouleCave.blk"
 
-TinTower1F_Blocks:
-	INCBIN "maps/TinTower1F.blk"
+IcedCavern1F_Blocks:
+	INCBIN "maps/IcedCavern1F.blk"
 
-TinTower2F_Blocks:
-	INCBIN "maps/TinTower2F.blk"
+IcedCavernB1F_Blocks:
+	INCBIN "maps/IcedCavernB1F.blk"
 
-TinTower3F_Blocks:
-	INCBIN "maps/TinTower3F.blk"
+DeepwaterPassageB2F_Blocks:
+	INCBIN "maps/DeepwaterPassageB2F.blk"
 
-TinTower4F_Blocks:
-	INCBIN "maps/TinTower4F.blk"
+MagmaShaftB1F_Blocks:
+	INCBIN "maps/MagmaShaftB1F.blk"
 
-TinTower5F_Blocks:
-	INCBIN "maps/TinTower5F.blk"
+MagmaShaftB2F_Blocks:
+	INCBIN "maps/MagmaShaftB2F.blk"
 
-TinTower6F_Blocks:
-	INCBIN "maps/TinTower6F.blk"
+MagmaShaft1F_Blocks:
+	INCBIN "maps/MagmaShaft1F.blk"
 
-TinTower7F_Blocks:
-	INCBIN "maps/TinTower7F.blk"
+DeepwaterPassageB1F_Blocks:
+	INCBIN "maps/DeepwaterPassageB1F.blk"
 
-TinTower8F_Blocks:
-	INCBIN "maps/TinTower8F.blk"
+WhirlIslandB2FCave_Blocks:
+	INCBIN "maps/WhirlIslandB2FCave.blk"
 
-TinTower9F_Blocks:
-	INCBIN "maps/TinTower9F.blk"
-
-TinTowerRoof_Blocks:
-	INCBIN "maps/TinTowerRoof.blk"
-
-
-
-;BetaCaveTestMap_Blocks:
-;	INCBIN "maps/unused/BetaCaveTestMap.blk"
-BurnedTower1F_Blocks:
-BurnedTowerB1F_Blocks:; yikes, I don't like doing this
-MountMortar1FOutside_Blocks:
-	INCBIN "maps/MountMortar1FOutside.blk"
-
-MountMortar1FInside_Blocks:
-	INCBIN "maps/MountMortar1FInside.blk"
-
-MountMortar2FInside_Blocks:
-	INCBIN "maps/MountMortar2FInside.blk"
-
-MountMortarB1F_Blocks:
-	INCBIN "maps/MountMortarB1F.blk"
-
-IcePath1F_Blocks:
-	INCBIN "maps/IcePath1F.blk"
-
-IcePathB1F_Blocks:
-	INCBIN "maps/IcePathB1F.blk"
-
-IcePathB2FMahoganySide_Blocks:
-	INCBIN "maps/IcePathB2FMahoganySide.blk"
-
-IcePathB2FBlackthornSide_Blocks:
-	INCBIN "maps/IcePathB2FBlackthornSide.blk"
-
-IcePathB3F_Blocks:
-	INCBIN "maps/IcePathB3F.blk"
-
-
-WhirlIslandNW_Blocks:
-	INCBIN "maps/WhirlIslandNW.blk"
-
-WhirlIslandNE_Blocks:
-	INCBIN "maps/WhirlIslandNE.blk"
-
-WhirlIslandSW_Blocks:
-	INCBIN "maps/WhirlIslandSW.blk"
+WhirlIsland1F_Blocks:
+	INCBIN "maps/WhirlIsland1F.blk"
 
 WhirlIslandCave_Blocks:
 	INCBIN "maps/WhirlIslandCave.blk"
 
-WhirlIslandSE_Blocks:
-	INCBIN "maps/WhirlIslandSE.blk"
-
 WhirlIslandB1F_Blocks:
 	INCBIN "maps/WhirlIslandB1F.blk"
 
-WhirlIslandBlisseyChamber_Blocks:
-	INCBIN "maps/WhirlIslandBlisseyChamber.blk"
+WhirlIslandLugiaChamber_Blocks:
+	INCBIN "maps/WhirlIslandLugiaChamber.blk"
 
-;BetaRocketHideout1_Blocks:
-;	INCBIN "maps/unused/BetaRocketHideout1.blk"
-
-;BetaRocketHideout2_Blocks:
-;	INCBIN "maps/unused/BetaRocketHideout2.blk"
-
-;BetaEmptyHouse_Blocks:
-;	INCBIN "maps/unused/BetaEmptyHouse.blk"
-
-;BetaRocketHideout3_Blocks:
-;	INCBIN "maps/unused/BetaRocketHideout3.blk"
-
-MahoganyMart1F_Blocks:
-MountMoonGiftShop_Blocks:
-	INCBIN "maps/GiftShop.blk"
+TeamRocketBaseB2FOffice_Blocks:
+	INCBIN "maps/TeamRocketBaseB2FOffice.blk"
 
 TeamRocketBaseB1F_Blocks:
 	INCBIN "maps/TeamRocketBaseB1F.blk"
-
-TeamRocketBaseB2F_Blocks:
-	INCBIN "maps/TeamRocketBaseB2F.blk"
-
-;BetaRoute23EarlyVersion_Blocks:
-;	INCBIN "maps/unused/BetaRoute23EarlyVersion.blk"
 
 IndigoPlateauPokecenter1F_Blocks:
 	INCBIN "maps/IndigoPlateauPokecenter1F.blk"
@@ -540,62 +463,59 @@ AgathasRoom_Blocks:
 GiovannisRoom_Blocks:
 	INCBIN "maps/GiovannisRoom.blk"
 
-AzaleaGym_Blocks:
-	INCBIN "maps/AzaleaGym.blk"
+WestportGym_Blocks:
+	INCBIN "maps/WestportGym.blk"
 
-VioletGym_Blocks:
-	INCBIN "maps/VioletGym.blk"
+PagotaGym_Blocks:
+	INCBIN "maps/PagotaGym.blk"
 
-GoldenrodGym_Blocks:
-	INCBIN "maps/GoldenrodGym.blk"
+TeknosGym_Blocks:
+	INCBIN "maps/TeknosGym.blk"
 
-EcruteakGym_Blocks:
-	INCBIN "maps/EcruteakGym.blk"
+BirdonGym_Blocks:
+	INCBIN "maps/BirdonGym.blk"
 
-MahoganyGym_Blocks:
-	INCBIN "maps/MahoganyGym.blk"
+BlueForestGym_Blocks:
+	INCBIN "maps/BlueForestGym.blk"
 
-OlivineGym_Blocks:
-	INCBIN "maps/OlivineGym.blk"
+AlloyGym_Blocks:
+	INCBIN "maps/AlloyGym.blk"
 
-;BetaUnknown_Blocks:
-;	INCBIN "maps/unused/BetaUnknown.blk"
+StandGym_Blocks:
+	INCBIN "maps/StandGym.blk"
 
-CianwoodGym_Blocks:
-	INCBIN "maps/CianwoodGym.blk"
+ResearchFacilityBackRoom_Blocks:
+	INCBIN "maps/ResearchFacilityBackRoom.blk"
 
-BlackthornGym1F_Blocks:
-	INCBIN "maps/BlackthornGym1F.blk"
+ResearchFacilityEntrance_Blocks:
+	INCBIN "maps/ResearchFacilityEntrance.blk"
 
-BlackthornGym2F_Blocks:
-	INCBIN "maps/BlackthornGym2F.blk"
+TeknosAquarium1F_Blocks:
+	INCBIN "maps/TeknosAquarium1F.blk"
 
-OlivineLighthouse1F_Blocks:
-	INCBIN "maps/OlivineLighthouse1F.blk"
+TeknosAquarium2F_Blocks:
+	INCBIN "maps/TeknosAquarium2F.blk"
 
-OlivineLighthouse2F_Blocks:
-	INCBIN "maps/OlivineLighthouse2F.blk"
-
-OlivineLighthouse3F_Blocks:
-	INCBIN "maps/OlivineLighthouse3F.blk"
+EndonCaveB1F_Blocks:
+	INCBIN "maps/EndonCaveB1F.blk"
 	
 BillsFamilysHouse_Blocks:
 	INCBIN "maps/BillsFamilysHouse.blk"
 	
-TekuPort_Blocks:
-	INCBIN "maps/TekuPort.blk"
+TeknosPort_Blocks:
+	INCBIN "maps/TeknosPort.blk"
 	
-CharcoalKiln_Blocks:
-	INCBIN "maps/CharcoalKiln.blk"
+BirdonCafe_Blocks:
+	INCBIN "maps/BirdonCafe.blk"
 	
-IcePathNew_Blocks:
-	INCBIN "maps/IcePathNew.blk"
+DeepwaterPassageB3F_Blocks:
+	INCBIN "maps/DeepwaterPassageB3F.blk"
 
-StandPoke_Blocks:
-	INCBIN "maps/StandPoke.blk"
+StandZooInfirmary_Blocks:
+	INCBIN "maps/StandZooInfirmary.blk"
 
-TeamRocketBaseB3F_Blocks:
-	INCBIN "maps/TeamRocketBaseB3F.blk"
+TeamRocketBaseB2F_Blocks:
+	INCBIN "maps/TeamRocketBaseB2F.blk"
 	
 RadioTower6F_Blocks:
 	INCBIN "maps/RadioTower6F.blk"
@@ -614,50 +534,41 @@ KantoBattleClubB1F_Blocks:
 
 SECTION "Map Blocks 3", ROMX
 
-;BetaCave2_Blocks:
-;	INCBIN "maps/unused/BetaCave2.blk"
-
 SlowpokeWellB1F_Blocks:
 	INCBIN "maps/SlowpokeWellB1F.blk"
 
 SlowpokeWellB2F_Blocks:
 	INCBIN "maps/SlowpokeWellB2F.blk"
 
-IlexForest_Blocks:
-	INCBIN "maps/IlexForest.blk"
+JadeForest_Blocks:
+	INCBIN "maps/JadeForest.blk"
 
-DarkCaveVioletEntrance_Blocks:
-	INCBIN "maps/DarkCaveVioletEntrance.blk"
+AmpareCavernB1F_Blocks:
+	INCBIN "maps/AmpareCavernB1F.blk"
 
-DarkCaveBlackthornEntrance_Blocks:
-	INCBIN "maps/DarkCaveBlackthornEntrance.blk"
+AmpareCavern1F_Blocks:
+	INCBIN "maps/AmpareCavern1F.blk"
 
 RuinsOfAlphResearchCenter_Blocks:
 	INCBIN "maps/RuinsOfAlphResearchCenter.blk"
 
-GoldenrodBikeShop_Blocks:
-	INCBIN "maps/GoldenrodBikeShop.blk"
+WestportBikeShop_Blocks:
+	INCBIN "maps/WestportBikeShop.blk"
 
-DanceTheatre_Blocks:
-	INCBIN "maps/DanceTheatre.blk"
+KantoFossilLab_Blocks:
+	INCBIN "maps/KantoFossilLab.blk"
 
-EcruteakTinTowerEntrance_Blocks:
-	INCBIN "maps/EcruteakTinTowerEntrance.blk"
+BoardwalkGameCorner_Blocks:
+	INCBIN "maps/BoardwalkGameCorner.blk"
 
-GoldenrodGameCorner_Blocks:
-	INCBIN "maps/GoldenrodGameCorner.blk"
-
-Route36NationalParkGate_Blocks:
-	INCBIN "maps/Route36NationalParkGate.blk"
+NationalParkStandGate_Blocks:
+	INCBIN "maps/NationalParkStandGate.blk"
 
 FastShip1F_Blocks:
 	INCBIN "maps/FastShip1F.blk"
 
 FastShipB1F_Blocks:
 	INCBIN "maps/FastShipB1F.blk"
-
-;BetaFastShipInsideCutOut_Blocks:
-;	INCBIN "maps/unused/BetaFastShipInsideCutOut.blk"
 
 FastShipCabins_NNW_NNE_NE_Blocks:
 	INCBIN "maps/FastShipCabins_NNW_NNE_NE.blk"
@@ -668,44 +579,38 @@ FastShipCabins_SW_SSW_NW_Blocks:
 FastShipCabins_SE_SSE_CaptainsCabin_Blocks:
 	INCBIN "maps/FastShipCabins_SE_SSE_CaptainsCabin.blk"
 
-OlivinePort_Blocks:
-	INCBIN "maps/OlivinePort.blk"
+WestportPort_Blocks:
+	INCBIN "maps/WestportPort.blk"
 
-VermilionPort_Blocks:
-	INCBIN "maps/VermilionPort.blk"
+AmamiPort_Blocks:
+	INCBIN "maps/AmamiPort.blk"
 
-OlivineCafe_Blocks:
-	INCBIN "maps/OlivineCafe.blk"
+AlloyCafe_Blocks:
+	INCBIN "maps/AlloyCafe.blk"
 
-SafariZoneMainOffice_Blocks:
-	INCBIN "maps/SafariZoneMainOffice.blk"
+StandZooMainOffice_Blocks:
+	INCBIN "maps/StandZooMainOffice.blk"
 
 PlayersHouse2F_Blocks:
 	INCBIN "maps/PlayersHouse2F.blk"
 
-SaffronMagnetTrainStation_Blocks:
-	INCBIN "maps/SaffronMagnetTrainStation.blk"
+RyukyuArboretum_Blocks:
+	INCBIN "maps/RyukyuArboretum.blk"
 
-CeruleanGym_Blocks:
-	INCBIN "maps/CeruleanGym.blk"
+JadeForestSnorlaxRoom_Blocks:
+	INCBIN "maps/JadeForestSnorlaxRoom.blk"
 
-VermilionGym_Blocks:
-	INCBIN "maps/VermilionGym.blk"
+AmamiSwimmingPool_Blocks:
+	INCBIN "maps/AmamiSwimmingPool.blk"
 
-SaffronGym_Blocks:
-	INCBIN "maps/SaffronGym.blk"
+RyukyuFakeGym_Blocks:
+	INCBIN "maps/RyukyuFakeGym.blk"
 
-PowerPlant_Blocks:
-	INCBIN "maps/PowerPlant.blk"
+StandRocketHouse1F_Blocks:
+	INCBIN "maps/StandRocketHouse1F.blk"
 
-PokemonFanClub_Blocks:
-	INCBIN "maps/PokemonFanClub.blk"
-
-SafariZoneWardensHome_Blocks:
-	INCBIN "maps/SafariZoneWardensHome.blk"
-
-SafariZoneWardensHome2F_Blocks:
-	INCBIN "maps/SafariZoneWardensHome2F.blk"
+StandRocketHouse2F_Blocks:
+	INCBIN "maps/StandRocketHouse2F.blk"
 
 FightingDojo_Blocks:
 	INCBIN "maps/FightingDojo.blk"
@@ -713,8 +618,8 @@ FightingDojo_Blocks:
 SilphCo1F_Blocks:
 	INCBIN "maps/SilphCo1F.blk"
 
-ViridianGym_Blocks:
-	INCBIN "maps/ViridianGym.blk"
+RocketShipBase_Blocks:
+	INCBIN "maps/RocketShipBase.blk"
 
 RedsHouse1F_Blocks:
 	INCBIN "maps/RedsHouse1F.blk"
@@ -725,23 +630,20 @@ RedsHouse2F_Blocks:
 OaksLabKanto_Blocks:
 	INCBIN "maps/OaksLabKanto.blk"
 
-LavRadioTower1F_Blocks:
-	INCBIN "maps/LavRadioTower1F.blk"
+SanskritRocketHouse_Blocks:
+	INCBIN "maps/SanskritRocketHouse.blk"
 
 DayCare_Blocks:
 	INCBIN "maps/DayCare.blk"
 
-PewterGym_Blocks:
-	INCBIN "maps/PewterGym.blk"
+YoronSocialHouse_Blocks:
+	INCBIN "maps/YoronSocialHouse.blk"
 
-CeladonGym_Blocks:
-	INCBIN "maps/CeladonGym.blk"
+KantoGym_Blocks:
+	INCBIN "maps/KantoGym.blk"
 
-;BetaHouse2_Blocks:
-;	INCBIN "maps/unused/BetaHouse2.blk"
-
-CeladonCafe_Blocks:
-	INCBIN "maps/CeladonCafe.blk"
+KantoLeftoversHouse_Blocks:
+	INCBIN "maps/KantoLeftoversHouse.blk"
 
 BoulderMinesB2F_Blocks:
 	INCBIN "maps/BoulderMinesB2F.blk"
@@ -749,39 +651,27 @@ BoulderMinesB2F_Blocks:
 BoulderMinesB3F_Blocks:
 	INCBIN "maps/BoulderMinesB3F.blk"
 
-DiglettsCave_Blocks:
-	INCBIN "maps/DiglettsCave.blk"
+EndonCave1F_Blocks:
+	INCBIN "maps/EndonCave1F.blk"
 
 BoulderMinesB4F_Blocks:
 	INCBIN "maps/BoulderMinesB4F.blk"
 
-SeafoamGym_Blocks:
-	INCBIN "maps/SeafoamGym.blk"
-
-MrPokemonsHouse_Blocks:
-	INCBIN "maps/MrPokemonsHouse.blk"
-
 VictoryRoadGate_Blocks:
 	INCBIN "maps/VictoryRoadGate.blk"
 
-OlivinePortPassage_Blocks:
-TekuPortPassage_Blocks:
+WestportPortPassage_Blocks:
+TeknosPortPassage_Blocks:
 	INCBIN "maps/PortPassage.blk"
 	
-VermilionPortPassage_Blocks:
-	INCBIN "maps/VermilionPortPassage.blk"
+AmamiPortPassage_Blocks:
+	INCBIN "maps/AmamiPortPassage.blk"
 
-FuchsiaGym_Blocks:
-	INCBIN "maps/FuchsiaGym.blk"
+NanjoForest_Blocks:
+	INCBIN "maps/NanjoForest.blk"
 
-SafariZoneBeta_Blocks:
-	INCBIN "maps/SafariZoneBeta.blk"
-
-UndergroundPath_Blocks:
-	INCBIN "maps/UndergroundPath.blk"
-
-Route39Barn_Blocks:
-	INCBIN "maps/Route39Barn.blk"
+CrownPass_Blocks:
+	INCBIN "maps/CrownPass.blk"
 
 VictoryRoad_Blocks:
 	INCBIN "maps/VictoryRoad.blk"
@@ -798,32 +688,20 @@ LancesRoom_Blocks:
 HallOfFame_Blocks:
 	INCBIN "maps/HallOfFame.blk"
 
-CopycatsHouse1F_Blocks:
-	INCBIN "maps/CopycatsHouse1F.blk"
+Route102N64House_Blocks:
+	INCBIN "maps/Route102N64House.blk"
 
-CopycatsHouse2F_Blocks:
-	INCBIN "maps/CopycatsHouse2F.blk"
+VictoryRoadOutside_Blocks:
+	INCBIN "maps/VictoryRoadOutside.blk"
 
-GoldenrodFlowerShop_Blocks:
-	INCBIN "maps/House64.blk"
+DeepwaterPassage1F_Blocks:
+	INCBIN "maps/DeepwaterPassage1F.blk"
 
-MountMoonSquare_Blocks:
-	INCBIN "maps/MountMoonSquare.blk"
+DragonsMaw_Blocks:
+	INCBIN "maps/DragonsMaw.blk"
 
-WiseTriosRoom_Blocks:
-	INCBIN "maps/WiseTriosRoom.blk"
-
-DragonsDen1F_Blocks:
-	INCBIN "maps/DragonsDen1F.blk"
-
-DragonsDenB1F_Blocks:
-	INCBIN "maps/DragonsDenB1F.blk"
-
-TohjoFalls_Blocks:
-	INCBIN "maps/TohjoFalls.blk"
-
-DragonShrine_Blocks:
-	INCBIN "maps/DragonShrine.blk"
+KantoCafe_Blocks:
+	INCBIN "maps/KantoCafe.blk"
 
 BattleTower1F_Blocks:
 	INCBIN "maps/BattleTower1F.blk"
@@ -846,29 +724,26 @@ BattleTowerElevator_Blocks:
 BattleTowerOutside_Blocks:
 	INCBIN "maps/BattleTowerOutside.blk"
 
-;BetaBlank_Blocks:
-;	INCBIN "maps/unused/BetaBlank.blk"
-
 WestportDeptStoreRoof_Blocks:
 	INCBIN "maps/WestportDeptStoreRoof.blk"
 
-Route9_Blocks:
-	INCBIN "maps/Route9.blk"
+Route114_Blocks:
+	INCBIN "maps/Route114.blk"
 	
-CeruleanCity_Blocks:
-	INCBIN "maps/CeruleanCity.blk"
+NagoVillage_Blocks:
+	INCBIN "maps/NagoVillage.blk"
 
-Route5_Blocks:
-	INCBIN "maps/Route5.blk"
+SunpointDocks_Blocks:
+	INCBIN "maps/SunpointDocks.blk"
 	
-BillsHouse_Blocks:
-	INCBIN "maps/EarlsMuseum.blk"
+EarlsArtHouse_Blocks:
+	INCBIN "maps/EarlsArtHouse.blk"
 	
-EastwardSummit_Blocks:
-	INCBIN "maps/EastwardSummit.blk"
+CharredSummit_Blocks:
+	INCBIN "maps/CharredSummit.blk"
 
-PewterNidoranSpeechHouse_Blocks:
-	INCBIN "maps/PewterNidoranSpeechHouse.blk"
+YoronPartsShop_Blocks:
+	INCBIN "maps/YoronPartsShop.blk"
 	
-MountMortarZapdosRoom_Blocks:
-	INCBIN "maps/MountMortarZapdosRoom.blk"
+JouleCaveZapdosRoom_Blocks:
+	INCBIN "maps/JouleCaveZapdosRoom.blk"

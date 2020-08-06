@@ -1,427 +1,328 @@
 	const_def 2 ; object constants
-	const EARLSPOKEMONACADEMY_EARL
-	const EARLSPOKEMONACADEMY_YOUNGSTER1
-	const EARLSPOKEMONACADEMY_GAMEBOY_KID1
-	const EARLSPOKEMONACADEMY_GAMEBOY_KID2
-	const EARLSPOKEMONACADEMY_YOUNGSTER2
-	const EARLSPOKEMONACADEMY_POKEDEX
+	const EarlsArtHouse_GRAMPS
+	const EARLMUSEUM_BIRD
+	const EARLMUSEUM_DRAGON
+	const EARLMUSEUM_LASS
+	const EARLMUSEUM_POKEFAN_M
 
 EarlsArtHouse_MapScripts:
 	db 0 ; scene scripts
 
-	db 0 ; callbacks
-
-AcademyEarl:
-;	applymovement EARLSPOKEMONACADEMY_EARL, AcademyEarlSpinMovement
-	faceplayer
-	opentext
-	writetext AcademyEarlIntroText
-	yesorno
-	iffalse .Part1
-	writetext AcademyEarlTeachHowToWinText
-	yesorno
-	iffalse .Done
-.Part1:
-	writetext AcademyEarlTeachMoreText
-	yesorno
-	iffalse .Done
-	writetext AcademyEarlTeachHowToRaiseWellText
-	waitbutton
-	closetext
-	end
-
-.Done:
-	writetext AcademyEarlNoMoreToTeachText
-	waitbutton
-	closetext
-	end
-
-EarlsArtHouseYoungster1Script:
-	jumptextfaceplayer EarlsArtHouseYoungster1Text
-
-EarlsArtHouseGameboyKid1Script:
-	faceplayer
-	opentext
-	writetext EarlsArtHouseGameboyKid1Text
-	waitbutton
-	closetext
-	turnobject EARLSPOKEMONACADEMY_GAMEBOY_KID1, DOWN
-	end
-
-EarlsArtHouseGameboyKid2Script:
-	faceplayer
-	opentext
-	writetext EarlsArtHouseGameboyKid2Text
-	waitbutton
-	closetext
-	turnobject EARLSPOKEMONACADEMY_GAMEBOY_KID2, DOWN
-	end
-
-EarlsArtHouseYoungster2Script:
-	jumptextfaceplayer EarlsArtHouseYoungster2Text
-
-AcademyBlackboard:
-	opentext
-	writetext AcademyBlackboardText
-.Loop:
-	loadmenu .BlackboardMenuHeader
-	_2dmenu
-	closewindow
-	ifequal 1, .Poison
-	ifequal 2, .Paralysis
-	ifequal 3, .Sleep
-	ifequal 4, .Burn
-	ifequal 5, .Freeze
-	closetext
-	end
-
-.Poison:
-	writetext AcademyPoisonText
-	waitbutton
-	jump .Loop
-
-.Paralysis:
-	writetext AcademyParalysisText
-	waitbutton
-	jump .Loop
-
-.Sleep:
-	writetext AcademySleepText
-	waitbutton
-	jump .Loop
-
-.Burn:
-	writetext AcademyBurnText
-	waitbutton
-	jump .Loop
-
-.Freeze:
-	writetext AcademyFreezeText
-	waitbutton
-	jump .Loop
-
-.BlackboardMenuHeader:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 11, 8
-	dw .MenuData
-	db 1 ; default option
-
-.MenuData:
-	db STATICMENU_CURSOR ; flags
-	dn 3, 2 ; rows, columns
-	db 5 ; spacing
-	dba .Text
-	dbw BANK(AcademyBlackboard), 0
-
-.Text:
-	db "PSN@"
-	db "PAR@"
-	db "SLP@"
-	db "BRN@"
-	db "FRZ@"
-	db "QUIT@"
-
-AcademyNotebook:
-	opentext
-	writetext AcademyNotebookText
-	yesorno
-	iffalse .Done
-	writetext AcademyNotebookText1
-	yesorno
-	iffalse .Done
-	writetext AcademyNotebookText2
-	yesorno
-	iffalse .Done
-	writetext AcademyNotebookText3
-	waitbutton
-.Done:
-	closetext
-	end
-
-AcademyStickerMachine:
-; unused
-	jumptext AcademyStickerMachineText
-
-AcademyBookshelf:
-	jumpstd difficultbookshelf
-
-AcademyEarlSpinMovement:
-	turn_head DOWN
-	turn_head LEFT
-	turn_head UP
-	turn_head RIGHT
-	turn_head DOWN
-	turn_head LEFT
-	turn_head UP
-	turn_head RIGHT
-	turn_head DOWN
-	turn_head LEFT
-	turn_head UP
-	turn_head RIGHT
-	turn_head DOWN
-	step_end
-
-AcademyEarlIntroText:
-	text "Hello!"
-
-	para "Welcome to the"
-	line "OLD CITY trainer's"
-	cont "school."
+	db 2 ; callbacks
+	callback MAPCALLBACK_OBJECTS, .birdstatue
+	callback MAPCALLBACK_OBJECTS, .dragonstatue
 	
-	para "Want to learn"
-	line "how battles work?"
+.birdstatue
+	checkevent EVENT_SHOWED_PICHU_TO_BILLS_GRANDPA
+	iffalse .birdgone
+	return
+	
+.birdgone
+	disappear EARLMUSEUM_BIRD
+	return
+	
+.dragonstatue
+	checkevent EVENT_SHOWED_GROWLITHE_VULPIX_TO_BILLS_GRANDPA
+	iffalse .dragongone
+	return
+	
+.dragongone
+	disappear EARLMUSEUM_DRAGON
+	disappear EARLMUSEUM_LASS
+	disappear EARLMUSEUM_POKEFAN_M
+	return
+	
+BirdScript:
+	opentext
+	writetext BirdText
+	waitbutton
+	closetext
+	end
+
+DragonScript:
+	opentext
+	writetext DragonText
+	waitbutton
+	closetext
+	end
+
+BillsGrandpa:
+	faceplayer
+	opentext
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	iftrue .JustShowedSomething
+	checkevent EVENT_GOT_THUNDERSTONE_FROM_BILLS_GRANDPA
+	iftrue .GotThunderstone
+	checkevent EVENT_MET_BILLS_GRANDPA
+	iftrue .MetGrandpa
+	writetext BillsGrandpaIntroText
+	buttonsound
+	setevent EVENT_MET_BILLS_GRANDPA
+.MetGrandpa:
+	checkevent EVENT_SHOWED_ODDISH_TO_BILLS_GRANDPA
+	iftrue .ShowedOddish
+	checkevent EVENT_SHOWED_LICKITUNG_TO_BILLS_GRANDPA
+	iftrue .ShowedLickitung
+	writetext BillsGrandpaLickitungText
+	buttonsound
+	writetext BillsGrandpaAskToSeeMonText
+	yesorno
+	iffalse .SaidNo
+	scall .ExcitedToSee
+	special BillsGrandfather
+	iffalse .SaidNo
+	ifnotequal MADAME, .WrongPokemon
+	scall .CorrectPokemon
+	setevent EVENT_SHOWED_LICKITUNG_TO_BILLS_GRANDPA
+	jump .ShowedLickitung
+
+.GotEverstone:
+	writetext BillsGrandpaOddishText
+	buttonsound
+	writetext BillsGrandpaAskToSeeMonText
+	yesorno
+	iffalse .SaidNo
+	scall .ExcitedToSee
+	special BillsGrandfather
+	iffalse .SaidNo
+	ifnotequal DRATINI, .WrongPokemon; edit here, change back to dratini
+	scall .CorrectPokemon
+	clearevent EVENT_SHOWED_GROWLITHE_VULPIX_TO_BILLS_GRANDPA
+	setevent EVENT_SHOWED_ODDISH_TO_BILLS_GRANDPA
+	jump .ShowedOddish
+
+
+.ShowedOddish:
+	scall .ReceiveItem
+	verbosegiveitem EXP_SHARE
+	iffalse .BagFull
+	setevent EVENT_GOT_THUNDERSTONE_FROM_BILLS_GRANDPA
+	closetext
+	end
+
+.ShowedLickitung:
+	checkevent EVENT_GOT_EVERSTONE_FROM_BILLS_GRANDPA
+	iftrue .GotEverstone
+	scall .ReceiveItem
+	verbosegiveitem EVERSTONE
+	iffalse .BagFull
+	setevent EVENT_GOT_EVERSTONE_FROM_BILLS_GRANDPA
+	clearevent EVENT_SHOWED_PICHU_TO_BILLS_GRANDPA
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	closetext
+	end
+
+.ExcitedToSee:
+	writetext BillsGrandpaExcitedToSeeText
+	buttonsound
+	end
+
+.SaidNo:
+	writetext BillsGrandpaYouDontHaveItTextText
+	waitbutton
+	closetext
+	end
+
+.CorrectPokemon:
+	writetext BillsGrandpaShownPokemonText
+	buttonsound
+	end
+
+.ReceiveItem:
+	writetext BillsGrandpaTokenOfAppreciationText
+	buttonsound
+	end
+
+.JustShowedSomething:
+	writetext BillsGrandpaComeAgainText
+	waitbutton
+	closetext
+	end
+
+.GotThunderstone:
+	writetext BillsGrandpaShownAllThePokemonText
+	waitbutton
+	closetext
+	end
+
+.WrongPokemon:
+	writetext BillsGrandpaWrongPokemonText
+	waitbutton
+	closetext
+	end
+
+.BagFull:
+	closetext
+	end
+	
+EggStatue:
+	jumptext EggStatueText
+
+ArtSign:
+	jumptext ArtSignText
+	
+ArtHouseLassScript:
+	jumptextfaceplayer ArtHouseLassText
+	
+ArtHousePokefanMScript:
+	jumptextfaceplayer ArtHousePokefanMText
+	
+ArtHousePokefanMText:
+	text "This guy's work"
+	line "is really impress-"
+	cont "ive!"
+	done
+	
+ArtHouseLassText:
+	text "You know, I like"
+	line "this EGG one the"
+	cont "best."
 	done
 
-AcademyEarlTeachHowToWinText:
-	text "In battle, the"
-	line "#MON at the top"
-	para "of the list is"
-	line "sent out first!"
-
-	para "It's a good"
-	line "strategy to put"
-	para "some thought into"
-	line "which #MON you"
-	cont "keep at the top."
-
-	para "Wanna learn more?"
+EggStatueText:
+	text "#MON EGG STATUE"
+	line "by EARL"
+	done
+	
+ArtSignText:
+	text "EARL'S ART HOUSE"
+	para "Please look, but"
+	line "do not touch."
 	done
 
-AcademyEarlTeachMoreText:
-	text "Do you want to"
-	line "know how to raise"
-	cont "#MON well?"
+BillsGrandpaIntroText:
+	text "Oh, boo."
+	para "I'm a failure."
+	para "Don't ask why!"
+	para "Alright, I'll tell"
+	line "you."
+	para "My name is EARL,"
+	line "and I'm an artist."
+	para "Or at least, I"
+	line "wish I was a"
+	cont "decent one."
+	para "I never feel"
+	line "inspired."
+	para "I opened this"
+	line "ART HOUSE to"
+	para "show off my work,"
+	line "but the only"
+	para "sculpture I've"
+	line "ever finished is"
+	para "a sculpture of a"
+	line "#MON EGG."
+	para "I need to do"
+	line "something"
+	cont "impressive!"
+	para "I've been working"
+	line "on a statue of the"
+	para "#MON MADAME,"
+	line "but it's not quite"
+	para "finished."
 	done
 
-AcademyEarlTeachHowToRaiseWellText:
-	text "If #MON come"
-	line "out in battle even"
-
-	para "briefly, it will"
-	line "get EXP. Points."
-
-	para "You can send out"
-	line "a weak #MON"
-	para "into battle, then"
-	line "immediately switch"
-	para "it out for a"
-	line "stronger #MON."
-	para "This way, it still"
-	line "can gain EXP."
+BillsGrandpaAskToSeeMonText:
+	text "If you have that"
+	line "#MON, may I see"
+	cont "it, please?"
 	done
 
-AcademyEarlNoMoreToTeachText:
-	text "You must already"
-	line "be an expert on"
-	cont "#MON!"
+BillsGrandpaExcitedToSeeText:
+	text "You will show me?"
+	line "How good of you!"
 	done
 
-EarlsArtHouseYoungster1Text:
-	text "I'm taking notes"
-	line "of the teacher's"
-	cont "lecture."
-
-	para "I'd better copy"
-	line "the stuff on the"
-	cont "blackboard too."
+BillsGrandpaYouDontHaveItTextText:
+	text "You don't have it?"
+	line "That's too bad…"
 	done
 
-EarlsArtHouseGameboyKid1Text:
-	text "I traded my best"
-	line "#MON to the"
-	cont "guy beside me."
+BillsGrandpaShownPokemonText:
+	text "Ah, yes! That is"
+	line "@"
+	text_ram wStringBuffer3
+	text "!"
+
+	para "Thank you so much!"
+	line "I feel inspired!"
 	done
 
-EarlsArtHouseGameboyKid2Text:
-	text "A #MON you get"
-	line "in a trade grows"
-	cont "quickly."
-
-	para "But if you don't"
-	line "have the right GYM"
-
-	para "BADGE, they may"
-	line "disobey you."
+BillsGrandpaTokenOfAppreciationText:
+	text "This is a token of"
+	line "my appreciation."
 	done
 
-EarlsArtHouseYoungster2Text:
-	text "A #MON holding"
-	line "a BERRY will heal"
-	cont "itself in battle."
-
-	para "Many other items"
-	line "can be held by"
-	cont "#MON…"
-
-	para "It sure is tough"
-	line "taking notes…"
+BillsGrandpaComeAgainText:
+	text "Come by again"
+	line "sometime."
 	done
 
-AcademyBlackboardText:
-	text "The blackboard"
-	line "describes #MON"
-
-	para "status changes in"
-	line "battle."
+BillsGrandpaShownAllThePokemonText:
+	text "Thanks for showing"
+	line "me those #MON."
+	para "With your help,"
+	line "I've made great"
+	para "progress on my"
+	line "dream!"
 	done
 
-AcademyBlackboardText2:
-; unused
-	text "Read which topic?"
+BillsGrandpaWrongPokemonText:
+	text "Hm?"
+
+	para "That's not the"
+	line "#MON that I was"
+	cont "thinking about."
 	done
 
-AcademyPoisonText:
-	text "If poisoned, a"
-	line "#MON steadily"
-	cont "loses HP."
+BillsGrandpaLickitungText:
+	text "If I could only"
+	line "see a MADAME in"
+	para "person, I might"
+	line "feel inspired to"
+	cont "finish my statue."
+	done
+	
 
-	para "Poison lingers"
-	line "after the battle,"
-
-	para "and HP is lost as"
-	line "you walk."
-
-	para "To cure it, use an"
-	line "ANTIDOTE."
+BillsGrandpaOddishText:
+	text "I've finished my"
+	line "MADAME statue!"
+	para "Now I'd like to"
+	line "finish my statue"
+	cont "of a DRATINI."
+	para "If I could only"
+	line "see a DRATINI in"
+	para "person, I might"
+	line "feel inspired to"
+	cont "finish my statue."
 	done
 
-AcademyParalysisText:
-	text "Paralysis reduces"
-	line "speed and may"
-	cont "prevent movement."
-
-	para "It remains after"
-	line "battle, so use"
-	cont "a PARLYZ HEAL."
+	
+BirdText:
+	text "MADAME STATUE"
+	line "by EARL"
 	done
-
-AcademySleepText:
-	text "If asleep, your"
-	line "#MON can't make"
-	cont "a move."
-
-	para "A sleeping #MON"
-	line "doesn't wake up"
-	cont "after battle."
-
-	para "Wake it up with"
-	line "an AWAKENING."
-	done
-
-AcademyBurnText:
-	text "A burn steadily"
-	line "consumes HP."
-
-	para "It also reduces"
-	line "attack power."
-
-	para "A burn lingers"
-	line "after battle."
-
-	para "Use a BURN HEAL as"
-	line "the cure."
-	done
-
-AcademyFreezeText:
-	text "If your #MON is"
-	line "frozen, it can't"
-	cont "do a thing."
-
-	para "It remains frozen"
-	line "after battle."
-
-	para "Thaw it out with"
-	line "an ICE HEAL."
-	done
-
-AcademyNotebookText:
-	text "It's this kid's"
-	line "notebook…"
-
-	para "Catch #MON"
-	line "using # BALLS."
-
-	para "Up to six can be"
-	line "in your party."
-
-	para "Keep reading?"
-	done
-
-AcademyNotebookText1:
-	text "Before throwing a"
-	line "# BALL, weaken"
-	cont "the target first."
-
-	para "A poisoned or"
-	line "burned #MON is"
-	cont "easier to catch."
-
-	para "Keep reading?"
-	done
-
-AcademyNotebookText2:
-	text "Some moves may"
-	line "cause confusion."
-
-	para "Confusion may make"
-	line "a #MON attack"
-	cont "itself."
-
-	para "Leaving battle"
-	line "clears up any"
-	cont "confusion."
-
-	para "Keep reading?"
-	done
-
-AcademyNotebookText3:
-	text "People who catch"
-	line "and use #MON"
-
-	para "in battle are"
-	line "#MON trainers."
-
-	para "They are expected"
-	line "to visit #MON"
-
-	para "GYMS and defeat"
-	line "other trainers."
-
-	para "The next page"
-	line "is… Blank!"
-
-	para "Boy: E-he-he…"
-
-	para "I haven't written"
-	line "anymore…"
-	done
-
-AcademyStickerMachineText:
-	text "This super machine"
-	line "prints data out as"
-
-	para "stickers!"
+	
+DragonText:
+	text "DRATINI STATUE"
+	line "by EARL"
 	done
 
 EarlsArtHouse_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  3, 15, OLD_CITY, 6
-	warp_event  4, 15, OLD_CITY, 6
+	warp_event  2,  7, OLD_CITY, 12
+	warp_event  3,  7, OLD_CITY, 13
 
 	db 0 ; coord events
 
-	db 4 ; bg events
-	bg_event  0,  1, BGEVENT_READ, AcademyBookshelf
-	bg_event  1,  1, BGEVENT_READ, AcademyBookshelf
-	bg_event  3,  0, BGEVENT_READ, AcademyBlackboard
-	bg_event  4,  0, BGEVENT_READ, AcademyBlackboard
+	db 2 ; bg events
+	bg_event 13, 4, BGEVENT_READ, EggStatue
+	bg_event 2, 3, BGEVENT_READ, ArtSign
 
-	db 6 ; object events
-	object_event  4,  2, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AcademyEarl, -1
-	object_event  2,  5, SPRITE_JANINE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, EarlsArtHouseYoungster1Script, -1
-	object_event  3, 11, SPRITE_GAMEBOY_KID, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EarlsArtHouseGameboyKid1Script, -1
-	object_event  4, 11, SPRITE_GAMEBOY_KID, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, EarlsArtHouseGameboyKid2Script, -1
-	object_event  4,  7, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EarlsArtHouseYoungster2Script, -1
-	object_event  2,  4, SPRITE_POKEDEX, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AcademyNotebook, -1
+	db 5 ; object events
+	object_event  1,  5, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BillsGrandpa, -1
+	object_event  5,  4, SPRITE_BIRD, SPRITEMOVEDATA_STANDING_DOWN, 0, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BirdScript, EVENT_SHOWED_PICHU_TO_BILLS_GRANDPA
+	object_event  9,  4, SPRITE_EKANS, SPRITEMOVEDATA_STANDING_DOWN, 0, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DragonScript, EVENT_SHOWED_GROWLITHE_VULPIX_TO_BILLS_GRANDPA
+	object_event 13,  7, SPRITE_LASS, SPRITEMOVEDATA_STANDING_UP, 0, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ArtHouseLassScript, EVENT_SHOWED_GROWLITHE_VULPIX_TO_BILLS_GRANDPA
+	object_event  5,  2, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ArtHousePokefanMScript, EVENT_SHOWED_GROWLITHE_VULPIX_TO_BILLS_GRANDPA

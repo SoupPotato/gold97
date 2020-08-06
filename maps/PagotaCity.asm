@@ -8,7 +8,7 @@
 	const PagotaCity_POKE_BALL2
 	const PagotaCity_GRAMPS2
 
-OldCity_MapScripts:
+PagotaCity_MapScripts:
 	db 0 ; scene scripts
 
 	db 2 ; callbacks
@@ -200,7 +200,7 @@ BillsHouseSign2Text:
 	
 
 
-OldCity_MapEvents:
+PagotaCity_MapEvents:
 	db 0, 0 ; filler
 
 	db 14 ; warp events
