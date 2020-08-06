@@ -239,19 +239,19 @@ AlloyCity_MapEvents:
 	db 0, 0 ; filler
 
 	db 13 ; warp events
-	warp_event  7,  8, OLIVINE_POKECENTER_1F, 1
-	warp_event 30,  9, OLIVINE_GYM, 1
-	warp_event 35, 30, OLIVINE_TIMS_HOUSE, 1
+	warp_event  7,  8, ALLOY_POKECENTER_1F, 1
+	warp_event 30,  9, ALLOY_GYM, 1
+	warp_event 35, 30, ALLOY_TIMS_HOUSE, 1
 	warp_event 34, 15, FIGHTING_DOJO, 2
-	warp_event 11, 28, OLIVINE_PUNISHMENT_SPEECH_HOUSE, 1
-	warp_event 23, 22, OLIVINE_GOOD_ROD_HOUSE, 1
-	warp_event  5, 23, OLIVINE_CAFE, 1
-	warp_event  7, 14, OLIVINE_MART, 1
-	warp_event 23, 13, OLIVINE_HOUSE_BETA, 1
-	warp_event 18,  5, NEW_OLIVINE_GATE_WEST, 3
+	warp_event 11, 28, ALLOY_PUNISHMENT_SPEECH_HOUSE, 1
+	warp_event 23, 22, ALLOY_GOOD_ROD_HOUSE, 1
+	warp_event  5, 23, ALLOY_CAFE, 1
+	warp_event  7, 14, ALLOY_MART, 1
+	warp_event 23, 13, ALLOY_CAPTAINS_HOUSE, 1
+	warp_event 18,  5, ROUTE_107_ALLOY_GATE, 3
 	warp_event 33, 15, FIGHTING_DOJO, 1
-	warp_event 19,  5, NEW_OLIVINE_GATE_WEST, 4
-	warp_event 31,  9, OLIVINE_GYM, 2
+	warp_event 19,  5, ROUTE_107_ALLOY_GATE, 4
+	warp_event 31,  9, ALLOY_GYM, 2
 
 	db 2 ; coord events
 	coord_event  2,  9, SCENE_DEFAULT, AlloyCityRivalSceneTop

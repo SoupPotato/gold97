@@ -28,25 +28,25 @@ ENDM
 
 	newgroup                                                      ;  1
 
-	map_const OLIVINE_POKECENTER_1F,                        8,  4 ;  1
-	map_const OLIVINE_GYM,                                 10,  8 ;  2
-	map_const OLIVINE_TIMS_HOUSE,                           5,  4 ;  3
-	map_const OLIVINE_HOUSE_BETA,                           5,  4 ;  4
-	map_const OLIVINE_PUNISHMENT_SPEECH_HOUSE,              5,  4 ;  5
-	map_const OLIVINE_GOOD_ROD_HOUSE,                       5,  4 ;  6
-	map_const OLIVINE_CAFE,                                 4,  4 ;  7
-	map_const OLIVINE_MART,                                 8,  4 ;  8
-	map_const ROUTE_38_ECRUTEAK_GATE,                       5,  4 ;  9
-	map_const ROUTE_38,                                    15,  9 ; 12
-	map_const ROUTE_39,                                    10, 45 ; 13
-	map_const OLIVINE_CITY,                                20, 18 ; 14
-	map_const NEW_OLIVINE_GATE_WEST,						5,  4 ; 15
-	map_const NEW_OLIVINE_GATE_WEST_2F,						4,  3 ; 15
-	map_const ROUTE_31,                                    30,  9 ;  2
-	map_const ROUTE_32_POKECENTER_1F,                       8,  4 ; 13
+	map_const ALLOY_POKECENTER_1F,                        8,  4 ;  1
+	map_const ALLOY_GYM,                                 10,  8 ;  2
+	map_const ALLOY_TIMS_HOUSE,                           5,  4 ;  3
+	map_const ALLOY_CAPTAINS_HOUSE,                           5,  4 ;  4
+	map_const ALLOY_PUNISHMENT_SPEECH_HOUSE,              5,  4 ;  5
+	map_const ALLOY_GOOD_ROD_HOUSE,                       5,  4 ;  6
+	map_const ALLOY_CAFE,                                 4,  4 ;  7
+	map_const ALLOY_MART,                                 8,  4 ;  8
+	map_const ROUTE_109_ROUTE_110_GATE,                       5,  4 ;  9
+	map_const ROUTE_108,                                    15,  9 ; 12
+	map_const ROUTE_109,                                    10, 45 ; 13
+	map_const ALLOY_CITY,                                20, 18 ; 14
+	map_const ROUTE_107_ALLOY_GATE,						5,  4 ; 15
+	map_const ROUTE_107_ALLOY_GATE_2F,						4,  3 ; 15
+	map_const ROUTE_106,                                    30,  9 ;  2
+	map_const ROUTE_106_POKECENTER_1F,                       8,  4 ; 13
 	map_const DAY_CARE,                                     5,  4 ; 24
 	map_const FIGHTING_DOJO,                                5,  6 ;  3
-	map_const ROUTE_10_POKECENTER_1F,                       8,  4 ;  8
+	map_const ROUTE_109_POKECENTER_1F,                       8,  4 ;  8
 
 	newgroup                                                      ;  2
 
@@ -140,7 +140,7 @@ ENDM
 	map_const BLACKTHORN_POKECENTER_1F,                     8,  4 ;  6
 	map_const MOVE_DELETERS_HOUSE,                          5,  4 ;  7
 	map_const BLACKTHORN_CITY,                             20, 18 ; 10
-	map_const ROUTE_40,                                    25,  9 ;  1
+	map_const ROUTE_110,                                    25,  9 ;  1
 	map_const ROUTE_32,                                    10, 27 ;  1
 	map_const ROUTE_27_SANDSTORM_HOUSE,                     5,  4 ; 12
 	map_const MAHOGANY_GYM,                                 5,  9 ;  2
@@ -261,7 +261,7 @@ ENDM
 	map_const SUGAR_MART,									8,  4 ; 
 	map_const SUGAR_HOUSE_2,      				            4,  4 ;  6
 	map_const SUGAR_HOUSE_1,      				            5,  4 ;  6
-	map_const ROUTE_21,                                    10, 27 ;  7
+	map_const ROUTE_107,                                    10, 27 ;  7
 
 	newgroup                                                      ; 14
 

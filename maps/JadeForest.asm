@@ -259,10 +259,10 @@ JadeForest_MapEvents:
 	db 0, 0 ; filler
 
 	db 6 ; warp events
-	warp_event  0, 26, ROUTE_31, 3
-	warp_event  0, 27, ROUTE_31, 4
-	warp_event 49, 26, ROUTE_31, 5
-	warp_event 49, 27, ROUTE_31, 6
+	warp_event  0, 26, ROUTE_106, 3
+	warp_event  0, 27, ROUTE_106, 4
+	warp_event 49, 26, ROUTE_106, 5
+	warp_event 49, 27, ROUTE_106, 6
 	warp_event  4,  8, CERULEAN_GYM, 1
 	warp_event  5,  8, CERULEAN_GYM, 2
 	

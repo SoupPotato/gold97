@@ -271,8 +271,8 @@ FightingDojo_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  5, 11, OLIVINE_CITY, 11
-	warp_event  6, 11, OLIVINE_CITY, 4
+	warp_event  5, 11, ALLOY_CITY, 11
+	warp_event  6, 11, ALLOY_CITY, 4
 
 	db 0 ; coord events
 

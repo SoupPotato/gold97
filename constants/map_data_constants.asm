@@ -89,7 +89,7 @@ const_value = -1
 	const SPAWN_AZALEA
 	const SPAWN_CIANWOOD
 	const SPAWN_GOLDENROD
-	const SPAWN_OLIVINE
+	const SPAWN_ALLOY
 	const SPAWN_ROCK_TUNNEL
 	const SPAWN_ECRUTEAK
 	const SPAWN_MAHOGANY

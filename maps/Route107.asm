@@ -186,8 +186,8 @@ Route107_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  8, 49, NEW_OLIVINE_GATE_WEST, 1
-	warp_event  9, 49, NEW_OLIVINE_GATE_WEST, 2
+	warp_event  8, 49, ROUTE_107_ALLOY_GATE, 1
+	warp_event  9, 49, ROUTE_107_ALLOY_GATE, 2
 
 	db 0 ; coord events
 

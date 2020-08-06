@@ -137,19 +137,19 @@ JohtoWaterWildMons:
 	db 25, POLIWAG
 	db 25, GOLDUCK
 	
-	map_id OLIVINE_CITY
+	map_id ALLOY_CITY
 	db 4 percent ; encounter rate
 	db 18, TENTACOOL
 	db 15, MANTINE
 	db 18, TENTACRUEL
 	
-	map_id ROUTE_39
+	map_id ROUTE_109
 	db 4 percent ; encounter rate
 	db 25, POLIWAG
 	db 28, GOLDEEN
 	db 25, QWILFISH
 	
-	map_id ROUTE_40
+	map_id ROUTE_110
 	db 4 percent ; encounter rate
 	db 25, TENTACOOL
 	db 27, SEEL
@@ -161,7 +161,7 @@ JohtoWaterWildMons:
 	db 28, MANTINE
 	db 28, STARYU
 	
-	map_id ROUTE_21
+	map_id ROUTE_107
 	db 4 percent ; encounter rate
 	db 25, TENTACOOL
 	db 25, MANTINE

@@ -157,10 +157,10 @@ DayCare_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
-	warp_event  0,  7, ROUTE_31, 7
-	warp_event  1,  7, ROUTE_31, 7
-	warp_event  4,  7, ROUTE_31, 8
-	warp_event  5,  7, ROUTE_31, 8
+	warp_event  0,  7, ROUTE_106, 7
+	warp_event  1,  7, ROUTE_106, 7
+	warp_event  4,  7, ROUTE_106, 8
+	warp_event  5,  7, ROUTE_106, 8
 
 	db 0 ; coord events
 

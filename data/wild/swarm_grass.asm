@@ -3,7 +3,7 @@
 SwarmGrassWildMons:
 
 ; Eevee swarm
-	map_id ROUTE_31
+	map_id ROUTE_106
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	db 15, PARAS

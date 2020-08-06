@@ -121,9 +121,9 @@ ENDM
 	connection north, Route103, ROUTE_35, 5
 	connection east, Route102, ROUTE_36, 5
 
-	map_attributes AlloyCity, OLIVINE_CITY, $05, WEST | EAST
-	connection west, Route106, ROUTE_31, 0
-	connection east, Route108, ROUTE_38, 9
+	map_attributes AlloyCity, ALLOY_CITY, $05, WEST | EAST
+	connection west, Route106, ROUTE_106, 0
+	connection east, Route108, ROUTE_108, 9
 
 	map_attributes TeknosCity, ECRUTEAK_CITY, $07, NORTH | WEST
 	connection north, Boardwalk, ROUTE_43, 8
@@ -141,7 +141,7 @@ ENDM
 	map_attributes BlueForest, BLACKTHORN_CITY, $3C, NORTH | SOUTH | WEST
 	connection north, Route111, ROUTE_41, 5
 	connection south, Route112, ROUTE_32, 5
-	connection west, Route110, ROUTE_40, 9
+	connection west, Route110, ROUTE_110, 9
 
 	map_attributes Route115, ROUTE_27, $35, WEST | EAST
 	connection west, SilentTown, SILENT_TOWN, -4
@@ -150,11 +150,11 @@ ENDM
 	connection east, SilentTown, SILENT_TOWN, 6
 
 	map_attributes Route105, ROUTE_30, $33, SOUTH | WEST
-	connection south, Route106, ROUTE_31, 0
+	connection south, Route106, ROUTE_106, 0
 	connection west, Route104, ROUTE_33, 0
 
-	map_attributes Route106, ROUTE_31, $05, EAST
-	connection east, AlloyCity, OLIVINE_CITY, 0
+	map_attributes Route106, ROUTE_106, $05, EAST
+	connection east, AlloyCity, ALLOY_CITY, 0
 
 	map_attributes Route112, ROUTE_32, $3C, NORTH
 	connection north, BlueForest, BLACKTHORN_CITY, -5
@@ -176,14 +176,14 @@ ENDM
 
 	map_attributes SilentHills, ROUTE_37, $05, 0
 
-	map_attributes Route108, ROUTE_38, $78, WEST | EAST
-	connection west, AlloyCity, OLIVINE_CITY, -9
-	connection east, Route109, ROUTE_39, -36
+	map_attributes Route108, ROUTE_108, $78, WEST | EAST
+	connection west, AlloyCity, ALLOY_CITY, -9
+	connection east, Route109, ROUTE_109, -36
 
-	map_attributes Route109, ROUTE_39, $78, WEST
-	connection west, Route108, ROUTE_38, 36
+	map_attributes Route109, ROUTE_109, $78, WEST
+	connection west, Route108, ROUTE_108, 36
 
-	map_attributes Route110, ROUTE_40, $3C, EAST
+	map_attributes Route110, ROUTE_110, $3C, EAST
 	connection east, BlueForest, BLACKTHORN_CITY, -9
 
 	map_attributes Route111, ROUTE_41, $35, NORTH | SOUTH
@@ -201,9 +201,9 @@ ENDM
 	connection west, Route117, ROUTE_3, 0
 
 	map_attributes KobanIsland, PALLET_TOWN, $07, SOUTH
-	connection south, Route107, ROUTE_21, 0
+	connection south, Route107, ROUTE_107, 0
 
-	map_attributes Route107, ROUTE_21, $07, NORTH
+	map_attributes Route107, ROUTE_107, $07, NORTH
 	connection north, KobanIsland, PALLET_TOWN, 0
 
 	map_attributes FrostPoint, CINNABAR_ISLAND, $3C, SOUTH
@@ -332,15 +332,15 @@ ENDM
 	map_attributes DeepwaterPassage1F, DRAGONS_DEN_1F, $09, 0
 	map_attributes DragonsMaw, DRAGONS_DEN_B1F, $09, 0
 	map_attributes KantoCafe, DRAGON_SHRINE, $00, 0
-	map_attributes AlloyPokecenter1F, OLIVINE_POKECENTER_1F, $00, 0
-	map_attributes AlloyGym, OLIVINE_GYM, $00, 0
-	map_attributes AlloyTimsHouse, OLIVINE_TIMS_HOUSE, $00, 0
-	map_attributes AlloyOldCaptainsHouse, OLIVINE_HOUSE_BETA, $00, 0
-	map_attributes AlloyPunishmentSpeechHouse, OLIVINE_PUNISHMENT_SPEECH_HOUSE, $00, 0
-	map_attributes AlloyGoodRodHouse, OLIVINE_GOOD_ROD_HOUSE, $00, 0
-	map_attributes AlloyCafe, OLIVINE_CAFE, $00, 0
-	map_attributes AlloyMart, OLIVINE_MART, $00, 0
-	map_attributes Route109Route110Gate, ROUTE_38_ECRUTEAK_GATE, $00, 0
+	map_attributes AlloyPokecenter1F, ALLOY_POKECENTER_1F, $00, 0
+	map_attributes AlloyGym, ALLOY_GYM, $00, 0
+	map_attributes AlloyTimsHouse, ALLOY_TIMS_HOUSE, $00, 0
+	map_attributes AlloyOldCaptainsHouse, ALLOY_CAPTAINS_HOUSE, $00, 0
+	map_attributes AlloyPunishmentSpeechHouse, ALLOY_PUNISHMENT_SPEECH_HOUSE, $00, 0
+	map_attributes AlloyGoodRodHouse, ALLOY_GOOD_ROD_HOUSE, $00, 0
+	map_attributes AlloyCafe, ALLOY_CAFE, $00, 0
+	map_attributes AlloyMart, ALLOY_MART, $00, 0
+	map_attributes Route109Route110Gate, ROUTE_109_ROUTE_110_GATE, $00, 0
 	map_attributes SanskritCoinCaseSpeechHouse, MAHOGANY_RED_GYARADOS_SPEECH_HOUSE, $00, 0
 	map_attributes BlueForestGym, MAHOGANY_GYM, $00, 0
 	map_attributes SanskritPokecenter1F, MAHOGANY_POKECENTER_1F, $00, 0
@@ -371,7 +371,7 @@ ENDM
 	map_attributes NagoPokecenter1F, CERULEAN_POKECENTER_1F, $00, 0
 	map_attributes JadeForestSnorlaxRoom, CERULEAN_GYM, $05, 0
 	map_attributes NagoMart, CERULEAN_MART, $00, 0
-	map_attributes Route109Pokecenter1F, ROUTE_10_POKECENTER_1F, $00, 0
+	map_attributes Route109Pokecenter1F, ROUTE_109_POKECENTER_1F, $00, 0
 	map_attributes EarlsArtHouse, BILLS_HOUSE, $00, 0
 	map_attributes BirdonPokecenter1F, AZALEA_POKECENTER_1F, $00, 0
 	map_attributes BirdonCafe, CHARCOAL_KILN, $00, 0
@@ -386,7 +386,7 @@ ENDM
 	map_attributes PagotaNicknameSpeechHouse, VIOLET_NICKNAME_SPEECH_HOUSE, $00, 0
 	map_attributes PagotaPokecenter1F, VIOLET_POKECENTER_1F, $00, 0
 	map_attributes TeknosKylesHouse, VIOLET_KYLES_HOUSE, $00, 0
-	map_attributes Route106Pokecenter1F, ROUTE_32_POKECENTER_1F, $00, 0
+	map_attributes Route106Pokecenter1F, ROUTE_106_POKECENTER_1F, $00, 0
 	map_attributes Route103WestportGate, ROUTE_35_GOLDENROD_GATE, $00, 0
 	map_attributes Route112StandCityGate, ROUTE_36_RUINS_OF_ALPH_GATE, $00, 0
 	map_attributes NationalParkStandGate, ROUTE_36_NATIONAL_PARK_GATE, $00, 0
@@ -523,8 +523,8 @@ ENDM
 	map_attributes Route110PagotaGate, ROUTE_31_VIOLET_GATE, $00, 0
 	map_attributes Route102WestportGate, NEW_VIOLET_GATE_NORTH, $00, 0
 	map_attributes Route105Route106Gate, NEW_ECRUTEAK_GATE_SOUTH, $00, 0
-	map_attributes Route107AlloyGate, NEW_OLIVINE_GATE_WEST, $00, 0
-	map_attributes Route107AlloyGate2F, NEW_OLIVINE_GATE_WEST_2F, $00, 0
+	map_attributes Route107AlloyGate, ROUTE_107_ALLOY_GATE, $00, 0
+	map_attributes Route107AlloyGate2F, ROUTE_107_ALLOY_GATE_2F, $00, 0
 	map_attributes Route110PagotaGate2F, ROUTE_31_VIOLET_GATE_2F, $00, 0
 	map_attributes Route102WestportGate2F, NEW_VIOLET_GATE_NORTH_2F, $00, 0
 	map_attributes TeknosPort, TEKU_PORT, $0a, 0

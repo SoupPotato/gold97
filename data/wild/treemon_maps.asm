@@ -9,8 +9,8 @@ TreeMonMaps:
 	treemon_map ROUTE_8,                   TREEMON_SET_ROUTE
 	treemon_map ROUTE_7,                   TREEMON_SET_LAKE
 	treemon_map ROUTE_4,                   TREEMON_SET_LAKE
-	treemon_map ROUTE_38,                  TREEMON_SET_KANTO
-	treemon_map ROUTE_39,                  TREEMON_SET_KANTO
+	treemon_map ROUTE_108,                  TREEMON_SET_KANTO
+	treemon_map ROUTE_109,                  TREEMON_SET_KANTO
 	treemon_map ROUTE_34,                  TREEMON_SET_KANTO
 	treemon_map ROUTE_32,                  TREEMON_SET_KANTO
 	treemon_map ROUTE_10_NORTH,            TREEMON_SET_KANTO
@@ -25,7 +25,7 @@ TreeMonMaps:
 	treemon_map CHERRYGROVE_CITY,          TREEMON_SET_CITY
 	treemon_map VERMILION_CITY,            TREEMON_SET_CITY
 	treemon_map PEWTER_CITY,               TREEMON_SET_CITY
-	treemon_map OLIVINE_CITY,              TREEMON_SET_CITY
+	treemon_map ALLOY_CITY,              TREEMON_SET_CITY
 	treemon_map MAHOGANY_TOWN,             TREEMON_SET_TOWN
 	treemon_map CERULEAN_CITY,             TREEMON_SET_TOWN
 	treemon_map PALLET_TOWN,               TREEMON_SET_LAKE

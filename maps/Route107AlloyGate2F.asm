@@ -55,7 +55,7 @@ Route107AlloyGate2F_MapEvents:
 	db 0, 0 ; filler
 
 	db 1 ; warp events
-	warp_event  5,  0, NEW_OLIVINE_GATE_WEST, 5
+	warp_event  5,  0, ROUTE_107_ALLOY_GATE, 5
 
 	db 0 ; coord events
 

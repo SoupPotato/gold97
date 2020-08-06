@@ -26,10 +26,10 @@ Route109Route110Gate_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
-	warp_event  4,  7, ROUTE_39, 3
-	warp_event  5,  7, ROUTE_39, 4
-	warp_event  4,  0, ROUTE_40, 1
-	warp_event  5,  0, ROUTE_40, 2
+	warp_event  4,  7, ROUTE_109, 3
+	warp_event  5,  7, ROUTE_109, 4
+	warp_event  4,  0, ROUTE_110, 1
+	warp_event  5,  0, ROUTE_110, 2
 
 	db 0 ; coord events
 

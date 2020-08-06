@@ -330,9 +330,9 @@ Route109_MapEvents:
 
 	db 4 ; warp events
 	warp_event 15, 13, DARK_CAVE_BLACKTHORN_ENTRANCE, 1
-	warp_event 13, 28, ROUTE_10_POKECENTER_1F, 1
-	warp_event  8,  5, ROUTE_38_ECRUTEAK_GATE, 1
-	warp_event  9,  5, ROUTE_38_ECRUTEAK_GATE, 2
+	warp_event 13, 28, ROUTE_109_POKECENTER_1F, 1
+	warp_event  8,  5, ROUTE_109_ROUTE_110_GATE, 1
+	warp_event  9,  5, ROUTE_109_ROUTE_110_GATE, 2
 
 	db 0 ; coord events
 

@@ -50,8 +50,8 @@ AlloyPokecenter1F_MapEvents:
 	db 0, 0 ; filler
 
 	db 3 ; warp events
-	warp_event  5,  7, OLIVINE_CITY, 1
-	warp_event  6,  7, OLIVINE_CITY, 1
+	warp_event  5,  7, ALLOY_CITY, 1
+	warp_event  6,  7, ALLOY_CITY, 1
 	warp_event  0,  7, POKECENTER_2F, 1
 
 	db 0 ; coord events

@@ -24,11 +24,11 @@ Route107AlloyGate_MapEvents:
 	db 0, 0 ; filler
 
 	db 5 ; warp events
-	warp_event  4,  0, ROUTE_21, 1
-	warp_event  5,  0, ROUTE_21, 2
-	warp_event  4,  7, OLIVINE_CITY, 10
-	warp_event  5,  7, OLIVINE_CITY, 12
-	warp_event  1,  0, NEW_OLIVINE_GATE_WEST_2F, 1
+	warp_event  4,  0, ROUTE_107, 1
+	warp_event  5,  0, ROUTE_107, 2
+	warp_event  4,  7, ALLOY_CITY, 10
+	warp_event  5,  7, ALLOY_CITY, 12
+	warp_event  1,  0, ROUTE_107_ALLOY_GATE_2F, 1
 
 	db 0 ; coord events
 

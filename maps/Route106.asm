@@ -551,7 +551,7 @@ Route106_MapEvents:
 	warp_event 24,  9, ILEX_FOREST, 4
 	warp_event 33,  5, DAY_CARE, 1
 	warp_event 36,  5, DAY_CARE, 3
-	warp_event  9, 10, ROUTE_32_POKECENTER_1F, 1
+	warp_event  9, 10, ROUTE_106_POKECENTER_1F, 1
 
 	db 0 ; coord events
 

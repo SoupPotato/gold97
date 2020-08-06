@@ -362,11 +362,11 @@ AlloyGym_MapEvents:
 	db 0, 0 ; filler
 
 	db 5 ; warp events
-	warp_event 16, 15, OLIVINE_CITY, 2
-	warp_event 17, 15, OLIVINE_CITY, 13
-	warp_event  4,  1, OLIVINE_CITY, 1; boulder 3
-	warp_event  4, 15, OLIVINE_CITY, 1; boulder 2
-	warp_event 10, 13, OLIVINE_CITY, 1; boulder 1
+	warp_event 16, 15, ALLOY_CITY, 2
+	warp_event 17, 15, ALLOY_CITY, 13
+	warp_event  4,  1, ALLOY_CITY, 1; boulder 3
+	warp_event  4, 15, ALLOY_CITY, 1; boulder 2
+	warp_event 10, 13, ALLOY_CITY, 1; boulder 1
 
 	db 0 ; coord events
 

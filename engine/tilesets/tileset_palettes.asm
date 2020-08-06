@@ -41,12 +41,12 @@ LoadSpecialMapPalette:
 	jp z, .SandOverBrownBGPalette	
 .not_route_30
 	ld a, [wMapGroup]
-	cp GROUP_ROUTE_40
-	jp nz, .not_route_40
+	cp GROUP_ROUTE_110
+	jp nz, .not_route_110
 	ld a, [wMapNumber]
-	cp MAP_ROUTE_40
+	cp MAP_ROUTE_110
 	jp z, .SnowOverGreyBGPalette
-.not_route_40
+.not_route_110
 	ld a, [wMapGroup]
 	cp GROUP_BLACKTHORN_CITY
 	jp nz, .not_blackthorn_city
@@ -307,13 +307,13 @@ LoadSpecialMapOBPalette:
 	
 .not_route_30
 	ld a, [wMapGroup]
-	cp GROUP_ROUTE_40
-	jr nz, .not_route_40
+	cp GROUP_ROUTE_110
+	jr nz, .not_route_110
 	ld a, [wMapNumber]
-	cp MAP_ROUTE_40
+	cp MAP_ROUTE_110
 	jp z, .SnowOverTreeOBPalette
 	
-.not_route_40
+.not_route_110
 	ld a, [wMapGroup]
 	cp GROUP_BLACKTHORN_CITY
 	jr nz, .not_blackthorn_city

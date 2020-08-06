@@ -663,7 +663,7 @@ JohtoGrassWildMons:
 	db 28, MAGNEMITE
 	db 27, MAGNEMITE
 	
-	map_id ROUTE_31
+	map_id ROUTE_106
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	db 27, PARAS
@@ -717,7 +717,7 @@ JohtoGrassWildMons:
 	db 30, AIPOM
 	db 30, AIPOM
 	
-	map_id ROUTE_38
+	map_id ROUTE_108
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	db 28, EKANS
@@ -744,7 +744,7 @@ JohtoGrassWildMons:
 	db 30, PINSIR
 	db 32, PINSIR
 	
-	map_id ROUTE_39
+	map_id ROUTE_109
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	db 28, EKANS
@@ -825,7 +825,7 @@ JohtoGrassWildMons:
 	db 34, ELECTRODE
 	db 34, MAGNETON
 
-	map_id ROUTE_40
+	map_id ROUTE_110
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 27, SNUBBULL

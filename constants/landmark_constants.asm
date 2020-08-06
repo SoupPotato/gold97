@@ -31,15 +31,15 @@
 	const ROUTE_33          ; 0b
 	const ROUTE_30          ; 04
 	const ILEX_FOREST       ; 0e
-	const ROUTE_31          ; 05
-	const OLIVINE_CITY      ; 1b
-	const ROUTE_21          ; 56
+	const ROUTE_106          ; 05
+	const ALLOY_CITY      ; 1b
+	const ROUTE_107          ; 56
 	const PALLET_TOWN       ; 2f
 	const DRAGONS_DEN       ; 2a
-	const ROUTE_38          ; 19
-	const ROUTE_39          ; 1a
+	const ROUTE_108          ; 19
+	const ROUTE_109          ; 1a
 	const DARK_CAVE         ; 2c
-	const ROUTE_40          ; 1e
+	const ROUTE_110          ; 1e
 	const BLACKTHORN_CITY   ; 29
 	const ICE_PATH          ; 28
 	const ROUTE_41          ; 20

@@ -234,8 +234,8 @@ AlloyOldCaptainsHouse_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  4,  7, OLIVINE_CITY, 9
-	warp_event  5,  7, OLIVINE_CITY, 9
+	warp_event  4,  7, ALLOY_CITY, 9
+	warp_event  5,  7, ALLOY_CITY, 9
 
 	db 0 ; coord events
 

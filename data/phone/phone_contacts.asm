@@ -24,18 +24,18 @@ PhoneContacts:
 	phone BIRD_KEEPER,  JOSE2,              ROUTE_27,         ANYTIME, JosePhoneScript1,    ANYTIME, JosePhoneScript2
 	phone COOLTRAINERF, REENA1,             ROUTE_27,         ANYTIME, ReenaPhoneScript1,   ANYTIME, ReenaPhoneScript2
 	phone YOUNGSTER,    JOEY1,              ROUTE_8,          ANYTIME, JoeyPhoneScript1,    ANYTIME, JoeyPhoneScript2
-	phone BUG_CATCHER,  WADE1,              ROUTE_31,         ANYTIME, WadePhoneScript1,    ANYTIME, WadePhoneScript2
+	phone BUG_CATCHER,  WADE1,              ROUTE_106,         ANYTIME, WadePhoneScript1,    ANYTIME, WadePhoneScript2
 	phone FISHER,       RALPH1,             ROUTE_7,          ANYTIME, RalphPhoneScript1,   ANYTIME, RalphPhoneScript2
 	phone PICNICKER,    LIZ1,               ROUTE_32,         ANYTIME, LizPhoneScript1,     ANYTIME, LizPhoneScript2
-	phone HIKER,        ANTHONY2,           ROUTE_31,         ANYTIME, AnthonyPhoneScript1, ANYTIME, AnthonyPhoneScript2
+	phone HIKER,        ANTHONY2,           ROUTE_106,         ANYTIME, AnthonyPhoneScript1, ANYTIME, AnthonyPhoneScript2
 	phone CAMPER,       TODD1,              ROUTE_34,         ANYTIME, ToddPhoneScript1,    ANYTIME, ToddPhoneScript2
 	phone PICNICKER,    GINA1,              ROUTE_34,         ANYTIME, GinaPhoneScript1,    ANYTIME, GinaPhoneScript2
 	phone JUGGLER,      IRWIN1,             ROUTE_35,         ANYTIME, IrwinPhoneScript1,   ANYTIME, IrwinPhoneScript2
 	phone BUG_CATCHER,  ARNIE1,             ROUTE_35,         ANYTIME, ArniePhoneScript1,   ANYTIME, ArniePhoneScript2
 	phone SCHOOLBOY,    ALAN1,              ROUTE_36,         ANYTIME, AlanPhoneScript1,    ANYTIME, AlanPhoneScript2
 	phone TRAINER_NONE, PHONE_00,           N_A,              0,       UnusedPhoneScript,   0,       UnusedPhoneScript
-	phone LASS,         DANA1,              ROUTE_38,         ANYTIME, DanaPhoneScript1,    ANYTIME, DanaPhoneScript2
-	phone POKEFANM,     DEREK1,             ROUTE_39,         ANYTIME, DerekPhoneScript1,   ANYTIME, DerekPhoneScript2
+	phone LASS,         DANA1,              ROUTE_108,         ANYTIME, DanaPhoneScript1,    ANYTIME, DanaPhoneScript2
+	phone POKEFANM,     DEREK1,             ROUTE_109,         ANYTIME, DerekPhoneScript1,   ANYTIME, DerekPhoneScript2
 	phone FISHER,       TULLY1,             ROUTE_8,          ANYTIME, TullyPhoneScript1,   ANYTIME, TullyPhoneScript2
 	phone POKEMANIAC,   BRENT1,             ROUTE_43,         ANYTIME, BrentPhoneScript1,   ANYTIME, BrentPhoneScript2
 	phone TRAINER_NONE, PHONECONTACT_BUENA, GOLDENROD_DEPT_STORE_ROOF, ANYTIME, BuenaPhoneScript1, ANYTIME, BuenaPhoneScript2
