@@ -14,7 +14,7 @@ Flypoints:
 	flypoint MAHOGANY,     MAHOGANY_TOWN
 	flypoint CIANWOOD,     CIANWOOD_CITY
 	flypoint ECRUTEAK,     ECRUTEAK_CITY
-	flypoint OLIVINE,      OLIVINE_CITY
+	flypoint ALLOY,        ALLOY_CITY
 	flypoint PALLET,       PALLET_TOWN
 	flypoint BLACKTHORN,   BLACKTHORN_CITY
 	flypoint CINNABAR,     CINNABAR_ISLAND
@@ -29,5 +29,4 @@ KANTO_FLYPOINT EQU const_value
 	flypoint SAFFRON,      SAFFRON_CITY
 	flypoint CERULEAN,     CERULEAN_CITY
 	flypoint VERMILION,    VERMILION_CITY
-
 	db -1
