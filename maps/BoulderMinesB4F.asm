@@ -31,9 +31,9 @@ BoulderMinesB4F_MapEvents:
 	db 0, 0 ; filler
 
 	db 3 ; warp events
-	warp_event  5,  3, ROCK_TUNNEL_B1F, 1
-	warp_event 19, 11, UNION_CAVE_B2F, 1
-	warp_event 19, 15, ROCK_TUNNEL_B1F, 5
+	warp_event  5,  3, BOULDER_MINES_B3F, 1
+	warp_event 19, 11, BOULDER_MINES_B5F, 1
+	warp_event 19, 15, BOULDER_MINES_B3F, 5
 
 	db 0 ; coord events
 

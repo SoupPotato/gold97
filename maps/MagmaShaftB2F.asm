@@ -55,14 +55,14 @@ MagmaShaftB2F_MapEvents:
 	db 0, 0 ; filler
 
 	db 8 ; warp events
-	warp_event  1,  3, ICE_PATH_B1F, 2
-	warp_event 10,  6, ICE_PATH_B1F, 3
-	warp_event 18, 10, ICE_PATH_B1F, 4
-	warp_event 28, 12, ICE_PATH_B1F, 5
-	warp_event  0,  0, ICE_PATH_B1F, 6
-	warp_event 15,  7, ICE_PATH_B1F, 7
-	warp_event 17,  5, ICE_PATH_B1F, 8
-	warp_event  5, 27, ICE_PATH_B2F_BLACKTHORN_SIDE, 3
+	warp_event  1,  3, MAGMA_SHAFT_B1F, 2
+	warp_event 10,  6, MAGMA_SHAFT_B1F, 3
+	warp_event 18, 10, MAGMA_SHAFT_B1F, 4
+	warp_event 28, 12, MAGMA_SHAFT_B1F, 5
+	warp_event  0,  0, MAGMA_SHAFT_B1F, 6
+	warp_event 15,  7, MAGMA_SHAFT_B1F, 7
+	warp_event 17,  5, MAGMA_SHAFT_B1F, 8
+	warp_event  5, 27, MAGMA_SHAFT_1F, 3
 
 	db 0 ; coord events
 

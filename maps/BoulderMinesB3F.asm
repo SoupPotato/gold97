@@ -24,12 +24,12 @@ BoulderMinesB3F_MapEvents:
 	db 0, 0 ; filler
 
 	db 6 ; warp events
-	warp_event  3,  3, MOUNT_MOON, 1
-	warp_event 15,  5, ROCK_TUNNEL_1F, 4
-	warp_event 35,  5, ROCK_TUNNEL_1F, 5
-	warp_event  3, 15, ROCK_TUNNEL_1F, 6
-	warp_event 11, 13, MOUNT_MOON, 3
-	warp_event 27, 13, ROCK_TUNNEL_1F, 7
+	warp_event  3,  3, BOULDER_MINES_B4F, 1
+	warp_event 15,  5, BOULDER_MINES_B2F, 4
+	warp_event 35,  5, BOULDER_MINES_B2F, 5
+	warp_event  3, 15, BOULDER_MINES_B2F, 6
+	warp_event 11, 13, BOULDER_MINES_B4F, 3
+	warp_event 27, 13, BOULDER_MINES_B2F, 7
 
 	db 0 ; coord events
 

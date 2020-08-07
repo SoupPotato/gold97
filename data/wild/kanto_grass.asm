@@ -29,7 +29,7 @@ KantoGrassWildMons:
 	db 34, RATICATE
 	db 34, RATICATE
 	
-	map_id MOUNT_MORTAR_1F_INSIDE
+	map_id ICED_CAVERN_1F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	db 37, GRAVELER
@@ -191,7 +191,7 @@ KantoGrassWildMons:
 	db 43, RATICATE
 	db 43, RATICATE
 
-	map_id MOUNT_MORTAR_1F_OUTSIDE
+	map_id CHARRED_SUMMIT_CAVE
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	db 32, WEEZING
@@ -218,7 +218,7 @@ KantoGrassWildMons:
 	db 32, MAGMAR
 	db 33, MAGMAR
 	
-	map_id MOUNT_MORTAR_2F_INSIDE
+	map_id ICED_CAVERN_1F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	db 37, GOLBAT
@@ -245,7 +245,7 @@ KantoGrassWildMons:
 	db 37, QUAGSIRE
 	db 39, JYNX
 	
-	map_id MOUNT_MORTAR_B1F
+	map_id ICED_CAVERN_B1F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	db 37, GOLBAT
@@ -272,7 +272,7 @@ KantoGrassWildMons:
 	db 37, QUAGSIRE
 	db 39, JYNX
 	
- 	map_id SAFARI_ZONE_BETA
+ 	map_id NANJO_FOREST
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
 	db 35, PARASECT

@@ -62,7 +62,7 @@ KantoWaterWildMons:
 	db 12, MAGIKARP
 	db 15, MAGIKARP
 
-	map_id MOUNT_MORTAR_2F_INSIDE
+	map_id ICED_CAVERN_1F
 	db 4 percent ; encounter rate
 	db 18, SLOWPOKE
 	db 15, SLOWPOKE

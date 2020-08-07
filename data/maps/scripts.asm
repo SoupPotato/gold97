@@ -248,7 +248,6 @@ SECTION "Map Scripts 16", ROMX
 INCLUDE "maps/YoronCity.asm"
 INCLUDE "maps/WhirlIslandB2FCave.asm"
 INCLUDE "maps/WhirlIsland1F.asm"
-INCLUDE "maps/WhirlIslandCave.asm"
 INCLUDE "maps/WhirlIslandB1F.asm"
 INCLUDE "maps/WhirlIslandB2F.asm"
 INCLUDE "maps/WhirlIslandLugiaChamber.asm"

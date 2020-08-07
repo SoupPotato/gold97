@@ -314,7 +314,7 @@ Route120_MapEvents:
 	db 0, 0 ; filler
 
 	db 1 ; warp events
-	warp_event  9,  5, UNION_CAVE_1F, 1
+	warp_event  9,  5, BOULDER_MINES_1F, 1
 
 	db 1 ; coord events
 	coord_event  9,  6, SCENE_ROUTE8_GIRL_AND_GRAMPS, SceneFoundGirlScript

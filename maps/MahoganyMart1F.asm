@@ -224,7 +224,7 @@ MahoganyMart1F_MapEvents:
 	db 3 ; warp events
 	warp_event  3,  7, SANSKRIT_TOWN, 1
 	warp_event  4,  7, SANSKRIT_TOWN, 1
-	warp_event  7,  3, TEAM_ROCKET_BASE_B1F, 1
+	warp_event  7,  3, TEAM_ROCKET_BASE_B2F_OFFICE, 1
 
 	db 0 ; coord events
 

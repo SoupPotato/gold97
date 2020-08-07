@@ -46,8 +46,8 @@ CharredSummit_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  5, 11, MOUNT_MORTAR_1F_OUTSIDE, 1
-	warp_event 13,  9, MOUNT_MORTAR_1F_OUTSIDE, 2
+	warp_event  5, 11, CHARRED_SUMMIT_CAVE, 1
+	warp_event 13,  9, CHARRED_SUMMIT_CAVE, 2
 
 	db 0 ; coord events
 

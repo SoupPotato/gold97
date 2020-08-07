@@ -64,13 +64,13 @@ IcedCavern1F_MapEvents:
 	db 0, 0 ; filler
 
 	db 8 ; warp events
-	warp_event  7, 21, MOUNT_MORTAR_B1F, 1
-	warp_event  5,  7, MOUNT_MORTAR_B1F, 2
-	warp_event 23,  3, MOUNT_MORTAR_B1F, 3
-	warp_event 37,  5, MOUNT_MORTAR_B1F, 4
-	warp_event 37, 33, MOUNT_MORTAR_B1F, 5
-	warp_event 19, 31, MOUNT_MORTAR_B1F, 6
-	warp_event 27, 29, MOUNT_MORTAR_B1F, 7
+	warp_event  7, 21, ICED_CAVERN_B1F, 1
+	warp_event  5,  7, ICED_CAVERN_B1F, 2
+	warp_event 23,  3, ICED_CAVERN_B1F, 3
+	warp_event 37,  5, ICED_CAVERN_B1F, 4
+	warp_event 37, 33, ICED_CAVERN_B1F, 5
+	warp_event 19, 31, ICED_CAVERN_B1F, 6
+	warp_event 27, 29, ICED_CAVERN_B1F, 7
 	warp_event  5, 31, PEWTER_CITY, 6
 
 	db 0 ; coord events

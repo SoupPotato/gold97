@@ -187,7 +187,7 @@ SunpointCity_MapEvents:
 	db 0, 0 ; filler
 
 	db 10 ; warp events
-	warp_event 18, 13, ICE_PATH_B2F_BLACKTHORN_SIDE, 1
+	warp_event 18, 13, MAGMA_SHAFT_1F, 1
 	warp_event 33, 16, CIANWOOD_POKECENTER_1F, 1
 	warp_event 19, 24, PEWTER_MART, 1
 	warp_event 33, 25, CIANWOOD_PHOTO_STUDIO, 1

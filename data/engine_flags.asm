@@ -83,7 +83,7 @@ EngineFlags:
 	engine_flag wVisitedSpawns, NUM_SPAWNS
 	engine_flag wVisitedSpawns, SPAWN_SAFFRON
 	engine_flag wVisitedSpawns, SPAWN_CELADON
-	engine_flag wVisitedSpawns, SPAWN_FUCHSIA
+	engine_flag wVisitedSpawns, SPAWN_STAND
 	engine_flag wVisitedSpawns, SPAWN_CINNABAR
 	engine_flag wVisitedSpawns, SPAWN_INDIGO ; $40
 	engine_flag wVisitedSpawns, SPAWN_SILENT

@@ -116,8 +116,8 @@ EndonCaveB1F_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  3, 15, DIGLETTS_CAVE, 3
-	warp_event 51, 11, DIGLETTS_CAVE, 4
+	warp_event  3, 15, ENDON_CAVE_1F, 3
+	warp_event 51, 11, ENDON_CAVE_1F, 4
 
 	db 0 ; coord events
 

@@ -71,49 +71,49 @@ JohtoWaterWildMons:
 	db 18, SLOWPOKE
 	db 18, SLOWBRO
 	
-	map_id UNION_CAVE_1F
+	map_id BOULDER_MINES_1F
 	db 4 percent ; encounter rate
 	db 18, TENTACOOL
 	db 15, TENTACOOL
 	db 18, TENTACRUEL
 
-	map_id UNION_CAVE_B1F
+	map_id BOULDER_MINES_B1F
 	db 4 percent ; encounter rate
 	db 18, TENTACOOL
 	db 15, TENTACOOL
 	db 18, TENTACRUEL
 
-	map_id UNION_CAVE_B2F
+	map_id BOULDER_MINES_B5F
 	db 4 percent ; encounter rate
 	db 18, PSYDUCK
 	db 15, PSYDUCK
 	db 18, GOLDUCK
 	
-	map_id ROCK_TUNNEL_1F
+	map_id BOULDER_MINES_B2F
 	db 4 percent ; encounter rate
 	db 18, TENTACOOL
 	db 15, TENTACOOL
 	db 18, TENTACRUEL
 	
-	map_id ROCK_TUNNEL_B1F
+	map_id BOULDER_MINES_B3F
 	db 4 percent ; encounter rate
 	db 18, TENTACOOL
 	db 15, TENTACOOL
 	db 18, TENTACRUEL
 	
-	map_id MOUNT_MOON
+	map_id BOULDER_MINES_B4F
 	db 4 percent ; encounter rate
 	db 18, TENTACOOL
 	db 15, TENTACOOL
 	db 18, TENTACRUEL
 
-	map_id DIGLETTS_CAVE
+	map_id ENDON_CAVE_1F
 	db 4 percent ; encounter rate
 	db 18, MAGIKARP
 	db 15, MAGIKARP
 	db 5, MAGIKARP
 	
-	map_id OLIVINE_LIGHTHOUSE_3F
+	map_id ENDON_CAVE_B1F
 	db 4 percent ; encounter rate
 	db 18, MAGIKARP
 	db 15, MAGIKARP
@@ -131,7 +131,7 @@ JohtoWaterWildMons:
 	db 15, TENTACOOL
 	db 18, TENTACRUEL
 	
-	map_id ILEX_FOREST
+	map_id JADE_FOREST
 	db 4 percent ; encounter rate
 	db 25, PSYDUCK
 	db 25, POLIWAG
@@ -167,7 +167,7 @@ JohtoWaterWildMons:
 	db 25, MANTINE
 	db 28, TENTACRUEL
 
-	map_id ICE_PATH_1F
+	map_id DEEPWATER_PASSAGE_B2F
 	db 4 percent ; encounter rate
 	db 18, SLOWPOKE
 	db 15, SLOWPOKE

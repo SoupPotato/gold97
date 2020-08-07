@@ -17,10 +17,10 @@ DeepwaterPassageB1F_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
-	warp_event  3, 15, DRAGONS_DEN_1F, 4
-	warp_event  5,  3, ICE_PATH_1F, 1
-	warp_event 15, 15, ICE_PATH_1F, 2
-	warp_event 15,  3, DRAGONS_DEN_1F, 5
+	warp_event  3, 15, DEEPWATER_PASSAGE_1F, 4
+	warp_event  5,  3, DEEPWATER_PASSAGE_B2F, 1
+	warp_event 15, 15, DEEPWATER_PASSAGE_B2F, 2
+	warp_event 15,  3, DEEPWATER_PASSAGE_1F, 5
 
 	db 0 ; coord events
 

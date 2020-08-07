@@ -886,9 +886,9 @@ TeamRocketBaseB1F_MapEvents:
 
 	db 4 ; warp events
 	warp_event  2, 10, SAFARI_ZONE_WARDENS_HOME, 3
-	warp_event 15,  3, TEAM_ROCKET_BASE_B3F, 1
-	warp_event 23, 15, TEAM_ROCKET_BASE_B3F, 2
-	warp_event 26, 26, TEAM_ROCKET_BASE_B3F, 3
+	warp_event 15,  3, TEAM_ROCKET_BASE_B2F, 1
+	warp_event 23, 15, TEAM_ROCKET_BASE_B2F, 2
+	warp_event 26, 26, TEAM_ROCKET_BASE_B2F, 3
 
 
 	db 3 ; coord events

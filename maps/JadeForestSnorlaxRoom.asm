@@ -62,8 +62,8 @@ JadeForestSnorlaxRoom_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  4, 15, ILEX_FOREST, 5
-	warp_event  5, 15, ILEX_FOREST, 6
+	warp_event  4, 15, JADE_FOREST, 5
+	warp_event  5, 15, JADE_FOREST, 6
 
 	db 0 ; coord events
 

@@ -18,7 +18,7 @@ Flypoints:
 	flypoint PALLET,       PALLET_TOWN
 	flypoint BLACKTHORN,   BLACKTHORN_CITY
 	flypoint CINNABAR,     CINNABAR_ISLAND
-	flypoint FUCHSIA,      FUCHSIA_CITY
+	flypoint STAND,        STAND_CITY
 	flypoint CELADON,      CELADON_CITY
 	flypoint CHERRYGROVE,  CHERRYGROVE_CITY
 	flypoint INDIGO,       INDIGO_PLATEAU

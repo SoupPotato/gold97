@@ -30,7 +30,7 @@ GirlInMineScript:
 	clearevent EVENT_ROUTE8_GIRL_IN_CAVE
 	special FadeOutPalettes
 	wait 10
-	warpfacing DOWN, UNION_CAVE_1F, 2, 14
+	warpfacing DOWN, BOULDER_MINES_1F, 2, 14
 	opentext
 	writetext Text_WayOut
 	waitbutton
@@ -145,12 +145,12 @@ BoulderMines1F_MapEvents:
 
 	db 7 ; warp events
 	warp_event  2, 15, ROUTE_8, 1
-	warp_event 31,  5, UNION_CAVE_B1F, 3
-	warp_event 43,  5, UNION_CAVE_B1F, 4
-	warp_event 53, 13, UNION_CAVE_B1F, 7
-	warp_event 51, 17, UNION_CAVE_B1F, 8
-	warp_event  3, 11, UNION_CAVE_1F, 7
-	warp_event 17,  3, UNION_CAVE_1F, 6
+	warp_event 31,  5, BOULDER_MINES_B1F, 3
+	warp_event 43,  5, BOULDER_MINES_B1F, 4
+	warp_event 53, 13, BOULDER_MINES_B1F, 7
+	warp_event 51, 17, BOULDER_MINES_B1F, 8
+	warp_event  3, 11, BOULDER_MINES_1F, 7
+	warp_event 17,  3, BOULDER_MINES_1F, 6
 
 	db 0 ; coord events
 

@@ -75,15 +75,15 @@ IcedCavernB1F_MapEvents:
 	db 0, 0 ; filler
 
 	db 9 ; warp events
-	warp_event  3, 31, MOUNT_MORTAR_2F_INSIDE, 1
-	warp_event  3,  9, MOUNT_MORTAR_2F_INSIDE, 2
-	warp_event 25,  7, MOUNT_MORTAR_2F_INSIDE, 3
-	warp_event 33, 17, MOUNT_MORTAR_2F_INSIDE, 4
-	warp_event 37, 29, MOUNT_MORTAR_2F_INSIDE, 5
-	warp_event 17, 33, MOUNT_MORTAR_2F_INSIDE, 6
-	warp_event 17, 21, MOUNT_MORTAR_2F_INSIDE, 7
-	warp_event 27, 33, MOUNT_MORTAR_B1F, 9
-	warp_event 17, 15, MOUNT_MORTAR_B1F, 8
+	warp_event  3, 31, ICED_CAVERN_1F, 1
+	warp_event  3,  9, ICED_CAVERN_1F, 2
+	warp_event 25,  7, ICED_CAVERN_1F, 3
+	warp_event 33, 17, ICED_CAVERN_1F, 4
+	warp_event 37, 29, ICED_CAVERN_1F, 5
+	warp_event 17, 33, ICED_CAVERN_1F, 6
+	warp_event 17, 21, ICED_CAVERN_1F, 7
+	warp_event 27, 33, ICED_CAVERN_B1F, 9
+	warp_event 17, 15, ICED_CAVERN_B1F, 8
 
 	db 0 ; coord events
 

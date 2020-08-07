@@ -56,8 +56,9 @@ Landmarks:
 	landmark 132, 116, Route9Name
 	landmark 124, 116, CeladonCityName
 	landmark 108, 116, Route27Name
-	landmark  92, 108, VictoryRoadName
+	landmark  92, 108, ViridianCityName
 	landmark  92, 100, CherrygroveCityName
+	landmark  96,  96, VictoryRoadName
 	landmark  92,  92, IndigoPlateauName
 	landmark 116,  84, Route11Name
 	landmark 123, 115, BattleTowerName
@@ -79,7 +80,6 @@ Landmarks:
 	landmark 132,  64, Route45Name
 	landmark 124,  88, Route46Name
 	landmark  52,  92, Route1Name
-	landmark  52,  76, ViridianCityName
 	landmark 132,  60, PowerPlantName
 	landmark 132,  68, LavenderTownName
 	landmark 140,  68, LavRadioTowerName
@@ -128,7 +128,7 @@ DragonsDenName:      db "DRAGON'S¯MAW@"
 IcePathName:         db "DEEPWATER¯PASSAGE@"
 NotApplicableName:   db "N/A@" ; "オバケやしき" ("HAUNTED HOUSE") in Japanese
 PalletTownName:      db "KOBAN¯ISLAND@"
-ViridianCityName:    db "VIRIDIAN¯CITY@"
+ViridianCityName:    db "CROWN¯PASS@"
 PewterCityName:      db "YORON CITY@"
 CeruleanCityName:    db "NAGO¯VILLAGE@"
 LavenderTownName:    db "LAVENDER¯TOWN@"
@@ -137,8 +137,8 @@ CeladonCityName:     db "KANTO CITY@"
 SaffronCityName:     db "RYUKYU CITY@"
 FuchsiaCityName:     db "STAND CITY@"
 CinnabarIslandName:  db "FROSTPOINT¯TOWN@"
-IndigoPlateauName:   db "VICTORY_ROAD@"
-VictoryRoadName:     db "CROWN_PASS@"
+IndigoPlateauName:   db "NIHON¯LEAGUE@"
+VictoryRoadName:     db "VICTORY¯ROAD@"
 MtMoonName:          db "URASOE PARK@"
 RockTunnelName:      db "CHARRED¯SUMMIT@"
 LavRadioTowerName:   db "LAV¯RADIO TOWER@"

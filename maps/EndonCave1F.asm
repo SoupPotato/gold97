@@ -123,8 +123,8 @@ EndonCave1F_MapEvents:
 	db 4 ; warp events
 	warp_event  6, 15, ROUTE_117, 1
 	warp_event 56, 15, ROUTE_117, 2
-	warp_event 25,  5, OLIVINE_LIGHTHOUSE_3F, 1
-	warp_event 51, 11, OLIVINE_LIGHTHOUSE_3F, 2
+	warp_event 25,  5, ENDON_CAVE_B1F, 1
+	warp_event 51, 11, ENDON_CAVE_B1F, 2
 
 	db 0 ; coord events
 

@@ -545,10 +545,10 @@ Route106_MapEvents:
 	db 9 ; warp events
 	warp_event  8,  5, NEW_ECRUTEAK_GATE_SOUTH, 3
 	warp_event  9,  5, NEW_ECRUTEAK_GATE_SOUTH, 4
-	warp_event 15, 12, ILEX_FOREST, 1
-	warp_event 15, 13, ILEX_FOREST, 2
-	warp_event 24,  8, ILEX_FOREST, 3
-	warp_event 24,  9, ILEX_FOREST, 4
+	warp_event 15, 12, JADE_FOREST, 1
+	warp_event 15, 13, JADE_FOREST, 2
+	warp_event 24,  8, JADE_FOREST, 3
+	warp_event 24,  9, JADE_FOREST, 4
 	warp_event 33,  5, DAY_CARE, 1
 	warp_event 36,  5, DAY_CARE, 3
 	warp_event  9, 10, ROUTE_106_POKECENTER_1F, 1

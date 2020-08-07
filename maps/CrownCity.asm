@@ -97,8 +97,8 @@ CrownCity_MapEvents:
 	db 0, 0 ; filler
 
 	db 9 ; warp events
-	warp_event 10, 25, UNDERGROUND_PATH, 2
-	warp_event 11, 25, UNDERGROUND_PATH, 2
+	warp_event 10, 25, CROWN_PASS, 2
+	warp_event 11, 25, CROWN_PASS, 2
 	warp_event  5, 22, CHERRYGROVE_POKECENTER_1F, 1
 	warp_event 11, 22, CHERRYGROVE_MART, 1
 	warp_event  9,  1, VICTORY_ROAD, 1

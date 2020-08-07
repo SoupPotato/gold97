@@ -87,14 +87,14 @@ MagmaShaftB1F_MapEvents:
 	db 0, 0 ; filler
 
 	db 8 ; warp events
-	warp_event  3,  3, ICE_PATH_B2F_BLACKTHORN_SIDE, 2
-	warp_event 11,  1, ICE_PATH_B2F_MAHOGANY_SIDE, 1
-	warp_event 16,  7, ICE_PATH_B2F_MAHOGANY_SIDE, 2 ; hole
-	warp_event 26, 13, ICE_PATH_B2F_MAHOGANY_SIDE, 3 ; hole
-	warp_event 34, 17, ICE_PATH_B2F_MAHOGANY_SIDE, 4 ; hole
-	warp_event 38, 10, ICE_PATH_B2F_MAHOGANY_SIDE, 5 ; hole
-	warp_event 19,  9, ICE_PATH_B2F_MAHOGANY_SIDE, 6
-	warp_event 21,  7, ICE_PATH_B2F_MAHOGANY_SIDE, 7
+	warp_event  3,  3, MAGMA_SHAFT_1F, 2
+	warp_event 11,  1, MAGMA_SHAFT_B2F, 1
+	warp_event 16,  7, MAGMA_SHAFT_B2F, 2 ; hole
+	warp_event 26, 13, MAGMA_SHAFT_B2F, 3 ; hole
+	warp_event 34, 17, MAGMA_SHAFT_B2F, 4 ; hole
+	warp_event 38, 10, MAGMA_SHAFT_B2F, 5 ; hole
+	warp_event 19,  9, MAGMA_SHAFT_B2F, 6
+	warp_event 21,  7, MAGMA_SHAFT_B2F, 7
 
 	db 0 ; coord events
 

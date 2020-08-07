@@ -85,14 +85,14 @@ BoulderMinesB1F_MapEvents:
 	db 0, 0 ; filler
 
 	db 8 ; warp events
-	warp_event  3,  3, ROCK_TUNNEL_1F, 1
-	warp_event  9,  5, ROCK_TUNNEL_1F, 2
-	warp_event 21,  5, UNION_CAVE_1F, 2
-	warp_event 37,  3, UNION_CAVE_1F, 3
-	warp_event 33,  5, ROCK_TUNNEL_1F, 3
-	warp_event 33, 13, ROCK_TUNNEL_1F, 8
-	warp_event 39, 11, UNION_CAVE_1F, 4
-	warp_event 39, 17, UNION_CAVE_1F, 5
+	warp_event  3,  3, BOULDER_MINES_B2F, 1
+	warp_event  9,  5, BOULDER_MINES_B2F, 2
+	warp_event 21,  5, BOULDER_MINES_1F, 2
+	warp_event 37,  3, BOULDER_MINES_1F, 3
+	warp_event 33,  5, BOULDER_MINES_B2F, 3
+	warp_event 33, 13, BOULDER_MINES_B2F, 8
+	warp_event 39, 11, BOULDER_MINES_1F, 4
+	warp_event 39, 17, BOULDER_MINES_1F, 5
 
 	db 0 ; coord events
 

@@ -198,11 +198,11 @@ TeamRocketBaseB2F_MapEvents:
 	db 0, 0 ; filler
 
 	db 5 ; warp events
-	warp_event 12,  2, TEAM_ROCKET_BASE_B2F, 2
-	warp_event 23, 15, TEAM_ROCKET_BASE_B2F, 3
-	warp_event 26, 26, TEAM_ROCKET_BASE_B2F, 4
-	warp_event 16,  0, TEAM_ROCKET_BASE_B1F, 1
-	warp_event 17,  0, TEAM_ROCKET_BASE_B1F, 2
+	warp_event 12,  2, TEAM_ROCKET_BASE_B1F, 2
+	warp_event 23, 15, TEAM_ROCKET_BASE_B1F, 3
+	warp_event 26, 26, TEAM_ROCKET_BASE_B1F, 4
+	warp_event 16,  0, TEAM_ROCKET_BASE_B2F_OFFICE, 1
+	warp_event 17,  0, TEAM_ROCKET_BASE_B2F_OFFICE, 2
 
 
 	db 0 ; coord events

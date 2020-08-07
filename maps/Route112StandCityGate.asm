@@ -295,8 +295,8 @@ Route112StandCityGate_MapEvents:
 	db 4 ; warp events
 	warp_event  4,  0, ROUTE_32, 1
 	warp_event  5,  0, ROUTE_32, 2
-	warp_event  4,  7, FUCHSIA_CITY, 7
-	warp_event  5,  7, FUCHSIA_CITY, 8
+	warp_event  4,  7, STAND_CITY, 7
+	warp_event  5,  7, STAND_CITY, 8
 
 	db 4 ; coord events
 	coord_event 3, 1, SCENE_DEFAULT, R36GateMoveIntoPlace1

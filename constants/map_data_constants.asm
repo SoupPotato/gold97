@@ -80,7 +80,7 @@ const_value = -1
 	const SPAWN_SILENT
 	const SPAWN_PALLET
 	const SPAWN_CELADON
-	const SPAWN_FUCHSIA
+	const SPAWN_STAND
 	const SPAWN_CINNABAR
 	const SPAWN_INDIGO
 	const SPAWN_CHERRYGROVE

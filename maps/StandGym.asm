@@ -26,7 +26,7 @@ StandGymChuckScript:
 	playsound SFX_GET_BADGE
 	waitsfx
 	setflag ENGINE_STORMBADGE
-	setmapscene FUCHSIA_CITY, SCENE_FUCHSIA_CITY_IMPOSTER
+	setmapscene STAND_CITY, SCENE_FUCHSIA_CITY_IMPOSTER
 	checkcode VAR_BADGES
 ;	scall StandGymActivateRockets
 .FightDone:
@@ -395,8 +395,8 @@ StandGym_MapEvents:
 	db 0, 0 ; filler
 
 	db 3 ; warp events
-	warp_event 10, 23, FUCHSIA_CITY, 3
-	warp_event 11, 23, FUCHSIA_CITY, 10
+	warp_event 10, 23, STAND_CITY, 3
+	warp_event 11, 23, STAND_CITY, 10
 	warp_event  8, 13, CIANWOOD_GYM, 1
 
 	db 0 ; coord events

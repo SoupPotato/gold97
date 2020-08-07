@@ -92,7 +92,7 @@ FrostPoint_MapEvents:
 
 	db 5 ; warp events
 	warp_event 13, 12, CINNABAR_POKECENTER_1F, 1
-	warp_event 11,  5, DRAGONS_DEN_1F, 8
+	warp_event 11,  5, DEEPWATER_PASSAGE_1F, 8
 	warp_event 15,  8, LAVENDER_MART, 1
 	warp_event  5,  7, LAVENDER_SPEECH_HOUSE, 1
 	warp_event  5, 11, LAVENDER_NAME_RATER, 1

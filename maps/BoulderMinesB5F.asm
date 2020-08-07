@@ -44,7 +44,7 @@ BoulderMinesB5F_MapEvents:
 	db 0, 0 ; filler
 
 	db 1 ; warp events
-	warp_event 11, 11, MOUNT_MOON, 2
+	warp_event 11, 11, BOULDER_MINES_B4F, 2
 
 	db 0 ; coord events
 

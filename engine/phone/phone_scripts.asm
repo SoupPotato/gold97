@@ -38,7 +38,7 @@ MomPhonePalette1:
 	ifequal GROUP_GOLDENROD_CITY, .goldenrod
 	ifequal GROUP_CIANWOOD_CITY, .cianwood
 	ifequal GROUP_PALLET_TOWN, .pallet
-	ifequal GROUP_FUCHSIA_CITY, .fuchsia
+	ifequal GROUP_STAND_CITY, .fuchsia
 ;	ifequal GROUP_INDIGO_PLATEAU, .mtfuji ;why doesn't this work???? where are these map group variables defined???????asdfasdf
 	farwritetext MomPhoneGenericAreaText
 	buttonsound
@@ -65,7 +65,7 @@ MomPhonePalette1:
 	jump MomSavingMoney
 
 .violet
-	landmarktotext SPROUT_TOWER, MEM_BUFFER_1
+	landmarktotext BRASS_TOWER, MEM_BUFFER_1
 	jump MomPhoneLandmark
 .azalea
 	landmarktotext SLOWPOKE_WELL, MEM_BUFFER_1
@@ -74,7 +74,7 @@ MomPhonePalette1:
 	landmarktotext RADIO_TOWER, MEM_BUFFER_1
 	jump MomPhoneLandmark
 .cianwood
-	landmarktotext BURNED_TOWER, MEM_BUFFER_1
+	landmarktotext MAGMA_SHAFT, MEM_BUFFER_1
 	jump MomPhoneLandmark
 .pallet
 	landmarktotext DRAGONS_DEN, MEM_BUFFER_1
@@ -410,7 +410,7 @@ HueyPhoneScript1:
 	farjump UnknownScript_0xa0908
 
 .WantsBattle:
-	landmarktotext LIGHTHOUSE, MEM_BUFFER_2
+	landmarktotext ENDON_CAVE, MEM_BUFFER_2
 	farjump HueyWantsBattleScript
 
 HueyPhoneScript2:
@@ -431,7 +431,7 @@ HueyWednesdayNight:
 	setflag ENGINE_HUEY_WEDNESDAY_NIGHT
 
 HueyWantsBattle:
-	landmarktotext LIGHTHOUSE, MEM_BUFFER_2
+	landmarktotext ENDON_CAVE, MEM_BUFFER_2
 	setflag ENGINE_HUEY
 	farjump PhoneScript_WantsToBattle_Male
 

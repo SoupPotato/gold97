@@ -66,11 +66,11 @@ ENDM
 
 	newgroup                                                      ;  3
 
-	map_const SPROUT_TOWER_1F,                              6,  6 ;  1
-	map_const SPROUT_TOWER_2F,                              6,  6 ;  2
-	map_const SPROUT_TOWER_3F,                              6,  6 ;  3
-	map_const TIN_TOWER_4F,                                 6,  6 ;  7
-	map_const TIN_TOWER_5F,                                 3,  3 ;  8
+	map_const BRASS_TOWER_1F,                               6,  6 ;  1
+	map_const BRASS_TOWER_2F,                               6,  6 ;  2
+	map_const BRASS_TOWER_3F,                               6,  6 ;  3
+	map_const BRASS_TOWER_4F,                               6,  6 ;  7
+	map_const BRASS_TOWER_5F,                               3,  3 ;  8
 	map_const NATIONAL_PARK,                               20, 27 ; 15
 	map_const NATIONAL_PARK_BUG_CONTEST,                   20, 27 ; 16
 	map_const RUINS_OF_ALPH_HO_OH_CHAMBER,                  4,  5 ; 23
@@ -78,42 +78,41 @@ ENDM
 	map_const RUINS_OF_ALPH_OMANYTE_CHAMBER,                4,  5 ; 25
 	map_const RUINS_OF_ALPH_AERODACTYL_CHAMBER,             4,  5 ; 26
 	map_const RUINS_OF_ALPH_INNER_CHAMBER,                 10, 14 ; 27
-	map_const UNION_CAVE_1F,                               28, 11 ; 37
-	map_const UNION_CAVE_B1F,                              22, 11 ; 38
-	map_const UNION_CAVE_B2F,                              12, 11 ; 39
+	map_const BOULDER_MINES_1F,                            28, 11 ; 37
+	map_const BOULDER_MINES_B1F,                           22, 11 ; 38
+	map_const BOULDER_MINES_B5F,                           12, 11 ; 39
 	map_const SLOWPOKE_WELL_B1F,                            9,  9 ; 40
 	map_const SLOWPOKE_WELL_B2F,                           10,  9 ; 41
-	map_const OLIVINE_LIGHTHOUSE_3F,                       30,  9 ; 44
-	map_const TEAM_ROCKET_BASE_B1F,                        15,  9 ; 49
-	map_const TEAM_ROCKET_BASE_B2F,                        15, 15 ; 50
-	map_const TEAM_ROCKET_BASE_B3F,                        15, 15 ; 51
-	map_const ILEX_FOREST,                                 25, 32 ; 52
-	map_const UNDERGROUND_PATH,                            10, 18 ; 86
-	map_const MOUNT_MORTAR_1F_OUTSIDE,                     20, 18 ; 57
-	map_const MOUNT_MORTAR_1F_INSIDE,                      30, 18 ; 58
-	map_const MOUNT_MORTAR_ZAPDOS_ROOM,                    10,  9 ; 58
-	map_const MOUNT_MORTAR_2F_INSIDE,                      20, 18 ; 59
-	map_const MOUNT_MORTAR_B1F,                            20, 18 ; 60
-	map_const ICE_PATH_1F,                                 10, 36 ; 61
-	map_const ICE_PATH_B1F,                                20,  9 ; 62
-	map_const ICE_PATH_B2F_MAHOGANY_SIDE,                  20, 18 ; 63
-	map_const ICE_PATH_B2F_BLACKTHORN_SIDE,                11,  9 ; 64
-	map_const ICE_PATH_B3F,                                10,  9 ; 65
-	map_const ICE_PATH_NEW,								   20, 18 ; idk
-	map_const WHIRL_ISLAND_NW,                              5,  9 ; 66
-	map_const WHIRL_ISLAND_NE,                             10,  9 ; 67
-	map_const WHIRL_ISLAND_CAVE,                            5,  9 ; 69
+	map_const ENDON_CAVE_B1F,                              30,  9 ; 44
+	map_const TEAM_ROCKET_BASE_B2F_OFFICE,                 15,  9 ; 49
+	map_const TEAM_ROCKET_BASE_B1F,                        15, 15 ; 50
+	map_const TEAM_ROCKET_BASE_B2F,                        15, 15 ; 51
+	map_const JADE_FOREST,                                 25, 32 ; 52
+	map_const CROWN_PASS,                                  10, 18 ; 86
+	map_const CHARRED_SUMMIT_CAVE,                         20, 18 ; 57
+	map_const JOULE_CAVE,                                  30, 18 ; 58
+	map_const JOULE_CAVE_ZAPDOS_ROOM,                      10,  9 ; 58
+	map_const ICED_CAVERN_1F,                              20, 18 ; 59
+	map_const ICED_CAVERN_B1F,                             20, 18 ; 60
+	map_const DEEPWATER_PASSAGE_B2F,                       10, 36 ; 61
+	map_const MAGMA_SHAFT_B1F,                             20,  9 ; 62
+	map_const MAGMA_SHAFT_B2F,                             20, 18 ; 63
+	map_const MAGMA_SHAFT_1F,                              11,  9 ; 64
+	map_const DEEPWATER_PASSAGE_B1F,                       10,  9 ; 65
+	map_const DEEPWATER_PASSAGE_B3F,					   20, 18 ; idk
+	map_const WHIRL_ISLAND_B2F_CAVE,                        5,  9 ; 66
+	map_const WHIRL_ISLAND_1F,                             10,  9 ; 67
 	map_const WHIRL_ISLAND_B1F,                            20, 18 ; 71
 	map_const WHIRL_ISLAND_B2F,                            20, 18 ; 72
-	map_const WHIRL_ISLAND_BLISSEY_CHAMBER,                  10,  9 ; 73
-	map_const DARK_CAVE_VIOLET_ENTRANCE,                   20, 18 ; 78
-	map_const DARK_CAVE_BLACKTHORN_ENTRANCE,               15, 18 ; 79
-	map_const DRAGONS_DEN_1F,                               5, 18 ; 80
-	map_const DIGLETTS_CAVE,                               30,  9 ; 84
-	map_const MOUNT_MOON,                                  17, 11 ; 85
-	map_const ROCK_TUNNEL_1F,                              22, 11 ; 87
-	map_const ROCK_TUNNEL_B1F,                             20,  9 ; 88
-	map_const SAFARI_ZONE_BETA,                            20, 18 ; 90
+	map_const WHIRL_ISLAND_LUGIA_CHAMBER,                  10,  9 ; 73
+	map_const AMPARE_CAVERN_B1F,                           20, 18 ; 78
+	map_const AMPARE_CAVERN_1F,                            15, 18 ; 79
+	map_const DEEPWATER_PASSAGE_1F,                         5, 18 ; 80
+	map_const ENDON_CAVE_1F,                               30,  9 ; 84
+	map_const BOULDER_MINES_B4F,                           17, 11 ; 85
+	map_const BOULDER_MINES_B2F,                           22, 11 ; 87
+	map_const BOULDER_MINES_B3F,                           20,  9 ; 88
+	map_const NANJO_FOREST,                                20, 18 ; 90
 	map_const VICTORY_ROAD,                                20, 27 ; 91
 	map_const VICTORY_ROAD_2F,                             20, 27 ; 91
 
@@ -301,7 +300,7 @@ ENDM
 
 	newgroup                                                      ; 17
 
-	map_const FUCHSIA_CITY,                                20, 18 ;  5
+	map_const STAND_CITY,                                20, 18 ;  5
 	map_const FUCHSIA_MART,                                 8,  4 ;  6
 	map_const SAFARI_ZONE_MAIN_OFFICE,                      8,  4 ;  7
 	map_const BILLS_BROTHERS_HOUSE,                         5,  4 ;  9

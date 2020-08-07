@@ -96,7 +96,7 @@ YoronCity_MapEvents:
 	warp_event  7, 25, PEWTER_NIDORAN_SPEECH_HOUSE, 1
 	warp_event 21, 13, PEWTER_SNOOZE_SPEECH_HOUSE, 1
 	warp_event 17, 23, PEWTER_GYM, 1
-	warp_event 15,  5, MOUNT_MORTAR_2F_INSIDE, 8
+	warp_event 15,  5, ICED_CAVERN_1F, 8
 
 	db 0 ; coord events
 

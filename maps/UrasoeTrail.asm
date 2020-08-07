@@ -146,8 +146,8 @@ UrasoeTrail_MapEvents:
 	db 4 ; warp events
 	warp_event  8,  5, ROUTE_8_SAFFRON_GATE, 3
 	warp_event  9,  5, ROUTE_8_SAFFRON_GATE, 4
-	warp_event 14, 26, SAFARI_ZONE_BETA, 1
-	warp_event 14, 27, SAFARI_ZONE_BETA, 2
+	warp_event 14, 26, NANJO_FOREST, 1
+	warp_event 14, 27, NANJO_FOREST, 2
 
 	db 0 ; coord events
 

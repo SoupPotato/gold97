@@ -76,7 +76,7 @@ ReturnFromMapSetupScript::
 	ret z
 	cp LAV_RADIO_TOWER
 	ret z
-	cp UNDERGROUND_PATH
+	cp CROWN_PASS
 	ret z
 	cp INDIGO_PLATEAU
 	ret z

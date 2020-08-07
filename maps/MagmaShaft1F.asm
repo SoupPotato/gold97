@@ -38,9 +38,9 @@ MagmaShaft1F_MapEvents:
 
 	db 4 ; warp events
 	warp_event  1, 17, CIANWOOD_CITY, 1
-	warp_event  3,  5, ICE_PATH_B1F, 1
-	warp_event 16, 17, ICE_PATH_B2F_MAHOGANY_SIDE, 8
-	warp_event 17, 17, ICE_PATH_B2F_MAHOGANY_SIDE, 8
+	warp_event  3,  5, MAGMA_SHAFT_B1F, 1
+	warp_event 16, 17, MAGMA_SHAFT_B2F, 8
+	warp_event 17, 17, MAGMA_SHAFT_B2F, 8
 
 	db 0 ; coord events
 

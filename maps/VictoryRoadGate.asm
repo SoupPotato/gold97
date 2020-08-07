@@ -122,8 +122,8 @@ VictoryRoadGate_MapEvents:
 	db 4 ; warp events
 	warp_event  9, 17, SILENT_TOWN, 7
 	warp_event 10, 17, SILENT_TOWN, 7
-	warp_event  9,  0, UNDERGROUND_PATH, 1
-	warp_event 10,  0, UNDERGROUND_PATH, 1
+	warp_event  9,  0, CROWN_PASS, 1
+	warp_event 10,  0, CROWN_PASS, 1
 
 	db 1 ; coord events
 	coord_event 10, 11, SCENE_DEFAULT, VictoryRoadGateBadgeCheckScene

@@ -201,7 +201,7 @@ BrassTower5F_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  5,  5, TIN_TOWER_4F, 2
+	warp_event  5,  5, BRASS_TOWER_4F, 2
 	warp_event  0,  5, TIN_TOWER_ROOF, 1
 
 	db 2 ; coord events

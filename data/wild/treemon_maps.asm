@@ -21,7 +21,7 @@ TreeMonMaps:
 	treemon_map ROUTE_117,                   TREEMON_SET_ROUTE
 	treemon_map RUINS_OF_ALPH_OUTSIDE,     TREEMON_SET_LAKE
 	treemon_map ECRUTEAK_CITY,             TREEMON_SET_CITY
-	treemon_map FUCHSIA_CITY,              TREEMON_SET_CITY
+	treemon_map STAND_CITY,              TREEMON_SET_CITY
 	treemon_map CHERRYGROVE_CITY,          TREEMON_SET_CITY
 	treemon_map VERMILION_CITY,            TREEMON_SET_CITY
 	treemon_map PEWTER_CITY,               TREEMON_SET_CITY
@@ -29,8 +29,8 @@ TreeMonMaps:
 	treemon_map SANSKRIT_TOWN,             TREEMON_SET_TOWN
 	treemon_map CERULEAN_CITY,             TREEMON_SET_TOWN
 	treemon_map PALLET_TOWN,               TREEMON_SET_LAKE
-	treemon_map ILEX_FOREST,               TREEMON_SET_FOREST
-	treemon_map SAFARI_ZONE_BETA,          TREEMON_SET_FOREST
+	treemon_map JADE_FOREST,               TREEMON_SET_FOREST
+	treemon_map NANJO_FOREST,          TREEMON_SET_FOREST
 	treemon_map NATIONAL_PARK,             TREEMON_SET_ROUTE
 
 	db -1

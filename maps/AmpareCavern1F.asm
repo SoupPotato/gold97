@@ -64,7 +64,7 @@ AmpareCavern1F_MapEvents:
 
 	db 2 ; warp events
 	warp_event  4, 17, ROUTE_109, 1
-	warp_event 19, 25, DARK_CAVE_VIOLET_ENTRANCE, 2
+	warp_event 19, 25, AMPARE_CAVERN_B1F, 2
 
 	db 0 ; coord events
 

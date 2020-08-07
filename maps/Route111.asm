@@ -153,7 +153,7 @@ Route111_MapEvents:
 	db 0, 0 ; filler
 
 	db 3 ; warp events
-	warp_event  5, 31, WHIRL_ISLAND_NE, 1
+	warp_event  5, 31, WHIRL_ISLAND_1F, 1
 	warp_event  8, 51, ROUTE_29_ROUTE_46_GATE, 1
 	warp_event  9, 51, ROUTE_29_ROUTE_46_GATE, 2
 

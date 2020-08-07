@@ -21,9 +21,9 @@ DeepwaterPassageB2F_MapEvents:
 	db 0, 0 ; filler
 
 	db 3 ; warp events
-	warp_event 11, 69, ICE_PATH_B3F, 2
-	warp_event  5,  7, ICE_PATH_B3F, 3
-	warp_event 14, 40, ICE_PATH_NEW, 1
+	warp_event 11, 69, DEEPWATER_PASSAGE_B1F, 2
+	warp_event  5,  7, DEEPWATER_PASSAGE_B1F, 3
+	warp_event 14, 40, DEEPWATER_PASSAGE_B3F, 1
 
 	db 0 ; coord events
 

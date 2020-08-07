@@ -93,26 +93,26 @@ LoadSpecialMapPalette:
 	and $7
 	cp INDOOR ; Hall of Fame
 	jr z, .do_nothing
-.BeastCave ;lava colors
+.MagmaShaft ;lava colors
 	ld a, [wMapGroup]
-	cp GROUP_ICE_PATH_B2F_BLACKTHORN_SIDE
+	cp GROUP_MAGMA_SHAFT_1F
 	jr nz, .not_B2F
 	ld a, [wMapNumber]
-	cp MAP_ICE_PATH_B2F_BLACKTHORN_SIDE
+	cp MAP_MAGMA_SHAFT_1F
 	jr z, .LavaOverRedCoalOverBrownBGPalette
 .not_B2F	
 	ld a, [wMapGroup]
-	cp GROUP_ICE_PATH_B1F
+	cp GROUP_MAGMA_SHAFT_B1F
 	jr nz, .not_B1F
 	ld a, [wMapNumber]
-	cp MAP_ICE_PATH_B1F
+	cp MAP_MAGMA_SHAFT_B1F
 	jr z, .LavaOverRedCoalOverBrownBGPalette
 .not_B1F
 	ld a, [wMapGroup]
-	cp GROUP_ICE_PATH_B2F_MAHOGANY_SIDE
+	cp GROUP_MAGMA_SHAFT_B2F
 	jr nz, .ice
 	ld a, [wMapNumber]
-	cp MAP_ICE_PATH_B2F_MAHOGANY_SIDE
+	cp MAP_MAGMA_SHAFT_B2F
 	jr z, .LavaOverRedCoalOverBrownBGPalette
 .ice
 	call LoadIcePathPalette

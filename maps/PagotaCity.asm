@@ -210,11 +210,11 @@ PagotaCity_MapEvents:
 	warp_event 10, 26, VIOLET_NICKNAME_SPEECH_HOUSE, 1
 	warp_event 27, 28, VIOLET_POKECENTER_1F, 1
 	warp_event 22, 26, EARLS_POKEMON_ACADEMY, 1
-	warp_event 11, 17, SPROUT_TOWER_1F, 1
+	warp_event 11, 17, BRASS_TOWER_1F, 1
 	warp_event 19, 31, ROUTE_31_VIOLET_GATE, 2
 	warp_event 18, 31, ROUTE_31_VIOLET_GATE, 1
 	warp_event  3, 31, KURTS_HOUSE, 1
-	warp_event 12, 17, SPROUT_TOWER_1F, 2
+	warp_event 12, 17, BRASS_TOWER_1F, 2
 	warp_event  4, 14, BILLS_HOUSE, 1
 	warp_event  5, 14, BILLS_HOUSE, 2
 	warp_event 30, 22, BILLS_FAMILYS_HOUSE, 1

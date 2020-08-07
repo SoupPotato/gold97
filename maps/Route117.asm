@@ -157,9 +157,9 @@ Route117_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event 11,  5, DIGLETTS_CAVE, 1
+	warp_event 11,  5, ENDON_CAVE_1F, 1
 	;warp_event 11,  5, BATTLE_TOWER_1F, 1
-	warp_event 21,  5, DIGLETTS_CAVE, 2
+	warp_event 21,  5, ENDON_CAVE_1F, 2
 
 	db 0 ; coord events
 

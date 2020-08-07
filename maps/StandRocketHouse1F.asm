@@ -333,9 +333,9 @@ StandRocketHouse1F_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
-	warp_event  6,  7, FUCHSIA_CITY, 6
-	warp_event  7,  7, FUCHSIA_CITY, 6
-	warp_event 19,  7, TEAM_ROCKET_BASE_B2F, 1
+	warp_event  6,  7, STAND_CITY, 6
+	warp_event  7,  7, STAND_CITY, 6
+	warp_event 19,  7, TEAM_ROCKET_BASE_B1F, 1
 	warp_event 19,  1, SAFARI_ZONE_WARDENS_HOME_2F, 1
 
 	db 8 ; coord events

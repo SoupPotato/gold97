@@ -247,7 +247,7 @@ BlueForest_MapEvents:
 	warp_event 13, 18, BLACKTHORN_POKECENTER_1F, 1
 	warp_event  3, 22, MOVE_DELETERS_HOUSE, 1
 	warp_event 27, 11, BLUEFOREST_HOUSE_1, 1
-	warp_event  5,  5, DRAGONS_DEN_1F, 1
+	warp_event  5,  5, DEEPWATER_PASSAGE_1F, 1
 	warp_event 18,  3, ROUTE_29_ROUTE_46_GATE, 3
 	warp_event 19,  3, ROUTE_29_ROUTE_46_GATE, 4
 	warp_event 27, 21, MAHOGANY_GYM, 2

@@ -502,8 +502,8 @@ TeamRocketBaseB2FOffice_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event 24, 17, TEAM_ROCKET_BASE_B3F, 4
-	warp_event 25, 17, TEAM_ROCKET_BASE_B3F, 5
+	warp_event 24, 17, TEAM_ROCKET_BASE_B2F, 4
+	warp_event 25, 17, TEAM_ROCKET_BASE_B2F, 5
 
 	db 5 ; coord events
 	coord_event  7, 12, SCENE_DEFAULT, ImposterConfrontationScene

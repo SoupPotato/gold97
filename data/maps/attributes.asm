@@ -164,7 +164,7 @@ ENDM
 	connection east, Route105, ROUTE_30, 0
 
 	map_attributes Route113, ROUTE_34, $05, NORTH
-	connection north, StandCity, FUCHSIA_CITY, -10
+	connection north, StandCity, STAND_CITY, -10
 
 	map_attributes Route103, ROUTE_35, $4B, NORTH | SOUTH
 	connection north, BirdonTown, AZALEA_TOWN, 0
@@ -216,7 +216,7 @@ ENDM
 	connection west, YoronPoint, ROUTE_24, 0
 	connection east, UrasoeTrail, ROUTE_12, -9
 
-	map_attributes StandCity, FUCHSIA_CITY, $05, SOUTH
+	map_attributes StandCity, STAND_CITY, $05, SOUTH
 	connection south, Route113, ROUTE_34, 10
 
 	map_attributes KantoCity, CELADON_CITY, $0f, EAST
@@ -274,11 +274,11 @@ ENDM
 	map_attributes CharredSummit, EASTWARD_SUMMIT, $35, WEST
 	connection west, MeridianPath, ROUTE_25, -9
 
-	map_attributes BrassTower1F, SPROUT_TOWER_1F, $00, 0
-	map_attributes BrassTower2F, SPROUT_TOWER_2F, $00, 0
-	map_attributes BrassTower3F, SPROUT_TOWER_3F, $00, 0
-	map_attributes BrassTower4F, TIN_TOWER_4F, $00, 0
-	map_attributes BrassTower5F, TIN_TOWER_5F, $00, 0
+	map_attributes BrassTower1F, BRASS_TOWER_1F, $00, 0
+	map_attributes BrassTower2F, BRASS_TOWER_2F, $00, 0
+	map_attributes BrassTower3F, BRASS_TOWER_3F, $00, 0
+	map_attributes BrassTower4F, BRASS_TOWER_4F, $00, 0
+	map_attributes BrassTower5F, BRASS_TOWER_5F, $00, 0
 	map_attributes NationalPark, NATIONAL_PARK, $04, 0
 	map_attributes NationalParkBugContest, NATIONAL_PARK_BUG_CONTEST, $04, 0
 	map_attributes RadioTower1F, RADIO_TOWER_1F, $00, 0
@@ -293,43 +293,42 @@ ENDM
 	map_attributes RuinsOfAlphAerodactylChamber, RUINS_OF_ALPH_AERODACTYL_CHAMBER, $00, 0
 	map_attributes RuinsOfAlphInnerChamber, RUINS_OF_ALPH_INNER_CHAMBER, $00, 0
 	map_attributes RuinsOfAlphResearchCenter, RUINS_OF_ALPH_RESEARCH_CENTER, $00, 0
-	map_attributes BoulderMines1F, UNION_CAVE_1F, $09, 0
-	map_attributes BoulderMinesB1F, UNION_CAVE_B1F, $09, 0
-	map_attributes BoulderMinesB5F, UNION_CAVE_B2F, $09, 0
+	map_attributes BoulderMines1F, BOULDER_MINES_1F, $09, 0
+	map_attributes BoulderMinesB1F, BOULDER_MINES_B1F, $09, 0
+	map_attributes BoulderMinesB5F, BOULDER_MINES_B5F, $09, 0
 	map_attributes SlowpokeWellB1F, SLOWPOKE_WELL_B1F, $09, 0
 	map_attributes SlowpokeWellB2F, SLOWPOKE_WELL_B2F, $09, 0
 	map_attributes TeknosAquarium1F, OLIVINE_LIGHTHOUSE_1F, $00, 0
 	map_attributes TeknosAquarium2F, OLIVINE_LIGHTHOUSE_2F, $00, 0
-	map_attributes EndonCaveB1F, OLIVINE_LIGHTHOUSE_3F, $09, 0
+	map_attributes EndonCaveB1F, ENDON_CAVE_B1F, $09, 0
 	map_attributes KobanMart, SUGAR_MART, $00, 0
 	map_attributes KobanClairsHouse, SUGAR_HOUSE_1, $00, 0
 	map_attributes KobanFisherHouse, SUGAR_HOUSE_2, $00, 0
 	map_attributes BlueForestNightmareHouse, BLUEFOREST_HOUSE_1, $00, 0
-	map_attributes TeamRocketBaseB2FOffice, TEAM_ROCKET_BASE_B1F, $00, 0
-	map_attributes TeamRocketBaseB1F, TEAM_ROCKET_BASE_B2F, $00, 0
-	map_attributes TeamRocketBaseB2F, TEAM_ROCKET_BASE_B3F, $00, 0
-	map_attributes JadeForest, ILEX_FOREST, $05, 0
+	map_attributes TeamRocketBaseB2FOffice, TEAM_ROCKET_BASE_B2F_OFFICE, $00, 0
+	map_attributes TeamRocketBaseB1F, TEAM_ROCKET_BASE_B1F, $00, 0
+	map_attributes TeamRocketBaseB2F, TEAM_ROCKET_BASE_B2F, $00, 0
+	map_attributes JadeForest, JADE_FOREST, $05, 0
 	map_attributes WestportUnderground, GOLDENROD_UNDERGROUND, $00, 0
-	map_attributes CharredSummitCave, MOUNT_MORTAR_1F_OUTSIDE, $09, 0
-	map_attributes JouleCaveZapdosRoom, MOUNT_MORTAR_ZAPDOS_ROOM, $09, 0
-	map_attributes JouleCave, MOUNT_MORTAR_1F_INSIDE, $09, 0
-	map_attributes IcedCavern1F, MOUNT_MORTAR_2F_INSIDE, $09, 0
-	map_attributes IcedCavernB1F, MOUNT_MORTAR_B1F, $09, 0
-	map_attributes DeepwaterPassageB2F, ICE_PATH_1F, $09, 0
-	map_attributes MagmaShaftB1F, ICE_PATH_B1F, $59, 0
-	map_attributes MagmaShaftB2F, ICE_PATH_B2F_MAHOGANY_SIDE, $59, 0
-	map_attributes MagmaShaft1F, ICE_PATH_B2F_BLACKTHORN_SIDE, $59, 0
-	map_attributes DeepwaterPassageB1F, ICE_PATH_B3F, $09, 0
-	map_attributes DeepwaterPassageB3F, ICE_PATH_NEW, $09, 0
-	map_attributes WhirlIslandB2FCave, WHIRL_ISLAND_NW, $09, 0
-	map_attributes WhirlIsland1F, WHIRL_ISLAND_NE, $09, 0
-	map_attributes WhirlIslandCave, WHIRL_ISLAND_CAVE, $09, 0
+	map_attributes CharredSummitCave, CHARRED_SUMMIT_CAVE, $09, 0
+	map_attributes JouleCaveZapdosRoom, JOULE_CAVE_ZAPDOS_ROOM, $09, 0
+	map_attributes JouleCave, JOULE_CAVE, $09, 0
+	map_attributes IcedCavern1F, ICED_CAVERN_1F, $09, 0
+	map_attributes IcedCavernB1F, ICED_CAVERN_B1F, $09, 0
+	map_attributes DeepwaterPassageB2F, DEEPWATER_PASSAGE_B2F, $09, 0
+	map_attributes MagmaShaftB1F, MAGMA_SHAFT_B1F, $59, 0
+	map_attributes MagmaShaftB2F, MAGMA_SHAFT_B2F, $59, 0
+	map_attributes MagmaShaft1F, MAGMA_SHAFT_1F, $59, 0
+	map_attributes DeepwaterPassageB1F, DEEPWATER_PASSAGE_B1F, $09, 0
+	map_attributes DeepwaterPassageB3F, DEEPWATER_PASSAGE_B3F, $09, 0
+	map_attributes WhirlIslandB2FCave, WHIRL_ISLAND_B2F_CAVE, $09, 0
+	map_attributes WhirlIsland1F, WHIRL_ISLAND_1F, $09, 0
 	map_attributes WhirlIslandB1F, WHIRL_ISLAND_B1F, $09, 0
 	map_attributes WhirlIslandB2F, WHIRL_ISLAND_B2F, $09, 0
-	map_attributes WhirlIslandLugiaChamber, WHIRL_ISLAND_BLISSEY_CHAMBER, $0f, 0
-	map_attributes AmpareCavernB1F, DARK_CAVE_VIOLET_ENTRANCE, $1D, 0
-	map_attributes AmpareCavern1F, DARK_CAVE_BLACKTHORN_ENTRANCE, $09, 0
-	map_attributes DeepwaterPassage1F, DRAGONS_DEN_1F, $09, 0
+	map_attributes WhirlIslandLugiaChamber, WHIRL_ISLAND_LUGIA_CHAMBER, $0f, 0
+	map_attributes AmpareCavernB1F, AMPARE_CAVERN_B1F, $1D, 0
+	map_attributes AmpareCavern1F, AMPARE_CAVERN_1F, $09, 0
+	map_attributes DeepwaterPassage1F, DEEPWATER_PASSAGE_1F, $09, 0
 	map_attributes DragonsMaw, DRAGONS_DEN_B1F, $09, 0
 	map_attributes KantoCafe, DRAGON_SHRINE, $00, 0
 	map_attributes AlloyPokecenter1F, ALLOY_POKECENTER_1F, $00, 0
@@ -344,12 +343,12 @@ ENDM
 	map_attributes SanskritCoinCaseSpeechHouse, ROUTE_110, $00, 0
 	map_attributes BlueForestGym, MAHOGANY_GYM, $00, 0
 	map_attributes SanskritPokecenter1F, SANSKRIT_POKECENTER_1F, $00, 0
-	map_attributes EndonCave1F, DIGLETTS_CAVE, $09, 0
-	map_attributes BoulderMinesB4F, MOUNT_MOON, $09, 0
-	map_attributes CrownPass, UNDERGROUND_PATH, $09, 0
-	map_attributes BoulderMinesB2F, ROCK_TUNNEL_1F, $09, 0
-	map_attributes BoulderMinesB3F, ROCK_TUNNEL_B1F, $09, 0
-	map_attributes NanjoForest, SAFARI_ZONE_BETA, $00, 0
+	map_attributes EndonCave1F, ENDON_CAVE_1F, $09, 0
+	map_attributes BoulderMinesB4F, BOULDER_MINES_B4F, $09, 0
+	map_attributes CrownPass, CROWN_PASS, $09, 0
+	map_attributes BoulderMinesB2F, BOULDER_MINES_B2F, $09, 0
+	map_attributes BoulderMinesB3F, BOULDER_MINES_B3F, $09, 0
+	map_attributes NanjoForest, NANJO_FOREST, $00, 0
 	map_attributes VictoryRoad, VICTORY_ROAD, $09, 0
 	map_attributes VictoryRoad2F, VICTORY_ROAD_2F, $09, 0
 	map_attributes TeknosPokecenter1F, ECRUTEAK_POKECENTER_1F, $00, 0
