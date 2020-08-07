@@ -52,7 +52,7 @@ TeknosPortSailorAtGangwayScript:
 	playsound SFX_EXIT_BUILDING
 	special FadeOutPalettes
 	waitsfx
-	warpfacing UP, OLIVINE_PORT, 8, 15
+	warpfacing UP, WESTPORT_PORT, 8, 15
 	end
 	
 TeknosPortToWestText:

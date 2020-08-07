@@ -70,7 +70,7 @@ Route102WestportGate2F_MapEvents:
 	db 0, 0 ; filler
 
 	db 1 ; warp events
-	warp_event  5,  0, NEW_VIOLET_GATE_NORTH, 5
+	warp_event  5,  0, ROUTE_102_WESTPORT_GATE, 5
 
 	db 0 ; coord events
 

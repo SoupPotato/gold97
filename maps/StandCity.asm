@@ -761,8 +761,8 @@ StandCity_MapEvents:
 	warp_event 26, 29, BILLS_BROTHERS_HOUSE, 1
 	warp_event 33, 20, FUCHSIA_POKECENTER_1F, 1
 	warp_event 17, 31, SAFARI_ZONE_WARDENS_HOME, 1
-	warp_event 30, 13, ROUTE_36_RUINS_OF_ALPH_GATE, 3
-	warp_event 31, 13, ROUTE_36_RUINS_OF_ALPH_GATE, 4
+	warp_event 30, 13, ROUTE_112_STAND_CITY_GATE, 3
+	warp_event 31, 13, ROUTE_112_STAND_CITY_GATE, 4
 	warp_event  6, 17, ROUTE_36_NATIONAL_PARK_GATE, 4
 	warp_event 35, 31, CIANWOOD_GYM, 2
 	warp_event 24, 17, STAND_POKE, 1

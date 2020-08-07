@@ -27,12 +27,12 @@ MapScenes::
 	scene_var PLAYERS_HOUSE_1F,                            wPlayersHouse1FSceneID
 	scene_var ROUTE_29,                                    wRoute29SceneID
 	scene_var CHERRYGROVE_CITY,                            wCherrygroveCitySceneID
-	scene_var ROUTE_112,                                    wRoute32SceneID
-	scene_var ROUTE_36,                                    wRoute36SceneID
+	scene_var ROUTE_112,                                   wRoute32SceneID
+	scene_var ROUTE_102,                                   wRoute36SceneID
 	scene_var ROUTE_36_NATIONAL_PARK_GATE,                 wRoute36NationalParkGateSceneID
 	scene_var BIRDON_TOWN,                                 wAzaleaTownSceneID
 	scene_var GOLDENROD_MAGNET_TRAIN_STATION,              wGoldenrodMagnetTrainStationSceneID
-	scene_var GOLDENROD_POKECENTER_1F,                     wGoldenrodPokecenter1FSceneID
+	scene_var WESTPORT_POKECENTER_1F,                      wGoldenrodPokecenter1FSceneID
 	scene_var ALLOY_CITY,                                  wOlivineCitySceneID
 	scene_var TEKNOS_POKECENTER_1F,                        wEcruteakPokecenter1FSceneID
 	scene_var SANSKRIT_TOWN,                               wMahoganyTownSceneID
@@ -42,7 +42,6 @@ MapScenes::
 	scene_var BATTLE_TOWER_ELEVATOR,                       wBattleTowerElevatorSceneID
 	scene_var BATTLE_TOWER_HALLWAY,                        wBattleTowerHallwaySceneID
 	scene_var BATTLE_TOWER_OUTSIDE,                        wBattleTowerOutsideSceneID ; unused
-	scene_var ROUTE_43_GATE,                               wRoute43GateSceneID
 	scene_var BOULDER_MINES_B4F,                           wMountMoonSceneID
 	scene_var BRASS_TOWER_3F,                              wSproutTower3FSceneID
 	scene_var RADIO_TOWER_5F,                              wRadioTower5FSceneID
@@ -57,29 +56,27 @@ MapScenes::
 	scene_var TEAM_ROCKET_BASE_B1F,                        wTeamRocketBaseB2FSceneID
 	scene_var TEAM_ROCKET_BASE_B2F,                        wTeamRocketBaseB3FSceneID
 	scene_var VICTORY_ROAD,                                wVictoryRoadSceneID
-	scene_var DRAGONS_DEN_B1F,                             wDragonsDenB1FSceneID
 	scene_var DRAGON_SHRINE,                               wDragonShrineSceneID
-	scene_var OLIVINE_PORT,                                wOlivinePortSceneID
-	scene_var VERMILION_PORT,                              wVermilionPortSceneID
+	scene_var WESTPORT_PORT,                               wOlivinePortSceneID
+	scene_var AMAMI_PORT,                                  wVermilionPortSceneID
 	scene_var FAST_SHIP_1F,                                wFastShip1FSceneID
 	scene_var FAST_SHIP_B1F,                               wFastShipB1FSceneID
 	scene_var MOUNT_MOON_SQUARE,                           wMountMoonSquareSceneID
 	scene_var MOBILE_TRADE_ROOM,                           wMobileTradeRoomSceneID
 	scene_var MOBILE_BATTLE_ROOM,                          wMobileBattleRoomSceneID
 	scene_var KURTS_HOUSE,								   wKurtsHouseSceneID
-	scene_var TEKU_PORT,								   wTekuPortSceneID
+	scene_var TEKNOS_PORT,								   wTekuPortSceneID
 	scene_var SLOWPOKE_WELL_B1F,						   wSlowpokeWellB1FSceneID
 	scene_var SLOWPOKE_WELL_B2F,						   wSlowpokeWellB2FSceneID
 	scene_var ROUTE_103,								   wRoute35SceneID
 	scene_var VIRIDIAN_GYM,								   wViridianGymSceneID
 	scene_var ROUTE_104,							       wRoute33SceneID
-	scene_var ROUTE_36_RUINS_OF_ALPH_GATE,				   wRoute36RuinsOfAlphGateSceneID
+	scene_var ROUTE_112_STAND_CITY_GATE,				   wRoute36RuinsOfAlphGateSceneID
 	scene_var STAND_CITY,								   wFuchsiaCitySceneID
 	scene_var SAFARI_ZONE_WARDENS_HOME,					   wSafariZoneWardensHomeSceneID
 	scene_var SAFARI_ZONE_WARDENS_HOME_2F,				   wSafariZoneWardensHome2FSceneID
 	scene_var RADIO_TOWER_6F,							   wRadioTower6FSceneID
-	scene_var GOLDENROD_CITY,							   wGoldenrodCitySceneID
-	scene_var OLD_CITY,								       wOldCitySceneID
+	scene_var WESTPORT_CITY,							   wGoldenrodCitySceneID
 	scene_var BRASS_TOWER_5F,							   wTinTower5FSceneID
 	scene_var CELADON_GYM,								   wCeladonGymSceneID
 	scene_var KANTO_BATTLE_CLUB_B1F,					   wKantoBattleClubB1FSceneID

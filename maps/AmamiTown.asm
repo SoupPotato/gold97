@@ -94,15 +94,15 @@ AmamiTown_MapEvents:
 	db 0, 0 ; filler
 
 	db 9 ; warp events
-	warp_event  4,  2, VERMILION_PORT_PASSAGE, 1
-	warp_event  4,  3, VERMILION_PORT_PASSAGE, 2
-	warp_event 17,  4, VERMILION_POKECENTER_1F, 1
+	warp_event  4,  2, AMAMI_PORT_PASSAGE, 1
+	warp_event  4,  3, AMAMI_PORT_PASSAGE, 2
+	warp_event 17,  4, AMAMI_POKECENTER_1F, 1
 	warp_event 35, 15, VIRIDIAN_POKECENTER_1F, 1
-	warp_event 24,  5, VERMILION_GYM, 1
-	warp_event 25,  5, VERMILION_GYM, 2
-	warp_event 23, 10, VERMILION_MART, 1
-	warp_event 31,  5, ROUTE_12_SUPER_ROD_HOUSE, 1
-	warp_event 31, 13, VERMILION_DIGLETTS_CAVE_SPEECH_HOUSE, 1
+	warp_event 24,  5, AMAMI_SWIMMING_POOL, 1
+	warp_event 25,  5, AMAMI_SWIMMING_POOL, 2
+	warp_event 23, 10, AMAMI_MART, 1
+	warp_event 31,  5, URASOE_TRAIL_SUPER_ROD_HOUSE, 1
+	warp_event 31, 13, NAGO_SPEECH_HOUSE, 1
 
 	db 0 ; coord events
 

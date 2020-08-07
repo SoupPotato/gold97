@@ -256,7 +256,7 @@ KantoCity_MapEvents:
 	warp_event 34, 23, CELADON_GAME_CORNER_PRIZE_ROOM, 1
 	warp_event  4,  5, CELADON_GYM, 1
 	warp_event 40, 23, CELADON_CAFE, 1
-	warp_event  6, 27, ILEX_FOREST_AZALEA_GATE, 4
+	warp_event  6, 27, ROUTE_115_KANTO_GATE, 4
 	warp_event 30, 19, SILPH_CO_1F, 1
 	warp_event 31, 19, SILPH_CO_1F, 2
 	warp_event 15, 17, CELADON_DEPT_STORE_1F, 2

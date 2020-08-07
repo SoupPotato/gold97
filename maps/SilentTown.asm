@@ -384,7 +384,7 @@ SilentTown_MapEvents:
 	warp_event 13, 12, VIRIDIAN_POKECENTER_1F, 1
 	warp_event  3, 20, ELMS_HOUSE, 1
 	warp_event 15, 19, ELM_ENTRANCE, 2
-	warp_event  9, 18, VERMILION_POKECENTER_1F, 1
+	warp_event  9, 18, AMAMI_POKECENTER_1F, 1
 	warp_event  9,  5, VICTORY_ROAD_GATE, 1
 
 

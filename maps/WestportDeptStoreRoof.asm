@@ -213,7 +213,7 @@ WestportDeptStoreRoof_MapEvents:
 	db 0, 0 ; filler
 
 	db 1 ; warp events
-	warp_event 13,  1, GOLDENROD_DEPT_STORE_6F, 3
+	warp_event 13,  1, WESTPORT_DEPT_STORE_6F, 3
 
 	db 0 ; coord events
 

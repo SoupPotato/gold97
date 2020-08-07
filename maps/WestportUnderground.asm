@@ -639,18 +639,18 @@ WestportUnderground_MapEvents:
 	db 0, 0 ; filler
 
 	db 12 ; warp events
-	warp_event  6,  0, GOLDENROD_DEPT_STORE_ELEVATOR, 1
-	warp_event 18,  2, GOLDENROD_BIKE_SHOP, 1
-	warp_event 12,  6, GOLDENROD_UNDERGROUND, 4
-	warp_event  1, 35, GOLDENROD_UNDERGROUND, 3
-	warp_event  2, 35, GOLDENROD_UNDERGROUND, 3
-	warp_event 12, 14, GOLDENROD_UNDERGROUND, 7
-	warp_event 14, 35, GOLDENROD_UNDERGROUND, 6
-	warp_event 15, 35, GOLDENROD_UNDERGROUND, 6
-	warp_event  2, 20, GOLDENROD_UNDERGROUND, 10
-	warp_event 28, 35, GOLDENROD_UNDERGROUND, 9
-	warp_event 29, 35, GOLDENROD_UNDERGROUND, 9
-	warp_event  7, 20, GOLDENROD_CITY, 16
+	warp_event  6,  0, WESTPORT_DEPT_STORE_ELEVATOR, 1
+	warp_event 18,  2, WESTPORT_BIKE_SHOP, 1
+	warp_event 12,  6, WESTPORT_UNDERGROUND, 4
+	warp_event  1, 35, WESTPORT_UNDERGROUND, 3
+	warp_event  2, 35, WESTPORT_UNDERGROUND, 3
+	warp_event 12, 14, WESTPORT_UNDERGROUND, 7
+	warp_event 14, 35, WESTPORT_UNDERGROUND, 6
+	warp_event 15, 35, WESTPORT_UNDERGROUND, 6
+	warp_event  2, 20, WESTPORT_UNDERGROUND, 10
+	warp_event 28, 35, WESTPORT_UNDERGROUND, 9
+	warp_event 29, 35, WESTPORT_UNDERGROUND, 9
+	warp_event  7, 20, WESTPORT_CITY, 16
 
 	db 0 ; coord events
 

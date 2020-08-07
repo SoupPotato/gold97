@@ -9,21 +9,9 @@
 	const DragonsMaw_GENTLEMAN
 
 DragonsMaw_MapScripts:
-	db 2 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_DragonsMaw_NOTHING
-	scene_script .DummyScene1 ; SCENE_DragonsMaw_CLAIR_GIVES_TM
+	db 0 ; scene scripts
 
 	db 0 ; callbacks
-
-.DummyScene0:
-	end
-
-.DummyScene1:
-	end
-
-
-	;giveitem TM_DRAGONBREATH
-	;setevent EVENT_GOT_TM24_DRAGONBREATH
 
 
 TrainerCooltrainermDarin:
@@ -421,7 +409,7 @@ DragonsMaw_MapEvents:
 	db 0, 0 ; filler
 
 	db 1 ; warp events
-	warp_event 10, 31, PALLET_TOWN, 5
+	warp_event 10, 31, KOBAN_ISLAND, 5
 
 	db 0 ; coord events
 

@@ -32,7 +32,7 @@ AmamiPort_MapScripts:
 	clearevent EVENT_OLIVINE_PORT_PASSAGE_POKEFAN_M
 	setevent EVENT_FAST_SHIP_FIRST_TIME
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
-	blackoutmod VERMILION_CITY
+	blackoutmod AMAMI_TOWN
 	end
 
 AmamiPortSailorAtGangwayScript:
@@ -395,7 +395,7 @@ AmamiPort_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event 13,  7, VERMILION_PORT_PASSAGE, 5
+	warp_event 13,  7, AMAMI_PORT_PASSAGE, 5
 	warp_event  7, 17, FAST_SHIP_1F, 1
 
 	db 1 ; coord events

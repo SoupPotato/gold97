@@ -181,7 +181,7 @@ LoadWarpData:
 	ld a, [wPrevMapNumber]
 	cp MAP_MOUNT_MOON_SQUARE
 	ret z
-	cp MAP_TIN_TOWER_ROOF
+	cp MAP_BRASS_TOWER_ROOF
 	ret z
 .not_mt_moon_or_tin_tower
 

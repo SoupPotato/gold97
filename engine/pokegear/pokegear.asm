@@ -735,8 +735,8 @@ TownMap_GetKantoLandmarkLimits:
 ;	ld a, [wStatusFlags]
 ;	bit STATUSFLAGS_HALL_OF_FAME_F, a
 ;	jr z, .not_hof
-	ld d, VERMILION_CITY
-	ld e, PEWTER_CITY
+	ld d, AMAMI_TOWN
+	ld e, YORON_CITY
 	ret
 
 ;.not_hof
@@ -2310,7 +2310,7 @@ FlyMap:
 ; enters Kanto, fly access is restricted until Indigo Plateau is
 ; visited and its flypoint enabled.
 	push af
-	ld c, SPAWN_VERMILION; this is going to be the first city you visit on the islands, so this unlocks the kanto/islands map, instead of indigo. Make sure to figure
+	ld c, SPAWN_AMAMI; this is going to be the first city you visit on the islands, so this unlocks the kanto/islands map, instead of indigo. Make sure to figure
 ; out how to make it so that once you first get off the boat, you're not either stuck off the islands if you fly back to johto, or that the game doesn't crash
 ;before you actually exit the docks into the city to load the flypoint
 	call HasVisitedSpawn
@@ -2319,10 +2319,10 @@ FlyMap:
 ; Kanto's map is only loaded if we've visited Indigo Plateau, gonna change this to the islands eventually
 
 ; Flypoints begin at Pallet Town...
-	ld a, FLY_PEWTER
+	ld a, FLY_YORON
 	ld [wStartFlypoint], a
 ; ...and end at Indigo Plateau
-	ld a, FLY_VERMILION
+	ld a, FLY_AMAMI
 	ld [wEndFlypoint], a
 ; Because Indigo Plateau is the first flypoint the player
 ; visits, it's made the default flypoint.

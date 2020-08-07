@@ -324,8 +324,8 @@ Route112_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event 10, 47, ROUTE_36_RUINS_OF_ALPH_GATE, 1
-	warp_event 11, 47, ROUTE_36_RUINS_OF_ALPH_GATE, 2
+	warp_event 10, 47, ROUTE_112_STAND_CITY_GATE, 1
+	warp_event 11, 47, ROUTE_112_STAND_CITY_GATE, 2
 
 
 	db 0 ; coord events

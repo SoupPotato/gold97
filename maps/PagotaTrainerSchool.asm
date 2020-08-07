@@ -407,8 +407,8 @@ PagotaTrainerSchool_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  3, 15, OLD_CITY, 6
-	warp_event  4, 15, OLD_CITY, 6
+	warp_event  3, 15, PAGOTA_CITY, 6
+	warp_event  4, 15, PAGOTA_CITY, 6
 
 	db 0 ; coord events
 

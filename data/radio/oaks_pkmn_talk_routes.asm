@@ -2,8 +2,8 @@
 
 OaksPKMNTalkRoutes:
 	map_id ROUTE_29
-	map_id ROUTE_37
-	map_id ROUTE_36
+	map_id SILENT_HILLS
+	map_id ROUTE_102
 	map_id ROUTE_116
 	map_id ROUTE_117
 	map_id ROUTE_118

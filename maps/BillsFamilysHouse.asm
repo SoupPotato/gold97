@@ -272,8 +272,8 @@ BillsFamilysHouse_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  3,  7, OLD_CITY, 14
-	warp_event  4,  7, OLD_CITY, 14
+	warp_event  3,  7, PAGOTA_CITY, 14
+	warp_event  4,  7, PAGOTA_CITY, 14
 
 	db 0 ; coord events
 

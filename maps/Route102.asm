@@ -705,8 +705,8 @@ Route102_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  6,  5, NEW_VIOLET_GATE_NORTH, 4
-	warp_event 16,  4, GOLDENROD_FLOWER_SHOP, 1
+	warp_event  6,  5, ROUTE_102_WESTPORT_GATE, 4
+	warp_event 16,  4, ROUTE_102_N64_HOUSE, 1
 
 	db 1 ; coord events
 	coord_event  6,  6, SCENE_ROUTE36_SILVER, Route102SilverScript

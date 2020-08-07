@@ -81,7 +81,7 @@ WestportPortSailorAtGangwayScriptTeku:
 	playsound SFX_EXIT_BUILDING
 	special FadeOutPalettes
 	waitsfx
-	warpfacing UP, TEKU_PORT, 4, 9
+	warpfacing UP, TEKNOS_PORT, 4, 9
 	end
 
 WestportPortAlreadyRodeScript:
@@ -488,7 +488,7 @@ WestportPort_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event 11,  7, OLIVINE_PORT_PASSAGE, 5
+	warp_event 11,  7, WESTPORT_PORT_PASSAGE, 5
 	warp_event  7, 23, FAST_SHIP_1F, 1
 
 	db 1 ; coord events

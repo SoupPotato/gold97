@@ -49,7 +49,7 @@ PagotaGymFalknerScript:
 	setevent EVENT_BEAT_BIRD_KEEPER_ABE
 	setevent EVENT_SHOWED_PICHU_TO_BILLS_GRANDPA
 	setevent EVENT_SHOWED_GROWLITHE_VULPIX_TO_BILLS_GRANDPA
-	setmapscene ROUTE_36, SCENE_ROUTE36_SILVER
+	setmapscene ROUTE_102, SCENE_ROUTE36_SILVER
 	clearevent EVENT_ROUTE_36_SILVER
 ;	setmapscene ELMS_LAB, SCENE_ELMSLAB_NOTHING
 	specialphonecall SPECIALCALL_ASSISTANT
@@ -325,8 +325,8 @@ PagotaGym_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  3, 15, OLD_CITY, 2
-	warp_event  4, 15, OLD_CITY, 3
+	warp_event  3, 15, PAGOTA_CITY, 2
+	warp_event  4, 15, PAGOTA_CITY, 3
 
 	db 0 ; coord events
 

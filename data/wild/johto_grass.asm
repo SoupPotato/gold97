@@ -37,7 +37,7 @@ JohtoGrassWildMons:
 	db 4, HOOTHOOT
 	
 
-	map_id ROUTE_37
+	map_id SILENT_HILLS
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 4, CATERPIE
@@ -148,7 +148,7 @@ JohtoGrassWildMons:
 	db 8, RATTATA
 
 
-	map_id ROUTE_36
+	map_id ROUTE_102
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 8, HOPPIP
@@ -960,7 +960,7 @@ JohtoGrassWildMons:
 	db 31, SNEASEL
 	db 34, SNEASEL
 
-	map_id DRAGONS_DEN_B1F
+	map_id DRAGONS_MAW
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 33, PARAS

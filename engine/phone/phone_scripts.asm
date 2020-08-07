@@ -33,11 +33,11 @@ MomPhonePalette1:
 	checkcode VAR_MAPGROUP
 	ifequal GROUP_SILENT_TOWN, .newbark
 	ifequal GROUP_CHERRYGROVE_CITY, .cherrygrove
-	ifequal GROUP_OLD_CITY, .violet
+	ifequal GROUP_PAGOTA_CITY, .violet
 	ifequal GROUP_BIRDON_TOWN, .azalea
-	ifequal GROUP_GOLDENROD_CITY, .goldenrod
+	ifequal GROUP_WESTPORT_CITY, .goldenrod
 	ifequal GROUP_CIANWOOD_CITY, .cianwood
-	ifequal GROUP_PALLET_TOWN, .pallet
+	ifequal GROUP_KOBAN_ISLAND, .pallet
 	ifequal GROUP_STAND_CITY, .fuchsia
 ;	ifequal GROUP_INDIGO_PLATEAU, .mtfuji ;why doesn't this work???? where are these map group variables defined???????asdfasdf
 	farwritetext MomPhoneGenericAreaText

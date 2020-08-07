@@ -32,10 +32,10 @@ PhoneContacts:
 	phone PICNICKER,    GINA1,              ROUTE_34,         ANYTIME, GinaPhoneScript1,    ANYTIME, GinaPhoneScript2
 	phone JUGGLER,      IRWIN1,             ROUTE_103,         ANYTIME, IrwinPhoneScript1,   ANYTIME, IrwinPhoneScript2
 	phone BUG_CATCHER,  ARNIE1,             ROUTE_103,         ANYTIME, ArniePhoneScript1,   ANYTIME, ArniePhoneScript2
-	phone SCHOOLBOY,    ALAN1,              ROUTE_36,         ANYTIME, AlanPhoneScript1,    ANYTIME, AlanPhoneScript2
+	phone SCHOOLBOY,    ALAN1,              ROUTE_102,         ANYTIME, AlanPhoneScript1,    ANYTIME, AlanPhoneScript2
 	phone TRAINER_NONE, PHONE_00,           N_A,              0,       UnusedPhoneScript,   0,       UnusedPhoneScript
 	phone LASS,         DANA1,              ROUTE_108,         ANYTIME, DanaPhoneScript1,    ANYTIME, DanaPhoneScript2
 	phone POKEFANM,     DEREK1,             ROUTE_109,         ANYTIME, DerekPhoneScript1,   ANYTIME, DerekPhoneScript2
 	phone FISHER,       TULLY1,             ROUTE_120,          ANYTIME, TullyPhoneScript1,   ANYTIME, TullyPhoneScript2
 	phone POKEMANIAC,   BRENT1,             BOARDWALK,         ANYTIME, BrentPhoneScript1,   ANYTIME, BrentPhoneScript2
-	phone TRAINER_NONE, PHONECONTACT_BUENA, GOLDENROD_DEPT_STORE_ROOF, ANYTIME, BuenaPhoneScript1, ANYTIME, BuenaPhoneScript2
+	phone TRAINER_NONE, PHONECONTACT_BUENA, WESTPORT_DEPT_STORE_ROOF, ANYTIME, BuenaPhoneScript1, ANYTIME, BuenaPhoneScript2

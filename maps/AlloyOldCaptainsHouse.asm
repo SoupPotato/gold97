@@ -48,7 +48,7 @@ AlloyOldCaptainsHouseElderScript:
 	setevent EVENT_OLD_CITY_EARL
 	setevent EVENT_EARLS_ACADEMY_EARL
 	clearevent EVENT_SLOWPOKE_WELL_SLOWPOKES
-	setmapscene OLD_CITY, SCENE_KURTS_HOUSE_LOCKED
+	setmapscene PAGOTA_CITY, SCENE_KURTS_HOUSE_LOCKED
 	setmapscene BRASS_TOWER_5F, SCENE_HO_OH_EVENT
 	pause 15
 	special RestartMapMusic
@@ -61,7 +61,7 @@ AlloyOldCaptainsHouseElderScript:
 	setevent EVENT_OLD_CITY_EARL
 	setevent EVENT_EARLS_ACADEMY_EARL
 	clearevent EVENT_SLOWPOKE_WELL_SLOWPOKES
-	setmapscene OLD_CITY, SCENE_KURTS_HOUSE_LOCKED
+	setmapscene PAGOTA_CITY, SCENE_KURTS_HOUSE_LOCKED
 	setmapscene BRASS_TOWER_5F, SCENE_HO_OH_EVENT
 	pause 15
 	special RestartMapMusic

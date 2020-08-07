@@ -29,7 +29,7 @@ TinTowerHoOh:
 	closetext
 	setevent EVENT_FOUGHT_HO_OH
 	clearevent EVENT_OLD_CITY_EARL
-	setmapscene OLD_CITY, SCENE_DEFAULT
+	setmapscene PAGOTA_CITY, SCENE_DEFAULT
 	setevent EVENT_SLOWPOKE_WELL_SLOWPOKES
 	clearevent EVENT_RIVAL_AZALEA_TOWN
 	clearevent EVENT_RIVAL_TEAM_ROCKET_BASE

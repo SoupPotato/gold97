@@ -156,8 +156,8 @@ AmamiSwimmingPool_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  6, 17, VERMILION_CITY, 5
-	warp_event  7, 17, VERMILION_CITY, 6
+	warp_event  6, 17, AMAMI_TOWN, 5
+	warp_event  7, 17, AMAMI_TOWN, 6
 
 	db 0 ; coord events
 

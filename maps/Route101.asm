@@ -396,10 +396,10 @@ Route101_MapEvents:
 	db 0, 0 ; filler
 
 	db 6 ; warp events
-	warp_event  8, 27, ROUTE_37, 1
-	warp_event  9, 27, ROUTE_37, 2
-	warp_event 30, 28, ROUTE_37, 3
-	warp_event 30, 29, ROUTE_37, 4
+	warp_event  8, 27, SILENT_HILLS, 1
+	warp_event  9, 27, SILENT_HILLS, 2
+	warp_event 30, 28, SILENT_HILLS, 3
+	warp_event 30, 29, SILENT_HILLS, 4
 	warp_event  8,  5, ROUTE_31_VIOLET_GATE, 3
 	warp_event  9,  5, ROUTE_31_VIOLET_GATE, 4
 

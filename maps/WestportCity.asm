@@ -650,22 +650,22 @@ WestportCity_MapEvents:
 	db 0, 0 ; filler
 
 	db 16 ; warp events
-	warp_event 14, 19, AZALEA_GYM, 1
-	warp_event 32, 19, GOLDENROD_HAPPINESS_RATER, 1
-	warp_event 35, 15, NEW_VIOLET_GATE_NORTH, 1
-	warp_event 26, 19, GOLDENROD_NAME_RATER, 1
-	warp_event 13,  5, GOLDENROD_DEPT_STORE_1F, 1
+	warp_event 14, 19, WESTPORT_GYM, 1
+	warp_event 32, 19, WESTPORT_HAPPINESS_RATER, 1
+	warp_event 35, 15, ROUTE_102_WESTPORT_GATE, 1
+	warp_event 26, 19, WESTPORT_NAME_RATER, 1
+	warp_event 13,  5, WESTPORT_DEPT_STORE_1F, 1
 	warp_event 31,  7, RADIO_TOWER_1F, 1
-	warp_event 22,  5, ROUTE_35_GOLDENROD_GATE, 3
-	warp_event 25, 14, GOLDENROD_POKECENTER_1F, 1
-	warp_event 14,  5, GOLDENROD_DEPT_STORE_1F, 2
-	warp_event 23,  5, ROUTE_35_GOLDENROD_GATE, 4
+	warp_event 22,  5, ROUTE_103_WESTPORT_GATE, 3
+	warp_event 25, 14, WESTPORT_POKECENTER_1F, 1
+	warp_event 14,  5, WESTPORT_DEPT_STORE_1F, 2
+	warp_event 23,  5, ROUTE_103_WESTPORT_GATE, 4
 	warp_event 32,  7, RADIO_TOWER_1F, 2
-	warp_event 15, 19, AZALEA_GYM, 2
-	warp_event 18, 12, GOLDENROD_PP_SPEECH_HOUSE, 1
-	warp_event  4,  8, OLIVINE_PORT_PASSAGE, 1
-	warp_event  4,  9, OLIVINE_PORT_PASSAGE, 2
-	warp_event 11, 14, GOLDENROD_UNDERGROUND, 12
+	warp_event 15, 19, WESTPORT_GYM, 2
+	warp_event 18, 12, WESTPORT_PP_SPEECH_HOUSE, 1
+	warp_event  4,  8, WESTPORT_PORT_PASSAGE, 1
+	warp_event  4,  9, WESTPORT_PORT_PASSAGE, 2
+	warp_event 11, 14, WESTPORT_UNDERGROUND, 12
 
 	db 2 ; coord events
 	coord_event 31,  8, SCENE_GOLDENROD_CITY_RIVAL, RivalAfterRadioTower1

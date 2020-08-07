@@ -69,8 +69,8 @@ FastShip1FSailor1Script:
 	special FadeOutPalettes
 	waitsfx
 	setevent EVENT_VERMILION_PORT_SAILOR_AT_GANGWAY
-	setmapscene VERMILION_PORT, SCENE_VERMILIONPORT_LEAVE_SHIP
-	warp VERMILION_PORT, 7, 17
+	setmapscene AMAMI_PORT, SCENE_VERMILIONPORT_LEAVE_SHIP
+	warp AMAMI_PORT, 7, 17
 	end
 
 ._Olivine:
@@ -82,8 +82,8 @@ FastShip1FSailor1Script:
 	special FadeOutPalettes
 	waitsfx
 	setevent EVENT_OLIVINE_PORT_SAILOR_AT_GANGWAY
-	setmapscene OLIVINE_PORT, SCENE_OLIVINEPORT_LEAVE_SHIP
-	warp OLIVINE_PORT, 7, 23
+	setmapscene WESTPORT_PORT, SCENE_OLIVINEPORT_LEAVE_SHIP
+	warp WESTPORT_PORT, 7, 23
 	end
 
 .LetThePlayerOut:

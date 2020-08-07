@@ -91,11 +91,11 @@ YoronCity_MapEvents:
 	db 0, 0 ; filler
 
 	db 6 ; warp events
-	warp_event  7,  6, CERULEAN_MART, 1
-	warp_event 25, 18, PEWTER_POKECENTER_1F, 1
-	warp_event  7, 25, PEWTER_NIDORAN_SPEECH_HOUSE, 1
-	warp_event 21, 13, PEWTER_SNOOZE_SPEECH_HOUSE, 1
-	warp_event 17, 23, PEWTER_GYM, 1
+	warp_event  7,  6, NAGO_MART, 1
+	warp_event 25, 18, YORON_POKECENTER_1F, 1
+	warp_event  7, 25, YORON_PARTS_SHOP, 1
+	warp_event 21, 13, YORON_SNOOZE_SPEECH_HOUSE, 1
+	warp_event 17, 23, YORON_SOCIAL_HOUSE, 1
 	warp_event 15,  5, ICED_CAVERN_1F, 8
 
 	db 0 ; coord events

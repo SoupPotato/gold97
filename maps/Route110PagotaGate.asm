@@ -39,8 +39,8 @@ Route110PagotaGate_MapEvents:
 	db 0, 0 ; filler
 
 	db 5 ; warp events
-	warp_event  4,  0, OLD_CITY, 9
-	warp_event  5,  0, OLD_CITY, 8
+	warp_event  4,  0, PAGOTA_CITY, 9
+	warp_event  5,  0, PAGOTA_CITY, 8
 	warp_event  4,  7, ROUTE_29, 5
 	warp_event  5,  7, ROUTE_29, 6
 	warp_event  1,  0, ROUTE_31_VIOLET_GATE_2F, 1

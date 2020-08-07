@@ -51,8 +51,8 @@ WestpointPokecenter1F_MapEvents:
 	db 0, 0 ; filler
 
 	db 3 ; warp events
-	warp_event  5,  7, GOLDENROD_CITY, 8
-	warp_event  6,  7, GOLDENROD_CITY, 8
+	warp_event  5,  7, WESTPORT_CITY, 8
+	warp_event  6,  7, WESTPORT_CITY, 8
 	warp_event  0,  7, POKECENTER_2F, 1
 
 	db 0 ; coord events

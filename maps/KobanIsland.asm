@@ -155,11 +155,11 @@ KobanIsland_MapEvents:
 	db 0, 0 ; filler
 
 	db 5 ; warp events
-	warp_event  5,  5, SUGAR_HOUSE_1, 1
-	warp_event  5, 10, SUGAR_MART, 1
-	warp_event  9, 10, LAVENDER_POKECENTER_1F, 1
-	warp_event 15,  9, SUGAR_HOUSE_2, 1
-	warp_event 13,  5, DRAGONS_DEN_B1F, 1
+	warp_event  5,  5, KOBAN_CLAIRS_HOUSE, 1
+	warp_event  5, 10, KOBAN_MART, 1
+	warp_event  9, 10, KOBAN_POKECENTER_1F, 1
+	warp_event 15,  9, KOBAN_FISHER_HOUSE, 1
+	warp_event 13,  5, DRAGONS_MAW, 1
 
 	db 0 ; coord events
 

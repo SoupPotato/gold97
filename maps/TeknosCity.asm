@@ -452,8 +452,8 @@ TeknosCity_MapEvents:
 	warp_event  7, 27, TEKNOS_AQUARIUM_1F, 1
 	warp_event 31, 16, TEKNOS_MART, 1
 	warp_event 15, 17, TEKNOS_GRAMPS_ITEMFINDER_HOUSE, 1
-	warp_event 22,  1, ROUTE_43_MAHOGANY_GATE, 3
-	warp_event 23,  1, ROUTE_43_MAHOGANY_GATE, 4
+	warp_event 22,  1, BOARDWALK_TEKNOS_GATE, 3
+	warp_event 23,  1, BOARDWALK_TEKNOS_GATE, 4
 	warp_event 10, 11, TEKNOS_GYM, 1
 	warp_event 11, 11, TEKNOS_GYM, 2
 	warp_event 33, 20, TEKNOS_KYLES_HOUSE, 1

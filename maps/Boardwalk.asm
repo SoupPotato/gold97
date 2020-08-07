@@ -394,12 +394,12 @@ Boardwalk_MapEvents:
 	db 0, 0 ; filler
 
 	db 8 ; warp events
-	warp_event  6, 51, ROUTE_43_MAHOGANY_GATE, 1
-	warp_event  7, 51, ROUTE_43_MAHOGANY_GATE, 2
-	warp_event 14,  9, ROUTE_43_GATE, 3
-	warp_event 14,  5, ROUTE_43_GATE, 1
-	warp_event 15,  5, ROUTE_43_GATE, 2
-	warp_event 15,  9, ROUTE_43_GATE, 4
+	warp_event  6, 51, BOARDWALK_TEKNOS_GATE, 1
+	warp_event  7, 51, BOARDWALK_TEKNOS_GATE, 2
+	warp_event 14,  9, BOARDWALK_SANSKRIT_GATE, 3
+	warp_event 14,  5, BOARDWALK_SANSKRIT_GATE, 1
+	warp_event 15,  5, BOARDWALK_SANSKRIT_GATE, 2
+	warp_event 15,  9, BOARDWALK_SANSKRIT_GATE, 4
 	warp_event 10, 23, BOARDWALK_GAME_CORNER, 1
 	warp_event 11, 23, BOARDWALK_GAME_CORNER, 2
 

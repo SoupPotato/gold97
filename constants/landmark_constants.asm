@@ -6,10 +6,10 @@
 	const SILENT_TOWN       ; 01
 	const ROUTE_29          ; 02
 	const ROUTE_37          ; 15
-	const OLD_CITY          ; 06
+	const PAGOTA_CITY       ; 06
 	const BRASS_TOWER       ; 07
 	const ROUTE_36          ; 14
-	const GOLDENROD_CITY    ; 10
+	const WESTPORT_CITY     ; 10
 	const RADIO_TOWER       ; 11
 	const ROUTE_103         ; 12
 	const BIRDON_TOWN       ; 0c
@@ -34,7 +34,7 @@
 	const ROUTE_106         ; 05
 	const ALLOY_CITY        ; 1b
 	const ROUTE_107         ; 56
-	const PALLET_TOWN       ; 2f
+	const KOBAN_ISLAND      ; 2f
 	const DRAGONS_DEN       ; 2a
 	const ROUTE_108         ; 19
 	const ROUTE_109         ; 1a
@@ -85,7 +85,7 @@ KANTO_LANDMARK EQU const_value
 	const LAVENDER_TOWN     ; 45
 	const LAV_RADIO_TOWER   ; 46
 	const SILVER_CAVE       ; 2e
-	const PEWTER_CITY       ; 33 1
+	const YORON_CITY        ; 33 1
 	const ICED_CAVERN       ; 3e 10
 	const ROUTE_24          ; 38 4
 	const ROUTE_19          ; 52
@@ -99,7 +99,7 @@ KANTO_LANDMARK EQU const_value
 	const ROUTE_20          ; 53
 	const ROUTE_10          ; 43 8
 	const JOULE_CAVE        ; 3b 6
-	const VERMILION_CITY    ; 3d 7
+	const AMAMI_TOWN        ; 3d 7
 	const FAST_SHIP         ; 5f
 
 ; used in CaughtData

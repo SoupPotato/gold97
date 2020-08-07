@@ -133,7 +133,7 @@ GiovanniEncounter:
 	waitbutton
 	closetext
 	setscene SCENE_RADIOTOWER6F_NOTHING; this scene is also set when you meet silver right at the beginning, then re set as part of the jump to radiotowerrockets
-	setmapscene GOLDENROD_CITY, SCENE_GOLDENROD_CITY_RIVAL
+	setmapscene WESTPORT_CITY, SCENE_GOLDENROD_CITY_RIVAL
 	end
 	
 TwoStepsToGiovanni:

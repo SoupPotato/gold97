@@ -30,7 +30,7 @@ TeleportGuyScript2:
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx
-	warp VERMILION_PORT_PASSAGE, 13, 2
+	warp AMAMI_PORT_PASSAGE, 13, 2
 	end
 
 .No2:
@@ -100,11 +100,11 @@ WestportPortPassage_MapEvents:
 	db 0, 0 ; filler
 
 	db 5 ; warp events
-	warp_event 19,  4, GOLDENROD_CITY, 14
-	warp_event 19,  5, GOLDENROD_CITY, 15
-	warp_event 15,  4, OLIVINE_PORT_PASSAGE, 4
-	warp_event  3,  2, OLIVINE_PORT_PASSAGE, 3
-	warp_event  3, 14, OLIVINE_PORT, 1
+	warp_event 19,  4, WESTPORT_CITY, 14
+	warp_event 19,  5, WESTPORT_CITY, 15
+	warp_event 15,  4, WESTPORT_PORT_PASSAGE, 4
+	warp_event  3,  2, WESTPORT_PORT_PASSAGE, 3
+	warp_event  3, 14, WESTPORT_PORT, 1
 
 	db 0 ; coord events
 

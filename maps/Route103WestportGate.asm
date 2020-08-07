@@ -156,8 +156,8 @@ Route103WestportGate_MapEvents:
 	db 4 ; warp events
 	warp_event  4,  0, ROUTE_103, 1
 	warp_event  5,  0, ROUTE_103, 2
-	warp_event  4,  7, GOLDENROD_CITY, 7
-	warp_event  5,  7, GOLDENROD_CITY, 10
+	warp_event  4,  7, WESTPORT_CITY, 7
+	warp_event  5,  7, WESTPORT_CITY, 10
 
 	db 0 ; coord events
 

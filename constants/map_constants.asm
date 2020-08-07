@@ -187,104 +187,102 @@ ENDM
 
 	newgroup                                                      ;  9
 
-	map_const ROUTE_43_MAHOGANY_GATE,                       5,  4 ;  3
-	map_const ROUTE_43_GATE,                                5,  4 ;  4
-	map_const ROUTE_37,                                    25, 18 ;  4
+	map_const BOARDWALK_TEKNOS_GATE,                        5,  4 ;  3
+	map_const BOARDWALK_SANSKRIT_GATE,                      5,  4 ;  4
+	map_const SILENT_HILLS,                                25, 18 ;  4
 
 	newgroup                                                      ; 10
 
-	map_const ROUTE_36,                                    30,  9 ;  3
-	map_const OLD_CITY,                                 20, 18 ;  5
-	map_const VIOLET_MART,                                  8,  4 ;  6
-	map_const VIOLET_GYM,                                   5,  8 ;  7
-	map_const EARLS_POKEMON_ACADEMY,                        4,  8 ;  8
-	map_const VIOLET_NICKNAME_SPEECH_HOUSE,                 4,  4 ;  9
-	map_const VIOLET_POKECENTER_1F,                         8,  4 ; 10
-	map_const ROUTE_35_GOLDENROD_GATE,                      5,  4 ; 14
-	map_const ROUTE_36_RUINS_OF_ALPH_GATE,                  5,  4 ; 16
-	map_const NEW_VIOLET_GATE_NORTH,                        5,  4 ; 18
-	map_const NEW_VIOLET_GATE_NORTH_2F,                     4,  3 ; 18
+	map_const ROUTE_102,                                   30,  9 ;  3
+	map_const PAGOTA_CITY,                                 20, 18 ;  5
+	map_const PAGOTA_MART,                                  8,  4 ;  6
+	map_const PAGOTA_GYM,                                   5,  8 ;  7
+	map_const PAGOTA_TRAINER_SCHOOL,                        4,  8 ;  8
+	map_const PAGOTA_NICKNAME_SPEECH_HOUSE,                 4,  4 ;  9
+	map_const PAGOTA_POKECENTER_1F,                         8,  4 ; 10
+	map_const ROUTE_103_WESTPORT_GATE,                      5,  4 ; 14
+	map_const ROUTE_112_STAND_CITY_GATE,                    5,  4 ; 16
+	map_const ROUTE_102_WESTPORT_GATE,                      5,  4 ; 18
+	map_const ROUTE_102_WESTPORT_GATE_2F,                   4,  3 ; 18
 	map_const KURTS_HOUSE,                                  8,  4 ;  4
-	map_const BILLS_HOUSE,                                  8,  4 ; 11
+	map_const EARLS_ART_HOUSE,                              8,  4 ; 11
 	map_const BILLS_FAMILYS_HOUSE,                          4,  4 ;  6
-	map_const GOLDENROD_FLOWER_SHOP,                        4,  4 ;  8 ;n64 house
-	map_const DRAGONS_DEN_B1F,                             20, 18 ; 81
+	map_const ROUTE_102_N64_HOUSE,                          4,  4 ;  8 ;n64 house
+	map_const DRAGONS_MAW,                                 20, 18 ; 81
 
 	newgroup                                                      ; 11
 
-	map_const GOLDENROD_CITY,                              20, 18 ;  2
-	map_const GOLDENROD_BIKE_SHOP,                          4,  4 ;  4
-	map_const GOLDENROD_HAPPINESS_RATER,                    5,  4 ;  5
-	map_const GOLDENROD_PP_SPEECH_HOUSE,                    5,  4 ;  9
-	map_const GOLDENROD_NAME_RATER,                         5,  4 ; 10
-	map_const GOLDENROD_DEPT_STORE_1F,                      8,  4 ; 11
-	map_const GOLDENROD_DEPT_STORE_2F,                      8,  4 ; 12
-	map_const GOLDENROD_DEPT_STORE_3F,                      8,  4 ; 13
-	map_const GOLDENROD_DEPT_STORE_4F,                      8,  4 ; 14
-	map_const GOLDENROD_DEPT_STORE_5F,                      8,  4 ; 15
-	map_const GOLDENROD_DEPT_STORE_6F,                      8,  4 ; 16
-	map_const GOLDENROD_DEPT_STORE_ELEVATOR,                2,  2 ; 17
-	map_const GOLDENROD_DEPT_STORE_ROOF,                    8,  4 ; 18
-	map_const GOLDENROD_POKECENTER_1F,                      8,  4 ; 20
-	map_const ILEX_FOREST_AZALEA_GATE,                      5,  4 ; 22
-	map_const ROUTE_34_ILEX_FOREST_GATE,                    5,  4 ; 23
-	map_const GOLDENROD_UNDERGROUND,                       15, 18 ; 53
+	map_const WESTPORT_CITY,                               20, 18 ;  2
+	map_const WESTPORT_BIKE_SHOP,                           4,  4 ;  4
+	map_const WESTPORT_HAPPINESS_RATER,                     5,  4 ;  5
+	map_const WESTPORT_PP_SPEECH_HOUSE,                     5,  4 ;  9
+	map_const WESTPORT_NAME_RATER,                          5,  4 ; 10
+	map_const WESTPORT_DEPT_STORE_1F,                       8,  4 ; 11
+	map_const WESTPORT_DEPT_STORE_2F,                       8,  4 ; 12
+	map_const WESTPORT_DEPT_STORE_3F,                       8,  4 ; 13
+	map_const WESTPORT_DEPT_STORE_4F,                       8,  4 ; 14
+	map_const WESTPORT_DEPT_STORE_5F,                       8,  4 ; 15
+	map_const WESTPORT_DEPT_STORE_6F,                       8,  4 ; 16
+	map_const WESTPORT_DEPT_STORE_ELEVATOR,                 2,  2 ; 17
+	map_const WESTPORT_DEPT_STORE_ROOF,                     8,  4 ; 18
+	map_const WESTPORT_POKECENTER_1F,                       8,  4 ; 20
+	map_const ROUTE_115_KANTO_GATE,                         5,  4 ; 22
+	map_const ROUTE_113_ROUTE_114_GATE,                     5,  4 ; 23
+	map_const WESTPORT_UNDERGROUND,                        15, 18 ; 53
 	map_const RADIO_TOWER_1F,                               4,  4 ; 17
 	map_const RADIO_TOWER_2F,                               4,  4 ; 18
 	map_const RADIO_TOWER_3F,                               4,  4 ; 19
 	map_const RADIO_TOWER_4F,                               4,  4 ; 20
 	map_const RADIO_TOWER_5F,                               4,  4 ; 21
 	map_const RADIO_TOWER_6F,                               4,  4 ; 21
-	map_const AZALEA_GYM,                                   5,  9 ;  5
-	map_const OLIVINE_PORT_PASSAGE,                        10,  9 ;  8
+	map_const WESTPORT_GYM,                                 5,  9 ;  5
+	map_const WESTPORT_PORT_PASSAGE,                       10,  9 ;  8
 
 	newgroup                                                      ; 12
 
-	map_const ROUTE_11,                                    20,  9 ;  2
-	map_const VERMILION_CITY,                              20,  9 ;  3
-	map_const VERMILION_FISHING_SPEECH_HOUSE,               5,  4 ;  4
-	map_const VERMILION_POKECENTER_1F,                      8,  4 ;  5
-	map_const VERMILION_MART,                               8,  4 ;  9
-	map_const VERMILION_DIGLETTS_CAVE_SPEECH_HOUSE,         5,  4 ; 10
-	map_const VERMILION_GYM,                               10,  9 ; 11
-	map_const ROUTE_6_SAFFRON_GATE,                         5,  4 ; 12
-	map_const ROUTE_6_UNDERGROUND_PATH_ENTRANCE,            4,  4 ; 13
-	map_const ROUTE_10_NORTH,                              30,  9 ; 14
-	map_const ROUTE_12_SUPER_ROD_HOUSE,                     5,  4 ; 14
+	map_const AMAMI_TOWN,                                  20,  9 ;  3
+	map_const AMAMI_FISHING_SPEECH_HOUSE,                   5,  4 ;  4
+	map_const AMAMI_POKECENTER_1F,                          8,  4 ;  5
+	map_const AMAMI_MART,                                   8,  4 ;  9
+	map_const NAGO_SPEECH_HOUSE,                            5,  4 ; 10
+	map_const AMAMI_SWIMMING_POOL,                         10,  9 ; 11
+	map_const RYUKYU_URASOE_GATE,                           5,  4 ; 12
+	map_const SEASIDE_PATH,                                30,  9 ; 14
+	map_const URASOE_TRAIL_SUPER_ROD_HOUSE,                 5,  4 ; 14
 
 	newgroup                                                      ; 13
 
-	map_const PALLET_TOWN,                                 10,  9 ;  2
-	map_const LAVENDER_POKECENTER_1F,                       8,  4 ;  5
-	map_const SUGAR_MART,									8,  4 ; 
-	map_const SUGAR_HOUSE_2,      				            4,  4 ;  6
-	map_const SUGAR_HOUSE_1,      				            5,  4 ;  6
-	map_const ROUTE_107,                                    10, 27 ;  7
+	map_const KOBAN_ISLAND,                                10,  9 ;  2
+	map_const KOBAN_POKECENTER_1F,                          8,  4 ;  5
+	map_const KOBAN_MART,									8,  4 ; 
+	map_const KOBAN_FISHER_HOUSE,      				        4,  4 ;  6
+	map_const KOBAN_CLAIRS_HOUSE,      				        5,  4 ;  6
+	map_const ROUTE_107,                                   10, 27 ;  7
 
 	newgroup                                                      ; 14
 
-	map_const PEWTER_CITY,                                 20, 18 ;  2
-	map_const PEWTER_NIDORAN_SPEECH_HOUSE,                  4,  4 ;  3
-	map_const PEWTER_GYM,                                   5,  4 ;  4
-	map_const PEWTER_POKECENTER_1F,                         8,  4 ;  6
-	map_const PEWTER_SNOOZE_SPEECH_HOUSE,                   5,  4 ;  8
-	map_const CERULEAN_MART,                                8,  4 ;  7
-	map_const ROUTE_12,                                    10, 18 ;  2
-	map_const ROUTE_19,                                    30,  9 ;  5
-	map_const ROUTE_24,                                    10,  9 ; 15
+	map_const YORON_CITY,                                 20, 18 ;  2
+	map_const YORON_PARTS_SHOP,                            4,  4 ;  3
+	map_const YORON_SOCIAL_HOUSE,                          5,  4 ;  4
+	map_const YORON_POKECENTER_1F,                         8,  4 ;  6
+	map_const YORON_SNOOZE_SPEECH_HOUSE,                   5,  4 ;  8
+	map_const NAGO_MART,                                   8,  4 ;  7
+	map_const URASOE_TRAIL,                               10, 18 ;  2
+	map_const KERAMA_STRAIT,                              30,  9 ;  5
+	map_const YORON_POINT,                                10,  9 ; 15
 
 	newgroup                                                      ; 15
 
-	map_const OLIVINE_PORT,                                10, 18 ;  1
-	map_const TEKU_PORT,								   10,  9 ;
-	map_const VERMILION_PORT,                              10, 18 ;  2
+	map_const WESTPORT_PORT,                                10, 18 ;  1
+	map_const TEKNOS_PORT,								   10,  9 ;
+	map_const AMAMI_PORT,                              10, 18 ;  2
 	map_const FAST_SHIP_1F,                                16,  9 ;  3
 	map_const FAST_SHIP_CABINS_NNW_NNE_NE,                  4, 16 ;  4
 	map_const FAST_SHIP_CABINS_SW_SSW_NW,                   4, 16 ;  5
 	map_const FAST_SHIP_CABINS_SE_SSE_CAPTAINS_CABIN,       5, 17 ;  6
 	map_const FAST_SHIP_B1F,                               16,  8 ;  7
-	map_const VERMILION_PORT_PASSAGE,                      10,  9 ;  9
-	map_const TIN_TOWER_ROOF,                              10,  9 ; 12
+	map_const AMAMI_PORT_PASSAGE,                      10,  9 ;  9
+	map_const BRASS_TOWER_ROOF,                              10,  9 ; 12
 
 	newgroup                                                      ; 16
 

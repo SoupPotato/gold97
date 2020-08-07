@@ -511,9 +511,9 @@ InitRoamMons:
 	ld [wRoamMon1MapNumber], a
 
 ; entei starting map
-	ld a, GROUP_ROUTE_37
+	ld a, GROUP_SILENT_HILLS
 	ld [wRoamMon2MapGroup], a
-	ld a, MAP_ROUTE_37
+	ld a, MAP_SILENT_HILLS
 	ld [wRoamMon2MapNumber], a
 
 ; hp

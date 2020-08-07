@@ -35,11 +35,11 @@ Route102WestportGate_MapEvents:
 	db 0, 0 ; filler
 
 	db 5 ; warp events
-	warp_event  0,  7, GOLDENROD_CITY, 3
-	warp_event  1,  7, GOLDENROD_CITY, 3
-	warp_event  8,  7, ROUTE_36, 1
-	warp_event  9,  7, ROUTE_36, 1
-	warp_event  1,  0, NEW_VIOLET_GATE_NORTH_2F, 1
+	warp_event  0,  7, WESTPORT_CITY, 3
+	warp_event  1,  7, WESTPORT_CITY, 3
+	warp_event  8,  7, ROUTE_102, 1
+	warp_event  9,  7, ROUTE_102, 1
+	warp_event  1,  0, ROUTE_102_WESTPORT_GATE_2F, 1
 
 	db 0 ; coord events
 

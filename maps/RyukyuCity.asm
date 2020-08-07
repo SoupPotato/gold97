@@ -144,8 +144,8 @@ RyukyuCity_MapEvents:
 	warp_event 29, 26, SAFFRON_MART, 1
 	warp_event 11,  4, SAFFRON_POKECENTER_1F, 1
 	warp_event 33, 11, RYUKYU_CITY_MERIDIAN_PATH_GATE, 1
-	warp_event 22, 31, ROUTE_6_SAFFRON_GATE, 1
-	warp_event 23, 31, ROUTE_6_SAFFRON_GATE, 2
+	warp_event 22, 31, RYUKYU_URASOE_GATE, 1
+	warp_event 23, 31, RYUKYU_URASOE_GATE, 2
 	warp_event 23,  7, MR_PSYCHICS_HOUSE, 1
 	warp_event 28, 18, CERULEAN_TRADE_SPEECH_HOUSE, 1
 	warp_event 27,  8, SAFFRON_MAGNET_TRAIN_STATION, 1

@@ -227,8 +227,8 @@ Route114_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event 28,  5, ROUTE_34_ILEX_FOREST_GATE, 3
-	warp_event 29,  5, ROUTE_34_ILEX_FOREST_GATE, 4
+	warp_event 28,  5, ROUTE_113_ROUTE_114_GATE, 3
+	warp_event 29,  5, ROUTE_113_ROUTE_114_GATE, 4
 
 	db 0 ; coord events
 

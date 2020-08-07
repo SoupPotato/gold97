@@ -331,8 +331,8 @@ Route103_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event 12, 49, ROUTE_35_GOLDENROD_GATE, 1
-	warp_event 13, 49, ROUTE_35_GOLDENROD_GATE, 2
+	warp_event 12, 49, ROUTE_103_WESTPORT_GATE, 1
+	warp_event 13, 49, ROUTE_103_WESTPORT_GATE, 2
 
 	db 1 ; coord events
 	coord_event  8, 14, SCENE_DEFAULT, SlowpokeVendor

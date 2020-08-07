@@ -110,7 +110,7 @@ BlueForestTrainerTips:
 	jumptext BlueForestTrainerTipsText
 
 BlueForestPokecenterSign:
-	;setmapscene ROUTE_36_RUINS_OF_ALPH_GATE, SCENE_DEFAULT
+	;setmapscene ROUTE_112_STAND_CITY_GATE, SCENE_DEFAULT
 	;clearevent EVENT_GAVE_KENYA
 	jumpstd pokecentersign
 

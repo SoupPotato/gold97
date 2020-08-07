@@ -41,8 +41,8 @@ KobanMart_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  4,  7, PALLET_TOWN, 2
-	warp_event  5,  7, PALLET_TOWN, 2
+	warp_event  4,  7, KOBAN_ISLAND, 2
+	warp_event  5,  7, KOBAN_ISLAND, 2
 
 	db 0 ; coord events
 

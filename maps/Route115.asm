@@ -490,7 +490,7 @@ Route115_MapEvents:
 	db 0, 0 ; filler
 
 	db 1 ; warp events
-	warp_event 53,  9, ILEX_FOREST_AZALEA_GATE, 1
+	warp_event 53,  9, ROUTE_115_KANTO_GATE, 1
 
 	db 0 ; coord events
 

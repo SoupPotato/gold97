@@ -261,8 +261,8 @@ NanjoForest_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  0, 18, ROUTE_12, 3
-	warp_event  0, 19, ROUTE_12, 4
+	warp_event  0, 18, URASOE_TRAIL, 3
+	warp_event  0, 19, URASOE_TRAIL, 4
 
 	db 0 ; coord events
 

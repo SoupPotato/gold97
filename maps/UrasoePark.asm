@@ -127,8 +127,8 @@ UrasoePark_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
-	warp_event 22,  1, ROUTE_6_SAFFRON_GATE, 3
-	warp_event 23,  1, ROUTE_6_SAFFRON_GATE, 4
+	warp_event 22,  1, RYUKYU_URASOE_GATE, 3
+	warp_event 23,  1, RYUKYU_URASOE_GATE, 4
 	warp_event 18, 13, ROUTE_8_SAFFRON_GATE, 1
 	warp_event 19, 13, ROUTE_8_SAFFRON_GATE, 2
 

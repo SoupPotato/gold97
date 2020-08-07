@@ -464,8 +464,8 @@ RadioTower1F_MapEvents:
 	db 0, 0 ; filler
 
 	db 3 ; warp events
-	warp_event  2,  7, GOLDENROD_CITY, 6
-	warp_event  3,  7, GOLDENROD_CITY, 11
+	warp_event  2,  7, WESTPORT_CITY, 6
+	warp_event  3,  7, WESTPORT_CITY, 11
 	warp_event  7,  0, RADIO_TOWER_2F, 2
 
 	db 0 ; coord events

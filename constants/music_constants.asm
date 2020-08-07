@@ -47,7 +47,7 @@
 	const MUSIC_JOHTO_TRAINER_BATTLE         ; 2a
 	const MUSIC_ROUTE_30                     ; 2b
 	const MUSIC_ECRUTEAK_CITY                ; 2c
-	const MUSIC_OLD_CITY                  ; 2d
+	const MUSIC_VIOLET_CITY                  ; 2d
 	const MUSIC_JOHTO_GYM_LEADER_BATTLE      ; 2e
 	const MUSIC_CHAMPION_BATTLE              ; 2f
 	const MUSIC_RIVAL_BATTLE                 ; 30

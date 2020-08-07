@@ -15,7 +15,7 @@ TeknosPortPassage_MapEvents:
 	warp_event 14, 14, TEKNOS_CITY, 2
 	warp_event 14, 16, TEKNOS_PORT_PASSAGE, 4
 	warp_event 3, 2, TEKNOS_PORT_PASSAGE, 3
-	warp_event 3, 14, TEKU_PORT, 1
+	warp_event 3, 14, TEKNOS_PORT, 1
 
 	db 0 ; coord events
 

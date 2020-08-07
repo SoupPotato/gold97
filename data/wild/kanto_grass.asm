@@ -2,7 +2,7 @@
 
 KantoGrassWildMons:
 
-	map_id ROUTE_10_NORTH
+	map_id SEASIDE_PATH
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 32, FEAROW
@@ -110,7 +110,7 @@ KantoGrassWildMons:
 	db 32, CHANSEY
 	db 33, CHANSEY
 	
-	map_id ROUTE_12
+	map_id URASOE_TRAIL
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 32, PIDGEOTTO
@@ -137,7 +137,7 @@ KantoGrassWildMons:
 	db 33, NOCTOWL
 	db 33, NOCTOWL
 
-	map_id ROUTE_24
+	map_id YORON_POINT
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 42, PIDGEOTTO

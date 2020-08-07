@@ -5,13 +5,13 @@
 
 JohtoWaterWildMons:
 
-	map_id OLD_CITY
+	map_id PAGOTA_CITY
 	db 2 percent ; encounter rate
 	db 18, POLIWAG
 	db 15, POLIWAG
 	db 18, POLIWHIRL
 	
-	map_id GOLDENROD_CITY
+	map_id WESTPORT_CITY
 	db 2 percent ; encounter rate
 	db 18, MAGIKARP
 	db 15, MAGIKARP
@@ -173,7 +173,7 @@ JohtoWaterWildMons:
 	db 15, SLOWPOKE
 	db 18, SEEL
 
-	map_id DRAGONS_DEN_B1F
+	map_id DRAGONS_MAW
 	db 4 percent ; encounter rate
 	db 28, SEEL
 	db 28, DEWGONG

@@ -185,8 +185,8 @@ BrassTower1F_MapEvents:
 	db 0, 0 ; filler
 
 	db 3 ; warp events
-	warp_event  5, 11, OLD_CITY, 7
-	warp_event  6, 11, OLD_CITY, 11
+	warp_event  5, 11, PAGOTA_CITY, 7
+	warp_event  6, 11, PAGOTA_CITY, 11
 	warp_event  0,  1, BRASS_TOWER_2F, 1
 
 
