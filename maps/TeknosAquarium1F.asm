@@ -394,9 +394,9 @@ TeknosAquarium1F_MapEvents:
 	db 0, 0 ; filler
 
 	db 3 ; warp events
-	warp_event 12,  7, ECRUTEAK_CITY, 5
-	warp_event 13,  7, ECRUTEAK_CITY, 6
-	warp_event  0,  7, OLIVINE_LIGHTHOUSE_2F, 1
+	warp_event 12,  7, TEKNOS_CITY, 5
+	warp_event 13,  7, TEKNOS_CITY, 6
+	warp_event  0,  7, TEKNOS_AQUARIUM_2F, 1
 
 	db 0 ; coord events
 

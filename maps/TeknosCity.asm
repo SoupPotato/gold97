@@ -81,7 +81,7 @@ SceneRocketTakeOverScript:
 	applymovement ECRUTEAKCITY_LASS3, LassRun2
 	disappear ECRUTEAKCITY_LASS3
 	setevent EVENT_ECRUTEAK_SCARED_LASS
-	setmapscene OLIVINE_LIGHTHOUSE_1F, SCENE_DEFAULT
+	setmapscene TEKNOS_AQUARIUM_1F, SCENE_DEFAULT
 	end
 	
 .SceneEcruteakNothing:
@@ -444,19 +444,19 @@ TeknosCity_MapEvents:
 	db 0, 0 ; filler
 
 	db 13 ; warp events
-	warp_event 22, 31, TEKU_PORT_PASSAGE, 1
-	warp_event 23, 31, TEKU_PORT_PASSAGE, 2
-	warp_event 31, 10, ECRUTEAK_POKECENTER_1F, 1
-	warp_event  7, 17, ECRUTEAK_BLISSEY_SPEECH_HOUSE, 1
-	warp_event  6, 27, OLIVINE_LIGHTHOUSE_1F, 1
-	warp_event  7, 27, OLIVINE_LIGHTHOUSE_1F, 1
-	warp_event 31, 16, ECRUTEAK_MART, 1
-	warp_event 15, 17, ECRUTEAK_ITEMFINDER_HOUSE, 1
+	warp_event 22, 31, TEKNOS_PORT_PASSAGE, 1
+	warp_event 23, 31, TEKNOS_PORT_PASSAGE, 2
+	warp_event 31, 10, TEKNOS_POKECENTER_1F, 1
+	warp_event  7, 17, TEKNOS_OLD_ROD_HOUSE, 1
+	warp_event  6, 27, TEKNOS_AQUARIUM_1F, 1
+	warp_event  7, 27, TEKNOS_AQUARIUM_1F, 1
+	warp_event 31, 16, TEKNOS_MART, 1
+	warp_event 15, 17, TEKNOS_GRAMPS_ITEMFINDER_HOUSE, 1
 	warp_event 22,  1, ROUTE_43_MAHOGANY_GATE, 3
 	warp_event 23,  1, ROUTE_43_MAHOGANY_GATE, 4
-	warp_event 10, 11, GOLDENROD_GYM, 1
-	warp_event 11, 11, GOLDENROD_GYM, 2
-	warp_event 33, 20, VIOLET_KYLES_HOUSE, 1
+	warp_event 10, 11, TEKNOS_GYM, 1
+	warp_event 11, 11, TEKNOS_GYM, 2
+	warp_event 33, 20, TEKNOS_KYLES_HOUSE, 1
 
 	db 1 ; coord events
 	coord_event 15, 18, SCENE_ECRUTEAK_ROCKET_TAKEOVER, SceneRocketTakeOverScript

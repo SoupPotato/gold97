@@ -241,7 +241,7 @@ Route110_MapEvents:
 	db 3 ; warp events
 	warp_event  6, 13, ROUTE_109_ROUTE_110_GATE, 3
 	warp_event  7, 13, ROUTE_109_ROUTE_110_GATE, 4
-	warp_event  9,  5, ROUTE_27_SANDSTORM_HOUSE, 1
+	warp_event  9,  5, ROUTE_110_SANDSTORM_HOUSE, 1
 
 	db 0 ; coord events
 

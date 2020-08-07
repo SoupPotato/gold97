@@ -183,17 +183,17 @@ BirdonTown_MapEvents:
 	db 0, 0 ; filler
 
 	db 10 ; warp events
-	warp_event 15,  4, AZALEA_POKECENTER_1F, 1
-	warp_event  3, 13, CHARCOAL_KILN, 1
-	warp_event  3,  4, AZALEA_MART, 1
-	warp_event  4,  9, CHERRYGROVE_GYM_SPEECH_HOUSE, 1
-	warp_event 14, 15, ECRUTEAK_GYM, 1
+	warp_event 15,  4, BIRDON_POKECENTER_1F, 1
+	warp_event  3, 13, BIRDON_CAFE, 1
+	warp_event  3,  4, BIRDON_MART, 1
+	warp_event  4,  9, BIRDON_ELDERS_HOUSE, 1
+	warp_event 14, 15, BIRDON_GYM, 1
 	warp_event  9,  9, SLOWPOKE_WELL_B1F, 1
 	;warp_event  9,  9, VERMILION_POKECENTER_1F, 1
-	warp_event  8,  5, ROUTE_2_GATE, 3
-	warp_event  9,  5, ROUTE_2_GATE, 4
-	warp_event 15, 15, ECRUTEAK_GYM, 2
-	warp_event  9, 13, CHERRYGROVE_EVOLUTION_SPEECH_HOUSE, 1
+	warp_event  8,  5, ROUTE_116_GATE, 3
+	warp_event  9,  5, ROUTE_116_GATE, 4
+	warp_event 15, 15, BIRDON_GYM, 2
+	warp_event  9, 13, BIRDON_SPEECH_HOUSE, 1
 
 	db 0 ; coord events
 

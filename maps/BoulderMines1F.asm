@@ -17,7 +17,7 @@ BoulderMines1F_MapScripts:
 
 
 GirlInMineScript:
-	setmapscene ROUTE_8, SCENE_ROUTE8_GIRL_AND_GRAMPS
+	setmapscene ROUTE_120, SCENE_ROUTE8_GIRL_AND_GRAMPS
 	faceplayer
 	opentext
 	writetext Text_FoundMe
@@ -144,7 +144,7 @@ BoulderMines1F_MapEvents:
 	db 0, 0 ; filler
 
 	db 7 ; warp events
-	warp_event  2, 15, ROUTE_8, 1
+	warp_event  2, 15, ROUTE_120, 1
 	warp_event 31,  5, BOULDER_MINES_B1F, 3
 	warp_event 43,  5, BOULDER_MINES_B1F, 4
 	warp_event 53, 13, BOULDER_MINES_B1F, 7

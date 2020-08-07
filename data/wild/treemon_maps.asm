@@ -6,31 +6,31 @@ ENDM
 TreeMonMaps:
 	treemon_map ROUTE_29,                  TREEMON_SET_ROUTE
 	treemon_map ROUTE_37,                  TREEMON_SET_ROUTE
-	treemon_map ROUTE_8,                   TREEMON_SET_ROUTE
-	treemon_map ROUTE_7,                   TREEMON_SET_LAKE
-	treemon_map ROUTE_118,                   TREEMON_SET_LAKE
-	treemon_map ROUTE_108,                  TREEMON_SET_KANTO
-	treemon_map ROUTE_109,                  TREEMON_SET_KANTO
+	treemon_map ROUTE_120,                 TREEMON_SET_ROUTE
+	treemon_map ROUTE_119,                 TREEMON_SET_LAKE
+	treemon_map ROUTE_118,                 TREEMON_SET_LAKE
+	treemon_map ROUTE_108,                 TREEMON_SET_KANTO
+	treemon_map ROUTE_109,                 TREEMON_SET_KANTO
 	treemon_map ROUTE_34,                  TREEMON_SET_KANTO
-	treemon_map ROUTE_32,                  TREEMON_SET_KANTO
+	treemon_map ROUTE_112,                 TREEMON_SET_KANTO
 	treemon_map ROUTE_10_NORTH,            TREEMON_SET_KANTO
 	treemon_map ROUTE_27,                  TREEMON_SET_ROUTE
 	treemon_map ROUTE_12,                  TREEMON_SET_ROUTE
-	treemon_map ROUTE_25,                  TREEMON_SET_ROUTE
-	treemon_map EASTWARD_SUMMIT,           TREEMON_SET_ROUTE
-	treemon_map ROUTE_117,                   TREEMON_SET_ROUTE
+	treemon_map MERIDIAN_PATH,             TREEMON_SET_ROUTE
+	treemon_map CHARRED_SUMMIT,            TREEMON_SET_ROUTE
+	treemon_map ROUTE_117,                 TREEMON_SET_ROUTE
 	treemon_map RUINS_OF_ALPH_OUTSIDE,     TREEMON_SET_LAKE
-	treemon_map ECRUTEAK_CITY,             TREEMON_SET_CITY
-	treemon_map STAND_CITY,              TREEMON_SET_CITY
+	treemon_map TEKNOS_CITY,               TREEMON_SET_CITY
+	treemon_map STAND_CITY,                TREEMON_SET_CITY
 	treemon_map CHERRYGROVE_CITY,          TREEMON_SET_CITY
 	treemon_map VERMILION_CITY,            TREEMON_SET_CITY
 	treemon_map PEWTER_CITY,               TREEMON_SET_CITY
-	treemon_map ALLOY_CITY,              TREEMON_SET_CITY
+	treemon_map ALLOY_CITY,                TREEMON_SET_CITY
 	treemon_map SANSKRIT_TOWN,             TREEMON_SET_TOWN
-	treemon_map CERULEAN_CITY,             TREEMON_SET_TOWN
+	treemon_map NAGO_VILLAGE,              TREEMON_SET_TOWN
 	treemon_map PALLET_TOWN,               TREEMON_SET_LAKE
 	treemon_map JADE_FOREST,               TREEMON_SET_FOREST
-	treemon_map NANJO_FOREST,          TREEMON_SET_FOREST
+	treemon_map NANJO_FOREST,              TREEMON_SET_FOREST
 	treemon_map NATIONAL_PARK,             TREEMON_SET_ROUTE
 
 	db -1

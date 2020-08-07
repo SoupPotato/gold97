@@ -9,8 +9,7 @@ MapScenes::
 	scene_var TRADE_CENTER,                                wTradeCenterSceneID
 	scene_var COLOSSEUM,                                   wColosseumSceneID
 	scene_var TIME_CAPSULE,                                wTimeCapsuleSceneID
-	scene_var CERULEAN_GYM,                                wCeruleanGymSceneID
-	scene_var ROUTE_25,                                    wRoute25SceneID
+	scene_var MERIDIAN_PATH,                               wRoute25SceneID
 	scene_var VICTORY_ROAD_GATE,                           wVictoryRoadGateSceneID
 	scene_var SAFFRON_MAGNET_TRAIN_STATION,                wSaffronMagnetTrainStationSceneID
 	scene_var ROUTE_17_ROUTE_18_GATE,                      wRoute17Route18GateSceneID
@@ -28,18 +27,14 @@ MapScenes::
 	scene_var PLAYERS_HOUSE_1F,                            wPlayersHouse1FSceneID
 	scene_var ROUTE_29,                                    wRoute29SceneID
 	scene_var CHERRYGROVE_CITY,                            wCherrygroveCitySceneID
-	scene_var ROUTE_32,                                    wRoute32SceneID
+	scene_var ROUTE_112,                                    wRoute32SceneID
 	scene_var ROUTE_36,                                    wRoute36SceneID
 	scene_var ROUTE_36_NATIONAL_PARK_GATE,                 wRoute36NationalParkGateSceneID
-	scene_var AZALEA_TOWN,                                 wAzaleaTownSceneID
-	scene_var GOLDENROD_GYM,                               wGoldenrodGymSceneID
+	scene_var BIRDON_TOWN,                                 wAzaleaTownSceneID
 	scene_var GOLDENROD_MAGNET_TRAIN_STATION,              wGoldenrodMagnetTrainStationSceneID
 	scene_var GOLDENROD_POKECENTER_1F,                     wGoldenrodPokecenter1FSceneID
 	scene_var ALLOY_CITY,                                  wOlivineCitySceneID
-	scene_var ROUTE_34,                                    wRoute34SceneID ; unused
-	scene_var ROUTE_34_ILEX_FOREST_GATE,                   wRoute34IlexForestGateSceneID ; unused
-	scene_var ECRUTEAK_POKECENTER_1F,                      wEcruteakPokecenter1FSceneID
-	scene_var ECRUTEAK_GYM,                                wEcruteakGymSceneID
+	scene_var TEKNOS_POKECENTER_1F,                        wEcruteakPokecenter1FSceneID
 	scene_var SANSKRIT_TOWN,                               wMahoganyTownSceneID
 	scene_var CIANWOOD_CITY,                               wCianwoodCitySceneID
 	scene_var BATTLE_TOWER_1F,                             wBattleTower1FSceneID
@@ -75,9 +70,9 @@ MapScenes::
 	scene_var TEKU_PORT,								   wTekuPortSceneID
 	scene_var SLOWPOKE_WELL_B1F,						   wSlowpokeWellB1FSceneID
 	scene_var SLOWPOKE_WELL_B2F,						   wSlowpokeWellB2FSceneID
-	scene_var ROUTE_35,									   wRoute35SceneID
+	scene_var ROUTE_103,								   wRoute35SceneID
 	scene_var VIRIDIAN_GYM,								   wViridianGymSceneID
-	scene_var ROUTE_33,									   wRoute33SceneID
+	scene_var ROUTE_104,							       wRoute33SceneID
 	scene_var ROUTE_36_RUINS_OF_ALPH_GATE,				   wRoute36RuinsOfAlphGateSceneID
 	scene_var STAND_CITY,								   wFuchsiaCitySceneID
 	scene_var SAFARI_ZONE_WARDENS_HOME,					   wSafariZoneWardensHomeSceneID
@@ -91,8 +86,8 @@ MapScenes::
 	scene_var KANTO_BATTLE_CLUB_1F,						   wKantoBattleClub1FSceneID
 	scene_var CROWN_PASS,							       wUndergroundPathSceneID
 	scene_var SAFFRON_GYM,								   wSaffronGymSceneID
-	scene_var ROUTE_8,								  	   wRoute8SceneID
-	scene_var ECRUTEAK_CITY,							   wEcruteakCitySceneID
-	scene_var OLIVINE_LIGHTHOUSE_1F,					   wOlivineLighthouse1FID
-	scene_var OLIVINE_LIGHTHOUSE_2F,					   wOlivineLighthouse2FID
+	scene_var ROUTE_120,								   wRoute8SceneID
+	scene_var TEKNOS_CITY,							       wEcruteakCitySceneID
+	scene_var TEKNOS_AQUARIUM_1F,					       wOlivineLighthouse1FID
+	scene_var TEKNOS_AQUARIUM_2F,					       wOlivineLighthouse2FID
 	db -1

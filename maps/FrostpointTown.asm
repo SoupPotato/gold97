@@ -3,7 +3,7 @@
 	const NORTH_ISLAND_ROCKER
 	const NORTH_ISLAND_TEACHER
 
-FrostPoint_MapScripts:
+FrostpointTown_MapScripts:
 	db 0 ; scene scripts
 
 	db 1 ; callbacks
@@ -14,22 +14,22 @@ FrostPoint_MapScripts:
 	return
 
 
-FrostPointGymSign:
-	jumptext FrostPointGymSignText
+FrostpointTownGymSign:
+	jumptext FrostpointTownGymSignText
 
-FrostPointSign:
-	jumptext FrostPointSignText
+FrostpointTownSign:
+	jumptext FrostpointTownSignText
 
-FrostPointPokecenterSign:
+FrostpointTownPokecenterSign:
 	jumpstd pokecentersign
 	
-FrostPointMartSign:
+FrostpointTownMartSign:
 	jumpstd martsign
 
-FrostPointHiddenRareCandy:
+FrostpointTownHiddenRareCandy:
 	hiddenitem RARE_CANDY, EVENT_CINNABAR_ISLAND_HIDDEN_RARE_CANDY
 
-FrostPointBlueTeleport:
+FrostpointTownBlueTeleport:
 	teleport_from
 	step_end
 	
@@ -75,36 +75,36 @@ NorthIslandTeacherText:
 	cont "whirlpools."
 	done
 
-FrostPointGymSignText:
+FrostpointTownGymSignText:
 	text "DEEPWATER PASSAGE"
 	line "North Entrance"
 	done
 
-FrostPointSignText:
+FrostpointTownSignText:
 	text "NORTH ISLAND"
 
 	para "The frigid land"
 	line "of hardy people"
 	done
 
-FrostPoint_MapEvents:
+FrostpointTown_MapEvents:
 	db 0, 0 ; filler
 
 	db 5 ; warp events
-	warp_event 13, 12, CINNABAR_POKECENTER_1F, 1
+	warp_event 13, 12, FROSTPOINT_POKECENTER_1F, 1
 	warp_event 11,  5, DEEPWATER_PASSAGE_1F, 8
-	warp_event 15,  8, LAVENDER_MART, 1
-	warp_event  5,  7, LAVENDER_SPEECH_HOUSE, 1
-	warp_event  5, 11, LAVENDER_NAME_RATER, 1
+	warp_event 15,  8, FROSTPOINT_MART, 1
+	warp_event  5,  7, PRYCES_FAMILY_HOUSE, 1
+	warp_event  5, 11, FROSTPOINT_NAME_RATER, 1
 
 	db 0 ; coord events
 
 	db 5 ; bg events
-	bg_event 14, 12, BGEVENT_READ, FrostPointPokecenterSign
-	bg_event 16,  8, BGEVENT_READ, FrostPointMartSign
-	bg_event 12,  6, BGEVENT_READ, FrostPointGymSign
-	bg_event  8, 14, BGEVENT_READ, FrostPointSign
-	bg_event  8,  6, BGEVENT_ITEM, FrostPointHiddenRareCandy
+	bg_event 14, 12, BGEVENT_READ, FrostpointTownPokecenterSign
+	bg_event 16,  8, BGEVENT_READ, FrostpointTownMartSign
+	bg_event 12,  6, BGEVENT_READ, FrostpointTownGymSign
+	bg_event  8, 14, BGEVENT_READ, FrostpointTownSign
+	bg_event  8,  6, BGEVENT_ITEM, FrostpointTownHiddenRareCandy
 
 	db 3 ; object events
 	object_event  8, 11, SPRITE_TWIN, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NorthIslandTwinScript, -1

@@ -543,8 +543,8 @@ Route106_MapEvents:
 	db 0, 0 ; filler
 
 	db 9 ; warp events
-	warp_event  8,  5, NEW_ECRUTEAK_GATE_SOUTH, 3
-	warp_event  9,  5, NEW_ECRUTEAK_GATE_SOUTH, 4
+	warp_event  8,  5, ROUTE_105_ROUTE_106_GATE, 3
+	warp_event  9,  5, ROUTE_105_ROUTE_106_GATE, 4
 	warp_event 15, 12, JADE_FOREST, 1
 	warp_event 15, 13, JADE_FOREST, 2
 	warp_event 24,  8, JADE_FOREST, 3

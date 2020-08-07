@@ -67,8 +67,8 @@ BlueForestNightmareHouse_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  4,  7, BLACKTHORN_CITY, 7
-	warp_event  5,  7, BLACKTHORN_CITY, 7
+	warp_event  4,  7, BLUE_FOREST, 7
+	warp_event  5,  7, BLUE_FOREST, 7
 
 	db 0 ; coord events
 

@@ -54,9 +54,9 @@ NagoVillage_MapEvents:
 	db 0, 0 ; filler
 
 	db 3 ; warp events
-	warp_event  5,  4, CERULEAN_POKECENTER_1F, 1
-	warp_event 10, 15, CERULEAN_POLICE_STATION, 1
-	warp_event  5, 21, VERMILION_MAGNET_TRAIN_SPEECH_HOUSE, 1
+	warp_event  5,  4, NAGO_POKECENTER_1F, 1
+	warp_event 10, 15, NAGO_IMPOSTER_HOUSE, 1
+	warp_event  5, 21, NAGO_CHARMANDER_HOUSE, 1
 
 	db 0 ; coord events
 

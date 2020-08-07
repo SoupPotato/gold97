@@ -419,7 +419,7 @@ Route104_MapEvents:
 	db 0, 0 ; filler
 
 	db 1 ; warp events
-	warp_event 55,  7, ROUTE_30_BERRY_HOUSE, 1
+	warp_event 55,  7, ROUTE_104_GARDENERS_HOUSE, 1
 
 	db 2 ; coord events
 	coord_event 52, 12, SCENE_DEFAULT, GardenerStopsYou

@@ -176,7 +176,7 @@ JohtoGrassWildMons:
 	db 10, GASTLY
 
 	
-	map_id ROUTE_8
+	map_id ROUTE_120
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 12, MAREEP
@@ -366,7 +366,7 @@ JohtoGrassWildMons:
 	db 12, ONIX
 	db 14, ONIX
 
-	map_id ROUTE_35
+	map_id ROUTE_103
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 14, NIDORAN_F
@@ -609,7 +609,7 @@ JohtoGrassWildMons:
 	db 24, VENOMOTH
 	db 26, VENOMOTH
 
-	map_id ROUTE_33
+	map_id ROUTE_104
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 17, DODUO
@@ -636,7 +636,7 @@ JohtoGrassWildMons:
 	db 18, TWINBORUS
 	db 20, TWINBORUS
 
-	map_id ROUTE_30
+	map_id ROUTE_105
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	db 28, DODUO
@@ -933,7 +933,7 @@ JohtoGrassWildMons:
 	db 31, GOLBAT
 	db 32, GOLBAT
 
-	map_id ROUTE_32
+	map_id ROUTE_112
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 32, RATICATE

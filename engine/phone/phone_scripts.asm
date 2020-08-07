@@ -34,7 +34,7 @@ MomPhonePalette1:
 	ifequal GROUP_SILENT_TOWN, .newbark
 	ifequal GROUP_CHERRYGROVE_CITY, .cherrygrove
 	ifequal GROUP_OLD_CITY, .violet
-	ifequal GROUP_AZALEA_TOWN, .azalea
+	ifequal GROUP_BIRDON_TOWN, .azalea
 	ifequal GROUP_GOLDENROD_CITY, .goldenrod
 	ifequal GROUP_CIANWOOD_CITY, .cianwood
 	ifequal GROUP_PALLET_TOWN, .pallet
@@ -647,7 +647,7 @@ JoeyPhoneScript1:
 	farjump UnknownScript_0xa0930
 
 .WantsBattle:
-	landmarktotext ROUTE_30, MEM_BUFFER_2
+	landmarktotext ROUTE_105, MEM_BUFFER_2
 	farjump UnknownScript_0xa0a4b
 
 JoeyPhoneScript2:
@@ -668,7 +668,7 @@ JoeyMondayAfternoon:
 	setflag ENGINE_JOEY_MONDAY_AFTERNOON
 
 JoeyWantsBattle:
-	landmarktotext ROUTE_30, MEM_BUFFER_2
+	landmarktotext ROUTE_105, MEM_BUFFER_2
 	setflag ENGINE_JOEY
 	farjump PhoneScript_WantsToBattle_Male
 
@@ -869,7 +869,7 @@ LizPhoneScript1:
 	farjump UnknownScript_0xa0948
 
 .WantsBattle:
-	landmarktotext ROUTE_32, MEM_BUFFER_2
+	landmarktotext ROUTE_112, MEM_BUFFER_2
 	farjump UnknownScript_0xa0a5a
 
 LizPhoneScript2:
@@ -897,7 +897,7 @@ LizThursdayAfternoon:
 	setflag ENGINE_LIZ_THURSDAY_AFTERNOON
 
 LizWantsBattle:
-	landmarktotext ROUTE_32, MEM_BUFFER_2
+	landmarktotext ROUTE_112, MEM_BUFFER_2
 	setflag ENGINE_LIZ
 	farjump PhoneScript_WantsToBattle_Female
 
@@ -1198,11 +1198,11 @@ ArniePhoneScript1:
 	farjump UnknownScript_0xa0968
 
 .WantsBattle:
-	landmarktotext ROUTE_35, MEM_BUFFER_2
+	landmarktotext ROUTE_103, MEM_BUFFER_2
 	farjump UnknownScript_0xa0a6e
 
 .AlreadySwarming:
-	landmarktotext ROUTE_35, MEM_BUFFER_2
+	landmarktotext ROUTE_103, MEM_BUFFER_2
 	farjump UnknownScript_0xa0aff
 
 ArniePhoneScript2:
@@ -1226,7 +1226,7 @@ ArnieTuesdayMorning:
 	setflag ENGINE_ARNIE_TUESDAY_MORNING
 
 ArnieWantsBattle:
-	landmarktotext ROUTE_35, MEM_BUFFER_2
+	landmarktotext ROUTE_103, MEM_BUFFER_2
 	setflag ENGINE_ARNIE
 	farjump PhoneScript_WantsToBattle_Male
 
@@ -1235,8 +1235,8 @@ ArnieOsunfishSwarm: ; start swarm
 	iftrue ArnieOsunfishAlreadySwarming
 	setflag ENGINE_OSUNFISH_SWARM
 	pokenamemem OSUNFISH, MEM_BUFFER_1
-	swarm SWARM_OSUNFISH, ROUTE_35
-	landmarktotext ROUTE_35, MEM_BUFFER_2
+	swarm SWARM_OSUNFISH, ROUTE_103
+	landmarktotext ROUTE_103, MEM_BUFFER_2
 	farjump UnknownScript_0xa05ce
 
 ArnieFoundRare:

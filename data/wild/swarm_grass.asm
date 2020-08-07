@@ -31,7 +31,7 @@ SwarmGrassWildMons:
 	db 15, PIKACHU
 
 ; Osunfish swarm
-	map_id ROUTE_35
+	map_id ROUTE_103
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 12, NIDORAN_M

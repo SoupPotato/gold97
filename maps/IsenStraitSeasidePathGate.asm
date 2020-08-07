@@ -39,8 +39,8 @@ IsenStraitSeasidePathGate_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
-	warp_event  0,  7, ROUTE_20, 1
-	warp_event  1,  7, ROUTE_20, 1
+	warp_event  0,  7, ISEN_STRAIT, 1
+	warp_event  1,  7, ISEN_STRAIT, 1
 	warp_event  8,  7, ROUTE_10_NORTH, 1
 	warp_event  9,  7, ROUTE_10_NORTH, 1
 

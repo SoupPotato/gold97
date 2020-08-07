@@ -10,14 +10,14 @@ Flypoints:
 	flypoint SILENT,       SILENT_TOWN
 	flypoint VIOLET,       OLD_CITY
 	flypoint GOLDENROD,    GOLDENROD_CITY
-	flypoint AZALEA,       AZALEA_TOWN
+	flypoint BIRDON,       BIRDON_TOWN
 	flypoint SANSKRIT,     SANSKRIT_TOWN
 	flypoint CIANWOOD,     CIANWOOD_CITY
-	flypoint ECRUTEAK,     ECRUTEAK_CITY
+	flypoint TEKNOS,       TEKNOS_CITY
 	flypoint ALLOY,        ALLOY_CITY
 	flypoint PALLET,       PALLET_TOWN
-	flypoint BLACKTHORN,   BLACKTHORN_CITY
-	flypoint CINNABAR,     CINNABAR_ISLAND
+	flypoint BLUEFOREST,   BLUE_FOREST
+	flypoint FROSTPOINT,   FROSTPOINT_TOWN
 	flypoint STAND,        STAND_CITY
 	flypoint CELADON,      CELADON_CITY
 	flypoint CHERRYGROVE,  CHERRYGROVE_CITY
@@ -27,6 +27,6 @@ Flypoints:
 KANTO_FLYPOINT EQU const_value
 	flypoint PEWTER,       PEWTER_CITY
 	flypoint SAFFRON,      SAFFRON_CITY
-	flypoint CERULEAN,     CERULEAN_CITY
+	flypoint NAGO,         NAGO_VILLAGE
 	flypoint VERMILION,    VERMILION_CITY
 	db -1

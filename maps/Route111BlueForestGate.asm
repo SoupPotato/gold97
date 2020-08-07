@@ -36,10 +36,10 @@ Route111BlueForestGate_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
-	warp_event  4,  0, ROUTE_41, 2
-	warp_event  5,  0, ROUTE_41, 3
-	warp_event  4,  7, BLACKTHORN_CITY, 9
-	warp_event  5,  7, BLACKTHORN_CITY, 10
+	warp_event  4,  0, ROUTE_111, 2
+	warp_event  5,  0, ROUTE_111, 3
+	warp_event  4,  7, BLUE_FOREST, 9
+	warp_event  5,  7, BLUE_FOREST, 10
 
 	db 0 ; coord events
 

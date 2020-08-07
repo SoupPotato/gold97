@@ -346,8 +346,8 @@ TeknosGym_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  2, 17, ECRUTEAK_CITY, 11
-	warp_event  3, 17, ECRUTEAK_CITY, 12
+	warp_event  2, 17, TEKNOS_CITY, 11
+	warp_event  3, 17, TEKNOS_CITY, 12
 
 	db 0 ; coord events
 

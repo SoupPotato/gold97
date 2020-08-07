@@ -158,7 +158,7 @@ SlowpokeWellB1F_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  9, 11, AZALEA_TOWN, 6
+	warp_event  9, 11, BIRDON_TOWN, 6
 	warp_event  9,  1, SLOWPOKE_WELL_B2F, 1
 
 	db 0 ; coord events

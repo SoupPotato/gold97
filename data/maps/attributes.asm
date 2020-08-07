@@ -110,24 +110,24 @@ ENDM
 	map_attributes PagotaCity, OLD_CITY, $05, WEST
 	connection west, Route102, ROUTE_36, 5
 
-	map_attributes BirdonTown, AZALEA_TOWN, $4B, SOUTH | EAST
-	connection south, Route103, ROUTE_35, 0
-	connection east, Route104, ROUTE_33, 0
+	map_attributes BirdonTown, BIRDON_TOWN, $4B, SOUTH | EAST
+	connection south, Route103, ROUTE_103, 0
+	connection east, Route104, ROUTE_104, 0
 
 	map_attributes SunpointCity, CIANWOOD_CITY, $34, EAST
-	connection east, Route111, ROUTE_41, 0
+	connection east, Route111, ROUTE_111, 0
 
 	map_attributes WestportCity, GOLDENROD_CITY, $35, NORTH | EAST
-	connection north, Route103, ROUTE_35, 5
+	connection north, Route103, ROUTE_103, 5
 	connection east, Route102, ROUTE_36, 5
 
 	map_attributes AlloyCity, ALLOY_CITY, $05, WEST | EAST
 	connection west, Route106, ROUTE_106, 0
 	connection east, Route108, ROUTE_108, 9
 
-	map_attributes TeknosCity, ECRUTEAK_CITY, $07, NORTH | WEST
+	map_attributes TeknosCity, TEKNOS_CITY, $07, NORTH | WEST
 	connection north, Boardwalk, BOARDWALK, 8
-	connection west, Route120, ROUTE_8, 0
+	connection west, Route120, ROUTE_120, 0
 
 	map_attributes SanskritTown, SANSKRIT_TOWN, $07, NORTH | SOUTH | WEST | EAST
 	connection north, RuinsOfAlphOutside, RUINS_OF_ALPH_OUTSIDE, 0
@@ -138,9 +138,9 @@ ENDM
 	map_attributes RuinsOfAlphOutside, RUINS_OF_ALPH_OUTSIDE, $07, SOUTH
 	connection south, SanskritTown, SANSKRIT_TOWN, 0
 
-	map_attributes BlueForest, BLACKTHORN_CITY, $3C, NORTH | SOUTH | WEST
-	connection north, Route111, ROUTE_41, 5
-	connection south, Route112, ROUTE_32, 5
+	map_attributes BlueForest, BLUE_FOREST, $3C, NORTH | SOUTH | WEST
+	connection north, Route111, ROUTE_111, 5
+	connection south, Route112, ROUTE_112, 5
 	connection west, Route110, ROUTE_110, 9
 
 	map_attributes Route115, ROUTE_27, $35, WEST | EAST
@@ -149,25 +149,25 @@ ENDM
 	map_attributes Route101, ROUTE_29, $05, EAST
 	connection east, SilentTown, SILENT_TOWN, 6
 
-	map_attributes Route105, ROUTE_30, $33, SOUTH | WEST
+	map_attributes Route105, ROUTE_105, $33, SOUTH | WEST
 	connection south, Route106, ROUTE_106, 0
-	connection west, Route104, ROUTE_33, 0
+	connection west, Route104, ROUTE_104, 0
 
 	map_attributes Route106, ROUTE_106, $05, EAST
 	connection east, AlloyCity, ALLOY_CITY, 0
 
-	map_attributes Route112, ROUTE_32, $3C, NORTH
-	connection north, BlueForest, BLACKTHORN_CITY, -5
+	map_attributes Route112, ROUTE_112, $3C, NORTH
+	connection north, BlueForest, BLUE_FOREST, -5
 
-	map_attributes Route104, ROUTE_33, $4B, WEST | EAST
-	connection west, BirdonTown, AZALEA_TOWN, 0
-	connection east, Route105, ROUTE_30, 0
+	map_attributes Route104, ROUTE_104, $4B, WEST | EAST
+	connection west, BirdonTown, BIRDON_TOWN, 0
+	connection east, Route105, ROUTE_105, 0
 
 	map_attributes Route113, ROUTE_34, $05, NORTH
 	connection north, StandCity, STAND_CITY, -10
 
-	map_attributes Route103, ROUTE_35, $4B, NORTH | SOUTH
-	connection north, BirdonTown, AZALEA_TOWN, 0
+	map_attributes Route103, ROUTE_103, $4B, NORTH | SOUTH
+	connection north, BirdonTown, BIRDON_TOWN, 0
 	connection south, WestportCity, GOLDENROD_CITY, -5
 
 	map_attributes Route102, ROUTE_36, $05, WEST | EAST
@@ -184,15 +184,15 @@ ENDM
 	connection west, Route108, ROUTE_108, 36
 
 	map_attributes Route110, ROUTE_110, $3C, EAST
-	connection east, BlueForest, BLACKTHORN_CITY, -9
+	connection east, BlueForest, BLUE_FOREST, -9
 
-	map_attributes Route111, ROUTE_41, $35, NORTH | SOUTH
-	connection north, FrostPoint, CINNABAR_ISLAND, 0
-	connection south, BlueForest, BLACKTHORN_CITY, -5
+	map_attributes Route111, ROUTE_111, $35, NORTH | SOUTH
+	connection north, FrostpointTown, FROSTPOINT_TOWN, 0
+	connection south, BlueForest, BLUE_FOREST, -5
 
 	map_attributes Boardwalk, BOARDWALK, $07, NORTH | SOUTH
 	connection north, SanskritTown, SANSKRIT_TOWN, 3
-	connection south, TeknosCity, ECRUTEAK_CITY, -8
+	connection south, TeknosCity, TEKNOS_CITY, -8
 
 	map_attributes YoronCity, PEWTER_CITY, $35, EAST
 	connection east, YoronPoint, ROUTE_24, 9
@@ -206,11 +206,11 @@ ENDM
 	map_attributes Route107, ROUTE_107, $07, NORTH
 	connection north, KobanIsland, PALLET_TOWN, 0
 
-	map_attributes FrostPoint, CINNABAR_ISLAND, $3C, SOUTH
-	connection south, Route111, ROUTE_41, 0
+	map_attributes FrostpointTown, FROSTPOINT_TOWN, $3C, SOUTH
+	connection south, Route111, ROUTE_111, 0
 
-	map_attributes IsenStrait, ROUTE_20, $35, WEST
-	connection west, NagoVillage, CERULEAN_CITY, 0
+	map_attributes IsenStrait, ISEN_STRAIT, $35, WEST
+	connection west, NagoVillage, NAGO_VILLAGE, 0
 
 	map_attributes KeramaStrait, ROUTE_19, $35, WEST | EAST
 	connection west, YoronPoint, ROUTE_24, 0
@@ -222,8 +222,8 @@ ENDM
 	map_attributes KantoCity, CELADON_CITY, $0f, EAST
 	connection east, Route114, ROUTE_9, 9
 
-	map_attributes Route119, ROUTE_7, $07, EAST
-	connection east, Route120, ROUTE_8, 18
+	map_attributes Route119, ROUTE_119, $07, EAST
+	connection east, Route120, ROUTE_120, 18
 
 	map_attributes UrasoeTrail, ROUTE_12, $35, WEST
 	connection west, KeramaStrait, ROUTE_19, 9
@@ -236,9 +236,9 @@ ENDM
 
 	map_attributes SunpointDocks, ROUTE_5, $0A, 0
 
-	map_attributes NagoVillage, CERULEAN_CITY, $35, SOUTH | EAST
-	connection south, MeridianPath, ROUTE_25, 0
-	connection east, IsenStrait, ROUTE_20, 0
+	map_attributes NagoVillage, NAGO_VILLAGE, $35, SOUTH | EAST
+	connection south, MeridianPath, MERIDIAN_PATH, 0
+	connection east, IsenStrait, ISEN_STRAIT, 0
 
 	map_attributes Route114, ROUTE_9, $0f, WEST
 	connection west, KantoCity, CELADON_CITY, -9
@@ -247,9 +247,9 @@ ENDM
 	connection west, YoronCity, PEWTER_CITY, -9
 	connection east, KeramaStrait, ROUTE_19, 0
 
-	map_attributes MeridianPath, ROUTE_25, $35, NORTH | EAST
-	connection north, NagoVillage, CERULEAN_CITY, 0
-	connection east, CharredSummit, EASTWARD_SUMMIT, 9
+	map_attributes MeridianPath, MERIDIAN_PATH, $35, NORTH | EAST
+	connection north, NagoVillage, NAGO_VILLAGE, 0
+	connection east, CharredSummit, CHARRED_SUMMIT, 9
 
 	map_attributes Route117, ROUTE_117, $65, WEST | EAST
 	connection west, SanskritTown, SANSKRIT_TOWN, 0
@@ -258,9 +258,9 @@ ENDM
 	map_attributes Route118, ROUTE_118, $07, EAST
 	connection east, SanskritTown, SANSKRIT_TOWN, 0
 
-	map_attributes Route120, ROUTE_8, $07, WEST | EAST
-	connection west, Route119, ROUTE_7, -18
-	connection east, TeknosCity, ECRUTEAK_CITY, 0
+	map_attributes Route120, ROUTE_120, $07, WEST | EAST
+	connection west, Route119, ROUTE_119, -18
+	connection east, TeknosCity, TEKNOS_CITY, 0
 
 	map_attributes SeasidePath, ROUTE_10_NORTH, $07, NORTH
 	connection north, AmamiTown, VERMILION_CITY, 0
@@ -271,8 +271,8 @@ ENDM
 	map_attributes IndigoPlateau, ROUTE_23, $05, SOUTH
 	connection south, VictoryRoadOutside, MOUNT_MOON_SQUARE, 0
 	
-	map_attributes CharredSummit, EASTWARD_SUMMIT, $35, WEST
-	connection west, MeridianPath, ROUTE_25, -9
+	map_attributes CharredSummit, CHARRED_SUMMIT, $35, WEST
+	connection west, MeridianPath, MERIDIAN_PATH, -9
 
 	map_attributes BrassTower1F, BRASS_TOWER_1F, $00, 0
 	map_attributes BrassTower2F, BRASS_TOWER_2F, $00, 0
@@ -298,13 +298,13 @@ ENDM
 	map_attributes BoulderMinesB5F, BOULDER_MINES_B5F, $09, 0
 	map_attributes SlowpokeWellB1F, SLOWPOKE_WELL_B1F, $09, 0
 	map_attributes SlowpokeWellB2F, SLOWPOKE_WELL_B2F, $09, 0
-	map_attributes TeknosAquarium1F, OLIVINE_LIGHTHOUSE_1F, $00, 0
-	map_attributes TeknosAquarium2F, OLIVINE_LIGHTHOUSE_2F, $00, 0
+	map_attributes TeknosAquarium1F, TEKNOS_AQUARIUM_1F, $00, 0
+	map_attributes TeknosAquarium2F, TEKNOS_AQUARIUM_2F, $00, 0
 	map_attributes EndonCaveB1F, ENDON_CAVE_B1F, $09, 0
 	map_attributes KobanMart, SUGAR_MART, $00, 0
 	map_attributes KobanClairsHouse, SUGAR_HOUSE_1, $00, 0
 	map_attributes KobanFisherHouse, SUGAR_HOUSE_2, $00, 0
-	map_attributes BlueForestNightmareHouse, BLUEFOREST_HOUSE_1, $00, 0
+	map_attributes BlueForestNightmareHouse, BLUE_FOREST_NIGHTMARE_HOUSE, $00, 0
 	map_attributes TeamRocketBaseB2FOffice, TEAM_ROCKET_BASE_B2F_OFFICE, $00, 0
 	map_attributes TeamRocketBaseB1F, TEAM_ROCKET_BASE_B1F, $00, 0
 	map_attributes TeamRocketBaseB2F, TEAM_ROCKET_BASE_B2F, $00, 0
@@ -341,7 +341,7 @@ ENDM
 	map_attributes AlloyMart, ALLOY_MART, $00, 0
 	map_attributes Route109Route110Gate, ROUTE_109_ROUTE_110_GATE, $00, 0
 	map_attributes SanskritCoinCaseSpeechHouse, ROUTE_110, $00, 0
-	map_attributes BlueForestGym, MAHOGANY_GYM, $00, 0
+	map_attributes BlueForestGym, BLUE_FOREST_GYM, $00, 0
 	map_attributes SanskritPokecenter1F, SANSKRIT_POKECENTER_1F, $00, 0
 	map_attributes EndonCave1F, ENDON_CAVE_1F, $09, 0
 	map_attributes BoulderMinesB4F, BOULDER_MINES_B4F, $09, 0
@@ -351,30 +351,30 @@ ENDM
 	map_attributes NanjoForest, NANJO_FOREST, $00, 0
 	map_attributes VictoryRoad, VICTORY_ROAD, $09, 0
 	map_attributes VictoryRoad2F, VICTORY_ROAD_2F, $09, 0
-	map_attributes TeknosPokecenter1F, ECRUTEAK_POKECENTER_1F, $00, 0
-	map_attributes TeknosOldRodHouse, ECRUTEAK_BLISSEY_SPEECH_HOUSE, $00, 0
+	map_attributes TeknosPokecenter1F, TEKNOS_POKECENTER_1F, $00, 0
+	map_attributes TeknosOldRodHouse, TEKNOS_OLD_ROD_HOUSE, $00, 0
 	map_attributes KantoFossilLab, DANCE_THEATRE, $00, 0
-	map_attributes TeknosMart, ECRUTEAK_MART, $00, 0
-	map_attributes BirdonGym, ECRUTEAK_GYM, $00, 0
-	map_attributes WestportElderItemfinderHouse, ECRUTEAK_ITEMFINDER_HOUSE, $00, 0
-	map_attributes ResearchFacilityBackRoom, BLACKTHORN_GYM_1F, $00, 0
-	map_attributes ResearchFacilityEntrance, BLACKTHORN_GYM_2F, $00, 0
-	map_attributes BlueForestSpeechHouse, BLACKTHORN_DRAGON_SPEECH_HOUSE, $00, 0
-	map_attributes BlueForestEmysHouse, BLACKTHORN_EMYS_HOUSE, $00, 0
-	map_attributes BlueForestMart, BLACKTHORN_MART, $00, 0
-	map_attributes BlueForestPokecenter1F, BLACKTHORN_POKECENTER_1F, $00, 0
+	map_attributes TeknosMart, TEKNOS_MART, $00, 0
+	map_attributes BirdonGym, BIRDON_GYM, $00, 0
+	map_attributes TeknosGrampsItemfinderHouse, TEKNOS_GRAMPS_ITEMFINDER_HOUSE, $00, 0
+	map_attributes ResearchFacilityBackRoom, RESEARCH_FACILITY_BACK_ROOM, $00, 0
+	map_attributes ResearchFacilityEntrance, RESEARCH_FACILITY_ENTRANCE, $00, 0
+	map_attributes BlueForestSpeechHouse, BLUE_FOREST_SPEECH_HOUSE, $00, 0
+	map_attributes BlueForestEmysHouse, BLUE_FOREST_EMYS_HOUSE, $00, 0
+	map_attributes BlueForestMart, BLUE_FOREST_MART, $00, 0
+	map_attributes BlueForestPokecenter1F, BLUE_FOREST_POKECENTER_1F, $00, 0
 	map_attributes MoveDeletersHouse, MOVE_DELETERS_HOUSE, $00, 0
-	map_attributes FrostpointPokecenter1F, CINNABAR_POKECENTER_1F, $00, 0
-	map_attributes RyukyuCityMeridianPathGate, ROUTE_19_FUCHSIA_GATE, $00, 0
-	map_attributes NagoImposterHouse, CERULEAN_POLICE_STATION, $00, 0
-	map_attributes NagoPokecenter1F, CERULEAN_POKECENTER_1F, $00, 0
-	map_attributes JadeForestSnorlaxRoom, CERULEAN_GYM, $05, 0
+	map_attributes FrostpointPokecenter1F, FROSTPOINT_POKECENTER_1F, $00, 0
+	map_attributes RyukyuCityMeridianPathGate, RYUKYU_CITY_MERIDIAN_PATH_GATE, $00, 0
+	map_attributes NagoImposterHouse, NAGO_IMPOSTER_HOUSE, $00, 0
+	map_attributes NagoPokecenter1F, NAGO_POKECENTER_1F, $00, 0
+	map_attributes JadeForestSnorlaxRoom, JADE_FOREST_SNORLAX_ROOM, $05, 0
 	map_attributes NagoMart, CERULEAN_MART, $00, 0
 	map_attributes Route109Pokecenter1F, ROUTE_109_POKECENTER_1F, $00, 0
 	map_attributes EarlsArtHouse, BILLS_HOUSE, $00, 0
-	map_attributes BirdonPokecenter1F, AZALEA_POKECENTER_1F, $00, 0
-	map_attributes BirdonCafe, CHARCOAL_KILN, $00, 0
-	map_attributes BirdonMart, AZALEA_MART, $00, 0
+	map_attributes BirdonPokecenter1F, BIRDON_POKECENTER_1F, $00, 0
+	map_attributes BirdonCafe, BIRDON_CAFE, $00, 0
+	map_attributes BirdonMart, BIRDON_MART, $00, 0
 	map_attributes KurtsHouse, KURTS_HOUSE, $00, 0
 	map_attributes WestportGym, AZALEA_GYM, $00, 0
 	map_attributes BoardwalkTeknosGate, ROUTE_43_MAHOGANY_GATE, $00, 0
@@ -384,12 +384,12 @@ ENDM
 	map_attributes PagotaTrainerSchool, EARLS_POKEMON_ACADEMY, $00, 0
 	map_attributes PagotaNicknameSpeechHouse, VIOLET_NICKNAME_SPEECH_HOUSE, $00, 0
 	map_attributes PagotaPokecenter1F, VIOLET_POKECENTER_1F, $00, 0
-	map_attributes TeknosKylesHouse, VIOLET_KYLES_HOUSE, $00, 0
+	map_attributes TeknosKylesHouse, TEKNOS_KYLES_HOUSE, $00, 0
 	map_attributes Route106Pokecenter1F, ROUTE_106_POKECENTER_1F, $00, 0
 	map_attributes Route103WestportGate, ROUTE_35_GOLDENROD_GATE, $00, 0
 	map_attributes Route112StandCityGate, ROUTE_36_RUINS_OF_ALPH_GATE, $00, 0
 	map_attributes NationalParkStandGate, ROUTE_36_NATIONAL_PARK_GATE, $00, 0
-	map_attributes TeknosGym, GOLDENROD_GYM, $00, 0
+	map_attributes TeknosGym, TEKNOS_GYM, $00, 0
 	map_attributes WestportBikeShop, GOLDENROD_BIKE_SHOP, $00, 0
 	map_attributes WestportHappinessRater, GOLDENROD_HAPPINESS_RATER, $00, 0
 	map_attributes BillsFamilysHouse, BILLS_FAMILYS_HOUSE, $00, 0
@@ -412,7 +412,7 @@ ENDM
 	map_attributes DayCare, DAY_CARE, $00, 0
 	map_attributes AmamiFishingSpeechHouse, VERMILION_FISHING_SPEECH_HOUSE, $00, 0
 	map_attributes AmamiPokecenter1F, VERMILION_POKECENTER_1F, $00, 0
-	map_attributes NagoCharmanderHouse, VERMILION_MAGNET_TRAIN_SPEECH_HOUSE, $00, 0
+	map_attributes NagoCharmanderHouse, NAGO_CHARMANDER_HOUSE, $00, 0
 	map_attributes AmamiMart, VERMILION_MART, $00, 0
 	map_attributes NagoSpeechHouse, VERMILION_DIGLETTS_CAVE_SPEECH_HOUSE, $00, 0
 	map_attributes AmamiSwimmingPool, VERMILION_GYM, $00, 0
@@ -451,9 +451,9 @@ ENDM
 	map_attributes StandRocketHouse2F, SAFARI_ZONE_WARDENS_HOME_2F, $00, 0
 	map_attributes Route119SunpointGate, ROUTE_15_FUCHSIA_GATE, $00, 0
 	map_attributes KobanPokecenter1F, LAVENDER_POKECENTER_1F, $00, 0
-	map_attributes PrycesFamilyHouse, LAVENDER_SPEECH_HOUSE, $00, 0
-	map_attributes FrostpointNameRater, LAVENDER_NAME_RATER, $00, 0
-	map_attributes FrostpointMart, LAVENDER_MART, $00, 0
+	map_attributes PrycesFamilyHouse, PRYCES_FAMILY_HOUSE, $00, 0
+	map_attributes FrostpointNameRater, FROSTPOINT_NAME_RATER, $00, 0
+	map_attributes FrostpointMart, FROSTPOINT_MART, $00, 0
 	map_attributes SanskritRocketHouse, SANSKRIT_ROCKET_HOUSE, $00, 0
 	map_attributes UrasoeParkUrasoeTrailGate, ROUTE_8_SAFFRON_GATE, $00, 0
 	map_attributes UrasoeTrailSuperRodHouse, ROUTE_12_SUPER_ROD_HOUSE, $00, 0
@@ -497,15 +497,15 @@ ENDM
 	map_attributes RocketShipBase, VIRIDIAN_GYM, $00, 0
 	map_attributes SanskritMart, SANSKRIT_MART, $00, 0
 	map_attributes SilentPokecenter1F, VIRIDIAN_POKECENTER_1F, $00, 0
-	map_attributes Route116Gate, ROUTE_2_GATE, $00, 0
+	map_attributes Route116Gate, ROUTE_116_GATE, $00, 0
 	map_attributes VictoryRoadGate, VICTORY_ROAD_GATE, $00, 0
 	map_attributes OaksLabEntrance, ELM_ENTRANCE, $00, 0
 	map_attributes OaksLab, ELMS_LAB, $00, 0
 	map_attributes PlayersHouse1F, PLAYERS_HOUSE_1F, $00, 0
 	map_attributes PlayersHouse2F, PLAYERS_HOUSE_2F, $00, 0
 	map_attributes SilentHouse, ELMS_HOUSE, $00, 0
-	map_attributes Route110SandstormHouse, ROUTE_27_SANDSTORM_HOUSE, $00, 0
-	map_attributes Route111BlueForestGate, ROUTE_29_ROUTE_46_GATE, $00, 0
+	map_attributes Route110SandstormHouse, ROUTE_110_SANDSTORM_HOUSE, $00, 0
+	map_attributes Route111BlueForestGate, ROUTE_111_BLUE_FOREST_GATE, $00, 0
 	map_attributes FightingDojo, FIGHTING_DOJO, $00, 0
 	map_attributes RyukyuFakeGym, SAFFRON_GYM, $00, 0
 	map_attributes RyukyuMart, SAFFRON_MART, $00, 0
@@ -516,18 +516,18 @@ ENDM
 	map_attributes SunPointDocksSunPointGate, ROUTE_5_SAFFRON_GATE, $00, 0
 	map_attributes CrownMart, CHERRYGROVE_MART, $00, 0
 	map_attributes CrownPokecenter1F, CHERRYGROVE_POKECENTER_1F, $00, 0
-	map_attributes BirdonEldersHouse, CHERRYGROVE_GYM_SPEECH_HOUSE, $00, 0
-	map_attributes BirdonSpeechHouse, CHERRYGROVE_EVOLUTION_SPEECH_HOUSE, $00, 0
-	map_attributes Route104GardenersHouse, ROUTE_30_BERRY_HOUSE, $00, 0
+	map_attributes BirdonEldersHouse, BIRDON_ELDERS_HOUSE, $00, 0
+	map_attributes BirdonSpeechHouse, BIRDON_SPEECH_HOUSE, $00, 0
+	map_attributes Route104GardenersHouse, ROUTE_104_GARDENERS_HOUSE, $00, 0
 	map_attributes Route110PagotaGate, ROUTE_31_VIOLET_GATE, $00, 0
 	map_attributes Route102WestportGate, NEW_VIOLET_GATE_NORTH, $00, 0
-	map_attributes Route105Route106Gate, NEW_ECRUTEAK_GATE_SOUTH, $00, 0
+	map_attributes Route105Route106Gate, ROUTE_105_ROUTE_106_GATE, $00, 0
 	map_attributes Route107AlloyGate, ROUTE_107_ALLOY_GATE, $00, 0
 	map_attributes Route107AlloyGate2F, ROUTE_107_ALLOY_GATE_2F, $00, 0
 	map_attributes Route110PagotaGate2F, ROUTE_31_VIOLET_GATE_2F, $00, 0
 	map_attributes Route102WestportGate2F, NEW_VIOLET_GATE_NORTH_2F, $00, 0
 	map_attributes TeknosPort, TEKU_PORT, $0a, 0
-	map_attributes TeknosPortPassage, TEKU_PORT_PASSAGE, $00, 0
+	map_attributes TeknosPortPassage, TEKNOS_PORT_PASSAGE, $00, 0
 	map_attributes StandZooInfirmary, STAND_POKE, $00, 0
 	map_attributes KantoPokecenter1F, KANTO_POKECENTER_1F, $00, 0
 	map_attributes KantoMart, KANTO_MART, $00, 0

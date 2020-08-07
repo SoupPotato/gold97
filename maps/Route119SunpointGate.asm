@@ -33,8 +33,8 @@ Route119SunpointGate_MapEvents:
 	db 4 ; warp events
 	warp_event  4,  0, CIANWOOD_CITY, 9
 	warp_event  5,  0, CIANWOOD_CITY, 10
-	warp_event  4,  7, ROUTE_7, 1
-	warp_event  5,  7, ROUTE_7, 2
+	warp_event  4,  7, ROUTE_119, 1
+	warp_event  5,  7, ROUTE_119, 2
 
 	db 0 ; coord events
 

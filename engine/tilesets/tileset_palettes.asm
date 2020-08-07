@@ -13,33 +13,33 @@ LoadSpecialMapPalette:
 	cp TILESET_MANSION
 	jp z, .mansion_mobile
 	ld a, [wMapGroup]
-	cp GROUP_ROUTE_35
-	jp nz, .not_route_35
+	cp GROUP_ROUTE_103
+	jp nz, .not_route_103
 	ld a, [wMapNumber]
-	cp MAP_ROUTE_35
+	cp MAP_ROUTE_103
 	jp z, .SandOverBrownBGPalette
-.not_route_35
+.not_route_103
 	ld a, [wMapGroup]
-	cp GROUP_AZALEA_TOWN
-	jp nz, .not_azalea_town
+	cp GROUP_BIRDON_TOWN
+	jp nz, .not_birdon_town
 	ld a, [wMapNumber]
-	cp MAP_AZALEA_TOWN
+	cp MAP_BIRDON_TOWN
 	jp z, .SandOverBrownBGPalette
-.not_azalea_town
+.not_birdon_town
 	ld a, [wMapGroup]
-	cp GROUP_ROUTE_33
-	jp nz, .not_route_33
+	cp GROUP_ROUTE_104
+	jp nz, .not_route_104
 	ld a, [wMapNumber]
-	cp MAP_ROUTE_33
+	cp MAP_ROUTE_104
 	jp z, .SandOverBrownBGPalette
-.not_route_33
+.not_route_104
 	ld a, [wMapGroup]
-	cp GROUP_ROUTE_30
-	jp nz, .not_route_30
+	cp GROUP_ROUTE_105
+	jp nz, .not_route_105
 	ld a, [wMapNumber]
-	cp MAP_ROUTE_30
+	cp MAP_ROUTE_105
 	jp z, .SandOverBrownBGPalette	
-.not_route_30
+.not_route_105
 	ld a, [wMapGroup]
 	cp GROUP_ROUTE_110
 	jp nz, .not_route_110
@@ -48,38 +48,38 @@ LoadSpecialMapPalette:
 	jp z, .SnowOverGreyBGPalette
 .not_route_110
 	ld a, [wMapGroup]
-	cp GROUP_BLACKTHORN_CITY
-	jp nz, .not_blackthorn_city
+	cp GROUP_BLUE_FOREST
+	jp nz, .not_blueforest
 	ld a, [wMapNumber]
-	cp MAP_BLACKTHORN_CITY
+	cp MAP_BLUE_FOREST
 	jp z, .SnowOverGreyBGPalette
-.not_blackthorn_city
+.not_blueforest
 	ld a, [wMapGroup]
-	cp GROUP_MAHOGANY_GYM
-	jp nz, .not_mahogany_gym
+	cp GROUP_BLUE_FOREST_GYM
+	jp nz, .not_blueforest_gym
 	ld a, [wMapNumber]
-	cp MAP_MAHOGANY_GYM
+	cp MAP_BLUE_FOREST_GYM
 	jp z, .ice_path
-.not_mahogany_gym
+.not_blueforest_gym
 	ld a, [wMapGroup]
-	cp GROUP_CINNABAR_ISLAND
-	jp nz, .not_cinnabar_island
+	cp GROUP_FROSTPOINT_TOWN
+	jp nz, .not_frostpoint_town
 	ld a, [wMapNumber]
-	cp MAP_CINNABAR_ISLAND
+	cp MAP_FROSTPOINT_TOWN
 	jp z, .SnowOverGreyBGPalette
-.not_cinnabar_island
+.not_frostpoint_town
 	ld a, [wMapGroup]
-	cp GROUP_ROUTE_41
-	jp nz, .not_route_41
+	cp GROUP_ROUTE_111
+	jp nz, .not_route_111
 	ld a, [wMapNumber]
-	cp MAP_ROUTE_41
+	cp MAP_ROUTE_111
 	jp z, .SnowOverGreyBGPalette
-.not_route_41
+.not_route_111
 	ld a, [wMapGroup]
-	cp GROUP_ROUTE_32
+	cp GROUP_ROUTE_112
 	jp nz, .do_nothing
 	ld a, [wMapNumber]
-	cp MAP_ROUTE_32
+	cp MAP_ROUTE_112
 	jp z, .SnowOverGreyBGPalette
 
 
@@ -247,65 +247,40 @@ LoadMansionPalette:
 
 MansionPalette2:
 INCLUDE "gfx/tilesets/mansion_2.pal"
-
-LoadSpecialOWMapPalettes:
-	ld a, [wMapNumber]
-	cp MAP_ROUTE_33
-	jr z, .GetMapNumber
-	
-.GetMapNumber
-	ld a, [wMapGroup]
-	cp GROUP_ROUTE_33
-	jr z, .SandOverBrownBGPalette
-	
-.do_nothing
-    and a
-    ret
-	
-.SandOverBrownBGPalette:
-	ld a, [wTimeOfDayPal]
-	maskbits NUM_DAYTIMES
-	ld a, BANK(wBGPals1)
-	ld de, wBGPals1
-	ld hl, SandOverRock
-	ld bc, 8 palettes
-	call FarCopyWRAM
-    scf
-    ret
 	
 LoadSpecialMapOBPalette:
 	ld a, [wMapGroup]
-	cp GROUP_ROUTE_35
-	jr nz, .not_route35
+	cp GROUP_ROUTE_103
+	jr nz, .not_route103
 	ld a, [wMapNumber]
-	cp MAP_ROUTE_35
+	cp MAP_ROUTE_103
 	jp z, .SandOverTreeOBPalette
 	
-.not_route35
+.not_route103
 	ld a, [wMapGroup]
-	cp GROUP_AZALEA_TOWN
-	jr nz, .not_azalea
+	cp GROUP_BIRDON_TOWN
+	jr nz, .not_birdon
 	ld a, [wMapNumber]
-	cp MAP_AZALEA_TOWN
+	cp MAP_BIRDON_TOWN
 	jp z, .SandOverTreeOBPalette
 	
-.not_azalea
+.not_birdon
 	ld a, [wMapGroup]
-	cp GROUP_ROUTE_33
-	jr nz, .not_route_33
+	cp GROUP_ROUTE_104
+	jr nz, .not_route_104
 	ld a, [wMapNumber]
-	cp MAP_ROUTE_33
+	cp MAP_ROUTE_104
 	jp z, .SandOverTreeOBPalette
 	
-.not_route_33
+.not_route_104
 	ld a, [wMapGroup]
-	cp GROUP_ROUTE_30
-	jr nz, .not_route_30
+	cp GROUP_ROUTE_105
+	jr nz, .not_route_105
 	ld a, [wMapNumber]
-	cp MAP_ROUTE_30
+	cp MAP_ROUTE_105
 	jp z, .SandOverTreeOBPalette
 	
-.not_route_30
+.not_route_105
 	ld a, [wMapGroup]
 	cp GROUP_ROUTE_110
 	jr nz, .not_route_110
@@ -315,18 +290,18 @@ LoadSpecialMapOBPalette:
 	
 .not_route_110
 	ld a, [wMapGroup]
-	cp GROUP_BLACKTHORN_CITY
+	cp GROUP_BLUE_FOREST
 	jr nz, .not_blackthorn_city
 	ld a, [wMapNumber]
-	cp MAP_BLACKTHORN_CITY
+	cp MAP_BLUE_FOREST
 	jp z, .SnowOverTreeOBPalette
 	
 .not_blackthorn_city
 	ld a, [wMapGroup]
-	cp GROUP_ROUTE_32
+	cp GROUP_ROUTE_112
 	jr nz, .do_nothing
 	ld a, [wMapNumber]
-	cp MAP_ROUTE_32
+	cp MAP_ROUTE_112
 	jp z, .SnowOverTreeOBPalette
 
 .do_nothing

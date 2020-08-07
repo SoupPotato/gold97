@@ -13,7 +13,7 @@ WhirlIsland1F_MapEvents:
 	db 0, 0 ; filler
 
 	db 3 ; warp events
-	warp_event  4, 13, ROUTE_41, 1
+	warp_event  4, 13, ROUTE_111, 1
 	warp_event  5,  3, WHIRL_ISLAND_B1F, 1
 	warp_event 17,  3, WHIRL_ISLAND_B1F, 2
 

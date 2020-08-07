@@ -7,12 +7,12 @@
 	const ROUTE_29          ; 02
 	const ROUTE_37          ; 15
 	const OLD_CITY          ; 06
-	const BRASS_TOWER      ; 07
+	const BRASS_TOWER       ; 07
 	const ROUTE_36          ; 14
 	const GOLDENROD_CITY    ; 10
 	const RADIO_TOWER       ; 11
-	const ROUTE_35          ; 12
-	const AZALEA_TOWN       ; 0c
+	const ROUTE_103         ; 12
+	const BIRDON_TOWN       ; 0c
 	const SLOWPOKE_WELL     ; 0d
 	const ROUTE_116         ; 32
 	const ROUTE_117         ; 34
@@ -26,10 +26,10 @@
 	const ROUTE_7           ; 3f
 	const BOULDER_MINES     ; 0a
 	const ROUTE_8           ; 40
-	const ECRUTEAK_CITY     ; 16
+	const TEKNOS_CITY       ; 16
 	const BOARDWALK         ; 25
-	const ROUTE_33          ; 0b
-	const ROUTE_30          ; 04
+	const ROUTE_104         ; 0b
+	const ROUTE_105         ; 04
 	const JADE_FOREST       ; 0e
 	const ROUTE_106         ; 05
 	const ALLOY_CITY        ; 1b
@@ -40,12 +40,12 @@
 	const ROUTE_109         ; 1a
 	const AMPARE_CAVERN     ; 2c
 	const ROUTE_110         ; 1e
-	const BLACKTHORN_CITY   ; 29
+	const BLUE_FOREST       ; 29
 	const DEEPWATER_PASSAGE ; 28
-	const ROUTE_41          ; 20
+	const ROUTE_111         ; 20
 	const WHIRL_ISLAND      ; 1f
-	const CINNABAR_ISLAND   ; 55
-	const ROUTE_32          ; 08
+	const FROSTPOINT_TOWN   ; 55
+	const ROUTE_112         ; 08
 	const STAND_CITY        ; 51
 	const NATIONAL_PARK     ; 13
 	const ROUTE_34          ; 0f
@@ -95,7 +95,7 @@ KANTO_LANDMARK EQU const_value
 	const SAFFRON_CITY      ; 48 9
 	const ROUTE_25          ; 39 5
 	const CHARRED_SUMMIT    ; 42 11
-	const CERULEAN_CITY     ; 37 3
+	const NAGO_VILLAGE      ; 37 3
 	const ROUTE_20          ; 53
 	const ROUTE_10          ; 43 8
 	const JOULE_CAVE        ; 3b 6

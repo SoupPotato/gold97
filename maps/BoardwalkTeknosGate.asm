@@ -57,8 +57,8 @@ BoardwalkTeknosGate_MapEvents:
 	db 4 ; warp events
 	warp_event  4,  0, BOARDWALK, 1
 	warp_event  5,  0, BOARDWALK, 2
-	warp_event  4,  7, ECRUTEAK_CITY, 9
-	warp_event  5,  7, ECRUTEAK_CITY, 10
+	warp_event  4,  7, TEKNOS_CITY, 9
+	warp_event  5,  7, TEKNOS_CITY, 10
 
 	db 0 ; coord events
 

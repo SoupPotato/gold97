@@ -56,7 +56,7 @@ KantoGrassWildMons:
 	db 37, GOLBAT
 	db 39, GOLBAT
 
-	map_id ROUTE_25
+	map_id MERIDIAN_PATH
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 36, DODUO
@@ -164,7 +164,7 @@ KantoGrassWildMons:
 	db 43, NOCTOWL
 	db 43, NOCTOWL
 	
-	map_id BLACKTHORN_GYM_2F
+	map_id RESEARCH_FACILITY_ENTRANCE
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	db 42, MAGNETON

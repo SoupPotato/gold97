@@ -143,7 +143,7 @@ RyukyuCity_MapEvents:
 	db 10 ; warp events
 	warp_event 29, 26, SAFFRON_MART, 1
 	warp_event 11,  4, SAFFRON_POKECENTER_1F, 1
-	warp_event 33, 11, ROUTE_19_FUCHSIA_GATE, 1
+	warp_event 33, 11, RYUKYU_CITY_MERIDIAN_PATH_GATE, 1
 	warp_event 22, 31, ROUTE_6_SAFFRON_GATE, 1
 	warp_event 23, 31, ROUTE_6_SAFFRON_GATE, 2
 	warp_event 23,  7, MR_PSYCHICS_HOUSE, 1

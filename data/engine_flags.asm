@@ -77,26 +77,26 @@ EngineFlags:
 	engine_flag wVisitedSpawns, SPAWN_PALLET
 	engine_flag wVisitedSpawns, NUM_SPAWNS
 	engine_flag wVisitedSpawns, SPAWN_PEWTER
-	engine_flag wVisitedSpawns, SPAWN_CERULEAN ; $38
+	engine_flag wVisitedSpawns, SPAWN_NAGO ; $38
 	engine_flag wVisitedSpawns, SPAWN_ROCK_TUNNEL
 	engine_flag wVisitedSpawns, SPAWN_VERMILION
 	engine_flag wVisitedSpawns, NUM_SPAWNS
 	engine_flag wVisitedSpawns, SPAWN_SAFFRON
 	engine_flag wVisitedSpawns, SPAWN_CELADON
 	engine_flag wVisitedSpawns, SPAWN_STAND
-	engine_flag wVisitedSpawns, SPAWN_CINNABAR
+	engine_flag wVisitedSpawns, SPAWN_FROSTPOINT
 	engine_flag wVisitedSpawns, SPAWN_INDIGO ; $40
 	engine_flag wVisitedSpawns, SPAWN_SILENT
 	engine_flag wVisitedSpawns, SPAWN_CHERRYGROVE
 	engine_flag wVisitedSpawns, SPAWN_VIOLET
-	engine_flag wVisitedSpawns, SPAWN_AZALEA
+	engine_flag wVisitedSpawns, SPAWN_BIRDON
 	engine_flag wVisitedSpawns, SPAWN_CIANWOOD
 	engine_flag wVisitedSpawns, SPAWN_GOLDENROD
 	engine_flag wVisitedSpawns, SPAWN_ALLOY
-	engine_flag wVisitedSpawns, SPAWN_ECRUTEAK ; $48
+	engine_flag wVisitedSpawns, SPAWN_TEKNOS ; $48
 	engine_flag wVisitedSpawns, SPAWN_SANSKRIT
 	engine_flag wVisitedSpawns, NUM_SPAWNS
-	engine_flag wVisitedSpawns, SPAWN_BLACKTHORN
+	engine_flag wVisitedSpawns, SPAWN_BLUEFOREST
 	engine_flag wVisitedSpawns, NUM_SPAWNS
 	engine_flag wVisitedSpawns, NUM_SPAWNS ; unused
 

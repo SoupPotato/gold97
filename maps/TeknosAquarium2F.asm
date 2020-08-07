@@ -254,7 +254,7 @@ TeknosAquarium2F_MapEvents:
 	db 0, 0 ; filler
 
 	db 1 ; warp events
-	warp_event  0,  7, OLIVINE_LIGHTHOUSE_1F, 3
+	warp_event  0,  7, TEKNOS_AQUARIUM_1F, 3
 
 	db 0 ; coord events
 

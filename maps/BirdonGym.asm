@@ -358,21 +358,21 @@ BirdonGym_MapEvents:
 	db 0, 0 ; filler
 
 	db 15 ; warp events
-	warp_event  2,  9, AZALEA_TOWN, 5
-	warp_event  3,  9, AZALEA_TOWN, 9
-	warp_event  2,  7, ECRUTEAK_GYM, 4
-	warp_event 15,  4, ECRUTEAK_GYM, 3
-	warp_event 14,  4, ECRUTEAK_GYM, 3
-	warp_event  1,  4, ECRUTEAK_GYM, 3
-	warp_event 10,  7, ECRUTEAK_GYM, 3
-	warp_event 12,  8, ECRUTEAK_GYM, 3
-	warp_event 10,  8, ECRUTEAK_GYM, 3
-	warp_event  3,  5, ECRUTEAK_GYM, 3
-	warp_event  3,  4, ECRUTEAK_GYM, 3
-	warp_event 19,  4, ECRUTEAK_GYM, 3
-	warp_event 15,  2, ECRUTEAK_GYM, 3
-	warp_event 13,  8, ECRUTEAK_GYM, 3
-	warp_event 13,  7, ECRUTEAK_GYM, 3
+	warp_event  2,  9, BIRDON_TOWN, 5
+	warp_event  3,  9, BIRDON_TOWN, 9
+	warp_event  2,  7, BIRDON_GYM, 4
+	warp_event 15,  4, BIRDON_GYM, 3
+	warp_event 14,  4, BIRDON_GYM, 3
+	warp_event  1,  4, BIRDON_GYM, 3
+	warp_event 10,  7, BIRDON_GYM, 3
+	warp_event 12,  8, BIRDON_GYM, 3
+	warp_event 10,  8, BIRDON_GYM, 3
+	warp_event  3,  5, BIRDON_GYM, 3
+	warp_event  3,  4, BIRDON_GYM, 3
+	warp_event 19,  4, BIRDON_GYM, 3
+	warp_event 15,  2, BIRDON_GYM, 3
+	warp_event 13,  8, BIRDON_GYM, 3
+	warp_event 13,  7, BIRDON_GYM, 3
 
 	db 0 ; coord events
 

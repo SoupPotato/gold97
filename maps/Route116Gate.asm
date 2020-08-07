@@ -83,8 +83,8 @@ Route116Gate_MapEvents:
 	db 4 ; warp events
 	warp_event  4,  0, ROUTE_116, 1
 	warp_event  5,  0, ROUTE_116, 2
-	warp_event  4,  7, AZALEA_TOWN, 7
-	warp_event  5,  7, AZALEA_TOWN, 8
+	warp_event  4,  7, BIRDON_TOWN, 7
+	warp_event  5,  7, BIRDON_TOWN, 8
 
 	db 0 ; coord events
 

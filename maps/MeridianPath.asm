@@ -244,7 +244,7 @@ MeridianPath_MapEvents:
 	db 0, 0 ; filler
 
 	db 1 ; warp events
-	warp_event  4, 47, ROUTE_19_FUCHSIA_GATE, 4
+	warp_event  4, 47, RYUKYU_CITY_MERIDIAN_PATH_GATE, 4
 
 	db 0 ; coord events
 

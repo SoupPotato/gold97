@@ -142,8 +142,8 @@ Route105_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  8, 31, NEW_ECRUTEAK_GATE_SOUTH, 1
-	warp_event  9, 31, NEW_ECRUTEAK_GATE_SOUTH, 2
+	warp_event  8, 31, ROUTE_105_ROUTE_106_GATE, 1
+	warp_event  9, 31, ROUTE_105_ROUTE_106_GATE, 2
 
 	db 0 ; coord events
 

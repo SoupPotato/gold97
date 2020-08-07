@@ -50,10 +50,10 @@ SceneFoundGirlScript:
 	setevent EVENT_BURNED_TOWER_MORTY
 	setevent EVENT_ROUTE8_GIRL_IN_CAVE
 	clearevent EVENT_ECRUTEAK_SCARED_LASS
-	setmapscene ECRUTEAK_CITY, SCENE_ECRUTEAK_ROCKET_TAKEOVER
+	setmapscene TEKNOS_CITY, SCENE_ECRUTEAK_ROCKET_TAKEOVER
 	special FadeOutPalettes
 	wait 10
-	warpfacing UP, ECRUTEAK_ITEMFINDER_HOUSE, 4, 7
+	warpfacing UP, TEKNOS_GRAMPS_ITEMFINDER_HOUSE, 4, 7
 	end
 	
 .SceneRoute120Nothing:

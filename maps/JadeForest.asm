@@ -263,8 +263,8 @@ JadeForest_MapEvents:
 	warp_event  0, 27, ROUTE_106, 4
 	warp_event 49, 26, ROUTE_106, 5
 	warp_event 49, 27, ROUTE_106, 6
-	warp_event  4,  8, CERULEAN_GYM, 1
-	warp_event  5,  8, CERULEAN_GYM, 2
+	warp_event  4,  8, JADE_FOREST_SNORLAX_ROOM, 1
+	warp_event  5,  8, JADE_FOREST_SNORLAX_ROOM, 2
 	
 	db 0 ; coord events
 

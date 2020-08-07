@@ -43,8 +43,8 @@ BirdonMart_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  4,  7, AZALEA_TOWN, 3
-	warp_event  5,  7, AZALEA_TOWN, 3
+	warp_event  4,  7, BIRDON_TOWN, 3
+	warp_event  5,  7, BIRDON_TOWN, 3
 
 	db 0 ; coord events
 

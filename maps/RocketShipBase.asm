@@ -216,7 +216,7 @@ CaptainRocketScript:
 	clearevent EVENT_FLORIA_AT_FLOWER_SHOP
 	setevent EVENT_PRYCE_IN_GYM
 	setevent EVENT_FOUGHT_BIPETAL
-	setmapscene ROUTE_33, SCENE_ROUTE33_NOTHING
+	setmapscene ROUTE_104, SCENE_ROUTE33_NOTHING
 	warp ROUTE_5, 13, 3
 	end
 	

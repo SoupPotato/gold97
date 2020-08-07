@@ -98,7 +98,7 @@ TeknosPort_MapEvents:
 	db 0, 0 ; filler
 
 	db 1 ; warp events
-	warp_event 7, 5, TEKU_PORT_PASSAGE, 5
+	warp_event 7, 5, TEKNOS_PORT_PASSAGE, 5
 
 	db 1 ; coord events
 	coord_event  3, 9, SCENE_DEFAULT, TeknosPortWalkUpToShipScript

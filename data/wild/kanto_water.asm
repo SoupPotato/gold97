@@ -14,19 +14,19 @@ KantoWaterWildMons:
 	db 25, MAGIKARP
 	db 30, GYARADOS
 	
-	map_id ROUTE_20
+	map_id ISEN_STRAIT
 	db 2 percent ; encounter rate
 	db 28, TENTACOOL
 	db 25, TENTACRUEL
 	db 30, GYARADOS
 	
-	map_id CERULEAN_CITY
+	map_id NAGO_VILLAGE
 	db 2 percent ; encounter rate
 	db 28, MAGIKARP
 	db 25, MAGIKARP
 	db 30, GYARADOS
 	
-	map_id ROUTE_25
+	map_id MERIDIAN_PATH
 	db 6 percent ; encounter rate
 	db 31, GOLDEEN
 	db 30, MARILL

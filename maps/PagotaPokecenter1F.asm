@@ -31,7 +31,7 @@ PagotaPokecenter1F_ElmsAideScript:
 	;setevent EVENT_TOGEPI_HATCHED
 	clearevent EVENT_ELMS_AIDE_IN_LAB
 	clearevent EVENT_TOGEPI_HATCHED
-	;setmapscene ROUTE_32, SCENE_ROUTE32_OFFER_SLOWPOKETAIL
+	;setmapscene ROUTE_112, SCENE_ROUTE32_OFFER_SLOWPOKETAIL
 	writetext UnknownText_0x695c5
 	waitbutton
 	closetext

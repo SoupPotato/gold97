@@ -41,13 +41,13 @@ JohtoWaterWildMons:
 	db 20, OSUNFISH
 	db 24, TENTACRUEL
 	
-	map_id ROUTE_7
+	map_id ROUTE_119
 	db 6 percent ; encounter rate
 	db 15, GOLDEEN
 	db 18, MARILL
 	db 18, SEAKING
 	
-	map_id ROUTE_8
+	map_id ROUTE_120
 	db 6 percent ; encounter rate
 	db 15, GOLDEEN
 	db 18, POLIWAG
@@ -155,7 +155,7 @@ JohtoWaterWildMons:
 	db 27, SEEL
 	db 25, SHELLDER
 	
-	map_id ROUTE_41
+	map_id ROUTE_111
 	db 4 percent ; encounter rate
 	db 28, SHELLDER
 	db 28, MANTINE
@@ -179,13 +179,13 @@ JohtoWaterWildMons:
 	db 28, DEWGONG
 	db 25, DRATINI
 	
-	map_id CINNABAR_ISLAND
+	map_id FROSTPOINT_TOWN
 	db 4 percent ; encounter rate
 	db 28, SHELLDER
 	db 28, MANTINE
 	db 28, STARYU
 	
-	map_id ROUTE_32
+	map_id ROUTE_112
 	db 4 percent ; encounter rate
 	db 30, POLIWAG
 	db 30, REMORAID

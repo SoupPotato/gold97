@@ -48,8 +48,8 @@ BlueForestMart_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  4,  7, BLACKTHORN_CITY, 4
-	warp_event  5,  7, BLACKTHORN_CITY, 4
+	warp_event  4,  7, BLUE_FOREST, 4
+	warp_event  5,  7, BLUE_FOREST, 4
 
 	db 0 ; coord events
 

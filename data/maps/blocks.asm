@@ -100,7 +100,7 @@ Route110SandstormHouse_Blocks:
 MrPsychicsHouse_Blocks:
 BirdonSpeechHouse_Blocks:
 Route104GardenersHouse_Blocks:
-WestportElderItemfinderHouse_Blocks:
+TeknosGrampsItemfinderHouse_Blocks:
 TeknosOldRodHouse_Blocks:
 KobanClairsHouse_Blocks:
 BlueForestNightmareHouse_Blocks:
@@ -134,8 +134,8 @@ Route102WestportGate2F_Blocks:
 Route107AlloyGate2F_Blocks:
 	INCBIN "maps/Gate2F.blk"
 
-FrostPoint_Blocks:
-	INCBIN "maps/FrostPoint.blk"
+FrostpointTown_Blocks:
+	INCBIN "maps/FrostpointTown.blk"
 
 Route118_Blocks:
 	INCBIN "maps/Route118.blk"

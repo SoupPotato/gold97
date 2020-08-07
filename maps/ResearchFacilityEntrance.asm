@@ -21,10 +21,10 @@ ResearchFacilityEntrance_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
-	warp_event 16, 16, ROUTE_20, 2
-	warp_event 17, 16, ROUTE_20, 2
-	warp_event  3,  0, BLACKTHORN_GYM_1F, 1
-	warp_event  4,  0, BLACKTHORN_GYM_1F, 2
+	warp_event 16, 16, ISEN_STRAIT, 2
+	warp_event 17, 16, ISEN_STRAIT, 2
+	warp_event  3,  0, RESEARCH_FACILITY_BACK_ROOM, 1
+	warp_event  4,  0, RESEARCH_FACILITY_BACK_ROOM, 2
 
 	db 0 ; coord events
 

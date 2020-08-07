@@ -2,7 +2,7 @@
 	const HOUSE_GRAMPS
 	const HOUSE_TWIN
 
-WestportElderItemfinderHouse_MapScripts:
+TeknosGrampsItemfinderHouse_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
@@ -111,12 +111,12 @@ EcruteakHistoryBookText:
 	done
 
 
-WestportElderItemfinderHouse_MapEvents:
+TeknosGrampsItemfinderHouse_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  4,  7, ECRUTEAK_CITY, 8
-	warp_event  5,  7, ECRUTEAK_CITY, 8
+	warp_event  4,  7, TEKNOS_CITY, 8
+	warp_event  5,  7, TEKNOS_CITY, 8
 
 	db 0 ; coord events
 

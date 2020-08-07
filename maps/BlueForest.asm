@@ -240,17 +240,17 @@ BlueForest_MapEvents:
 	db 0, 0 ; filler
 
 	db 11 ; warp events
-	warp_event 26, 21, MAHOGANY_GYM, 1
-	warp_event  9,  9, BLACKTHORN_DRAGON_SPEECH_HOUSE, 1
-	warp_event 19, 13, BLACKTHORN_EMYS_HOUSE, 1
-	warp_event 25,  6, BLACKTHORN_MART, 1
-	warp_event 13, 18, BLACKTHORN_POKECENTER_1F, 1
+	warp_event 26, 21, BLUE_FOREST_GYM, 1
+	warp_event  9,  9, BLUE_FOREST_SPEECH_HOUSE, 1
+	warp_event 19, 13, BLUE_FOREST_EMYS_HOUSE, 1
+	warp_event 25,  6, BLUE_FOREST_MART, 1
+	warp_event 13, 18, BLUE_FOREST_POKECENTER_1F, 1
 	warp_event  3, 22, MOVE_DELETERS_HOUSE, 1
-	warp_event 27, 11, BLUEFOREST_HOUSE_1, 1
+	warp_event 27, 11, BLUE_FOREST_NIGHTMARE_HOUSE, 1
 	warp_event  5,  5, DEEPWATER_PASSAGE_1F, 1
-	warp_event 18,  3, ROUTE_29_ROUTE_46_GATE, 3
-	warp_event 19,  3, ROUTE_29_ROUTE_46_GATE, 4
-	warp_event 27, 21, MAHOGANY_GYM, 2
+	warp_event 18,  3, ROUTE_111_BLUE_FOREST_GATE, 3
+	warp_event 19,  3, ROUTE_111_BLUE_FOREST_GATE, 4
+	warp_event 27, 21, BLUE_FOREST_GYM, 2
 
 	db 0 ; coord events
 
