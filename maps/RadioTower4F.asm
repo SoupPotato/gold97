@@ -192,7 +192,8 @@ RadioTower4fBurglarTextTakeover:
 RadioTower4fRockerText:
 	text "I listened to the"
 	line "radio while I was"
-	cont "at HONTO RUINS."
+	cont "at the RUINS OF"
+	cont "ALPH."
 	para "I heard a strange"
 	line "broadcast there."
 	done

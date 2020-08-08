@@ -298,7 +298,7 @@ SilentHillsSign2Text:
 	text "SILENT HILLS"
 	para "North to exit."
 	para "Continue north to"
-	line "OLD CITY."
+	line "PAGOTA CITY."
 	done
 
 SilentHills_MapEvents:

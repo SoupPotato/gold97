@@ -263,7 +263,7 @@ AquaReceptionistRocketsText:
 
 AquaReceptionistNoRocketsText:
 	text "Welcome to the"
-	line "TEKU CITY"
+	line "TEKNOS CITY"
 	cont "AQUARIUM!"
 	para "Please feel free"
 	line "to look around."

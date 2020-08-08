@@ -38,7 +38,7 @@ SanskritMartLassText:
 
 SanskritMartCooltrainerMText:
 	text "Have you been to"
-	line "SOUTH POINT?"
+	line "SUNPOINT CITY?"
 
 	para "It's a major"
 	line "shipping hub for"

@@ -10,10 +10,10 @@ Flypoints:
 	flypoint SILENT,       SILENT_TOWN
 	flypoint PAGOTA,       PAGOTA_CITY
 	flypoint WESTPORT,     WESTPORT_CITY
+	flypoint TEKNOS,       TEKNOS_CITY
 	flypoint BIRDON,       BIRDON_TOWN
 	flypoint SANSKRIT,     SANSKRIT_TOWN
 	flypoint SUNPOINT,     SUNPOINT_CITY
-	flypoint TEKNOS,       TEKNOS_CITY
 	flypoint ALLOY,        ALLOY_CITY
 	flypoint KOBAN,        KOBAN_ISLAND
 	flypoint BLUEFOREST,   BLUE_FOREST

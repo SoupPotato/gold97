@@ -26,8 +26,8 @@ BirdonMartCooltrainerMText:
 
 	para "BALLS will have"
 	line "to do."
-	para "WEST CITY has a"
-	line "much better"
+	para "WESTPORT CITY has"
+	line "a much better"
 	cont "selection."
 	done
 

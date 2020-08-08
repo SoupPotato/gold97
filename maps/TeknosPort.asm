@@ -57,15 +57,15 @@ TeknosPortSailorAtGangwayScript:
 	
 TeknosPortToWestText:
 	text "Welcome to the"
-	line "TEKU CITY DOCKS."
+	line "TEKNOS CITY DOCKS."
 	para "Would you like to"
 	line "take a ferry to"
-	cont "WEST CITY?"
+	cont "WESTPORT CITY?"
 	done
 	
 TeknosPortToWestText2:
 	text "Okay! Departing to"
-	line "WEST CITY."
+	line "WESTPORT CITY."
 	done
 	
 NotGoingToWestText:

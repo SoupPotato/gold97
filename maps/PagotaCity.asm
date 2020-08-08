@@ -100,7 +100,7 @@ KurtsDoorLockedText:
 PagotaCityLassText:
 	text "Ghosts are rumored"
 	line "to appear in"
-	cont "5 FLOOR TOWER."
+	cont "BRASS TOWER."
 
 	para "They said normal-"
 	line "type #MON moves"
@@ -151,7 +151,7 @@ PagotaCityGuardText:
 
 PagotaCityYoungsterText:
 	text "Behind me is the"
-	line "5 FLOOR TOWER!"
+	line "BRASS TOWER!"
 	
 	para "Many trainers try"
 	line "to climb it to get"
@@ -180,7 +180,7 @@ VioletGymSignText:
 	done
 
 SproutTowerSignText:
-	text "5 FLOOR TOWER"
+	text "BRASS TOWER"
 
 	para "Experience the"
 	line "Way of #MON"

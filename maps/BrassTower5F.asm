@@ -140,7 +140,7 @@ Text_5FSageAfterHoOh:
 	
 Text_5FSage:
 	text "Welcome to the top"
-	line "of the 5 FLOOR"
+	line "of the BRASS"
 	cont "TOWER."
 	
 	para "This is a sacred"

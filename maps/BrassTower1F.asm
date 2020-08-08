@@ -69,7 +69,7 @@ TrainerSageNico:
 
 
 SageNicoSeenText:
-	text "5 FLOOR TOWER"
+	text "The BRASS TOWER"
 	line "was built many"
 	cont "centuries ago."
 	para "It is our honor"
@@ -166,7 +166,7 @@ BrassTower1FStatueText:
 	
 BrassTower1FSignText:
 	text "This is the"
-	line "5 FLOOR TOWER."
+	line "BRASS TOWER."
 	para "An ancient"
 	line "monument that's"
 	para "dedicated to the"

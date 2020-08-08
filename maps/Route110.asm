@@ -231,7 +231,7 @@ MonicaNotMondayText:
 Route110SignText:
 	text "ROUTE 110"
 
-	para "NUTYPE CITY -"
+	para "ALLOY CITY -"
 	line "BLUE FOREST"
 	done
 

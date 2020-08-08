@@ -301,7 +301,7 @@ Route103SlowpokeText2:
 
 Route103SignText:
 	text "ROUTE 103"
-	para "WEST CITY -"
+	para "WESTPORT CITY -"
 	line "BIRDON TOWN"
 	done
 	

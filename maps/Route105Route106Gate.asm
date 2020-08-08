@@ -14,7 +14,7 @@ Route105Route106GateRockerScript:
 	jumptextfaceplayer Route105Route106GateRockerText
 
 Route105Route106GateOfficerText:
-	text "NIHON FOREST is"
+	text "JADE FOREST is"
 	line "a mysterious area."
 	para "Be sure to treat"
 	line "it with respect."
@@ -23,7 +23,7 @@ Route105Route106GateOfficerText:
 Route105Route106GateRockerText:
 	text "I like going for"
 	line "peaceful walks in"
-	cont "NIHON FOREST."
+	cont "JADE FOREST."
 	para "It's a lot less"
 	line "scary in there"
 	para "once you know your"

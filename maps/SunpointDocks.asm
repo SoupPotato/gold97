@@ -154,7 +154,7 @@ DocksGuruText:
 	
 DocksGuruText2:
 	text "There's a cafe"
-	line "over in NUTYPE"
+	line "over in ALLOY"
 	para "CITY that has"
 	line "the best food!"
 	para "I wish I didn't"

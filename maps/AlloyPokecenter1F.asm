@@ -23,7 +23,7 @@ AlloyPokecenter1FTeacherScript:
 
 AlloyPokecenter1FFisherText:
 	text "The SAILOR in the"
-	line "NUTYPE CAFE south"
+	line "ALLOY CAFE south"
 
 	para "of here is really"
 	line "generous."

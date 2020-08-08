@@ -119,11 +119,11 @@ BirdonTownTeacherText:
 BirdonTownYoungsterText:
 	text "EAST of here, a"
 	line "far ways down the"
-	para "road, is the NIHON"
+	para "road, is the JADE"
 	line "FOREST."
 
 	para "Past that is"
-	line "NUTYPE CITY."
+	line "ALLOY CITY."
 	
 	para "The journey there"
 	line "is long."

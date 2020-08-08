@@ -13,9 +13,7 @@ Route7SaffronGuardSeriousText:
 	text "Have you ever"
 	line "wondered why this"
 	para "city is called"
-	line "SOUTH POINT when"
-	para "it's in Northwest"
-	line "NIHON?"
+	line "SUNPOINT?"
 	para "It's because of"
 	line "shipping routes of"
 	para "countries north of"
@@ -23,9 +21,8 @@ Route7SaffronGuardSeriousText:
 	para "When they come to"
 	line "do business with"
 	para "us, this city is"
-	line "the SOUTH POINT of"
-	cont "their travels."
-	
+	line "the sunniest part"
+	cont "of their travels."	
 	done
 
 Route118SunpointGate_MapEvents:

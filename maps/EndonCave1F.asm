@@ -112,7 +112,7 @@ PokemaniacCalvinBeatenText:
 
 PokemaniacCalvinAfterBattleText:
 	text "Have you ever been"
-	line "to HONTO TOWN?"
+	line "to SANSKRIT TOWN?"
 	para "It's a mysterious"
 	line "place."
 	done

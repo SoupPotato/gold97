@@ -312,12 +312,12 @@ FisherRalphSwarmText:
 
 Route119UndergroundPathSignText:
 	text "ROUTE 119"
-	para "East to TEKU CITY"
+	para "East to TEKNOS"
 	done
 
 Route119LockedDoorText:
 	text "Go through gate"
-	line "to SOUTH POINT."
+	line "to SUNPOINT CITY."
 	done
 	
 Route119Rocket1Text:

@@ -371,7 +371,7 @@ UnknownText_0x5d2bc:
 	line "Question 4:"
 
 	para "Is FALKNER the"
-	line "OLD CITY GYM"
+	line "PAGOTA CITY GYM"
 	para "LEADER who uses"
 	line "bird #MON?"
 	done
@@ -382,7 +382,7 @@ UnknownText_0x5d30e:
 	cont "question:"
 
 	para "Is the route north"
-	line "of WEST CITY named"
+	line "of WESTPORT named"
 	cont "ROUTE 102?"
 	done
 

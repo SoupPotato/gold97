@@ -112,7 +112,7 @@ SendN64LassOffText:
 	para "It'd be good to"
 	line "make a trip."
 	para "I have a friend"
-	line "in WEST CITY who"
+	line "in WESTPORT who"
 	cont "I'd like to see."
 	para "It'd be fun for"
 	line "us to just meet"

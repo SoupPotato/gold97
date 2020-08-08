@@ -216,7 +216,7 @@ SwimmermRandallAfterBattleText:
 	
 SwimmerfElaineSeenText:
 	text "Are you going to"
-	line "SOUTH POINT?"
+	line "SUNPOINT?"
 
 	para "How about a quick"
 	line "battle first?"
@@ -253,8 +253,8 @@ SwimmerfPaulaAfterBattleText:
 
 MtMoonSquareSignText:
 	text "ROUTE 118"
-	para "SOUTH POINT -"
-	line "HONTO TOWN"
+	para "SUNPOINT CITY -"
+	line "SANSKRIT TOWN"
 	done
 
 Route118_MapEvents:

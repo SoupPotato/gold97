@@ -144,7 +144,7 @@ BarN64YoungsterBoredText:
 SendN64YoungsterOffText:
 	text "Oh?"
 	para "There's a place"
-	line "outside WEST CITY"
+	line "outside WESTPORT"
 	cont "where I could go?"
 	para "What the heck, I"
 	line "have nothing else"

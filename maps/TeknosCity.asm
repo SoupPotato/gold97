@@ -288,7 +288,7 @@ TeknosCityGramps2Text2:
 	done
 
 TeknosCityLass1Text:
-	text "TEKU used to be"
+	text "TEKNOS used to be"
 	line "a quiet town."
 	para "But it's grown"
 	line "quickly, and I"
@@ -347,7 +347,7 @@ TeknosCityYoungsterText:
 	done
 
 TeknosCityGramps3Text:
-	text "TEKU is starting"
+	text "TEKNOS is starting"
 	line "to grow as another"
 	cont "port town."
 	para "It's always been"
@@ -359,7 +359,7 @@ TeknosCityGramps3Text:
 	done
 
 TeknosCitySignText:
-	text "TEKU CITY"
+	text "TEKNOS CITY"
 	line "A City that"
 	para "embraces the"
 	line "future."
@@ -374,7 +374,7 @@ TinTowerSignText:
 	done
 
 EcruteakGymSignText:
-	text "TEKU CITY"
+	text "TEKNOS CITY"
 	line "#MON GYM"
 	cont "LEADER: WHITNEY"
 
@@ -383,7 +383,7 @@ EcruteakGymSignText:
 	done
 
 EcruteakDanceTheaterSignText:
-	text "TEKU CITY"
+	text "TEKNOS CITY"
 	line "AQUARIUM"
 	done
 
@@ -393,7 +393,7 @@ BurnedTowerSignText:
 	done
 	
 TekuCityDocksText:
-	text "TEKU CITY DOCKS"
+	text "TEKNOS CITY DOCKS"
 	done
 	
 RocketsAreCommin:

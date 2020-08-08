@@ -160,7 +160,7 @@ AlloyCityRivalText:
 	para "It's been a while!"
 	
 	para "You just got"
-	line "through NIHON"
+	line "through JADE"
 	cont "FOREST, right?"
 
 	para "I'm actually not"
@@ -216,14 +216,14 @@ AlloyCitySailor2Text:
 	done
 
 AlloyCitySignText:
-	text "NUTYPE CITY"
+	text "ALLOY CITY"
 
 	para "A bustling city"
 	line "by rough waters"
 	done
 
 OlivineGymSignText:
-	text "NUTYPE CITY"
+	text "ALLOY CITY"
 	line "#MON GYM"
 	cont "LEADER: JASMINE"
 

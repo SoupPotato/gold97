@@ -44,7 +44,7 @@ BoardwalkTeknosGateOfficerRocketsClearedText:
 
 BoardwalkTeknosGateLassText:
 	text "I have a friend up"
-	line "in HONTO TOWN."
+	line "in SANSKRIT TOWN."
 	para "This new BOARDWALK"
 	line "makes it so much"
 	para "easier for us to"

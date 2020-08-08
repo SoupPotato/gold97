@@ -32,7 +32,7 @@ AmamiMartSuperNerdText:
 AmamiMartBuenaText:
 	text "I'm thinking about"
 	line "going shopping"
-	cont "in WEST CITY."
+	cont "in WESTPORT CITY."
 	done
 
 AmamiMart_MapEvents:

@@ -36,7 +36,7 @@ KantoDeptStore1FGentlemanText:
 	line "part of the same"
 
 	para "chain as the one"
-	line "in WEST CITY."
+	line "in WESTPORT CITY."
 
 	para "They were both"
 	line "renovated at the"

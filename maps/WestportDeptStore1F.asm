@@ -29,8 +29,8 @@ WestportDeptStore1FElevatorButton:
 
 WestportDeptStore1FReceptionistText:
 	text "Welcome to the"
-	line "WEST CITY DEPT."
-	cont "STORE."
+	line "WESTPORT CITY"
+	cont "DEPT. STORE."
 	done
 
 WestportDeptStore1FGentlemanText:

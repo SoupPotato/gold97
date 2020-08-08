@@ -55,7 +55,7 @@ KantoPokecenterWest1FPharmacistText:
 	para "They have a"
 	line "better selection"
 	para "than the one in"
-	line "WEST CITY, I"
+	line "WESTPORT CITY, I"
 	cont "think."
 	done
 

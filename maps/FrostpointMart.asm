@@ -38,8 +38,9 @@ FrostpointMartRockerText:
 	text "I heard about a"
 	line "craftsman who"
 
-	para "makes custom BALLS"
-	line "down in OLD CITY."
+	para "makes custom"
+	line "#BALLS down in"
+	cont "PAGOTA CITY."
 	para "I've never used"
 	line "any."
 	para "I bet they work"

@@ -333,7 +333,7 @@ Route101Sign1Text:
 	text "ROUTE 101"
 
 	para "SILENT TOWN -"
-	line "OLD CITY"
+	line "PAGOTA CITY"
 	
 	para "SILENT HILLS"
 	line "in between."

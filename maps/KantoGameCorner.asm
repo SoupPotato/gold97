@@ -213,7 +213,7 @@ SendN64RockerOffText:
 	cont "or something."
 	para "Huh?"
 	para "There's a place"
-	line "near WEST CITY"
+	line "near WESTPORT CITY"
 	para "that I should"
 	line "check out?"
 	para "Alright, I'll give"

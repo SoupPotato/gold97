@@ -19,14 +19,14 @@ Route101PagotaGateYoungsterScript:
 
 Route101PagotaGateYoungsterText:
 	text "Through this gate"
-	line "is OLD CITY!"
+	line "is PAGOTA CITY!"
 	done
 
 Route101PagotaGateOfficerText:
 	text "Hi there!"
 	line "Did you get to"
-	para "see OLD CITY's"
-	line "5 FLOOR TOWER?"
+	para "see PAGOTA CITY's"
+	line "BRASS TOWER?"
 	done
 
 Route101PagotaGateCooltrainerFText:

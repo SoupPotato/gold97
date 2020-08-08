@@ -354,9 +354,8 @@ GruntM22AfterBattleText:
 	
 	para "Once the rest of"
 	line "crew return from"
-	cont "the HONTO base,"
-	cont "we are outta here!"
-		
+	cont "the SANSKRIT post,"
+	cont "we are outta here!"	
 	done
 
 GruntM11SeenText:

@@ -414,7 +414,7 @@ BlockRocket4AfterBaseText:
 BlockRocket3AfterBaseText:
 	text "Rumor is that the"
 	line "gang is over in"
-	cont "WEST CITY."
+	cont "WESTPORT CITY."
 	para "What does that"
 	line "mean, though?"
 	para "What happened to"

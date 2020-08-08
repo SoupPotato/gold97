@@ -87,7 +87,7 @@ SailorTerrellBeatenText:
 SailorTerrellAfterBattleText:
 	text "I hear there's a"
 	line "new BOARDWALK open"
-	para "south of HONTO"
+	para "south of SANSKRIT"
 	line "TOWN."
 	done
 	

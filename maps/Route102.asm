@@ -493,7 +493,7 @@ Route102RivalAfterText:
 Route102LassText:
 	text "A small tree is"
 	line "blocking the way"
-	cont "to WEST CITY."
+	cont "to WESTPORT CITY."
 
 	para "If you need to"
 	line "get through, a"
@@ -579,8 +579,8 @@ ArthurNotThursdayText:
 
 Route102SignText:
 	text "ROUTE 102"
-	para "OLD CITY -"
-	line "WEST CITY"
+	para "PAGOTA CITY -"
+	line "WESTPORT CITY"
 	done
 
 RuinsOfAlphNorthSignText:
@@ -694,7 +694,8 @@ GardenerTreeChoppedText:
 	line "tree chopped down."
 	
 	para "Now I can get to"
-	line "WEST CITY at last."
+	line "WESTPORT CITY at"
+	cont "last!"
 	
 	para "See ya kid,"
 	line "and good luck!"

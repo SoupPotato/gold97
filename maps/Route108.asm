@@ -193,7 +193,7 @@ BirdKeeperTobyBeatenText:
 
 BirdKeeperTobyAfterBattleText:
 	text "I plan to train in"
-	line "NUTYPE CITY at"
+	line "ALLOY CITY at"
 	cont "the FIGHTING DOJO."
 	para "FLYING #MON are"
 	line "strong against"
@@ -242,14 +242,14 @@ BeautyOliviaBeatenText:
 BeautyOliviaAfterBattleText:
 	text "Have you ever had"
 	line "your #MON's"
-	para "hair cut in WEST"
-	line "CITY?"
+	para "hair cut in"
+	line "WESTPORT CITY?"
 	done
 
 Route108SignText:
 	text "ROUTE 108"
 
-	para "NUTYPE CITY -"
+	para "ALLOY CITY -"
 	line "BLUE FOREST"
 	done
 

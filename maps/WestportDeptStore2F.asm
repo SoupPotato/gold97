@@ -82,8 +82,8 @@ WestportDeptStore2FGentlemanText:
 	text "This DEPT.STORE"
 	line "makes me realize"
 
-	para "that WEST CITY is"
-	line "growing quickly."
+	para "that WESTPORT CITY"
+	line "is growing fast."
 
 	para "The selection here"
 	line "is unmatched any-"

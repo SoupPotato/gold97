@@ -33,7 +33,7 @@ Route106Pokecenter1FCooltrainerMText:
 	text "It's so convenient"
 	line "that this #MON"
 	cont "CENTER is here."
-	para "NIHON FOREST is"
+	para "JADE FOREST is"
 	line "a tough trek and"
 	para "I'm glad my #-"
 	line "MON can rest."

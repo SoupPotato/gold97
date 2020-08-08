@@ -49,8 +49,8 @@ Route103WestportGateFisherScript:
 	jumptextfaceplayer Route103WestportGateFisherText
 
 UnknownText_0x69ddd:
-	text "WEST CITY kind of"
-	line "bores me."
+	text "WESTPORT CITY kind"
+	line "of bores me."
 	para "Everyone loves the"
 	line "city, but I'd"
 	para "rather live where"

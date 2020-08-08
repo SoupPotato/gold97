@@ -126,7 +126,7 @@ SunpointCityUnusedText:
 
 
 SunpointCitySignText:
-	text "SOUTH POINT"
+	text "SUNPOINT"
 	para "NIHON's link for"
 	line "international"
 	cont "trade."

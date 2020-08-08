@@ -155,7 +155,7 @@ Fisher3Text_MunchMunch:
 
 Fisher3Text_GoldenrodIsBest:
 	text "The food is good"
-	line "here, but NUTYPE"
+	line "here, but ALLOY"
 	para "CAFE has the best"
 	line "food anywhere."
 	done

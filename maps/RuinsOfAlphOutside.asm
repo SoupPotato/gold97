@@ -168,7 +168,7 @@ RuinsOfAlphOutsideScientistText:
 	
 	para "Come visit me in"
 	line "the lab just down"
-	cont "in HONTO TOWN."
+	cont "in SANSKRIT TOWN."
 	done
 
 SuperNerdStanSeenText:
@@ -218,12 +218,12 @@ PsychicNathanAfterBattleText:
 
 
 RuinsOfAlphSignText:
-	text "HONTO RUINS"
+	text "RUINS OF ALPH"
 	line "OBSERVATION CENTER"
 	done
 
 RuinsOfAlphResearchCenterSignText:
-	text "HONTO RUINS"
+	text "RUINS OF ALPH"
 	line "RESEARCH CENTER"
 	done
 

@@ -126,25 +126,6 @@ TeknosPokecenter1F_BillText1:
 	para "Oh dear, oh dear."
 	done
 
-TeknosPokecenter1F_BillText2:
-	text "I made the #MON"
-	line "storage system!"
-
-	para "I truly hope you"
-	line "find it useful."
-	
-	para "It's a great tool"
-	line "if you want to"
-	para "catch every single"
-	line "#MON! Anyways,"
-
-	para "I have to hurry on"
-	line "back to GOLDENROD"
-	cont "and see my folks."
-
-	para "Buh-bye!"
-	done
-
 TeknosPokecenter1FPokefanMText:
 	text "Your #MON will"
 	line "become more"
@@ -180,8 +161,8 @@ TeknosPokecenter1FCooltrainerFText:
 
 TeknosPokecenter1FGymGuyText:
 	text "Have you ever been"
-	line "to the SOUTH POINT"
-	cont "DOCKS?"
+	line "to the SUNPOINT"
+	cont "CITY DOCKS?"
 	para "Forget any other"
 	line "port in NIHON,"
 	para "that's where the"

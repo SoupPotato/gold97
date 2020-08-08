@@ -41,7 +41,7 @@ KantoPokecenterGrannyText:
 KantoPokecenterYoungsterText:
 	text "I heard there's a"
 	line "#MON daycare"
-	para "over near NUTYPE"
+	para "over near ALLOY"
 	line "CITY."
 	done
 

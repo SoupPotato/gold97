@@ -27,7 +27,7 @@ Route101PagotaGate2FTwinText:
 	para "If so, that's too"
 	line "bad… Not just"
 	para "anyone can enter"
-	line "the 5 FLOOR TOWER."
+	line "the BRASS TOWER."
 	done
 	
 Route101PagotaGate2FSign:

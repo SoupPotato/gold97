@@ -49,8 +49,8 @@ AbraScript:
 
 AmamiPortPassageTeacherText:
 	text "The S.S.AQUA sails"
-	line "to WEST CITY on"
-	para "Wednesdays and"
+	line "to WESTPORT CITY"
+	para "on Wednesdays and"
 	line "Sundays."
 	done
 	
@@ -65,9 +65,9 @@ TeleportGuyText1:
 	line "can send you back"
 	para "to the mainland in"
 	line "an instant!"
-	para "I got a buddy"
+	para "I got a buddy "
 	line "waiting at the"
-	cont "WEST CITY DOCKS."
+	cont "WESTPORT DOCKS."
 	para "I'll send you to"
 	line "him!"
 	para "How about it?"
@@ -75,13 +75,13 @@ TeleportGuyText1:
 	
 TeleportGuyText1_2:
 	text "Want to go to"
-	line "WEST CITY?"
+	line "WESTPORT CITY?"
 	done
 
 TeleportGuyYesText:
 	text "OK, OK. Picture"
-	line "WEST CITY in your"
-	cont "mind…"
+	line "WESTPORT CITY in"
+	cont "your mind…"
 	done
 
 TeleportGuyNoText:

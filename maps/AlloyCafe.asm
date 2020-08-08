@@ -51,7 +51,7 @@ AlloyCafeStrengthSailorText_GotStrength:
 	done
 
 AlloyCafeFishingGuruText:
-	text "NUTYPE CAFE's"
+	text "ALLOY CAFE's"
 	line "menu is chock full"
 
 	para "of hearty fare for"
@@ -63,15 +63,15 @@ AlloyCafeSailorText:
 	line "into this town, I"
 
 	para "always visit the"
-	line "NUTYPE CAFE."
+	line "ALLOY CAFE."
 
 	para "Everything here is"
 	line "delicious!"
 	done
 	
 AlloyCafeClerkText
-	text "Welcome to NUTYPE"
-	line "CAFE!"
+	text "Welcome to"
+	line "ALLOY CAFE!"
 	para "We have food to"
 	line "satisfy every"
 	cont "appetite!"

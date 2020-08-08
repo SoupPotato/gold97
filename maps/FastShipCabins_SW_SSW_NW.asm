@@ -213,7 +213,7 @@ FastShipBedText2:
 FastShipArrivedOlivineText:
 	text "FAST SHIP S.S.AQUA"
 	line "has arrived in"
-	cont "WEST CITY."
+	cont "WESTPORT CITY."
 	done
 
 FastShipArrivedVermilionText:

@@ -479,7 +479,7 @@ BugCatcherWade1AfterText:
 
 Route106YoungsterText:
 	text "I found a good"
-	line "#MON in NIHON"
+	line "#MON in JADE"
 	cont "FOREST."
 
 	para "I'm going to raise"
@@ -487,14 +487,14 @@ Route106YoungsterText:
 	cont "JASMINE."
 
 	para "She's the leader"
-	line "of NUTYPE CITY's"
+	line "of ALLOY CITY's"
 	cont "GYM."
 	done
 
 Route106SignText:
 	text "ROUTE 106"
 
-	para "NUTYPE CITY -"
+	para "ALLOY CITY -"
 	line "BIRDON TOWN"
 	done
 
@@ -505,7 +505,7 @@ DarkCaveSignText:
 	done
 
 IlexSignText:
-	text "NIHON FOREST"
+	text "JADE FOREST"
 	para "Entrance to the"
 	line "right."
 	done

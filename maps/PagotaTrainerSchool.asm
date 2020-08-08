@@ -165,8 +165,8 @@ AcademyEarlIntroText:
 	text "Hello!"
 
 	para "Welcome to the"
-	line "OLD CITY trainer's"
-	cont "school."
+	line "PAGOTA CITY"
+	cont "trainer's school."
 	
 	para "Want to learn"
 	line "how battles work?"

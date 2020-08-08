@@ -1038,9 +1038,9 @@ ElmGiveTicketText1:
 	done
 
 ElmGiveTicketText2:
-	text "The docks in WEST"
-	line "CITY take boats"
-	para "down to NIHON's"
+	text "The docks in"
+	line "WESTPORT CITY take"
+	para "boats down to the"
 	line "SOUTHWEST ISLANDS."
 	para "There are lots of"
 	line "rare #MON there"

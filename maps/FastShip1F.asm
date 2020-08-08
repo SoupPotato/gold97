@@ -253,7 +253,7 @@ FastShip1FSailor1Text_ToVermilion:
 FastShip1FSailor1Text_ToOlivine:
 	text "FAST SHIP S.S.AQUA"
 	line "is en route to"
-	cont "WEST CITY."
+	cont "WESTPORT CITY."
 
 	para "We will make an"
 	line "announcement when"
@@ -309,7 +309,7 @@ FastShip1FSailor3Text:
 FastShip1FSailor1Text_InOlivine:
 	text "FAST SHIP S.S.AQUA"
 	line "has arrived in"
-	cont "WEST CITY."
+	cont "WESTPORT CITY."
 	done
 
 FastShip1FSailor1Text_InVermilion:

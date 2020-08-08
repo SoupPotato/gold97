@@ -11,7 +11,7 @@ Route102WestportGateOfficerScript:
 	jumptextfaceplayer Route102WestportGateOfficerText
 
 Route102WestportGateOfficerText:
-	text "WEST CITY is a"
+	text "WESTPORT CITY is a"
 	line "quickly growing"
 	para "metropolis that"
 	line "has many resources"
@@ -23,7 +23,7 @@ Route102WestportGateYoungsterScript:
 
 Route102WestportGateYoungsterText:
 	text "Whew!"
-	para "The WEST CITY"
+	para "The WESTPORT CITY"
 	line "DEPT. STORE has an"
 	para "underground level"
 	line "that's full of"

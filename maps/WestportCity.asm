@@ -381,7 +381,7 @@ SilverHasItFiguredOut2:
 	
 	para "There is an old"
 	line "sea captain in"
-	cont "NUTYPE CITY."
+	cont "ALLOY CITY."
 	
 	para "He's got some"
 	line "relly interesting"
@@ -400,8 +400,8 @@ WestportCityMonText:
 	done
 	
 WestportCityDocksSignText:
-	text "WEST CITY DOCKS"
-	para "Ferries to TEKU"
+	text "WESTPORT DOCKS"
+	para "Ferries to TEKNOS"
 	line "CITY daily."
 	done
 
@@ -442,7 +442,7 @@ WestportCityCooltrainerF1Text_ClearedRadioTower:
 
 WestportCityCooltrainerF2Text:
 	text "The RADIO TOWER in"
-	line "WEST CITY is"
+	line "WESTPORT CITY is"
 	cont "a landmark."
 
 	para "They're running a"
@@ -542,7 +542,7 @@ WestportCityRocket6Text:
 
 
 WestportCityRadioTowerSignText:
-	text "WEST CITY"
+	text "WESTPORT CITY"
 	line "RADIO TOWER"
 	para "JOPM HQ"
 	done
@@ -551,12 +551,12 @@ GoldenrodDeptStoreSignText:
 	text "Full Selection of"
 	line "#MON Goods!"
 
-	para "WEST CITY"
+	para "WESTPORT CITY"
 	line "DEPT.STORE"
 	done
 
 GoldenrodGymSignText:
-	text "WEST CITY"
+	text "WESTPORT CITY"
 	line "#MON GYM"
 	cont "LEADER: BUGSY"
 
@@ -565,7 +565,7 @@ GoldenrodGymSignText:
 	done
 
 WestportCitySignText:
-	text "WEST CITY"
+	text "WESTPORT CITY"
 
 	para "NIHON's shining"
 	line "coastal metropolis"
@@ -580,7 +580,7 @@ WestportCityNameRaterSignText:
 	done
 
 GoldenrodUndergroundSignText:
-	text "GOLDENROD"
+	text "WESTPORT"
 	line "UNDERGROUND ENTRY"
 	done
 

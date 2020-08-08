@@ -313,7 +313,7 @@ SailorGarrettAfterBattleText:
 	line "passengers from"
 
 	para "AMAMI TOWN to"
-	line "WEST CITY."
+	line "WESTPORT CITY."
 	done
 
 FisherJonahSeenText:
@@ -351,7 +351,7 @@ BlackbeltWaiBeatenText:
 BlackbeltWaiAfterBattleText:
 	text "Have you ever"
 	line "trained in the"
-	para "DOJO in NUTYPE"
+	para "DOJO in ALLOY"
 	line "CITY?"
 	done
 
@@ -391,12 +391,12 @@ TeacherShirleyBeatenText:
 TeacherShirleyAfterBattleText:
 	text "We're on a field"
 	line "trip to the RUINS"
-	cont "outside HONTO."
+	cont "outside SANSKRIT."
 	done
 
 SchoolboyNateSeenText:
 	text "Do you know the"
-	line "HONTO RUINS?"
+	line "RUINS OF ALPH?"
 	done
 
 SchoolboyNateBeatenText:
@@ -412,7 +412,7 @@ SchoolboyNateAfterBattleText:
 SchoolboyRickySeenText:
 	text "There are some odd"
 	line "stone panels in"
-	cont "the HONTO RUINS."
+	cont "the RUINS."
 	done
 
 SchoolboyRickyBeatenText:

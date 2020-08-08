@@ -218,8 +218,8 @@ Route104LassText:
 	cont "far."
 	para "But there's still"
 	line "a long way to go"
-	cont "to NUTYPE CITY."
-	para "NIHON FOREST is a"
+	cont "to ALLOY CITY."
+	para "JADE FOREST is a"
 	line "maze."
 	para "I need to make"
 	line "sure I'm ready."
@@ -359,7 +359,7 @@ Route104SignText:
 Route104SignActualText:
 	text "ROUTE 104"
 	line "BIRDON TOWN -"
-	cont "NUTYPE CITY"
+	cont "ALLOY CITY"
 	done
 	
 

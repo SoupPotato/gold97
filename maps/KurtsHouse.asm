@@ -508,7 +508,7 @@ FalknerTalks:
 	line "-llenge me, you"
 	cont "must first prove"
 	cont "yourself at the"
-	cont "5 FLOOR TOWER."
+	cont "BRASS TOWER."
 	
 	para "If you receive the"
 	line "ELDER's blessing,"

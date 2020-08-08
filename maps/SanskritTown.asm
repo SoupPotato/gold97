@@ -97,7 +97,7 @@ HontoTownCooltrainermText:
 	done
 
 SanskritTownSignText:
-	text "HONTO TOWN"
+	text "SANSKRIT TOWN"
 
 	para "A link to NIHON's"
 	line "past."
@@ -110,7 +110,7 @@ SanskritTownRagecandybarSignText:
 	done
 
 MahoganyGymSignText:
-	text "HONTO TOWN"
+	text "SANSKRIT TOWN"
 	line "RUINS RESEARCH"
 	cont "CENTER"
 	done

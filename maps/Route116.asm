@@ -116,7 +116,7 @@ Route116SignText:
 	text "ROUTE 116"
 
 	para "BIRDON TOWN -"
-	line "HONTO TOWN"
+	line "SANSKRIT TOWN"
 	done
 
 

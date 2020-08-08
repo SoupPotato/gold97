@@ -348,15 +348,16 @@ WestportPortSailorNotGoingToTekuText:
 
 WestportPortSailorGoToTekuText:
 	text "Welcome to the"
-	line "WEST CITY DOCKS."
+	line "WESTPORT CITY"
+	cont "DOCKS."
 	para "Would you like to"
 	line "take a ferry to"
-	cont "TEKU CITY?"
+	cont "TEKNOS CITY?"
 	done
 
 WestportPortSailorGoToTekuText2:
 	text "Okay! Departing to"
-	line "TEKU CITY."
+	line "TEKNOS CITY."
 	done
 
 UnknownText_0x74a55:
@@ -364,21 +365,6 @@ UnknownText_0x74a55:
 	line "soon. Please get"
 	cont "on board."
 	done
-
-;	text "This ship is"
-;	line "planned to take"
-;	para "you to TEKU CITY,"
-;	line "but this is"
-;	para "actually the end"
-;	line "of the demo at"
-;	cont "this point."
-;	para "We're just gonna"
-;	line "warp you back to"
-;	para "the WEST CITY"
-;	line "#MON CENTER."
-;	para "Thanks for"
-;	line "playing!"
-;	done
 
 UnknownText_0x74a80:
 	text "Sorry. You can't"
@@ -432,7 +418,7 @@ UnknownText_0x74ba8:
 	cont "sail on Monday."
 	para "Today, we only"
 	line "offer ferries to"
-	cont "TEKU CITY."
+	cont "TEKNOS CITY."
 	done
 
 UnknownText_0x74bce:
@@ -442,7 +428,7 @@ UnknownText_0x74bce:
 	cont "sail on Friday."
 	para "Today, we only"
 	line "offer ferries to"
-	cont "TEKU CITY."
+	cont "TEKNOS CITY."
 	done
 
 WestportPortFishingGuru1Text:

@@ -156,7 +156,7 @@ Text_JadeForestLass:
 	done
 
 JadeForestSignpostText:
-	text "NIHON FOREST is"
+	text "JADE FOREST is"
 	line "so overgrown with"
 
 	para "trees that you"

@@ -83,7 +83,7 @@ Text_DayCareManTalksAboutEggTicket:
 	line "MAN."
 
 	para "There's something"
-	line "new in GOLDENROD"
+	line "new in WESTPORT"
 
 	para "called the TRADE"
 	line "CORNER."

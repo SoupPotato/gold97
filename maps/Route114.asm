@@ -123,7 +123,7 @@ CamperDeanBeatenText:
 
 CamperDeanAfterBattleText:
 	text "I prefer camping"
-	line "in NIHON FOREST."
+	line "in JADE FOREST."
 	done
 
 PicnickerHeidiSeenText:

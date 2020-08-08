@@ -24,20 +24,20 @@ Route102WestportGate2FFisherScript:
 	end
 
 Route102WestportGate2FFisherText:
-	text "The WEST CITY dock"
+	text "The WESTPORT dock"
 	line "has resumed taking"
 	para "ferries out to"
-	line "TEKU CITY."
+	line "TEKNOS CITY."
 	para "You should check"
 	line "it out if you get"
 	cont "a chance."
 	done
 	
 DocksClosedText:
-	text "WEST CITY has a"
+	text "WESTPORT has a"
 	line "dock where ferries"
 	para "can depart for"
-	line "TEKU CITY, but"
+	line "TEKNOS CITY, but"
 	para "it's closed right"
 	line "now."
 	done
@@ -62,8 +62,8 @@ Route102WestportGate2FSign2Text:
 	text "<PLAY_G> peeked"
 	line "through the"
 	cont "telescope!"
-	para "Is that the WEST"
-	line "CITY RADIO TOWER?"
+	para "Its the WESTPORT"
+	line "RADIO TOWER!"
 	done
 	
 Route102WestportGate2F_MapEvents:

@@ -136,7 +136,7 @@ OlivineElderStoryText:
 	para "Legend tells it"
 	line "nested at what is"
 	cont "now known as the"
-	cont "5 FLOOR TOWER."
+	cont "BRASS TOWER."
 	
 	para "However, the ever"
 	line "-growing malice,"

@@ -112,7 +112,7 @@ Route105CooltrainerFText:
 Route105SignText:
 	text "ROUTE 105"
 
-	para "NIHON FOREST"
+	para "JADE FOREST"
 	line "just up ahead!"
 	done
 

@@ -36,7 +36,8 @@ RockTunnelWhitneyScript:
 RockTunnelWhitneyText:
 	text "WHITNEY: Hi, I'm"
 	line "WHITNEY, leader of"
-	cont "the TEKU CITY GYM."
+	cont "the TEKNOS CITY"
+	cont "GYM."
 	para "I heard rumor that"
 	line "there could be a"
 	para "missing girl lost"

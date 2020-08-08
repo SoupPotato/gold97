@@ -42,7 +42,7 @@ SunPointDocksSunPointGateOfficerRocketsText:
 	done
 
 SunPointDocksSunPointGateOfficerGoodText:
-	text "SOUTH POINT DOCKS"
+	text "SUNPOINT DOCKS"
 	line "are always busy"
 	cont "and lively."
 	para "It's a great place"

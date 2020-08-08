@@ -323,7 +323,7 @@ CamperSpencerBeatenText:
 
 CamperSpencerAfterBattleText:
 	text "Have you ever been"
-	line "to NIHON FOREST?"
+	line "to JADE FOREST?"
 
 	para "We were planning"
 	line "to camp there."
@@ -357,8 +357,8 @@ PicnickerTiffanyClefairyText:
 BoardwalkSign1Text:
 	text "BOARDWALK"
 
-	para "HONTO TOWN -"
-	line "TEKU CITY"
+	para "SANSKRIT TOWN -"
+	line "TEKNOS CITY"
 	done
 
 BoardwalkSign2Text:
