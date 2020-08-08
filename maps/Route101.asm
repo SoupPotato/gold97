@@ -400,8 +400,8 @@ Route101_MapEvents:
 	warp_event  9, 27, SILENT_HILLS, 2
 	warp_event 30, 28, SILENT_HILLS, 3
 	warp_event 30, 29, SILENT_HILLS, 4
-	warp_event  8,  5, ROUTE_31_VIOLET_GATE, 3
-	warp_event  9,  5, ROUTE_31_VIOLET_GATE, 4
+	warp_event  8,  5, ROUTE_101_PAGOTA_GATE, 3
+	warp_event  9,  5, ROUTE_101_PAGOTA_GATE, 4
 
 	db 2 ; coord events
 	coord_event 45, 28, SCENE_ROUTE29_CATCH_TUTORIAL, Route101Tutorial1

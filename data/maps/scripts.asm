@@ -61,7 +61,7 @@ INCLUDE "maps/DayCare.asm"
 INCLUDE "maps/KantoBattleClubB1F.asm"
 INCLUDE "maps/StandCity.asm"
 INCLUDE "maps/StandRocketHouse2F.asm"
-INCLUDE "maps/Route110PagotaGate.asm"
+INCLUDE "maps/Route101PagotaGate.asm"
 
 SECTION "Map Scripts 5", ROMX
 
@@ -205,7 +205,7 @@ INCLUDE "maps/BattleTowerOutside.asm"
 
 SECTION "Map Scripts 13", ROMX
 
-INCLUDE "maps/IndigoPlateauPokecenter1F.asm"
+INCLUDE "maps/NihonLeaguePokecenter1F.asm"
 INCLUDE "maps/LoreleisRoom.asm"
 INCLUDE "maps/KogasRoom.asm"
 INCLUDE "maps/AgathasRoom.asm"
@@ -228,6 +228,7 @@ INCLUDE "maps/BrassTower5F.asm"
 SECTION "Map Scripts 15", ROMX
 
 INCLUDE "maps/NagoImposterHouse.asm"
+INCLUDE "maps/RyukyuTradeSpeechHouse.asm"
 INCLUDE "maps/NagoPokecenter1F.asm"
 INCLUDE "maps/JadeForestSnorlaxRoom.asm"
 INCLUDE "maps/NagoMart.asm"
@@ -361,7 +362,7 @@ INCLUDE "maps/SilentTown.asm"
 INCLUDE "maps/PagotaCity.asm"
 INCLUDE "maps/AlloyCity.asm"
 INCLUDE "maps/SilentHills.asm"
-INCLUDE "maps/KantoCity.asm"
+INCLUDE "maps/KantoRegion.asm"
 INCLUDE "maps/AmamiTown.asm"
 INCLUDE "maps/Route114.asm"
 INCLUDE "maps/FrostpointPokecenter1F.asm"
@@ -382,7 +383,7 @@ INCLUDE "maps/YoronPoint.asm"
 INCLUDE "maps/Route117.asm"
 INCLUDE "maps/Route118.asm"
 INCLUDE "maps/UrasoePark.asm"
-INCLUDE "maps/IndigoPlateau.asm"
+INCLUDE "maps/NihonLeague.asm"
 
 
 SECTION "Map Scripts 25", ROMX
@@ -395,7 +396,7 @@ INCLUDE "maps/Route107AlloyGate2F.asm"
 INCLUDE "maps/Route111BlueForestGate.asm"
 INCLUDE "maps/Route110SandstormHouse.asm"
 INCLUDE "maps/SilentHouse.asm"
-INCLUDE "maps/Route110PagotaGate2F.asm"
+INCLUDE "maps/Route101PagotaGate2F.asm"
 INCLUDE "maps/Route102WestportGate2F.asm"
 INCLUDE "maps/TeknosPort.asm"
 INCLUDE "maps/TeknosPortPassage.asm"

@@ -57,8 +57,8 @@ SilphCo1F_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  6, 15, CELADON_CITY, 11
-	warp_event  7, 15, CELADON_CITY, 12
+	warp_event  6, 15, KANTO_REGION, 11
+	warp_event  7, 15, KANTO_REGION, 12
 
 	db 0 ; coord events
 

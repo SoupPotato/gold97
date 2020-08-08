@@ -119,7 +119,7 @@ IsenStrait_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event 53, 11, ROUTE_17_ROUTE_18_GATE, 1
+	warp_event 53, 11, ISEN_STRAIT_SEASIDE_PATH_GATE, 1
 	warp_event 18,  3, RESEARCH_FACILITY_ENTRANCE, 1
 
 	db 0 ; coord events

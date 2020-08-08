@@ -32,8 +32,8 @@ Route118SunpointGate_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
-	warp_event  0,  7, CIANWOOD_CITY, 5
-	warp_event  1,  7, CIANWOOD_CITY, 5
+	warp_event  0,  7, SUNPOINT_CITY, 5
+	warp_event  1,  7, SUNPOINT_CITY, 5
 	warp_event  8,  7, ROUTE_118, 1
 	warp_event  9,  7, ROUTE_118, 1
 

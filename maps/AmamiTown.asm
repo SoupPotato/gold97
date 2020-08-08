@@ -97,7 +97,7 @@ AmamiTown_MapEvents:
 	warp_event  4,  2, AMAMI_PORT_PASSAGE, 1
 	warp_event  4,  3, AMAMI_PORT_PASSAGE, 2
 	warp_event 17,  4, AMAMI_POKECENTER_1F, 1
-	warp_event 35, 15, VIRIDIAN_POKECENTER_1F, 1
+	warp_event 35, 15, SILENT_POKECENTER_1F, 1
 	warp_event 24,  5, AMAMI_SWIMMING_POOL, 1
 	warp_event 25,  5, AMAMI_SWIMMING_POOL, 2
 	warp_event 23, 10, AMAMI_MART, 1

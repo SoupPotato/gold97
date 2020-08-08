@@ -383,10 +383,10 @@ VictoryRoad2F_MapEvents:
 	db 0, 0 ; filler
 
 	db 5 ; warp events
-	warp_event 24, 51, MOUNT_MOON_SQUARE, 6
-	warp_event 16, 41, MOUNT_MOON_SQUARE, 7
-	warp_event  8, 33, MOUNT_MOON_SQUARE, 8
-	warp_event 19,  1, ROUTE_23, 3
+	warp_event 24, 51, VICTORY_ROAD_OUTSIDE, 6
+	warp_event 16, 41, VICTORY_ROAD_OUTSIDE, 7
+	warp_event  8, 33, VICTORY_ROAD_OUTSIDE, 8
+	warp_event 19,  1, NIHON_LEAGUE, 3
 	warp_event 28, 41, VICTORY_ROAD, 9
 
 	db 0 ; coord events

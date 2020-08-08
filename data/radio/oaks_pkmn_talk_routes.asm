@@ -1,7 +1,7 @@
 ; Oak's Pokémon Talk will list wild Pokémon on these maps.
 
 OaksPKMNTalkRoutes:
-	map_id ROUTE_29
+	map_id ROUTE_101
 	map_id SILENT_HILLS
 	map_id ROUTE_102
 	map_id ROUTE_116
@@ -18,8 +18,8 @@ OaksPKMNTalkRoutes:
 	map_id ROUTE_110
 	map_id ROUTE_111
 	map_id ROUTE_112
-	map_id ROUTE_34
-	map_id ROUTE_9
-	map_id ROUTE_27
+	map_id ROUTE_113
+	map_id ROUTE_114
+	map_id ROUTE_115
 
 .End

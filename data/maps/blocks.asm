@@ -9,8 +9,8 @@ Route110_Blocks:
 Route102_Blocks:
 	INCBIN "maps/Route102.blk"
 
-KantoCity_Blocks:
-	INCBIN "maps/KantoCity.blk"
+KantoRegion_Blocks:
+	INCBIN "maps/KantoRegion.blk"
 
 RyukyuCity_Blocks:
 	INCBIN "maps/RyukyuCity.blk"
@@ -82,6 +82,7 @@ SanskritCoinCaseSpeechHouse_Blocks:
 BlueForestEmysHouse_Blocks:
 MoveDeletersHouse_Blocks:
 NagoImposterHouse_Blocks:
+RyukyuTradeSpeechHouse_Blocks:
 WestportHappinessRater_Blocks:
 WestportNameRater_Blocks:
 NagoCharmanderHouse_Blocks:
@@ -125,11 +126,11 @@ Route119SunpointGate_Blocks:
 UrasoeParkUrasoeTrailGate_Blocks:
 	INCBIN "maps/NorthSouthGate.blk"
 	
-Route110PagotaGate_Blocks:
+Route101PagotaGate_Blocks:
 Route107AlloyGate_Blocks:
 	INCBIN "maps/NorthSouth2FGate.blk"
 	
-Route110PagotaGate2F_Blocks:
+Route101PagotaGate2F_Blocks:
 Route102WestportGate2F_Blocks:
 Route107AlloyGate2F_Blocks:
 	INCBIN "maps/Gate2F.blk"
@@ -445,8 +446,8 @@ TeamRocketBaseB2FOffice_Blocks:
 TeamRocketBaseB1F_Blocks:
 	INCBIN "maps/TeamRocketBaseB1F.blk"
 
-IndigoPlateauPokecenter1F_Blocks:
-	INCBIN "maps/IndigoPlateauPokecenter1F.blk"
+NihonLeaguePokecenter1F_Blocks:
+	INCBIN "maps/NihonLeaguePokecenter1F.blk"
 
 LoreleisRoom_Blocks:
 	INCBIN "maps/LoreleisRoom.blk"
@@ -676,8 +677,8 @@ VictoryRoad_Blocks:
 VictoryRoad2F_Blocks:
 	INCBIN "maps/VictoryRoad2F.blk"
 
-IndigoPlateau_Blocks:
-	INCBIN "maps/IndigoPlateau.blk"
+NihonLeague_Blocks:
+	INCBIN "maps/NihonLeague.blk"
 
 LancesRoom_Blocks:
 	INCBIN "maps/LancesRoom.blk"

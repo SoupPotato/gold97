@@ -47,7 +47,7 @@ Script_ApproachLanceFromLeft:
 	jump LancesRoomLanceScript
 
 Script_ApproachLanceFromRight:
-;	warp ROUTE_5, 13, 3
+;	warp SUNPOINT_DOCKS, 13, 3
 ;	end
 	special FadeOutMusic
 	applymovement PLAYER, MovementData_ApproachLanceFromRight
@@ -360,8 +360,8 @@ LancesRoom_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
-	warp_event  4, 23, KARENS_ROOM, 3
-	warp_event  5, 23, KARENS_ROOM, 4
+	warp_event  4, 23, GIOVANNIS_ROOM, 3
+	warp_event  5, 23, GIOVANNIS_ROOM, 4
 	warp_event  4,  1, HALL_OF_FAME, 1
 	warp_event  5,  1, HALL_OF_FAME, 2
 

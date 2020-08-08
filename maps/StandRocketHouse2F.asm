@@ -93,7 +93,7 @@ ImposterSceneMainScript:
 	special FadeInQuickly
 	setevent EVENT_GOT_HP_UP_FROM_RANDY
 	setscene SCENE_SAFARI_ZONE_WARDENS_HOME_2F_NOTHING
-	setmapscene SAFARI_ZONE_WARDENS_HOME, SCENE_SAFARI_ZONE_WARDENS_HOME_BASE_UNCOVERED
+	setmapscene STAND_ROCKET_HOUSE_1F, SCENE_SAFARI_ZONE_WARDENS_HOME_BASE_UNCOVERED
 	pause 30
 	end
 	
@@ -242,7 +242,7 @@ StandRocketHouse2F_MapEvents:
 	db 0, 0 ; filler
 
 	db 1 ; warp events
-	warp_event 19,  1, SAFARI_ZONE_WARDENS_HOME, 4
+	warp_event 19,  1, STAND_ROCKET_HOUSE_1F, 4
 
 	db 2 ; coord events
 	coord_event 12,  4, SCENE_DEFAULT, ImposterScene2FTop

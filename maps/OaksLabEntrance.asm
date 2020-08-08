@@ -26,7 +26,7 @@ OaksLabEntrance_MapScripts:
 	applymovement PLAYER, Movement_PlayerThroughDoor
 	playsound SFX_ENTER_DOOR
 	special FadeOutPalettes
-	warpfacing UP, ELMS_LAB, 3, 7
+	warpfacing UP, OAKS_LAB, 3, 7
 	end
 
 .SceneOaksLabEntranceNothing:
@@ -131,7 +131,7 @@ DaisyStopsScript1:
 	closetext
 	applymovement ELMENTRANCE_DAISY, DaisyLeftMovement
 	setscene SCENE_ELM_ENTRANCE_NOTHING
-	setmapscene ROUTE_29, SCENE_ROUTE29_CATCH_TUTORIAL
+	setmapscene ROUTE_101, SCENE_ROUTE29_CATCH_TUTORIAL
 	end
 	
 .JumpstdReceiveItem:
@@ -158,7 +158,7 @@ DaisyStopsScript2:
 	closetext
 	applymovement ELMENTRANCE_DAISY, DaisyLeftMovement
 	setscene SCENE_ELM_ENTRANCE_NOTHING
-	setmapscene ROUTE_29, SCENE_ROUTE29_CATCH_TUTORIAL
+	setmapscene ROUTE_101, SCENE_ROUTE29_CATCH_TUTORIAL
 	end
 	
 .JumpstdReceiveItem:
@@ -397,7 +397,7 @@ OaksLabEntrance_MapEvents:
 	db 3 ; warp events
 	warp_event  3, 15, SILENT_TOWN, 1
 	warp_event  4, 15, SILENT_TOWN, 5
-	warp_event  4,  0, ELMS_LAB, 1
+	warp_event  4,  0, OAKS_LAB, 1
 
 
 	db 4 ; coord events

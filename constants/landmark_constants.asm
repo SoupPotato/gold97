@@ -4,11 +4,11 @@
 ; Johto landmarks
 	const SPECIAL_MAP       ; 00
 	const SILENT_TOWN       ; 01
-	const ROUTE_29          ; 02
-	const ROUTE_37          ; 15
+	const ROUTE_101         ; 02
+	const SILENT_HILLS      ; 15
 	const PAGOTA_CITY       ; 06
 	const BRASS_TOWER       ; 07
-	const ROUTE_36          ; 14
+	const ROUTE_102         ; 14
 	const WESTPORT_CITY     ; 10
 	const RADIO_TOWER       ; 11
 	const ROUTE_103         ; 12
@@ -20,7 +20,7 @@
 	const SANSKRIT_TOWN     ; 24
 	const RUINS_OF_ALPH     ; 09
 	const ROUTE_118         ; 36
-	const CIANWOOD_CITY     ; 21
+	const SUNPOINT_CITY     ; 21
 	const MAGMA_SHAFT       ; 18
 	const ROUTE_5           ; 3a
 	const ROUTE_7           ; 3f
@@ -35,7 +35,7 @@
 	const ALLOY_CITY        ; 1b
 	const ROUTE_107         ; 56
 	const KOBAN_ISLAND      ; 2f
-	const DRAGONS_DEN       ; 2a
+	const DRAGONS_MAW       ; 2a
 	const ROUTE_108         ; 19
 	const ROUTE_109         ; 1a
 	const AMPARE_CAVERN     ; 2c
@@ -48,14 +48,14 @@
 	const ROUTE_112         ; 08
 	const STAND_CITY        ; 51
 	const NATIONAL_PARK     ; 13
-	const ROUTE_34          ; 0f
-	const ROUTE_9           ; 41
-	const CELADON_CITY      ; 47
-	const ROUTE_27          ; 5c
+	const ROUTE_113         ; 0f
+	const ROUTE_114         ; 41
+	const KANTO_REGION_M    ; 47
+	const ROUTE_115         ; 5c
 	const VIRIDIAN_CITY     ; 58
-	const CHERRYGROVE_CITY  ; 03
+	const CROWN_CITY        ; 03
 	const VICTORY_ROAD      ; 58
-	const INDIGO_PLATEAU    ; 5a
+	const NIHON_LEAGUE      ; 5a
 
 KANTO_LANDMARK EQU const_value
 
@@ -92,7 +92,7 @@ KANTO_LANDMARK EQU const_value
 	const ROUTE_12          ; 4a
 	const NANJO_FOREST      ; 54
 	const MT_MOON           ; 35 2
-	const SAFFRON_CITY      ; 48 9
+	const RYUKYU_CITY       ; 48 9
 	const ROUTE_25          ; 39 5
 	const CHARRED_SUMMIT    ; 42 11
 	const NAGO_VILLAGE      ; 37 3

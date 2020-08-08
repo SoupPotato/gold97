@@ -10,7 +10,7 @@
 	const KANTO_LASS_2
 	const KANTO_ITEMBALL
 
-KantoCity_MapScripts:
+KantoRegion_MapScripts:
 	db 0 ; scene scripts
 
 	db 1 ; callbacks
@@ -20,7 +20,7 @@ KantoCity_MapScripts:
 	setflag ENGINE_FLYPOINT_CELADON
 	return
 	
-KantoCityTMDetect:
+KantoRegionTMDetect:
 	itemball TM_DETECT
 
 KantoFisherScript:
@@ -243,41 +243,41 @@ KantoTeacherText:
 	cont "clerk."
 	done
 
-KantoCity_MapEvents:
+KantoRegion_MapEvents:
 	db 0, 0 ; filler
 
 	db 31 ; warp events
-	warp_event 14, 17, CELADON_DEPT_STORE_1F, 1
-	warp_event 22, 19, CELADON_MANSION_1F, 1
-	warp_event 22, 13, CELADON_MANSION_1F, 3
-	warp_event 23, 13, CELADON_MANSION_1F, 3
-	warp_event 49, 30, CELADON_POKECENTER_1F, 1
-	warp_event 29, 23, CELADON_GAME_CORNER, 1
-	warp_event 34, 23, CELADON_GAME_CORNER_PRIZE_ROOM, 1
-	warp_event  4,  5, CELADON_GYM, 1
-	warp_event 40, 23, CELADON_CAFE, 1
+	warp_event 14, 17, KANTO_DEPT_STORE_1F, 1
+	warp_event 22, 19, KANTO_CELADON_MANSION_1F, 1
+	warp_event 22, 13, KANTO_CELADON_MANSION_1F, 3
+	warp_event 23, 13, KANTO_CELADON_MANSION_1F, 3
+	warp_event 49, 30, KANTO_POKECENTER_1F, 1
+	warp_event 29, 23, KANTO_GAME_CORNER, 1
+	warp_event 34, 23, KANTO_GAME_CORNER_PRIZE_ROOM, 1
+	warp_event  4,  5, KANTO_GYM, 1
+	warp_event 40, 23, KANTO_LEFTOVERS_HOUSE, 1
 	warp_event  6, 27, ROUTE_115_KANTO_GATE, 4
 	warp_event 30, 19, SILPH_CO_1F, 1
 	warp_event 31, 19, SILPH_CO_1F, 2
-	warp_event 15, 17, CELADON_DEPT_STORE_1F, 2
-	warp_event 23, 19, CELADON_MANSION_1F, 2
-	warp_event  5,  5, CELADON_GYM, 2
-	warp_event 38, 29, GOLDENROD_MAGNET_TRAIN_STATION, 1
-	warp_event 12, 43, OAKS_LAB, 1
-	warp_event 13, 43, OAKS_LAB, 2
+	warp_event 15, 17, KANTO_DEPT_STORE_1F, 2
+	warp_event 23, 19, KANTO_CELADON_MANSION_1F, 2
+	warp_event  5,  5, KANTO_GYM, 2
+	warp_event 38, 29, KANTO_HOTEL, 1
+	warp_event 12, 43, OAKS_KANTO_LAB, 1
+	warp_event 13, 43, OAKS_KANTO_LAB, 2
 	warp_event 13, 38, BLUES_HOUSE, 1
 	warp_event  5, 38, REDS_HOUSE_1F,1
-	warp_event 13,  4, KANTO_POKECENTER_1F,1
+	warp_event 13,  4, KANTO_POKECENTER_WEST_1F,1
 	warp_event  3, 18, KANTO_MART,1
 	warp_event 42,  3, KANTO_BATTLE_CLUB_1F, 1
 	warp_event 16, 23, KANTO_HOUSE_1, 1
 	warp_event 51, 11, KANTO_HOUSE_2, 1
 	warp_event 39, 38, KANTO_HOUSE_3, 1
 	warp_event 45, 46, KANTO_HOUSE_4, 1
-	warp_event 52, 45, DANCE_THEATRE, 1
-	warp_event 53, 45, DANCE_THEATRE, 2
-	warp_event 52, 23, DRAGON_SHRINE, 1
-	warp_event 53, 23, DRAGON_SHRINE, 2
+	warp_event 52, 45, KANTO_FOSSIL_LAB, 1
+	warp_event 53, 45, KANTO_FOSSIL_LAB, 2
+	warp_event 52, 23, KANTO_CAFE, 1
+	warp_event 53, 23, KANTO_CAFE, 2
 
 	db 0 ; coord events
 
@@ -306,4 +306,4 @@ KantoCity_MapEvents:
 	object_event  5,  9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoYoungsterScript, -1
 	object_event 40, 43, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoFisher2Script, -1
 	object_event 51, 48, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoLass2Script, -1
-	object_event 32, 44, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, KantoCityTMDetect, EVENT_LAKE_OF_RAGE_TM_DETECT
+	object_event 32, 44, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, KantoRegionTMDetect, EVENT_LAKE_OF_RAGE_TM_DETECT

@@ -78,7 +78,7 @@ ReturnFromMapSetupScript::
 	ret z
 	cp CROWN_PASS
 	ret z
-	cp INDIGO_PLATEAU
+	cp NIHON_LEAGUE
 	ret z
 	cp POWER_PLANT
 	ret z
@@ -88,12 +88,12 @@ ReturnFromMapSetupScript::
 
 .CheckNationalParkGate:
 	ld a, [wMapGroup]
-	cp GROUP_ROUTE_36_NATIONAL_PARK_GATE
+	cp GROUP_NATIONAL_PARK_STAND_GATE
 	ret nz
 	ld a, [wMapNumber]
-	cp MAP_ROUTE_36_NATIONAL_PARK_GATE
+	cp MAP_NATIONAL_PARK_STAND_GATE
 	ret z
-	cp MAP_ROUTE_36_NATIONAL_PARK_GATE
+	cp MAP_NATIONAL_PARK_STAND_GATE
 	ret
 
 PlaceMapNameSign::

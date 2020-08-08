@@ -60,7 +60,7 @@ RivalBattleFinal:
 	disappear CrownPass_SILVER
 	setscene SCENE_UNDERGROUND_NOTHING
 	setevent EVENT_EMERGENCY_SWITCH
-	setmapscene CHERRYGROVE_CITY, SCENE_CHERRYGROVECITY_MEET_RIVAL
+	setmapscene CROWN_CITY, SCENE_CHERRYGROVECITY_MEET_RIVAL
 	special HealParty
 	special FadeOutMusic
 	waitsfx
@@ -171,7 +171,7 @@ CrownPass_MapEvents:
 
 	db 2 ; warp events
 	warp_event 10, 33, VICTORY_ROAD_GATE, 3
-	warp_event 11,  1, CHERRYGROVE_CITY, 1
+	warp_event 11,  1, CROWN_CITY, 1
 
 	db 1 ; coord events
 	coord_event 12,  7, SCENE_DEFAULT, RivalBattleFinal

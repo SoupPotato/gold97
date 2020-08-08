@@ -346,7 +346,7 @@ ElmDirectionsScript:
 	setevent EVENT_RIVAL_CHERRYGROVE_CITY
 	setscene SCENE_ELMSLAB_AIDE_GIVES_POTION
 	setmapscene SILENT_TOWN, SCENE_NEW_BARK_NOTHING
-	setmapscene ELM_ENTRANCE, SCENE_ELM_ENTRANCE_BATTLE
+	setmapscene OAKS_LAB_ENTRANCE, SCENE_ELM_ENTRANCE_BATTLE
 	setevent EVENT_SILVER_IN_ELMS_LAB
 	clearevent EVENT_DAISY_ELM_ENTRANCE
 	end
@@ -1188,8 +1188,8 @@ OaksLab_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  3,  7, ELM_ENTRANCE, 3
-	warp_event  4,  7, ELM_ENTRANCE, 3
+	warp_event  3,  7, OAKS_LAB_ENTRANCE, 3
+	warp_event  4,  7, OAKS_LAB_ENTRANCE, 3
 
 
 	db 2 ; coord events

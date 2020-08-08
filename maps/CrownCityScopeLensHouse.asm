@@ -55,8 +55,8 @@ CrownCityScopeLensHouse_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  4,  7, CHERRYGROVE_CITY, 6
-	warp_event  5,  7, CHERRYGROVE_CITY, 6
+	warp_event  4,  7, CROWN_CITY, 6
+	warp_event  5,  7, CROWN_CITY, 6
 
 	db 0 ; coord events
 

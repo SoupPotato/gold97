@@ -755,17 +755,17 @@ StandCity_MapEvents:
 	db 0, 0 ; filler
 
 	db 11 ; warp events
-	warp_event 35, 26, FUCHSIA_MART, 1
-	warp_event 16, 21, SAFARI_ZONE_MAIN_OFFICE, 1
-	warp_event 34, 31, CIANWOOD_GYM, 1
+	warp_event 35, 26, STAND_MART, 1
+	warp_event 16, 21, STAND_ZOO_MAIN_OFFICE, 1
+	warp_event 34, 31, STAND_GYM, 1
 	warp_event 26, 29, BILLS_BROTHERS_HOUSE, 1
-	warp_event 33, 20, FUCHSIA_POKECENTER_1F, 1
-	warp_event 17, 31, SAFARI_ZONE_WARDENS_HOME, 1
+	warp_event 33, 20, STAND_POKECENTER_1F, 1
+	warp_event 17, 31, STAND_ROCKET_HOUSE_1F, 1
 	warp_event 30, 13, ROUTE_112_STAND_CITY_GATE, 3
 	warp_event 31, 13, ROUTE_112_STAND_CITY_GATE, 4
-	warp_event  6, 17, ROUTE_36_NATIONAL_PARK_GATE, 4
-	warp_event 35, 31, CIANWOOD_GYM, 2
-	warp_event 24, 17, STAND_POKE, 1
+	warp_event  6, 17, NATIONAL_PARK_STAND_GATE, 4
+	warp_event 35, 31, STAND_GYM, 2
+	warp_event 24, 17, STAND_ZOO_INFIRMARY, 1
 
 
 	db 2 ; coord events

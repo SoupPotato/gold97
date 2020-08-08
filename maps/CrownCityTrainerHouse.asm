@@ -105,8 +105,8 @@ CrownCityTrainerHouse_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  7,  7, CHERRYGROVE_CITY, 8
-	warp_event  8,  7, CHERRYGROVE_CITY, 9
+	warp_event  7,  7, CROWN_CITY, 8
+	warp_event  8,  7, CROWN_CITY, 9
 
 	db 0 ; coord events
 

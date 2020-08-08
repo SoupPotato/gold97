@@ -57,10 +57,10 @@ KantoCeladonMansion2F_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
-	warp_event  2,  0, CELADON_MANSION_1F, 4
-	warp_event  4,  0, CELADON_MANSION_3F, 2
-	warp_event  6,  0, CELADON_MANSION_3F, 3
-	warp_event  7,  0, CELADON_MANSION_1F, 5
+	warp_event  2,  0, KANTO_CELADON_MANSION_1F, 4
+	warp_event  4,  0, KANTO_CELADON_MANSION_3F, 2
+	warp_event  6,  0, KANTO_CELADON_MANSION_3F, 3
+	warp_event  7,  0, KANTO_CELADON_MANSION_1F, 5
 
 	db 0 ; coord events
 

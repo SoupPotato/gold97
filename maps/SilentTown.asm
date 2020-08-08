@@ -84,8 +84,8 @@ BlueStopsYouScene1:
 	waitbutton
 	closetext
 	setevent EVENT_RIVAL_ELM_ENTRANCE
-	setmapscene ELM_ENTRANCE, SCENE_HEAD_TO_THE_BACK
-	setmapscene ELMS_LAB, SCENE_DEFAULT
+	setmapscene OAKS_LAB_ENTRANCE, SCENE_HEAD_TO_THE_BACK
+	setmapscene OAKS_LAB, SCENE_DEFAULT
 	clearevent EVENT_BLUE_ELM_ENTRANCE
 	follow SilentTown_BLUE, PLAYER
 	applymovement SilentTown_BLUE, BlueTakesPlayerToLab1
@@ -95,7 +95,7 @@ BlueStopsYouScene1:
 	applymovement PLAYER, PlayerEntersLab
 	playsound SFX_ENTER_DOOR
 	special FadeOutPalettes
-	warpfacing UP, ELM_ENTRANCE, 4, 15
+	warpfacing UP, OAKS_LAB_ENTRANCE, 4, 15
 	end
 
 BlueStopsYouScene2:
@@ -113,8 +113,8 @@ BlueStopsYouScene2:
 	waitbutton
 	closetext
 	setevent EVENT_RIVAL_ELM_ENTRANCE
-	setmapscene ELM_ENTRANCE, SCENE_HEAD_TO_THE_BACK
-	setmapscene ELMS_LAB, SCENE_DEFAULT
+	setmapscene OAKS_LAB_ENTRANCE, SCENE_HEAD_TO_THE_BACK
+	setmapscene OAKS_LAB, SCENE_DEFAULT
 	clearevent EVENT_BLUE_ELM_ENTRANCE
 	follow SilentTown_BLUE, PLAYER
 	applymovement SilentTown_BLUE, BlueTakesPlayerToLab2
@@ -124,7 +124,7 @@ BlueStopsYouScene2:
 	applymovement PLAYER, PlayerEntersLab
 	playsound SFX_ENTER_DOOR
 	special FadeOutPalettes
-	warpfacing UP, ELM_ENTRANCE, 4, 15
+	warpfacing UP, OAKS_LAB_ENTRANCE, 4, 15
 	end
 
 SilentTownRivalScript:
@@ -379,11 +379,11 @@ SilentTown_MapEvents:
 	db 0, 0 ; filler
 
 	db 7 ; warp events
-	warp_event 14, 19, ELM_ENTRANCE, 1
+	warp_event 14, 19, OAKS_LAB_ENTRANCE, 1
 	warp_event  5, 12, PLAYERS_HOUSE_1F, 1
-	warp_event 13, 12, VIRIDIAN_POKECENTER_1F, 1
-	warp_event  3, 20, ELMS_HOUSE, 1
-	warp_event 15, 19, ELM_ENTRANCE, 2
+	warp_event 13, 12, SILENT_POKECENTER_1F, 1
+	warp_event  3, 20, SILENT_HOUSE, 1
+	warp_event 15, 19, OAKS_LAB_ENTRANCE, 2
 	warp_event  9, 18, AMAMI_POKECENTER_1F, 1
 	warp_event  9,  5, VICTORY_ROAD_GATE, 1
 

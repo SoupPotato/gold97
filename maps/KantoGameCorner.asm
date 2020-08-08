@@ -360,10 +360,10 @@ KantoGameCorner_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
-	warp_event  9, 13, CELADON_CITY, 6
-	warp_event 10, 13, CELADON_CITY, 6
-	warp_event  8, 13, CELADON_CITY, 6
-	warp_event 11, 13, CELADON_CITY, 6
+	warp_event  9, 13, KANTO_REGION, 6
+	warp_event 10, 13, KANTO_REGION, 6
+	warp_event  8, 13, KANTO_REGION, 6
+	warp_event 11, 13, KANTO_REGION, 6
 
 
 	db 0 ; coord events

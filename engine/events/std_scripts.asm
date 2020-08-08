@@ -311,7 +311,7 @@ BugContestResultsWarpScript:
 	scall BugContestResults_CopyContestantsToResults
 	setevent EVENT_ROUTE_36_NATIONAL_PARK_GATE_OFFICER_CONTEST_DAY
 	clearevent EVENT_ROUTE_36_NATIONAL_PARK_GATE_OFFICER_NOT_CONTEST_DAY
-	warpfacing UP, ROUTE_36_NATIONAL_PARK_GATE, 0, 7
+	warpfacing UP, NATIONAL_PARK_STAND_GATE, 0, 7
 	applymovement PLAYER, Movement_ContestResults_WalkAfterWarp
 
 BugContestResultsScript:

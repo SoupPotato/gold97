@@ -74,10 +74,10 @@ KantoDeptStore1F_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
-	warp_event 13,  7, CELADON_CITY, 1
-	warp_event 14,  7, CELADON_CITY, 13
-	warp_event 15,  0, CELADON_DEPT_STORE_2F, 2
-	warp_event  2,  0, CELADON_DEPT_STORE_ELEVATOR, 1
+	warp_event 13,  7, KANTO_REGION, 1
+	warp_event 14,  7, KANTO_REGION, 13
+	warp_event 15,  0, KANTO_DEPT_STORE_2F, 2
+	warp_event  2,  0, KANTO_DEPT_STORE_ELEVATOR, 1
 
 	db 0 ; coord events
 

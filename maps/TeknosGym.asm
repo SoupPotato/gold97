@@ -41,7 +41,7 @@ TeknosGymWhitneyScript:
 	setevent EVENT_BEAT_LASS_BRIDGET
 	setevent EVENT_BEAT_BEAUTY_SAMANTHA
 	specialphonecall SPECIALCALL_ROBBED
-	setmapscene ELM_ENTRANCE, SCENE_DEFAULT
+	setmapscene OAKS_LAB_ENTRANCE, SCENE_DEFAULT
 	opentext
 	writetext PlayerReceivedPlainBadgeText
 	playsound SFX_GET_BADGE
@@ -144,7 +144,7 @@ TeknosGymGuyScript:
 	end
 
 TeknosGymStatue:
-;	setmapscene ELM_ENTRANCE, SCENE_DEFAULT
+;	setmapscene OAKS_LAB_ENTRANCE, SCENE_DEFAULT
 ;	specialphonecall SPECIALCALL_ROBBED
 	checkflag ENGINE_PLAINBADGE
 	iftrue .Beaten

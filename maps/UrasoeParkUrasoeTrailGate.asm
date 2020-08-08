@@ -21,8 +21,8 @@ UrasoeParkUrasoeTrailGate_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
-	warp_event  4,  0, ROUTE_10_SOUTH, 3
-	warp_event  5,  0, ROUTE_10_SOUTH, 4
+	warp_event  4,  0, URASOE_PARK, 3
+	warp_event  5,  0, URASOE_PARK, 4
 	warp_event  4,  7, URASOE_TRAIL, 1
 	warp_event  5,  7, URASOE_TRAIL, 2
 

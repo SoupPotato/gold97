@@ -83,7 +83,7 @@ KantoGrassWildMons:
 	db 42, NOCTOWL
 	db 42, NOCTOWL
 	
-	map_id ROUTE_10_SOUTH
+	map_id URASOE_PARK
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 32, LEDIAN

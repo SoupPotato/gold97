@@ -161,7 +161,7 @@ SeasidePath_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  4, 11, ROUTE_17_ROUTE_18_GATE, 4
+	warp_event  4, 11, ISEN_STRAIT_SEASIDE_PATH_GATE, 4
 	warp_event 53, 11, JOULE_CAVE, 1
 
 	db 0 ; coord events

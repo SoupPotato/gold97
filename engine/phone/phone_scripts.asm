@@ -32,11 +32,11 @@ MomPhoneLandmark:
 MomPhonePalette1:
 	checkcode VAR_MAPGROUP
 	ifequal GROUP_SILENT_TOWN, .newbark
-	ifequal GROUP_CHERRYGROVE_CITY, .cherrygrove
+	ifequal GROUP_CROWN_CITY, .cherrygrove
 	ifequal GROUP_PAGOTA_CITY, .violet
 	ifequal GROUP_BIRDON_TOWN, .azalea
 	ifequal GROUP_WESTPORT_CITY, .goldenrod
-	ifequal GROUP_CIANWOOD_CITY, .cianwood
+	ifequal GROUP_SUNPOINT_CITY, .cianwood
 	ifequal GROUP_KOBAN_ISLAND, .pallet
 	ifequal GROUP_STAND_CITY, .fuchsia
 ;	ifequal GROUP_INDIGO_PLATEAU, .mtfuji ;why doesn't this work???? where are these map group variables defined???????asdfasdf
@@ -77,7 +77,7 @@ MomPhonePalette1:
 	landmarktotext MAGMA_SHAFT, MEM_BUFFER_1
 	jump MomPhoneLandmark
 .pallet
-	landmarktotext DRAGONS_DEN, MEM_BUFFER_1
+	landmarktotext DRAGONS_MAW, MEM_BUFFER_1
 	jump MomPhoneLandmark
 .fuchsia
 	landmarktotext NATIONAL_PARK, MEM_BUFFER_1
@@ -544,11 +544,11 @@ JosePhoneScript1:
 	farjump UnknownScript_0xa0920
 
 .WantsBattle:
-	landmarktotext ROUTE_27, MEM_BUFFER_2
+	landmarktotext ROUTE_115, MEM_BUFFER_2
 	farjump UnknownScript_0xa0a41
 
 .HasItem:
-	landmarktotext ROUTE_27, MEM_BUFFER_2
+	landmarktotext ROUTE_115, MEM_BUFFER_2
 	farjump UnknownScript_0xa0a41
 
 JosePhoneScript2:
@@ -574,7 +574,7 @@ JoseSaturdayNight:
 	setflag ENGINE_JOSE_SATURDAY_NIGHT
 
 JoseWantsBattle:
-	landmarktotext ROUTE_27, MEM_BUFFER_2
+	landmarktotext ROUTE_115, MEM_BUFFER_2
 	setflag ENGINE_JOSE
 	farjump PhoneScript_WantsToBattle_Male
 
@@ -583,7 +583,7 @@ JoseFoundRare:
 
 JoseHasStarPiece:
 	setflag ENGINE_JOSE_HAS_STAR_PIECE
-	landmarktotext ROUTE_27, MEM_BUFFER_2
+	landmarktotext ROUTE_115, MEM_BUFFER_2
 	farjump PhoneScript_FoundItem_Male
 
 ; Reena
@@ -604,7 +604,7 @@ ReenaPhoneScript1:
 	farjump UnknownScript_0xa0928
 
 .WantsBattle:
-	landmarktotext ROUTE_27, MEM_BUFFER_2
+	landmarktotext ROUTE_115, MEM_BUFFER_2
 	farjump UnknownScript_0xa0a46
 
 ReenaPhoneScript2:
@@ -624,7 +624,7 @@ ReenaSundayMorning:
 	setflag ENGINE_REENA_SUNDAY_MORNING
 
 ReenaWantsBattle:
-	landmarktotext ROUTE_27, MEM_BUFFER_2
+	landmarktotext ROUTE_115, MEM_BUFFER_2
 	setflag ENGINE_REENA
 	farjump PhoneScript_WantsToBattle_Female
 
@@ -1039,7 +1039,7 @@ ToddPhoneScript1:
 	farjump UnknownScript_0xa0958
 
 .WantsBattle:
-	landmarktotext ROUTE_34, MEM_BUFFER_2
+	landmarktotext ROUTE_113, MEM_BUFFER_2
 	farjump UnknownScript_0xa0a64
 
 .SaleOn:
@@ -1070,7 +1070,7 @@ ToddSaturdayMorning:
 	setflag ENGINE_TODD_SATURDAY_MORNING
 
 ToddWantsBattle:
-	landmarktotext ROUTE_34, MEM_BUFFER_2
+	landmarktotext ROUTE_113, MEM_BUFFER_2
 	setflag ENGINE_TODD
 	farjump PhoneScript_WantsToBattle_Male
 
@@ -1106,11 +1106,11 @@ GinaPhoneScript1:
 	farjump UnknownScript_0xa05c6
 
 .WantsBattle:
-	landmarktotext ROUTE_34, MEM_BUFFER_2
+	landmarktotext ROUTE_113, MEM_BUFFER_2
 	farjump UnknownScript_0xa0a69
 
 .HasLeafStone:
-	landmarktotext ROUTE_34, MEM_BUFFER_2
+	landmarktotext ROUTE_113, MEM_BUFFER_2
 	farjump UnknownScript_0xa0abd
 
 GinaPhoneScript2:
@@ -1144,7 +1144,7 @@ GinaSundayDay:
 	setflag ENGINE_GINA_SUNDAY_AFTERNOON
 
 GinaWantsBattle:
-	landmarktotext ROUTE_34, MEM_BUFFER_2
+	landmarktotext ROUTE_113, MEM_BUFFER_2
 	setflag ENGINE_GINA
 	farjump PhoneScript_WantsToBattle_Female
 
@@ -1153,7 +1153,7 @@ GinaRockets:
 
 GinaHasLeafStone:
 	setflag ENGINE_GINA_HAS_LEAF_STONE
-	landmarktotext ROUTE_34, MEM_BUFFER_2
+	landmarktotext ROUTE_113, MEM_BUFFER_2
 	farjump PhoneScript_FoundItem_Female
 
 ; Irwin
@@ -1265,11 +1265,11 @@ AlanPhoneScript1:
 	farjump UnknownScript_0xa0970
 
 .WantsBattle:
-	landmarktotext ROUTE_36, MEM_BUFFER_2
+	landmarktotext ROUTE_102, MEM_BUFFER_2
 	farjump UnknownScript_0xa0a73
 
 .FireStone:
-	landmarktotext ROUTE_36, MEM_BUFFER_2
+	landmarktotext ROUTE_102, MEM_BUFFER_2
 	farjump UnknownScript_0xa0ac5
 
 AlanPhoneScript2:
@@ -1299,13 +1299,13 @@ AlanWednesdayDay:
 	setflag ENGINE_ALAN_WEDNESDAY_AFTERNOON
 
 AlanWantsBattle:
-	landmarktotext ROUTE_36, MEM_BUFFER_2
+	landmarktotext ROUTE_102, MEM_BUFFER_2
 	setflag ENGINE_ALAN
 	farjump PhoneScript_WantsToBattle_Male
 
 AlanHasFireStone:
 	setflag ENGINE_ALAN_HAS_FIRE_STONE
-	landmarktotext ROUTE_36, MEM_BUFFER_2
+	landmarktotext ROUTE_102, MEM_BUFFER_2
 	farjump PhoneScript_FoundItem_Male
 
 ; Dana

@@ -81,10 +81,10 @@ Route113Route114Gate_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
-	warp_event  4,  0, ROUTE_34, 1
-	warp_event  5,  0, ROUTE_34, 2
-	warp_event  4,  7, ROUTE_9, 1
-	warp_event  5,  7, ROUTE_9, 2
+	warp_event  4,  0, ROUTE_113, 1
+	warp_event  5,  0, ROUTE_113, 2
+	warp_event  4,  7, ROUTE_114, 1
+	warp_event  5,  7, ROUTE_114, 2
 
 	db 0 ; coord events
 

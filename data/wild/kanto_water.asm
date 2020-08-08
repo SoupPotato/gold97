@@ -32,7 +32,7 @@ KantoWaterWildMons:
 	db 30, MARILL
 	db 31, SEAKING
 	
-	map_id SAFFRON_CITY
+	map_id RYUKYU_CITY
 	db 2 percent ; encounter rate
 	db 10, MAGIKARP
 	db 12, MAGIKARP

@@ -9,7 +9,7 @@
 
 JohtoGrassWildMons:
 
-	map_id ROUTE_29
+	map_id ROUTE_101
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 2, PIDGEY
@@ -1176,7 +1176,7 @@ JohtoGrassWildMons:
 	db 35, KINGLER
 	db 35, KINGLER
 
-	map_id ROUTE_34
+	map_id ROUTE_113
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 38, FARFETCH_D
@@ -1203,7 +1203,7 @@ JohtoGrassWildMons:
 	db 40, CURPAN
 	db 42, CURPAN
 	
-	map_id ROUTE_9
+	map_id ROUTE_114
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 39, PIDGEOTTO
@@ -1230,7 +1230,7 @@ JohtoGrassWildMons:
 	db 41, MR__MIME
 	db 42, MR__MIME
 	
-	map_id ROUTE_27
+	map_id ROUTE_115
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 40, DODUO

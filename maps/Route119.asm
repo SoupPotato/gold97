@@ -378,8 +378,8 @@ Route119_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event 10,  9, ROUTE_15_FUCHSIA_GATE, 3
-	warp_event 11,  9, ROUTE_15_FUCHSIA_GATE, 4
+	warp_event 10,  9, ROUTE_119_SUNPOINT_GATE, 3
+	warp_event 11,  9, ROUTE_119_SUNPOINT_GATE, 4
 
 	db 0 ; coord events
 

@@ -51,7 +51,7 @@ PagotaGymFalknerScript:
 	setevent EVENT_SHOWED_GROWLITHE_VULPIX_TO_BILLS_GRANDPA
 	setmapscene ROUTE_102, SCENE_ROUTE36_SILVER
 	clearevent EVENT_ROUTE_36_SILVER
-;	setmapscene ELMS_LAB, SCENE_ELMSLAB_NOTHING
+;	setmapscene OAKS_LAB, SCENE_ELMSLAB_NOTHING
 	specialphonecall SPECIALCALL_ASSISTANT
 	writetext FalknerZephyrBadgeText
 	buttonsound

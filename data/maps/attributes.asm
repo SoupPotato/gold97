@@ -97,15 +97,15 @@ ENDM
 
 
 	map_attributes SilentTown, SILENT_TOWN, $05, WEST | EAST
-	connection west, Route101, ROUTE_29, -6
-	connection east, Route115, ROUTE_27, 4
+	connection west, Route101, ROUTE_101, -6
+	connection east, Route115, ROUTE_115, 4
 
-	map_attributes CrownCity, CHERRYGROVE_CITY, $05, NORTH 
-	connection north, VictoryRoadOutside, MOUNT_MOON_SQUARE, 0
+	map_attributes CrownCity, CROWN_CITY, $05, NORTH 
+	connection north, VictoryRoadOutside, VICTORY_ROAD_OUTSIDE, 0
 	
-	map_attributes VictoryRoadOutside, MOUNT_MOON_SQUARE, $6D, NORTH | SOUTH
-	connection north, IndigoPlateau, ROUTE_23, 0
-	connection south, CrownCity, CHERRYGROVE_CITY, 0
+	map_attributes VictoryRoadOutside, VICTORY_ROAD_OUTSIDE, $6D, NORTH | SOUTH
+	connection north, NihonLeague, NIHON_LEAGUE, 0
+	connection south, CrownCity, CROWN_CITY, 0
 
 	map_attributes PagotaCity, PAGOTA_CITY, $05, WEST
 	connection west, Route102, ROUTE_102, 5
@@ -114,7 +114,7 @@ ENDM
 	connection south, Route103, ROUTE_103, 0
 	connection east, Route104, ROUTE_104, 0
 
-	map_attributes SunpointCity, CIANWOOD_CITY, $34, EAST
+	map_attributes SunpointCity, SUNPOINT_CITY, $5D, EAST
 	connection east, Route111, ROUTE_111, 0
 
 	map_attributes WestportCity, WESTPORT_CITY, $35, NORTH | EAST
@@ -143,10 +143,10 @@ ENDM
 	connection south, Route112, ROUTE_112, 5
 	connection west, Route110, ROUTE_110, 9
 
-	map_attributes Route115, ROUTE_27, $35, WEST | EAST
+	map_attributes Route115, ROUTE_115, $35, WEST | EAST
 	connection west, SilentTown, SILENT_TOWN, -4
 
-	map_attributes Route101, ROUTE_29, $05, EAST
+	map_attributes Route101, ROUTE_101, $05, EAST
 	connection east, SilentTown, SILENT_TOWN, 6
 
 	map_attributes Route105, ROUTE_105, $33, SOUTH | WEST
@@ -163,7 +163,7 @@ ENDM
 	connection west, BirdonTown, BIRDON_TOWN, 0
 	connection east, Route105, ROUTE_105, 0
 
-	map_attributes Route113, ROUTE_34, $05, NORTH
+	map_attributes Route113, ROUTE_113, $05, NORTH
 	connection north, StandCity, STAND_CITY, -10
 
 	map_attributes Route103, ROUTE_103, $4B, NORTH | SOUTH
@@ -217,10 +217,10 @@ ENDM
 	connection east, UrasoeTrail, URASOE_TRAIL, -9
 
 	map_attributes StandCity, STAND_CITY, $05, SOUTH
-	connection south, Route113, ROUTE_34, 10
+	connection south, Route113, ROUTE_113, 10
 
-	map_attributes KantoCity, CELADON_CITY, $0f, EAST
-	connection east, Route114, ROUTE_9, 9
+	map_attributes KantoRegion, KANTO_REGION, $0f, EAST
+	connection east, Route114, ROUTE_114, 9
 
 	map_attributes Route119, ROUTE_119, $07, EAST
 	connection east, Route120, ROUTE_120, 18
@@ -231,17 +231,17 @@ ENDM
 	map_attributes AmamiTown, AMAMI_TOWN, $07, SOUTH
 	connection south, SeasidePath, SEASIDE_PATH, 0
 
-	map_attributes RyukyuCity, SAFFRON_CITY, $5d, SOUTH
-	connection south, UrasoePark, ROUTE_10_SOUTH, 0
+	map_attributes RyukyuCity, RYUKYU_CITY, $5d, SOUTH
+	connection south, UrasoePark, URASOE_PARK, 0
 
-	map_attributes SunpointDocks, ROUTE_5, $0A, 0
+	map_attributes SunpointDocks, SUNPOINT_DOCKS, $0A, 0
 
 	map_attributes NagoVillage, NAGO_VILLAGE, $35, SOUTH | EAST
 	connection south, MeridianPath, MERIDIAN_PATH, 0
 	connection east, IsenStrait, ISEN_STRAIT, 0
 
-	map_attributes Route114, ROUTE_9, $0f, WEST
-	connection west, KantoCity, CELADON_CITY, -9
+	map_attributes Route114, ROUTE_114, $0f, WEST
+	connection west, KantoRegion, KANTO_REGION, -9
 
 	map_attributes YoronPoint, YORON_POINT, $35, WEST | EAST
 	connection west, YoronCity, YORON_CITY, -9
@@ -265,11 +265,11 @@ ENDM
 	map_attributes SeasidePath, SEASIDE_PATH, $07, NORTH
 	connection north, AmamiTown, AMAMI_TOWN, 0
 
-	map_attributes UrasoePark, ROUTE_10_SOUTH, $5d, NORTH
-	connection north, RyukyuCity, SAFFRON_CITY, 0
+	map_attributes UrasoePark, URASOE_PARK, $5d, NORTH
+	connection north, RyukyuCity, RYUKYU_CITY, 0
 
-	map_attributes IndigoPlateau, ROUTE_23, $05, SOUTH
-	connection south, VictoryRoadOutside, MOUNT_MOON_SQUARE, 0
+	map_attributes NihonLeague, NIHON_LEAGUE, $05, SOUTH
+	connection south, VictoryRoadOutside, VICTORY_ROAD_OUTSIDE, 0
 	
 	map_attributes CharredSummit, CHARRED_SUMMIT, $35, WEST
 	connection west, MeridianPath, MERIDIAN_PATH, -9
@@ -330,7 +330,7 @@ ENDM
 	map_attributes AmpareCavern1F, AMPARE_CAVERN_1F, $09, 0
 	map_attributes DeepwaterPassage1F, DEEPWATER_PASSAGE_1F, $09, 0
 	map_attributes DragonsMaw, DRAGONS_MAW, $09, 0
-	map_attributes KantoCafe, DRAGON_SHRINE, $00, 0
+	map_attributes KantoCafe, KANTO_CAFE, $00, 0
 	map_attributes AlloyPokecenter1F, ALLOY_POKECENTER_1F, $00, 0
 	map_attributes AlloyGym, ALLOY_GYM, $00, 0
 	map_attributes AlloyTimsHouse, ALLOY_TIMS_HOUSE, $00, 0
@@ -353,7 +353,7 @@ ENDM
 	map_attributes VictoryRoad2F, VICTORY_ROAD_2F, $09, 0
 	map_attributes TeknosPokecenter1F, TEKNOS_POKECENTER_1F, $00, 0
 	map_attributes TeknosOldRodHouse, TEKNOS_OLD_ROD_HOUSE, $00, 0
-	map_attributes KantoFossilLab, DANCE_THEATRE, $00, 0
+	map_attributes KantoFossilLab, KANTO_FOSSIL_LAB, $00, 0
 	map_attributes TeknosMart, TEKNOS_MART, $00, 0
 	map_attributes BirdonGym, BIRDON_GYM, $00, 0
 	map_attributes TeknosGrampsItemfinderHouse, TEKNOS_GRAMPS_ITEMFINDER_HOUSE, $00, 0
@@ -367,6 +367,7 @@ ENDM
 	map_attributes FrostpointPokecenter1F, FROSTPOINT_POKECENTER_1F, $00, 0
 	map_attributes RyukyuCityMeridianPathGate, RYUKYU_CITY_MERIDIAN_PATH_GATE, $00, 0
 	map_attributes NagoImposterHouse, NAGO_IMPOSTER_HOUSE, $00, 0
+	map_attributes RyukyuTradeSpeechHouse, RYUKYU_TRADE_SPEECH_HOUSE, $00, 0
 	map_attributes NagoPokecenter1F, NAGO_POKECENTER_1F, $00, 0
 	map_attributes JadeForestSnorlaxRoom, JADE_FOREST_SNORLAX_ROOM, $05, 0
 	map_attributes NagoMart, NAGO_MART, $00, 0
@@ -388,12 +389,12 @@ ENDM
 	map_attributes Route106Pokecenter1F, ROUTE_106_POKECENTER_1F, $00, 0
 	map_attributes Route103WestportGate, ROUTE_103_WESTPORT_GATE, $00, 0
 	map_attributes Route112StandCityGate, ROUTE_112_STAND_CITY_GATE, $00, 0
-	map_attributes NationalParkStandGate, ROUTE_36_NATIONAL_PARK_GATE, $00, 0
+	map_attributes NationalParkStandGate, NATIONAL_PARK_STAND_GATE, $00, 0
 	map_attributes TeknosGym, TEKNOS_GYM, $00, 0
 	map_attributes WestportBikeShop, WESTPORT_BIKE_SHOP, $00, 0
 	map_attributes WestportHappinessRater, WESTPORT_HAPPINESS_RATER, $00, 0
 	map_attributes BillsFamilysHouse, BILLS_FAMILYS_HOUSE, $00, 0
-	map_attributes KantoHotel, GOLDENROD_MAGNET_TRAIN_STATION, $00, 0
+	map_attributes KantoHotel, KANTO_HOTEL, $00, 0
 	map_attributes Route102N64House, ROUTE_102_N64_HOUSE, $00, 0
 	map_attributes WestportPPSpeechHouse, WESTPORT_PP_SPEECH_HOUSE, $00, 0
 	map_attributes WestportNameRater, WESTPORT_NAME_RATER, $00, 0
@@ -420,10 +421,10 @@ ENDM
 	map_attributes RedsHouse1F, REDS_HOUSE_1F, $00, 0
 	map_attributes RedsHouse2F, REDS_HOUSE_2F, $00, 0
 	map_attributes BluesHouse, BLUES_HOUSE, $00, 0
-	map_attributes OaksLabKanto, OAKS_LAB, $00, 0
+	map_attributes OaksLabKanto, OAKS_KANTO_LAB, $00, 0
 	map_attributes YoronPartsShop, YORON_PARTS_SHOP, $00, 0
 	map_attributes YoronSocialHouse, YORON_SOCIAL_HOUSE, $00, 0
-	map_attributes YoronMart, PEWTER_MART, $00, 0
+	map_attributes YoronMart, YORON_MART, $00, 0
 	map_attributes YoronPokecenter1F, YORON_POKECENTER_1F, $00, 0
 	map_attributes YoronSnoozeSpeechHouse, YORON_SNOOZE_SPEECH_HOUSE, $00, 0
 	map_attributes WestportPort, WESTPORT_PORT, $0a, 0
@@ -436,26 +437,26 @@ ENDM
 	map_attributes WestportPortPassage, WESTPORT_PORT_PASSAGE, $00, 0
 	map_attributes AmamiPortPassage, AMAMI_PORT_PASSAGE, $00, 0
 	map_attributes BrassTowerRoof, BRASS_TOWER_ROOF, $00, 0
-	map_attributes IndigoPlateauPokecenter1F, INDIGO_PLATEAU_POKECENTER_1F, $00, 0
-	map_attributes LoreleisRoom, WILLS_ROOM, $00, 0
+	map_attributes NihonLeaguePokecenter1F, NIHON_LEAGUE_POKECENTER_1F, $00, 0
+	map_attributes LoreleisRoom, LORELEIS_ROOM, $00, 0
 	map_attributes KogasRoom, KOGAS_ROOM, $00, 0
-	map_attributes AgathasRoom, BRUNOS_ROOM, $00, 0
-	map_attributes GiovannisRoom, KARENS_ROOM, $00, 0
+	map_attributes AgathasRoom, AGATHAS_ROOM, $00, 0
+	map_attributes GiovannisRoom, GIOVANNIS_ROOM, $00, 0
 	map_attributes LancesRoom, LANCES_ROOM, $00, 0
 	map_attributes HallOfFame, HALL_OF_FAME, $00, 0
-	map_attributes StandMart, FUCHSIA_MART, $00, 0
-	map_attributes StandZooMainOffice, SAFARI_ZONE_MAIN_OFFICE, $00, 0
+	map_attributes StandMart, STAND_MART, $00, 0
+	map_attributes StandZooMainOffice, STAND_ZOO_MAIN_OFFICE, $00, 0
 	map_attributes BillsBrothersHouse, BILLS_BROTHERS_HOUSE, $00, 0
-	map_attributes StandPokecenter1F, FUCHSIA_POKECENTER_1F, $00, 0
-	map_attributes StandRocketHouse1F, SAFARI_ZONE_WARDENS_HOME, $00, 0
-	map_attributes StandRocketHouse2F, SAFARI_ZONE_WARDENS_HOME_2F, $00, 0
-	map_attributes Route119SunpointGate, ROUTE_15_FUCHSIA_GATE, $00, 0
+	map_attributes StandPokecenter1F, STAND_POKECENTER_1F, $00, 0
+	map_attributes StandRocketHouse1F, STAND_ROCKET_HOUSE_1F, $00, 0
+	map_attributes StandRocketHouse2F, STAND_ROCKET_HOUSE_2F, $00, 0
+	map_attributes Route119SunpointGate, ROUTE_119_SUNPOINT_GATE, $00, 0
 	map_attributes KobanPokecenter1F, KOBAN_POKECENTER_1F, $00, 0
 	map_attributes PrycesFamilyHouse, PRYCES_FAMILY_HOUSE, $00, 0
 	map_attributes FrostpointNameRater, FROSTPOINT_NAME_RATER, $00, 0
 	map_attributes FrostpointMart, FROSTPOINT_MART, $00, 0
 	map_attributes SanskritRocketHouse, SANSKRIT_ROCKET_HOUSE, $00, 0
-	map_attributes UrasoeParkUrasoeTrailGate, ROUTE_8_SAFFRON_GATE, $00, 0
+	map_attributes UrasoeParkUrasoeTrailGate, URASOE_PARK_URASOE_TRAIL_GATE, $00, 0
 	map_attributes UrasoeTrailSuperRodHouse, URASOE_TRAIL_SUPER_ROD_HOUSE, $00, 0
 	map_attributes Pokecenter2F, POKECENTER_2F, $00, 0
 	map_attributes TradeCenter, TRADE_CENTER, $00, 0
@@ -463,72 +464,72 @@ ENDM
 	map_attributes TimeCapsule, TIME_CAPSULE, $00, 0
 	map_attributes MobileTradeRoom, MOBILE_TRADE_ROOM, $00, 0
 	map_attributes MobileBattleRoom, MOBILE_BATTLE_ROOM, $00, 0
-	map_attributes KantoDeptStore1F, CELADON_DEPT_STORE_1F, $00, 0
-	map_attributes KantoDeptStore2F, CELADON_DEPT_STORE_2F, $00, 0
-	map_attributes KantoDeptStore3F, CELADON_DEPT_STORE_3F, $00, 0
-	map_attributes KantoDeptStore4F, CELADON_DEPT_STORE_4F, $00, 0
-	map_attributes KantoDeptStore5F, CELADON_DEPT_STORE_5F, $00, 0
-	map_attributes KantoDeptStore6F, CELADON_DEPT_STORE_6F, $00, 0
-	map_attributes KantoDeptStoreElevator, CELADON_DEPT_STORE_ELEVATOR, $00, 0
-	map_attributes KantoCeladonMansion1F, CELADON_MANSION_1F, $00, 0
-	map_attributes KantoCeladonMansion2F, CELADON_MANSION_2F, $00, 0
-	map_attributes KantoCeladonMansion3F, CELADON_MANSION_3F, $00, 0
-	map_attributes KantoCeladonMansionRoof, CELADON_MANSION_ROOF, $00, 0
-	map_attributes KantoCeladonMansionRoofHouse, CELADON_MANSION_ROOF_HOUSE, $00, 0
-	map_attributes KantoPokecenterWest1F, CELADON_POKECENTER_1F, $00, 0
-	map_attributes KantoGameCorner, CELADON_GAME_CORNER, $00, 0
-	map_attributes KantoGameCornerPrizeRoom, CELADON_GAME_CORNER_PRIZE_ROOM, $00, 0
-	map_attributes KantoGym, CELADON_GYM, $00, 0
-	map_attributes KantoLeftoversHouse, CELADON_CAFE, $00, 0
-	map_attributes CrownCityTrainerHouse, ROUTE_16_FUCHSIA_SPEECH_HOUSE, $00, 0
+	map_attributes KantoDeptStore1F, KANTO_DEPT_STORE_1F, $00, 0
+	map_attributes KantoDeptStore2F, KANTO_DEPT_STORE_2F, $00, 0
+	map_attributes KantoDeptStore3F, KANTO_DEPT_STORE_3F, $00, 0
+	map_attributes KantoDeptStore4F, KANTO_DEPT_STORE_4F, $00, 0
+	map_attributes KantoDeptStore5F, KANTO_DEPT_STORE_5F, $00, 0
+	map_attributes KantoDeptStore6F, KANTO_DEPT_STORE_6F, $00, 0
+	map_attributes KantoDeptStoreElevator, KANTO_DEPT_STORE_ELEVATOR, $00, 0
+	map_attributes KantoCeladonMansion1F, KANTO_CELADON_MANSION_1F, $00, 0
+	map_attributes KantoCeladonMansion2F, KANTO_CELADON_MANSION_2F, $00, 0
+	map_attributes KantoCeladonMansion3F, KANTO_CELADON_MANSION_3F, $00, 0
+	map_attributes KantoCeladonMansionRoof, KANTO_CELADON_MANSION_ROOF, $00, 0
+	map_attributes KantoCeladonMansionRoofHouse, KANTO_CELADON_MANSION_ROOF_HOUSE, $00, 0
+	map_attributes KantoPokecenterWest1F, KANTO_POKECENTER_WEST_1F, $00, 0
+	map_attributes KantoGameCorner, KANTO_GAME_CORNER, $00, 0
+	map_attributes KantoGameCornerPrizeRoom, KANTO_GAME_CORNER_PRIZE_ROOM, $00, 0
+	map_attributes KantoGym, KANTO_GYM, $00, 0
+	map_attributes KantoLeftoversHouse, KANTO_LEFTOVERS_HOUSE, $00, 0
+	map_attributes CrownCityTrainerHouse, CROWN_CITY_TRAINER_HOUSE, $00, 0
 	map_attributes Route118SunpointGate, ROUTE_118_SUNPOINT_GATE, $00, 0
-	map_attributes IsenStraitSeasidePathGate, ROUTE_17_ROUTE_18_GATE, $00, 0
-	map_attributes StandGym, CIANWOOD_GYM, $00, 0
-	map_attributes SunpointPokecenter1F, CIANWOOD_POKECENTER_1F, $00, 0
-	map_attributes CrownCitySpeechHouse, CIANWOOD_PHARMACY, $00, 0
-	map_attributes SunpointPhotoStudio, CIANWOOD_PHOTO_STUDIO, $00, 0
-	map_attributes CrownCityScopeLensHouse, CIANWOOD_BLISSEY_SPEECH_HOUSE, $00, 0
+	map_attributes IsenStraitSeasidePathGate, ISEN_STRAIT_SEASIDE_PATH_GATE, $00, 0
+	map_attributes StandGym, STAND_GYM, $00, 0
+	map_attributes SunpointPokecenter1F, SUNPOINT_POKECENTER_1F, $00, 0
+	map_attributes CrownCitySpeechHouse, CROWN_CITY_SPEECH_HOUSE, $00, 0
+	map_attributes SunpointPhotoStudio, SUNPOINT_PHOTO_STUDIO, $00, 0
+	map_attributes CrownCityScopeLensHouse, CROWN_CITY_SCOPE_LENS_HOUSE, $00, 0
 	map_attributes PokeSeersHouse, POKE_SEERS_HOUSE, $00, 0
 	map_attributes BattleTower1F, BATTLE_TOWER_1F, $00, 0
 	map_attributes BattleTowerBattleRoom, BATTLE_TOWER_BATTLE_ROOM, $00, 0
 	map_attributes BattleTowerElevator, BATTLE_TOWER_ELEVATOR, $00, 0
 	map_attributes BattleTowerHallway, BATTLE_TOWER_HALLWAY, $00, 0
 	map_attributes BattleTowerOutside, BATTLE_TOWER_OUTSIDE, $05, 0
-	map_attributes RocketShipBase, VIRIDIAN_GYM, $00, 0
+	map_attributes RocketShipBase, ROCKET_SHIP_BASE, $00, 0
 	map_attributes SanskritMart, SANSKRIT_MART, $00, 0
-	map_attributes SilentPokecenter1F, VIRIDIAN_POKECENTER_1F, $00, 0
+	map_attributes SilentPokecenter1F, SILENT_POKECENTER_1F, $00, 0
 	map_attributes Route116Gate, ROUTE_116_GATE, $00, 0
 	map_attributes VictoryRoadGate, VICTORY_ROAD_GATE, $00, 0
-	map_attributes OaksLabEntrance, ELM_ENTRANCE, $00, 0
-	map_attributes OaksLab, ELMS_LAB, $00, 0
+	map_attributes OaksLabEntrance, OAKS_LAB_ENTRANCE, $00, 0
+	map_attributes OaksLab, OAKS_LAB, $00, 0
 	map_attributes PlayersHouse1F, PLAYERS_HOUSE_1F, $00, 0
 	map_attributes PlayersHouse2F, PLAYERS_HOUSE_2F, $00, 0
-	map_attributes SilentHouse, ELMS_HOUSE, $00, 0
+	map_attributes SilentHouse, SILENT_HOUSE, $00, 0
 	map_attributes Route110SandstormHouse, ROUTE_110_SANDSTORM_HOUSE, $00, 0
 	map_attributes Route111BlueForestGate, ROUTE_111_BLUE_FOREST_GATE, $00, 0
 	map_attributes FightingDojo, FIGHTING_DOJO, $00, 0
-	map_attributes RyukyuFakeGym, SAFFRON_GYM, $00, 0
-	map_attributes RyukyuMart, SAFFRON_MART, $00, 0
-	map_attributes RyukyuPokecenter1F, SAFFRON_POKECENTER_1F, $00, 0
+	map_attributes RyukyuFakeGym, RYUKYU_FAKE_GYM, $00, 0
+	map_attributes RyukyuMart, RYUKYU_MART, $00, 0
+	map_attributes RyukyuPokecenter1F, RYUKYU_POKECENTER_1F, $00, 0
 	map_attributes MrPsychicsHouse, MR_PSYCHICS_HOUSE, $00, 0
-	map_attributes RyukyuArboretum, SAFFRON_MAGNET_TRAIN_STATION, $00, 0
+	map_attributes RyukyuArboretum, RYUKYU_ABORETUM, $00, 0
 	map_attributes SilphCo1F, SILPH_CO_1F, $00, 0
-	map_attributes SunPointDocksSunPointGate, ROUTE_5_SAFFRON_GATE, $00, 0
-	map_attributes CrownMart, CHERRYGROVE_MART, $00, 0
-	map_attributes CrownPokecenter1F, CHERRYGROVE_POKECENTER_1F, $00, 0
+	map_attributes SunPointDocksSunPointGate, SUNPOINT_DOCKS_SUNPOINT_GATE, $00, 0
+	map_attributes CrownMart, CROWN_MART, $00, 0
+	map_attributes CrownPokecenter1F, CROWN_POKECENTER_1F, $00, 0
 	map_attributes BirdonEldersHouse, BIRDON_ELDERS_HOUSE, $00, 0
 	map_attributes BirdonSpeechHouse, BIRDON_SPEECH_HOUSE, $00, 0
 	map_attributes Route104GardenersHouse, ROUTE_104_GARDENERS_HOUSE, $00, 0
-	map_attributes Route110PagotaGate, ROUTE_31_VIOLET_GATE, $00, 0
+	map_attributes Route101PagotaGate, ROUTE_101_PAGOTA_GATE, $00, 0
 	map_attributes Route102WestportGate, ROUTE_102_WESTPORT_GATE, $00, 0
 	map_attributes Route105Route106Gate, ROUTE_105_ROUTE_106_GATE, $00, 0
 	map_attributes Route107AlloyGate, ROUTE_107_ALLOY_GATE, $00, 0
 	map_attributes Route107AlloyGate2F, ROUTE_107_ALLOY_GATE_2F, $00, 0
-	map_attributes Route110PagotaGate2F, ROUTE_31_VIOLET_GATE_2F, $00, 0
+	map_attributes Route101PagotaGate2F, ROUTE_101_PAGOTA_GATE_2F, $00, 0
 	map_attributes Route102WestportGate2F, ROUTE_102_WESTPORT_GATE_2F, $00, 0
 	map_attributes TeknosPort, TEKNOS_PORT, $0a, 0
 	map_attributes TeknosPortPassage, TEKNOS_PORT_PASSAGE, $00, 0
-	map_attributes StandZooInfirmary, STAND_POKE, $00, 0
+	map_attributes StandZooInfirmary, STAND_ZOO_INFIRMARY, $00, 0
 	map_attributes KantoPokecenter1F, KANTO_POKECENTER_1F, $00, 0
 	map_attributes KantoMart, KANTO_MART, $00, 0
 	map_attributes KantoBattleClub1F, KANTO_BATTLE_CLUB_1F, $00, 0

@@ -211,8 +211,8 @@ PagotaCity_MapEvents:
 	warp_event 27, 28, PAGOTA_POKECENTER_1F, 1
 	warp_event 22, 26, PAGOTA_TRAINER_SCHOOL, 1
 	warp_event 11, 17, BRASS_TOWER_1F, 1
-	warp_event 19, 31, ROUTE_31_VIOLET_GATE, 2
-	warp_event 18, 31, ROUTE_31_VIOLET_GATE, 1
+	warp_event 19, 31, ROUTE_101_PAGOTA_GATE, 2
+	warp_event 18, 31, ROUTE_101_PAGOTA_GATE, 1
 	warp_event  3, 31, KURTS_HOUSE, 1
 	warp_event 12, 17, BRASS_TOWER_1F, 2
 	warp_event  4, 14, EARLS_ART_HOUSE, 1

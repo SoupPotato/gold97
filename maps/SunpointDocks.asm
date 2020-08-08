@@ -181,9 +181,9 @@ SunpointDocks_MapEvents:
 	db 0, 0 ; filler
 
 	db 3 ; warp events
-	warp_event  6, 31, ROUTE_5_SAFFRON_GATE, 1
-	warp_event  7, 31, ROUTE_5_SAFFRON_GATE, 2
-	warp_event 13,  5, VIRIDIAN_GYM, 1
+	warp_event  6, 31, SUNPOINT_DOCKS_SUNPOINT_GATE, 1
+	warp_event  7, 31, SUNPOINT_DOCKS_SUNPOINT_GATE, 2
+	warp_event 13,  5, ROCKET_SHIP_BASE, 1
 
 	db 0 ; coord events
 

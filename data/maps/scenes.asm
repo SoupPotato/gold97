@@ -11,32 +11,27 @@ MapScenes::
 	scene_var TIME_CAPSULE,                                wTimeCapsuleSceneID
 	scene_var MERIDIAN_PATH,                               wRoute25SceneID
 	scene_var VICTORY_ROAD_GATE,                           wVictoryRoadGateSceneID
-	scene_var SAFFRON_MAGNET_TRAIN_STATION,                wSaffronMagnetTrainStationSceneID
-	scene_var ROUTE_17_ROUTE_18_GATE,                      wRoute17Route18GateSceneID
-	scene_var INDIGO_PLATEAU_POKECENTER_1F,                wIndigoPlateauPokecenter1FSceneID
-	scene_var WILLS_ROOM,                                  wWillsRoomSceneID
+	scene_var ISEN_STRAIT_SEASIDE_PATH_GATE,               wRoute17Route18GateSceneID
+	scene_var NIHON_LEAGUE_POKECENTER_1F,                  wIndigoPlateauPokecenter1FSceneID
+	scene_var LORELEIS_ROOM,                               wWillsRoomSceneID
 	scene_var KOGAS_ROOM,                                  wKogasRoomSceneID
-	scene_var BRUNOS_ROOM,                                 wBrunosRoomSceneID
-	scene_var KARENS_ROOM,                                 wKarensRoomSceneID
+	scene_var AGATHAS_ROOM,                                wBrunosRoomSceneID
+	scene_var GIOVANNIS_ROOM,                              wKarensRoomSceneID
 	scene_var LANCES_ROOM,                                 wLancesRoomSceneID
 	scene_var HALL_OF_FAME,                                wHallOfFameSceneID
-	scene_var ROUTE_27,                                    wRoute27SceneID
 	scene_var SILENT_TOWN,                                 wSilentTownSceneID
-	scene_var ELM_ENTRANCE,								   wElmEntranceSceneID
-	scene_var ELMS_LAB,                                    wElmsLabSceneID
+	scene_var OAKS_LAB_ENTRANCE,						   wElmEntranceSceneID
+	scene_var OAKS_LAB,                                    wElmsLabSceneID
 	scene_var PLAYERS_HOUSE_1F,                            wPlayersHouse1FSceneID
-	scene_var ROUTE_29,                                    wRoute29SceneID
-	scene_var CHERRYGROVE_CITY,                            wCherrygroveCitySceneID
+	scene_var ROUTE_101,                                   wRoute29SceneID
 	scene_var ROUTE_112,                                   wRoute32SceneID
 	scene_var ROUTE_102,                                   wRoute36SceneID
-	scene_var ROUTE_36_NATIONAL_PARK_GATE,                 wRoute36NationalParkGateSceneID
+	scene_var NATIONAL_PARK_STAND_GATE,                    wRoute36NationalParkGateSceneID
 	scene_var BIRDON_TOWN,                                 wAzaleaTownSceneID
-	scene_var GOLDENROD_MAGNET_TRAIN_STATION,              wGoldenrodMagnetTrainStationSceneID
 	scene_var WESTPORT_POKECENTER_1F,                      wGoldenrodPokecenter1FSceneID
 	scene_var ALLOY_CITY,                                  wOlivineCitySceneID
 	scene_var TEKNOS_POKECENTER_1F,                        wEcruteakPokecenter1FSceneID
 	scene_var SANSKRIT_TOWN,                               wMahoganyTownSceneID
-	scene_var CIANWOOD_CITY,                               wCianwoodCitySceneID
 	scene_var BATTLE_TOWER_1F,                             wBattleTower1FSceneID
 	scene_var BATTLE_TOWER_BATTLE_ROOM,                    wBattleTowerBattleRoomSceneID
 	scene_var BATTLE_TOWER_ELEVATOR,                       wBattleTowerElevatorSceneID
@@ -56,12 +51,10 @@ MapScenes::
 	scene_var TEAM_ROCKET_BASE_B1F,                        wTeamRocketBaseB2FSceneID
 	scene_var TEAM_ROCKET_BASE_B2F,                        wTeamRocketBaseB3FSceneID
 	scene_var VICTORY_ROAD,                                wVictoryRoadSceneID
-	scene_var DRAGON_SHRINE,                               wDragonShrineSceneID
 	scene_var WESTPORT_PORT,                               wOlivinePortSceneID
 	scene_var AMAMI_PORT,                                  wVermilionPortSceneID
 	scene_var FAST_SHIP_1F,                                wFastShip1FSceneID
 	scene_var FAST_SHIP_B1F,                               wFastShipB1FSceneID
-	scene_var MOUNT_MOON_SQUARE,                           wMountMoonSquareSceneID
 	scene_var MOBILE_TRADE_ROOM,                           wMobileTradeRoomSceneID
 	scene_var MOBILE_BATTLE_ROOM,                          wMobileBattleRoomSceneID
 	scene_var KURTS_HOUSE,								   wKurtsHouseSceneID
@@ -69,20 +62,19 @@ MapScenes::
 	scene_var SLOWPOKE_WELL_B1F,						   wSlowpokeWellB1FSceneID
 	scene_var SLOWPOKE_WELL_B2F,						   wSlowpokeWellB2FSceneID
 	scene_var ROUTE_103,								   wRoute35SceneID
-	scene_var VIRIDIAN_GYM,								   wViridianGymSceneID
+	scene_var ROCKET_SHIP_BASE,							   wViridianGymSceneID
 	scene_var ROUTE_104,							       wRoute33SceneID
 	scene_var ROUTE_112_STAND_CITY_GATE,				   wRoute36RuinsOfAlphGateSceneID
 	scene_var STAND_CITY,								   wFuchsiaCitySceneID
-	scene_var SAFARI_ZONE_WARDENS_HOME,					   wSafariZoneWardensHomeSceneID
-	scene_var SAFARI_ZONE_WARDENS_HOME_2F,				   wSafariZoneWardensHome2FSceneID
+	scene_var STAND_ROCKET_HOUSE_1F,					   wSafariZoneWardensHomeSceneID
+	scene_var STAND_ROCKET_HOUSE_2F,			    	   wSafariZoneWardensHome2FSceneID
 	scene_var RADIO_TOWER_6F,							   wRadioTower6FSceneID
 	scene_var WESTPORT_CITY,							   wGoldenrodCitySceneID
 	scene_var BRASS_TOWER_5F,							   wTinTower5FSceneID
-	scene_var CELADON_GYM,								   wCeladonGymSceneID
+	scene_var KANTO_GYM,								   wCeladonGymSceneID
 	scene_var KANTO_BATTLE_CLUB_B1F,					   wKantoBattleClubB1FSceneID
 	scene_var KANTO_BATTLE_CLUB_1F,						   wKantoBattleClub1FSceneID
 	scene_var CROWN_PASS,							       wUndergroundPathSceneID
-	scene_var SAFFRON_GYM,								   wSaffronGymSceneID
 	scene_var ROUTE_120,								   wRoute8SceneID
 	scene_var TEKNOS_CITY,							       wEcruteakCitySceneID
 	scene_var TEKNOS_AQUARIUM_1F,					       wOlivineLighthouse1FID

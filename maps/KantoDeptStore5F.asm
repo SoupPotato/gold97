@@ -75,9 +75,9 @@ KantoDeptStore5F_MapEvents:
 	db 0, 0 ; filler
 
 	db 3 ; warp events
-	warp_event 12,  0, CELADON_DEPT_STORE_4F, 1
-	warp_event 15,  0, CELADON_DEPT_STORE_6F, 1
-	warp_event  2,  0, CELADON_DEPT_STORE_ELEVATOR, 1
+	warp_event 12,  0, KANTO_DEPT_STORE_4F, 1
+	warp_event 15,  0, KANTO_DEPT_STORE_6F, 1
+	warp_event  2,  0, KANTO_DEPT_STORE_ELEVATOR, 1
 
 	db 0 ; coord events
 

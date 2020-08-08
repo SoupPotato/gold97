@@ -885,7 +885,7 @@ TeamRocketBaseB1F_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
-	warp_event  2, 10, SAFARI_ZONE_WARDENS_HOME, 3
+	warp_event  2, 10, STAND_ROCKET_HOUSE_1F, 3
 	warp_event 15,  3, TEAM_ROCKET_BASE_B2F, 1
 	warp_event 23, 15, TEAM_ROCKET_BASE_B2F, 2
 	warp_event 26, 26, TEAM_ROCKET_BASE_B2F, 3

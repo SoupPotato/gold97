@@ -217,7 +217,7 @@ CaptainRocketScript:
 	setevent EVENT_PRYCE_IN_GYM
 	setevent EVENT_FOUGHT_BIPETAL
 	setmapscene ROUTE_104, SCENE_ROUTE33_NOTHING
-	warp ROUTE_5, 13, 3
+	warp SUNPOINT_DOCKS, 13, 3
 	end
 	
 
@@ -663,23 +663,23 @@ RocketShipBase_MapEvents:
 	db 0, 0 ; filler
 
 	db 17 ; warp events
-	warp_event  3,  1, ROUTE_5, 3
-	warp_event  3,  8, VIRIDIAN_GYM, 3
-	warp_event 13,  1, VIRIDIAN_GYM, 2
-	warp_event 13, 12, VIRIDIAN_GYM, 5
-	warp_event 29,  1, VIRIDIAN_GYM, 4
-	warp_event 33,  3, VIRIDIAN_GYM, 7
-	warp_event  3, 18, VIRIDIAN_GYM, 6
-	warp_event 35,  3, VIRIDIAN_GYM, 9
-	warp_event 13, 24, VIRIDIAN_GYM, 8
-	warp_event 19, 19, VIRIDIAN_GYM, 11
-	warp_event  3, 34, VIRIDIAN_GYM, 10
-	warp_event 25, 19, VIRIDIAN_GYM, 13
-	warp_event 13, 34, VIRIDIAN_GYM, 12
-	warp_event 29, 29, VIRIDIAN_GYM, 15
-	warp_event 35, 22, VIRIDIAN_GYM, 14
-	warp_event 39, 22, VIRIDIAN_GYM, 14
-	warp_event  2, 18, VIRIDIAN_GYM, 6
+	warp_event  3,  1, SUNPOINT_DOCKS, 3
+	warp_event  3,  8, ROCKET_SHIP_BASE, 3
+	warp_event 13,  1, ROCKET_SHIP_BASE, 2
+	warp_event 13, 12, ROCKET_SHIP_BASE, 5
+	warp_event 29,  1, ROCKET_SHIP_BASE, 4
+	warp_event 33,  3, ROCKET_SHIP_BASE, 7
+	warp_event  3, 18, ROCKET_SHIP_BASE, 6
+	warp_event 35,  3, ROCKET_SHIP_BASE, 9
+	warp_event 13, 24, ROCKET_SHIP_BASE, 8
+	warp_event 19, 19, ROCKET_SHIP_BASE, 11
+	warp_event  3, 34, ROCKET_SHIP_BASE, 10
+	warp_event 25, 19, ROCKET_SHIP_BASE, 13
+	warp_event 13, 34, ROCKET_SHIP_BASE, 12
+	warp_event 29, 29, ROCKET_SHIP_BASE, 15
+	warp_event 35, 22, ROCKET_SHIP_BASE, 14
+	warp_event 39, 22, ROCKET_SHIP_BASE, 14
+	warp_event  2, 18, ROCKET_SHIP_BASE, 6
 
 	db 2 ; coord events
 	coord_event  3,  2, SCENE_DEFAULT, RocketGreetingsScript

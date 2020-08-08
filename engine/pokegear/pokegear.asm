@@ -572,7 +572,7 @@ PokegearMap_KantoMap:
 	jr PokegearMap_ContinueMap
 
 PokegearMap_JohtoMap:
-	ld d, INDIGO_PLATEAU
+	ld d, NIHON_LEAGUE
 	ld e, SILENT_TOWN
 PokegearMap_ContinueMap:
 	ld hl, hJoyLast
@@ -2291,7 +2291,7 @@ FlyMap:
 ; Flypoints begin at New Bark Town...
 	ld [wStartFlypoint], a
 ; ..and end at Silver Cave.
-	ld a, FLY_INDIGO
+	ld a, FLY_LEAGUE
 	ld [wEndFlypoint], a
 ; Fill out the map
 	call FillJohtoMap
@@ -2343,7 +2343,7 @@ FlyMap:
 ; Flypoints begin at New Bark Town...
 	ld [wStartFlypoint], a
 ; ..and end at Silver Cave
-	ld a, FLY_INDIGO
+	ld a, FLY_LEAGUE
 	ld [wEndFlypoint], a
 	call FillJohtoMap
 	pop af
@@ -2913,7 +2913,7 @@ Unreferenced_Function92311:
 .down_right
 	ld hl, wTownMapPlayerIconLandmark
 	ld a, [hl]
-	cp FLY_INDIGO
+	cp FLY_LEAGUE
 	jr c, .okay_dr
 	ld [hl], -1
 .okay_dr
@@ -2925,7 +2925,7 @@ Unreferenced_Function92311:
 	ld a, [hl]
 	and a
 	jr nz, .okay_ul
-	ld [hl], FLY_INDIGO + 1
+	ld [hl], FLY_LEAGUE + 1
 .okay_ul
 	dec [hl]
 .continue

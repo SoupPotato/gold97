@@ -511,8 +511,8 @@ NationalPark_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event 32, 31, ROUTE_36_NATIONAL_PARK_GATE, 1
-	warp_event 33, 31, ROUTE_36_NATIONAL_PARK_GATE, 2
+	warp_event 32, 31, NATIONAL_PARK_STAND_GATE, 1
+	warp_event 33, 31, NATIONAL_PARK_STAND_GATE, 2
 
 	db 0 ; coord events
 

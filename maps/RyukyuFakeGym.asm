@@ -643,8 +643,8 @@ RyukyuFakeGym_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  8, 17, SAFFRON_CITY, 10
-	warp_event  9, 17, SAFFRON_CITY, 10
+	warp_event  8, 17, RYUKYU_CITY, 10
+	warp_event  9, 17, RYUKYU_CITY, 10
 
 
 	db 2 ; coord events

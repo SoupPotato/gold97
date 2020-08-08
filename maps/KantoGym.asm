@@ -345,8 +345,8 @@ KantoGym_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  4, 17, CELADON_CITY, 8
-	warp_event  5, 17, CELADON_CITY, 15
+	warp_event  4, 17, KANTO_REGION, 8
+	warp_event  5, 17, KANTO_REGION, 15
 
 	db 2 ; coord events
 	coord_event  5, 13, SCENE_DEFAULT, RedEntersGymScene

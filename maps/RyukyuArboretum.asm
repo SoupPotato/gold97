@@ -161,8 +161,8 @@ RyukyuArboretum_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  8, 17, SAFFRON_CITY, 8
-	warp_event  9, 17, SAFFRON_CITY, 9
+	warp_event  8, 17, RYUKYU_CITY, 8
+	warp_event  9, 17, RYUKYU_CITY, 9
 	
 	db 0 ; coord events
 

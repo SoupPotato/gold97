@@ -305,10 +305,10 @@ SilentHills_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
-	warp_event  6,  0, ROUTE_29, 1
-	warp_event  7,  0, ROUTE_29, 2
-	warp_event 49, 30, ROUTE_29, 3
-	warp_event 49, 31, ROUTE_29, 4
+	warp_event  6,  0, ROUTE_101, 1
+	warp_event  7,  0, ROUTE_101, 2
+	warp_event 49, 30, ROUTE_101, 3
+	warp_event 49, 31, ROUTE_101, 4
 	
 	db 0 ; coord events
 

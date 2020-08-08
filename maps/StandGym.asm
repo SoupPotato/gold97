@@ -397,7 +397,7 @@ StandGym_MapEvents:
 	db 3 ; warp events
 	warp_event 10, 23, STAND_CITY, 3
 	warp_event 11, 23, STAND_CITY, 10
-	warp_event  8, 13, CIANWOOD_GYM, 1
+	warp_event  8, 13, STAND_GYM, 1
 
 	db 0 ; coord events
 

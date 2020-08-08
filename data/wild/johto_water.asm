@@ -35,7 +35,7 @@ JohtoWaterWildMons:
 	db 18, QUAGSIRE
 	db 15, QUAGSIRE
 	
-	map_id CIANWOOD_CITY
+	map_id SUNPOINT_CITY
 	db 6 percent ; encounter rate
 	db 22, TENTACOOL
 	db 20, OSUNFISH
@@ -125,7 +125,7 @@ JohtoWaterWildMons:
 	db 25, OSUNFISH
 	db 25, TENTACRUEL
 	
-	map_id ROUTE_5
+	map_id SUNPOINT_DOCKS
 	db 4 percent ; encounter rate
 	db 18, TENTACOOL
 	db 15, TENTACOOL
@@ -209,19 +209,19 @@ JohtoWaterWildMons:
 	db 28, GYARADOS
 	db 30, HORSEA
 	
-	map_id ROUTE_34
+	map_id ROUTE_113
 	db 6 percent ; encounter rate
 	db 18, MAGIKARP
 	db 15, GOLDEEN
 	db 5, MAGIKARP
 	
-	map_id CELADON_CITY
+	map_id KANTO_REGION
 	db 4 percent ; encounter rate
 	db 18, MAGIKARP
 	db 15, MAGIKARP
 	db 5, MAGIKARP
 	
-	map_id ROUTE_27
+	map_id ROUTE_115
 	db 6 percent ; encounter rate
 	db 20, TENTACOOL
 	db 15, TENTACOOL

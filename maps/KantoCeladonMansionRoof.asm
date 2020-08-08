@@ -35,9 +35,9 @@ KantoCeladonMansionRoof_MapEvents:
 	db 0, 0 ; filler
 
 	db 3 ; warp events
-	warp_event  2,  1, CELADON_MANSION_3F, 1
-	warp_event  6,  1, CELADON_MANSION_3F, 4
-	warp_event  2,  7, CELADON_MANSION_ROOF_HOUSE, 1
+	warp_event  2,  1, KANTO_CELADON_MANSION_3F, 1
+	warp_event  6,  1, KANTO_CELADON_MANSION_3F, 4
+	warp_event  2,  7, KANTO_CELADON_MANSION_ROOF_HOUSE, 1
 
 	db 0 ; coord events
 

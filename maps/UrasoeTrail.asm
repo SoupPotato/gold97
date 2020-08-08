@@ -144,8 +144,8 @@ UrasoeTrail_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
-	warp_event  8,  5, ROUTE_8_SAFFRON_GATE, 3
-	warp_event  9,  5, ROUTE_8_SAFFRON_GATE, 4
+	warp_event  8,  5, URASOE_PARK_URASOE_TRAIL_GATE, 3
+	warp_event  9,  5, URASOE_PARK_URASOE_TRAIL_GATE, 4
 	warp_event 14, 26, NANJO_FOREST, 1
 	warp_event 14, 27, NANJO_FOREST, 2
 

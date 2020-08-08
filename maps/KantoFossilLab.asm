@@ -256,14 +256,14 @@ KantoFossilLab_MapEvents:
 	db 0, 0 ; filler
 
 	db 8 ; warp events
-	warp_event  2, 15, CELADON_CITY, 28
-	warp_event  3, 15, CELADON_CITY, 29
-	warp_event 14, 10, DANCE_THEATRE, 4
-	warp_event  2,  7, DANCE_THEATRE, 3
-	warp_event  3,  7, DANCE_THEATRE, 3
-	warp_event 10, 10, DANCE_THEATRE, 7
-	warp_event 14,  5, DANCE_THEATRE, 6
-	warp_event 15,  5, DANCE_THEATRE, 6
+	warp_event  2, 15, KANTO_REGION, 28
+	warp_event  3, 15, KANTO_REGION, 29
+	warp_event 14, 10, KANTO_FOSSIL_LAB, 4
+	warp_event  2,  7, KANTO_FOSSIL_LAB, 3
+	warp_event  3,  7, KANTO_FOSSIL_LAB, 3
+	warp_event 10, 10, KANTO_FOSSIL_LAB, 7
+	warp_event 14,  5, KANTO_FOSSIL_LAB, 6
+	warp_event 15,  5, KANTO_FOSSIL_LAB, 6
 
 	db 0 ; coord events
 

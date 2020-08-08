@@ -336,7 +336,7 @@ StandRocketHouse1F_MapEvents:
 	warp_event  6,  7, STAND_CITY, 6
 	warp_event  7,  7, STAND_CITY, 6
 	warp_event 19,  7, TEAM_ROCKET_BASE_B1F, 1
-	warp_event 19,  1, SAFARI_ZONE_WARDENS_HOME_2F, 1
+	warp_event 19,  1, STAND_ROCKET_HOUSE_2F, 1
 
 	db 8 ; coord events
 	coord_event 15,  1, SCENE_DEFAULT, RocketSpotsTop1

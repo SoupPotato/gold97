@@ -141,16 +141,16 @@ RyukyuCity_MapEvents:
 	db 0, 0 ; filler
 
 	db 10 ; warp events
-	warp_event 29, 26, SAFFRON_MART, 1
-	warp_event 11,  4, SAFFRON_POKECENTER_1F, 1
+	warp_event 29, 26, RYUKYU_MART, 1
+	warp_event 11,  4, RYUKYU_POKECENTER_1F, 1
 	warp_event 33, 11, RYUKYU_CITY_MERIDIAN_PATH_GATE, 1
 	warp_event 22, 31, RYUKYU_URASOE_GATE, 1
 	warp_event 23, 31, RYUKYU_URASOE_GATE, 2
 	warp_event 23,  7, MR_PSYCHICS_HOUSE, 1
-	warp_event 28, 18, CERULEAN_TRADE_SPEECH_HOUSE, 1
-	warp_event 27,  8, SAFFRON_MAGNET_TRAIN_STATION, 1
-	warp_event 28,  8, SAFFRON_MAGNET_TRAIN_STATION, 2
-	warp_event 14, 23, SAFFRON_GYM, 1
+	warp_event 28, 18, RYUKYU_TRADE_SPEECH_HOUSE, 1
+	warp_event 27,  8, RYUKYU_ABORETUM, 1
+	warp_event 28,  8, RYUKYU_ABORETUM, 2
+	warp_event 14, 23, RYUKYU_FAKE_GYM, 1
 
 
 	db 0 ; coord events

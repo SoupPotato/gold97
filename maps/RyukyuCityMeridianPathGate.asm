@@ -22,8 +22,8 @@ RyukyuCityMeridianPathGate_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
-	warp_event  0,  7, SAFFRON_CITY, 3
-	warp_event  1,  7, SAFFRON_CITY, 3
+	warp_event  0,  7, RYUKYU_CITY, 3
+	warp_event  1,  7, RYUKYU_CITY, 3
 	warp_event  8,  7, MERIDIAN_PATH, 1
 	warp_event  9,  7, MERIDIAN_PATH, 1
 

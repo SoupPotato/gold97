@@ -81,16 +81,16 @@ EngineFlags:
 	engine_flag wVisitedSpawns, SPAWN_ROCK_TUNNEL
 	engine_flag wVisitedSpawns, SPAWN_AMAMI
 	engine_flag wVisitedSpawns, NUM_SPAWNS
-	engine_flag wVisitedSpawns, SPAWN_SAFFRON
-	engine_flag wVisitedSpawns, SPAWN_CELADON
+	engine_flag wVisitedSpawns, SPAWN_RYUKYU
+	engine_flag wVisitedSpawns, SPAWN_KANTO
 	engine_flag wVisitedSpawns, SPAWN_STAND
 	engine_flag wVisitedSpawns, SPAWN_FROSTPOINT
-	engine_flag wVisitedSpawns, SPAWN_INDIGO ; $40
+	engine_flag wVisitedSpawns, SPAWN_LEAGUE ; $40
 	engine_flag wVisitedSpawns, SPAWN_SILENT
-	engine_flag wVisitedSpawns, SPAWN_CHERRYGROVE
+	engine_flag wVisitedSpawns, SPAWN_CROWN
 	engine_flag wVisitedSpawns, SPAWN_PAGOTA
 	engine_flag wVisitedSpawns, SPAWN_BIRDON
-	engine_flag wVisitedSpawns, SPAWN_CIANWOOD
+	engine_flag wVisitedSpawns, SPAWN_SUNPOINT
 	engine_flag wVisitedSpawns, SPAWN_WESTPORT
 	engine_flag wVisitedSpawns, SPAWN_ALLOY
 	engine_flag wVisitedSpawns, SPAWN_TEKNOS ; $48

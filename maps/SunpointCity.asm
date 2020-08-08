@@ -9,19 +9,10 @@
 
 
 SunpointCity_MapScripts:
-	db 2 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_CIANWOODCITY_NOTHING
-	scene_script .DummyScene1 ; SCENE_CIANWOODCITY_SUICUNE_AND_EUSINE
+	db 0 ; scene scripts
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
-
-
-.DummyScene0:
-	end
-
-.DummyScene1:
-	end
 
 .FlyPoint:
 	setflag ENGINE_FLYPOINT_CIANWOOD
@@ -188,15 +179,15 @@ SunpointCity_MapEvents:
 
 	db 10 ; warp events
 	warp_event 18, 13, MAGMA_SHAFT_1F, 1
-	warp_event 33, 16, CIANWOOD_POKECENTER_1F, 1
-	warp_event 19, 24, PEWTER_MART, 1
-	warp_event 33, 25, CIANWOOD_PHOTO_STUDIO, 1
+	warp_event 33, 16, SUNPOINT_POKECENTER_1F, 1
+	warp_event 19, 24, YORON_MART, 1
+	warp_event 33, 25, SUNPOINT_PHOTO_STUDIO, 1
 	warp_event 35, 11, ROUTE_118_SUNPOINT_GATE, 1
 	warp_event 26, 12, POKE_SEERS_HOUSE, 1
-	warp_event 30,  5, ROUTE_5_SAFFRON_GATE, 3
-	warp_event 31,  5, ROUTE_5_SAFFRON_GATE, 4
-	warp_event 30, 31, ROUTE_15_FUCHSIA_GATE, 1
-	warp_event 31, 31, ROUTE_15_FUCHSIA_GATE, 2
+	warp_event 30,  5, SUNPOINT_DOCKS_SUNPOINT_GATE, 3
+	warp_event 31,  5, SUNPOINT_DOCKS_SUNPOINT_GATE, 4
+	warp_event 30, 31, ROUTE_119_SUNPOINT_GATE, 1
+	warp_event 31, 31, ROUTE_119_SUNPOINT_GATE, 2
 
 	db 0 ; coord events
 

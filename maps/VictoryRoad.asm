@@ -339,12 +339,12 @@ VictoryRoad_MapEvents:
 	db 0, 0 ; filler
 
 	db 9 ; warp events
-	warp_event  8, 51, CHERRYGROVE_CITY, 5
-	warp_event  4, 41, MOUNT_MOON_SQUARE, 1
-	warp_event  4, 33, MOUNT_MOON_SQUARE, 2
-	warp_event 26, 23, MOUNT_MOON_SQUARE, 3
-	warp_event 24, 15, MOUNT_MOON_SQUARE, 4
-	warp_event  8,  3, MOUNT_MOON_SQUARE, 5
+	warp_event  8, 51, CROWN_CITY, 5
+	warp_event  4, 41, VICTORY_ROAD_OUTSIDE, 1
+	warp_event  4, 33, VICTORY_ROAD_OUTSIDE, 2
+	warp_event 26, 23, VICTORY_ROAD_OUTSIDE, 3
+	warp_event 24, 15, VICTORY_ROAD_OUTSIDE, 4
+	warp_event  8,  3, VICTORY_ROAD_OUTSIDE, 5
 	warp_event 34, 25, VICTORY_ROAD, 8
 	warp_event 34, 42, VICTORY_ROAD, 7
 	warp_event 31,  2, VICTORY_ROAD_2F, 5
