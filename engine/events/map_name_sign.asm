@@ -74,13 +74,9 @@ ReturnFromMapSetupScript::
 	ret z
 	cp RADIO_TOWER
 	ret z
-	cp LAV_RADIO_TOWER
-	ret z
 	cp CROWN_PASS
 	ret z
 	cp NIHON_LEAGUE
-	ret z
-	cp POWER_PLANT
 	ret z
 	ld a, 1
 	and a

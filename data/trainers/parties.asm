@@ -2087,8 +2087,8 @@ SailorGroup:
 
 	; SAILOR (6)
 	db "JEFF@", TRAINERTYPE_NORMAL; used, fast ship 1
-	db 36, RATICATE
-	db 36, RATICATE
+	db 50, RATICATE
+	db 50, RATICATE
 	db -1 ; end
 
 	; SAILOR (7)
@@ -2106,9 +2106,9 @@ SailorGroup:
 
 	; SAILOR (9)
 	db "STANLY@", TRAINERTYPE_NORMAL; used, fast ship 1
-	db 36, MACHOKE
-	db 37, MACHAMP
-	db 35, GOLDUCK
+	db 48, MACHOKE
+	db 50, MACHAMP
+	db 48, GOLDUCK
 	db -1 ; end
 
 	; SAILOR (10)
@@ -2377,8 +2377,8 @@ HikerGroup:
 
 	; HIKER (14)
 	db "NOLAND@", TRAINERTYPE_NORMAL; used, ss aqua 1
-	db 36, SANDSLASH
-	db 36, GOLEM
+	db 46, SANDSLASH
+	db 48, GOLEM
 	db -1 ; end
 
 	; HIKER (15)
@@ -2547,9 +2547,9 @@ FirebreatherGroup:
 
 	; FIREBREATHER (8)
 	db "LYLE@", TRAINERTYPE_NORMAL; used fast ship 1
-	db 37, WEEZING
-	db 35, FLAREON
-	db 35, KOFFING
+	db 50, WEEZING
+	db 48, FLAREON
+	db 48, KOFFING
 	db -1 ; end
 
 JugglerGroup:
@@ -2563,9 +2563,9 @@ JugglerGroup:
 
 	; JUGGLER (2)
 	db "FRITZ@", TRAINERTYPE_NORMAL; used, fast ship 1
-	db 35, MR__MIME
-	db 34, MAGMAR
-	db 34, MACHOKE
+	db 48, MR__MIME
+	db 48, MAGMAR
+	db 48, KADABRA
 	db -1 ; end
 
 	; JUGGLER (3)
@@ -2817,8 +2817,8 @@ PicnickerGroup:
 
 	; PICNICKER (8)
 	db "DEBRA@", TRAINERTYPE_NORMAL; used, fast ship 1
-	db 36, SEAKING
-	db 36, ANCHORAGE
+	db 48, SEAKING
+	db 50, ANCHORAGE
 	db -1 ; end
 
 	; PICNICKER (9)
@@ -3299,7 +3299,7 @@ PokefanMGroup:
 
 	; POKEFANM (9)
 	db "COLIN@", TRAINERTYPE_ITEM; used, fast ship 1
-	db 36, DELIBIRD,   BERRY
+	db 49, DELIBIRD,   BERRY
 	db -1 ; end
 
 	; POKEFANM (10)
@@ -3402,8 +3402,8 @@ TwinsGroup:
 
 	; TWINS (7)
 	db "MEG & PEG@", TRAINERTYPE_NORMAL; used, fast ship 1
-	db 36, TOGEPI
-	db 36, PHANPY
+	db 48, TOGEPI
+	db 48, PHANPY
 	db -1 ; end
 
 	; TWINS (8)

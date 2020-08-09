@@ -22,10 +22,10 @@
 	const ROUTE_118         ; 36
 	const SUNPOINT_CITY     ; 21
 	const MAGMA_SHAFT       ; 18
-	const ROUTE_5           ; 3a
-	const ROUTE_7           ; 3f
+	const SUNPOINT_DOCKS    ; 3a
+	const ROUTE_119         ; 3f
 	const BOULDER_MINES     ; 0a
-	const ROUTE_8           ; 40
+	const ROUTE_120         ; 40
 	const TEKNOS_CITY       ; 16
 	const BOARDWALK         ; 25
 	const ROUTE_104         ; 0b
@@ -52,55 +52,32 @@
 	const ROUTE_114         ; 41
 	const KANTO_REGION_M    ; 47
 	const ROUTE_115         ; 5c
-	const VIRIDIAN_CITY     ; 58
+	const CROWN_PASS        ; 58
 	const CROWN_CITY        ; 03
 	const VICTORY_ROAD      ; 58
 	const NIHON_LEAGUE      ; 5a
 
 KANTO_LANDMARK EQU const_value
 
-	const ROUTE_11          ; 49
 	const BATTLE_TOWER      ; 1d
 	const MT_MORTAR         ; 23
-	const ROUTE_14          ; 4c
-	const ROUTE_13          ; 4b
-	const ROUTE_15          ; 4d
-	const ROUTE_16          ; 4e
-	const ROUTE_17          ; 4f
-	const ROUTE_18          ; 50
-	const ROUTE_22          ; 57
-	const ROUTE_23          ; 59
-	const ROUTE_26          ; 5b
-	const TOHJO_FALLS       ; 5d
-	const ROUTE_28          ; 5e
-	const TIN_TOWER         ; 17
-	const ROUTE_42          ; 22
-	const LAKE_OF_RAGE      ; 26
-	const ROUTE_44          ; 27
-	const ROUTE_45          ; 2b
-	const ROUTE_46          ; 2d
-	const ROUTE_1           ; 30
-	const CROWN_PASS        ; 31
-	const POWER_PLANT       ; 44
-	const LAVENDER_TOWN     ; 45
-	const LAV_RADIO_TOWER   ; 46
-	const SILVER_CAVE       ; 2e
 	const YORON_CITY        ; 33 1
 	const ICED_CAVERN       ; 3e 10
-	const ROUTE_24          ; 38 4
-	const ROUTE_19          ; 52
-	const ROUTE_12          ; 4a
+	const YORON_POINT       ; 38 4
+	const KERAMA_STRAIT     ; 52
+	const URASOE_TRAIL      ; 4a
 	const NANJO_FOREST      ; 54
-	const MT_MOON           ; 35 2
+	const URASOE_PARK       ; 35 2
 	const RYUKYU_CITY       ; 48 9
-	const ROUTE_25          ; 39 5
+	const MERIDIAN_PATH     ; 39 5
 	const CHARRED_SUMMIT    ; 42 11
 	const NAGO_VILLAGE      ; 37 3
-	const ROUTE_20          ; 53
-	const ROUTE_10          ; 43 8
+	const ISEN_STRAIT       ; 53
+	const SEASIDE_PATH      ; 43 8
 	const JOULE_CAVE        ; 3b 6
 	const AMAMI_TOWN        ; 3d 7
 	const FAST_SHIP         ; 5f
+
 
 ; used in CaughtData
 GIFT_LOCATION  EQU $7e
