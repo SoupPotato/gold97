@@ -335,7 +335,7 @@ RocketsPlan:
 	
 	para "TEAM ROCKET is"
 	line "already so far"
-	cont "along with it's"
+	cont "along with its"
 	cont "plan!"
 	
 	para "A small setback"
