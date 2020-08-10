@@ -4,15 +4,15 @@ KantoWaterWildMons:
 
 	map_id AMAMI_TOWN
 	db 2 percent ; encounter rate
-	db 28, MAGIKARP
-	db 25, MAGIKARP
-	db 30, GYARADOS
+	db 38, MAGIKARP
+	db 40, TENTACOOL
+	db 40, OSUNFISH
 
 	map_id SEASIDE_PATH
 	db 2 percent ; encounter rate
-	db 28, MAGIKARP
-	db 25, MAGIKARP
-	db 30, GYARADOS
+	db 40, TENTACOOL
+	db 42, STARYU
+	db 40, OSUNFISH
 	
 	map_id ISEN_STRAIT
 	db 2 percent ; encounter rate

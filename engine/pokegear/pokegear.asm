@@ -1541,8 +1541,6 @@ RadioChannels:
 	bit STATUSFLAGS_ROCKET_SIGNAL_F, a
 	jr z, .NoSignal
 	ld a, [wPokegearMapPlayerIconLandmark]
-	cp LAVENDER_TOWN; i think this makes it only play in lavender town, which is inaccessible
-	jr nz, .NoSignal
 .ok
 	jp LoadStation_EvolutionRadio
 

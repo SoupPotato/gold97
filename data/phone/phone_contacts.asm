@@ -25,7 +25,6 @@ PhoneContacts:
 	phone COOLTRAINERF, REENA1,             ROUTE_115,         ANYTIME, ReenaPhoneScript1,   ANYTIME, ReenaPhoneScript2
 	phone YOUNGSTER,    JOEY1,              ROUTE_120,        ANYTIME, JoeyPhoneScript1,    ANYTIME, JoeyPhoneScript2
 	phone BUG_CATCHER,  WADE1,              ROUTE_106,        ANYTIME, WadePhoneScript1,    ANYTIME, WadePhoneScript2
-	phone FISHER,       RALPH1,             ROUTE_119,        ANYTIME, RalphPhoneScript1,   ANYTIME, RalphPhoneScript2
 	phone PICNICKER,    LIZ1,               ROUTE_112,        ANYTIME, LizPhoneScript1,     ANYTIME, LizPhoneScript2
 	phone HIKER,        ANTHONY2,           ROUTE_106,        ANYTIME, AnthonyPhoneScript1, ANYTIME, AnthonyPhoneScript2
 	phone CAMPER,       TODD1,              ROUTE_113,        ANYTIME, ToddPhoneScript1,    ANYTIME, ToddPhoneScript2
@@ -36,6 +35,5 @@ PhoneContacts:
 	phone TRAINER_NONE, PHONE_00,           N_A,              0,       UnusedPhoneScript,   0,       UnusedPhoneScript
 	phone LASS,         DANA1,              ROUTE_108,        ANYTIME, DanaPhoneScript1,    ANYTIME, DanaPhoneScript2
 	phone POKEFANM,     DEREK1,             ROUTE_109,        ANYTIME, DerekPhoneScript1,   ANYTIME, DerekPhoneScript2
-	phone FISHER,       TULLY1,             ROUTE_120,        ANYTIME, TullyPhoneScript1,   ANYTIME, TullyPhoneScript2
 	phone POKEMANIAC,   BRENT1,             BOARDWALK,        ANYTIME, BrentPhoneScript1,   ANYTIME, BrentPhoneScript2
 	phone TRAINER_NONE, PHONECONTACT_BUENA, WESTPORT_DEPT_STORE_ROOF, ANYTIME, BuenaPhoneScript1, ANYTIME, BuenaPhoneScript2

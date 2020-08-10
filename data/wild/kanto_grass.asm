@@ -5,29 +5,29 @@ KantoGrassWildMons:
 	map_id SEASIDE_PATH
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 32, FEAROW
-	db 33, FEAROW
-	db 33, PIDGEOTTO
-	db 36, PIDGEOT
-	db 32, RAPIDASH
-	db 34, DODRIO
-	db 34, DODRIO
+	db 44, GOLDUCK
+	db 45, FEAROW
+	db 45, PIDGEOTTO
+	db 48, PIDGEOT
+	db 44, RAPIDASH
+	db 46, DODRIO
+	db 48, DODRIO
 	; day
-	db 32, FEAROW
-	db 33, FEAROW
-	db 33, PIDGEOTTO
-	db 36, PIDGEOT
-	db 32, RAPIDASH
-	db 34, DODRIO
-	db 34, DODRIO
+	db 44, GOLDUCK
+	db 45, FEAROW
+	db 45, PIDGEOTTO
+	db 48, PIDGEOT
+	db 44, RAPIDASH
+	db 46, DODRIO
+	db 48, DODRIO
 	; nite
-	db 32, FEAROW
-	db 33, FEAROW
-	db 33, PIDGEOTTO
-	db 36, PIDGEOT
-	db 32, RAPIDASH
-	db 34, RATICATE
-	db 34, RATICATE
+	db 44, GOLDUCK
+	db 45, MURKROW
+	db 45, GOLBAT
+	db 48, NOCTOWL
+	db 44, RAPIDASH
+	db 46, QUAGSIRE
+	db 48, QUAGSIRE
 	
 	map_id ICED_CAVERN_1F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
