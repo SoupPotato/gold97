@@ -643,8 +643,8 @@ BirdKeeperGroup:
 
 	; BIRD_KEEPER (13)
 	db "PETER@", TRAINERTYPE_NORMAL; used, route 10 north
-	db  39, PIDGEOT
-	db  43, SKARMORY
+	db  49, PIDGEOT
+	db  53, SKARMORY
 	db -1 ; end
 
 	; BIRD_KEEPER (14)
@@ -1264,8 +1264,8 @@ PokemaniacGroup:
 
 	; POKEMANIAC (15)
 	db "MILLER@", TRAINERTYPE_NORMAL; used, mount mortar
-	db 40, NIDOKING
-	db 40, NIDOQUEEN
+	db 50, NIDOKING
+	db 50, NIDOQUEEN
 	db -1 ; end
 
 GruntMGroup:
@@ -2217,7 +2217,7 @@ SuperNerdGroup:
 
 	; SUPER_NERD (14)
 	db "MARKUS@", TRAINERTYPE_MOVES; used, mount monwal
-	db 37, SLOWKING,   CURSE, CONFUSION, GROWL, STRENGTH
+	db 52, SLOWKING,   AMNESIA, PSYCHIC, SURF, STRENGTH
 	db -1 ; end
 
 Rival2Group:
@@ -2350,8 +2350,8 @@ HikerGroup:
 
 	; HIKER (10)
 	db "TIMOTHY@", TRAINERTYPE_MOVES; used, route 10 north
-	db 38, DIGLETT,    MAGNITUDE, DIG, SAND_ATTACK, SLASH
-	db 41, DUGTRIO,    MAGNITUDE, DIG, SAND_ATTACK, SLASH
+	db 48, SANDSLASH,  EARTHQUAKE, DIG, SAND_ATTACK, SLASH
+	db 51, DUGTRIO,    EARTHQUAKE, DIG, SAND_ATTACK, SLASH
 	db -1 ; end
 
 	; HIKER (11)
@@ -2718,7 +2718,7 @@ PsychicGroup:
 
 	; PSYCHIC_T (4)
 	db "FIDEL@", TRAINERTYPE_NORMAL; used, route 10 north
-	db 44, XATU
+	db 52, XATU
 	db -1 ; end
 
 	; PSYCHIC_T (5)
@@ -3262,10 +3262,10 @@ PokefanMGroup:
 
 	; POKEFANM (4)
 	db "JOSHUA@", TRAINERTYPE_ITEM; used, route 10 north
-	db 36, PIKACHU,    BERRY
-	db 37, PIKACHU,    BERRY
-	db 38, PIKACHU,    BERRY
-	db 39, PIKACHU,    BERRY
+	db 46, PIKACHU,    BERRY
+	db 47, PIKACHU,    BERRY
+	db 48, PIKACHU,    BERRY
+	db 49, PIKACHU,    BERRY
 	db -1 ; end
 
 	; POKEFANM (5)

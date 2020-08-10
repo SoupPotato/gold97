@@ -189,7 +189,7 @@ PokemonCries::
 	mon_cry CRY_CLEFFA,      $084,  $150 ; BELLOSSOM
 	mon_cry CRY_MARILL,      $11b,  $120 ; MARILL
 	mon_cry CRY_BULBASAUR,   $f40,  $180 ; BOMSEAL
-	mon_cry CRY_WEEPINBELL,  $084,  $150 ; BIPETAL
+	mon_cry CRY_CATERPIE,    $06d,  $160 ; BIPETAL
 	mon_cry CRY_CLEFFA,     -$2a3,  $1c8 ; POLITOED
 	mon_cry CRY_CLEFFA,      $03b,  $0c8 ; HOPPIP
 	mon_cry CRY_CLEFFA,      $027,  $138 ; SKIPLOOM

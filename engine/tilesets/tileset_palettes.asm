@@ -77,13 +77,34 @@ LoadSpecialMapPalette:
 .not_route_111
 	ld a, [wMapGroup]
 	cp GROUP_ROUTE_112
-	jp nz, .do_nothing
+	jp nz, .not_route_112
 	ld a, [wMapNumber]
 	cp MAP_ROUTE_112
 	jp z, .SnowOverGreyBGPalette
+.not_route_112
+	ld a, [wMapGroup]
+	cp GROUP_JOULE_CAVE
+	jp nz, .not_joule_cave
+	ld a, [wMapNumber]
+	cp MAP_JOULE_CAVE
+	jp z, .TealOverBrownBGPalette
+.not_joule_cave
+	ld a, [wMapGroup]
+	cp GROUP_JOULE_CAVE_ZAPDOS_ROOM
+	jp nz, .do_nothing
+	ld a, [wMapNumber]
+	cp MAP_JOULE_CAVE_ZAPDOS_ROOM
+	jp z, .TealOverBrownBGPalette
 
 
 .pokecom_2f
+	ld a, [wMapGroup]
+	cp GROUP_AMAMI_SWIMMING_POOL
+	jp nz, .pokecom
+	ld a, [wMapNumber]
+	cp MAP_AMAMI_SWIMMING_POOL
+	jp z, .SwimmingPoolBGPalette
+.pokecom
 	call LoadPokeComPalette
 	scf
 	ret
@@ -165,6 +186,24 @@ LoadSpecialMapPalette:
 	
 .LavaOverRedCoalOverBrownBGPalette
 	ld hl, LavaOverRedCoalOverBrown
+	ld bc, 8 palettes
+	ld de, wBGPals1
+	ld a, BANK(wBGPals1)
+	call FarCopyWRAM
+	scf
+	ret
+	
+.SwimmingPoolBGPalette
+	ld hl, SwimmingPool
+	ld bc, 8 palettes
+	ld de, wBGPals1
+	ld a, BANK(wBGPals1)
+	call FarCopyWRAM
+	scf
+	ret
+	
+.TealOverBrownBGPalette
+	ld hl, TealOverBrown
 	ld bc, 8 palettes
 	ld de, wBGPals1
 	ld a, BANK(wBGPals1)

@@ -91,7 +91,7 @@ ENDM
 	map_const CROWN_PASS,                                  10, 18 ; 86
 	map_const CHARRED_SUMMIT_CAVE,                         20, 18 ; 57
 	map_const JOULE_CAVE,                                  30, 18 ; 58
-	map_const JOULE_CAVE_ZAPDOS_ROOM,                      10,  9 ; 58
+	map_const JOULE_CAVE_ZAPDOS_ROOM,                       7,  7 ; 58
 	map_const ICED_CAVERN_1F,                              20, 18 ; 59
 	map_const ICED_CAVERN_B1F,                             20, 18 ; 60
 	map_const DEEPWATER_PASSAGE_B2F,                       10, 36 ; 61
