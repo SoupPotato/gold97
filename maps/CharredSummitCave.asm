@@ -20,7 +20,7 @@ CharredSummitCave_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  7, 33, CHARRED_SUMMIT, 1
+	warp_event  8, 33, CHARRED_SUMMIT, 1
 	warp_event 27,  5, CHARRED_SUMMIT, 2
 
 
