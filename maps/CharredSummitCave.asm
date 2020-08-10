@@ -27,8 +27,8 @@ CharredSummitCave_MapEvents:
 	db 0 ; coord events
 
 	db 1 ; bg events
-	bg_event 32, 29, BGEVENT_ITEM, CharredSummitCaveHiddenHyperPotion
+	bg_event 10, 22, BGEVENT_ITEM, CharredSummitCaveHiddenHyperPotion
 
 	db 2 ; object events
-	object_event  6,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, CharredSummitCaveEther, EVENT_MOUNT_MORTAR_1F_OUTSIDE_ETHER
-	object_event 33,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, CharredSummitCaveRevive, EVENT_MOUNT_MORTAR_1F_OUTSIDE_REVIVE
+	object_event 30, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, CharredSummitCaveEther, EVENT_MOUNT_MORTAR_1F_OUTSIDE_ETHER
+	object_event 35,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, CharredSummitCaveRevive, EVENT_MOUNT_MORTAR_1F_OUTSIDE_REVIVE
