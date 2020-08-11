@@ -91,10 +91,28 @@ LoadSpecialMapPalette:
 .not_joule_cave
 	ld a, [wMapGroup]
 	cp GROUP_JOULE_CAVE_ZAPDOS_ROOM
-	jp nz, .do_nothing
+	jp nz, .not_joule_cave_zapdos_room
 	ld a, [wMapNumber]
 	cp MAP_JOULE_CAVE_ZAPDOS_ROOM
 	jp z, .TealOverBrownBGPalette
+.not_joule_cave_zapdos_room
+	ld a, [wMapGroup]
+	cp GROUP_CHARRED_SUMMIT
+	jp nz, .not_charred_summit
+	ld a, [wMapNumber]
+	cp MAP_CHARRED_SUMMIT
+	jp z, .CharredOverBrownSkyOverWaterBGPalette
+.not_charred_summit
+	ld a, [wMapGroup]
+	cp GROUP_CHARRED_SUMMIT_CAVE
+	jp nz, .do_nothing
+	ld a, [wMapNumber]
+	cp MAP_CHARRED_SUMMIT_CAVE
+	jp z, .LavaOverRedCoalOverBrownBGPalette
+
+.do_nothing
+	and a
+	ret
 
 
 .pokecom_2f
@@ -155,10 +173,6 @@ LoadSpecialMapPalette:
 	call LoadMansionPalette
 	scf
 	ret
-
-.do_nothing
-	and a
-	ret
 	
 .SandOverBrownBGPalette:
 	ld hl, SandOverRock
@@ -202,6 +216,18 @@ LoadSpecialMapPalette:
 	scf
 	ret
 	
+.CharredOverBrownSkyOverWaterBGPalette
+	ld hl, CharredOverBrownSkyOverWater
+	ld a, [wTimeOfDayPal]
+	maskbits NUM_DAYTIMES
+	ld bc, 8 palettes
+	call AddNTimes
+	ld de, wBGPals1
+	ld a, BANK(wBGPals1)
+	call FarCopyWRAM
+	scf
+	ret
+
 .TealOverBrownBGPalette
 	ld hl, TealOverBrown
 	ld bc, 8 palettes

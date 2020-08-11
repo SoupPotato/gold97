@@ -249,7 +249,7 @@ ENDM
 
 	map_attributes MeridianPath, MERIDIAN_PATH, $35, NORTH | EAST
 	connection north, NagoVillage, NAGO_VILLAGE, 0
-	connection east, CharredSummit, CHARRED_SUMMIT, 9
+	connection east, CharredSummit, CHARRED_SUMMIT, -7
 
 	map_attributes Route117, ROUTE_117, $65, WEST | EAST
 	connection west, SanskritTown, SANSKRIT_TOWN, 0
@@ -271,8 +271,8 @@ ENDM
 	map_attributes NihonLeague, NIHON_LEAGUE, $05, SOUTH
 	connection south, VictoryRoadOutside, VICTORY_ROAD_OUTSIDE, 0
 	
-	map_attributes CharredSummit, CHARRED_SUMMIT, $35, WEST
-	connection west, MeridianPath, MERIDIAN_PATH, -9
+	map_attributes CharredSummit, CHARRED_SUMMIT, $98, WEST
+	connection west, MeridianPath, MERIDIAN_PATH, 7
 
 	map_attributes BrassTower1F, BRASS_TOWER_1F, $00, 0
 	map_attributes BrassTower2F, BRASS_TOWER_2F, $00, 0

@@ -1,11 +1,11 @@
 	db TANGROWTH ; 162
 
-	db  80,  60, 130,  65, 105,  50
+	db  100, 100, 125,  50, 110,  50
 	;   hp  atk  def  spd  sat  sdf
 
 	db GRASS, GRASS ; type
 	db 35 ; catch rate
-	db 180 ; base exp
+	db 211 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

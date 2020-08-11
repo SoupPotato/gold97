@@ -1,6 +1,6 @@
 	db BELLRING ; 214
 
-	db  70,  70,  60, 125,  75,  65
+	db  70,  90,  40, 105,  70,  65
 	;   hp  atk  def  spd  sat  sdf
 
 	db DARK, DARK ; type

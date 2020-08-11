@@ -174,9 +174,6 @@ INCLUDE "data/tilesets/underground_collision.asm"
 TilesetDarkCaveGFX:
 INCBIN "gfx/tilesets/dark_cave.2bpp.lz"
 
-UnusedTilesetDarkCaveMeta:
-INCBIN "data/tilesets/unused_dark_cave_metatiles.bin"
-
 SECTION "Tileset Data 5", ROMX
 
 TilesetPokeComCenterGFX:
@@ -220,9 +217,6 @@ INCBIN "data/tilesets/traditional_house_metatiles.bin"
 
 TilesetTraditionalHouseColl:
 INCLUDE "data/tilesets/traditional_house_collision.asm"
-
-UnusedTilesetDarkCaveColl:
-INCLUDE "data/tilesets/unused_dark_cave_collision.asm"
 
 
 SECTION "Tileset Data 6", ROMX

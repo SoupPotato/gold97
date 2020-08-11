@@ -29,86 +29,141 @@ KantoGrassWildMons:
 	db 46, QUAGSIRE
 	db 48, QUAGSIRE
 	
-	map_id ICED_CAVERN_1F
+	map_id JOULE_CAVE
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	db 37, GRAVELER
-	db 38, MAGNETON
-	db 37, ELECTRODE
-	db 37, GOLBAT
-	db 38, ELECTABUZZ
-	db 37, GOLBAT
-	db 39, GOLBAT
+	db 45, GRAVELER
+	db 46, MAGNETON
+	db 46, ELECTRODE
+	db 45, GOLBAT
+	db 46, ELECTABUZZ
+	db 45, GOLBAT
+	db 47, GOLBAT
 	; day
-	db 37, GRAVELER
-	db 38, MAGNETON
-	db 37, ELECTRODE
-	db 37, GOLBAT
-	db 38, ELECTABUZZ
-	db 37, GOLBAT
-	db 39, GOLBAT
+	db 45, GRAVELER
+	db 46, MAGNETON
+	db 46, ELECTRODE
+	db 45, GOLBAT
+	db 46, ELECTABUZZ
+	db 45, GOLBAT
+	db 47, GOLBAT
 	; nite
-	db 37, GRAVELER
-	db 38, MAGNETON
-	db 37, ELECTRODE
-	db 37, GOLBAT
-	db 38, ELECTABUZZ
-	db 37, GOLBAT
-	db 39, GOLBAT
+	db 45, GRAVELER
+	db 46, MAGNETON
+	db 46, ELECTRODE
+	db 45, GOLBAT
+	db 46, ELECTABUZZ
+	db 45, GOLBAT
+	db 47, GOLBAT
+	
+	map_id JOULE_CAVE_ZAPDOS_ROOM
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	; morn
+	db 45, GRAVELER
+	db 46, MAGNETON
+	db 46, ELECTRODE
+	db 45, GOLBAT
+	db 46, ELECTABUZZ
+	db 45, GOLBAT
+	db 47, GOLBAT
+	; day
+	db 45, GRAVELER
+	db 46, MAGNETON
+	db 46, ELECTRODE
+	db 45, GOLBAT
+	db 46, ELECTABUZZ
+	db 45, GOLBAT
+	db 47, GOLBAT
+	; nite
+	db 45, GRAVELER
+	db 46, MAGNETON
+	db 46, ELECTRODE
+	db 45, GOLBAT
+	db 46, ELECTABUZZ
+	db 45, GOLBAT
+	db 47, GOLBAT
 
 	map_id MERIDIAN_PATH
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 36, DODUO
-	db 38, ARBOK
-	db 40, RATICATE
-	db 40, GIRAFARIG
-	db 42, TAUROS
-	db 40, DODRIO
-	db 40, DODRIO
+	db 46, DODUO
+	db 48, EXEGGCUTE
+	db 50, NIDORINO
+	db 50, GIRAFARIG
+	db 52, TAUROS
+	db 50, DODRIO
+	db 50, DODRIO
 	; day
-	db 36, DODUO
-	db 38, ARBOK
-	db 40, RATICATE
-	db 40, GIRAFARIG
-	db 42, TAUROS
-	db 40, DODRIO
-	db 40, DODRIO
+	db 46, DODUO
+	db 48, EXEGGCUTE
+	db 50, NIDORINO
+	db 50, GIRAFARIG
+	db 52, TAUROS
+	db 50, DODRIO
+	db 50, DODRIO
 	; nite
-	db 36, QUAGSIRE
-	db 38, NOCTOWL
-	db 40, RATICATE
-	db 40, QUAGSIRE
-	db 42, NOCTOWL
-	db 42, NOCTOWL
-	db 42, NOCTOWL
+	db 46, QUAGSIRE
+	db 48, EXEGGCUTE
+	db 50, NIDORINO
+	db 50, GIRAFARIG
+	db 52, QUAGSIRE
+	db 50, NOCTOWL
+	db 50, NOCTOWL
+	
 	
 	map_id URASOE_PARK
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 32, LEDIAN
-	db 32, NIDORINA
-	db 30, SUNFLORA
-	db 31, EXEGGCUTE
-	db 32, FLAAFFY
-	db 32, CHANSEY
-	db 33, CHANSEY
+	db 49, EXEGGCUTE
+	db 48, NIDORINA
+	db 50, SUNFLORA
+	db 48, PINSIR
+	db 48, SCYTHER
+	db 48, CHANSEY
+	db 50, CHANSEY
 	; day
-	db 32, PARASECT
-	db 32, NIDORINO
-	db 30, VENONAT
-	db 31, EXEGGCUTE
-	db 32, FLAAFFY
-	db 32, CHANSEY
-	db 33, CHANSEY
+	db 49, EXEGGCUTE
+	db 48, NIDORINA
+	db 50, SUNFLORA
+	db 48, PINSIR
+	db 48, SCYTHER
+	db 48, CHANSEY
+	db 50, CHANSEY
 	; nite
-	db 32, ARIADOS
-	db 32, NIDORINO
-	db 30, VENONAT
-	db 31, EXEGGCUTE
-	db 32, FLAAFFY
-	db 32, CHANSEY
-	db 33, CHANSEY
+	db 49, EXEGGCUTE
+	db 48, NIDORINA
+	db 50, ARIADOS
+	db 48, PINSIR
+	db 48, SCYTHER
+	db 48, CHANSEY
+	db 50, CHANSEY
+	
+	map_id CHARRED_SUMMIT_CAVE
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	; morn
+	db 50, WEEZING
+	db 48, GRAVELER
+	db 48, RHYHORN
+	db 52, HOUNDOOM
+	db 50, DONPHAN
+	db 50, MAGMAR
+	db 52, MAGMAR
+	; day
+	db 50, WEEZING
+	db 48, GRAVELER
+	db 48, RHYHORN
+	db 52, HOUNDOOM
+	db 50, DONPHAN
+	db 50, MAGMAR
+	db 52, MAGMAR
+	; nite
+	db 50, WEEZING
+	db 48, GRAVELER
+	db 48, RHYHORN
+	db 52, HOUNDOOM
+	db 50, DONPHAN
+	db 50, MAGMAR
+	db 52, MAGMAR
 	
 	map_id URASOE_TRAIL
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -191,32 +246,6 @@ KantoGrassWildMons:
 	db 43, RATICATE
 	db 43, RATICATE
 
-	map_id CHARRED_SUMMIT_CAVE
-	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
-	; morn
-	db 32, WEEZING
-	db 35, GRAVELER
-	db 30, RHYHORN
-	db 31, PHANPY
-	db 35, DONPHAN
-	db 32, MAGMAR
-	db 33, MAGMAR
-	; day
-	db 32, WEEZING
-	db 35, GRAVELER
-	db 30, RHYHORN
-	db 31, PHANPY
-	db 35, DONPHAN
-	db 32, MAGMAR
-	db 33, MAGMAR
-	; nite
-	db 32, WEEZING
-	db 35, GRAVELER
-	db 30, RHYHORN
-	db 31, PHANPY
-	db 35, DONPHAN
-	db 32, MAGMAR
-	db 33, MAGMAR
 	
 	map_id ICED_CAVERN_1F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite

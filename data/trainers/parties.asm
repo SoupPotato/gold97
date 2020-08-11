@@ -456,8 +456,8 @@ SchoolboyGroup:
 
 	; SCHOOLBOY (8)
 	db "JOE@", TRAINERTYPE_NORMAL; used, route 25
-	db 39, TANGROWTH
-	db 40, LEAFEON
+	db 52, TANGROWTH
+	db 54, LEAFEON
 	db -1 ; end
 
 	; SCHOOLBOY (9)
@@ -726,16 +726,16 @@ LassGroup:
 
 	; LASS (7)
 	db "LAURA@", TRAINERTYPE_NORMAL; used, route 25
-	db 36, BIPETAL
-	db 39, PIDGEOT
-	db 40, BELLOSSOM
+	db 53, BIPETAL
+	db 51, PIDGEOT
+	db 53, BELLOSSOM
 	db -1 ; end
 
 	; LASS (8)
 	db "SHANNON@", TRAINERTYPE_NORMAL; used, route 25
-	db 34, PARA
-	db 38, PARAS
-	db 42, PARASECT
+	db 44, PARA
+	db 48, PARAS
+	db 52, PARASECT
 	db -1 ; end
 
 	; LASS (9)
@@ -753,8 +753,8 @@ LassGroup:
 
 	; LASS (11)
 	db "ELLEN@", TRAINERTYPE_NORMAL; used, route 25
-	db 39, WIGGLYTUFF
-	db 44, BELLRING
+	db 49, WIGGLYTUFF
+	db 54, BELLRING
 	db -1 ; end
 
 	; LASS (12)
@@ -911,9 +911,9 @@ CooltrainerMGroup:
 
 	; COOLTRAINERM (17)
 	db "KEVIN@", TRAINERTYPE_NORMAL;used route 25
-	db 40, RHYHORN
-	db 42, MADAME
-	db 41, RAITORA
+	db 50, RHYHORN
+	db 52, MADAME
+	db 51, RAITORA
 	db -1 ; end
 
 	; COOLTRAINERM (18)
@@ -1102,8 +1102,8 @@ BeautyGroup:
 
 	; BEAUTY (2)
 	db "SAMANTHA@", TRAINERTYPE_MOVES ; used, teku gym
-	db 18, MEOWSY,     SCRATCH, GROWL, BITE, PAY_DAY
-	db 18, MEOWTH,     SCRATCH, GROWL, BITE, SLASH
+	db 18, MEOWSY,     MUD_SLAP, GROWL, BITE, PAY_DAY
+	db 18, MEOWTH,     MUD_SLAP, GROWL, BITE, SLASH
 	db -1 ; end
 
 	; BEAUTY (3)
@@ -1909,8 +1909,8 @@ SwimmerMGroup:
 
 	; SWIMMERM (17)
 	db "CAMERON@", TRAINERTYPE_NORMAL;used, route 20
-	db 39, OCTILLERY
-	db 43, ANCHORAGE
+	db 49, OCTILLERY
+	db 53, GROTESS
 	db -1 ; end
 
 	; SWIMMERM (18)
@@ -2018,15 +2018,15 @@ SwimmerFGroup:
 
 	; SWIMMERF (14)
 	db "NICOLE@", TRAINERTYPE_NORMAL; used, route 20
-	db 34, MARILL
-	db 38, MARILL
-	db 43, LAPRAS
+	db 50, MARILL
+	db 50, MARILL
+	db 53, LAPRAS
 	db -1 ; end
 
 	; SWIMMERF (15)
-	db "LORI@", TRAINERTYPE_NORMAL; used, route 20
-	db 40, STARMIE
-	db 40, STARMIE
+	db "LORI@", TRAINERTYPE_MOVES; used, route 20
+	db 51, STARMIE,      BUBBLEBEAM, RECOVER, PSYCHIC_M, CONFUSE_RAY
+	db 51, STARMIE,      BUBBLEBEAM, RECOVER, PSYCHIC_M, CONFUSE_RAY
 	db -1 ; end
 
 	; SWIMMERF (16)
@@ -2178,8 +2178,8 @@ SuperNerdGroup:
 
 	; SUPER_NERD (8)
 	db "PAT@", TRAINERTYPE_NORMAL; used, route 25
-	db 36, PORYGON
-	db 38, PORYGON2
+	db 52, PORYGON
+	db 52, PORYGON2
 	db -1 ; end
 
 	; SUPER_NERD (9)
@@ -2217,7 +2217,7 @@ SuperNerdGroup:
 
 	; SUPER_NERD (14)
 	db "MARKUS@", TRAINERTYPE_MOVES; used, mount monwal
-	db 52, SLOWKING,   AMNESIA, PSYCHIC, SURF, STRENGTH
+	db 52, SLOWKING,   AMNESIA, PSYCHIC_M, SURF, STRENGTH
 	db -1 ; end
 
 Rival2Group:
@@ -2337,9 +2337,9 @@ HikerGroup:
 
 	; HIKER (7)
 	db "ERIK@", TRAINERTYPE_NORMAL; used mount mortar
-	db 36, MACHOKE
-	db 37, GOLEM
-	db 35, MACHOKE
+	db 49, MACHOKE
+	db 50, GOLEM
+	db 50, MACHOKE
 	db -1 ; end
 
 	; HIKER (8)
@@ -2977,8 +2977,8 @@ CamperGroup:
 
 	; CAMPER (6)
 	db "LLOYD@", TRAINERTYPE_NORMAL; used, route 25
-	db 40, NIDOKING
-	db 41, SANDSLASH
+	db 50, NIDOKING
+	db 51, SANDSLASH
 	db -1 ; end
 
 	; CAMPER (7)

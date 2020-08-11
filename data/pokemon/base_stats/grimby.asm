@@ -5,7 +5,7 @@
 
 	db POISON, POISON ; type
 	db 190 ; catch rate
-	db 90 ; base exp
+	db 51 ; base exp
 	db NO_ITEM, NUGGET ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

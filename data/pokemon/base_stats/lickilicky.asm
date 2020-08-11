@@ -1,11 +1,11 @@
 	db LICKILICKY ; 248
 
-	db 110,  80,  85,  65,  75,  95
+	db 110,  85,  95,  50,  80,  95
 	;   hp  atk  def  spd  sat  sdf
 
 	db NORMAL, NORMAL ; type
 	db 45 ; catch rate
-	db 127 ; base exp
+	db 193 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
