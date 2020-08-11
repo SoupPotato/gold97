@@ -1,6 +1,6 @@
 	db TRITALES ; 200
 
-	db  33,  38,  38,  50,  40,  45
+	db  25,  28,  27,  50,  35,  50
 	;   hp  atk  def  spd  sat  sdf
 
 	db FIRE, FIRE ; type

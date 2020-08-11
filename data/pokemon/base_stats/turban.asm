@@ -1,6 +1,6 @@
 	db TURBAN ; 204
 
-	db  80,  90, 150,  70,  80,  65
+	db  80,  90, 150,  30,  80,  65
 	;   hp  atk  def  spd  sat  sdf
 
 	db WATER, POISON ; type

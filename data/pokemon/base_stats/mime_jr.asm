@@ -1,11 +1,11 @@
 	db MIME_JR ; 234
 
-	db  35,  40,  55,  65,  70,  70
+	db  20,  25,  45,  60,  70,  90
 	;   hp  atk  def  spd  sat  sdf
 
 	db PSYCHIC, PSYCHIC ; type
 	db 45 ; catch rate
-	db 136 ; base exp
+	db 78 ; base exp
 	db NO_ITEM, MYSTERYBERRY ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

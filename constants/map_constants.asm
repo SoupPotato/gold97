@@ -163,7 +163,7 @@ ENDM
 	map_const JADE_FOREST_SNORLAX_ROOM,                     5,  8 ;  6
 	map_const MERIDIAN_PATH,                               10, 27 ; 16
 	map_const NAGO_VILLAGE,                                10, 18 ; 17
-	map_const CHARRED_SUMMIT,							   10,  9 ;asdf
+	map_const CHARRED_SUMMIT,							   11, 25 ;asdf
 	map_const RESEARCH_FACILITY_BACK_ROOM,                  5,  4 ;  1
 	map_const RESEARCH_FACILITY_ENTRANCE,                  20,  9 ;  2
 	map_const ISEN_STRAIT,                                 30,  9 ;  6

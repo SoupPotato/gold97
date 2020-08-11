@@ -5,7 +5,7 @@
 
 	db NORMAL, NORMAL ; type
 	db 35 ; catch rate
-	db 70 ; base exp
+	db 146 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_UNKNOWN ; gender ratio
 	db 100 ; unknown 1

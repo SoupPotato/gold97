@@ -16,21 +16,21 @@ KantoWaterWildMons:
 	
 	map_id ISEN_STRAIT
 	db 2 percent ; encounter rate
-	db 28, TENTACOOL
-	db 25, TENTACRUEL
-	db 30, GYARADOS
+	db 38, TENTACOOL
+	db 40, TENTACRUEL
+	db 42, GYARADOS
 	
 	map_id NAGO_VILLAGE
 	db 2 percent ; encounter rate
-	db 28, MAGIKARP
-	db 25, MAGIKARP
-	db 30, GYARADOS
+	db 38, MAGIKARP
+	db 40, SHELLDER
+	db 42, GYARADOS
 	
 	map_id MERIDIAN_PATH
 	db 6 percent ; encounter rate
-	db 31, GOLDEEN
-	db 30, MARILL
-	db 31, SEAKING
+	db 41, GOLDEEN
+	db 40, MARILL
+	db 41, SEAKING
 	
 	map_id RYUKYU_CITY
 	db 2 percent ; encounter rate

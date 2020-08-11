@@ -1,11 +1,11 @@
 	db NUMBPUFF ; 217
 
-	db  75,  90,  70,  95,  80,  65
+	db  90, 112, 100,  75,  85,  65
 	;   hp  atk  def  spd  sat  sdf
 
 	db WATER, ELECTRIC ; type
 	db 35 ; catch rate
-	db 130 ; base exp
+	db 190 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

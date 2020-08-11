@@ -111,7 +111,7 @@ MeridianPathSignText:
 
 LassEllenSeenText:
 	text "You ever climbed"
-	line "the EASTWARD"
+	line "the CHARRED"
 	cont "SUMMIT?"
 	done
 
@@ -163,7 +163,7 @@ LassLauraAfterBattleText:
 	done
 
 CamperLloydSeenText:
-	text "Going to EASTWARD"
+	text "Going to CHARRED"
 	line "SUMMIT?"
 	done
 
