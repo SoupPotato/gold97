@@ -243,11 +243,11 @@ KantoTeacherText:
 KantoRegion_MapEvents:
 	db 0, 0 ; filler
 
-	db 25 ; warp events
+	db 29 ; warp events
 	warp_event 24, 21, KANTO_DEPT_STORE_1F, 1
 	warp_event 29, 21, KANTO_CELADON_MANSION_1F, 1
 	warp_event 30, 15, KANTO_CELADON_MANSION_1F, 3
-	
+	warp_event 38, 35, DIGLETTS_CAVE,1
 	warp_event 29, 33, KANTO_POKECENTER_1F, 1
 	warp_event 23, 27, KANTO_GAME_CORNER, 1
 	warp_event 24, 27, KANTO_GAME_CORNER_PRIZE_ROOM, 1
@@ -256,11 +256,11 @@ KantoRegion_MapEvents:
 	warp_event  4, 24, ROUTE_115_KANTO_GATE, 4
 	warp_event  4, 25, ROUTE_115_KANTO_GATE, 4
 	warp_event 37, 29, SILPH_CO_1F, 1
-	
+	warp_event 20, 19, DIGLETTS_CAVE,3
 	warp_event 25, 21, KANTO_DEPT_STORE_1F, 2
-	
+	warp_event 48, 29, ROCK_TUNNEL_1F,2
 	warp_event  3,  5, KANTO_GYM, 2
-	
+	warp_event 46, 17, ROCK_TUNNEL_1F,1
 	warp_event 14, 45, OAKS_KANTO_LAB, 1
 	warp_event 15, 45, OAKS_KANTO_LAB, 2
 	warp_event 15, 39, BLUES_HOUSE, 1

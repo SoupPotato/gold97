@@ -329,7 +329,9 @@ INCLUDE "maps/Boardwalk.asm"
 INCLUDE "maps/KeramaStrait.asm"
 INCLUDE "maps/MeridianPath.asm"
 INCLUDE "maps/CharredSummit.asm"
-
+INCLUDE "maps/DiglettsCave.asm"
+INCLUDE "maps/RockTunnel1F.asm"
+INCLUDE "maps/RockTunnelB1F.asm"
 
 SECTION "Map Scripts 21", ROMX
 

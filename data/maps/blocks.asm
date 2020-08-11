@@ -745,3 +745,12 @@ YoronPartsShop_Blocks:
 	
 JouleCaveZapdosRoom_Blocks:
 	INCBIN "maps/JouleCaveZapdosRoom.blk"
+	
+DiglettsCave_Blocks:
+	INCBIN "maps/DiglettsCave.blk"
+	
+RockTunnel1F_Blocks:
+	INCBIN "maps/RockTunnel1F.blk"
+
+RockTunnelB1F_Blocks:
+	INCBIN "maps/RockTunnelB1F.blk"

@@ -538,3 +538,6 @@ ENDM
 	map_attributes KantoHouse2, KANTO_HOUSE_2, $00, 0
 	map_attributes KantoHouse3, KANTO_HOUSE_3, $00, 0
 	map_attributes KantoHouse4, KANTO_HOUSE_4, $00, 0
+	map_attributes DiglettsCave, DIGLETTS_CAVE, $09, 0
+	map_attributes RockTunnel1F, ROCK_TUNNEL_1F, $09, 0
+	map_attributes RockTunnelB1F, ROCK_TUNNEL_B1F, $09, 0

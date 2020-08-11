@@ -360,6 +360,9 @@ ENDM
 	map_const KANTO_HOUSE_4,							    5,  4 ;
 	map_const KANTO_FOSSIL_LAB,                            10,  8 ;  5
 	map_const KANTO_CAFE,                                   5,  5 ; 82
+	map_const DIGLETTS_CAVE,                               10, 18 ; newly added kanto maps start here
+	map_const ROCK_TUNNEL_1F,                              15, 18 ; 87
+	map_const ROCK_TUNNEL_B1F,                             15, 18 ; 88
 
 	newgroup                                                      ; 22
 
