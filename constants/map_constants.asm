@@ -324,7 +324,7 @@ ENDM
 
 	newgroup                                                      ; 21
 
-	map_const KANTO_REGION,                                30, 27 ;  4
+	map_const KANTO_REGION,                                30, 30 ;  4
 	map_const KANTO_DEPT_STORE_1F,                          8,  4 ;  5
 	map_const KANTO_DEPT_STORE_2F,                          8,  4 ;  6
 	map_const KANTO_DEPT_STORE_3F,                          8,  4 ;  7

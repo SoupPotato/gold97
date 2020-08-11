@@ -220,7 +220,7 @@ ENDM
 	connection south, Route113, ROUTE_113, 10
 
 	map_attributes KantoRegion, KANTO_REGION, $0f, EAST
-	connection east, Route114, ROUTE_114, 9
+	connection east, Route114, ROUTE_114, 14
 
 	map_attributes Route119, ROUTE_119, $07, EAST
 	connection east, Route120, ROUTE_120, 18
@@ -241,7 +241,7 @@ ENDM
 	connection east, IsenStrait, ISEN_STRAIT, 0
 
 	map_attributes Route114, ROUTE_114, $0f, WEST
-	connection west, KantoRegion, KANTO_REGION, -9
+	connection west, KantoRegion, KANTO_REGION, -14
 
 	map_attributes YoronPoint, YORON_POINT, $35, WEST | EAST
 	connection west, YoronCity, YORON_CITY, -9
