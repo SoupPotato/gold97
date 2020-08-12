@@ -128,3 +128,5 @@
 	tilecoll LAVA, LAVA, LAVA, LAVA ; 7f
 	tilecoll LAVA, LAVA, LAVA, LAVA ; 80
 	tilecoll LAVA, LAVA, LAVA, LAVA ; 81
+	tilecoll WALL, WALL, FLOOR, FLOOR ; 82
+	tilecoll FLOOR, FLOOR, WARP_CARPET_DOWN, FLOOR ; 83

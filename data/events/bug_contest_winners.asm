@@ -10,7 +10,7 @@ BugContestantPointers:
 	dw BugContestant_PicnickerCindy
 	dw BugContestant_BugCatcherJosh
 	dw BugContestant_YoungsterSamuel
-	dw BugContestant_SchoolboyKipp
+	dw BugContestant_SchoolboyDanny
 
 ; contestant format:
 ;   db class, id
@@ -72,8 +72,8 @@ BugContestant_YoungsterSamuel:
 	dbw BEEDRILL,   282
 	dbw VENONAT,    251
 
-BugContestant_SchoolboyKipp:
-	db SCHOOLBOY, KIPP
+BugContestant_SchoolboyDanny:
+	db SCHOOLBOY, DANNY
 	dbw BEEDRILL,   267
 	dbw PARAS,      254
 	dbw VENONAT,    259

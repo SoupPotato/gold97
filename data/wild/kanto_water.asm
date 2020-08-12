@@ -44,28 +44,34 @@ KantoWaterWildMons:
 	db 25, TENTACRUEL
 	db 30, GYARADOS
 	
+	map_id NANJO_FOREST
+	db 2 percent ; encounter rate
+	db 45, POLIWHIRL
+	db 45, QWILFISH
+	db 46, SEAKING
+	
 	map_id KERAMA_STRAIT
 	db 2 percent ; encounter rate
-	db 28, TENTACOOL
-	db 25, TENTACRUEL
-	db 30, GYARADOS
+	db 45, TENTACOOL
+	db 48, TENTACRUEL
+	db 50, GYARADOS
 	
 	map_id YORON_POINT
 	db 2 percent ; encounter rate
-	db 28, TENTACOOL
-	db 25, TENTACRUEL
-	db 30, GYARADOS
+	db 45, TENTACOOL
+	db 48, TENTACRUEL
+	db 50, GYARADOS
 	
 	map_id YORON_CITY
 	db 2 percent ; encounter rate
-	db 10, MAGIKARP
-	db 12, MAGIKARP
-	db 15, MAGIKARP
+	db 45, TENTACOOL
+	db 48, TENTACRUEL
+	db 50, GYARADOS
 
 	map_id ICED_CAVERN_1F
 	db 4 percent ; encounter rate
-	db 18, SLOWPOKE
-	db 15, SLOWPOKE
-	db 18, SEEL
+	db 46, SLOWPOKE
+	db 50, SLOWPOKE
+	db 48, SEEL
 
 	db -1 ; end

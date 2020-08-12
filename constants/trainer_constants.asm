@@ -117,15 +117,15 @@ KRIS EQU __enum__
 	const JOEY3
 	const WARREN
 	const JIMMY
-	const OWEN
-	const JASON
 	const JOEY4
 	const JOEY5
+	const JASON1
+	const JASON2
+	const JASON3
 
 	trainerclass SCHOOLBOY ; 17
 	const ALAN1
 	const JACK1
-	const KIPP
 	const DANNY
 	const TOMMY
 	const DUDLEY
@@ -172,10 +172,8 @@ KRIS EQU __enum__
 	const VICTORIA
 	const CARRIE
 	const BRIDGET
-	const ALICE
 	const KRISE
 	const CONNIE1
-	const LINDA
 	const LAURA
 	const SHANNON
 	const MICHELLE
@@ -187,6 +185,9 @@ KRIS EQU __enum__
 	const DANA3
 	const DANA4
 	const DANA5
+	const LINDA1
+	const LINDA2
+	const LINDA3
 
 	trainerclass JANINE ; 1a
 	const JANINE1
@@ -449,9 +450,6 @@ KRIS EQU __enum__
 	const RIVAL2_1_CHIKORITA
 	const RIVAL2_1_FLAMBEAR
 	const RIVAL2_1_CRUISE
-	const RIVAL2_2_CHIKORITA
-	const RIVAL2_2_FLAMBEAR
-	const RIVAL2_2_CRUISE
 
 	trainerclass GUITARIST ; 2b
 	const CLYDE
@@ -467,7 +465,6 @@ KRIS EQU __enum__
 	const ERIK
 	const MICHAEL
 	const TIMOTHY
-	const BAILEY
 	const ANTHONY3
 	const TIM
 	const NOLAND
@@ -565,7 +562,6 @@ KRIS EQU __enum__
 	const TIFFANY1
 	const TIFFANY2
 	const ERIN2
-	const TANYA
 	const TIFFANY3
 	const ERIN3
 	const LIZ4
@@ -636,8 +632,9 @@ KRIS EQU __enum__
 	const DEREK1
 	const ROBERT
 	const JOSHUA
-	const CARTER
-	const TREVOR
+	const TREVOR1
+	const TREVOR2
+	const TREVOR3
 	const BRANDON
 	const JEREMY
 	const COLIN

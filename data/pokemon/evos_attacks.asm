@@ -2392,11 +2392,12 @@ CruiseEvosAttacks:
 	db 13, POWDER_SNOW
 	db 19, SWIFT
 	db 22, BUBBLEBEAM
-	db 25, SAFEGUARD
-	db 31, AURORA_BEAM
+	db 25, AURORA_BEAM
+	db 31, SAFEGUARD
 	db 34, HAZE
 	db 37, BODY_SLAM
-	db 43, HYDRO_PUMP
+	db 43, ICE_BEAM
+	db 50, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 AqualloEvosAttacks:
@@ -2411,11 +2412,12 @@ AqualloEvosAttacks:
 	db 13, POWDER_SNOW
 	db 20, SWIFT
 	db 24, BUBBLEBEAM
-	db 28, SAFEGUARD
-	db 35, AURORA_BEAM
+	db 28, AURORA_BEAM
+	db 35, SAFEGUARD
 	db 39, HAZE
 	db 43, BODY_SLAM
-	db 50, HYDRO_PUMP
+	db 49, ICE_BEAM
+	db 56, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 AquariusEvosAttacks:
@@ -2429,11 +2431,12 @@ AquariusEvosAttacks:
 	db 13, POWDER_SNOW
 	db 20, SWIFT
 	db 24, BUBBLEBEAM
-	db 28, SAFEGUARD
-	db 36, AURORA_BEAM
+	db 28, AURORA_BEAM
+	db 36, SAFEGUARD
 	db 41, HAZE
 	db 46, BODY_SLAM
-	db 54, HYDRO_PUMP
+	db 52, ICE_BEAM
+	db 60, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 TangEvosAttacks:

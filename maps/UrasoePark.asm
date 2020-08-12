@@ -50,8 +50,8 @@ Route10Sign:
 	jumptext Route10SignText
 	
 
-UrasoeParkMiracleseed:
-	itemball MIRACLE_SEED
+UrasoeParkLeafstone:
+	itemball LEAF_STONE
 
 	
 UrasoeParkLassText:
@@ -140,6 +140,6 @@ UrasoePark_MapEvents:
 	db 5 ; object events
 	object_event 30,  8, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerHikerJim, -1
 	object_event 16,  6, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerPokefanmRobert, -1
-	object_event  4,  2, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerEngineerLandon, -1
+	object_event  4,  2, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerEngineerLandon, -1
 	object_event  3, 15, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, UrasoeParkLassScript, -1
-	object_event 39,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, UrasoeParkMiracleseed, EVENT_PICKED_UP_GOLD_BERRY_FROM_HO_OH_ITEM_ROOM
+	object_event 39,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, UrasoeParkLeafstone, EVENT_PICKED_UP_GOLD_BERRY_FROM_HO_OH_ITEM_ROOM

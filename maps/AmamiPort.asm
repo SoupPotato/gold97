@@ -23,7 +23,13 @@ AmamiPort_MapScripts:
 	return
 
 .LeaveFastShipScript:
-	applymovement PLAYER, MovementData_0x74ef3
+	disappear VERMILIONPORT_SAILOR1
+	checkevent EVENT_FAST_SHIP_CABINS_SE_SSE_GENTLEMAN
+	iffalse .NeedNewPart
+	applymovement PLAYER, AmamiPlayerLeavesShip
+	applymovement VERMILIONPORT_SAILOR2, AmamiSailorMovesAway
+	applymovement PLAYER, AmamiPlayerLeavesShip2
+	applymovement VERMILIONPORT_SAILOR2, AmamiSailorBlocksEntry
 	appear VERMILIONPORT_SAILOR1
 	setscene SCENE_DEFAULT
 ;	setevent EVENT_FAST_SHIP_CABINS_SE_SSE_CAPTAINS_CABIN_TWIN_1
@@ -34,21 +40,58 @@ AmamiPort_MapScripts:
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	blackoutmod AMAMI_TOWN
 	end
-
-AmamiPortSailorAtGangwayScript:
-	faceplayer
+	
+.NeedNewPart
+	applymovement PLAYER, AmamiPlayerLeavesShip3
+	pause 10
+	appear VERMILIONPORT_SAILOR1
+	turnobject PLAYER, DOWN
 	opentext
-	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
-	iftrue AmamiPortAlreadyRodeScript
-	writetext UnknownText_0x74f06
+	writetext NeedANewPartText
 	waitbutton
 	closetext
-	turnobject VERMILIONPORT_SAILOR1, DOWN
+	applymovement PLAYER, AmamiPlayerLeavesShip4
+	applymovement VERMILIONPORT_SAILOR2, AmamiSailorMovesAway
+	applymovement PLAYER, AmamiPlayerLeavesShip2
+	applymovement VERMILIONPORT_SAILOR2, AmamiSailorBlocksEntry
+	setscene SCENE_DEFAULT
+;	setevent EVENT_FAST_SHIP_CABINS_SE_SSE_CAPTAINS_CABIN_TWIN_1
+;	setevent EVENT_FAST_SHIP_CABINS_SE_SSE_GENTLEMAN
+	setevent EVENT_FAST_SHIP_PASSENGERS_FIRST_TRIP
+	clearevent EVENT_OLIVINE_PORT_PASSAGE_POKEFAN_M
+	setevent EVENT_FAST_SHIP_FIRST_TIME
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	blackoutmod AMAMI_TOWN
+	end
+	
+
+AmamiPortSailorGuardScript:
+	faceplayer
+	opentext
+	checkevent EVENT_FAST_SHIP_CABINS_SE_SSE_GENTLEMAN
+	iffalse .StillNeedToReturnPart
+	writetext AmamiPortSailorGoToWestportText
+	yesorno
+	iffalse AmamiPortNotRidingScript
+	writetext UnknownText_0x74f8b
+	buttonsound
+	checkitem S_S_TICKET
+	iffalse .NoTicket
+	writetext AmamiPortSSTicketText
+	waitbutton
+	closetext
+	applymovement PLAYER, AmamiPlayerWalkRight
+	applymovement VERMILIONPORT_SAILOR2, AmamiSailorMovesAway
+	applymovement PLAYER, AmamiPlayerWalksToShip
+	opentext
+	writetext AmamiPortSailorBoardingSoonText
+	closetext
+	turnobject WestportPort_SAILOR1, DOWN
 	pause 10
 	playsound SFX_EXIT_BUILDING
 	disappear VERMILIONPORT_SAILOR1
 	waitsfx
-	applymovement PLAYER, MovementData_0x74ef1
+	applymovement PLAYER, AmamiPlayerEntersShip
 	playsound SFX_EXIT_BUILDING
 	special FadeOutPalettes
 	waitsfx
@@ -69,76 +112,14 @@ AmamiPortSailorAtGangwayScript:
 	setmapscene FAST_SHIP_1F, SCENE_FASTSHIP1F_ENTER_SHIP
 	warp FAST_SHIP_1F, 25, 1
 	end
-
-AmamiPortAlreadyRodeScript:
-	writetext UnknownText_0x74f31
-	waitbutton
-	closetext
-	end
-
-AmamiPortWalkUpToShipScript:
-	turnobject VERMILIONPORT_SAILOR2, RIGHT
-	checkevent EVENT_FAST_SHIP_CABINS_SE_SSE_GENTLEMAN
-	iffalse .StillNeedToReturnPart
-	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
-	iftrue .skip
-	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
-	iftrue .skip
-	turnobject PLAYER, LEFT
-	opentext
-	checkcode VAR_WEEKDAY
-	ifequal MONDAY, .NextShipWednesday
-	ifequal TUESDAY, .NextShipWednesday
-	ifequal THURSDAY, .NextShipSunday
-	ifequal FRIDAY, .NextShipSunday
-	ifequal SATURDAY, .NextShipSunday
-	writetext UnknownText_0x74f4d
-	yesorno
-	iffalse AmamiPortNotRidingMoveAwayScript
-	writetext UnknownText_0x74f8b
-	buttonsound
-	checkitem S_S_TICKET
-	iffalse .NoTicket
-	writetext AmamiPortSSTicketText
-	waitbutton
-	closetext
-	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
-	applymovement PLAYER, MovementData_0x74ef8
-	jump AmamiPortSailorAtGangwayScript
-
-.NoTicket:
-	writetext UnknownText_0x74ff2
-	waitbutton
-	closetext
-	applymovement PLAYER, MovementData_0x74ef5
-	end
-
-.NextShipWednesday:
-	writetext UnknownText_0x75059
-	waitbutton
-	closetext
-	applymovement PLAYER, MovementData_0x74ef5
-	end
-
-.NextShipSunday:
-	writetext UnknownText_0x75080
-	waitbutton
-	closetext
-	applymovement PLAYER, MovementData_0x74ef5
-	end
-
-.skip:
-	end
 	
 .StillNeedToReturnPart
-	turnobject PLAYER, LEFT
 	opentext
 	writetext GoGetThePart
 	waitbutton
 	closetext
 	checkitem CARD_KEY
 	iftrue .GiveFuelLine
-	applymovement PLAYER, MovementData_0x74ef5
 	end
 
 .GiveFuelLine
@@ -148,15 +129,19 @@ AmamiPortWalkUpToShipScript:
 	waitbutton
 	closetext
 	takeitem CARD_KEY
-	applymovement PLAYER, MovementData_0x74ef5
 	applymovement VERMILIONPORT_SAILOR2, SailorWalksToShipAndBack
 	opentext
 	writetext ThanksForTheFuelLine
 	waitbutton
 	closetext
 	setevent EVENT_FAST_SHIP_CABINS_SE_SSE_GENTLEMAN
-	applymovement VERMILIONPORT_SAILOR2, SailorGoesBackToHisSpot
 	clearevent EVENT_TELEPORT_GUY
+	end
+	
+.NoTicket
+	writetext AmamiSailorNoTicketText
+	waitbutton
+	closetext
 	end
 
 AmamiPortNotRidingScript:
@@ -165,55 +150,6 @@ AmamiPortNotRidingScript:
 	closetext
 	end
 
-AmamiPortNotRidingMoveAwayScript:
-	writetext UnknownText_0x74fa7
-	waitbutton
-	closetext
-	applymovement PLAYER, MovementData_0x74ef5
-	end
-
-AmamiPortSailorScript:
-	faceplayer
-	opentext
-	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
-	iftrue AmamiPortAlreadyRodeScript
-	checkcode VAR_WEEKDAY
-	ifequal MONDAY, .NextShipWednesday
-	ifequal TUESDAY, .NextShipWednesday
-	ifequal THURSDAY, .NextShipSunday
-	ifequal FRIDAY, .NextShipSunday
-	ifequal SATURDAY, .NextShipSunday
-	writetext UnknownText_0x74f4d
-	yesorno
-	iffalse AmamiPortNotRidingScript
-	writetext UnknownText_0x74f8b
-	buttonsound
-	checkitem S_S_TICKET
-	iffalse .NoTicket
-	writetext AmamiPortSSTicketText
-	waitbutton
-	closetext
-	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
-	applymovement PLAYER, MovementData_0x74efe
-	jump AmamiPortSailorAtGangwayScript
-
-.NoTicket:
-	writetext UnknownText_0x74ff2
-	waitbutton
-	closetext
-	end
-
-.NextShipWednesday:
-	writetext UnknownText_0x75059
-	waitbutton
-	closetext
-	end
-
-.NextShipSunday:
-	writetext UnknownText_0x75080
-	waitbutton
-	closetext
-	end
 
 AmamiPortSuperNerdScript:
 	faceplayer
@@ -227,8 +163,6 @@ AmamiPortHiddenIron:
 	hiddenitem IRON, EVENT_VERMILION_PORT_HIDDEN_IRON
 	
 SailorWalksToShipAndBack:
-	step RIGHT
-	step DOWN
 	step DOWN
 	step DOWN
 	step DOWN
@@ -247,45 +181,61 @@ SailorWalksToShipAndBack:
 	step UP
 	step UP
 	step UP
+	step_end
+	
+AmamiSailorBlocksEntry:
+	step RIGHT
+	step DOWN
+	turn_head UP
+	step_end
+
+AmamiSailorMovesAway:
 	step UP
+	step LEFT
 	turn_head RIGHT
 	step_end
 	
-SailorGoesBackToHisSpot:
-	step LEFT
-	turn_head RIGHT
-	step_end
-
-MovementData_0x74ef1:
-	step DOWN
-	step_end
-
-MovementData_0x74ef3:
-	step UP
-	step_end
-
-MovementData_0x74ef5:
+AmamiPlayerWalkRight:
 	step RIGHT
 	turn_head LEFT
 	step_end
 
-MovementData_0x74ef8:
+AmamiPlayerWalksToShip:
+	step LEFT
 	step DOWN
 	step DOWN
 	step DOWN
 	step DOWN
 	step DOWN
+	step_end
+	
+AmamiPlayerEntersShip:
+	step DOWN
+	step_end
+	
+AmamiPlayerLeavesShip:
+	step UP
+	step UP
+	step UP
+	step UP
+	step_end
+	
+AmamiPlayerLeavesShip2:
+	step UP
+	step UP
+	step RIGHT
+	step_end
+	
+AmamiPlayerLeavesShip3:
+	step UP
 	step_end
 
-MovementData_0x74efe:
-	step RIGHT
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
+AmamiPlayerLeavesShip4:
+	step UP
+	step UP
+	step UP
 	step_end
+
 	
 ThanksForTheFuelLine:
 	text "Thanks, kid!"
@@ -310,6 +260,31 @@ YouHaveTheFuelLine:
 	cont "crew!"
 	done
 	
+NeedANewPartText:
+	text "Wait, Kid!"
+	para "That rough sea we"
+	line "just had, damaged"
+	cont "the ship's FUEL"
+	cont "LINE!"
+	
+	para "There's a guy in"
+	line "YORON CITY who'll"
+	cont "have a new one for"
+	cont "us."
+	
+	para "Until then, we"
+	line "can't get back to"
+	cont "WESTPORT."
+	
+	para "Can you head to"
+	line "YORON CITY and"
+	cont "pick up the new"
+	cont "FUEL LINE?"
+	
+	para "Otherwise, we will"
+	line "be stranded here!"
+	done
+		
 GoGetThePart:
 	text "Alright, kid. We"
 	line "need a new FUEL"
@@ -321,23 +296,19 @@ GoGetThePart:
 	line "when you have it!"
 	done
 
-UnknownText_0x74f06:
+AmamiPortSailorBoardingSoonText:
 	text "We're departing"
 	line "soon. Please get"
 	cont "on board."
 	done
 
-UnknownText_0x74f31:
-	text "Sorry. You can't"
-	line "board now."
-	done
-
-UnknownText_0x74f4d:
+AmamiPortSailorGoToWestportText:
 	text "Welcome to FAST"
 	line "SHIP S.S.AQUA."
 
 	para "Will you be board-"
-	line "ing today?"
+	line "ing for WESTPORT"
+	cont "today?"
 	done
 
 UnknownText_0x74f8b:
@@ -357,29 +328,14 @@ AmamiPortSSTicketText:
 	para "That's it."
 	line "Thank you!"
 	done
-
-UnknownText_0x74ff2:
-	text "<PLAYER> tried to"
-	line "show the S.S."
-	cont "TICKET…"
-
-	para "…But no TICKET!"
-
+	
+AmamiSailorNoTicketText:
+	text "..."
 	para "Sorry!"
-	line "You may board only"
-
-	para "if you have an"
-	line "S.S.TICKET."
-	done
-
-UnknownText_0x75059:
-	text "The FAST SHIP will"
-	line "sail on Wednesday."
-	done
-
-UnknownText_0x75080:
-	text "The FAST SHIP will"
-	line "sail on Sunday."
+	line "Trips to"
+	para "WESTPORT require"
+	line "you to have an"
+	cont "S.S.TICKET."
 	done
 
 UnknownText_0x750a6:
@@ -398,13 +354,12 @@ AmamiPort_MapEvents:
 	warp_event 13,  7, AMAMI_PORT_PASSAGE, 5
 	warp_event  7, 17, FAST_SHIP_1F, 1
 
-	db 1 ; coord events
-	coord_event  7, 11, SCENE_DEFAULT, AmamiPortWalkUpToShipScript
+	db 0 ; coord events
 
 	db 1 ; bg events
-	bg_event 16, 13, BGEVENT_ITEM, AmamiPortHiddenIron
+	bg_event  6, 10, BGEVENT_ITEM, AmamiPortHiddenIron
 
 	db 3 ; object events
-	object_event  7, 17, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AmamiPortSailorAtGangwayScript, EVENT_VERMILION_PORT_SAILOR_AT_GANGWAY
-	object_event  6, 11, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AmamiPortSailorScript, -1
-	object_event 11, 11, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AmamiPortSuperNerdScript, -1
+	object_event  7, 17, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
+	object_event  7, 12, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AmamiPortSailorGuardScript, -1
+	object_event 10, 10, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AmamiPortSuperNerdScript, -1

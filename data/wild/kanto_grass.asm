@@ -168,164 +168,164 @@ KantoGrassWildMons:
 	map_id URASOE_TRAIL
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 32, PIDGEOTTO
-	db 35, PIDGEOTTO
-	db 36, PIDGEOT
-	db 33, MADAME
-	db 32, RATICATE
-	db 33, JUMPLUFF
-	db 33, JUMPLUFF
+	db 52, PIDGEOTTO
+	db 53, PIDGEOTTO
+	db 54, PIDGEOT
+	db 53, MADAME
+	db 52, RATICATE
+	db 53, JUMPLUFF
+	db 53, JUMPLUFF
 	; day
-	db 32, PIDGEOTTO
-	db 35, PIDGEOTTO
-	db 36, PIDGEOT
-	db 33, MADAME
-	db 32, RATICATE
-	db 33, JUMPLUFF
-	db 33, JUMPLUFF
+	db 52, PIDGEOTTO
+	db 53, PIDGEOTTO
+	db 54, PIDGEOT
+	db 53, MADAME
+	db 52, RATICATE
+	db 53, JUMPLUFF
+	db 53, JUMPLUFF
 	; nite
-	db 32, NOCTOWL
-	db 32, RATICATE
-	db 33, NOCTOWL
-	db 33, MADAME
-	db 32, RATICATE
-	db 33, NOCTOWL
-	db 33, NOCTOWL
+	db 52, NOCTOWL
+	db 53, RATICATE
+	db 54, GOLBAT
+	db 53, GOLDUCK
+	db 52, RATICATE
+	db 53, NOCTOWL
+	db 53, NOCTOWL
+	
+	map_id NANJO_FOREST
+	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	; morn
+	db 53, PARASECT
+	db 53, FEAROW
+	db 54, JUMPLUFF
+	db 53, SKIPLOOM
+	db 55, SUNFLORA
+	db 53, AIPOM
+	db 55, AIPOM
+	; day
+	db 53, PARASECT
+	db 53, FEAROW
+	db 54, JUMPLUFF
+	db 53, SKIPLOOM
+	db 55, SUNFLORA
+	db 53, AIPOM
+	db 55, AIPOM
+	; nite
+	db 53, PARASECT
+	db 53, NOCTOWL
+	db 54, JUMPLUFF
+	db 53, SKIPLOOM
+	db 55, MURKROW
+	db 53, AIPOM
+	db 55, AIPOM
 
 	map_id YORON_POINT
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 42, PIDGEOTTO
-	db 42, PIDGEOTTO
-	db 43, PIDGEOT
-	db 43, MADAME
-	db 42, RATICATE
-	db 43, JUMPLUFF
-	db 43, JUMPLUFF
+	db 54, PIDGEOTTO
+	db 54, PIDGEOTTO
+	db 55, PIDGEOT
+	db 55, MADAME
+	db 54, RATICATE
+	db 55, JUMPLUFF
+	db 55, JUMPLUFF
 	; day
-	db 42, PIDGEOTTO
-	db 42, PIDGEOTTO
-	db 43, PIDGEOT
-	db 43, MADAME
-	db 42, RATICATE
-	db 43, JUMPLUFF
-	db 43, JUMPLUFF
+	db 54, PIDGEOTTO
+	db 54, PIDGEOTTO
+	db 55, PIDGEOT
+	db 55, MADAME
+	db 54, RATICATE
+	db 55, JUMPLUFF
+	db 55, JUMPLUFF
 	; nite
-	db 42, NOCTOWL
-	db 42, RATICATE
-	db 43, NOCTOWL
-	db 43, MADAME
-	db 42, RATICATE
-	db 43, NOCTOWL
-	db 43, NOCTOWL
+	db 54, NOCTOWL
+	db 54, RATICATE
+	db 55, NOCTOWL
+	db 55, MADAME
+	db 54, RATICATE
+	db 55, NOCTOWL
+	db 55, NOCTOWL
 	
 	map_id RESEARCH_FACILITY_ENTRANCE
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	db 42, MAGNETON
-	db 42, ELECTRODE
-	db 43, HAUNTER
-	db 43, CURPAN
-	db 42, RATICATE
-	db 43, RATICATE
-	db 43, RATICATE
+	db 52, MAGNETON
+	db 52, ELECTRODE
+	db 53, HAUNTER
+	db 53, CURPAN
+	db 52, RATICATE
+	db 53, RATICATE
+	db 53, RATICATE
 	; day
-	db 42, MAGNETON
-	db 42, ELECTRODE
-	db 43, HAUNTER
-	db 43, CURPAN
-	db 42, RATICATE
-	db 43, RATICATE
-	db 43, RATICATE
+	db 52, MAGNETON
+	db 52, ELECTRODE
+	db 53, HAUNTER
+	db 53, CURPAN
+	db 52, RATICATE
+	db 53, RATICATE
+	db 53, RATICATE
 	; nite
-	db 42, MAGNETON
-	db 42, ELECTRODE
-	db 43, HAUNTER
-	db 43, CURPAN
-	db 42, RATICATE
-	db 43, RATICATE
-	db 43, RATICATE
+	db 52, MAGNETON
+	db 52, ELECTRODE
+	db 53, HAUNTER
+	db 53, CURPAN
+	db 52, RATICATE
+	db 53, RATICATE
+	db 53, RATICATE
 
 	
 	map_id ICED_CAVERN_1F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	db 37, GOLBAT
-	db 38, DEWGONG
-	db 37, SLOWPOKE
-	db 37, SLOWPOKE
-	db 38, JYNX
-	db 37, QUAGSIRE
-	db 39, JYNX
+	db 55, GOLBAT
+	db 56, DEWGONG
+	db 55, WOLFAN
+	db 55, SLOWPOKE
+	db 57, JYNX
+	db 56, QUAGSIRE
+	db 58, JYNX
 	; day
-	db 37, GOLBAT
-	db 38, DEWGONG
-	db 37, SLOWPOKE
-	db 37, SLOWPOKE
-	db 38, JYNX
-	db 37, QUAGSIRE
-	db 39, JYNX
+	db 55, GOLBAT
+	db 56, DEWGONG
+	db 55, WOLFAN
+	db 55, SLOWPOKE
+	db 57, JYNX
+	db 56, QUAGSIRE
+	db 58, JYNX
 	; nite
-	db 37, GOLBAT
-	db 38, DEWGONG
-	db 37, SLOWPOKE
-	db 37, SLOWPOKE
-	db 38, JYNX
-	db 37, QUAGSIRE
-	db 39, JYNX
+	db 55, GOLBAT
+	db 56, DEWGONG
+	db 55, WOLFAN
+	db 55, SLOWPOKE
+	db 57, SNEASEL
+	db 56, QUAGSIRE
+	db 58, SNEASEL
 	
 	map_id ICED_CAVERN_B1F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	db 37, GOLBAT
-	db 38, DEWGONG
-	db 37, SLOWPOKE
-	db 37, SLOWPOKE
-	db 38, JYNX
-	db 37, QUAGSIRE
-	db 39, JYNX
+	db 55, GOLBAT
+	db 56, DEWGONG
+	db 55, WOLFAN
+	db 55, SLOWBRO
+	db 57, JYNX
+	db 56, WARFARU
+	db 58, JYNX
 	; day
-	db 37, GOLBAT
-	db 38, DEWGONG
-	db 37, SLOWPOKE
-	db 37, SLOWPOKE
-	db 38, JYNX
-	db 37, QUAGSIRE
-	db 39, JYNX
+	db 55, GOLBAT
+	db 56, DEWGONG
+	db 55, WOLFAN
+	db 55, SLOWBRO
+	db 57, JYNX
+	db 56, WARFARU
+	db 58, JYNX
 	; nite
-	db 37, GOLBAT
-	db 38, DEWGONG
-	db 37, SLOWPOKE
-	db 37, SLOWPOKE
-	db 38, JYNX
-	db 37, QUAGSIRE
-	db 39, JYNX
-	
- 	map_id NANJO_FOREST
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
-	; morn
-	db 35, PARASECT
-	db 35, FEAROW
-	db 34, JUMPLUFF
-	db 37, SKIPLOOM
-	db 35, SUNFLORA
-	db 34, AIPOM
-	db 35, AIPOM
-	; day
-	db 35, PARASECT
-	db 35, FEAROW
-	db 34, JUMPLUFF
-	db 37, SKIPLOOM
-	db 35, JUMPLUFF
-	db 34, AIPOM
-	db 35, AIPOM
-	; nite
-	db 35, PARASECT
-	db 35, NOCTOWL
-	db 34, JUMPLUFF
-	db 37, SKIPLOOM
-	db 35, MURKROW
-	db 34, AIPOM
-	db 35, AIPOM
+	db 55, GOLBAT
+	db 56, DEWGONG
+	db 55, WOLFAN
+	db 55, SLOWBRO
+	db 57, SNEASEL
+	db 56, WARFARU
+	db 58, SNEASEL
 
 	db -1 ; end

@@ -1,6 +1,10 @@
 	const_def 2 ; object constants
-	const SAFFRON_GYM_LASS
-	const SAFFRON_GYM_YOUNGSTER
+	const SAFFRON_GYM_LASS_GRASS
+	const SAFFRON_GYM_LASS_FIRE
+	const SAFFRON_GYM_LASS_WATER
+	const SAFFRON_GYM_YOUNGSTER_GRASS
+	const SAFFRON_GYM_YOUNGSTER_FIRE
+	const SAFFRON_GYM_YOUNGSTER_WATER
 	const SAFFRON_GYM_POKEFAN_M
 	const SAFFROM_GYM_GYM_GUY
 
@@ -8,16 +12,48 @@
 RyukyuFakeGym_MapScripts:
 	db 0 ; scene scripts
 
-	db 1 ; callbacks
+	db 2 ; callbacks
+	callback MAPCALLBACK_OBJECTS, .Trainers
+	
 	callback MAPCALLBACK_TILES, .RyukyuFakeGymTypeChange
 	
-.RyukyuFakeGymTypeChange:
+.Trainers
 	checkevent EVENT_GOT_CRUISE_FROM_ELM
 	iftrue .GrassGym
 	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
 	iftrue .FireGym
+	checkevent EVENT_GOT_FLAMBEAR_FROM_ELM
+	iftrue .WaterGym
+	return
+	
+.GrassGym
+	moveobject SAFFRON_GYM_LASS_FIRE, -4, -4 
+	moveobject SAFFRON_GYM_LASS_WATER, -4, -4 
+	moveobject SAFFRON_GYM_YOUNGSTER_FIRE, -4, -4 
+	moveobject SAFFRON_GYM_YOUNGSTER_WATER, -4, -4 
+	return
+	
+.FireGym
+	moveobject SAFFRON_GYM_LASS_GRASS, -4, -4 
+	moveobject SAFFRON_GYM_LASS_WATER, -4, -4 
+	moveobject SAFFRON_GYM_YOUNGSTER_GRASS, -4, -4 
+	moveobject SAFFRON_GYM_YOUNGSTER_WATER, -4, -4 
+	return
+	
+.WaterGym
+	moveobject SAFFRON_GYM_LASS_GRASS, -4, -4 
+	moveobject SAFFRON_GYM_LASS_FIRE, -4, -4 
+	moveobject SAFFRON_GYM_YOUNGSTER_GRASS, -4, -4 
+	moveobject SAFFRON_GYM_YOUNGSTER_FIRE, -4, -4 
+	return
+	
+.RyukyuFakeGymTypeChange:
+	checkevent EVENT_GOT_CRUISE_FROM_ELM
+	iftrue .GrassGymBlocks
+	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
+	iftrue .FireGymBlocks
 	jump .doneGym
-.GrassGym:
+.GrassGymBlocks:
 	changeblock  3, 1, $3F ; grass
 	changeblock  5, 1, $7D ; grass
 	changeblock  3, 3, $3F ; grass
@@ -56,7 +92,7 @@ RyukyuFakeGym_MapScripts:
 	changeblock  15, 17, $3F ; grass
 	return
 	
-.FireGym:
+.FireGymBlocks:
 	changeblock  3, 1, $3B ; fire
 	changeblock  5, 1, $59 ; fire
 	changeblock  3, 3, $3B ; fire
@@ -103,91 +139,81 @@ RyukyuFakeGym_MapScripts:
 RyukyuFakeGymPokefanMScript:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
-	iftrue .GotCHIKORITAGiveFlambear
-	checkevent EVENT_GOT_CRUISE_FROM_ELM
-	iftrue .GotCruiseGiveCHIKORITA
 	checkevent EVENT_EXPLODING_TRAP_19
-	iftrue .AfterBattleFakeGymWater
-	writetext PokefanMBeforeTextWater
+	iftrue .AfterBattle
+	writetext TrevorBeforeText
 	waitbutton
+	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
+	iftrue .TrevorFire
+	checkevent EVENT_GOT_CRUISE_FROM_ELM
+	iftrue .TrevorGrass
+	checkevent EVENT_GOT_CRUISE_FROM_ELM
+	iftrue .TrevorWater
+	
+.TrevorFire	
+	writetext TrevorFireText
 	closetext
-	winlosstext PokefanMWinTextFake, PokefanMLossTextFake
-	loadtrainer POKEFANM, TREVOR
+	winlosstext TrevorWinTextFake, TrevorLossTextFake
+	loadtrainer POKEFANM, TREVOR2
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_19
+	jump .AfterBattle
+	end
+	
+.TrevorGrass	
+	writetext TrevorGrassText
+	closetext
+	winlosstext TrevorWinTextFake, TrevorLossTextFake
+	loadtrainer POKEFANM, TREVOR1
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_EXPLODING_TRAP_19
+	jump .AfterBattle
+	end
+	
+.TrevorWater
+	writetext TrevorWaterText
+	closetext
+	winlosstext TrevorWinTextFake, TrevorLossTextFake
+	loadtrainer POKEFANM, TREVOR3
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_EXPLODING_TRAP_19
+.AfterBattle
 	opentext
-.AfterBattleFakeGymWater
 	checkevent EVENT_EXPLODING_TRAP_20
 	iftrue .AlreadyGotEgg2Water
 	writetext HaveStarter2Egg
 	waitbutton
+	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
+	iftrue .FireEgg
+	checkevent EVENT_GOT_CRUISE_FROM_ELM
+	iftrue .GrassEgg
+	checkevent EVENT_GOT_CRUISE_FROM_ELM
+	iftrue .WaterEgg
+
+.GrassEgg
+	checkcode VAR_PARTYCOUNT
+	ifequal PARTY_LENGTH, .PartyFullStarter2
+	giveegg CHIKORITA, 5
+	jump .Egg2
+
+.FireEgg
+	checkcode VAR_PARTYCOUNT
+	ifequal PARTY_LENGTH, .PartyFullStarter2
+	giveegg FLAMBEAR, 5
+	jump .Egg2
+	
+.WaterEgg
 	checkcode VAR_PARTYCOUNT
 	ifequal PARTY_LENGTH, .PartyFullStarter2
 	giveegg CRUISE, 5
+.Egg2
 	stringtotext .eggname2, MEM_BUFFER_1
 	scall .GetStarter2Egg
 	setevent EVENT_EXPLODING_TRAP_20
 .AlreadyGotEgg2Water
-	writetext TakeGoodCareOfStarter2
-	waitbutton
-	closetext
-	end
-	
-.GotCHIKORITAGiveFlambear
-	checkevent EVENT_EXPLODING_TRAP_19
-	iftrue .AfterBattleFakeGymFire
-	writetext PokefanMBeforeTextFire
-	waitbutton
-	closetext
-	winlosstext PokefanMWinTextFake, PokefanMLossTextFake
-	loadtrainer HIKER, BAILEY
-	startbattle
-	reloadmapafterbattle
-	setevent EVENT_EXPLODING_TRAP_19
-	opentext
-.AfterBattleFakeGymFire
-	checkevent EVENT_EXPLODING_TRAP_20
-	iftrue .AlreadyGotEgg2Fire
-	writetext HaveStarter2Egg
-	waitbutton
-	checkcode VAR_PARTYCOUNT
-	ifequal PARTY_LENGTH, .PartyFullStarter2
-	giveegg FLAMBEAR, 5
-	stringtotext .eggname2, MEM_BUFFER_1
-	scall .GetStarter2Egg
-	setevent EVENT_EXPLODING_TRAP_20
-.AlreadyGotEgg2Fire
-	writetext TakeGoodCareOfStarter2
-	waitbutton
-	closetext
-	end
-	
-.GotCruiseGiveCHIKORITA
-	checkevent EVENT_EXPLODING_TRAP_19
-	iftrue .AfterBattleFakeGymGrass
-	writetext PokefanMBeforeTextGrass
-	waitbutton
-	closetext
-	winlosstext PokefanMWinTextFake, PokefanMLossTextFake
-	loadtrainer POKEFANM, CARTER
-	startbattle
-	reloadmapafterbattle
-	setevent EVENT_EXPLODING_TRAP_19
-	opentext
-.AfterBattleFakeGymGrass
-	checkevent EVENT_EXPLODING_TRAP_20
-	iftrue .AlreadyGotEgg2Grass
-	writetext HaveStarter2Egg
-	waitbutton
-	checkcode VAR_PARTYCOUNT
-	ifequal PARTY_LENGTH, .PartyFullStarter2
-	giveegg CHIKORITA, 5
-	stringtotext .eggname2, MEM_BUFFER_1
-	scall .GetStarter2Egg
-	setevent EVENT_EXPLODING_TRAP_20
-.AlreadyGotEgg2Grass
 	writetext TakeGoodCareOfStarter2
 	waitbutton
 	closetext
@@ -206,115 +232,79 @@ RyukyuFakeGymPokefanMScript:
 .eggname2
 	db "EGG@"
 	
-Trainer1Scene:
-	playmusic MUSIC_BEAUTY_ENCOUNTER
-	showemote EMOTE_SHOCK, SAFFRON_GYM_LASS, 30
-	turnobject PLAYER, LEFT
+TrainerLassLindaGrass:
+	trainer LASS, LINDA1, EVENT_BEAT_LASS_LINDA, LindaSeenText, LindaWinText, 0, .Script	
+
+.Script:
+	endifjustbattled
 	opentext
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
-	iftrue .Trainer1GotCHIKORITAUseFire
-	checkevent EVENT_GOT_CRUISE_FROM_ELM
-	iftrue .Trainer1GotCruiseUseGrass
-	writetext LassTextBeforeWater
+	writetext LindaAfterBattleText
 	waitbutton
 	closetext
-	winlosstext LassWinTextWater, LassLossTextWater
-	loadtrainer LASS, LINDA
-	startbattle
-	reloadmapafterbattle
-	setscene SCENE_SAFFRON_GYM_TRAINER_2
 	end
 	
-.Trainer1GotCHIKORITAUseFire
-	writetext LassTextBeforeFire
-	waitbutton
-	closetext
-	winlosstext LassWinTextFire, LassLossTextFire
-	loadtrainer LASS, ALICE
-	startbattle
-	reloadmapafterbattle
-	setscene SCENE_SAFFRON_GYM_TRAINER_2
-	end
-	
-.Trainer1GotCruiseUseGrass
-	writetext LassTextBeforeGrass
-	waitbutton
-	closetext
-	winlosstext LassWinTextGrass, LassLossTextGrass
-	loadtrainer PICNICKER, TANYA
-	startbattle
-	reloadmapafterbattle
-	setscene SCENE_SAFFRON_GYM_TRAINER_2
-	end
-	
-Trainer2Scene:
-	playmusic MUSIC_YOUNGSTER_ENCOUNTER
-	showemote EMOTE_SHOCK, SAFFRON_GYM_YOUNGSTER, 30
+TrainerLassLindaFire:
+	trainer LASS, LINDA2, EVENT_BEAT_LASS_LINDA, LindaSeenText, LindaWinText, 0, .Script
+
+.Script:
+	endifjustbattled
 	opentext
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
-	iftrue .Trainer2GotCHIKORITAUseFire
-	checkevent EVENT_GOT_CRUISE_FROM_ELM
-	iftrue .Trainer2GotCruiseUseGrass
-	writetext YoungsterTextBeforeWater
+	writetext LindaAfterBattleText
 	waitbutton
 	closetext
-	winlosstext YoungsterWinTextWater, YoungsterLossTextWater
-	loadtrainer SCHOOLBOY, KIPP
-	startbattle
-	reloadmapafterbattle
-	setscene SCENE_SAFFRON_GYM_NOTHING
+	end
+	
+TrainerLassLindaWater:
+	trainer LASS, LINDA3, EVENT_BEAT_LASS_LINDA, LindaSeenText, LindaWinText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext LindaAfterBattleText
+	waitbutton
+	closetext
 	end
 
-.Trainer2GotCHIKORITAUseFire
-	writetext YoungsterTextBeforeFire
+	
+TrainerYoungsterJasonGrass:
+	trainer YOUNGSTER, JASON1, EVENT_BEAT_YOUNGSTER_JASON, JasonSeenText, JasonWinText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext JasonAfterBattleText
 	waitbutton
 	closetext
-	winlosstext YoungsterWinTextFire, YoungsterLossTextFire
-	loadtrainer YOUNGSTER, JASON
-	startbattle
-	reloadmapafterbattle
-	setscene SCENE_SAFFRON_GYM_NOTHING
+	end
+	
+TrainerYoungsterJasonFire:
+	trainer YOUNGSTER, JASON2, EVENT_BEAT_YOUNGSTER_JASON, JasonSeenText, JasonWinText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext JasonAfterBattleText
+	waitbutton
+	closetext
+	end
+	
+TrainerYoungsterJasonWater:
+	trainer YOUNGSTER, JASON3, EVENT_BEAT_YOUNGSTER_JASON, JasonSeenText, JasonWinText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext JasonAfterBattleText
+	waitbutton
+	closetext
 	end
 
-.Trainer2GotCruiseUseGrass
-	writetext YoungsterTextBeforeGrass
-	waitbutton
-	closetext
-	winlosstext YoungsterWinTextGrass, YoungsterLossTextGrass
-	loadtrainer YOUNGSTER, OWEN
-	startbattle
-	reloadmapafterbattle
-	setscene SCENE_SAFFRON_GYM_NOTHING
-	end
-	
-RyukyuFakeGymYoungsterScript:
-	faceplayer
-	opentext
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
-	iftrue .Trainer2AfterFire
-	checkevent EVENT_GOT_CRUISE_FROM_ELM
-	iftrue .Trainer2AfterGrass
-	writetext Trainer2AfterWaterText
-	waitbutton
-	closetext
-	end
-.Trainer2AfterFire
-	writetext Trainer2AfterFireText
-	waitbutton
-	closetext
-	end
-.Trainer2AfterGrass
-	writetext Trainer2AfterGrassText
-	waitbutton
-	closetext
-	end
-	
-RyukyuFakeGymLassScript:
-	jumptextfaceplayer RyukyuFakeGymLassText
 	
 RyukyuFakeGymGuyScript:
 	faceplayer
 	opentext
+	writetext GymGuyText
+	waitbutton
 	checkevent EVENT_EXPLODING_TRAP_19
 	iftrue .GymGuyFakeGymAfter
 	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
@@ -349,29 +339,7 @@ GymGuyFakeGymAfterText:
 	cont "get a BADGE."
 	done
 	
-GymGuyFireText:
-	text "What's this?"
-	para "A #MON GYM?"
-	para "Well, not quite."
-	para "BAILEY here has"
-	line "always wanted to"
-	cont "be a GYM LEADER."
-	para "It's a long and"
-	line "difficult process"
-	para "to make it"
-	line "official, though."
-	para "But we're here,"
-	line "playing the part"
-	para "until he can do it"
-	line "for real!"
-	para "Oh, yeah. He uses"
-	line "FIRE #MON."
-	para "I'm sure you know"
-	line "what you'd need to"
-	cont "do to win."
-	done
-	
-GymGuyWaterText:
+GymGuyText:
 	text "What's this?"
 	para "A #MON GYM?"
 	para "Well, not quite."
@@ -386,66 +354,30 @@ GymGuyWaterText:
 	line "playing the part"
 	para "until he can do it"
 	line "for real!"
-	para "Oh, yeah. He uses"
-	line "WATER #MON."
-	para "I'm sure you know"
-	line "what you'd need to"
-	cont "do to win."
 	done
 	
-GymGuyGrassText:
-	text "What's this?"
-	para "A #MON GYM?"
-	para "Well, not quite."
-	para "CARTER here has"
-	line "always wanted to"
-	cont "be a GYM LEADER."
-	para "It's a long and"
-	line "difficult process"
-	para "to make it"
-	line "official, though."
-	para "But we're here,"
-	line "playing the part"
-	para "until he can do it"
-	line "for real!"
-	para "Oh, yeah. He uses"
+GymGuyGrassText
+	text "Oh, yeah. He uses"
 	line "GRASS #MON."
 	para "I'm sure you know"
 	line "what you'd need to"
 	cont "do to win."
 	done
 	
-RyukyuFakeGymLassText:
-	text "Isn't this fun?"
-	para "It's just like a"
-	line "real GYM!"
+GymGuyFireText
+	text "Oh, yeah. He uses"
+	line "FIRE #MON."
+	para "I'm sure you know"
+	line "what you'd need to"
+	cont "do to win."
 	done
 	
-Trainer2AfterFireText:
-	text "BAILEY has always"
-	line "wanted to be a GYM"
-	cont "LEADER."
-	para "But it's tough to"
-	line "get the proper"
-	cont "accreditation."
-	done
-	
-Trainer2AfterGrassText:
-	text "CARTER has always"
-	line "wanted to be a GYM"
-	cont "LEADER."
-	para "But it's tough to"
-	line "get the proper"
-	cont "accreditation."
-	done
-	
-Trainer2AfterWaterText:
-	text "TREVOR has always"
-	line "wanted to be a GYM"
-	cont "LEADER."
-	para "But it's tough to"
-	line "get the proper"
-	cont "accreditation."
+GymGuyWaterText
+	text "Oh, yeah. He uses"
+	line "WATER #MON."
+	para "I'm sure you know"
+	line "what you'd need to"
+	cont "do to win."
 	done
 
 TakeGoodCareOfStarter2:
@@ -473,42 +405,18 @@ NoRoomForStarter2:
 	text "Oh, wait! You need"
 	line "to make room!"
 	done
-	
-	
-PokefanMBeforeTextWater:
-	text "Hey there!"
-	para "Welcome to my GYM!"
-	para "…Well, it's not"
-	line "an official one."
-	para "But one day!"
-	para "I'm going to be a"
-	line "GYM LEADER!"
-	para "As for now though,"
-	line "I can at least act"
-	cont "the part."
-	para "And there's"
-	line "nothing more I"
-	para "love than a good"
-	line "battle!"
-	para "WATER type #MON"
-	line "are my favorite!"
-	para "They'll drench you"
-	line "if you take them"
-	cont "on!"
-	para "Are you ready?"
-	done
 
-PokefanMLossTextFake:
+
+TrevorLossTextFake:
 	text "I'm good at this!"
 	done
 	
-PokefanMWinTextFake:
+TrevorWinTextFake:
 	text "Bahah! What a good"
 	line "time that was!"
 	done
-
 	
-PokefanMBeforeTextGrass:
+TrevorBeforeText:
 	text "Hey there!"
 	para "Welcome to my GYM!"
 	para "…Well, it's not"
@@ -523,7 +431,10 @@ PokefanMBeforeTextGrass:
 	line "nothing more I"
 	para "love than a good"
 	line "battle!"
-	para "GRASS type #MON"
+	done
+	
+TrevorGrassText:	
+	text "GRASS type #MON"
 	line "are my favorite!"
 	para "Their vines and"
 	line "leaves will beat"
@@ -531,24 +442,8 @@ PokefanMBeforeTextGrass:
 	para "Are you ready?"
 	done
 
-
-	
-PokefanMBeforeTextFire:
-	text "Hey there!"
-	para "Welcome to my GYM!"
-	para "…Well, it's not"
-	line "an official one."
-	para "But one day!"
-	para "I'm going to be a"
-	line "GYM LEADER!"
-	para "As for now though,"
-	line "I can at least act"
-	cont "the part."
-	para "And there's"
-	line "nothing more I"
-	para "love than a good"
-	line "battle!"
-	para "FIRE type #MON"
+TrevorFireText:	
+	text "FIRE type #MON"
 	line "are my favorite!"
 	para "They'll burn you"
 	line "if you take them"
@@ -556,88 +451,49 @@ PokefanMBeforeTextFire:
 	para "Are you ready?"
 	done
 	
-YoungsterTextBeforeWater:
-	text "You ever been"
-	line "swimming?"
-	para "My #MON have."
+TrevorWaterText:	
+	text "WATER type #MON"
+	line "are my favorite!"
+	para "They'll drench you"
+	line "if you take them"
+	cont "on!"
+	para "Are you ready?"
 	done
 	
-YoungsterLossTextWater:
-	text "Wahoo!"
+JasonSeenText:
+	text "Can you handle this"
+	line "GYM?"
 	done
 	
-YoungsterWinTextWater:
-	text "Looks like you can"
-	line "tread water!"
+JasonWinText:
+	text "I got scorched!"
+	done
+	
+JasonAfterBattleText
+	text "TREVOR is always"
+	line "trying to be a"
+	cont "GYM LEADER."
+	
+	para "I hope he can"
+	line "become one"
+	cont "someday."
+	done
+	
+LindaSeenText:
+	text "Isn't it fun in"
+	line "here?"
+	done
+	
+LindaWinText:
+	text "A pretend GYM is"
+	line "so much fun!"
+	done
+	
+LindaAfterBattleText:
+	text "TREVOR is tough."
+	line "Good luck!"
 	done
 
-YoungsterTextBeforeFire:
-	text "Can you handle the"
-	line "heat in here?"
-	done
-	
-YoungsterLossTextFire:
-	text "Wahoo!"
-	done
-	
-YoungsterWinTextFire:
-	text "Looks like I got"
-	line "scorched!"
-	done
-
-YoungsterTextBeforeGrass:
-	text "Don't trip over"
-	line "my #MON's"
-	cont "vines!"
-	done
-	
-YoungsterLossTextGrass:
-	text "Wahoo!"
-	done
-	
-YoungsterWinTextGrass:
-	text "I stumbled!"
-	done
-	
-LassTextBeforeGrass:
-	text "Isn't it lovely"
-	line "in here?"
-	para "I brought snacks"
-	line "for a picnic!"
-	done
-	
-LassLossTextGrass:
-	text "Wahoo!"
-	
-LassWinTextGrass:
-	text "At least the air"
-	line "is still sweet."
-	done
-	
-LassTextBeforeWater:
-	text "Careful, the floor"
-	line "can get slick!"
-	done
-	
-LassLossTextWater:
-	text "Wahoo!"
-	
-LassWinTextWater:
-	text "I slipped!"
-	done
-	
-LassTextBeforeFire:
-	text "Nothing is better"
-	line "for a hot room"
-	cont "than a hot battle!"
-	done
-	
-LassLossTextFire:
-	text "Wahoo!"
-	
-LassWinTextFire:
-	text "Too hot!"
-	done
 	
 RyukyuFakeGym_MapEvents:
 	db 0, 0 ; filler
@@ -647,14 +503,16 @@ RyukyuFakeGym_MapEvents:
 	warp_event  9, 17, RYUKYU_CITY, 10
 
 
-	db 2 ; coord events
-	coord_event  8, 11, SCENE_DEFAULT, Trainer1Scene
-	coord_event  7,  7, SCENE_SAFFRON_GYM_TRAINER_2, Trainer2Scene
+	db 0 ; coord events
 
 	db 0 ; bg events
 
-	db 4 ; object events
-	object_event  7, 11, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, RyukyuFakeGymLassScript, -1
-	object_event  7,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, RyukyuFakeGymYoungsterScript, -1
-	object_event  9,  0, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, RyukyuFakeGymPokefanMScript, -1
-	object_event 10, 15, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, RyukyuFakeGymGuyScript, -1
+	db 8 ; object events
+	object_event  7, 11, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerLassLindaGrass, 0
+	object_event  7, 11, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerLassLindaFire, 0
+	object_event  7, 11, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerLassLindaWater, 0
+	object_event  7,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerYoungsterJasonGrass, 0
+	object_event  7,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerYoungsterJasonFire, 0
+	object_event  7,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerYoungsterJasonWater, 0
+	object_event  9,  0, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RyukyuFakeGymPokefanMScript, -1
+	object_event 10, 15, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RyukyuFakeGymGuyScript, -1
