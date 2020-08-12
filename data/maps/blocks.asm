@@ -763,3 +763,6 @@ MountMoon_Blocks:
 
 MountMoonSquare_Blocks:
 	INCBIN "maps/MountMoonSquare.blk"
+
+KantoVictoryRoad_Blocks:
+	INCBIN "maps/KantoVictoryRoad.blk"

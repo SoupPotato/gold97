@@ -335,6 +335,7 @@ INCLUDE "maps/RockTunnelB1F.asm"
 INCLUDE "maps/MountMoon.asm"
 INCLUDE "maps/MountMoonSquare.asm"
 INCLUDE "maps/MountMoonGiftShop.asm"
+INCLUDE "maps/KantoVictoryRoad.asm"
 
 SECTION "Map Scripts 21", ROMX
 

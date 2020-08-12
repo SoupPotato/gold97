@@ -544,3 +544,4 @@ ENDM
 	map_attributes MountMoon, MOUNT_MOON, $09, 0
 	map_attributes MountMoonSquare, MOUNT_MOON_SQUARE, $2d, 0
 	map_attributes MountMoonGiftShop, MOUNT_MOON_GIFT_SHOP, $00, 0
+	map_attributes KantoVictoryRoad, KANTO_VICTORY_ROAD, $1d, 0

@@ -243,7 +243,7 @@ KantoTeacherText:
 KantoRegion_MapEvents:
 	db 0, 0 ; filler
 
-	db 31 ; warp events
+	db 34 ; warp events
 	warp_event 24, 21, KANTO_DEPT_STORE_1F, 1
 	warp_event 29, 21, KANTO_CELADON_MANSION_1F, 1
 	warp_event 30, 15, KANTO_CELADON_MANSION_1F, 3
@@ -273,9 +273,11 @@ KantoRegion_MapEvents:
 	warp_event 49,  5, KANTO_HOUSE_3, 1
 	warp_event 17, 23, KANTO_HOUSE_4, 1
 	warp_event  8, 55, KANTO_FOSSIL_LAB, 1
-
+	warp_event  2, 15, KANTO_VICTORY_ROAD,1
 	warp_event 27, 25, KANTO_CAFE, 1
 	warp_event 37, 17, KANTO_CAFE, 2 ; daycare house
+	warp_event  2,  9, KANTO_VICTORY_ROAD,10
+	warp_event  3,  9, KANTO_VICTORY_ROAD,10
 
 	db 0 ; coord events
 

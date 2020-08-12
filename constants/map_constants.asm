@@ -366,6 +366,8 @@ ENDM
 	map_const MOUNT_MOON,                                  15,  9 ; 85
 	map_const MOUNT_MOON_SQUARE,                           15,  9 ; 10
 	map_const MOUNT_MOON_GIFT_SHOP,                         4,  4 ; 11
+	map_const KANTO_VICTORY_ROAD,                                10, 36 ; 91
+
 
 	newgroup                                                      ; 22
 
