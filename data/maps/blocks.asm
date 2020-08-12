@@ -124,6 +124,7 @@ Route111BlueForestGate_Blocks:
 SunPointDocksSunPointGate_Blocks:
 Route119SunpointGate_Blocks:
 UrasoeParkUrasoeTrailGate_Blocks:
+SafariZoneFuchsiaGateBeta_Blocks:
 	INCBIN "maps/NorthSouthGate.blk"
 	
 Route101PagotaGate_Blocks:
@@ -766,3 +767,6 @@ MountMoonSquare_Blocks:
 
 KantoVictoryRoad_Blocks:
 	INCBIN "maps/KantoVictoryRoad.blk"
+
+SafariZoneBeta_Blocks:
+	INCBIN "maps/SafariZoneBeta.blk"

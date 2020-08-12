@@ -336,6 +336,8 @@ INCLUDE "maps/MountMoon.asm"
 INCLUDE "maps/MountMoonSquare.asm"
 INCLUDE "maps/MountMoonGiftShop.asm"
 INCLUDE "maps/KantoVictoryRoad.asm"
+INCLUDE "maps/SafariZoneFuchsiaGateBeta.asm"
+INCLUDE "maps/SafariZoneBeta.asm"
 
 SECTION "Map Scripts 21", ROMX
 

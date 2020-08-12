@@ -367,6 +367,8 @@ ENDM
 	map_const MOUNT_MOON_SQUARE,                           15,  9 ; 10
 	map_const MOUNT_MOON_GIFT_SHOP,                         4,  4 ; 11
 	map_const KANTO_VICTORY_ROAD,                                10, 36 ; 91
+	map_const SAFARI_ZONE_FUCHSIA_GATE_BETA,                5,  4 ; 89
+	map_const SAFARI_ZONE_BETA,                            10, 18 ; 90
 
 
 	newgroup                                                      ; 22
