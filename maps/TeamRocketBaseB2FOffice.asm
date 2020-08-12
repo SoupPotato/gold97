@@ -193,7 +193,7 @@ ImposterStepsToPlayer:
 	step DOWN
 	step_end
 	
-PlayerStepsBack
+PlayerStepsBack:
 	fix_facing
 	step DOWN
 	remove_fixed_facing
@@ -212,7 +212,7 @@ OkeraBumpsIntoImposter:
 	remove_fixed_facing
 	step_end
 	
-OkeratoImposter
+OkeratoImposter:
 	step LEFT
 	step LEFT
 	step_end

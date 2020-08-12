@@ -356,7 +356,7 @@ GymGuyText:
 	line "for real!"
 	done
 	
-GymGuyGrassText
+GymGuyGrassText:
 	text "Oh, yeah. He uses"
 	line "GRASS #MON."
 	para "I'm sure you know"
@@ -364,7 +364,7 @@ GymGuyGrassText
 	cont "do to win."
 	done
 	
-GymGuyFireText
+GymGuyFireText:
 	text "Oh, yeah. He uses"
 	line "FIRE #MON."
 	para "I'm sure you know"
@@ -372,7 +372,7 @@ GymGuyFireText
 	cont "do to win."
 	done
 	
-GymGuyWaterText
+GymGuyWaterText:
 	text "Oh, yeah. He uses"
 	line "WATER #MON."
 	para "I'm sure you know"
@@ -469,7 +469,7 @@ JasonWinText:
 	text "I got scorched!"
 	done
 	
-JasonAfterBattleText
+JasonAfterBattleText:
 	text "TREVOR is always"
 	line "trying to be a"
 	cont "GYM LEADER."

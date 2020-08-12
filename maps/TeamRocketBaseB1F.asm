@@ -485,7 +485,7 @@ TeamRocketGuyWalksUp:
 	step UP
 	step_end
 	
-TeamRocketGuyStepsBack
+TeamRocketGuyStepsBack:
 	fix_facing
 	step DOWN
 	remove_fixed_facing
