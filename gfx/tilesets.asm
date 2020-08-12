@@ -132,8 +132,7 @@ INCBIN "data/tilesets/train_station_metatiles.bin"
 TilesetTrainStationColl:
 INCLUDE "data/tilesets/train_station_collision.asm"
 
-TilesetForestMeta:
-INCBIN "data/tilesets/forest_metatiles.bin"
+
 
 
 SECTION "Tileset Data 4", ROMX
@@ -301,6 +300,9 @@ INCBIN "data/tilesets/omanyte_word_room_metatiles.bin"
 
 TilesetAerodactylWordRoomMeta:
 INCBIN "data/tilesets/aerodactyl_word_room_metatiles.bin"
+
+TilesetForestMeta:
+INCBIN "data/tilesets/forest_metatiles.bin"
 
 SECTION "Tileset Data 9", ROMX
 

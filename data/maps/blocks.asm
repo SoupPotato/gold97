@@ -124,6 +124,7 @@ Route111BlueForestGate_Blocks:
 SunPointDocksSunPointGate_Blocks:
 Route119SunpointGate_Blocks:
 UrasoeParkUrasoeTrailGate_Blocks:
+SafariZoneFuchsiaGateBeta_Blocks:
 	INCBIN "maps/NorthSouthGate.blk"
 	
 Route101PagotaGate_Blocks:
@@ -745,3 +746,27 @@ YoronPartsShop_Blocks:
 	
 JouleCaveZapdosRoom_Blocks:
 	INCBIN "maps/JouleCaveZapdosRoom.blk"
+	
+DiglettsCave_Blocks:
+	INCBIN "maps/DiglettsCave.blk"
+	
+RockTunnel1F_Blocks:
+	INCBIN "maps/RockTunnel1F.blk"
+
+RockTunnelB1F_Blocks:
+	INCBIN "maps/RockTunnelB1F.blk"
+
+MountMoonGiftShop_Blocks:
+	INCBIN "maps/GiftShop.blk"
+	
+MountMoon_Blocks:
+	INCBIN "maps/MountMoon.blk"
+
+MountMoonSquare_Blocks:
+	INCBIN "maps/MountMoonSquare.blk"
+
+KantoVictoryRoad_Blocks:
+	INCBIN "maps/KantoVictoryRoad.blk"
+
+SafariZoneBeta_Blocks:
+	INCBIN "maps/SafariZoneBeta.blk"

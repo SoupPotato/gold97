@@ -329,7 +329,15 @@ INCLUDE "maps/Boardwalk.asm"
 INCLUDE "maps/KeramaStrait.asm"
 INCLUDE "maps/MeridianPath.asm"
 INCLUDE "maps/CharredSummit.asm"
-
+INCLUDE "maps/DiglettsCave.asm"
+INCLUDE "maps/RockTunnel1F.asm"
+INCLUDE "maps/RockTunnelB1F.asm"
+INCLUDE "maps/MountMoon.asm"
+INCLUDE "maps/MountMoonSquare.asm"
+INCLUDE "maps/MountMoonGiftShop.asm"
+INCLUDE "maps/KantoVictoryRoad.asm"
+INCLUDE "maps/SafariZoneFuchsiaGateBeta.asm"
+INCLUDE "maps/SafariZoneBeta.asm"
 
 SECTION "Map Scripts 21", ROMX
 

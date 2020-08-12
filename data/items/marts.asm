@@ -393,6 +393,7 @@ MartMtMoon:
 	db SODA_POP
 	db LEMONADE
 	db REPEL
+	db PORTRAITMAIL
 	db -1 ; end
 
 MartIndigoPlateau:

@@ -220,7 +220,7 @@ ENDM
 	connection south, Route113, ROUTE_113, 10
 
 	map_attributes KantoRegion, KANTO_REGION, $0f, EAST
-	connection east, Route114, ROUTE_114, 9
+	connection east, Route114, ROUTE_114, 14
 
 	map_attributes Route119, ROUTE_119, $07, EAST
 	connection east, Route120, ROUTE_120, 18
@@ -241,7 +241,7 @@ ENDM
 	connection east, IsenStrait, ISEN_STRAIT, 0
 
 	map_attributes Route114, ROUTE_114, $0f, WEST
-	connection west, KantoRegion, KANTO_REGION, -9
+	connection west, KantoRegion, KANTO_REGION, -14
 
 	map_attributes YoronPoint, YORON_POINT, $35, WEST | EAST
 	connection west, YoronCity, YORON_CITY, -9
@@ -538,3 +538,12 @@ ENDM
 	map_attributes KantoHouse2, KANTO_HOUSE_2, $00, 0
 	map_attributes KantoHouse3, KANTO_HOUSE_3, $00, 0
 	map_attributes KantoHouse4, KANTO_HOUSE_4, $00, 0
+	map_attributes DiglettsCave, DIGLETTS_CAVE, $09, 0
+	map_attributes RockTunnel1F, ROCK_TUNNEL_1F, $09, 0
+	map_attributes RockTunnelB1F, ROCK_TUNNEL_B1F, $09, 0
+	map_attributes MountMoon, MOUNT_MOON, $09, 0
+	map_attributes MountMoonSquare, MOUNT_MOON_SQUARE, $2d, 0
+	map_attributes MountMoonGiftShop, MOUNT_MOON_GIFT_SHOP, $00, 0
+	map_attributes KantoVictoryRoad, KANTO_VICTORY_ROAD, $1d, 0
+	map_attributes SafariZoneFuchsiaGateBeta, SAFARI_ZONE_FUCHSIA_GATE_BETA, $00, 0
+	map_attributes SafariZoneBeta, SAFARI_ZONE_BETA, $46, 0
