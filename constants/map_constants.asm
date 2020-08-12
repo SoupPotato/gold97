@@ -363,6 +363,9 @@ ENDM
 	map_const DIGLETTS_CAVE,                               10, 18 ; newly added kanto maps start here
 	map_const ROCK_TUNNEL_1F,                              15, 18 ; 87
 	map_const ROCK_TUNNEL_B1F,                             15, 18 ; 88
+	map_const MOUNT_MOON,                                  15,  9 ; 85
+	map_const MOUNT_MOON_SQUARE,                           15,  9 ; 10
+	map_const MOUNT_MOON_GIFT_SHOP,                         4,  4 ; 11
 
 	newgroup                                                      ; 22
 

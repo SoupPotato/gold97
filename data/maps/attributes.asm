@@ -541,3 +541,6 @@ ENDM
 	map_attributes DiglettsCave, DIGLETTS_CAVE, $09, 0
 	map_attributes RockTunnel1F, ROCK_TUNNEL_1F, $09, 0
 	map_attributes RockTunnelB1F, ROCK_TUNNEL_B1F, $09, 0
+	map_attributes MountMoon, MOUNT_MOON, $09, 0
+	map_attributes MountMoonSquare, MOUNT_MOON_SQUARE, $2d, 0
+	map_attributes MountMoonGiftShop, MOUNT_MOON_GIFT_SHOP, $00, 0

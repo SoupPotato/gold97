@@ -200,3 +200,6 @@
 	tilecoll WALL, WALL, WALL, WATER ; c7
 	tilecoll WALL, WALL, WALL, DOOR ; c8
 	tilecoll WALL, WALL, WARP_CARPET_DOWN, FLOOR ; c9
+	tilecoll FLOOR, FLOOR, WALL, FLOOR ; ca
+	tilecoll WALL, WALL, WALL, FLOOR ; cb
+	tilecoll WALL, WALL, FLOOR, WALL ; cc

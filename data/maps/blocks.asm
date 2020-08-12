@@ -754,3 +754,12 @@ RockTunnel1F_Blocks:
 
 RockTunnelB1F_Blocks:
 	INCBIN "maps/RockTunnelB1F.blk"
+
+MountMoonGiftShop_Blocks:
+	INCBIN "maps/GiftShop.blk"
+	
+MountMoon_Blocks:
+	INCBIN "maps/MountMoon.blk"
+
+MountMoonSquare_Blocks:
+	INCBIN "maps/MountMoonSquare.blk"

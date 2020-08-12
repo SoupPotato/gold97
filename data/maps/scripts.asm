@@ -332,6 +332,9 @@ INCLUDE "maps/CharredSummit.asm"
 INCLUDE "maps/DiglettsCave.asm"
 INCLUDE "maps/RockTunnel1F.asm"
 INCLUDE "maps/RockTunnelB1F.asm"
+INCLUDE "maps/MountMoon.asm"
+INCLUDE "maps/MountMoonSquare.asm"
+INCLUDE "maps/MountMoonGiftShop.asm"
 
 SECTION "Map Scripts 21", ROMX
 
