@@ -135,3 +135,17 @@
 	tilecoll WALL, WALL, WALL, WALL ; 86
 	tilecoll WALL, WALL, WALL, WALL ; 87
 	tilecoll WALL, WALL, WALL, WALL ; 88
+	tilecoll WALL, FLOOR, FLOOR, FLOOR ; 89
+	tilecoll WALL, WALL, WALL, WALL ; 8a
+	tilecoll WALL, WALL, WALL, WALL ; 8b
+	tilecoll FLOOR, WALL, FLOOR, WALL ; 8c
+	tilecoll WALL, FLOOR, WALL, FLOOR ; 8d
+	tilecoll WALL, WALL, WALL, WALL ; 8e
+	tilecoll WALL, WALL, FLOOR, FLOOR ; 8f
+	tilecoll WALL, WALL, WALL, WALL ; 90
+	tilecoll WALL, WALL, WALL, WALL ; 91
+	tilecoll WALL, WALL, WALL, WALL ; 92
+	tilecoll FLOOR, FLOOR, WALL, WALL ; 93
+	tilecoll WALL, WALL, WALL, WALL ; 94
+	tilecoll WALL, WALL, WALL, WALL ; 95
+	tilecoll WARP_CARPET_LEFT, FLOOR, WALL, WALL ; 96
