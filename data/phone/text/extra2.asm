@@ -1101,7 +1101,7 @@ UnknownText_0x175f70:
 
 	para "Aren't you coming"
 	line "over to fish for"
-	cont "PLUCKROSS?"
+	cont "PRAXE?"
 
 	para "I'm on ROUTE 32,"
 	line "so hurry up!"

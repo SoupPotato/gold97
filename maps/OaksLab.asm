@@ -228,7 +228,7 @@ FlambearPokeBallScript:
 	waitsfx
 	buttonsound
 	closetext
-	setevent EVENT_CRUISE_POKEBALL_IN_ELMS_LAB
+	setevent EVENT_CRUIZE_POKEBALL_IN_ELMS_LAB
 	setevent EVENT_PLAYERS_HOUSE_1F_NEIGHBOR
 	clearevent EVENT_PLAYERS_NEIGHBORS_HOUSE_NEIGHBOR
 	jump ElmDirectionsScript
@@ -238,8 +238,8 @@ CruisePokeBallScript:
 	iftrue LookAtElmPokeBallScript
 	turnobject ELMSLAB_ELM, DOWN
 	refreshscreen
-	pokepic CRUISE
-	cry CRUISE
+	pokepic CRUIZE
+	cry CRUIZE
 	waitbutton
 	closepokepic
 	opentext
@@ -247,16 +247,16 @@ CruisePokeBallScript:
 	yesorno
 	iffalse DidntChooseStarterScript
 	disappear ELMSLAB_POKE_BALL2
-	setevent EVENT_GOT_CRUISE_FROM_ELM
+	setevent EVENT_GOT_CRUIZE_FROM_ELM
 	writetext ChoseStarterText
 	buttonsound
 	waitsfx
-	pokenamemem CRUISE, MEM_BUFFER_0
+	pokenamemem CRUIZE, MEM_BUFFER_0
 	writetext ReceivedStarterText
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	buttonsound
-	givepoke CRUISE, 5, BERRY
+	givepoke CRUIZE, 5, BERRY
 	closetext
 	applymovement ELMSLAB_SILVER, SilverGetCHIKORITAMovement
 	opentext
@@ -1209,7 +1209,7 @@ OaksLab_MapEvents:
 	object_event  4,  2, SPRITE_ELM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ProfElmScript, -1
 	object_event  6,  6, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ElmsAideScript, EVENT_ELMS_AIDE_IN_LAB
 	object_event  5,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FlambearPokeBallScript, EVENT_FLAMBEAR_POKEBALL_IN_ELMS_LAB
-	object_event  6,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CruisePokeBallScript, EVENT_CRUISE_POKEBALL_IN_ELMS_LAB
+	object_event  6,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CruisePokeBallScript, EVENT_CRUIZE_POKEBALL_IN_ELMS_LAB
 	object_event  7,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CHIKORITAPokeBallScript, EVENT_CHIKORITA_POKEBALL_IN_ELMS_LAB
 	object_event  2,  3, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OaksLabBlueScript, EVENT_BLUE_IN_ELMS_LAB
 	object_event  4,  5, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OaksLabSilverScript, EVENT_SILVER_IN_ELMS_LAB

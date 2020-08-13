@@ -1,4 +1,4 @@
-	db PLUCKROSS ; 211
+	db PRAXE ; 211
 
 	db  75, 130, 100,  75,  60,  75
 	;   hp  atk  def  spd  sat  sdf
@@ -11,7 +11,7 @@
 	db 100 ; unknown 1
 	db 25 ; step cycles to hatch
 	db 5 ; unknown 2
-	INCBIN "gfx/pokemon/pluckross/front.dimensions"
+	INCBIN "gfx/pokemon/praxe/front.dimensions"
 	db 0, 0, 0, 0 ; padding
 	db GROWTH_SLOW ; growth rate
 	dn EGG_BUG, EGG_BUG ; egg groups

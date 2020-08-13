@@ -1,4 +1,4 @@
-	db ELEKID ; 239
+	db ELEBABE ; 239
 
 	db  45,  63,  37,  95,  65,  55
 	;   hp  atk  def  spd  sat  sdf
@@ -11,7 +11,7 @@
 	db 100 ; unknown 1
 	db 25 ; step cycles to hatch
 	db 5 ; unknown 2
-	INCBIN "gfx/pokemon/elekid/front.dimensions"
+	INCBIN "gfx/pokemon/elebabe/front.dimensions"
 	db 0, 0, 0, 0 ; padding
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_NONE, EGG_NONE ; egg groups

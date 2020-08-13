@@ -1,4 +1,4 @@
-	db MEOWSY ; 218
+	db NYANYA ; 218
 
 	db  35,  40,  30,  85,  35,  35
 	;   hp  atk  def  spd  sat  sdf
@@ -11,7 +11,7 @@
 	db 100 ; unknown 1
 	db 20 ; step cycles to hatch
 	db 5 ; unknown 2
-	INCBIN "gfx/pokemon/meowsy/front.dimensions"
+	INCBIN "gfx/pokemon/nyanya/front.dimensions"
 	db 0, 0, 0, 0 ; padding
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_NONE, EGG_NONE ; egg groups

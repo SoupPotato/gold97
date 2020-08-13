@@ -13,7 +13,7 @@ PrycesFamilyHousePokefanFScript:
 	opentext
 	checkevent EVENT_HERDED_FARFETCHD
 	iffalse .PryceVisitsSoonG
-	checkevent EVENT_FOUGHT_BIPETAL
+	checkevent EVENT_FOUGHT_BELMITT
 	iffalse .PryceIsVisitingG
 	checkflag ENGINE_GLACIERBADGE
 	iffalse .GoBeatPryce
@@ -57,7 +57,7 @@ PrycesFamilyHouseTwinScript:
 	opentext
 	checkevent EVENT_HERDED_FARFETCHD
 	iffalse .PryceVisitsSoon
-	checkevent EVENT_FOUGHT_BIPETAL
+	checkevent EVENT_FOUGHT_BELMITT
 	iffalse .PryceIsVisiting
 	writetext PryceVisitingIsMyFavorite
 	waitbutton
@@ -87,7 +87,7 @@ PrycesFamilyHousePryceScript:
 	applymovement PrycesFamilyHouse_PRYCE, PryceLeavesMovement2
 	playsound SFX_EXIT_BUILDING
 	disappear PrycesFamilyHouse_PRYCE
-	setevent EVENT_FOUGHT_BIPETAL
+	setevent EVENT_FOUGHT_BELMITT
 	clearevent EVENT_PRYCE_IN_GYM
 	waitsfx
 	end
@@ -96,7 +96,7 @@ PrycesFamilyHousePryceScript:
 	applymovement PrycesFamilyHouse_PRYCE, PryceLeavesMovement2Alt
 	playsound SFX_EXIT_BUILDING
 	disappear PrycesFamilyHouse_PRYCE
-	setevent EVENT_FOUGHT_BIPETAL
+	setevent EVENT_FOUGHT_BELMITT
 	clearevent EVENT_PRYCE_IN_GYM
 	waitsfx
 	end
@@ -250,4 +250,4 @@ PrycesFamilyHouse_MapEvents:
 	db 3 ; object events
 	object_event  1,  2, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PrycesFamilyHousePokefanFScript, -1
 	object_event  5,  2, SPRITE_TWIN, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PrycesFamilyHouseTwinScript, -1
-	object_event  7,  4, SPRITE_PRYCE, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PrycesFamilyHousePryceScript, EVENT_FOUGHT_BIPETAL
+	object_event  7,  4, SPRITE_PRYCE, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PrycesFamilyHousePryceScript, EVENT_FOUGHT_BELMITT

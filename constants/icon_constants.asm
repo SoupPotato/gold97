@@ -37,7 +37,7 @@
 	const ICON_BLISSEY
 	const ICON_GYARADOS
 	const ICON_SLOWPOKE
-	const ICON_BIPETAL
+	const ICON_BELMITT
 	const ICON_BIGMON
 
 ; LoadMenuMonIcon.Jumptable indexes (see engine/gfx/mon_icons.asm)

@@ -158,7 +158,7 @@ MonMenuIcons:
 	db ICON_MONSTER     ; FLAMBEAR
 	db ICON_MONSTER     ; VOLBEAR
 	db ICON_MONSTER     ; DYNABEAR
-	db ICON_LAPRAS      ; CRUISE
+	db ICON_LAPRAS      ; CRUIZE
 	db ICON_LAPRAS      ; AQUALLO
 	db ICON_LAPRAS      ; AQUARIUS
 	db ICON_ODDISH      ; TANG
@@ -166,7 +166,7 @@ MonMenuIcons:
 	db ICON_BIRD        ; HOOTHOOT
 	db ICON_BIRD        ; NOCTOWL
 	db ICON_BUG         ; LEDYBA
-	db ICON_BUG         ; LEDIAN
+	db ICON_BUG         ; TRIPSTAR
 	db ICON_BUG         ; SPINARAK
 	db ICON_BUG         ; ARIADOS
 	db ICON_BAT         ; CROBAT
@@ -176,7 +176,7 @@ MonMenuIcons:
 	db ICON_CLEFAIRY    ; CLEFFA
 	db ICON_JIGGLYPUFF  ; IGGLYBUFF
 	db ICON_CLEFAIRY    ; TOGEPI
-	db ICON_EQUINE      ; PONITTLE
+	db ICON_EQUINE      ; PETICORN
 	db ICON_BIRD        ; NATU
 	db ICON_BIRD        ; XATU
 	db ICON_FOX         ; MAREEP
@@ -184,16 +184,16 @@ MonMenuIcons:
 	db ICON_MONSTER     ; AMPHAROS
 	db ICON_ODDISH      ; BELLOSSOM
 	db ICON_CLEFAIRY    ; MARILL
-	db ICON_LAPRAS      ; BOMSEAL
-	db ICON_ODDISH      ; BIPETAL
+	db ICON_LAPRAS      ; BOMSHEAL
+	db ICON_ODDISH      ; BELMITT
 	db ICON_POLIWAG     ; POLITOED
 	db ICON_ODDISH      ; HOPPIP
 	db ICON_ODDISH      ; SKIPLOOM
 	db ICON_ODDISH      ; JUMPLUFF
 	db ICON_MONSTER     ; AIPOM
-	db ICON_FISH        ; KINGOLD
+	db ICON_FISH        ; GUPGOLD
 	db ICON_ODDISH      ; SUNFLORA
-	db ICON_FISH        ; OSUNFISH
+	db ICON_FISH        ; CORASUN
 	db ICON_FISH        ; ANCHORAGE
 	db ICON_FISH        ; GROTESS
 	db ICON_FOX         ; ESPEON
@@ -202,27 +202,27 @@ MonMenuIcons:
 	db ICON_SLOWPOKE    ; SLOWKING
 	db ICON_FOX         ; TRITALES
 	db ICON_UNOWN       ; UNOWN
-	db ICON_GHOST       ; TWINBORUS
+	db ICON_GHOST       ; TWINZ
 	db ICON_EQUINE      ; GIRAFARIG
 	db ICON_SHELL       ; TURBAN
 	db ICON_BLOB        ; GRIMBY
-	db ICON_BUG         ; PARA
-	db ICON_BLOB        ; ANIMON
+	db ICON_BUG         ; PARAMITE
+	db ICON_BLOB        ; METTO
 	db ICON_SERPENT     ; STEELIX
 	db ICON_MONSTER     ; SNUBBULL
 	db ICON_FISH        ; QUAGSIRE
-	db ICON_BUG         ; PLUCKROSS
+	db ICON_BUG         ; PRAXE
 	db ICON_BUG         ; SCIZOR
 	db ICON_FOX         ; RINRING
-	db ICON_FOX         ; BELLRING
+	db ICON_FOX         ; BELLRUN
 	db ICON_FOX         ; SNEASEL
 	db ICON_FISH        ; QWILFISH
 	db ICON_FISH        ; NUMBPUFF
-	db ICON_FOX         ; MEOWSY
+	db ICON_FOX         ; NYANYA
 	db ICON_BIRD        ; MADAME
-	db ICON_GHOST       ; CURSTRAW
-	db ICON_GHOST       ; CURPAN
-	db ICON_FOX         ; GROWLITE
+	db ICON_GHOST       ; KURSTRAW
+	db ICON_GHOST       ; PANGSHI
+	db ICON_FOX         ; PUDDIPUP
 	db ICON_FISH        ; REMORAID
 	db ICON_FISH        ; OCTILLERY
 	db ICON_BIRD        ; DELIBIRD
@@ -239,7 +239,7 @@ MonMenuIcons:
 	db ICON_FIGHTER     ; TYROGUE
 	db ICON_FIGHTER     ; HITMONTOP
 	db ICON_HUMANSHAPE  ; SMOOCHUM
-	db ICON_HUMANSHAPE  ; ELEKID
+	db ICON_HUMANSHAPE  ; ELEBABE
 	db ICON_HUMANSHAPE  ; MAGBY
 	db ICON_BIRD        ; CHIX actually chix
 	db ICON_EQUINE      ; MILTANK actually chix
@@ -247,8 +247,8 @@ MonMenuIcons:
 	db ICON_FOX         ; ENTEI
 	db ICON_FOX         ; SUICUNE
 	db ICON_MONSTER     ; WOLFAN
-	db ICON_MONSTER     ; WARFARU
-	db ICON_MONSTER     ; LICKILICKY
+	db ICON_MONSTER     ; WARWOLF
+	db ICON_MONSTER     ; LICKILORD
 	db ICON_CLEFAIRY    ; BLISSEY actually miltank
 	db ICON_HO_OH       ; HO_OH
 	db ICON_FOX		    ; LEAFEON

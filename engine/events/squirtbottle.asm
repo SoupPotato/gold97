@@ -33,7 +33,7 @@ _Squirtbottle:
 	jr c, .nope
 
 	ld a, d
-	cp SPRITEMOVEDATA_BIPETAL
+	cp SPRITEMOVEDATA_BELMITT
 	jr nz, .nope
 
 	ld a, 1

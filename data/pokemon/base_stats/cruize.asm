@@ -1,4 +1,4 @@
-	db CRUISE ; 158
+	db CRUIZE ; 158
 
 	db  50,  45,  52,  35,  62,  60
 	;   hp  atk  def  spd  sat  sdf
@@ -11,7 +11,7 @@
 	db 100 ; unknown 1
 	db 20 ; step cycles to hatch
 	db 5 ; unknown 2
-	INCBIN "gfx/pokemon/cruise/front.dimensions"
+	INCBIN "gfx/pokemon/cruize/front.dimensions"
 	db 0, 0, 0, 0 ; padding
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_MONSTER, EGG_WATER_1 ; egg groups

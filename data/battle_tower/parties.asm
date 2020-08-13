@@ -81,7 +81,7 @@ BattleTowerMons1:
 	bigdw 39 ; SDef
 	db "BURAtuKI-@@"
 
-	db TWINBORUS
+	db TWINZ
 	db FOCUS_BAND
 	db COUNTER, MIRROR_COAT, SAFEGUARD, DESTINY_BOND
 	dw 0 ; OT ID
@@ -133,7 +133,7 @@ BattleTowerMons1:
 	bigdw 28 ; SDef
 	db "GARU-RA@@@@"
 
-	db GROWLITE
+	db PUDDIPUP
 	db SCOPE_LENS
 	db SURF, PSYCHIC_M, RECOVER, ANCIENTPOWER
 	dw 0 ; OT ID
@@ -445,7 +445,7 @@ BattleTowerMons1:
 	bigdw 25 ; SDef
 	db "NAtuSI-@@@@"
 
-	db BELLRING
+	db BELLRUN
 	db GOLD_BERRY
 	db REVERSAL, ENDURE, COUNTER, ROCK_SMASH
 	dw 0 ; OT ID
@@ -708,7 +708,7 @@ BattleTowerMons2:
 	bigdw 52 ; SDef
 	db "UINDEi@@@@@"
 
-	db BELLRING
+	db BELLRUN
 	db FOCUS_BAND
 	db ENDURE, REVERSAL, MEGAHORN, EARTHQUAKE
 	dw 0 ; OT ID
@@ -942,7 +942,7 @@ BattleTowerMons2:
 	bigdw 47 ; SDef
 	db "KENTAROSU@@"
 
-	db BOMSEAL
+	db BOMSHEAL
 	db MYSTIC_WATER
 	db SURF, BLIZZARD, ATTRACT, RAIN_DANCE
 	dw 0 ; OT ID
@@ -1832,7 +1832,7 @@ BattleTowerMons4:
 	bigdw 105 ; SDef
 	db "SUTA-MI-@@@"
 
-	db TWINBORUS
+	db TWINZ
 	db GOLD_BERRY
 	db COUNTER, MIRROR_COAT, SAFEGUARD, DESTINY_BOND
 	dw 0 ; OT ID
@@ -2774,7 +2774,7 @@ BattleTowerMons6:
 	bigdw 172 ; SDef
 	db "KINGUDORA@@"
 
-	db LICKILICKY
+	db LICKILORD
 	db GOLD_BERRY
 	db CRUNCH, EARTHQUAKE, ROCK_SLIDE, HYPER_BEAM
 	dw 0 ; OT ID
@@ -2904,7 +2904,7 @@ BattleTowerMons6:
 	bigdw 161 ; SDef
 	db "SANDA-@@@@@"
 
-	db TWINBORUS
+	db TWINZ
 	db GOLD_BERRY
 	db COUNTER, MIRROR_COAT, DESTINY_BOND, SAFEGUARD
 	dw 0 ; OT ID
@@ -3112,7 +3112,7 @@ BattleTowerMons6:
 	bigdw 184 ; SDef
 	db "KABIGON@@@@"
 
-	db BELLRING
+	db BELLRUN
 	db FOCUS_BAND
 	db REVERSAL, MEGAHORN, EARTHQUAKE, COUNTER
 	dw 0 ; OT ID
@@ -3453,7 +3453,7 @@ BattleTowerMons7:
 	bigdw 175 ; SDef
 	db "HERUGA-@@@@"
 
-	db LICKILICKY
+	db LICKILORD
 	db LEFTOVERS
 	db EARTHQUAKE, CRUNCH, ROCK_SLIDE, HYPER_BEAM
 	dw 0 ; OT ID
@@ -3739,7 +3739,7 @@ BattleTowerMons7:
 	bigdw 217 ; SDef
 	db "SAWAMURA-@@"
 
-	db BELLRING
+	db BELLRUN
 	db BRIGHTPOWDER
 	db REVERSAL, ENDURE, MEGAHORN, EARTHQUAKE
 	dw 0 ; OT ID
@@ -3976,7 +3976,7 @@ BattleTowerMons8:
 	bigdw 218 ; SDef
 	db "RAPURASU@@@"
 
-	db LICKILICKY
+	db LICKILORD
 	db MIRACLEBERRY
 	db REST, CRUNCH, EARTHQUAKE, ROCK_SLIDE
 	dw 0 ; OT ID
@@ -4577,7 +4577,7 @@ BattleTowerMons9:
 	bigdw 248 ; SDef
 	db "KINGUDORA@@"
 
-	db LICKILICKY
+	db LICKILORD
 	db QUICK_CLAW
 	db HYPER_BEAM, CRUNCH, EARTHQUAKE, ROCK_SLIDE
 	dw 0 ; OT ID
@@ -5334,7 +5334,7 @@ BattleTowerMons10:
 	bigdw 346 ; SDef
 	db "HAPINASU@@@"
 
-	db CURPAN
+	db PANGSHI
 	db MINT_BERRY
 	db REST, BLIZZARD, HYPER_BEAM, EARTHQUAKE
 	dw 0 ; OT ID

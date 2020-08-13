@@ -7,4 +7,4 @@
 
 	page "it comes together"
 	next "and animates into"
-	next "a CURSTRAW.@"
+	next "a KURSTRAW.@"

@@ -2,12 +2,12 @@
 
 NewPokedexOrder:
 	db CHIKORITA
-	db BUDLEEF
+	db PETAMOLE
 	db MEGANIUM
 	db FLAMBEAR
 	db VOLBEAR
 	db DYNABEAR
-	db CRUISE
+	db CRUIZE
 	db AQUALLO
 	db AQUARIUS
 	db PIDGEY
@@ -29,7 +29,7 @@ NewPokedexOrder:
 	db KAKUNA
 	db BEEDRILL
 	db LEDYBA
-	db LEDIAN
+	db TRIPSTAR
 	db SPINARAK
 	db ARIADOS
 	db GEODUDE
@@ -61,11 +61,11 @@ NewPokedexOrder:
 	db BELLSPROUT
 	db WEEPINBELL
 	db VICTREEBEL
-	db BIPETAL
+	db BELMITT
 	db HOPPIP
 	db SKIPLOOM
 	db JUMPLUFF
-	db PARA
+	db PARAMITE
 	db PARAS
 	db PARASECT
 	db POLIWAG
@@ -74,7 +74,7 @@ NewPokedexOrder:
 	db POLITOED
 	db MAGIKARP
 	db GYARADOS
-	db KINGOLD
+	db GUPGOLD
 	db GOLDEEN
 	db SEAKING
 	db SLOWPOKE
@@ -91,14 +91,14 @@ NewPokedexOrder:
 	db KADABRA
 	db ALAKAZAM
 	db DITTO
-	db ANIMON
+	db METTO
 	db NIDORAN_F
 	db NIDORINA
 	db NIDOQUEEN
 	db NIDORAN_M
 	db NIDORINO
 	db NIDOKING
-	db OSUNFISH
+	db CORASUN
 	db ANCHORAGE
 	db GROTESS
 	db SUNFLORA
@@ -109,7 +109,7 @@ NewPokedexOrder:
 	db SCYTHER
 	db SCIZOR
 	db PINSIR
-	db PLUCKROSS
+	db PRAXE
 	db KOFFING
 	db WEEZING
 	db GRIMBY
@@ -125,16 +125,16 @@ NewPokedexOrder:
 	db TRITALES
 	db VULPIX
 	db NINETALES
-	db GROWLITE
+	db PUDDIPUP
 	db GROWLITHE
 	db ARCANINE
 	db MARILL
-	db BOMSEAL
+	db BOMSHEAL
 	db DIGLETT
 	db DUGTRIO
 	db MANKEY
 	db PRIMEAPE
-	db MEOWSY
+	db NYANYA
 	db MEOWTH
 	db PERSIAN
 	db PSYDUCK
@@ -146,7 +146,7 @@ NewPokedexOrder:
 	db HITMONLEE
 	db HITMONCHAN
 	db HITMONTOP
-	db TWINBORUS
+	db TWINZ
 	db GIRAFARIG
 	db TAUROS
 	db MILTANK
@@ -154,9 +154,9 @@ NewPokedexOrder:
 	db MAGMAR
 	db SMOOCHUM
 	db JYNX
-	db ELEKID
+	db ELEBABE
 	db ELECTABUZZ
-	db MIME_JR
+	db BALLERINE
 	db MR__MIME
 	db SMEARGLE
 	db FARFETCH_D
@@ -168,7 +168,7 @@ NewPokedexOrder:
 	db KRABBY
 	db KINGLER
 	db RINRING
-	db BELLRING
+	db BELLRUN
 	db STARYU
 	db STARMIE
 	db SHELLDER
@@ -180,10 +180,10 @@ NewPokedexOrder:
 	db SEEL
 	db DEWGONG
 	db LICKITUNG
-	db LICKILICKY
-	db TANG
+	db LICKILORD
+	db TANGTRIP
 	db TANGELA
-	db TANGROWTH
+	db GELANIA
 	db EEVEE
 	db VAPOREON
 	db JOLTEON
@@ -195,8 +195,8 @@ NewPokedexOrder:
 	db SEADRA
 	db KINGDRA
 	db DELIBIRD
-	db CURSTRAW
-	db CURPAN
+	db KURSTRAW
+	db PANGSHI
 	db QWILFISH
 	db NUMBPUFF
 	db PHANPY
@@ -206,7 +206,7 @@ NewPokedexOrder:
 	db CHIX
 	db DODUO
 	db DODRIO
-	db PONITTLE
+	db PETICORN
 	db PONYTA
 	db RAPIDASH
 	db CUBONE
@@ -248,7 +248,7 @@ NewPokedexOrder:
 	db DRAGONAIR
 	db DRAGONITE
 	db WOLFAN
-	db WARFARU
+	db WARWOLF
 	db HO_OH
 	db MEWTWO
 	db MEW

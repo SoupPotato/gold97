@@ -7,7 +7,7 @@ AlphabeticalPokedexOrder:
 	db ALAKAZAM
 	db AMPHAROS
 	db ANCHORAGE
-	db ANIMON
+	db METTO
 	db AQUALLO
 	db AQUARIUS
 	db ARBOK
@@ -16,13 +16,13 @@ AlphabeticalPokedexOrder:
 	db ARTICUNO
 	db BEEDRILL
 	db BELLOSSOM
-	db BELLRING
+	db BELLRUN
 	db BELLSPROUT
-	db BIPETAL
+	db BELMITT
 	db BLASTOISE
 	db BLISSEY
-	db BOMSEAL
-	db BUDLEEF
+	db BOMSHEAL
+	db PETAMOLE
 	db BULBASAUR
 	db BUTTERFREE
 	db CATERPIE
@@ -37,10 +37,10 @@ AlphabeticalPokedexOrder:
 	db CLEFFA
 	db CLOYSTER
 	db CROBAT
-	db CRUISE
+	db CRUIZE
 	db CUBONE
-	db CURPAN
-	db CURSTRAW
+	db PANGSHI
+	db KURSTRAW
 	db DELIBIRD
 	db DEWGONG
 	db DIGLETT
@@ -58,7 +58,7 @@ AlphabeticalPokedexOrder:
 	db EKANS
 	db ELECTABUZZ
 	db ELECTRODE
-	db ELEKID
+	db ELEBABE
 	db ENTEI
 	db ESPEON
 	db EXEGGCUTE
@@ -81,7 +81,7 @@ AlphabeticalPokedexOrder:
 	db GRIMBY
 	db GRIMER
 	db GROTESS
-	db GROWLITE
+	db PUDDIPUP
 	db GROWLITHE
 	db GYARADOS
 	db HAUNTER
@@ -108,16 +108,16 @@ AlphabeticalPokedexOrder:
 	db KANGASKHAN
 	db KINGDRA
 	db KINGLER
-	db KINGOLD
+	db GUPGOLD
 	db KOFFING
 	db KOTORA
 	db KRABBY
 	db LAPRAS
 	db LEAFEON
-	db LEDIAN
+	db TRIPSTAR
 	db LEDYBA
 	db LICKITUNG
-	db LICKILICKY
+	db LICKILORD
 	db MACHAMP
 	db MACHOKE
 	db MACHOP
@@ -133,13 +133,13 @@ AlphabeticalPokedexOrder:
 	db MARILL
 	db MAROWAK
 	db MEGANIUM
-	db MEOWSY
+	db NYANYA
 	db MEOWTH
 	db METAPOD
 	db MEW
 	db MEWTWO
 	db MILTANK
-	db MIME_JR
+	db BALLERINE
 	db MOLTRES
 	db MR__MIME
 	db MUK
@@ -159,8 +159,8 @@ AlphabeticalPokedexOrder:
 	db OMANYTE
 	db OMASTAR
 	db ONIX
-	db OSUNFISH
-	db PARA
+	db CORASUN
+	db PARAMITE
 	db PARAS
 	db PARASECT
 	db PERSIAN
@@ -171,12 +171,12 @@ AlphabeticalPokedexOrder:
 	db PIDGEY
 	db PIKACHU
 	db PINSIR
-	db PLUCKROSS
+	db PRAXE
 	db POLITOED
 	db POLIWAG
 	db POLIWHIRL
 	db POLIWRATH
-	db PONITTLE
+	db PETICORN
 	db PONYTA
 	db PORYGON
 	db PORYGON2
@@ -220,16 +220,16 @@ AlphabeticalPokedexOrder:
 	db STEELIX
 	db SUICUNE
 	db SUNFLORA
-	db TANG
+	db TANGTRIP
 	db TANGELA
-	db TANGROWTH
+	db GELANIA
 	db TAUROS
 	db TENTACOOL
 	db TENTACRUEL
 	db TOGEPI
 	db TRITALES
 	db TURBAN
-	db TWINBORUS
+	db TWINZ
 	db TYROGUE
 	db UMBREON
 	db UNOWN
@@ -242,7 +242,7 @@ AlphabeticalPokedexOrder:
 	db VOLBEAR
 	db VOLTORB
 	db VULPIX
-	db WARFARU
+	db WARWOLF
 	db WARTORTLE
 	db WEEDLE
 	db WEEPINBELL

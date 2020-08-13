@@ -48,16 +48,16 @@
 	const CRY_GIRAFARIG
 	const CRY_RAIKOU
 	const CRY_MAREEP
-	const CRY_PONITTLE
+	const CRY_PETICORN
 	const CRY_HOOTHOOT
 	const CRY_TANG
 	const CRY_SLOWKING
 	const CRY_FLAMBEAR
 	const CRY_CHIKORITA
-	const CRY_CRUISE
-	const CRY_ANIMON
+	const CRY_CRUIZE
+	const CRY_METTO
 	const CRY_CLEFFA
-	const CRY_MEOWSY
+	const CRY_NYANYA
 	const CRY_LEDYBA
 	const CRY_ENTEI
 	const CRY_ANCHORAGE

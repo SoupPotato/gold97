@@ -356,7 +356,7 @@ NationalParkYoungster1Text:
 
 NationalParkYoungster2Text:
 	text "I get the other"
-	line "guy's BOMSEAL"
+	line "guy's BOMSHEAL"
 	cont "sticker if I win."
 	done
 

@@ -52,7 +52,7 @@ N64HouseScientistScript:
 	iftrue .AlreadyGotStarter3
 	writetext N64HouseScientistText5
 	waitbutton
-	checkevent EVENT_GOT_CRUISE_FROM_ELM
+	checkevent EVENT_GOT_CRUIZE_FROM_ELM
 	iftrue .HaveCruiseGiveFlambear
 	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
 	iftrue .HaveCHIKORITAGiveCruise
@@ -70,7 +70,7 @@ N64HouseScientistScript:
 .HaveCHIKORITAGiveCruise
 	checkcode VAR_PARTYCOUNT
 	ifequal PARTY_LENGTH, .PartyFullStarter3
-	giveegg CRUISE, 5
+	giveegg CRUIZE, 5
 	stringtotext .eggname3, MEM_BUFFER_1
 	scall .GetStarter3Egg
 	writetext TakeGoodCareOfStarter3

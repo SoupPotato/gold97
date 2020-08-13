@@ -83,7 +83,7 @@
 	const SPRITE_DRAGON ; 4f
 	const SPRITE_BIG_ONIX ; 50
 	const SPRITE_N64 ; 51
-	const SPRITE_BIPETAL ; 52
+	const SPRITE_BELMITT ; 52
 	const SPRITE_SURF ; 53
 	const SPRITE_POKE_BALL ; 54
 	const SPRITE_POKEDEX ; 55

@@ -6,13 +6,13 @@ KantoWaterWildMons:
 	db 2 percent ; encounter rate
 	db 38, MAGIKARP
 	db 40, TENTACOOL
-	db 40, OSUNFISH
+	db 40, CORASUN
 
 	map_id SEASIDE_PATH
 	db 2 percent ; encounter rate
 	db 40, TENTACOOL
 	db 42, STARYU
-	db 40, OSUNFISH
+	db 40, CORASUN
 	
 	map_id ISEN_STRAIT
 	db 2 percent ; encounter rate

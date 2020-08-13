@@ -18,7 +18,7 @@ RyukyuFakeGym_MapScripts:
 	callback MAPCALLBACK_TILES, .RyukyuFakeGymTypeChange
 	
 .Trainers
-	checkevent EVENT_GOT_CRUISE_FROM_ELM
+	checkevent EVENT_GOT_CRUIZE_FROM_ELM
 	iftrue .GrassGym
 	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
 	iftrue .FireGym
@@ -48,7 +48,7 @@ RyukyuFakeGym_MapScripts:
 	return
 	
 .RyukyuFakeGymTypeChange:
-	checkevent EVENT_GOT_CRUISE_FROM_ELM
+	checkevent EVENT_GOT_CRUIZE_FROM_ELM
 	iftrue .GrassGymBlocks
 	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
 	iftrue .FireGymBlocks
@@ -145,9 +145,9 @@ RyukyuFakeGymPokefanMScript:
 	waitbutton
 	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
 	iftrue .TrevorFire
-	checkevent EVENT_GOT_CRUISE_FROM_ELM
+	checkevent EVENT_GOT_CRUIZE_FROM_ELM
 	iftrue .TrevorGrass
-	checkevent EVENT_GOT_CRUISE_FROM_ELM
+	checkevent EVENT_GOT_CRUIZE_FROM_ELM
 	iftrue .TrevorWater
 	
 .TrevorFire	
@@ -188,9 +188,9 @@ RyukyuFakeGymPokefanMScript:
 	waitbutton
 	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
 	iftrue .FireEgg
-	checkevent EVENT_GOT_CRUISE_FROM_ELM
+	checkevent EVENT_GOT_CRUIZE_FROM_ELM
 	iftrue .GrassEgg
-	checkevent EVENT_GOT_CRUISE_FROM_ELM
+	checkevent EVENT_GOT_CRUIZE_FROM_ELM
 	iftrue .WaterEgg
 
 .GrassEgg
@@ -208,7 +208,7 @@ RyukyuFakeGymPokefanMScript:
 .WaterEgg
 	checkcode VAR_PARTYCOUNT
 	ifequal PARTY_LENGTH, .PartyFullStarter2
-	giveegg CRUISE, 5
+	giveegg CRUIZE, 5
 .Egg2
 	stringtotext .eggname2, MEM_BUFFER_1
 	scall .GetStarter2Egg
@@ -309,7 +309,7 @@ RyukyuFakeGymGuyScript:
 	iftrue .GymGuyFakeGymAfter
 	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
 	iftrue .GymGuyFire
-	checkevent EVENT_GOT_CRUISE_FROM_ELM
+	checkevent EVENT_GOT_CRUIZE_FROM_ELM
 	iftrue .GymGuyGrass
 	writetext GymGuyWaterText
 	waitbutton

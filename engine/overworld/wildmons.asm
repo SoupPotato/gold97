@@ -432,7 +432,7 @@ _SwarmWildmonCheck:
 .CheckOsunfish:
 	push hl
 	ld hl, wSwarmFlags
-	bit SWARMFLAGS_OSUNFISH_SWARM_F, [hl]
+	bit SWARMFLAGS_CORASUN_SWARM_F, [hl]
 	pop hl
 	jr z, _NoSwarmWildmon
 	ld a, [wOsunfishMapGroup]

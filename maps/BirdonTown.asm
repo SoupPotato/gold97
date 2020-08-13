@@ -61,7 +61,7 @@ SlowpokeWellSign:
 	;setevent EVENT_GOLDENROD_UNDERGROUND_WAREHOUSE_BLOCKED_OFF;
 	;setevent EVENT_EXPLODING_TRAP_5
 	;giveitem HM_SURF
-	;givepoke MIME_JR, 5
+	;givepoke BALLERINE, 5
 	;givepoke ABRA, 5
 	jumptext SlowpokeWellSignText
 

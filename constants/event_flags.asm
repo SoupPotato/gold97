@@ -39,7 +39,7 @@
 	const EVENT_GOT_5F_SAGE_BLESSING
 	const EVENT_GOT_A_POKEMON_FROM_OAK
 	const EVENT_GOT_FLAMBEAR_FROM_ELM
-	const EVENT_GOT_CRUISE_FROM_ELM
+	const EVENT_GOT_CRUIZE_FROM_ELM
 	const EVENT_GOT_CHIKORITA_FROM_ELM
 	const EVENT_GOT_MYSTERY_EGG_FROM_MR_POKEMON
 	const EVENT_031
@@ -53,7 +53,7 @@
 	const EVENT_GOT_BERRY_FROM_ROUTE_30_HOUSE
 	const EVENT_MADE_WHITNEY_CRY ; used for talking to the rocket who gives you the key afterwards
 	const EVENT_HERDED_FARFETCHD ; used, for pryce in the deepwater passage
-	const EVENT_FOUGHT_BIPETAL ;used, for pryce in his house
+	const EVENT_FOUGHT_BELMITT ;used, for pryce in his house
 	const EVENT_CLEARED_SLOWPOKE_WELL ;used, but not for slowpoke well, for rocket outside of ship at docks
 	const EVENT_REFUSED_TO_TAKE_EGG_FROM_ELMS_AIDE
 	const EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
@@ -1677,7 +1677,7 @@
 ; The map script command macros `setevent` and `clearevent` set/clear these flags, and their effects will be seen when the map is reloaded.
 ; Johto itemballs
 	const EVENT_FLAMBEAR_POKEBALL_IN_ELMS_LAB
-	const EVENT_CRUISE_POKEBALL_IN_ELMS_LAB
+	const EVENT_CRUIZE_POKEBALL_IN_ELMS_LAB
 	const EVENT_CHIKORITA_POKEBALL_IN_ELMS_LAB
 	const EVENT_OLD_CITY_PP_UP
 	const EVENT_OLD_CITY_RARE_CANDY
@@ -1982,7 +1982,7 @@
 	const EVENT_761
 	const EVENT_762
 	const EVENT_FLORIA_AT_FLOWER_SHOP ;used for making npcs appear and disappear at the south point docks
-	const EVENT_FLORIA_AT_BIPETAL
+	const EVENT_FLORIA_AT_BELMITT
 	const EVENT_GOLDENROD_CITY_MOVE_TUTOR
 	const EVENT_GOLDENROD_GAME_CORNER_MOVE_TUTOR
 ; Kanto people

@@ -1,4 +1,4 @@
-	db MIME_JR ; 234
+	db BALLERINE ; 234
 
 	db  20,  25,  45,  60,  70,  90
 	;   hp  atk  def  spd  sat  sdf
@@ -11,7 +11,7 @@
 	db 100 ; unknown 1
 	db 25 ; step cycles to hatch
 	db 5 ; unknown 2
-	INCBIN "gfx/pokemon/mime_jr/front.dimensions"
+	INCBIN "gfx/pokemon/ballerine/front.dimensions"
 	db 0, 0, 0, 0 ; padding
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_NONE, EGG_NONE ; egg groups

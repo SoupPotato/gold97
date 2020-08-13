@@ -185,7 +185,7 @@ SpriteMovementData::
 	db 0 ; flags2
 	db 0 ; palette flags
 
-; SPRITEMOVEDATA_BIPETAL
+; SPRITEMOVEDATA_BELMITT
 	db SPRITEMOVEFN_STANDING ; movement function
 	db DOWN ; facing
 	db OBJECT_ACTION_STAND ; action

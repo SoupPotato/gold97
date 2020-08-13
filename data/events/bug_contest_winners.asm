@@ -57,7 +57,7 @@ BugContestant_CamperBarry:
 BugContestant_PicnickerCindy:
 	db PICNICKER, CINDY
 	dbw ARIADOS, 	341
-	dbw LEDIAN,     301
+	dbw TRIPSTAR,     301
 	dbw VENONAT,    264
 
 BugContestant_BugCatcherJosh:

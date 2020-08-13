@@ -1042,7 +1042,7 @@ ArniePhoneScript1:
 	iftrue ArnieTuesdayMorning
 
 .NotTuesday:
-	checkflag ENGINE_OSUNFISH_SWARM
+	checkflag ENGINE_CORASUN_SWARM
 	iftrue .AlreadySwarming
 	farjump UnknownScript_0xa0968
 
@@ -1080,11 +1080,11 @@ ArnieWantsBattle:
 	farjump PhoneScript_WantsToBattle_Male
 
 ArnieOsunfishSwarm: ; start swarm
-	checkflag ENGINE_OSUNFISH_SWARM
+	checkflag ENGINE_CORASUN_SWARM
 	iftrue ArnieOsunfishAlreadySwarming
-	setflag ENGINE_OSUNFISH_SWARM
-	pokenamemem OSUNFISH, MEM_BUFFER_1
-	swarm SWARM_OSUNFISH, ROUTE_103
+	setflag ENGINE_CORASUN_SWARM
+	pokenamemem CORASUN, MEM_BUFFER_1
+	swarm SWARM_CORASUN, ROUTE_103
 	landmarktotext ROUTE_103, MEM_BUFFER_2
 	farjump UnknownScript_0xa05ce
 

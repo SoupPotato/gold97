@@ -665,7 +665,7 @@ DebugDisplayTime:
 	ret
 
 .NowOnDebug:
-	text "<PARA>Now on DEBUG…"
+	text "<PARAMITE>Now on DEBUG…"
 	prompt
 
 .PrintTime:

@@ -209,16 +209,16 @@ BoardwalkGameCornerPrizeMonVendorScript:
 	ifequal HAVE_LESS, BoardwalkGameCornerPrizeVendor_NotEnoughCoinsScript
 	checkcode VAR_PARTYCOUNT
 	ifequal PARTY_LENGTH, BoardwalkGameCornerPrizeMonVendor_NoRoomForPrizeScript
-	pokenamemem TWINBORUS, MEM_BUFFER_0
+	pokenamemem TWINZ, MEM_BUFFER_0
 	scall BoardwalkGameCornerPrizeVendor_ConfirmPurchaseScript
 	iffalse BoardwalkGameCornerPrizeVendor_CancelPurchaseScript
 	waitsfx
 	playsound SFX_TRANSACTION
 	writetext BoardwalkGameCornerPrizeVendorHereYouGoText
 	waitbutton
-	writebyte TWINBORUS
+	writebyte TWINZ
 	special GameCornerPrizeMonCheckDex
-	givepoke TWINBORUS, 15
+	givepoke TWINZ, 15
 	takecoins 1500
 	jump .loop
 
@@ -233,7 +233,7 @@ BoardwalkGameCornerPrizeMonVendorScript:
 	db 4 ; items
 	db "ABRA        100@"
 	db "CUBONE      800@"
-	db "TWINBORUS  1500@"
+	db "TWINZ  1500@"
 	db "CANCEL@"
 
 BoardwalkGameCornerPharmacistScript:

@@ -210,7 +210,7 @@ Aqua1FExhibit2Text:
 	done
 
 Aqua1FExhibit3Text:
-	text "OSUNFISH and"
+	text "CORASUN and"
 	line "MAGIKARP can"
 	para "peacefully share"
 	line "the same living"

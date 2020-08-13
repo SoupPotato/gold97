@@ -43,10 +43,10 @@ FishGroups:
 .Ocean_Good:
 	db  35 percent,     MAGIKARP,   20
 	db  70 percent,     TENTACOOL,  20
-	db  90 percent + 1, OSUNFISH,   20
+	db  90 percent + 1, CORASUN,   20
 	db 100 percent,     time_group 2
 .Ocean_Super:
-	db  40 percent,     OSUNFISH,   40
+	db  40 percent,     CORASUN,   40
 	db  70 percent,     time_group 3
 	db  90 percent + 1, TENTACRUEL, 40
 	db 100 percent,     ANCHORAGE,    40
@@ -206,8 +206,8 @@ FishGroups:
 
 TimeFishGroups:
 	;  day              nite
-	db OSUNFISH,      20,  STARYU,     20 ; 0
-	db OSUNFISH,      40,  STARYU,     40 ; 1
+	db CORASUN,      20,  STARYU,     20 ; 0
+	db CORASUN,      40,  STARYU,     40 ; 1
 	db SHELLDER,   20,  SHELLDER,   20 ; 2
 	db SHELLDER,   40,  SHELLDER,   40 ; 3
 	db GOLDEEN,    20,  GOLDEEN,    20 ; 4

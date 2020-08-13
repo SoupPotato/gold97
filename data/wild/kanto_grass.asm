@@ -252,7 +252,7 @@ KantoGrassWildMons:
 	db 52, MAGNETON
 	db 52, ELECTRODE
 	db 53, HAUNTER
-	db 53, CURPAN
+	db 53, PANGSHI
 	db 52, RATICATE
 	db 53, RATICATE
 	db 53, RATICATE
@@ -260,7 +260,7 @@ KantoGrassWildMons:
 	db 52, MAGNETON
 	db 52, ELECTRODE
 	db 53, HAUNTER
-	db 53, CURPAN
+	db 53, PANGSHI
 	db 52, RATICATE
 	db 53, RATICATE
 	db 53, RATICATE
@@ -268,7 +268,7 @@ KantoGrassWildMons:
 	db 52, MAGNETON
 	db 52, ELECTRODE
 	db 53, HAUNTER
-	db 53, CURPAN
+	db 53, PANGSHI
 	db 52, RATICATE
 	db 53, RATICATE
 	db 53, RATICATE
@@ -309,7 +309,7 @@ KantoGrassWildMons:
 	db 55, WOLFAN
 	db 55, SLOWBRO
 	db 57, JYNX
-	db 56, WARFARU
+	db 56, WARWOLF
 	db 58, JYNX
 	; day
 	db 55, GOLBAT
@@ -317,7 +317,7 @@ KantoGrassWildMons:
 	db 55, WOLFAN
 	db 55, SLOWBRO
 	db 57, JYNX
-	db 56, WARFARU
+	db 56, WARWOLF
 	db 58, JYNX
 	; nite
 	db 55, GOLBAT
@@ -325,7 +325,7 @@ KantoGrassWildMons:
 	db 55, WOLFAN
 	db 55, SLOWBRO
 	db 57, SNEASEL
-	db 56, WARFARU
+	db 56, WARWOLF
 	db 58, SNEASEL
 
 	db -1 ; end

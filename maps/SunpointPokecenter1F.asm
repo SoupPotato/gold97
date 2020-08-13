@@ -43,7 +43,7 @@ SunpointPokecenter1FLassText:
 	line "friends?"
 	para "I always brag"
 	line "about my beautiful"
-	cont "BELLRING."
+	cont "BELLRUN."
 	done
 
 CianwoodGymGuyText:

@@ -92,12 +92,12 @@ NanjoForestSilverScript:
 	writetext NanjoForestSilverBefore
 	waitbutton
 	closetext
-	checkevent EVENT_GOT_CRUISE_FROM_ELM
+	checkevent EVENT_GOT_CRUIZE_FROM_ELM
 	iftrue .Cruise
 	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
 	iftrue .CHIKORITA
 	winlosstext NanjoForestSilverTextWin, NanjoForestSilverTextLoss
-	loadtrainer RIVAL2, RIVAL2_1_CRUISE
+	loadtrainer RIVAL2, RIVAL2_1_CRUIZE
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle

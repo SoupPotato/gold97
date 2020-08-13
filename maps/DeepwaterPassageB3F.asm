@@ -33,14 +33,14 @@ DeepwaterPassageB3FPryceScript:
 	applymovement ICE_PATH_NEW_PRYCE, PryceLeavesMovement
 	disappear ICE_PATH_NEW_PRYCE
 	setevent EVENT_HERDED_FARFETCHD
-	clearevent EVENT_FOUGHT_BIPETAL
+	clearevent EVENT_FOUGHT_BELMITT
 	end
 	
 .PryceWalksAroundPlayer:
 	applymovement ICE_PATH_NEW_PRYCE, PryceLeavesMovementAlt
 	disappear ICE_PATH_NEW_PRYCE
 	setevent EVENT_HERDED_FARFETCHD
-	clearevent EVENT_FOUGHT_BIPETAL
+	clearevent EVENT_FOUGHT_BELMITT
 	end
 
 PryceGreetingText:

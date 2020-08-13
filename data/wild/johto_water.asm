@@ -31,14 +31,14 @@ JohtoWaterWildMons:
 	
 	map_id RUINS_OF_ALPH_OUTSIDE
 	db 6 percent ; encounter rate
-	db 15, OSUNFISH
+	db 15, CORASUN
 	db 18, QUAGSIRE
 	db 15, QUAGSIRE
 	
 	map_id SUNPOINT_CITY
 	db 6 percent ; encounter rate
 	db 22, TENTACOOL
-	db 20, OSUNFISH
+	db 20, CORASUN
 	db 24, TENTACRUEL
 	
 	map_id ROUTE_119
@@ -122,7 +122,7 @@ JohtoWaterWildMons:
 	map_id ROUTE_118
 	db 6 percent ; encounter rate
 	db 20, TENTACOOL
-	db 25, OSUNFISH
+	db 25, CORASUN
 	db 25, TENTACRUEL
 	
 	map_id SUNPOINT_DOCKS

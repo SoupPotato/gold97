@@ -1,6 +1,6 @@
 	const_def 2 ; object constants
 	const BLUEFORESTHOUSE_1_GRANNY
-	const BLUEFORESTHOUSE_1_ANIMON
+	const BLUEFORESTHOUSE_1_METTO
 
 BlueForestNightmareHouse_MapScripts:
 	db 0 ; scene scripts
@@ -28,7 +28,7 @@ BlueForestNightmareHouseAnimonScript:
 	faceplayer
 	opentext
 	writetext BlueForestNightmareHouseMonText
-	cry ANIMON
+	cry METTO
 	waitbutton
 	closetext
 	end
@@ -42,7 +42,7 @@ Text_NightmareIntro:
 	text "I had a terrible"
 	line "nightmare last"
 	para "night that my"
-	line "ANIMON had dis-"
+	line "METTO had dis-"
 	cont "appeared."
 	para "I was so heart-"
 	line "broken."

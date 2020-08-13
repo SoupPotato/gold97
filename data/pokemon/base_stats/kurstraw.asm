@@ -1,4 +1,4 @@
-	db CURSTRAW ; 220
+	db KURSTRAW ; 220
 
 	db  55,  55,  55,  80,  80,  80
 	;   hp  atk  def  spd  sat  sdf
@@ -11,7 +11,7 @@
 	db 100 ; unknown 1
 	db 25 ; step cycles to hatch
 	db 5 ; unknown 2
-	INCBIN "gfx/pokemon/curstraw/front.dimensions"
+	INCBIN "gfx/pokemon/kurstraw/front.dimensions"
 	db 0, 0, 0, 0 ; padding
 	db GROWTH_FAST ; growth rate
 	dn EGG_INDETERMINATE, EGG_INDETERMINATE ; egg groups

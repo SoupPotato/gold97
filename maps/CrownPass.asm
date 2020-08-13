@@ -19,13 +19,13 @@ RivalBattleFinal:
 	writetext UndergroundSilverBeforeText
 	waitbutton
 	closetext
-	checkevent EVENT_GOT_CRUISE_FROM_ELM
+	checkevent EVENT_GOT_CRUIZE_FROM_ELM
 	iftrue .cruise
 	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
 	iftrue .CHIKORITA
 	winlosstext UndergroundSilverWinText, UndergroundSilverLossText
 	;setlasttalked SLOWPOKE_WELL_B1F_SILVER
-	loadtrainer RIVAL1, RIVAL1_5_CRUISE
+	loadtrainer RIVAL1, RIVAL1_5_CRUIZE
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
