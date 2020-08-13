@@ -391,7 +391,7 @@ Movement_102DownOne:
 	turn_head UP
 	step_end
 	
-Movement_102SilverDownOne
+Movement_102SilverDownOne:
 	step DOWN
 	step_end
 
@@ -454,7 +454,7 @@ Route102SilverWinText:
 	cont "#MON!"
 	done
 	
-Route102SilverLossText
+Route102SilverLossText:
 	text "My team is the"
 	line "best!"
 	done

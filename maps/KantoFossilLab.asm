@@ -225,7 +225,7 @@ YouHaveHelixFossilText:
 	line "into a #MON?"
 	done
 	
-YouHaveDomeFossilText
+YouHaveDomeFossilText:
 	text "Oh, what's this?"
 	para "You have a DOME"
 	line "FOSSIL!"

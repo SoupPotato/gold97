@@ -87,7 +87,7 @@ SceneRocketTakeOverScript:
 .SceneEcruteakNothing:
 	end
 
-WorkerScript;
+WorkerScript:
 	faceplayer
 	opentext
 	writetext WorkerText

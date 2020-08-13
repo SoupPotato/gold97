@@ -69,7 +69,7 @@ AlloyCafeSailorText:
 	line "delicious!"
 	done
 	
-AlloyCafeClerkText
+AlloyCafeClerkText:
 	text "Welcome to"
 	line "ALLOY CAFE!"
 	para "We have food to"

@@ -60,7 +60,7 @@ SanskritRocketHouseReceptionistScript:
 	disappear HONDO_ROCKETBASE_KEY_GRUNT
 	end
 	
-Runforyourlife
+Runforyourlife:
 	big_step RIGHT
 	big_step RIGHT
 	big_step RIGHT

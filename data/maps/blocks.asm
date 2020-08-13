@@ -770,3 +770,6 @@ KantoVictoryRoad_Blocks:
 
 SafariZoneBeta_Blocks:
 	INCBIN "maps/SafariZoneBeta.blk"
+
+KantoPowerPlant_Blocks:
+	INCBIN "maps/KantoPowerPlant.blk"

@@ -45,7 +45,7 @@ HontoTownMonsterScript:
 	turnobject HONTO_MONSTER, UP
 	end
 
-HontoTownYoungsterScript
+HontoTownYoungsterScript:
 	jumptextfaceplayer HontoTownYoungsterText
 
 SanskritTownSign:

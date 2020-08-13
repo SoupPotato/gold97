@@ -91,13 +91,13 @@ WhitneyToRockets:
 	step LEFT
 	step_end
 	
-RocketMtoWhitney
+RocketMtoWhitney:
 	big_step RIGHT
 	big_step RIGHT
 	step RIGHT
 	step_end
 	
-RocketFtoWhitney
+RocketFtoWhitney:
 	big_step RIGHT
 	big_step RIGHT
 	step_end

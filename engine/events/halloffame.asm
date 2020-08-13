@@ -593,7 +593,7 @@ HOF_AnimatePlayerPic:
 .PlayTime:
 	db "PLAY TIME@"
 	
-HOF_PlayCry
+HOF_PlayCry:
 	ld a, [wCurPartySpecies]
 	cp EGG
 	jr z, .fail

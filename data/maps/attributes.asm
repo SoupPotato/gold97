@@ -547,3 +547,4 @@ ENDM
 	map_attributes KantoVictoryRoad, KANTO_VICTORY_ROAD, $1d, 0
 	map_attributes SafariZoneFuchsiaGateBeta, SAFARI_ZONE_FUCHSIA_GATE_BETA, $00, 0
 	map_attributes SafariZoneBeta, SAFARI_ZONE_BETA, $46, 0
+	map_attributes KantoPowerPlant, KANTO_POWER_PLANT, $00, 0
