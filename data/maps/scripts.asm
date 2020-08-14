@@ -339,6 +339,8 @@ INCLUDE "maps/KantoVictoryRoad.asm"
 INCLUDE "maps/SafariZoneFuchsiaGateBeta.asm"
 INCLUDE "maps/SafariZoneBeta.asm"
 INCLUDE "maps/KantoPowerPlant.asm"
+INCLUDE "maps/SeafoamIslands1F.asm"
+INCLUDE "maps/SeafoamIslandsB1F.asm"
 
 SECTION "Map Scripts 21", ROMX
 

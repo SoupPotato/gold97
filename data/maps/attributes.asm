@@ -548,3 +548,5 @@ ENDM
 	map_attributes SafariZoneFuchsiaGateBeta, SAFARI_ZONE_FUCHSIA_GATE_BETA, $00, 0
 	map_attributes SafariZoneBeta, SAFARI_ZONE_BETA, $46, 0
 	map_attributes KantoPowerPlant, KANTO_POWER_PLANT, $00, 0
+	map_attributes SeafoamIslands1F, SEAFOAM_ISLANDS_1F, $09, 0
+	map_attributes SeafoamIslandsB1F, SEAFOAM_ISLANDS_B1F, $09, 0

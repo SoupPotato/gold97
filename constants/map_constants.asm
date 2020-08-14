@@ -370,6 +370,8 @@ ENDM
 	map_const SAFARI_ZONE_FUCHSIA_GATE_BETA,                5,  4 ; 89
 	map_const SAFARI_ZONE_BETA,                            10, 18 ; 90
 	map_const KANTO_POWER_PLANT,                           20, 18
+	map_const SEAFOAM_ISLANDS_1F,                          15, 9
+	map_const SEAFOAM_ISLANDS_B1F,                         20, 18
 
 
 	newgroup                                                      ; 22

@@ -243,7 +243,7 @@ KantoTeacherText:
 KantoRegion_MapEvents:
 	db 0, 0 ; filler
 
-	db 36 ; warp events
+	db 38 ; warp events
 	warp_event 24, 21, KANTO_DEPT_STORE_1F, 1
 	warp_event 29, 21, KANTO_CELADON_MANSION_1F, 1
 	warp_event 30, 15, KANTO_CELADON_MANSION_1F, 3
@@ -280,6 +280,8 @@ KantoRegion_MapEvents:
 	warp_event  3,  9, KANTO_VICTORY_ROAD,10
 	warp_event 35, 45, SAFARI_ZONE_FUCHSIA_GATE_BETA,3
 	warp_event 47, 23, KANTO_POWER_PLANT,1
+	warp_event 20, 55, SEAFOAM_ISLANDS_1F,1
+	warp_event 26, 55, SEAFOAM_ISLANDS_1F,2
 
 	db 0 ; coord events
 

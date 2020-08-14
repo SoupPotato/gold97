@@ -773,3 +773,9 @@ SafariZoneBeta_Blocks:
 
 KantoPowerPlant_Blocks:
 	INCBIN "maps/KantoPowerPlant.blk"
+	
+SeafoamIslands1F_Blocks:
+	INCBIN "maps/SeafoamIslands1F.blk"
+	
+SeafoamIslandsB1F_Blocks:
+	INCBIN "maps/SeafoamIslandsB1F.blk"
