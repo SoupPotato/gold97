@@ -374,6 +374,9 @@ ENDM
 	map_const SEAFOAM_ISLANDS_B1F,                         20, 18
 	map_const KANTO_MUSEUM_1F,                             10, 4
 	map_const KANTO_MUSEUM_2F,                             7, 4
+	map_const POKEMON_TOWER_1F,                            10, 9
+	map_const POKEMON_TOWER_2F,                            10, 9
+	map_const POKEMON_TOWER_3F,                            10, 9
 
 
 	newgroup                                                      ; 22

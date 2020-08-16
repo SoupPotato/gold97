@@ -785,3 +785,12 @@ KantoMuseum1F_Blocks:
 	
 KantoMuseum2F_Blocks:
 	INCBIN "maps/KantoMuseum2F.blk"
+
+PokemonTower1F_Blocks:
+	INCBIN "maps/PokemonTower1F.blk"
+	
+PokemonTower2F_Blocks:
+	INCBIN "maps/PokemonTower2F.blk"
+	
+PokemonTower3F_Blocks:
+	INCBIN "maps/PokemonTower3F.blk"

@@ -112,6 +112,9 @@ INCLUDE "gfx/tilesets/battle_tower_outside_palette_map.asm"
 TilesetWestPalMap:
 INCLUDE "gfx/tilesets/west_palette_map.asm"
 
+TilesetGraveyardPalMap:
+INCLUDE "gfx/tilesets/graveyard_palette_map.asm"
+
 ; unused
 rept 26
 	db $06

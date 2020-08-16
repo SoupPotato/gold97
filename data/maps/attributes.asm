@@ -552,4 +552,6 @@ ENDM
 	map_attributes SeafoamIslandsB1F, SEAFOAM_ISLANDS_B1F, $09, 0
 	map_attributes KantoMuseum1F, KANTO_MUSEUM_1F, $00, 0
 	map_attributes KantoMuseum2F, KANTO_MUSEUM_2F, $00, 0
-
+	map_attributes PokemonTower1F, POKEMON_TOWER_1F, $00, 0
+	map_attributes PokemonTower2F, POKEMON_TOWER_2F, $00, 0
+	map_attributes PokemonTower3F, POKEMON_TOWER_3F, $00, 0

@@ -50,3 +50,4 @@ Tilesets::
 	tileset TilesetOmanyteWordRoom
 	tileset TilesetAerodactylWordRoom
 	tileset TilesetMuseum
+	tileset TilesetGraveyard

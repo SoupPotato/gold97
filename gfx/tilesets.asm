@@ -296,6 +296,8 @@ TilesetMuseumColl::
 INCLUDE "data/tilesets/museum_collision.asm"
 
 
+
+
 SECTION "Tileset Data 8", ROMX
 
 TilesetHoOhWordRoomMeta:
@@ -312,6 +314,15 @@ INCBIN "data/tilesets/aerodactyl_word_room_metatiles.bin"
 
 TilesetForestMeta:
 INCBIN "data/tilesets/forest_metatiles.bin"
+
+TilesetGraveyardGFX::
+INCBIN "gfx/tilesets/graveyard.2bpp.lz"
+
+TilesetGraveyardMeta::
+INCBIN "data/tilesets/graveyard_metatiles.bin"
+
+TilesetGraveyardColl::
+INCLUDE "data/tilesets/graveyard_collision.asm"
 
 SECTION "Tileset Data 9", ROMX
 
