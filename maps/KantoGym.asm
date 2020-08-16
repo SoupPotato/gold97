@@ -329,7 +329,7 @@ ErikaBeatenText:
 
 PlayerReceivedRainbowBadgeText:
 	text "<PLAYER> received"
-	line "RISINGBADGE."
+	line "EARTHBADGE."
 	done
 
 ErikaExplainTMText:
@@ -346,7 +346,7 @@ KantoGym_MapEvents:
 
 	db 2 ; warp events
 	warp_event  4, 17, KANTO_REGION, 8
-	warp_event  5, 17, KANTO_REGION, 15
+	warp_event  5, 17, KANTO_REGION, 16
 
 	db 2 ; coord events
 	coord_event  5, 13, SCENE_DEFAULT, RedEntersGymScene
