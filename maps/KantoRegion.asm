@@ -270,8 +270,8 @@ KantoRegion_MapEvents:
 	warp_event 47, 53, KANTO_BATTLE_CLUB_1F, 1
 	warp_event 37,  7, KANTO_HOUSE_1, 1
 	warp_event 11, 11, KANTO_HOUSE_2, 1
-	warp_event 49,  5, KANTO_HOUSE_3, 1
-	warp_event 17, 23, KANTO_HOUSE_4, 1
+	warp_event 17, 23, KANTO_HOUSE_3, 1
+	warp_event 49,  5, KANTO_HOUSE_4, 1
 	warp_event  8, 55, KANTO_FOSSIL_LAB, 1
 	warp_event  2, 15, KANTO_VICTORY_ROAD,1
 	warp_event 37, 17, KANTO_CAFE, 1

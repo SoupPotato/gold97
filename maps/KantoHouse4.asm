@@ -91,33 +91,7 @@ MagikarpHouseBookshelf:
 	jumpstd difficultbookshelf
 
 MagikarpLengthRaterText_LakeOfRageHistory:
-	text "You should never"
-	line "see this dialogue."
-	para "If you are, you've"
-	line "either stumbled"
-	para "upon a glitch, or"
-	line "you're sequence"
-	cont "breaking."
-	para "This text only"
-	line "displays if you"
-	para "talk to this guy"
-	line "before beating"
-	para "TEAM ROCKET in the"
-	line "RADIO TOWER."
-	para "And you shouldn't"
-	line "be here if you"
-	cont "haven't done that."
-	para "The developer"
-	line "didn't feel like"
-	para "changing the"
-	line "script for this"
-	para "guy since it's not"
-	line "really necessary."
-	para "So what are you up"
-	line "to here?"
-	para "You should go back"
-	line "and do what you're"
-	cont "supposed to do."
+	text "UNUSED" ; wasting a lot of space on unused text tbh
 	done
 
 MagikarpLengthRaterText_MenInBlack:
@@ -208,8 +182,8 @@ KantoHouse4_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  4,  7, KANTO_REGION, 27
-	warp_event  5,  7, KANTO_REGION, 27
+	warp_event  4,  7, KANTO_REGION, 28
+	warp_event  5,  7, KANTO_REGION, 28
 
 	db 0 ; coord events
 

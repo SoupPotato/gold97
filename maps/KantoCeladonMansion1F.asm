@@ -77,7 +77,7 @@ KantoCeladonMansion1F_MapEvents:
 
 	db 5 ; warp events
 	warp_event  4, 11, KANTO_REGION, 2
-	warp_event  5, 11, KANTO_REGION, 14
+	warp_event  5, 11, KANTO_REGION, 2
 	warp_event  4,  0, KANTO_REGION, 3
 	warp_event  2,  0, KANTO_CELADON_MANSION_2F, 1
 	warp_event  7,  0, KANTO_CELADON_MANSION_2F, 4
