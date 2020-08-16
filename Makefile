@@ -9,9 +9,9 @@ RGBFIX := rgbfix
 RGBGFX := rgbgfx
 RGBLINK := rgblink
 
-roms := pokecrystal.gbc pokecrystal11.gbc
+roms := pokegold97.gbc pokesilver97.gbc
 
-crystal_obj := \
+gold_obj := \
 audio.o \
 home.o \
 main.o \
@@ -27,23 +27,25 @@ gfx/pics.o \
 gfx/sprites.o \
 lib/mobile/main.o
 
-crystal11_obj := $(crystal_obj:.o=11.o)
+silver_obj := $(gold_obj:.o=_silver.o)
 
 
 ### Build targets
 
 .SUFFIXES:
-.PHONY: all crystal crystal11 clean compare tools
+.PHONY: all gold silver clean compare tools
 .SECONDEXPANSION:
 .PRECIOUS:
 .SECONDARY:
 
-all: crystal
-crystal: pokecrystal.gbc
-crystal11: pokecrystal11.gbc
+all: gold silver
+gold: pokegold97.gbc
+silver: pokesilver97.gbc
 
 clean:
-	rm -f $(roms) $(crystal_obj) $(crystal11_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym)
+	rm -f $(roms) $(gold_obj) $(silver_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym)
+	find gfx \( -name "*.[12]bpp" -o -name "*.lz" -o -name "*.gbcpal" -o -name "*.sgb.tilemap" \) -delete
+	find gfx/pokemon -mindepth 1 ! -path "gfx/pokemon/unown/*" \( -name "bitmask.asm" -o -name "frames.asm" -o -name "front.animated.tilemap" -o -name "front.dimensions" \) -delete
 	$(MAKE) clean -C tools/
 
 compare: $(roms)
@@ -53,8 +55,8 @@ tools:
 	$(MAKE) -C tools/
 
 
-$(crystal_obj):   RGBASMFLAGS = -D _CRYSTAL
-$(crystal11_obj): RGBASMFLAGS = -D _CRYSTAL -D _CRYSTAL11
+$(gold_obj):   RGBASMFLAGS = -D _CRYSTAL -D _CRYSTAL11
+$(silver_obj): RGBASMFLAGS = -D _CRYSTAL -D _CRYSTAL11 -D _SILVER
 
 # The dep rules have to be explicit or else missing files won't be reported.
 # As a side effect, they're evaluated immediately instead of when the rule is invoked.
@@ -70,21 +72,19 @@ ifeq (,$(filter clean tools,$(MAKECMDGOALS)))
 
 $(info $(shell $(MAKE) -C tools))
 
-$(foreach obj, $(crystal11_obj), $(eval $(call DEP,$(obj),$(obj:11.o=.asm))))
-$(foreach obj, $(crystal_obj), $(eval $(call DEP,$(obj),$(obj:.o=.asm))))
+$(foreach obj, $(silver_obj), $(eval $(call DEP,$(obj),$(obj:_silver.o=.asm))))
+$(foreach obj, $(gold_obj), $(eval $(call DEP,$(obj),$(obj:.o=.asm))))
 
 endif
 
 
-pokecrystal.gbc: $(crystal_obj) pokecrystal.link
-	$(RGBLINK) -n pokecrystal.sym -m pokecrystal.map -l pokecrystal.link -o $@ $(crystal_obj)
+pokegold97.gbc: $(gold_obj) pokecrystal.link
+	$(RGBLINK) -n pokecrystal.sym -m pokecrystal.map -l pokecrystal.link -o $@ $(gold_obj)
 	$(RGBFIX) -Cjv -i BYTE -k 01 -l 0x33 -m 0x10 -p 0 -r 3 -t PM_CRYSTAL $@
-	#tools/sort_symfile.sh pokecrystal.sym
 
-pokecrystal11.gbc: $(crystal11_obj) pokecrystal.link
-	$(RGBLINK) -n pokecrystal11.sym -m pokecrystal11.map -l pokecrystal.link -o $@ $(crystal11_obj)
-	$(RGBFIX) -Cjv -i BYTE -k 01 -l 0x33 -m 0x10 -n 1 -p 0 -r 3 -t PM_CRYSTAL $@
-	tools/sort_symfile.sh pokecrystal11.sym
+pokesilver97.gbc: $(silver_obj) pokecrystal.link
+	$(RGBLINK) -n pokecrystal11.sym -m pokecrystal11.map -l pokecrystal.link -o $@ $(silver_obj)
+	$(RGBFIX) -Cjv -i BYTE -k 01 -l 0x33 -m 0x10 -p 0 -r 3 -t PM_CRYSTAL $@
 
 
 # For files that the compressor can't match, there will be a .lz file suffixed with the md5 hash of the correct uncompressed file.
