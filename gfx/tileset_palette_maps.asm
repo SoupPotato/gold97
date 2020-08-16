@@ -91,8 +91,8 @@ INCLUDE "gfx/tilesets/lighthouse_palette_map.asm"
 TilesetPlayersRoomPalMap:
 INCLUDE "gfx/tilesets/players_room_palette_map.asm"
 
-UnusedMuseumPalMap:
-INCLUDE "gfx/tilesets/unused_museum_palette_map.asm"
+TilesetMuseumPalMap:
+INCLUDE "gfx/tilesets/museum_palette_map.asm"
 
 TilesetIcePathPalMap:
 INCLUDE "gfx/tilesets/ice_path_palette_map.asm"

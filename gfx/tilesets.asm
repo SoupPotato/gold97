@@ -286,6 +286,15 @@ INCBIN "data/tilesets/ruins_of_alph_metatiles.bin"
 TilesetRuinsOfAlphColl:
 INCLUDE "data/tilesets/ruins_of_alph_collision.asm"
 
+TilesetMuseumGFX::
+INCBIN "gfx/tilesets/museum.2bpp.lz"
+
+TilesetMuseumMeta::
+INCBIN "data/tilesets/museum_metatiles.bin"
+
+TilesetMuseumColl::
+INCLUDE "data/tilesets/museum_collision.asm"
+
 
 SECTION "Tileset Data 8", ROMX
 
