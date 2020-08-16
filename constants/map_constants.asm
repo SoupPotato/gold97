@@ -342,7 +342,7 @@ ENDM
 	map_const KANTO_GAME_CORNER_PRIZE_ROOM,                 5,  4 ; 20
 	map_const KANTO_GYM,                                    5,  9 ; 21
 	map_const KANTO_LEFTOVERS_HOUSE,                        6,  4 ; 22
-	map_const ISEN_STRAIT_SEASIDE_PATH_GATE,                5,  4 ; 26
+	
 	map_const ROUTE_114,                                   20,  9 ; 13
 	map_const SILPH_CO_1F,                                 12,  8 ; 10
 	map_const OAKS_KANTO_LAB,                               5,  6 ;  6
@@ -396,6 +396,7 @@ ENDM
 	map_const YORON_MART,                                   8,  4 ;  5
 	map_const ROUTE_119_SUNPOINT_GATE,                      5,  4 ; 13
 	map_const ROCKET_SHIP_BASE,                            20, 18 ;  4
+	map_const ISEN_STRAIT_SEASIDE_PATH_GATE,                5,  4 ; 26
 
 	newgroup                                                      ; 23
 
