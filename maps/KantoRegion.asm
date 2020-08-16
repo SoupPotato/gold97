@@ -243,14 +243,14 @@ KantoTeacherText:
 KantoRegion_MapEvents:
 	db 0, 0 ; filler
 
-	db 43 ; warp events
+	db 45 ; warp events
 	warp_event 24, 21, KANTO_DEPT_STORE_1F, 1
 	warp_event 29, 21, KANTO_CELADON_MANSION_1F, 1
 	warp_event 30, 15, KANTO_CELADON_MANSION_1F, 3
 	warp_event 38, 35, DIGLETTS_CAVE,1
 	warp_event 29, 33, KANTO_POKECENTER_1F, 1
 	warp_event 23, 27, KANTO_GAME_CORNER, 1
-	warp_event 24, 27, KANTO_GAME_CORNER_PRIZE_ROOM, 1
+	warp_event 27, 27, KANTO_GAME_CORNER_PRIZE_ROOM, 1
 	warp_event  2,  5, KANTO_GYM, 1
 	warp_event 35, 13, KANTO_LEFTOVERS_HOUSE, 1
 	warp_event  4, 24, ROUTE_115_KANTO_GATE, 4
@@ -274,8 +274,8 @@ KantoRegion_MapEvents:
 	warp_event 17, 23, KANTO_HOUSE_4, 1
 	warp_event  8, 55, KANTO_FOSSIL_LAB, 1
 	warp_event  2, 15, KANTO_VICTORY_ROAD,1
-	warp_event 27, 25, KANTO_CAFE, 1
-	warp_event 37, 17, KANTO_CAFE, 2 ; daycare house
+	warp_event 37, 17, KANTO_CAFE, 1
+	warp_event  0,  0, KANTO_CAFE, 2 ; daycare house
 	warp_event  2,  9, KANTO_VICTORY_ROAD,10
 	warp_event  3,  9, KANTO_VICTORY_ROAD,10
 	warp_event 35, 45, SAFARI_ZONE_FUCHSIA_GATE_BETA,3
@@ -287,6 +287,8 @@ KantoRegion_MapEvents:
 	warp_event 54, 31, POKEMON_TOWER_1F, 1
 	warp_event 15, 29, TRAINER_HOUSE_1F,1
 	warp_event 51, 33, KANTO_FUJI_HOUSE, 1
+	warp_event 31, 35, KANTO_DOCK, 1
+	warp_event 32, 35, KANTO_DOCK, 1
 
 	db 0 ; coord events
 
@@ -307,7 +309,7 @@ KantoRegion_MapEvents:
 
 	db 10 ; object events
 	object_event  9, 46, SPRITE_FISHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoFisherScript, -1
-	object_event 29, 27, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoCooltrainerMScript, -1
+	object_event 38, 19, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoCooltrainerMScript, -1
 	object_event 23, 23, SPRITE_TEACHER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoTeacherScript, -1
 	object_event 39, 10, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoPokefanMScript, -1
 	object_event 33, 24, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoLassScript, -1

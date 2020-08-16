@@ -556,3 +556,4 @@ ENDM
 	map_attributes TrainerHouse1F, TRAINER_HOUSE_1F, $00, 0
 	map_attributes TrainerHouseB1F, TRAINER_HOUSE_B1F, $00, 0
 	map_attributes KantoFujiHouse, KANTO_FUJI_HOUSE, $00, 0
+	map_attributes KantoDock, KANTO_DOCK, $00, 0

@@ -797,3 +797,6 @@ TrainerHouse1F_Blocks:
 
 TrainerHouseB1F_Blocks:
 	INCBIN "maps/TrainerHouseB1F.blk"
+
+KantoDock_Blocks:
+	INCBIN "maps/KantoDock.blk"

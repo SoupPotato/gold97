@@ -378,6 +378,7 @@ ENDM
 	map_const TRAINER_HOUSE_1F,                             5,  7 ;  6
 	map_const TRAINER_HOUSE_B1F,                            5,  8 ;  7
 	map_const KANTO_FUJI_HOUSE,                             5, 4
+	map_const KANTO_DOCK,                                  14, 6
 
 
 	newgroup                                                      ; 22
