@@ -109,6 +109,7 @@ KantoHouse1_Blocks:
 KantoHouse2_Blocks:
 KantoHouse3_Blocks:
 KantoHouse4_Blocks:
+KantoFujiHouse_Blocks:
 	INCBIN "maps/House1.blk"
 
 Route109Route110Gate_Blocks:
@@ -205,7 +206,6 @@ FrostpointMart_Blocks:
 SanskritMart_Blocks:
 RyukyuMart_Blocks:
 CrownMart_Blocks:
-KantoMart_Blocks:
 	INCBIN "maps/Mart.blk"
 
 SeasidePath_Blocks:
@@ -317,9 +317,6 @@ NationalParkBugContest_Blocks:
 
 KurtsHouse_Blocks:
 	INCBIN "maps/KurtsHouse.blk"
-
-KantoHotel_Blocks:
-	INCBIN "maps/KantoHotel.blk"
 
 RuinsOfAlphOutside_Blocks:
 	INCBIN "maps/RuinsOfAlphOutside.blk"

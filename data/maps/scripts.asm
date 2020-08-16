@@ -4,7 +4,6 @@ INCLUDE "maps/TeknosGym.asm"
 INCLUDE "maps/WestportBikeShop.asm"
 INCLUDE "maps/WestportHappinessRater.asm"
 INCLUDE "maps/BillsFamilysHouse.asm"
-INCLUDE "maps/KantoHotel.asm"
 INCLUDE "maps/Route102N64House.asm"
 INCLUDE "maps/WestportPPSpeechHouse.asm"
 INCLUDE "maps/WestportNameRater.asm"
@@ -37,7 +36,6 @@ INCLUDE "maps/TeknosAquarium2F.asm"
 INCLUDE "maps/EndonCaveB1F.asm"
 INCLUDE "maps/RadioTower6F.asm"
 INCLUDE "maps/KantoBattleClub1F.asm"
-INCLUDE "maps/KantoMart.asm"
 
 SECTION "Map Scripts 3", ROMX
 
@@ -372,6 +370,7 @@ INCLUDE "maps/PokemonTower2F.asm"
 INCLUDE "maps/PokemonTower3F.asm"
 INCLUDE "maps/TrainerHouse1F.asm"
 INCLUDE "maps/TrainerHouseB1F.asm"
+INCLUDE "maps/KantoFujiHouse.asm"
 
 
 SECTION "Map Scripts 23", ROMX
