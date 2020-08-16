@@ -794,3 +794,9 @@ PokemonTower2F_Blocks:
 	
 PokemonTower3F_Blocks:
 	INCBIN "maps/PokemonTower3F.blk"
+
+TrainerHouse1F_Blocks:
+	INCBIN "maps/TrainerHouse1F.blk"
+
+TrainerHouseB1F_Blocks:
+	INCBIN "maps/TrainerHouseB1F.blk"

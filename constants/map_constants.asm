@@ -377,6 +377,8 @@ ENDM
 	map_const POKEMON_TOWER_1F,                            10, 9
 	map_const POKEMON_TOWER_2F,                            10, 9
 	map_const POKEMON_TOWER_3F,                            10, 9
+	map_const TRAINER_HOUSE_1F,                             5,  7 ;  6
+	map_const TRAINER_HOUSE_B1F,                            5,  8 ;  7
 
 
 	newgroup                                                      ; 22

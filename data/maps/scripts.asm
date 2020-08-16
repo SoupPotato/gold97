@@ -370,6 +370,8 @@ INCLUDE "maps/UrasoeTrail.asm"
 INCLUDE "maps/PokemonTower1F.asm"
 INCLUDE "maps/PokemonTower2F.asm"
 INCLUDE "maps/PokemonTower3F.asm"
+INCLUDE "maps/TrainerHouse1F.asm"
+INCLUDE "maps/TrainerHouseB1F.asm"
 
 
 SECTION "Map Scripts 23", ROMX

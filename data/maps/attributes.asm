@@ -555,3 +555,5 @@ ENDM
 	map_attributes PokemonTower1F, POKEMON_TOWER_1F, $00, 0
 	map_attributes PokemonTower2F, POKEMON_TOWER_2F, $00, 0
 	map_attributes PokemonTower3F, POKEMON_TOWER_3F, $00, 0
+	map_attributes TrainerHouse1F, TRAINER_HOUSE_1F, $00, 0
+	map_attributes TrainerHouseB1F, TRAINER_HOUSE_B1F, $00, 0
