@@ -226,7 +226,6 @@ AmamiPokecenter1F_Blocks:
 YoronPokecenter1F_Blocks:
 StandPokecenter1F_Blocks:
 KobanPokecenter1F_Blocks:
-KantoPokecenterWest1F_Blocks:
 SunpointPokecenter1F_Blocks:
 SilentPokecenter1F_Blocks:
 RyukyuPokecenter1F_Blocks:

@@ -475,7 +475,6 @@ ENDM
 	map_attributes KantoCeladonMansion3F, KANTO_CELADON_MANSION_3F, $00, 0
 	map_attributes KantoCeladonMansionRoof, KANTO_CELADON_MANSION_ROOF, $00, 0
 	map_attributes KantoCeladonMansionRoofHouse, KANTO_CELADON_MANSION_ROOF_HOUSE, $00, 0
-	map_attributes KantoPokecenterWest1F, KANTO_POKECENTER_WEST_1F, $00, 0
 	map_attributes KantoGameCorner, KANTO_GAME_CORNER, $00, 0
 	map_attributes KantoGameCornerPrizeRoom, KANTO_GAME_CORNER_PRIZE_ROOM, $00, 0
 	map_attributes KantoGym, KANTO_GYM, $00, 0

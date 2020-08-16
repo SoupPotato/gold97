@@ -349,7 +349,6 @@ ENDM
 	map_const BLUES_HOUSE,                                  5,  4 ;  5
 	map_const REDS_HOUSE_1F,                                4,  4 ;  3
 	map_const REDS_HOUSE_2F,                                4,  4 ;  4
-	map_const KANTO_POKECENTER_WEST_1F,                     8,  4 ; 17
 	map_const KANTO_BATTLE_CLUB_1F, 					    5,  4 ; asdf
 	map_const KANTO_BATTLE_CLUB_B1F,					   10,  9 ; asda
 	map_const KANTO_HOUSE_1,							    5,  4 ;
