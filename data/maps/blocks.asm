@@ -779,3 +779,9 @@ SeafoamIslands1F_Blocks:
 	
 SeafoamIslandsB1F_Blocks:
 	INCBIN "maps/SeafoamIslandsB1F.blk"
+
+KantoMuseum1F_Blocks:
+	INCBIN "maps/KantoMuseum1F.blk"
+	
+KantoMuseum2F_Blocks:
+	INCBIN "maps/KantoMuseum2F.blk"

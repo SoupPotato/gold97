@@ -12,6 +12,8 @@ LoadSpecialMapPalette:
 	jp z, .radio_tower
 	cp TILESET_MANSION
 	jp z, .mansion_mobile
+	cp TILESET_MUSEUM
+	jp z, .museum
 	ld a, [wMapGroup]
 	cp GROUP_ROUTE_103
 	jp nz, .not_route_103
@@ -174,6 +176,11 @@ LoadSpecialMapPalette:
 	scf
 	ret
 	
+.museum
+	call LoadMuseumPalette
+	scf
+	ret
+	
 .SandOverBrownBGPalette:
 	ld hl, SandOverRock
 	ld a, [wTimeOfDayPal]
@@ -312,6 +319,17 @@ LoadMansionPalette:
 
 MansionPalette2:
 INCLUDE "gfx/tilesets/mansion_2.pal"
+	
+LoadMuseumPalette:
+	ld a, BANK(wBGPals1)
+	ld de, wBGPals1
+	ld hl, MuseumPalette
+	ld bc, 8 palettes
+	call FarCopyWRAM
+	ret
+
+MuseumPalette:
+INCLUDE "gfx/tilesets/museum.pal"
 	
 LoadSpecialMapOBPalette:
 	ld a, [wMapGroup]

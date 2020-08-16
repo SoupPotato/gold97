@@ -550,3 +550,6 @@ ENDM
 	map_attributes KantoPowerPlant, KANTO_POWER_PLANT, $00, 0
 	map_attributes SeafoamIslands1F, SEAFOAM_ISLANDS_1F, $09, 0
 	map_attributes SeafoamIslandsB1F, SEAFOAM_ISLANDS_B1F, $09, 0
+	map_attributes KantoMuseum1F, KANTO_MUSEUM_1F, $00, 0
+	map_attributes KantoMuseum2F, KANTO_MUSEUM_2F, $00, 0
+
