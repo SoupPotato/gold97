@@ -1230,6 +1230,332 @@ JohtoGrassWildMons:
 	db 41, MR__MIME
 	db 42, MR__MIME
 	
+	
+	map_id KANTO_REGION
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 39, PIDGEOTTO
+	db 39, RATICATE
+	db 40, BUTTERFREE
+	db 40, JIGGLYPUFF
+	db 43, FEAROW
+	db 40, PIKACHU
+	db 43, MR__MIME
+	; day
+	db 39, PIDGEOTTO
+	db 39, RATICATE
+	db 40, BUTTERFREE
+	db 40, JIGGLYPUFF
+	db 43, FEAROW
+	db 40, PIKACHU
+	db 43, MR__MIME
+	; nite
+	db 39, GOLBAT
+	db 39, RATICATE
+	db 40, VENOMOTH
+	db 40, GLOOM
+	db 43, FEAROW
+	db 40, PIKACHU
+	db 43, MR__MIME
+	
+	map_id DIGLETTS_CAVE
+	db 4 percent, 2 percent, 8 percent ; encounter rates: morn/day/nite
+	; morn
+	db 24, DIGLETT
+	db 24, DIGLETT
+	db 32, DIGLETT
+	db 34, DIGLETT
+	db 40, DUGTRIO
+	db 42, DUGTRIO
+	db 44, DUGTRIO
+	; day
+	db 20, DIGLETT
+	db 24, DIGLETT
+	db 28, DIGLETT
+	db 32, DIGLETT
+	db 36, DUGTRIO
+	db 42, DUGTRIO
+	db 44, DUGTRIO
+	; nite
+	db 24, DIGLETT
+	db 28, DIGLETT
+	db 32, DIGLETT
+	db 38, DIGLETT
+	db 42, DUGTRIO
+	db 44, DUGTRIO
+	db 46, DUGTRIO
+
+	map_id MOUNT_MOON
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 36, GOLBAT
+	db 38, GEODUDE
+	db 38, SANDSLASH
+	db 42, PARASECT
+	db 40, GRAVELER
+	db 38, CLEFAIRY
+	db 38, CLEFAIRY
+	; day
+	db 36, GOLBAT
+	db 38, GEODUDE
+	db 38, SANDSLASH
+	db 42, PARASECT
+	db 40, GRAVELER
+	db 38, CLEFAIRY
+	db 38, CLEFAIRY
+	; nite
+	db 36, GOLBAT
+	db 38, GEODUDE
+	db 38, CLEFAIRY
+	db 42, PARASECT
+	db 40, GRAVELER
+	db 42, CLEFAIRY
+	db 42, CLEFAIRY
+
+	map_id ROCK_TUNNEL_1F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 40, CUBONE
+	db 41, GEODUDE
+	db 42, MACHOKE
+	db 42, GOLBAT
+	db 45, MACHOKE
+	db 42, MAROWAK
+	db 42, MAROWAK
+	; day
+	db 40, CUBONE
+	db 41, GEODUDE
+	db 42, MACHOKE
+	db 42, GOLBAT
+	db 45, MACHOKE
+	db 42, MAROWAK
+	db 42, MAROWAK
+	; nite
+	db 42, GOLBAT
+	db 41, GEODUDE
+	db 42, GRAVELER
+	db 47, HAUNTER
+	db 45, GOLBAT
+	db 45, GOLBAT
+	db 45, CROBAT
+
+	map_id ROCK_TUNNEL_B1F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 42, CUBONE
+	db 44, GRAVELER
+	db 46, ONIX
+	db 42, GOLBAT
+	db 45, MAROWAK
+	db 45, KANGASKHAN
+	db 45, KANGASKHAN
+	; day
+	db 42, CUBONE
+	db 44, GRAVELER
+	db 46, ONIX
+	db 42, GOLBAT
+	db 45, MAROWAK
+	db 45, KANGASKHAN
+	db 45, KANGASKHAN
+	; nite
+	db 42, GOLBAT
+	db 44, GRAVELER
+	db 46, ONIX
+	db 45, GOLBAT
+	db 45, HAUNTER
+	db 45, CROBAT
+	db 45, CROBAT
+
+	map_id KANTO_POWER_PLANT
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 40, VOLTORB
+	db 41, MAGNEMITE
+	db 42, PIKACHU
+	db 42, MAGNETON
+	db 45, ELECTRODE
+	db 42, ELECTABUZZ
+	db 42, ELECTABUZZ
+	; day
+	db 40, VOLTORB
+	db 41, MAGNEMITE
+	db 42, PIKACHU
+	db 42, MAGNETON
+	db 45, ELECTRODE
+	db 42, ELECTABUZZ
+	db 42, ELECTABUZZ
+	; nite
+	db 40, VOLTORB
+	db 41, MAGNEMITE
+	db 42, PIKACHU
+	db 42, PIKACHU
+	db 45, MAGNETON
+	db 42, RAICHU
+	db 42, ELECTABUZZ
+
+	map_id POKEMON_TOWER_2F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 36, GASTLY
+	db 38, GASTLY
+	db 38, GASTLY
+	db 42, CUBONE
+	db 40, CUBONE
+	db 38, GASTLY
+	db 38, GASTLY
+	; day
+	db 36, GASTLY
+	db 38, GASTLY
+	db 38, GASTLY
+	db 42, CUBONE
+	db 40, CUBONE
+	db 38, HAUNTER
+	db 38, HAUNTER
+	; nite
+	db 36, GASTLY
+	db 38, GASTLY
+	db 38, GASTLY
+	db 42, HAUNTER
+	db 40, HAUNTER
+	db 42, CUBONE
+	db 42, CUBONE
+
+	map_id POKEMON_TOWER_3F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 36, GASTLY
+	db 38, GASTLY
+	db 38, CUBONE
+	db 42, CUBONE
+	db 40, HAUNTER
+	db 38, HAUNTER
+	db 38, MAROWAK
+	; day
+	db 36, GASTLY
+	db 38, GASTLY
+	db 38, CUBONE
+	db 42, CUBONE
+	db 40, HAUNTER
+	db 38, HAUNTER
+	db 38, MAROWAK
+	; nite
+	db 36, GASTLY
+	db 38, HAUNTER
+	db 38, HAUNTER
+	db 42, HAUNTER
+	db 40, MAROWAK
+	db 42, MAROWAK
+	db 42, MAROWAK
+
+	map_id SEAFOAM_ISLANDS_1F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 40, SEEL
+	db 41, SHELLDER
+	db 42, KRABBY
+	db 42, SLOWPOKE
+	db 42, PSYDUCK
+	db 45, GOLDUCK
+	db 45, SLOWBRO
+	; day
+	db 40, SEEL
+	db 41, SHELLDER
+	db 42, KRABBY
+	db 42, SLOWPOKE
+	db 42, PSYDUCK
+	db 45, GOLDUCK
+	db 45, SLOWBRO
+	; nite
+	db 40, SEEL
+	db 41, STARYU
+	db 42, KRABBY
+	db 42, STARYU
+	db 42, PSYDUCK
+	db 45, GOLDUCK
+	db 45, SLOWBRO
+
+	map_id SEAFOAM_ISLANDS_B1F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 40, SEEL
+	db 41, SHELLDER
+	db 42, KRABBY
+	db 42, SLOWPOKE
+	db 42, JYNX
+	db 45, KINGLER
+	db 45, SLOWBRO
+	; day
+	db 40, SEEL
+	db 41, SHELLDER
+	db 42, KRABBY
+	db 42, SLOWPOKE
+	db 42, JYNX
+	db 45, KINGLER
+	db 45, SLOWBRO
+	; nite
+	db 40, SEEL
+	db 41, STARYU
+	db 42, KRABBY
+	db 42, STARYU
+	db 42, JYNX
+	db 45, GOLDUCK
+	db 45, SLOWBRO
+
+	map_id SAFARI_ZONE_BETA
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 39, NIDORINO
+	db 39, NIDORINA
+	db 40, EXEGGCUTE
+	db 40, RHYHORN
+	db 43, SCYTHER
+	db 40, TAUROS
+	db 43, CHANSEY
+	; day
+	db 39, NIDORINO
+	db 39, NIDORINA
+	db 40, EXEGGCUTE
+	db 40, RHYHORN
+	db 43, SCYTHER
+	db 40, PINSIR
+	db 43, CHANSEY
+	; nite
+	db 39, NIDORINO
+	db 39, NIDORINA
+	db 40, VENOMOTH
+	db 40, RHYHORN
+	db 43, PINSIR
+	db 40, KANGASKHAN
+	db 43, CHANSEY
+
+
+	map_id KANTO_VICTORY_ROAD
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 44, GRAVELER
+	db 42, RHYHORN
+	db 43, ONIX
+	db 44, GOLBAT
+	db 45, SANDSLASH
+	db 45, RHYDON
+	db 45, RHYDON
+	; day
+	db 44, GRAVELER
+	db 42, RHYHORN
+	db 43, ONIX
+	db 44, GOLBAT
+	db 45, SANDSLASH
+	db 45, RHYDON
+	db 45, RHYDON
+	; nite
+	db 44, GOLBAT
+	db 44, GRAVELER
+	db 42, ONIX
+	db 46, GRAVELER
+	db 48, GRAVELER
+	db 50, GRAVELER
+	db 50, GRAVELER
+	
 	map_id ROUTE_115
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
