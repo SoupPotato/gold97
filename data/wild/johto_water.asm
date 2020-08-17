@@ -221,6 +221,24 @@ JohtoWaterWildMons:
 	db 15, MAGIKARP
 	db 5, MAGIKARP
 	
+	map_id SAFARI_ZONE_BETA
+	db 4 percent
+	db 20, PSYDUCK
+	db 24, PSYDUCK
+	db 30, GOLDEEN
+	
+	map_id SEAFOAM_ISLANDS_B1F
+	db 6 percent
+	db 35, HORSEA
+	db 38, SEADRA
+	db 40, DEWGONG
+	
+	map_id KANTO_DOCK
+	db 6 percent
+	db 30, TENTACOOL
+	db 35, TENTACOOL
+	db 40, TENTACRUEL
+	
 	map_id ROUTE_115
 	db 6 percent ; encounter rate
 	db 20, TENTACOOL
