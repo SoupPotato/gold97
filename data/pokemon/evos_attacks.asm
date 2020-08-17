@@ -1983,6 +1983,7 @@ LaprasEvosAttacks:
 	db 0 ; no more level-up moves
 
 DittoEvosAttacks:
+MettoEvosAttacks:
 	db EVOLVE_ITEM, TRADE_STONE, METTO
 	db EVOLVE_TRADE, METAL_COAT, METTO
 	db 0 ; no more evolutions
@@ -3108,11 +3109,6 @@ ParamiteEvosAttacks:
 	db 35, GIGA_DRAIN
 	db 0 ; no more level-up moves
 
-MettoEvosAttacks:
-	db 0 ; no more evolutions
-	db 1, TRANSFORM
-	db 0 ; no more level-up moves
-
 SteelixEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
@@ -3745,6 +3741,23 @@ BlisseyEvosAttacks:
 	db 33, DEFENSE_CURL
 	db 40, LIGHT_SCREEN
 	db 47, DOUBLE_EDGE
+	db 0 ; no more level-up moves
+	
+LugiaEvosAttacks:
+	db 0 ; no more evolutions
+	db 1, SWIFT
+	db 1, WHIRLWIND
+	db 9, GUST
+	db 15, DOUBLE_EDGE
+	db 23, PSYCHIC_M
+	db 29, RAIN_DANCE
+	db 37, HYDRO_PUMP
+	db 43, AEROBLAST
+	db 50, ANCIENTPOWER
+	db 57, SAFEGUARD
+	db 65, RECOVER
+	db 71, FUTURE_SIGHT
+	db 79, SKY_ATTACK
 	db 0 ; no more level-up moves
 
 HoOhEvosAttacks:

@@ -249,6 +249,7 @@ NewPokedexOrder:
 	db DRAGONITE
 	db WOLFAN
 	db WARWOLF
+	db LUGIA
 	db HO_OH
 	db MEWTWO
 	db MEW

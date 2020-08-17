@@ -254,9 +254,9 @@ PokemonCries::
 	mon_cry CRY_RAIKOU,     -$1db,  $150 ; WARWOLF
 	mon_cry CRY_SEEL,       -$100,  $180 ; LICKILORD
 	mon_cry CRY_SLOWKING,    $293,  $140 ; BLISSEY actually miltank
+	mon_cry CRY_DYNABEAR,       0,   256 ; LUGIA
 	mon_cry CRY_AIPOM,       $000,  $180 ; HO_OH
 	mon_cry CRY_AIPOM,       $0d2,  $100 ; LEAFEON
-	mon_cry CRY_NIDORAN_M,      0,     0 ; 252
 	mon_cry CRY_NIDORAN_M,      0,     0 ; 253
 	mon_cry CRY_NIDORAN_M,      0,     0 ; 254
 	mon_cry CRY_NIDORAN_M,      0,     0 ; 255

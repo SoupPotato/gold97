@@ -88,7 +88,7 @@ EZChat_SortedPokemon:
 .yo:       db WOLFAN, NOCTOWL, -1
 .ra:       db RAIKOU, RAICHU, CHANSEY, RATICATE, LAPRAS, VILEPLUME, RAITORA, -1
 .ri:       db CHARMELEON, CHARIZARD, NUMBPUFF, -1
-.ru:       db JYNX, BLISSEY, -1
+.ru:       db LUGIA, JYNX, BLISSEY, -1
 .re:       db MAGNETON, TRIPSTAR, LEDYBA, -1
 .ro:       db VULPIX, -1
 .wa:       db JUMPLUFF, CRUIZE, MACHOP ;, -1

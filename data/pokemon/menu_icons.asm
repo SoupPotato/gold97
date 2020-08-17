@@ -250,5 +250,6 @@ MonMenuIcons:
 	db ICON_MONSTER     ; WARWOLF
 	db ICON_MONSTER     ; LICKILORD
 	db ICON_CLEFAIRY    ; BLISSEY actually miltank
+	db ICON_LUGIA       ; LUGIA
 	db ICON_HO_OH       ; HO_OH
 	db ICON_FOX		    ; LEAFEON

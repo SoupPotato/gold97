@@ -720,6 +720,8 @@ SportsmanPic:		 INCBIN "gfx/trainers/sportsman.2bpp.lz"
 SoldierPic:	    	 INCBIN "gfx/trainers/soldier.2bpp.lz"
 InstructorPic:		 INCBIN "gfx/trainers/instructor.2bpp.lz"
 FledglingPic:		 INCBIN "gfx/trainers/fledgling.2bpp.lz"
+LugiaBackpic:        INCBIN "gfx/pokemon/lugia/back.2bpp.lz"
+LugiaFrontpic:      INCBIN "gfx/pokemon/lugia/front.animated.2bpp.lz"
 
 ; Sections "Pics 20" to "Pics 24" are not used for any graphics,
 ; but entries for their banks exist in FixPicBank (see engine/gfx/load_pics.asm).

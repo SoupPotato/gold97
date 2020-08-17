@@ -34,7 +34,7 @@
 	const ICON_BAT
 	const ICON_SNORLAX
 	const ICON_HO_OH
-	const ICON_BLISSEY
+	const ICON_LUGIA
 	const ICON_GYARADOS
 	const ICON_SLOWPOKE
 	const ICON_BELMITT

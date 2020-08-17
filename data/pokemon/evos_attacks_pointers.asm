@@ -250,5 +250,6 @@ EvosAttacksPointers::
 	dw WarwolfEvosAttacks
 	dw LickilordEvosAttacks
 	dw BlisseyEvosAttacks
+	dw LugiaEvosAttacks
 	dw HoOhEvosAttacks
 	dw LeafeonEvosAttacks

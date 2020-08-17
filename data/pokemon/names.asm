@@ -248,6 +248,7 @@ PokemonNames::
 	db "WARWOLF@@@"
 	db "LICKILORD@"
 	db "BLISSEY@@@"
+	db "LUGIA@@@@@"
 	db "HO-OH@@@@@"
 	db "LEAFEON@@@"
 	db "?????@@@@@"

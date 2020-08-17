@@ -503,11 +503,11 @@ PokemonPicPointers::
 	dba_pic LickilordBackpic
 	dba_pic BlisseyFrontpic
 	dba_pic BlisseyBackpic
+	dba_pic LugiaFrontpic
+	dba_pic LugiaBackpic
 	dba_pic HoOhFrontpic
 	dba_pic HoOhBackpic
 	dba_pic LeafeonFrontpic
 	dba_pic LeafeonBackpic
-	dbw -1, -1 ; unused
-	dbw -1, -1 ; unused
 	dba_pic EggPic
 	dbw -1, -1 ; unused

@@ -269,10 +269,10 @@ JOHTO_POKEMON EQU const_value
 	const WARWOLF    ; f7
 	const LICKILORD  ; f8
 	const BLISSEY      ; f9
-	const HO_OH      ; fa
-	const LEAFEON     ; fb
+	const LUGIA      ; fa
+	const HO_OH      ; fb
+	const LEAFEON     ; fc
 NUM_POKEMON EQU const_value + -1
-	const MON_FC     ; fc
 	const EGG        ; fd
 	const MON_FE     ; fe
 
