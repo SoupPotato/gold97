@@ -209,8 +209,8 @@ KantoBattleClub1F_MapEvents:
 	db 0, 0 ; filler
 
 	db 3 ; warp events
-	warp_event  4,  7, KANTO_REGION, 23
-	warp_event  5,  7, KANTO_REGION, 23
+	warp_event  4,  7, KANTO_REGION, 24
+	warp_event  5,  7, KANTO_REGION, 24
 	warp_event  5,  0, KANTO_BATTLE_CLUB_B1F, 1
 
 	db 1 ; coord events

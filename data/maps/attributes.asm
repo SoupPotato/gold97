@@ -394,7 +394,6 @@ ENDM
 	map_attributes WestportBikeShop, WESTPORT_BIKE_SHOP, $00, 0
 	map_attributes WestportHappinessRater, WESTPORT_HAPPINESS_RATER, $00, 0
 	map_attributes BillsFamilysHouse, BILLS_FAMILYS_HOUSE, $00, 0
-	map_attributes KantoHotel, KANTO_HOTEL, $00, 0
 	map_attributes Route102N64House, ROUTE_102_N64_HOUSE, $00, 0
 	map_attributes WestportPPSpeechHouse, WESTPORT_PP_SPEECH_HOUSE, $00, 0
 	map_attributes WestportNameRater, WESTPORT_NAME_RATER, $00, 0
@@ -476,7 +475,6 @@ ENDM
 	map_attributes KantoCeladonMansion3F, KANTO_CELADON_MANSION_3F, $00, 0
 	map_attributes KantoCeladonMansionRoof, KANTO_CELADON_MANSION_ROOF, $00, 0
 	map_attributes KantoCeladonMansionRoofHouse, KANTO_CELADON_MANSION_ROOF_HOUSE, $00, 0
-	map_attributes KantoPokecenterWest1F, KANTO_POKECENTER_WEST_1F, $00, 0
 	map_attributes KantoGameCorner, KANTO_GAME_CORNER, $00, 0
 	map_attributes KantoGameCornerPrizeRoom, KANTO_GAME_CORNER_PRIZE_ROOM, $00, 0
 	map_attributes KantoGym, KANTO_GYM, $00, 0
@@ -531,7 +529,6 @@ ENDM
 	map_attributes TeknosPortPassage, TEKNOS_PORT_PASSAGE, $00, 0
 	map_attributes StandZooInfirmary, STAND_ZOO_INFIRMARY, $00, 0
 	map_attributes KantoPokecenter1F, KANTO_POKECENTER_1F, $00, 0
-	map_attributes KantoMart, KANTO_MART, $00, 0
 	map_attributes KantoBattleClub1F, KANTO_BATTLE_CLUB_1F, $00, 0
 	map_attributes KantoBattleClubB1F, KANTO_BATTLE_CLUB_B1F, $00, 0
 	map_attributes KantoHouse1, KANTO_HOUSE_1, $00, 0
@@ -557,3 +554,5 @@ ENDM
 	map_attributes PokemonTower3F, POKEMON_TOWER_3F, $00, 0
 	map_attributes TrainerHouse1F, TRAINER_HOUSE_1F, $00, 0
 	map_attributes TrainerHouseB1F, TRAINER_HOUSE_B1F, $00, 0
+	map_attributes KantoFujiHouse, KANTO_FUJI_HOUSE, $00, 0
+	map_attributes KantoDock, KANTO_DOCK, $00, 0

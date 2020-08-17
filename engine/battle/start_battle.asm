@@ -75,6 +75,10 @@ PlayBattleMusic:
 	and a
 	jr nz, .trainermusic
 
+	ld a, [wMapGroup] ; checks if in kanto mapgroup for music, added below for trainers too
+	cp GROUP_KANTO_REGION
+	jp z, .kantowild
+
 	farcall RegionCheck
 	ld a, e
 	and a
@@ -83,7 +87,7 @@ PlayBattleMusic:
 	ld de, MUSIC_JOHTO_WILD_BATTLE
 	ld a, [wTimeOfDay]
 	cp NITE_F
-	jr nz, .done
+	jp nz, .done
 	ld de, MUSIC_JOHTO_WILD_BATTLE_NIGHT
 	jr .done
 
@@ -142,6 +146,10 @@ PlayBattleMusic:
 	ld a, [wLinkMode]
 	and a
 	jr nz, .johtotrainer
+
+	ld a, [wMapGroup]
+	cp GROUP_KANTO_REGION
+	jp z, .kantotrainer
 
 	farcall RegionCheck
 	ld a, e

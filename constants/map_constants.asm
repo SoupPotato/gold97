@@ -337,21 +337,17 @@ ENDM
 	map_const KANTO_CELADON_MANSION_3F,                     4,  6 ; 14
 	map_const KANTO_CELADON_MANSION_ROOF,                   4,  6 ; 15
 	map_const KANTO_CELADON_MANSION_ROOF_HOUSE,             4,  4 ; 16
-	map_const KANTO_POKECENTER_1F,                          8,  4 ; 17
 	map_const KANTO_GAME_CORNER,                           10,  7 ; 19
 	map_const KANTO_GAME_CORNER_PRIZE_ROOM,                 5,  4 ; 20
 	map_const KANTO_GYM,                                    5,  9 ; 21
 	map_const KANTO_LEFTOVERS_HOUSE,                        6,  4 ; 22
-	map_const ISEN_STRAIT_SEASIDE_PATH_GATE,                5,  4 ; 26
 	map_const ROUTE_114,                                   20,  9 ; 13
 	map_const SILPH_CO_1F,                                 12,  8 ; 10
-	map_const KANTO_HOTEL,                                  8,  4 ;  7
 	map_const OAKS_KANTO_LAB,                               5,  6 ;  6
 	map_const BLUES_HOUSE,                                  5,  4 ;  5
 	map_const REDS_HOUSE_1F,                                4,  4 ;  3
 	map_const REDS_HOUSE_2F,                                4,  4 ;  4
-	map_const KANTO_POKECENTER_WEST_1F,                     8,  4 ; 17
-	map_const KANTO_MART,                                   8,  4 ;  5
+	map_const KANTO_POKECENTER_1F,                          8,  4 ; 17
 	map_const KANTO_BATTLE_CLUB_1F, 					    5,  4 ; asdf
 	map_const KANTO_BATTLE_CLUB_B1F,					   10,  9 ; asda
 	map_const KANTO_HOUSE_1,							    5,  4 ;
@@ -379,6 +375,8 @@ ENDM
 	map_const POKEMON_TOWER_3F,                            10, 9
 	map_const TRAINER_HOUSE_1F,                             5,  7 ;  6
 	map_const TRAINER_HOUSE_B1F,                            5,  8 ;  7
+	map_const KANTO_FUJI_HOUSE,                             5, 4
+	map_const KANTO_DOCK,                                  14, 6
 
 
 	newgroup                                                      ; 22
@@ -397,6 +395,7 @@ ENDM
 	map_const YORON_MART,                                   8,  4 ;  5
 	map_const ROUTE_119_SUNPOINT_GATE,                      5,  4 ; 13
 	map_const ROCKET_SHIP_BASE,                            20, 18 ;  4
+	map_const ISEN_STRAIT_SEASIDE_PATH_GATE,                5,  4 ; 26
 
 	newgroup                                                      ; 23
 

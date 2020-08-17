@@ -9,8 +9,8 @@ BluesHouse_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  4,  7, KANTO_REGION, 19
-	warp_event  5,  7, KANTO_REGION, 19
+	warp_event  4,  7, KANTO_REGION, 20
+	warp_event  5,  7, KANTO_REGION, 20
 
 	db 0 ; coord events
 

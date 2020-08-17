@@ -209,7 +209,7 @@ KantoCafe_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  4,  9, KANTO_REGION, 30
+	warp_event  4,  9, KANTO_REGION, 31
 	warp_event  5,  9, KANTO_REGION, 31
 
 	db 0 ; coord events

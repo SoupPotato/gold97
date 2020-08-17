@@ -256,7 +256,7 @@ KantoFossilLab_MapEvents:
 	db 0, 0 ; filler
 
 	db 8 ; warp events
-	warp_event  2, 15, KANTO_REGION, 28
+	warp_event  2, 15, KANTO_REGION, 29
 	warp_event  3, 15, KANTO_REGION, 29
 	warp_event 14, 10, KANTO_FOSSIL_LAB, 4
 	warp_event  2,  7, KANTO_FOSSIL_LAB, 3

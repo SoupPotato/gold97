@@ -109,6 +109,7 @@ KantoHouse1_Blocks:
 KantoHouse2_Blocks:
 KantoHouse3_Blocks:
 KantoHouse4_Blocks:
+KantoFujiHouse_Blocks:
 	INCBIN "maps/House1.blk"
 
 Route109Route110Gate_Blocks:
@@ -205,7 +206,6 @@ FrostpointMart_Blocks:
 SanskritMart_Blocks:
 RyukyuMart_Blocks:
 CrownMart_Blocks:
-KantoMart_Blocks:
 	INCBIN "maps/Mart.blk"
 
 SeasidePath_Blocks:
@@ -226,7 +226,6 @@ AmamiPokecenter1F_Blocks:
 YoronPokecenter1F_Blocks:
 StandPokecenter1F_Blocks:
 KobanPokecenter1F_Blocks:
-KantoPokecenterWest1F_Blocks:
 SunpointPokecenter1F_Blocks:
 SilentPokecenter1F_Blocks:
 RyukyuPokecenter1F_Blocks:
@@ -317,9 +316,6 @@ NationalParkBugContest_Blocks:
 
 KurtsHouse_Blocks:
 	INCBIN "maps/KurtsHouse.blk"
-
-KantoHotel_Blocks:
-	INCBIN "maps/KantoHotel.blk"
 
 RuinsOfAlphOutside_Blocks:
 	INCBIN "maps/RuinsOfAlphOutside.blk"
@@ -800,3 +796,6 @@ TrainerHouse1F_Blocks:
 
 TrainerHouseB1F_Blocks:
 	INCBIN "maps/TrainerHouseB1F.blk"
+
+KantoDock_Blocks:
+	INCBIN "maps/KantoDock.blk"

@@ -25,7 +25,8 @@ KantoDeptStore1FElevatorButton:
 
 KantoDeptStore1FReceptionistText:
 	text "Hello! Welcome to"
-	line "KANTO DEPT.STORE!"
+	line "the CELADON CITY" 
+	cont "DEPT.STORE!"
 
 	para "The directory is"
 	line "on the wall."
@@ -75,7 +76,7 @@ KantoDeptStore1F_MapEvents:
 
 	db 4 ; warp events
 	warp_event 13,  7, KANTO_REGION, 1
-	warp_event 14,  7, KANTO_REGION, 13
+	warp_event 14,  7, KANTO_REGION, 14
 	warp_event 15,  0, KANTO_DEPT_STORE_2F, 2
 	warp_event  2,  0, KANTO_DEPT_STORE_ELEVATOR, 1
 
