@@ -35,7 +35,7 @@ OakPhoneAssistantText:
 	line "assistant? He's at"
 
 	para "the #MON CENTER"
-	line "in OLD CITY."
+	line "in PAGOTA CITY."
 	done
 
 OakPhoneEggUnhatchedText:
@@ -197,7 +197,7 @@ OakPhoneEggAssistantText:
 	cont "doing well."
 	para "I've sent one of"
 	line "my AIDEs out to"
-	para "the OLD CITY"
+	para "the PAGOTA CITY"
 	line "#MON CENTER."
 	para "If you've got a"
 	line "moment, could you"

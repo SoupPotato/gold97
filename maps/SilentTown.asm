@@ -379,7 +379,7 @@ SilentTown_MapEvents:
 	db 0, 0 ; filler
 
 	db 7 ; warp events
-	warp_event 14, 19, KANTO_REGION, 1 ; OAKS_LAB_ENTRANCE
+	warp_event 14, 19, OAKS_LAB_ENTRANCE, 1
 	warp_event  5, 12, PLAYERS_HOUSE_1F, 1
 	warp_event 13, 12, SILENT_POKECENTER_1F, 1
 	warp_event  3, 20, SILENT_HOUSE, 1

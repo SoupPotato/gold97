@@ -128,7 +128,7 @@ BrassTower4F_MapEvents:
 	db 0 ; coord events
 
 	db 1 ; bg events
-	bg_event  4,  1, BGEVENT_READ, SproutTower4FSign
+	bg_event  8,  1, BGEVENT_READ, SproutTower4FSign
 
 	db 4 ; object events
 	object_event  0,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, BrassTower4FEscapeRope, EVENT_TIN_TOWER_4F_ESCAPE_ROPE
