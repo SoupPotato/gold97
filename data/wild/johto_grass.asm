@@ -88,7 +88,7 @@ JohtoGrassWildMons:
 	db 6, GASTLY
 	db 7, GASTLY
 	db 5, KURSTRAW
-	db 8, KURSTRAW
+	db 8, GASTLY
 	db 7, RATTATA
 	db 7, RATTATA
 	
@@ -116,7 +116,7 @@ JohtoGrassWildMons:
 	db 6, GASTLY
 	db 7, GASTLY
 	db 6, KURSTRAW
-	db 8, KURSTRAW
+	db 8, GASTLY
 	db 8, RATTATA
 	db 7, RATTATA
 	
@@ -143,7 +143,7 @@ JohtoGrassWildMons:
 	db 7, GASTLY
 	db 8, GASTLY
 	db 6, KURSTRAW
-	db 9, KURSTRAW
+	db 9, GASTLY
 	db 8, RATTATA
 	db 8, RATTATA
 

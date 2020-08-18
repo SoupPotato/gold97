@@ -1134,7 +1134,7 @@ UnknownText_0x662fc:
 UnknownText_0x66335:
 	text "Did you know…?"
 	line "BILL's originally"
-	cont "from PAGOTA CITY."
+	cont "from OLD CITY."
 	done
 
 UnknownText_0x66366:

@@ -8,18 +8,20 @@
 EarlsArtHouse_MapScripts:
 	db 0 ; scene scripts
 
-	db 1 ; callbacks
-	callback MAPCALLBACK_OBJECTS, .statues
+	db 2 ; callbacks
+	callback MAPCALLBACK_OBJECTS, .birdstatue
+	callback MAPCALLBACK_OBJECTS, .dragonstatue
 	
-.statues
+.birdstatue
 	checkevent EVENT_SHOWED_PICHU_TO_BILLS_GRANDPA
 	iffalse .birdgone
-	checkevent EVENT_SHOWED_GROWLITHE_VULPIX_TO_BILLS_GRANDPA
-	iffalse .dragongone
 	return
 	
 .birdgone
 	disappear EARLMUSEUM_BIRD
+	return
+	
+.dragonstatue
 	checkevent EVENT_SHOWED_GROWLITHE_VULPIX_TO_BILLS_GRANDPA
 	iffalse .dragongone
 	return
@@ -190,29 +192,33 @@ ArtSignText:
 
 BillsGrandpaIntroText:
 	text "Oh, boo."
-	line "I'm a failure."
-	
+	para "I'm a failure."
+	para "Don't ask why!"
+	para "Alright, I'll tell"
+	line "you."
 	para "My name is EARL,"
 	line "and I'm an artist."
-	
-	para "But inspiration"
-	line "has left me..."
-	
-	para "The only sculpture"
-	line "I've finished so"
-	cont "far is a sculpture"
-	cont "of a #MON EGG."
-	
+	para "Or at least, I"
+	line "wish I was a"
+	cont "decent one."
+	para "I never feel"
+	line "inspired."
+	para "I opened this"
+	line "ART HOUSE to"
+	para "show off my work,"
+	line "but the only"
+	para "sculpture I've"
+	line "ever finished is"
+	para "a sculpture of a"
+	line "#MON EGG."
 	para "I need to do"
 	line "something"
 	cont "impressive!"
-	
 	para "I've been working"
 	line "on a statue of the"
-	cont "#MON MADAME,"
-	
-	para "but it's not quite"
-	line "finished."
+	para "#MON MADAME,"
+	line "but it's not quite"
+	para "finished."
 	done
 
 BillsGrandpaAskToSeeMonText:

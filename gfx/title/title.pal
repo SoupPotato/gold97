@@ -3,22 +3,10 @@
 	RGB 30, 20, 00
 	RGB 12, 14, 12
 	RGB 00, 00, 17
-IF DEF(_GOLD)
 ; 'GOLD VERSION'
 	RGB 28, 28, 28
 	RGB 24, 20, 10
 	RGB 21, 00, 04
 	RGB 17, 10, 01
-	
 ; Ho-oh
 INCBIN "gfx/title/hooh.gbcpal"
-ELIF DEF(_SILVER)
-	; 'SILVER VERSION'
-	RGB 28, 28, 28
-	RGB 24, 23, 25
-	RGB 10, 12, 21
-	RGB 08, 08, 09
-	
-; Lugia
-INCBIN "gfx/title/lugia.gbcpal"
-ENDC

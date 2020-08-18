@@ -55,7 +55,7 @@ tools:
 	$(MAKE) -C tools/
 
 
-$(gold_obj):   RGBASMFLAGS = -D _CRYSTAL -D _CRYSTAL11 -D _GOLD
+$(gold_obj):   RGBASMFLAGS = -D _CRYSTAL -D _CRYSTAL11
 $(silver_obj): RGBASMFLAGS = -D _CRYSTAL -D _CRYSTAL11 -D _SILVER
 
 # The dep rules have to be explicit or else missing files won't be reported.
