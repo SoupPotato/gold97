@@ -367,11 +367,11 @@ TitleScreenSwitchObjectGFX:
 	ld d, [hl]
 	ld e, a
 	ld hl, vTiles0
-	lb bc, BANK(TitleFlamesGFX), 8
+	lb bc, BANK(TitleFlamesWindGFX), 8
 	jp Get2bpp
 
 .array
-	dw TitleFlamesGFX
+	dw TitleFlamesWindGFX
 	dw TitleNotesGFX
 
 TitleScreenLoadGFX:
@@ -390,7 +390,7 @@ TitleScreenLoadGFX:
 	call Decompress
 	ld hl, TitleBorderGFX
 	call Decompress
-	ld hl, TitleHoohGFX
+	ld hl, TitleHoohLugiaGFX
 	call Decompress
 	xor a
 	call TitleScreenSwitchObjectGFX
@@ -451,7 +451,7 @@ TitleScreenLoadGFX:
 	ld bc, 3 palettes
 	call CopyBytes
 
-	ld hl, TitleScreenFlamesPalette
+	ld hl, TitleScreenFlamesWindPalette
 	ld de, wOBPals2
 	ld bc, 1 palettes
 	call CopyBytes
@@ -507,23 +507,39 @@ DrawTitleBorder:
 	jr nz, .loop
 	ret
 
-TitleHoohGFX:
+TitleHoohLugiaGFX:
+IF DEF(_GOLD)
 INCBIN "gfx/title/hooh.2bpp.lz"
+ELIF DEF(_SILVER)
+INCBIN "gfx/title/lugia.2bpp.lz"
+ENDC
 
 TitleLogoGFX:
+IF DEF(_GOLD)
 INCBIN "gfx/title/logo.2bpp.lz"
+ELIF DEF(_SILVER)
+INCBIN "gfx/title/logosilver.2bpp.lz"
+ENDC
 
 TitleBorderGFX:
 INCBIN "gfx/title/border.2bpp.lz"
 
-TitleFlamesGFX:
+TitleFlamesWindGFX:
+IF DEF(_GOLD)
 INCBIN "gfx/title/flames.2bpp"
+ELIF DEF(_SILVER)
+INCBIN "gfx/title/wind.2bpp"
+ENDC
 
 TitleNotesGFX:
 INCBIN "gfx/title/notes.2bpp"
 
-TitleScreenFlamesPalette:
+TitleScreenFlamesWindPalette:
+IF DEF(_GOLD)
 INCBIN "gfx/title/flames.gbcpal"
+ELIF DEF(_SILVER)
+INCBIN "gfx/title/wind.gbcpal"
+ENDC
 
 TitleScreenPalettes:
 INCLUDE "gfx/title/title.pal"
