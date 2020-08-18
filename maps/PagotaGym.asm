@@ -18,7 +18,6 @@ PagotaGym_MapScripts:
 .gone
 	disappear VIOLETGYM_YOUNGSTER1
 	disappear VIOLETGYM_YOUNGSTER2
-	disappear VIOLETGYM_GYM_GUY
 	disappear VIOLETGYM_FALKNER
 	return
 
@@ -107,8 +106,8 @@ TrainerBirdKeeperAbe:
 PagotaGymGuyScript:
 	faceplayer
 	opentext
-	checkevent EVENT_VIOLET_GYM_FALKNER
-	iftrue .nothere
+	checkevent EVENT_FALKNER_AT_GYM
+	iffalse .nothere
 	checkevent EVENT_BEAT_FALKNER
 	iftrue .PagotaGymGuyWinScript
 	writetext PagotaGymGuyText

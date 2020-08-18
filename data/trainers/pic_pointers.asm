@@ -62,6 +62,7 @@ TrainerPicPointers::
 	dba_pic BoarderPic
 	dba_pic PokefanmPic
 	dba_pic KimonoGirlPic
+	dba_pic TwinsPic
 	dba_pic PokefanfPic
 	dba_pic RedPic
 	dba_pic BluePic

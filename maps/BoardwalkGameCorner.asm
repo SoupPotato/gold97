@@ -165,7 +165,7 @@ BoardwalkGameCornerPrizeMonVendorScript:
 	closewindow
 	ifequal 1, .abra
 	ifequal 2, .cubone
-	ifequal 3, .twinborus
+	ifequal 3, .porygon
 	jump BoardwalkGameCornerPrizeVendor_CancelPurchaseScript
 
 .abra
@@ -204,22 +204,22 @@ BoardwalkGameCornerPrizeMonVendorScript:
 	takecoins 800
 	jump .loop
 
-.twinborus
-	checkcoins 1500
+.porygon
+	checkcoins 2500
 	ifequal HAVE_LESS, BoardwalkGameCornerPrizeVendor_NotEnoughCoinsScript
 	checkcode VAR_PARTYCOUNT
 	ifequal PARTY_LENGTH, BoardwalkGameCornerPrizeMonVendor_NoRoomForPrizeScript
-	pokenamemem TWINZ, MEM_BUFFER_0
+	pokenamemem PORYGON, MEM_BUFFER_0
 	scall BoardwalkGameCornerPrizeVendor_ConfirmPurchaseScript
 	iffalse BoardwalkGameCornerPrizeVendor_CancelPurchaseScript
 	waitsfx
 	playsound SFX_TRANSACTION
 	writetext BoardwalkGameCornerPrizeVendorHereYouGoText
 	waitbutton
-	writebyte TWINZ
+	writebyte PORYGON
 	special GameCornerPrizeMonCheckDex
-	givepoke TWINZ, 15
-	takecoins 1500
+	givepoke PORYGON, 12
+	takecoins 2500
 	jump .loop
 
 .MenuHeader:
@@ -233,7 +233,7 @@ BoardwalkGameCornerPrizeMonVendorScript:
 	db 4 ; items
 	db "ABRA        100@"
 	db "CUBONE      800@"
-	db "TWINZ  1500@"
+	db "PORYGON    2500@"
 	db "CANCEL@"
 
 BoardwalkGameCornerPharmacistScript:

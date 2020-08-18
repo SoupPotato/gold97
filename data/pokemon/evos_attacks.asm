@@ -1206,7 +1206,7 @@ MagnetonEvosAttacks:
 	db 0 ; no more level-up moves
 
 FarfetchDEvosAttacks:
-	db EVOLVE_LEVEL, 44, MADAME
+	db EVOLVE_LEVEL, 37, MADAME
 	db 0 ; no more evolutions
 	db 1, PECK
 	db 1, SAND_ATTACK
@@ -2620,7 +2620,6 @@ RaitoraEvosAttacks:
 
 PichuEvosAttacks:
 	db EVOLVE_HAPPINESS, TR_ANYTIME, PIKACHU
-	db EVOLVE_LEVEL, 15, PIKACHU
 	db 0 ; no more evolutions
 	db 1, THUNDERSHOCK
 	db 1, CHARM
@@ -2631,7 +2630,6 @@ PichuEvosAttacks:
 
 CleffaEvosAttacks:
 	db EVOLVE_HAPPINESS, TR_ANYTIME, CLEFAIRY
-	db EVOLVE_LEVEL, 12, CLEFAIRY
 	db 0 ; no more evolutions
 	db 1, POUND
 	db 1, CHARM
@@ -2642,7 +2640,6 @@ CleffaEvosAttacks:
 
 IgglybuffEvosAttacks:
 	db EVOLVE_HAPPINESS, TR_ANYTIME, JIGGLYPUFF
-	db EVOLVE_LEVEL, 12, JIGGLYPUFF
 	db 0 ; no more evolutions
 	db 1, POUND
 	db 1, CHARM
@@ -2665,7 +2662,6 @@ TogepiEvosAttacks:
 
 PeticornEvosAttacks:
 	db EVOLVE_HAPPINESS, TR_ANYTIME, PONYTA
-	db EVOLVE_LEVEL, 16, PONYTA
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, CHARM
@@ -2869,8 +2865,7 @@ AipomEvosAttacks:
 	db 0 ; no more level-up moves
 
 GupgoldEvosAttacks:
-	db EVOLVE_HAPPINESS, TR_ANYTIME, GOLDEEN
-	db EVOLVE_LEVEL, 16, GOLDEEN
+	db EVOLVE_LEVEL, 18, GOLDEEN
 	db 0 ; no more evolutions
 	db 1, PECK
 	db 1, TAIL_WHIP
@@ -3010,7 +3005,6 @@ SlowkingEvosAttacks:
 
 TritalesEvosAttacks:
 	db EVOLVE_HAPPINESS, TR_ANYTIME, VULPIX
-	db EVOLVE_LEVEL, 15, VULPIX
 	db 0 ; no more evolutions
 	db 1, EMBER
 	db 1, TAIL_WHIP
@@ -3079,8 +3073,7 @@ TurbanEvosAttacks:
 	db 0 ; no more level-up moves
 
 GrimbyEvosAttacks:
-	db EVOLVE_HAPPINESS, TR_ANYTIME, GRIMER
-	db EVOLVE_LEVEL, 16, GRIMER
+	db EVOLVE_LEVEL, 20, GRIMER
 	db 0 ; no more evolutions
 	db 1, POISON_GAS
 	db 1, POUND
@@ -3096,17 +3089,18 @@ GrimbyEvosAttacks:
 	db 0 ; no more level-up moves
 
 ParamiteEvosAttacks:
-	db EVOLVE_HAPPINESS, TR_ANYTIME, PARAS
-	db EVOLVE_LEVEL, 12, PARAS
+	db EVOLVE_LEVEL, 14, PARAS
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 6, STUN_SPORE
-	db 9, POISONPOWDER
-	db 12, LEECH_LIFE
-	db 19, SPORE
-	db 24, SLASH
-	db 30, GROWTH
-	db 35, GIGA_DRAIN
+	db 6, POISONPOWDER
+	db 11, ABSORB
+	db 13, LEECH_LIFE
+	db 17, FURY_CUTTER
+	db 22, SPORE
+	db 27, SLASH
+	db 33, GROWTH
+	db 38, GIGA_DRAIN
 	db 0 ; no more level-up moves
 
 SteelixEvosAttacks:
@@ -3260,7 +3254,6 @@ NumbpuffEvosAttacks:
 	db 0 ; no more level-up moves
 
 NyanyaEvosAttacks:
-	db EVOLVE_HAPPINESS, TR_ANYTIME, MEOWTH
 	db EVOLVE_LEVEL, 15, MEOWTH
 	db 0 ; no more evolutions
 	db 1, SCRATCH
@@ -3275,16 +3268,17 @@ NyanyaEvosAttacks:
 
 MadameEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, PECK
-	db 9, SAND_ATTACK
-	db 15, LEER
-	db 17, GUST
-	db 21, FURY_ATTACK
-	db 26, WING_ATTACK
-	db 28, SWORDS_DANCE
-	db 33, AGILITY
-	db 39, SLASH
-	db 46, FALSE_SWIPE
+	db 1, SAND_ATTACK
+	db 4, LEER
+	db 9, FURY_CUTTER
+	db 13, FURY_ATTACK
+	db 19, WING_ATTACK
+	db 25, FAINT_ATTACK
+	db 31, SLASH
+	db 39, SWORDS_DANCE
+	db 46, AGILITY
+	db 54, FALSE_SWIPE
+	db 61, SKY_ATTACK
 	db 0 ; no more level-up moves
 
 KurstrawEvosAttacks:
@@ -3327,7 +3321,6 @@ PangshiEvosAttacks:
 
 PuddipupEvosAttacks:
 	db EVOLVE_HAPPINESS, TR_ANYTIME, GROWLITHE
-	db EVOLVE_LEVEL, 15, GROWLITHE
 	db 0 ; no more evolutions
 	db 1, BITE
 	db 1, CHARM
@@ -3578,31 +3571,35 @@ ElebabeEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, QUICK_ATTACK
 	db 1, LEER
-	db 9, THUNDERPUNCH
-	db 17, LIGHT_SCREEN
-	db 25, SWIFT
-	db 33, SCREECH
-	db 41, THUNDERBOLT
-	db 49, THUNDER
+	db 6, THUNDERSHOCK
+	db 10, LOW_KICK
+	db 14, SWIFT
+	db 19, THUNDER_WAVE
+	db 25, THUNDERPUNCH
+	db 30, LIGHT_SCREEN
+	db 36, THUNDERBOLT
+	db 41, SCREECH
+	db 47, THUNDER
 	db 0 ; no more level-up moves
 
 MagbyEvosAttacks:
 	db EVOLVE_LEVEL, 30, MAGMAR
 	db 0 ; no more evolutions
-	db 1, EMBER
-	db 7, LEER
-	db 13, SMOG
-	db 19, FIRE_PUNCH
-	db 25, SMOKESCREEN
-	db 31, SUNNY_DAY
-	db 37, FLAMETHROWER
-	db 43, CONFUSE_RAY
-	db 49, FIRE_BLAST
+	db 1, SMOG
+	db 1, LEER
+	db 6, EMBER
+	db 10, SMOKESCREEN
+	db 14, FAINT_ATTACK
+	db 19, FIRE_SPIN
+	db 25, FIRE_PUNCH
+	db 30, CONFUSE_RAY
+	db 36, FLAMETHROWER
+	db 41, SUNNY_DAY
+	db 47, FIRE_BLAST
 	db 0 ; no more level-up moves
 
 ChixEvosAttacks:
-	db EVOLVE_HAPPINESS, TR_ANYTIME, DODUO
-	db EVOLVE_LEVEL, 16, DODUO
+	db EVOLVE_LEVEL, 18, DODUO
 	db 0 ; no more evolutions
 	db 1, PECK
 	db 1, CHARM
@@ -3733,12 +3730,12 @@ BlisseyEvosAttacks:
 	db 1, POUND
 	db 4, GROWL
 	db 7, TAIL_WHIP
-	db 10, SOFTBOILED
+	db 10, DEFENSE_CURL
 	db 13, DOUBLESLAP
-	db 18, MINIMIZE
-	db 23, SING
+	db 18, SING
+	db 23, MINIMIZE
 	db 28, EGG_BOMB
-	db 33, DEFENSE_CURL
+	db 33, SOFTBOILED
 	db 40, LIGHT_SCREEN
 	db 47, DOUBLE_EDGE
 	db 0 ; no more level-up moves
