@@ -516,7 +516,7 @@ ENDC
 
 TitleLogoGFX:
 IF DEF(_GOLD)
-INCBIN "gfx/title/logo.2bpp.lz"
+INCBIN "gfx/title/logogold.2bpp.lz"
 ELIF DEF(_SILVER)
 INCBIN "gfx/title/logosilver.2bpp.lz"
 ENDC

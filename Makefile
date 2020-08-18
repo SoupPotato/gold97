@@ -123,6 +123,8 @@ gfx/pokemon/girafarig/front.animated.tilemap: gfx/pokemon/girafarig/front.2bpp g
 
 gfx/pokemon/%/front.dimensions: gfx/pokemon/%/front.png
 	tools/png_dimensions $< $@
+gfx/pokemon/%/front_S.dimensions: gfx/pokemon/%/front_S.png
+	tools/png_dimensions $< $@
 gfx/pokemon/%/normal.pal: gfx/pokemon/%/normal.gbcpal
 	tools/palette -p $< > $@
 gfx/pokemon/%/normal.gbcpal: gfx/pokemon/%/front.png
@@ -131,11 +133,19 @@ gfx/pokemon/%/back.2bpp: gfx/pokemon/%/back.png
 	$(RGBGFX) -h -o $@ $<
 gfx/pokemon/%/bitmask.asm: gfx/pokemon/%/front.animated.tilemap gfx/pokemon/%/front.dimensions
 	tools/pokemon_animation -b $^ > $@
+gfx/pokemon/%/bitmask_S.asm: gfx/pokemon/%/front_S.animated.tilemap gfx/pokemon/%/front_S.dimensions
+	tools/pokemon_animation -b $^ > $@
 gfx/pokemon/%/frames.asm: gfx/pokemon/%/front.animated.tilemap gfx/pokemon/%/front.dimensions
+	tools/pokemon_animation -f $^ > $@
+gfx/pokemon/%/frames_S.asm: gfx/pokemon/%/front_S.animated.tilemap gfx/pokemon/%/front_S.dimensions
 	tools/pokemon_animation -f $^ > $@
 gfx/pokemon/%/front.animated.2bpp: gfx/pokemon/%/front.2bpp gfx/pokemon/%/front.dimensions
 	tools/pokemon_animation_graphics -o $@ $^
+gfx/pokemon/%/front_S.animated.2bpp: gfx/pokemon/%/front_S.2bpp gfx/pokemon/%/front_S.dimensions
+	tools/pokemon_animation_graphics -o $@ $^
 gfx/pokemon/%/front.animated.tilemap: gfx/pokemon/%/front.2bpp gfx/pokemon/%/front.dimensions
+	tools/pokemon_animation_graphics -t $@ $^
+gfx/pokemon/%/front_S.animated.tilemap: gfx/pokemon/%/front_S.2bpp gfx/pokemon/%/front_S.dimensions
 	tools/pokemon_animation_graphics -t $@ $^
 
 
@@ -167,7 +177,8 @@ gfx/mystery_gift/mystery_gift.2bpp: tools/gfx += --trim-whitespace
 
 gfx/title/crystal.2bpp: tools/gfx += --interleave --png=$<
 gfx/title/old_fg.2bpp: tools/gfx += --interleave --png=$<
-gfx/title/logo.2bpp: rgbgfx += -x 4
+gfx/title/logogold.2bpp: rgbgfx += -x 4
+gfx/title/logosilver.2bpp: rgbgfx += -x 4
 
 gfx/trade/ball.2bpp: tools/gfx += --remove-whitespace
 gfx/trade/game_boy_n64.2bpp: tools/gfx += --trim-whitespace
