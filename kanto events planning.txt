@@ -11,8 +11,8 @@ Kanto landmarks:
 >gym
 DONE
 
->former victory road
-trainers, items
+>former victory road (COMPLETE!)
+trainers (DONE), items (DONE)
 mandatory for progression
 
 >gate to 115
