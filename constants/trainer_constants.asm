@@ -352,7 +352,7 @@ KRIS EQU __enum__
 	const HENRY
 	const MARVIN
 	const TULLY1
-	const ANDRE
+	const ANDRE ; used now
 	const RAYMOND
 	const WILTON1
 	const EDGAR
@@ -479,8 +479,8 @@ KRIS EQU __enum__
 	trainerclass BIKER ; 2d
 	const BIKER_BENNY
 	const KAZU
-	const ZEKE
-	const CHARLES
+	const ZEKE ; used
+	const CHARLES ; used
 	const RILEY
 	const JOEL
 	const GLENN
@@ -537,7 +537,7 @@ KRIS EQU __enum__
 	const GREG
 	const NORMAN
 	const MARK
-	const PHIL
+	const PHIL ; used now
 	const RICHARD
 	const GILBERT
 	const JARED

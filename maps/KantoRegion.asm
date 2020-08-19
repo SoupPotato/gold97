@@ -9,6 +9,10 @@
 	const KANTO_FISHER_2
 	const KANTO_LASS_2
 	const KANTO_ITEMBALL
+	const KANTO_BIKER1
+	const KANTO_BIKER2
+	const KANTO_PSYCHIC
+	const KANTO_FISHERTR
 
 KantoRegion_MapScripts:
 	db 0 ; scene scripts
@@ -83,6 +87,152 @@ KantoFisher2Script:
 KantoLass2Script:
 	jumptextfaceplayer KantoLass2Text
 	
+;----------------------------------------------------------
+	
+TrainerKBiker1:
+	trainer BIKER, ZEKE, EVENT_BEAT_KR_TRAINER1, BikerZekeSeenText, BikerZekeBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext BikerZekeAfterBattleText
+	waitbutton
+	closetext
+	end
+	
+TrainerKBiker2:
+	trainer BIKER, CHARLES, EVENT_BEAT_KR_TRAINER2, BikerCharlesSeenText, BikerCharlesBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext BikerCharlesAfterBattleText
+	waitbutton
+	closetext
+	end
+	
+TrainerKPsychic:
+	trainer PSYCHIC_T, PHIL, EVENT_BEAT_KR_TRAINER3, PsychicPhilSeenText, PsychicPhilBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext PsychicPhilAfterBattleText
+	waitbutton
+	closetext
+	end
+	
+TrainerKFisher:
+	trainer FISHER, ANDRE, EVENT_BEAT_KR_TRAINER4, FisherAndreSeenText, FisherAndreBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext FisherAndreAfterBattleText
+	waitbutton
+	closetext
+	end
+	
+;----------------------------------------------------------
+
+BikerZekeSeenText:
+	text "Hey! This is the"
+	line "world famous"
+	cont "CYCLING ROAD!"
+	
+	para "Get off your feet"
+	line "and respect the"
+	cont "road rules!"
+	done
+
+BikerZekeBeatenText:
+	text "Hey come on!"
+	done
+
+BikerZekeAfterBattleText:
+	text "It's way better"
+	line "getting around"
+	cont "KANTO on a bike!"
+	done
+	
+	
+BikerCharlesSeenText:
+	text "You should learn"
+	line "to pick your"
+	cont "battles wisely"
+	cont "before stepping"
+	cont "onto our turf!"
+	done
+
+BikerCharlesBeatenText:
+	text "Wise guy eh?"
+	done
+
+BikerCharlesAfterBattleText:
+	text "My battles?"
+	
+	para "Well right now"
+	line "I'm fighting to"
+	cont "get a row of"
+	cont "windmills put"
+	cont "along this road."
+	
+	para "Think of the"
+	line "clean energy!"
+	done
+	
+
+PsychicPhilSeenText:
+	text "My former mentor"
+	line "foresaw your"
+	cont "arrival, and so"
+	cont "I've waited here!"
+	done
+
+PsychicPhilBeatenText:
+	text "As the fates"
+	line "suggested!"
+	done
+
+PsychicPhilAfterBattleText:
+	text "My mentor left to"
+	line "train elsewhere"
+	cont "so I've decicated"
+	cont "myself to keeping"
+	cont "the PSYCHIC arts"
+	cont "alive in KANTO."
+	done
+
+	
+FisherAndreSeenText:
+	text "What's with this"
+	line "spot lately!"
+	
+	para "I'm having just"
+	line "no luck!"
+	done
+
+FisherAndreBeatenText:
+	text "Gah, no luck!"
+	done
+
+FisherAndreAfterBattleText:
+	text "I heard that fish"
+	line "might start to"
+	cont "act strangely"
+	cont "when a volcanic"
+	cont "eruption is going"
+	cont "to happen soon."
+	
+	para "Maybe I should"
+	line "avoid CINNABAR"
+	cont "ISLAND for a"
+	cont "while, h-heheh."
+	done
+	
+	
+;----------------------------------------------------------
+	
 KantoLass2Text:
 	text "The SCIENTISTs in"
 	line "this lab are"
@@ -119,7 +269,7 @@ KantoSuperNerdText:
 	para "recently bought"
 	line "ownership of the"
 	para "newer one over on"
-	line "BOARDWALK."
+	line "TEKNOS BOARDWALK."
 	done
 	
 KantoLassText:
@@ -156,14 +306,16 @@ KantoFisherText:
 	done
 	
 KantoSignText:
-	text "KANTO-"
-	line "NIHON's southern"
-	cont "crown jewel."
+	text "WELCOME TO THE"
+	line "KANTO REGION-"
+	para "NIHON's centre of"
+	line "urban prosperity."
 	done
 	
 KantoGymSignText:
-	text "KANTO #MON GYM"
-	line "LEADER: RED"
+	text "INDIGO PLATEAU"
+	line "#MON GYM"
+	cont "LEADER: RED"
 
 	para "The Experienced"
 	line "Veteran Trainer"
@@ -197,11 +349,11 @@ KantoDeptSignText:
 	text "Full Selection of"
 	line "#MON Goods!"
 
-	para "KANTO DEPT.STORE"
+	para "CELADON DEPT.STORE"
 	done
 	
 KantoMansionSignText:
-	text "KANTO MANSION"
+	text "CELADON MANSION"
 	done
 	
 KantoBattleClubSignText:
@@ -218,6 +370,134 @@ PokemonTowerSignText:
 	cont "passed."
 	done
 
+FossilLabSign:
+	jumptext FossilLabSignText
+
+FossilLabSignText:
+	text "CINNABAR ISLAND"
+	line "RESEARCH LAB"
+	done
+
+SeafoamSign:
+	jumptext SeafoamSignText
+
+SeafoamSignText:
+	text "SEAFOAM ISLANDS"
+	done
+	
+SafariZoneSign:
+	jumptext SafariZoneSignText
+	
+SafariZoneSignText:
+	text "SAFARI ZONE"
+	para "Now free for"
+	line "public access!"
+	done
+	
+FujiHouseSign:
+	jumptext FujiHouseSignText
+	
+FujiHouseSignText:
+	text "MR.FUJI's HOUSE"
+	done
+	
+DocksSign:
+	jumptext DocksSignText
+	
+DocksSignText:
+	text "VERMILLION DOCKS"
+	done
+	
+PowerPlantSign:
+	jumptext PowerPlantSignText
+	
+PowerPlantSignText:
+	text "POWER PLANT"
+	done
+	
+SilphCoSign:
+	jumptext SilphCoSignText
+	
+SilphCoSignText:
+	text "SILPH COMPANY"
+	done
+
+GameCornerSign:
+	jumptext GameCornerSignText
+
+GameCornerSignText:
+	text "GAME CORNER"
+	para "Redeem your coins"
+	line "next door."
+	done
+
+TrainerHouseSign:
+	jumptext TrainerHouseSignText
+
+TrainerHouseSignText:
+	text "TRAINER HOUSE"
+
+	para "The Club for Top"
+	line "Trainer Battles"
+	done
+
+VictoryRoadKSign:
+	jumptext VictoryRoadKSignText
+
+VictoryRoadKSignText:
+	text "INDIGO PLATEAU"
+	line "AHEAD THRU CAVE"
+	para "Former site of"
+	line "VICTORY ROAD."
+	done
+
+PewterMuseumSign:
+	jumptext PewterMuseumSignText
+
+PewterMuseumSignText:
+	text "PEWTER MUSEUM"
+	line "OF SCIENCE"
+	done
+
+PewterGardenSign:
+	jumptext PewterGardenSignText
+
+PewterGardenSignText:
+	text "Please do not"
+	line "trample the"
+	cont "flowers."
+	para "PEWTER GARDENING"
+	line "SOCIETY"
+	done
+
+MtMoonSign:
+	jumptext MtMoonSignText
+
+MtMoonSignText:
+	text "MT.MOON"
+	para "Please visit our"
+	line "gift shop on your"
+	cont "way up!"
+	done
+
+SeaCottageSign:
+	jumptext SeaCottageSignText
+
+SeaCottageSignText:
+	text "SEA COTTAGE"
+	para "Now open for"
+	line "vacation rental!"
+	cont "Contact BILL for"
+	cont "booking & info."
+	done
+
+DiglettsCaveSign:
+	jumptext DiglettsCaveSignText
+	
+DiglettsCaveSignText:
+	text "DIGLETTs CAVE"
+	done
+
 KantoCooltrainerMText:
 	text "They're holding an"
 	line "eating contest in"
@@ -228,7 +508,7 @@ KantoCooltrainerMText:
 	done
 	
 KantoTeacherText:
-	text "The KANTO DEPT."
+	text "The CELADON DEPT."
 	line "STORE has the best"
 	cont "selection."
 	para "If you can't get"
@@ -292,29 +572,46 @@ KantoRegion_MapEvents:
 
 	db 0 ; coord events
 
-	db 11 ; bg events
-	bg_event  3, 16, BGEVENT_READ, KantoSign
+	db 26 ; bg events
+	bg_event 58, 36, BGEVENT_READ, KantoSign
 	bg_event 30, 33, BGEVENT_READ, KantoPokecenterSign
-	
 	bg_event  4,  6, BGEVENT_READ, KantoGymSign
 	bg_event  9, 43, BGEVENT_READ, PalletTownSign2
 	bg_event 10, 40, BGEVENT_READ, RedsHouseSign2
 	bg_event 16, 40, BGEVENT_READ, BluesHouseSign2
 	bg_event 15, 47, BGEVENT_READ, OaksLabSign2
-	
 	bg_event 26, 21, BGEVENT_READ, KantoDeptSign
 	bg_event 28, 22, BGEVENT_READ, KantoMansionSign
 	bg_event 46, 54, BGEVENT_READ, KantoBattleClubSign
 	bg_event 55, 32, BGEVENT_READ, PokemonTowerSign
+	bg_event  7, 56, BGEVENT_READ, FossilLabSign
+	bg_event 23, 55, BGEVENT_READ, SeafoamSign
+	bg_event 33, 46, BGEVENT_READ, SafariZoneSign
+	bg_event 29, 37, BGEVENT_READ, DocksSign
+	bg_event 49, 24, BGEVENT_READ, PowerPlantSign
+	bg_event 38, 30, BGEVENT_READ, SilphCoSign
+	bg_event 24, 28, BGEVENT_READ, GameCornerSign
+	bg_event 13, 29, BGEVENT_READ, TrainerHouseSign
+	bg_event  3, 16, BGEVENT_READ, VictoryRoadKSign
+	bg_event 13,  8, BGEVENT_READ, PewterMuseumSign
+	bg_event 19,  9, BGEVENT_READ, PewterGardenSign
+	bg_event 29,  8, BGEVENT_READ, MtMoonSign
+	bg_event 47,  5, BGEVENT_READ, SeaCottageSign
+	bg_event 19, 20, BGEVENT_READ, DiglettsCaveSign
+	bg_event 53, 34, BGEVENT_READ, FujiHouseSign
 
-	db 10 ; object events
+	db 14 ; object events
 	object_event  9, 46, SPRITE_FISHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoFisherScript, -1
 	object_event 38, 19, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoCooltrainerMScript, -1
 	object_event 23, 23, SPRITE_TEACHER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoTeacherScript, -1
-	object_event 39, 10, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoPokefanMScript, -1
-	object_event 33, 24, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoLassScript, -1
+	object_event 15, 12, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoPokefanMScript, -1
+	object_event 34, 30, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoLassScript, -1
 	object_event 22, 29, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoSuperNerdScript, -1
 	object_event  1, 18, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoYoungsterScript, -1
 	object_event 37, 53, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoFisher2Script, -1
-	object_event 11, 56, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoLass2Script, -1
+	object_event 10, 57, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoLass2Script, -1
 	object_event 29, 42, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, KantoRegionTMDetect, EVENT_LAKE_OF_RAGE_TM_DETECT
+	object_event 25, 39, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerKBiker1, -1
+	object_event 24, 43, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerKBiker2, -1
+	object_event 43, 35, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerKPsychic, -1
+	object_event 22, 57, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerKFisher, -1
