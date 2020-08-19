@@ -105,6 +105,7 @@ ENDM
 	map_const WHIRL_ISLAND_1F,                             10,  9 ; 36
 	map_const WHIRL_ISLAND_B1F,                            20, 18 ; 37
 	map_const WHIRL_ISLAND_B2F,                            20, 18 ; 38
+	map_const WHIRL_ISLAND_B3F,                            10, 18 ; 38
 	map_const WHIRL_ISLAND_LUGIA_CHAMBER,                  10,  9 ; 39
 	map_const AMPARE_CAVERN_B1F,                           20, 18 ; 40
 	map_const AMPARE_CAVERN_1F,                            15, 18 ; 41

@@ -103,7 +103,7 @@ LoadSpecialMapPalette:
 	jp nz, .not_charred_summit
 	ld a, [wMapNumber]
 	cp MAP_CHARRED_SUMMIT
-	jp z, .CharredOverBrownSkyOverWaterBGPalette
+	jp z, .CharredOverBrownSkyOverYellowBGPalette
 .not_charred_summit
 	ld a, [wMapGroup]
 	cp GROUP_CHARRED_SUMMIT_CAVE
@@ -223,8 +223,8 @@ LoadSpecialMapPalette:
 	scf
 	ret
 	
-.CharredOverBrownSkyOverWaterBGPalette
-	ld hl, CharredOverBrownSkyOverWater
+.CharredOverBrownSkyOverYellowBGPalette
+	ld hl,CharredOverBrownSkyOverYellow
 	ld a, [wTimeOfDayPal]
 	maskbits NUM_DAYTIMES
 	ld bc, 8 palettes

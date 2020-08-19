@@ -4,21 +4,7 @@
 BrassTowerRoof_MapScripts:
 	db 0 ; scene scripts
 
-	db 1 ; callbacks
-	callback MAPCALLBACK_OBJECTS, .HoOh
-
-.HoOh:
-	checkevent EVENT_FOUGHT_HO_OH
-	iftrue .NoAppear
-	jump .Appear
-
-.Appear:
-	appear TINTOWERROOF_HO_OH
-	return
-
-.NoAppear:
-	disappear TINTOWERROOF_HO_OH
-	return
+	db 0 ; callbacks
 
 TinTowerHoOh:
 	faceplayer
@@ -27,22 +13,33 @@ TinTowerHoOh:
 	cry HO_OH
 	pause 15
 	closetext
+IF DEF(_GOLD)
 	setevent EVENT_FOUGHT_HO_OH
 	clearevent EVENT_OLD_CITY_EARL
 	setmapscene PAGOTA_CITY, SCENE_DEFAULT
-	setevent EVENT_SLOWPOKE_WELL_SLOWPOKES
+	setevent EVENT_BRASS_TOWER_SAGE_GONE
 	clearevent EVENT_RIVAL_AZALEA_TOWN
 	clearevent EVENT_RIVAL_TEAM_ROCKET_BASE
 	clearevent EVENT_AZALEA_TOWN_SLOWPOKES
 	writecode VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
 	loadwildmon HO_OH, 45
-;	writecode VAR_BATTLETYPE, BATTLETYPE_LEGENDKANTO
 	startbattle
 	disappear TINTOWERROOF_HO_OH
 	setevent EVENT_RELEASED_THE_BEASTS
 	reloadmapafterbattle
-	setevent EVENT_SET_WHEN_FOUGHT_HO_OH
 	end
+	
+ELIF DEF(_SILVER)
+	setevent EVENT_FOUGHT_HO_OH
+	writecode VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
+	loadwildmon HO_OH, 70
+	startbattle
+	disappear TINTOWERROOF_HO_OH
+	setevent EVENT_RELEASED_THE_BEASTS
+	reloadmapafterbattle
+	end
+ENDC
+
 
 HoOhText:
 	text "Shaoooh!"
@@ -59,4 +56,4 @@ BrassTowerRoof_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event  9,  7, SPRITE_HO_OH, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TinTowerHoOh, EVENT_TIN_TOWER_ROOF_HO_OH
+	object_event  9,  7, SPRITE_HO_OH, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TinTowerHoOh, EVENT_FOUGHT_HO_OH

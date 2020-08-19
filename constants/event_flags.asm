@@ -42,7 +42,7 @@
 	const EVENT_GOT_CRUIZE_FROM_ELM
 	const EVENT_GOT_CHIKORITA_FROM_ELM
 	const EVENT_GOT_MYSTERY_EGG_FROM_MR_POKEMON
-	const EVENT_031
+	const EVENT_LUGIA_CAVE_OPEN
 	const EVENT_PRYCE_IN_GYM; used, for pryce in his gym
 	const EVENT_CLEARED_RADIO_TOWER ;this is the end of team rocket- if this is set, they're gone
 	const EVENT_CLEARED_ROCKET_HIDEOUT ;this is what's used for the end of team rocket hideout in honto(did I actually use this? Not sure)
@@ -813,7 +813,7 @@
 	const EVENT_CONTEST_OFFICER_HAS_GOLD_BERRY
 	const EVENT_CONTEST_OFFICER_HAS_BERRY
 	const EVENT_FOUGHT_HO_OH
-	const EVENT_FOUGHT_BLISSEY
+	const EVENT_FOUGHT_LUGIA
 	const EVENT_BEAT_RIVAL_IN_MT_MOON
 	const EVENT_MET_BILLS_GRANDPA
 	const EVENT_SHOWED_LICKITUNG_TO_BILLS_GRANDPA
@@ -853,7 +853,7 @@
 	const EVENT_BUENA_OFFERED_HER_PHONE_NUMBER
 	const EVENT_MET_BUENA
 	const EVENT_GOT_ODD_EGG
-	const EVENT_33F
+	const EVENT_WHIRL_ISLANDS_SAGE_GONE
 	const EVENT_GOT_GS_BALL_FROM_POKECOM_CENTER
 ; ???
 	const EVENT_341
@@ -1825,14 +1825,14 @@
 	const EVENT_PLAYERS_HOUSE_MOM_2
 	const EVENT_MR_POKEMONS_HOUSE_OAK
 	const EVENT_OLD_CITY_EARL; used for noting that the ho-oh story man isn't home, disappears sages in tower as well
-	const EVENT_EARLS_ACADEMY_EARL; used for noting that you have triggered the ho-oh event
+	const EVENT_HO_OH_STAIRS_APPEAR
 	const EVENT_GOLDENROD_CITY_ROCKET_SCOUT; used for setting the rocket base console to off
 	const EVENT_GOLDENROD_CITY_ROCKET_TAKEOVER
 	const EVENT_RADIO_TOWER_ROCKET_TAKEOVER
 	const EVENT_GOLDENROD_CITY_CIVILIANS
 	const EVENT_RADIO_TOWER_CIVILIANS_AFTER
 	const EVENT_RADIO_TOWER_BLACKBELT_BLOCKS_STAIRS
-	const EVENT_69F
+	const EVENT_WHIRL_ISLANDS_B3F_ESCAPE_ROPE
 	const EVENT_OLIVINE_GYM_JASMINE
 	const EVENT_LAKE_OF_RAGE_LANCE
 	const EVENT_MAHOGANY_MART_LANCE_AND_DRAGONITE
@@ -1873,7 +1873,7 @@
 	const EVENT_ROUTE_36_SILVER
 	const EVENT_AZALEA_TOWN_SLOWPOKES; raikou event
 	const EVENT_AZALEA_TOWN_SLOWPOKETAIL_ROCKET
-	const EVENT_SLOWPOKE_WELL_SLOWPOKES; used to make kurt and captain disappear before ho oh event
+	const EVENT_BRASS_TOWER_SAGE_GONE; used to make kurt and captain disappear before ho oh event
 	const EVENT_SLOWPOKE_WELL_ROCKETS
 	const EVENT_GUIDE_GENT_IN_HIS_HOUSE
 	const EVENT_GUIDE_GENT_VISIBLE_IN_CHERRYGROVE

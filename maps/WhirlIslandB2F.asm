@@ -24,10 +24,11 @@ WhirlIslandB2FTMSludgeBomb:
 WhirlIslandB2F_MapEvents:
 	db 0, 0 ; filler
 
-	db 3 ; warp events
+	db 4 ; warp events
 	warp_event 15,  3, WHIRL_ISLAND_B1F, 3
 	warp_event 37, 11, WHIRL_ISLAND_B1F, 4
 	warp_event 11, 21, WHIRL_ISLAND_B2F_CAVE, 1
+	warp_event  7, 23, WHIRL_ISLAND_B3F, 1
 
 	db 0 ; coord events
 

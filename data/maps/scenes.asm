@@ -81,4 +81,5 @@ MapScenes::
 	scene_var TEKNOS_AQUARIUM_2F,					       wOlivineLighthouse2FID
 	scene_var TRAINER_HOUSE_B1F,                           wTrainerHouseB1FSceneID
 	scene_var MOUNT_MOON_SQUARE,                           wMountMoonSquareSceneID
+	scene_var WHIRL_ISLAND_B3F,                            wWhirlIslandB3FSceneID
 	db -1

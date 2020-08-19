@@ -10,7 +10,7 @@ BrassTower5F_MapScripts:
 	callback MAPCALLBACK_TILES, .AddStairs
 
 .AddStairs:
-	checkevent EVENT_EARLS_ACADEMY_EARL
+	checkevent EVENT_HO_OH_STAIRS_APPEAR
 	iffalse .DoneStairs
 	changeblock   0,  5, $3C ; ladder
 .DoneStairs:
@@ -19,7 +19,7 @@ BrassTower5F_MapScripts:
 BrassTower5FSageScript:
 	checkevent EVENT_FOUGHT_HO_OH
 	iftrue .AfterHoOh
-	checkevent EVENT_EARLS_ACADEMY_EARL
+	checkevent EVENT_HO_OH_STAIRS_APPEAR
 	iftrue .DuringHoOh
 	setevent EVENT_GOT_5F_SAGE_BLESSING
 	faceplayer
@@ -44,6 +44,12 @@ BrassTower5FSageScript:
 	waitbutton
 	closetext
 	end
+	
+KurtScript:
+	jumptext KurtKnewIt
+	
+CaptainScript:
+	jumptext CaptainCantBelieve
 	
 HoOhEventSceneUp:
 	applymovement PLAYER, PlayerWalksToHoOhGroup1
@@ -109,7 +115,7 @@ CaptainCantBelieve:
 	
 SageTellsYouToSeeBird:
 	text "<PLAY_G>."
-	para "Ho-Oh roosts above"
+	para "HO-OH roosts above"
 	line "our heads."
 	para "The bird has"
 	line "returned, as"
@@ -215,5 +221,5 @@ BrassTower5F_MapEvents:
 
 	db 3 ; object events
 	object_event  2,  3, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BrassTower5FSageScript, -1
-	object_event  1,  3, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BrassTower5FSageScript, EVENT_SLOWPOKE_WELL_SLOWPOKES
-	object_event  3,  3, SPRITE_CAPTAIN, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BrassTower5FSageScript, EVENT_SLOWPOKE_WELL_SLOWPOKES
+	object_event  1,  3, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KurtScript, EVENT_BRASS_TOWER_SAGE_GONE
+	object_event  3,  3, SPRITE_CAPTAIN, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CaptainScript, EVENT_BRASS_TOWER_SAGE_GONE

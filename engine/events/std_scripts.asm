@@ -478,7 +478,7 @@ BugContestResults_CopyContestantsToResults:
 InitializeEventsScript:
 	setevent EVENT_TELEPORT_GUY; so he doesn't appear until after returning the fuel line
 	setevent EVENT_GOT_WATER_STONE_FROM_BILLS_GRANDPA; makes youngster disappear from n64 house
-	setevent EVENT_SLOWPOKE_WELL_SLOWPOKES; I added this, makes kurt and captain disappear until ho-oh
+	setevent EVENT_BRASS_TOWER_SAGE_GONE; I added this, makes kurt and captain disappear until ho-oh
 	setevent EVENT_GOT_SHUCKIE; also added this, makes red disappear until you beat all trainers in gym
 ;	setevent EVENT_EARLS_ACADEMY_EARL
 	setevent EVENT_RADIO_TOWER_ROCKET_TAKEOVER
@@ -617,6 +617,7 @@ InitializeEventsScript:
 	setevent EVENT_ECRUTEAK_SCARED_LASS
 	setevent WHITNEY_FIGHTING_ROCKETS
 	setevent WHITNEY_DEFEATS_ROCKETS
+	setevent EVENT_WHIRL_ISLANDS_SAGE_GONE
 	return
 
 AskNumber1MScript:

@@ -325,6 +325,7 @@ ENDM
 	map_attributes WhirlIsland1F, WHIRL_ISLAND_1F, $09, 0
 	map_attributes WhirlIslandB1F, WHIRL_ISLAND_B1F, $09, 0
 	map_attributes WhirlIslandB2F, WHIRL_ISLAND_B2F, $09, 0
+	map_attributes WhirlIslandB3F, WHIRL_ISLAND_B3F, $09, 0
 	map_attributes WhirlIslandLugiaChamber, WHIRL_ISLAND_LUGIA_CHAMBER, $0f, 0
 	map_attributes AmpareCavernB1F, AMPARE_CAVERN_B1F, $1D, 0
 	map_attributes AmpareCavern1F, AMPARE_CAVERN_1F, $09, 0

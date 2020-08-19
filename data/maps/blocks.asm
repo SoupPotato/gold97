@@ -425,14 +425,20 @@ MagmaShaft1F_Blocks:
 DeepwaterPassageB1F_Blocks:
 	INCBIN "maps/DeepwaterPassageB1F.blk"
 
-WhirlIslandB2FCave_Blocks:
-	INCBIN "maps/WhirlIslandB2FCave.blk"
-
 WhirlIsland1F_Blocks:
 	INCBIN "maps/WhirlIsland1F.blk"
 
 WhirlIslandB1F_Blocks:
 	INCBIN "maps/WhirlIslandB1F.blk"
+	
+WhirlIslandB2F_Blocks:
+	INCBIN "maps/WhirlIslandB2F.blk"
+	
+WhirlIslandB2FCave_Blocks:
+	INCBIN "maps/WhirlIslandB2FCave.blk"
+	
+WhirlIslandB3F_Blocks:
+	INCBIN "maps/WhirlIslandB3F.blk"
 
 WhirlIslandLugiaChamber_Blocks:
 	INCBIN "maps/WhirlIslandLugiaChamber.blk"
@@ -514,9 +520,6 @@ TeamRocketBaseB2F_Blocks:
 	
 RadioTower6F_Blocks:
 	INCBIN "maps/RadioTower6F.blk"
-
-WhirlIslandB2F_Blocks:
-	INCBIN "maps/WhirlIslandB2F.blk"
 	
 KantoCeladonMansionRoofHouse_Blocks:
 	INCBIN "maps/KantoCeladonMansionRoofHouse.blk"

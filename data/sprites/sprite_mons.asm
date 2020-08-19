@@ -33,5 +33,5 @@ SpriteMons:
 	db MOLTRES
 	db SNORLAX
 	db GYARADOS
-	db BLISSEY
+	db LUGIA
 	db HO_OH

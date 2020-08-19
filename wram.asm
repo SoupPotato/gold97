@@ -2639,8 +2639,9 @@ wRoute8SceneID::                                 db
 wEcruteakCitySceneID::                             db 
 wOlivineLighthouse1FID::						db
 wOlivineLighthouse2FID::						db
+wWhirlIslandB3FSceneID::						db
 
-	ds 24
+	ds 23
 
 ; fight counts
 wJackFightCount::    db ; d9f2

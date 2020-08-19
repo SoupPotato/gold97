@@ -8,8 +8,9 @@ AlloyOldCaptainsHouse_MapScripts:
 	db 0 ; callbacks
 
 AlloyOldCaptainsHouseElderScript:
+IF DEF(_GOLD)
 	checkevent EVENT_FOUGHT_HO_OH
-	iftrue .AfterEverythingHoOh
+	iftrue .AfterEverythingBirdFight
 	faceplayer
 	opentext
 	writetext AlloyOldCaptainsHouseElderIntroText
@@ -21,13 +22,29 @@ AlloyOldCaptainsHouseElderScript:
 	closetext
 	end
 	
+ELIF DEF(_SILVER)
+	checkevent EVENT_FOUGHT_LUGIA
+	iftrue .AfterEverythingBirdFight
+	faceplayer
+	opentext
+	writetext AlloyOldCaptainsHouseElderIntroText
+	buttonsound
+	checkevent EVENT_CLEARED_RADIO_TOWER
+	iftrue .NoEvilLeft
+	writetext AlloyOldCaptainsHouseElderEvilText
+	waitbutton
+	closetext
+	end
+ENDC
+	
 .NoEvilLeft
 	checkevent EVENT_GOT_5F_SAGE_BLESSING
 	iffalse .NotBlessed
 	writetext AlloyOldCaptainsHouseElderText2
 	yesorno
 	iffalse OlivineElderNoStory
-	writetext OlivineElderStoryText
+IF DEF(_GOLD)
+	writetext OlivineElderHoOhStoryText
 	waitbutton
 	closetext
 	special FadeOutMusic
@@ -37,35 +54,78 @@ AlloyOldCaptainsHouseElderScript:
 	showemote EMOTE_SHOCK, OLIVINEHOUSEBETA_ELDER, 20
 	pause 15
 	opentext
-	writetext BirdIsTheWordText
+	writetext HoOhAppearsText
 	waitbutton
 	closetext
 	checkcode VAR_FACING
-	ifequal UP, .ElderWalkAroundPlayer
+	ifequal UP, .ElderWalkAroundPlayerGold
 	applymovement OLIVINEHOUSEBETA_ELDER, ElderWalksOutMovement
 	playsound SFX_EXIT_BUILDING
 	disappear OLIVINEHOUSEBETA_ELDER
 	setevent EVENT_OLD_CITY_EARL
-	setevent EVENT_EARLS_ACADEMY_EARL
-	clearevent EVENT_SLOWPOKE_WELL_SLOWPOKES
+	setevent EVENT_HO_OH_STAIRS_APPEAR
+	clearevent EVENT_BRASS_TOWER_SAGE_GONE
 	setmapscene PAGOTA_CITY, SCENE_KURTS_HOUSE_LOCKED
 	setmapscene BRASS_TOWER_5F, SCENE_HO_OH_EVENT
 	pause 15
 	special RestartMapMusic
 	end
 	
-.ElderWalkAroundPlayer
+.ElderWalkAroundPlayerGold
 	applymovement OLIVINEHOUSEBETA_ELDER, ElderWalksAroundPlayerMovement
 	playsound SFX_EXIT_BUILDING
 	disappear OLIVINEHOUSEBETA_ELDER
 	setevent EVENT_OLD_CITY_EARL
-	setevent EVENT_EARLS_ACADEMY_EARL
-	clearevent EVENT_SLOWPOKE_WELL_SLOWPOKES
+	setevent EVENT_HO_OH_STAIRS_APPEAR
+	clearevent EVENT_BRASS_TOWER_SAGE_GONE
 	setmapscene PAGOTA_CITY, SCENE_KURTS_HOUSE_LOCKED
 	setmapscene BRASS_TOWER_5F, SCENE_HO_OH_EVENT
 	pause 15
 	special RestartMapMusic
 	end
+	
+ELIF DEF(_SILVER)
+	writetext OlivineElderLugiaStoryText
+	waitbutton
+	closetext
+	special FadeOutMusic
+	pause 20
+	cry LUGIA
+	playsound SFX_BUBBLEBEAM
+	showemote EMOTE_SHOCK, OLIVINEHOUSEBETA_ELDER, 20
+	pause 15
+	opentext
+	writetext LugiaAppearsText
+	waitbutton
+	closetext
+	checkcode VAR_FACING
+	ifequal UP, .ElderWalkAroundPlayerSilver
+	applymovement OLIVINEHOUSEBETA_ELDER, ElderWalksOutMovement
+	playsound SFX_EXIT_BUILDING
+	disappear OLIVINEHOUSEBETA_ELDER
+	setevent EVENT_OLD_CITY_EARL
+	setevent EVENT_LUGIA_CAVE_OPEN
+	clearevent EVENT_WHIRL_ISLANDS_SAGE_GONE
+	setmapscene PAGOTA_CITY, SCENE_KURTS_HOUSE_LOCKED
+	setmapscene WHIRL_ISLAND_B3F, SCENE_LUGIA_EVENT
+	pause 15
+	special RestartMapMusic
+	end
+
+	
+.ElderWalkAroundPlayerSilver
+	applymovement OLIVINEHOUSEBETA_ELDER, ElderWalksAroundPlayerMovement
+	playsound SFX_EXIT_BUILDING
+	disappear OLIVINEHOUSEBETA_ELDER
+	setevent EVENT_OLD_CITY_EARL
+	setevent EVENT_LUGIA_CAVE_OPEN
+	clearevent EVENT_WHIRL_ISLANDS_SAGE_GONE
+	setmapscene PAGOTA_CITY, SCENE_KURTS_HOUSE_LOCKED
+	setmapscene WHIRL_ISLAND_B3F, SCENE_LUGIA_EVENT
+	pause 15
+	special RestartMapMusic
+	end
+ENDC
 	
 .NotBlessed
 	writetext AlloyOldCaptainsHouseElderNotBlessedText
@@ -73,7 +133,7 @@ AlloyOldCaptainsHouseElderScript:
 	closetext
 	end
 	
-.AfterEverythingHoOh
+.AfterEverythingBirdFight
 	faceplayer
 	opentext
 	writetext SometimesYouLiveLongEnough
@@ -123,7 +183,7 @@ SometimesYouLiveLongEnough:
 	cont "possible."
 	done
 	
-OlivineElderStoryText:
+OlivineElderHoOhStoryText:
 	text "Listen closely…"
 	
 	para "Many years ago,"
@@ -179,14 +239,88 @@ OlivineElderStoryText:
 	cont "soon..."
 	done
 	
-BirdIsTheWordText:
+OlivineElderLugiaStoryText:
+	text "Listen closely…"
+	
+	para "Many years ago,"
+	line "NIHON was guarded"
+	cont "by a noble bird,"
+	cont "whose wings"
+	cont "shimmerred with"
+	cont "a color of silver."
+	
+	para "Legend tells it"
+	line "nested at what is"
+	cont "known as the"
+	cont "WHIRL ISLAND."
+	
+	para "However, the lack"
+	line "of respect for the"
+	cont "ocean environment"
+	cont "made the bird grow"
+	cont "restless."
+	
+	para "No longer com"
+	line "-pelled to stay,"
+	cont "the bird left..."
+	
+	para "As it dived, its"
+	line "song created many"
+	cont "whirlpools."
+	
+	para "These whirlpools"
+	line "kept the sea safe"
+	cont "and clean from"
+	cont "human actions."
+	
+	para "Three beasts were"
+	line "tasked to keep"
+	cont "watch over NIHON"
+	cont "in the bird's"
+	cont "absence."
+	
+	para "The beasts then"
+	line "scattered, and"
+	cont "none have seen"
+	cont "them since."
+	
+	para "But legend says"
+	line "that they have"
+	cont "remained in NIHON,"
+	cont "watching over it"
+	cont "in secret,"
+	
+	para "and that a being"
+	line "with a kind soul"
+	cont "will return the"
+	cont "bird."
+	
+	para "I feel we may be"
+	line "upon that day"
+	cont "soon..."
+	done
+	
+HoOhAppearsText:
 	text "C-could it be!?"
 	
 	para "The bird!"
 	
 	para "Come child, we"
 	line "must make haste to"
-	cont "the 5 FLOOR TOWER."
+	cont "the BRASS TOWER."
+	
+	para "The legend is"
+	line "being realised!"
+	done
+	
+LugiaAppearsText:
+	text "C-could it be!?"
+	
+	para "The bird!"
+	
+	para "Come child, we"
+	line "must make haste to"
+	cont "the WHIRL ISLAND."
 	
 	para "The legend is"
 	line "being realised!"
