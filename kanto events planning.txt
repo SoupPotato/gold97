@@ -1,10 +1,10 @@
 General
 >check text on existing maps for inconsistencies in naming
 
-Kanto main map
->add up to 15 NPCs w/ trainers & items
->check text for inconsistencies
->add all the signpost text
+Kanto main map (COMPLETE!)
+>add up to 14 NPCs w/ trainers & items (DONE)
+>check text for inconsistencies (DONE)
+>add all the signpost text (DONE)
 
 
 Kanto landmarks:

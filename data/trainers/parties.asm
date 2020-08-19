@@ -1693,8 +1693,10 @@ FisherGroup:
 	db -1 ; end
 
 	; FISHER (8)
-	db "ANDRE@", TRAINERTYPE_NORMAL ;unused
-	db 27, GYARADOS
+	db "ANDRE@", TRAINERTYPE_NORMAL ; used kanto region
+	db 39, GYARADOS
+	db 38, SEAKING
+	db 40, QWILFISH
 	db -1 ; end
 
 	; FISHER (9)
@@ -2418,16 +2420,17 @@ BikerGroup:
 	db -1 ; end
 
 	; BIKER (5)
-	db "ZEKE@", TRAINERTYPE_NORMAL ;unused
-	db 32, KOFFING
-	db 32, KOFFING
+	db "ZEKE@", TRAINERTYPE_NORMAL ;used kanto region
+	db 40, KOFFING
+	db 42, KOFFING
+	db 39, MAGMAR
 	db -1 ; end
 
-	; BIKER (6) ; unused
-	db "CHARLES@", TRAINERTYPE_NORMAL
-	db 30, KOFFING
-	db 30, CHARMELEON
-	db 30, WEEZING
+	; BIKER (6) 
+	db "CHARLES@", TRAINERTYPE_NORMAL ; used kanto region
+	db 39, KOFFING
+	db 40, CHARMELEON
+	db 40, WEEZING
 	db -1 ; end
 
 	; BIKER (7) ; unused
@@ -2717,9 +2720,9 @@ PsychicGroup:
 	db -1 ; end
 
 	; PSYCHIC_T (8)
-	db "PHIL@", TRAINERTYPE_MOVES ;unused
-	db 24, NATU,       LEER, NIGHT_SHADE, FUTURE_SIGHT, CONFUSE_RAY
-	db 26, KADABRA,    DISABLE, PSYBEAM, RECOVER, FUTURE_SIGHT
+	db "PHIL@", TRAINERTYPE_NORMAL ;used, kanto region
+	db 39, EXEGGUTOR
+	db 42, KADABRA
 	db -1 ; end
 
 	; PSYCHIC_T (9)
