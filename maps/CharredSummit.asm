@@ -46,12 +46,12 @@ CharredSummit_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event 13, 35, CHARRED_SUMMIT_CAVE, 1
-	warp_event  7, 21, CHARRED_SUMMIT_CAVE, 2
+	warp_event 13, 33, CHARRED_SUMMIT_CAVE, 1
+	warp_event  9, 21, CHARRED_SUMMIT_CAVE, 2
 
 	db 0 ; coord events
 
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event 10,  2, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, MoltresScript, EVENT_EXPLODING_TRAP_7
+	object_event 12,  2, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, MoltresScript, EVENT_EXPLODING_TRAP_7

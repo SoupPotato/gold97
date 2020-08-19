@@ -11,7 +11,6 @@ OutdoorSprites:
 	dw FrostpointGroupSprites
 	dw NagoGroupSprites
 	dw BirdonGroupSprites
-	dw BoardwalkGroupSprites
 	dw PagotaGroupSprites
 	dw WestportGroupSprites
 	dw AmamiGroupSprites
@@ -288,22 +287,6 @@ AlloyGroupSprites:
 	db SPRITE_YOUNGSTER
 	db SPRITE_POKEFAN_F
 	db 0 ; end
-
-BoardwalkGroupSprites:
-	db SPRITE_SILVER
-	db SPRITE_TEACHER
-	db SPRITE_FISHER
-	db SPRITE_COOLTRAINER_M
-	db SPRITE_YOUNGSTER
-	db SPRITE_LASS
-	db SPRITE_BLUE
-	db SPRITE_SUPER_NERD
-	db SPRITE_BUG_CATCHER
-	; max 9 of 9 walking sprites
-	db SPRITE_POKE_BALL
-	db SPRITE_FRUIT_TREE
-	db SPRITE_ROCKER
-	db 0 ;end
 
 SanskritGroupSprites:
 	db SPRITE_SCIENTIST
