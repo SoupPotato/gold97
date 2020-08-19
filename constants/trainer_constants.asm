@@ -198,11 +198,11 @@ KRIS EQU __enum__
 	const PAUL
 	const CODY
 	const MIKE
-	const GAVEN1
-	const GAVEN2
+	const GAVEN ;changed
+	const EVERITT ; changed
 	const RYAN
 	const JAKE
-	const GAVEN3
+	const CHESTER ; changed
 	const BLAKE
 	const BRIAN
 	const ERICK
@@ -225,16 +225,16 @@ KRIS EQU __enum__
 	const IRENE
 	const KELLY
 	const JOYCE
-	const BETH1
+	const BETH ; changed
 	const REENA1
 	const MEGAN
-	const BETH2
+	const KENZIE ; changed
 	const CAROL
 	const QUINN
 	const EMMA
 	const CYBIL
 	const JENN
-	const BETH3
+	const ALLY ; changed
 	const REENA2
 	const REENA3
 	const CARA

@@ -108,9 +108,12 @@ KantoGroupSprites:
 	db SPRITE_FISHER
 	db SPRITE_TEACHER
 	db SPRITE_SUPER_NERD
-	; 7 of 9 walking sprites
+	db SPRITE_FAIRY
+	db SPRITE_BIKER
+	; 9 of 9 walking sprites
 	db SPRITE_POKE_BALL
 	db SPRITE_FRUIT_TREE
+	db SPRITE_ROCK
 	db 0 ; end
 
 AmamiGroupSprites:
