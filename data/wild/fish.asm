@@ -79,7 +79,7 @@ FishGroups:
 	db  40 percent,     POLIWAG,    40
 	db  70 percent,     time_group 7
 	db  90 percent + 1, MAGIKARP,   40
-	db 100 percent,     POLIWAG,    40
+	db 100 percent,     POLIWHIRL,  40
 
 .Dratini_Old:
 	db  70 percent + 1, MAGIKARP,   10
@@ -105,7 +105,7 @@ FishGroups:
 	db  70 percent,     QWILFISH,   20
 	db  90 percent + 1, QWILFISH,   20
 	db 100 percent,     time_group 10
-.Qwilfish_Swarm_Super:
+.Qwilfish_Swarm_Super
 	db  40 percent,     QWILFISH,   40
 	db  70 percent,     time_group 11
 	db  90 percent + 1, QWILFISH,   40
@@ -181,11 +181,11 @@ FishGroups:
 	db  35 percent,     MAGIKARP,   20
 	db  70 percent,     TENTACOOL,  20
 	db  90 percent + 1, TENTACOOL,  20
-	db 100 percent,     time_group 20
+	db 100 percent,     QWILFISH,   20
 .Qwilfish_NoSwarm_Super:
 .Qwilfish_Super:
 	db  40 percent,     TENTACOOL,  40
-	db  70 percent,     time_group 21
+	db  70 percent,     time_group  21
 	db  90 percent + 1, MAGIKARP,   40
 	db 100 percent,     QWILFISH,   40
 

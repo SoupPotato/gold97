@@ -85,11 +85,12 @@ KantoGrassWildMons:
 
 	map_id MERIDIAN_PATH
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	IF DEF(_GOLD)
 	; morn
 	db 46, DODUO
 	db 48, EXEGGCUTE
 	db 50, NIDORINO
-	db 50, GIRAFARIG
+	db 50, GROWLITHE
 	db 52, TAUROS
 	db 50, DODRIO
 	db 50, DODRIO
@@ -97,7 +98,7 @@ KantoGrassWildMons:
 	db 46, DODUO
 	db 48, EXEGGCUTE
 	db 50, NIDORINO
-	db 50, GIRAFARIG
+	db 50, GROWLITHE
 	db 52, TAUROS
 	db 50, DODRIO
 	db 50, DODRIO
@@ -110,6 +111,32 @@ KantoGrassWildMons:
 	db 50, NOCTOWL
 	db 50, NOCTOWL
 	
+	ELIF DEF(_SILVER)
+	; morn
+	db 46, DODUO
+	db 48, EXEGGCUTE
+	db 50, NIDORINO
+	db 50, VULPIX
+	db 52, TAUROS
+	db 50, DODRIO
+	db 50, DODRIO
+	; day
+	db 46, DODUO
+	db 48, EXEGGCUTE
+	db 50, NIDORINO
+	db 50, VULPIX
+	db 52, TAUROS
+	db 50, DODRIO
+	db 50, DODRIO
+	; nite
+	db 46, QUAGSIRE
+	db 48, EXEGGCUTE
+	db 50, NIDORINO
+	db 50, GIRAFARIG
+	db 52, QUAGSIRE
+	db 50, NOCTOWL
+	db 50, NOCTOWL
+	ENDC
 	
 	map_id URASOE_PARK
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -145,7 +172,7 @@ KantoGrassWildMons:
 	db 48, GRAVELER
 	db 48, RHYHORN
 	db 52, HOUNDOOM
-	db 50, DONPHAN
+	db 50, BOMSHEAL
 	db 50, MAGMAR
 	db 52, MAGMAR
 	; day
@@ -153,7 +180,7 @@ KantoGrassWildMons:
 	db 48, GRAVELER
 	db 48, RHYHORN
 	db 52, HOUNDOOM
-	db 50, DONPHAN
+	db 50, BOMSHEAL
 	db 50, MAGMAR
 	db 52, MAGMAR
 	; nite
@@ -161,15 +188,16 @@ KantoGrassWildMons:
 	db 48, GRAVELER
 	db 48, RHYHORN
 	db 52, HOUNDOOM
-	db 50, DONPHAN
+	db 50, BOMSHEAL
 	db 50, MAGMAR
 	db 52, MAGMAR
 	
 	map_id URASOE_TRAIL
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	IF DEF(_GOLD)
 	; morn
 	db 52, PIDGEOTTO
-	db 53, PIDGEOTTO
+	db 53, GROWLITHE
 	db 54, PIDGEOT
 	db 53, MADAME
 	db 52, RATICATE
@@ -177,7 +205,7 @@ KantoGrassWildMons:
 	db 53, JUMPLUFF
 	; day
 	db 52, PIDGEOTTO
-	db 53, PIDGEOTTO
+	db 53, GROWLITHE
 	db 54, PIDGEOT
 	db 53, MADAME
 	db 52, RATICATE
@@ -185,12 +213,39 @@ KantoGrassWildMons:
 	db 53, JUMPLUFF
 	; nite
 	db 52, NOCTOWL
-	db 53, RATICATE
+	db 53, BELLRUN
 	db 54, GOLBAT
 	db 53, GOLDUCK
+	db 52, PERSIAN
+	db 53, NOCTOWL
+	db 53, NOCTOWL
+	
+	ELIF DEF(_SILVER)
+	; morn
+	db 52, PIDGEOTTO
+	db 53, VULPIX
+	db 54, PIDGEOT
+	db 53, MADAME
 	db 52, RATICATE
+	db 53, JUMPLUFF
+	db 53, JUMPLUFF
+	; day
+	db 52, PIDGEOTTO
+	db 53, VULPIX
+	db 54, PIDGEOT
+	db 53, MADAME
+	db 52, RATICATE
+	db 53, JUMPLUFF
+	db 53, JUMPLUFF
+	; nite
+	db 52, NOCTOWL
+	db 53, PERSIAN
+	db 54, GOLBAT
+	db 53, GOLDUCK
+	db 52, BELLRUN
 	db 53, NOCTOWL
 	db 53, NOCTOWL
+	ENDC
 	
 	map_id NANJO_FOREST
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
@@ -223,7 +278,7 @@ KantoGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 54, PIDGEOTTO
-	db 54, PIDGEOTTO
+	db 54, SKIPLOOM
 	db 55, PIDGEOT
 	db 55, MADAME
 	db 54, RATICATE
@@ -231,7 +286,7 @@ KantoGrassWildMons:
 	db 55, JUMPLUFF
 	; day
 	db 54, PIDGEOTTO
-	db 54, PIDGEOTTO
+	db 54, SKIPLOOM
 	db 55, PIDGEOT
 	db 55, MADAME
 	db 54, RATICATE
