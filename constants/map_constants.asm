@@ -309,10 +309,6 @@ ENDM
 	map_const STAND_ZOO_INFIRMARY,						    4,  4 ; derp
 	map_const NATIONAL_PARK_STAND_GATE,                     5,  4 ; 17
 
-	newgroup                                                      ; 18
-
-	map_const URASOE_PARK_URASOE_TRAIL_GATE,                5,  4 ; 13
-
 	newgroup                                                      ; 20
 
 	map_const POKECENTER_2F,                                8,  4 ;  1
@@ -397,10 +393,6 @@ ENDM
 	map_const ROCKET_SHIP_BASE,                            20, 18 ;  4
 	map_const ISEN_STRAIT_SEASIDE_PATH_GATE,                5,  4 ; 26
 
-	newgroup                                                      ; 23
-
-	map_const VICTORY_ROAD_GATE,                           10,  9 ; 13
-
 	newgroup                                                      ; 24
 
 	map_const ROUTE_115,                                   30,  9 ;  2
@@ -414,6 +406,7 @@ ENDM
 	map_const SILENT_POKECENTER_1F,                         8,  4 ;  9
 	map_const ROUTE_101_PAGOTA_GATE,                        5,  4 ; 11
 	map_const ROUTE_101_PAGOTA_GATE_2F,						4,  3 ; new gate floor
+	map_const VICTORY_ROAD_GATE,                           10,  9 ; 13
 
 	newgroup                                                      ; 25
 
@@ -425,6 +418,7 @@ ENDM
 	map_const RYUKYU_ABORETUM,                             10,  9 ;  9
 	map_const URASOE_PARK,                                 20,  9 ;  3
 	map_const RYUKYU_TRADE_SPEECH_HOUSE,                    5,  4 ;  3
+	map_const URASOE_PARK_URASOE_TRAIL_GATE,                5,  4 ; 13
 
 	newgroup                                                      ; 26
 

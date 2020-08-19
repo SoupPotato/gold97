@@ -3,34 +3,32 @@
 
 OutdoorSprites:
 ; entries correspond to map groups
-	dw OlivineGroupSprites
-	dw MahoganyGroupSprites
+	dw AlloyGroupSprites
+	dw SanskritGroupSprites
 	dw DungeonsGroupSprites
-	dw EcruteakGroupSprites
-	dw BlackthornGroupSprites
-	dw CinnabarGroupSprites
-	dw CeruleanGroupSprites
-	dw AzaleaGroupSprites
-	dw LakeOfRageGroupSprites
-	dw VioletGroupSprites
-	dw GoldenrodGroupSprites
-	dw VermilionGroupSprites
-	dw PalletGroupSprites
-	dw PewterGroupSprites
+	dw TeknosGroupSprites
+	dw BlueForestGroupSprites
+	dw FrostpointGroupSprites
+	dw NagoGroupSprites
+	dw BirdonGroupSprites
+	dw BoardwalkGroupSprites
+	dw PagotaGroupSprites
+	dw WestportGroupSprites
+	dw AmamiGroupSprites
+	dw KobanGroupSprites
+	dw YoronGroupSprites
 	dw FastShipGroupSprites
-	dw IndigoGroupSprites
-	dw FuchsiaGroupSprites
-	dw SilverGroupSprites
+	dw LeagueGroupSprites
+	dw StandGroupSprites
 	dw CableClubGroupSprites
-	dw CeladonGroupSprites
-	dw CianwoodGroupSprites
-	dw ViridianGroupSprites
-	dw NewBarkGroupSprites
-	dw SaffronGroupSprites
-	dw CherrygroveGroupSprites
+	dw KantoGroupSprites
+	dw SunpointGroupSprites
+	dw SilentGroupSprites
+	dw RyukyuGroupSprites
+	dw CrownGroupSprites
 
 
-PalletGroupSprites:
+KobanGroupSprites:
 	db SPRITE_GRANNY
 	db SPRITE_GRAMPS
 	db SPRITE_TWIN
@@ -45,22 +43,7 @@ PalletGroupSprites:
 	db SPRITE_FRUIT_TREE
 	db 0 ; end
 
-ViridianGroupSprites:
-	db SPRITE_TEACHER
-	db SPRITE_FISHER
-	db SPRITE_YOUNGSTER
-	db SPRITE_BLUE
-	db SPRITE_GRAMPS
-	db SPRITE_BUG_CATCHER
-	db SPRITE_COOLTRAINER_F
-	db SPRITE_SWIMMER_GIRL
-	db SPRITE_SWIMMER_GUY
-	; max 9 of 9 walking sprites
-	db SPRITE_POKE_BALL
-	db SPRITE_FRUIT_TREE
-	db 0 ; end
-
-PewterGroupSprites:
+YoronGroupSprites:
 	db SPRITE_FISHER
 	db SPRITE_SWIMMER_GIRL
 	db SPRITE_SWIMMER_GUY
@@ -73,7 +56,7 @@ PewterGroupSprites:
 	db SPRITE_FRUIT_TREE
 	db 0 ; end
 
-CinnabarGroupSprites:
+FrostpointGroupSprites:
 	db SPRITE_SWIMMER_GIRL
 	db SPRITE_SWIMMER_GUY
 	db SPRITE_YOUNGSTER
@@ -87,7 +70,7 @@ CinnabarGroupSprites:
 	db SPRITE_FRUIT_TREE
 	db 0 ; end
 
-CeruleanGroupSprites:
+NagoGroupSprites:
 	db SPRITE_MOLTRES
 	db SPRITE_SWIMMER_GUY
 	db SPRITE_SWIMMER_GIRL
@@ -102,7 +85,7 @@ CeruleanGroupSprites:
 	db SPRITE_SLOWPOKE
 	db 0 ; end
 
-SaffronGroupSprites:
+RyukyuGroupSprites:
 	db SPRITE_POKEFAN_M
 	db SPRITE_TEACHER
 	db SPRITE_COOLTRAINER_M
@@ -117,7 +100,7 @@ SaffronGroupSprites:
 	db SPRITE_SLOWPOKE
 	db 0 ; end
 
-CeladonGroupSprites:
+KantoGroupSprites:
 	db SPRITE_YOUNGSTER
 	db SPRITE_LASS
 	db SPRITE_POKEFAN_M
@@ -130,7 +113,7 @@ CeladonGroupSprites:
 	db SPRITE_FRUIT_TREE
 	db 0 ; end
 
-VermilionGroupSprites:
+AmamiGroupSprites:
 	db SPRITE_YOUNGSTER
 	db SPRITE_POKEFAN_M
 	db SPRITE_BUG_CATCHER
@@ -143,7 +126,7 @@ VermilionGroupSprites:
 	db SPRITE_FRUIT_TREE
 	db 0 ; end
 
-FuchsiaGroupSprites:
+StandGroupSprites:
 	db SPRITE_TEACHER
 	db SPRITE_ROCKER
 	db SPRITE_YOUNGSTER
@@ -163,7 +146,7 @@ FuchsiaGroupSprites:
 	db SPRITE_FRUIT_TREE
 	db 0 ;end
 
-IndigoGroupSprites:
+LeagueGroupSprites:
 	db SPRITE_POKEFAN_M
 	db SPRITE_LASS
 	db SPRITE_GRAMPS
@@ -178,7 +161,7 @@ IndigoGroupSprites:
 	db SPRITE_BOULDER
 	db 0 ; end
 
-NewBarkGroupSprites:
+SilentGroupSprites:
 	db SPRITE_SILVER
 	db SPRITE_TEACHER
 	db SPRITE_FISHER
@@ -194,7 +177,7 @@ NewBarkGroupSprites:
 	db SPRITE_FRUIT_TREE
 	db 0 ;end
 
-CherrygroveGroupSprites:; actually do whatever now
+CrownGroupSprites:; actually do whatever now
 	db SPRITE_POKEFAN_M
 	db SPRITE_LASS
 	db SPRITE_COOLTRAINER_M
@@ -205,22 +188,7 @@ CherrygroveGroupSprites:; actually do whatever now
 	db SPRITE_FRUIT_TREE
 	db 0 ;end
 
-SilverGroupSprites:
-	db SPRITE_SILVER
-	db SPRITE_TEACHER
-	db SPRITE_FISHER
-	db SPRITE_COOLTRAINER_M
-	db SPRITE_YOUNGSTER
-	db SPRITE_MONSTER
-	db SPRITE_GRAMPS
-	db SPRITE_BUG_CATCHER
-	db SPRITE_COOLTRAINER_F
-	; max 9 of 9 walking sprites
-	db SPRITE_POKE_BALL
-	db SPRITE_FRUIT_TREE
-	db 0 ;end
-
-VioletGroupSprites:
+PagotaGroupSprites:
 	db SPRITE_FISHER
 	db SPRITE_LASS
 	db SPRITE_SILVER
@@ -235,7 +203,7 @@ VioletGroupSprites:
 	db SPRITE_FRUIT_TREE
 	db 0 ;end
 
-EcruteakGroupSprites:
+TeknosGroupSprites:
 	db SPRITE_SAILOR
 	db SPRITE_TWIN
 	db SPRITE_LASS
@@ -252,7 +220,7 @@ EcruteakGroupSprites:
 	db SPRITE_SUPER_NERD
 	db 0 ;end
 
-AzaleaGroupSprites:
+BirdonGroupSprites:
 	db SPRITE_GRAMPS
 	db SPRITE_YOUNGSTER
 	db SPRITE_OFFICER
@@ -268,7 +236,7 @@ AzaleaGroupSprites:
 	db SPRITE_SLOWPOKE
 	db 0 ;end
 
-GoldenrodGroupSprites:
+WestportGroupSprites:
 	db SPRITE_GRAMPS
 	db SPRITE_YOUNGSTER
 	db SPRITE_FAIRY
@@ -283,7 +251,7 @@ GoldenrodGroupSprites:
 	db SPRITE_FRUIT_TREE
 	db 0 ;end
 
-CianwoodGroupSprites:
+SunpointGroupSprites:
 	db SPRITE_TWIN
 	db SPRITE_FISHER
 	db SPRITE_LASS
@@ -299,7 +267,7 @@ CianwoodGroupSprites:
 	db SPRITE_POKE_BALL
 	db 0 ; end
 
-OlivineGroupSprites:
+AlloyGroupSprites:
 	db SPRITE_SILVER
 	db SPRITE_BUENA
 	db SPRITE_LASS
@@ -318,7 +286,7 @@ OlivineGroupSprites:
 	db SPRITE_POKEFAN_F
 	db 0 ; end
 
-LakeOfRageGroupSprites:
+BoardwalkGroupSprites:
 	db SPRITE_SILVER
 	db SPRITE_TEACHER
 	db SPRITE_FISHER
@@ -334,7 +302,7 @@ LakeOfRageGroupSprites:
 	db SPRITE_ROCKER
 	db 0 ;end
 
-MahoganyGroupSprites:
+SanskritGroupSprites:
 	db SPRITE_SCIENTIST
 	db SPRITE_LASS
 	db SPRITE_SUPER_NERD
@@ -354,7 +322,7 @@ MahoganyGroupSprites:
 	db SPRITE_BUG_CATCHER
 	db 0 ;end
 
-BlackthornGroupSprites:
+BlueForestGroupSprites:
 	db SPRITE_TWIN
 	db SPRITE_YOUNGSTER
 	db SPRITE_TEACHER

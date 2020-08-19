@@ -70,10 +70,6 @@
 	RGB 31,18,29, 17,13,20 ; morn/day
 	RGB 14,06,12, 11,03,10 ; nite
 
-; group 19 (Silver Cave)
-	RGB 21,21,25, 16,16,16 ; morn/day
-	RGB 13,13,13, 07,07,07 ; nite
-
 ; group 20 (Cable Club)
 	RGB 21,21,21, 11,11,11 ; morn/day
 	RGB 21,21,21, 11,11,11 ; nite
@@ -85,10 +81,6 @@
 ; group 22 (Cianwood)
 	RGB 29,02,03, 14,01,01 ; morn/day
 	RGB 16,02,02, 10,01,01 ; nite
-	
-; group 23 (Viridian)
-	RGB 21,31,07, 13,25,04 ; morn/day
-	RGB 09,14,08, 06,10,04 ; nite
 
 ; group 24 (New Bark)
 	RGB 20,31,14, 11,23,05 ; morn/day
@@ -102,6 +94,3 @@
 	RGB 31,14,28, 31,05,21 ; morn/day
 	RGB 14,07,17, 13,00,08 ; nite
 
-; group 27 (New Poke)
-	RGB 25,25,00, 20,17,08 ; morn/day
-	RGB 12,12,00, 10,09,05 ; nite
