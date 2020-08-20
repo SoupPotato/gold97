@@ -341,7 +341,7 @@ ENDM
 	map_attributes AlloyCafe, ALLOY_CAFE, $00, 0
 	map_attributes AlloyMart, ALLOY_MART, $00, 0
 	map_attributes Route109Route110Gate, ROUTE_109_ROUTE_110_GATE, $00, 0
-	map_attributes SanskritCoinCaseSpeechHouse, ROUTE_110, $00, 0
+	map_attributes SanskritCoinCaseSpeechHouse, SANSKRIT_COIN_CASE_SPEECH_HOUSE, $00, 0
 	map_attributes BlueForestGym, BLUE_FOREST_GYM, $00, 0
 	map_attributes SanskritPokecenter1F, SANSKRIT_POKECENTER_1F, $00, 0
 	map_attributes EndonCave1F, ENDON_CAVE_1F, $09, 0

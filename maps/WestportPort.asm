@@ -136,6 +136,8 @@ WestportPortSailorGuardScript:
 	
 .UnderMaintenance
 	writetext WestportPortSailorUnderMaintenanceText
+	waitbutton
+	closetext
 	end
 	
 .NoTicket
