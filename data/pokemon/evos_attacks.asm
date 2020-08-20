@@ -2751,7 +2751,6 @@ BellossomEvosAttacks:
 	db 0 ; no more level-up moves
 
 MarillEvosAttacks:
-AzumarillEvosAttacks:
 	db EVOLVE_ITEM, HEART_STONE, AZUMARILL
 	db 0 ; no more evolutions
 	db 1, TACKLE
@@ -2764,6 +2763,17 @@ AzumarillEvosAttacks:
 	db 36, RAIN_DANCE
 	db 0 ; no more level-up moves
 
+AzumarillEvosAttacks:
+	db 0 ; no more evolutions
+	db 1, WATER_GUN
+	db 1, DEFENSE_CURL
+	db 1, ROLLOUT
+	db 1, DOUBLE_EDGE
+	db 36, RAIN_DANCE
+	db 42, HYDRO_PUMP
+	db 50, BELLY_DRUM
+	db 0 ; no more level-up moves
+	
 
 BomshealEvosAttacks:
 	db 0 ; no more evolutions
@@ -2778,7 +2788,6 @@ BomshealEvosAttacks:
 	db 23, BUBBLEBEAM
 	db 31, FIRE_SPIN
 	db 43, TAKE_DOWN
-
 	db 0 ; no more level-up moves
 
 BelmittEvosAttacks:
@@ -2822,8 +2831,6 @@ SkiploomEvosAttacks:
 	db 0 ; no more evolutions
     db 1, ABSORB
 	db 1, SPLASH
-	db 1, SYNTHESIS
-	db 1, TAIL_WHIP
 	db 4, SYNTHESIS
 	db 7, TAIL_WHIP
 	db 10, TACKLE
@@ -2840,8 +2847,6 @@ JumpluffEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, ABSORB
 	db 1, SPLASH
-	db 1, SYNTHESIS
-	db 1, TAIL_WHIP
 	db 4, SYNTHESIS
 	db 7, TAIL_WHIP
 	db 10, TACKLE

@@ -419,7 +419,7 @@ NidorinoBackpic:     INCBIN "gfx/pokemon/nidorino/back.2bpp.lz"
 MysticalmanPic:      INCBIN "gfx/trainers/mysticalman.2bpp.lz"
 CooltrainerfPic:     INCBIN "gfx/trainers/cooltrainer_f.2bpp.lz"
 ElectrodeFrontpic:   INCBIN "gfx/pokemon/electrode/front_S.animated.2bpp.lz"
-AzumarillFrontpic:   INCBIN "gfx/pokemon/azumarill/front.2bpp.lz"
+AzumarillFrontpic:   INCBIN "gfx/pokemon/azumarill/front.animated.2bpp.lz"
 
 
 SECTION "Pics 14", ROMX
