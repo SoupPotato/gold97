@@ -258,7 +258,7 @@ ENDM
 	map_attributes Route118, ROUTE_118, $07, EAST
 	connection east, SanskritTown, SANSKRIT_TOWN, 0
 
-	map_attributes Route120, ROUTE_120, $07, WEST | EAST
+	map_attributes Route120, ROUTE_120, $04, WEST | EAST
 	connection west, Route119, ROUTE_119, -18
 	connection east, TeknosCity, TEKNOS_CITY, 0
 
