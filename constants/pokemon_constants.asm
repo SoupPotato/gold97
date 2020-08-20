@@ -272,9 +272,9 @@ JOHTO_POKEMON EQU const_value
 	const LUGIA      ; fa
 	const HO_OH      ; fb
 	const LEAFEON     ; fc
+	const AZUMARILL  ; fd
 NUM_POKEMON EQU const_value + -1
-	const EGG        ; fd
-	const MON_FE     ; fe
+	const EGG        ; fe
 
 ; Unown forms
 ; indexes for:

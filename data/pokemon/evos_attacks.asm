@@ -2751,6 +2751,8 @@ BellossomEvosAttacks:
 	db 0 ; no more level-up moves
 
 MarillEvosAttacks:
+AzumarillEvosAttacks:
+	db EVOLVE_ITEM, HEART_STONE, AZUMARILL
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 3, DEFENSE_CURL
@@ -2761,6 +2763,7 @@ MarillEvosAttacks:
 	db 28, DOUBLE_EDGE
 	db 36, RAIN_DANCE
 	db 0 ; no more level-up moves
+
 
 BomshealEvosAttacks:
 	db 0 ; no more evolutions

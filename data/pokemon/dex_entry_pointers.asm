@@ -252,3 +252,4 @@ PokedexDataPointerTable:
 	dw LugiaPokedexEntry
 	dw HoOhPokedexEntry
 	dw LeafeonPokedexEntry
+	dw AzumarillPokedexEntry

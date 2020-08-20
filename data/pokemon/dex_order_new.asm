@@ -129,6 +129,7 @@ NewPokedexOrder:
 	db GROWLITHE
 	db ARCANINE
 	db MARILL
+	db AZUMARILL
 	db BOMSHEAL
 	db DIGLETT
 	db DUGTRIO

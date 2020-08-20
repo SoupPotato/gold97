@@ -14,6 +14,7 @@ AlphabeticalPokedexOrder:
 	db ARCANINE
 	db ARIADOS
 	db ARTICUNO
+	db AZUMARILL
 	db BEEDRILL
 	db BELLOSSOM
 	db BELLRUN

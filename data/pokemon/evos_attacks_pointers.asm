@@ -253,3 +253,4 @@ EvosAttacksPointers::
 	dw LugiaEvosAttacks
 	dw HoOhEvosAttacks
 	dw LeafeonEvosAttacks
+	dw AzumarillEvosAttacks

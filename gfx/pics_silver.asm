@@ -284,6 +284,7 @@ HitmontopBackpic:    INCBIN "gfx/pokemon/hitmontop/back.2bpp.lz"
 CloysterBackpic:     INCBIN "gfx/pokemon/cloyster/back.2bpp.lz"
 HoothootFrontpic:    INCBIN "gfx/pokemon/hoothoot/front_S.animated.2bpp.lz"
 UnownFBackpic:       INCBIN "gfx/pokemon/unown_f/back.2bpp.lz"
+AzumarillBackpic:    INCBIN "gfx/pokemon/azumarill/back.2bpp.lz"
 
 
 SECTION "Pics 11", ROMX
@@ -418,6 +419,7 @@ NidorinoBackpic:     INCBIN "gfx/pokemon/nidorino/back.2bpp.lz"
 MysticalmanPic:      INCBIN "gfx/trainers/mysticalman.2bpp.lz"
 CooltrainerfPic:     INCBIN "gfx/trainers/cooltrainer_f.2bpp.lz"
 ElectrodeFrontpic:   INCBIN "gfx/pokemon/electrode/front_S.animated.2bpp.lz"
+AzumarillFrontpic:   INCBIN "gfx/pokemon/azumarill/front.2bpp.lz"
 
 
 SECTION "Pics 14", ROMX

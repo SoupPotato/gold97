@@ -251,7 +251,7 @@ PokemonNames::
 	db "LUGIA@@@@@"
 	db "HO-OH@@@@@"
 	db "LEAFEON@@@"
-	db "?????@@@@@"
+	db "AZUMARILL@"
 	db "EGG@@@@@@@"
 	db "?????@@@@@"
 	db "?????@@@@@"

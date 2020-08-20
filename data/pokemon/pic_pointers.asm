@@ -509,5 +509,7 @@ PokemonPicPointers::
 	dba_pic HoOhBackpic
 	dba_pic LeafeonFrontpic
 	dba_pic LeafeonBackpic
+	dba_pic AzumarillFrontpic
+	dba_pic AzumarillBackpic
 	dba_pic EggPic
 	dbw -1, -1 ; unused
