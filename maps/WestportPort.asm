@@ -38,10 +38,13 @@ WestportPortSailorGuardScript:
 	opentext
 	checkflag ENGINE_HIVEBADGE
 	iffalse .UnderMaintenance
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iffalse .E4notBeaten
 	checkevent EVENT_FAST_SHIP_FIRST_TIME
 	iffalse .FirstTime
 	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .SWIslandsAvailable
+	iftrue .MenuSWIsles
+.E4notBeaten
 	writetext WestportPortSailorGoToTekuText
 	loadmenu WestportPortLocationMenu
 	verticalmenu
@@ -52,9 +55,8 @@ WestportPortSailorGuardScript:
 .FirstTime
 	writetext WestportPortSailorFirstTimeIslesText
 	jump .MenuSWIsles
-.SWIslandsAvailable
-	writetext WestportPortSailorGoToTekuText
 .MenuSWIsles
+	writetext WestportPortSailorGoToTekuText
 	loadmenu WestportPortLocationMenu2
 	verticalmenu
 	closewindow

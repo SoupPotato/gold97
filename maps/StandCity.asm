@@ -502,7 +502,7 @@ ImposterText2:
 	para "I have partnered"
 	line "with TEAM ROCKET"
 	cont "to bring to you a"
-	cont "wonderful peice of"
+	cont "wonderful piece of"
 	cont "technology!"
 	done
 	
