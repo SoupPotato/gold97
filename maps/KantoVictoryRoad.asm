@@ -265,7 +265,7 @@ CTAllyBeatenText:
 
 CTAllyAfterBattleText:
 	text "Well of course you"
-	cont "would have 7"
+	line "would have 7"
 	cont "BADGEs, why else"
 	cont "would you be here"
 	cont "braving the caves!"
