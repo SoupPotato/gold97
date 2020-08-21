@@ -369,33 +369,6 @@ JohtoGrassWildMons:
 	db 13, MACHOP
 	db 12, ONIX
 	db 14, ONIX
-
-	map_id BOULDER_MINES_B5F
-	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
-	; morn
-	db 12, GEODUDE
-	db 12, SANDSHREW
-	db 12, ZUBAT
-	db 14, ZUBAT
-	db 13, TURBAN
-	db 12, ONIX
-	db 14, ONIX
-	; day
-	db 12, GEODUDE
-	db 12, SANDSHREW
-	db 12, ZUBAT
-	db 14, ZUBAT
-	db 13, TURBAN
-	db 12, ONIX
-	db 14, ONIX
-	; nite
-	db 12, GEODUDE
-	db 12, SANDSHREW
-	db 12, ZUBAT
-	db 14, ZUBAT
-	db 13, TURBAN
-	db 12, ONIX
-	db 14, ONIX
 	
 	map_id BOULDER_MINES_B2F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
@@ -420,7 +393,7 @@ JohtoGrassWildMons:
 	db 12, SANDSHREW
 	db 14, ZUBAT
 	db 14, RATTATA
-	db 12, MACHOP
+	db 12, MARILL
 	db 14, ONIX
 	db 14, TURBAN
 	
@@ -475,6 +448,33 @@ JohtoGrassWildMons:
 	db 12, ZUBAT
 	db 14, RATTATA
 	db 13, MACHOP
+	db 12, ONIX
+	db 14, ONIX
+	
+	map_id BOULDER_MINES_B5F
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	; morn
+	db 12, GEODUDE
+	db 12, SANDSHREW
+	db 12, ZUBAT
+	db 14, MARILL
+	db 13, TURBAN
+	db 12, ONIX
+	db 14, ONIX
+	; day
+	db 12, GEODUDE
+	db 12, SANDSHREW
+	db 12, ZUBAT
+	db 14, MARILL
+	db 13, TURBAN
+	db 12, ONIX
+	db 14, ONIX
+	; nite
+	db 12, GEODUDE
+	db 12, SANDSHREW
+	db 12, ZUBAT
+	db 14, MARILL
+	db 13, TURBAN
 	db 12, ONIX
 	db 14, ONIX
 
