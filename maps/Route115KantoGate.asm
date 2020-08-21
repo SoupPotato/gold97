@@ -25,8 +25,8 @@ Route115KantoGate_MapEvents:
 	db 4 ; warp events
 	warp_event  0,  7, ROUTE_115, 1
 	warp_event  1,  7, ROUTE_115, 1
-	warp_event  8,  7, KANTO_REGION, 10
-	warp_event  9,  7, KANTO_REGION, 10
+	warp_event  9,  4, KANTO_REGION, 10
+	warp_event  9,  5, KANTO_REGION, 11
 
 	db 0 ; coord events
 
