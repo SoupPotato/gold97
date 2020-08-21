@@ -533,7 +533,7 @@ KantoRegion_MapEvents:
 	warp_event 27, 27, KANTO_GAME_CORNER_PRIZE_ROOM, 1
 	warp_event  2,  5, KANTO_GYM, 1
 	warp_event 35, 13, KANTO_LEFTOVERS_HOUSE, 1
-	warp_event  4, 24, ROUTE_115_KANTO_GATE, 4
+	warp_event  4, 24, ROUTE_115_KANTO_GATE, 3
 	warp_event  4, 25, ROUTE_115_KANTO_GATE, 4
 	warp_event 37, 29, SILPH_CO_1F, 1
 	warp_event 20, 19, DIGLETTS_CAVE,3

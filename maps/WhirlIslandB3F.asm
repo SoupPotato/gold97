@@ -117,7 +117,7 @@ Text_5FSageDuringLugia:
 	text "The bird awaits."
 	done
 	
-WhirlIslandsB3FEscapeRope
+WhirlIslandsB3FEscapeRope:
 	itemball ESCAPE_ROPE
 
 WhirlIslandB3F_MapEvents:

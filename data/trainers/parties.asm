@@ -854,7 +854,7 @@ CooltrainerMGroup:
 	db -1 ; end
 
 	; COOLTRAINERM (7)
-	db "EVERITT@", TRAINERTYPE_NORMAL ;used, kanto victory road
+	db "EVERIT@", TRAINERTYPE_NORMAL ;used, kanto victory road
 	db 38, HITMONLEE
 	db 39, HITMONCHAN
 	db 40, GOLEM
@@ -873,7 +873,7 @@ CooltrainerMGroup:
 	db -1 ; end
 
 	; COOLTRAINERM (10)
-	db "CHESTER@", TRAINERTYPE_NORMAL ; used, kanto victory road
+	db "CARL@", TRAINERTYPE_NORMAL ; used, kanto victory road
 	db 40, PERSIAN
 	db 39, MR__MIME
 	db 40, BELLRUN

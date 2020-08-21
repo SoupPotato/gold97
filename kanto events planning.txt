@@ -15,8 +15,8 @@ DONE
 trainers (DONE), items (DONE)
 mandatory for progression
 
->gate to 115
-Needs map fix to be consistent
+>gate to 115 (COMPLETE!)
+Needs map fix to be consistent (DONE)
 
 >trainer house
 DONE
