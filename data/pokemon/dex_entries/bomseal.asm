@@ -1,4 +1,4 @@
-	db "FLAME SEAL@" ; species name
+	db "JUGGLER@" ; species name
 	dw 208, 230 ; height, weight
 
 	db   "Is able to live in"

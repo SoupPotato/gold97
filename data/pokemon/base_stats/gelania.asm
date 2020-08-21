@@ -1,10 +1,10 @@
 	db GELANIA ; 162
 
-	db  100, 100, 125,  50, 110,  50
+	db  90, 85, 60,  75, 100, 125
 	;   hp  atk  def  spd  sat  sdf
 
 	db GRASS, GRASS ; type
-	db 35 ; catch rate
+	db 30 ; catch rate
 	db 211 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio

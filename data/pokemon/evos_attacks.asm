@@ -1206,7 +1206,7 @@ MagnetonEvosAttacks:
 	db 0 ; no more level-up moves
 
 FarfetchDEvosAttacks:
-	db EVOLVE_LEVEL, 37, MADAME
+	db EVOLVE_LEVEL, 33, MADAME
 	db 0 ; no more evolutions
 	db 1, PECK
 	db 1, SAND_ATTACK

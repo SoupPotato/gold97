@@ -1,4 +1,4 @@
-	db "SHOCK TIGER@" ; species name
+	db "ROTUND@" ; species name
 	dw 203, 470 ; height, weight
 
 	db   "Its whiskers have"

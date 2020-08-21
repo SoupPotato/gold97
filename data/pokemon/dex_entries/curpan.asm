@@ -1,4 +1,4 @@
-	db "HAUNTED@" ; species name
+	db "TALISMAN@" ; species name
 	dw 211, 240 ; height, weight
 
 	db   "Beware when this"

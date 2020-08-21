@@ -197,7 +197,7 @@ KantoGameCornerPrizeRoomPokemonVendor:
 	db 4 ; items
 	db "PIKACHU    2222@"
 	db "PORYGON    5555@"
-	db "WOLFAN     8888@"
+	db "WOLFMAN    8888@"
 	db "CANCEL@"
 	
 DummyVendorScript:
