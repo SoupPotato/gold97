@@ -1,4 +1,4 @@
-	db "WILD DUCK@" ; species name
+	db "REGAL@" ; species name
 	dw 401, 710 ; height, weight
 
 	db   "Very territorial."

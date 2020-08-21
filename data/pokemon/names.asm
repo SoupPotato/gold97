@@ -244,7 +244,7 @@ PokemonNames::
 	db "RAIKOU@@@@"
 	db "ENTEI@@@@@"
 	db "SUICUNE@@@"
-	db "WOLFAN@@@@"
+	db "WOLFMAN@@@"
 	db "WARWOLF@@@"
 	db "LICKILORD@"
 	db "BLISSEY@@@"

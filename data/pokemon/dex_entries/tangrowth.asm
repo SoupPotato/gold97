@@ -1,4 +1,4 @@
-	db "JUNGLE@" ; species name
+	db "MISCHIEF@" ; species name
 	dw 504, 1220 ; height, weight
 
 	db   "Its vision is very"

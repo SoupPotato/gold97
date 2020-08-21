@@ -1,11 +1,11 @@
 	db PANGSHI ; 221
 
-	db  80,  75,  85,  75, 115,  90
+	db  75,  107,  80,  65, 65,  68
 	;   hp  atk  def  spd  sat  sdf
 
 	db GHOST, GHOST ; type
 	db 45 ; catch rate
-	db 167 ; base exp
+	db 189 ; base exp
 	db NO_ITEM, SPELL_TAG ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

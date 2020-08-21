@@ -1,4 +1,4 @@
-	db "ZAP TIGER@" ; species name
+	db "PROWLER@" ; species name
 	dw 501, 1520 ; height, weight
 
 	db   "This #MON's skin"

@@ -1,4 +1,4 @@
-	db "HAUNTED@" ; species name
+	db "PUSHPIN@" ; species name
 	dw 106, 20 ; height, weight
 
 	db   "When a wandering"
