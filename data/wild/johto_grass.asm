@@ -377,7 +377,7 @@ JohtoGrassWildMons:
 	db 12, SANDSHREW
 	db 14, ZUBAT
 	db 14, RATTATA
-	db 12, MACHOP
+	db 12, MARILL
 	db 14, ONIX
 	db 14, TURBAN
 	; day
@@ -385,7 +385,7 @@ JohtoGrassWildMons:
 	db 12, SANDSHREW
 	db 14, ZUBAT
 	db 14, RATTATA
-	db 12, MACHOP
+	db 12, MARILL
 	db 14, ONIX
 	db 14, TURBAN
 	; nite
