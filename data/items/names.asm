@@ -48,7 +48,7 @@ ItemNames::
 	db "SODA POP@"
 	db "LEMONADE@"
 	db "X ATTACK@"
-	db "TERU-SAMA@"
+	db "OLD AMBER@" ;item_32
 	db "X DEFEND@"
 	db "X SPEED@"
 	db "X SPECIAL@"
