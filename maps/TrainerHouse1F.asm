@@ -63,19 +63,13 @@ TrainerHouse1FCooltrainerMText:
 	line "through on their"
 
 	para "way up to INDIGO"
-	line "PLATEAU."
+	line "PLATEAU's GYM."
 	done
 
 TrainerHouse1FCooltrainerFText:
 	text "They hold practice"
 	line "battles downstairs"
 	cont "here."
-
-	para "I would love to"
-	line "see how well a"
-
-	para "trainer from JOHTO"
-	line "battles."
 	done
 
 TrainerHouse1FYoungsterText:

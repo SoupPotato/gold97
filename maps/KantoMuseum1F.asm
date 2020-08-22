@@ -11,13 +11,23 @@ KantoMuseum1F_MapScripts:
 	db 0 ; callbacks
 
 MuseumCounterScientist:
-	jumptextfaceplayer MuseumCounterScientistText
+	jumptext MuseumCounterScientistText
 	
 MuseumCounterScientistText:
 	text "Welcome to the"
 	line "PEWTER MUSEUM OF"
 	cont "SCIENCE! Enjoy"
 	cont "your visit!"
+	done
+	
+MuseumCounterScientistBehind:
+	jumptextfaceplayer MuseumCounterScientistBehindText
+	
+MuseumCounterScientistBehindText:
+	text "Erm… I would much"
+	line "prefer if you"
+	cont "would come in the"
+	cont "front entrance."
 	done
 	
 MuseumGramps:
@@ -124,12 +134,13 @@ KantoMuseum1F_MapEvents:
 
 	db 0 ; coord events
 
-	db 2 ; bg events
+	db 3 ; bg events
 	bg_event 2,  3, BGEVENT_READ, KabutopsFossil
 	bg_event 2,  6, BGEVENT_READ, AerodactylFossil
+	bg_event 11,  4, BGEVENT_READ, MuseumCounterScientist
 
 	db 5 ; object events
-	object_event  $c, $4, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MuseumCounterScientist, -1
+	object_event  $c, $4, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MuseumCounterScientistBehind, -1
 	object_event  $1, $4, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MuseumGramps, -1
 	object_event  $f, $2, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MuseumScientistAmber, -1
 	object_event  $11, $4, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MuseumOtherScientist, -1
