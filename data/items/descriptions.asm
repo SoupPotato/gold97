@@ -452,7 +452,8 @@ XAttackDesc:
 	next "(1 BTL)@"
 
 TeruSama4Desc:
-	db   "?@"
+	db   "A mysterious"
+	next "#MON fossil.@"
 
 XDefendDesc:
 	db   "Raises DEFENSE."

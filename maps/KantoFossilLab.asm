@@ -15,6 +15,8 @@ KantoFossilLabFossilScientist:
 	iftrue .GetOmanyte
 	checkitem SILVER_WING; dome fossil
 	iftrue .GetKabuto
+	checkitem ITEM_32 ; old amber
+	iftrue .GetAerodactyl
 	writetext FossilScientistIntroText
 	waitbutton
 	closetext
@@ -125,6 +127,61 @@ KantoFossilLabFossilScientist:
 	closetext
 	end
 	
+	
+.GetAerodactyl
+	writetext FossilScientistIntroText
+	waitbutton
+	writetext YouHaveOldAmberText
+	yesorno
+	iftrue .GetAerodactyl2
+	writetext AnotherTimeFossilText
+	waitbutton
+	closetext
+	end
+	
+.GetAerodactyl2
+	writetext TimeToGetAFossilmonText
+	waitbutton
+	checkcode VAR_PARTYCOUNT
+	ifequal PARTY_LENGTH, .PartyFullAerodactyl
+	closetext
+	pause 15
+	applymovement DANCE_THEATRE_FOSSIL_SCIENTIST, ScientistGoesToMachine1
+	playsound SFX_POKEBALLS_PLACED_ON_TABLE
+	waitsfx
+	pause 15
+	applymovement DANCE_THEATRE_FOSSIL_SCIENTIST, ScientistGoesToMachine2
+	playsound SFX_BOOT_PC
+	waitsfx
+	pause 15
+	playsound SFX_POTION
+	waitsfx
+	applymovement DANCE_THEATRE_FOSSIL_SCIENTIST, ScientistGoesToMachine3
+	playsound SFX_POKEBALLS_PLACED_ON_TABLE
+	waitsfx
+	pause 15
+	applymovement DANCE_THEATRE_FOSSIL_SCIENTIST, ScientistGoesToMachine4
+	opentext
+	writetext ScientistHereYouGoText
+	waitbutton
+	writetext PlayerGetsAnAerodactyl
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	givepoke AERODACTYL, 15
+	takeitem ITEM_32
+	writetext IfYouHaveAnyOtherFossilsText
+	waitbutton
+	closetext
+	end
+	
+.PartyFullAerodactyl
+	writetext NoRoomForFossilmon
+	waitbutton
+	closetext
+	end
+	
+	
+	
 KantoFossilLabScientist1Script:
 	jumptextfaceplayer KantoFossilLabScientist1Text
 	
@@ -204,6 +261,11 @@ PlayerGetsAnOmanyte:
 	line "OMANYTE!"
 	done
 	
+PlayerGetsAnAerodactyl:
+	text "<PLAY_G> received"
+	line "AERODACTYL!"
+	done
+	
 PlayerGetsAKabuto:
 	text "<PLAY_G> received"
 	line "KABUTO!"
@@ -229,6 +291,14 @@ YouHaveDomeFossilText:
 	text "Oh, what's this?"
 	para "You have a DOME"
 	line "FOSSIL!"
+	para "Want me to turn it"
+	line "into a #MON?"
+	done
+	
+YouHaveOldAmberText:
+	text "Oh, what's this?"
+	para "You have an OLD"
+	line "AMBER!"
 	para "Want me to turn it"
 	line "into a #MON?"
 	done

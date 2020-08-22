@@ -1,61 +1,19 @@
 General
 >check text on existing maps for inconsistencies in naming
 
-Kanto main map (COMPLETE!)
->add up to 14 NPCs w/ trainers & items (DONE)
->check text for inconsistencies (DONE)
->add all the signpost text (DONE)
+
 
 
 Kanto landmarks:
->gym
-DONE
-
->former victory road (COMPLETE!)
-trainers (DONE), items (DONE)
-mandatory for progression
-
->gate to 115 (COMPLETE!)
-Needs map fix to be consistent (DONE)
-
->trainer house
-DONE
-
->houses
-DONE
-
->pewter museum
-NPCs, BG text, obtainable fossil (old amber?) in second entrance
-
->diglett cave
-DONE
-
->mt.moon
-DONE
-
->dept. store
-DONE
 
 >celadon mansion
 Needs tileset palettes fixed up
-
->game corner & prizes
-DONE
-
->silph co.
-DONE
-
->pokemon center
-DONE
 
 >Kanto Docks
 trainers, items, truck meme
 
 >safari zone
-trainers, items, similar to national park
-
->kanto battle club
-DONE
+items, NPCs
 
 >mr. fuji's house
 NPCs
@@ -67,7 +25,7 @@ trainers, NPCs, SCRIPTED EVENT ON THIRD FLOOR
 items, voltorbs, lt. surge battle (pichu with special move as reward)
 
 >rock tunnel
-change items, trainers
+change items
 
 >seafoam islands
 items

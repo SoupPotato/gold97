@@ -64,12 +64,12 @@
 	const SPRITE_SCIENTIST ; 3c
 	const SPRITE_KIMONO_GIRL ; 3d
 	const SPRITE_SAGE ; 3e
-	const SPRITE_UNUSED_GUY ; 3f
+	;const SPRITE_UNUSED_GUY ; 3f (got rid of this guy and cal to free up bank space for lt. surge and old amber)
 	const SPRITE_GENTLEMAN ; 40
 	const SPRITE_BLACK_BELT ; 41
 	const SPRITE_RECEPTIONIST ; 42
 	const SPRITE_OFFICER ; 43
-	const SPRITE_CAL ; 44
+	;const SPRITE_CAL ; 44
 	const SPRITE_SLOWPOKE ; 45
 	const SPRITE_CAPTAIN ; 46
 	const SPRITE_BIG_LAPRAS ; 47
@@ -106,6 +106,8 @@
 	const SPRITE_ENTEI ; 64
 	const SPRITE_RAIKOU ; 65
 	const SPRITE_STANDING_YOUNGSTER ; 66
+	const SPRITE_OLD_AMBER
+	const SPRITE_SURGE_NEW
 
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)
 	const_def $80
