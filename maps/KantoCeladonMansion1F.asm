@@ -68,7 +68,7 @@ KantoCeladonMansion1FNidoranFText:
 	done
 
 KantoCeladonMansionManagersSuiteSignText:
-	text "KANTO MANSION"
+	text "CELADON MANSION"
 	line "MANAGER'S SUITE"
 	done
 
@@ -91,6 +91,6 @@ KantoCeladonMansion1F_MapEvents:
 
 	db 4 ; object events
 	object_event  1,  5, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoCeladonMansionManager, -1
-	object_event  2,  7, SPRITE_BIRD, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoCeladonMansion1FMeowth, -1
-	object_event  4,  5, SPRITE_MONSTER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoCeladonMansion1FNidoranF, -1
-	object_event  0,  8, SPRITE_FAIRY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KantoCeladonMansion1FClefairy, -1
+	object_event  2,  7, SPRITE_BIRD, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, KantoCeladonMansion1FMeowth, -1
+	object_event  4,  5, SPRITE_MONSTER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KantoCeladonMansion1FNidoranF, -1
+	object_event  0,  8, SPRITE_FAIRY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 2, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, KantoCeladonMansion1FClefairy, -1
