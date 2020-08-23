@@ -103,6 +103,29 @@ CreditsStrings:
 	dw .UsCoordination
 	dw .TextTranslation
 	dw .PaadTesting
+	dw .BugTesters
+	dw .SourApple
+	dw .Rool
+	dw .Cam
+	dw .Pfero
+	dw .Gmerc
+	dw .DepressedGabe
+	dw .Lvl3
+	dw .Nep
+	dw .Ahab
+	dw .LeRuseBird
+	dw .Smalls
+	dw .PassionWorker
+	dw .Coconutz
+	dw .Lucky
+	dw .Adem
+	dw .Justin
+	dw .McDon7
+	dw .CCCP
+	dw .KoolBoyMan
+	dw .CyberShell11
+	dw .RacieB
+	dw .Spaghetti_Cultist
 
 .SatoshiTajiri:       db "   SATOSHI TAJIRI@"         ; "たじり　さとし@"
 .JunichiMasuda:       db "   JUNICHI MASUDA@"         ; "ますだ　じゅんいち@"
@@ -179,10 +202,10 @@ CreditsStrings:
 .KazuyoshiOsawa:      db "  KAZUYOSHI OSAWA@"
 .KimikoNakamichi:     db "  KIMIKO NAKAMICHI@"
 .Staff:               db "      #MON"                 ; "ポケットモンスター"
-                    next "    GOLD VERSION"           ; "　　クりスタル　バージョン"
+                    next "   SW'97 REFORGED@"          ; "　　クりスタル　バージョン"
                     next "       STAFF@"              ; "　　　　スタッフ@"
 .Director:            db "      DIRECTOR@"            ; "エグゼクティブ　ディレクター@"
-.CoDirector:          db "    CO-DIRECTOR@"           ; "ディレクター@"
+.CoDirector:          db "    CO-DIRECTORS@"           ; "ディレクター@"
 .Programmers:         db "    PROGRAMMERS@"           ; "プログラム@"
 .GraphicsDirector:    db " GRAPHICS DIRECTOR@"        ; "グラフィック　ディレクター@"
 .MonsterDesign:       db "   MONSTER DESIGN@"         ; "#　デザイン@"
@@ -210,6 +233,29 @@ CreditsStrings:
 .UsCoordination:      db "  US COORDINATION@"
 .TextTranslation:     db "  TEXT TRANSLATION@"
 .PaadTesting:         db "    PAAD TESTING@"
+.BugTesters:		  db "     BUG TESTERS@"
+.SourApple:           db "     SOUR APPLE@"
+.Rool:                db "        ROOL@"
+.Cam:                 db "        CAM@"
+.Pfero:               db "       PFERO@"
+.Gmerc:               db "       GMERC@"
+.DepressedGabe:       db "   DEPRESSED GABE@"
+.Lvl3:                db "       LVL-3@"
+.Nep:                 db "         NEP@"
+.Ahab:                db "        AHAB@"
+.LeRuseBird:          db "    LE RUSE BIRD@"
+.Smalls:              db "       SMALLS@"
+.PassionWorker:       db "   PASSION WORKER@"
+.Coconutz:            db "      COCONUTZ@"
+.Lucky:               db "        LUCKY@"
+.Adem:	              db "        ADEM@"
+.Justin:	          db "       JUSTIN@"
+.McDon7:              db "       MCDON7@"
+.CCCP:                db "        CCCP@"
+.KoolBoyMan			  db "     KOOLBOYMAN@"	
+.CyberShell11         db "    CYBERSHELL11@"
+.RacieB               db "       RACIEB@"
+.Spaghetti_Cultist   db "  SPAGHETTI CULTIST@"
 
 .Copyright:
 	;    (C) 1  9  9  5 - 2  0  0  1     N  i  n  t  e  n  d  o

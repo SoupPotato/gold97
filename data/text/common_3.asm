@@ -189,11 +189,6 @@ UnknownText_0x1c454b::
 	line "save the game?"
 	done
 
-UnknownText_0x1c456d::
-	text "SAVING… DON'T TURN"
-	line "OFF THE POWER."
-	done
-
 UnknownText_0x1c4590::
 	text "<PLAYER> saved"
 	line "the game."

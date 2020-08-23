@@ -20,11 +20,15 @@ CreditsScript:
 
 	db             DIRECTOR, 1
 	db       SATOSHI_TAJIRI, 2
+	db		          LVL_3, 3
 
 	db CREDITS_WAIT, 12
 
-	db           CODIRECTOR, 1
+	db          CODIRECTORS, 1
 	db       JUNICHI_MASUDA, 2
+	db	         SOUR_APPLE, 3
+	db			       ROOL, 4
+	
 
 	db CREDITS_WAIT, 12
 
@@ -40,11 +44,15 @@ CreditsScript:
 	db     SHIGEKI_MORIMOTO, 1
 	db     TETSUYA_WATANABE, 2
 	db        TAKENORI_OOTA, 3
+	db                PFERO, 4
+	db           SOUR_APPLE, 5
 
 	db CREDITS_WAIT, 12
 
 	db    GRAPHICS_DIRECTOR, 1
 	db         KEN_SUGIMORI, 2
+	db                 ROOL, 3
+	db           SOUR_APPLE, 4
 
 	db CREDITS_WAIT, 12
 
@@ -61,15 +69,12 @@ CreditsScript:
 	db       ATSUKO_NISHIDA, 1
 	db          MUNEO_SAITO, 2
 	db       RENA_YOSHIKAWA, 3
-
+	db                 ROOL, 4
+	db               SMALLS, 5
+	
 	db CREDITS_WAIT, 12
-
-	db    POKEMON_ANIMATION, 1
-	db     HIRONOBU_YOSHIDA, 2
-	db          JUN_OKUTANI, 3
-
-	db CREDITS_WAIT, 12
-
+	
+	
 ; Clear the banner.
 	db CREDITS_CLEAR
 
@@ -77,6 +82,7 @@ CreditsScript:
 
 ; Update the banner.
 	db CREDITS_SCENE, 1 ; Smoochum
+
 
 	db      GRAPHICS_DESIGN, 0
 	db     HIRONOBU_YOSHIDA, 1
@@ -104,6 +110,7 @@ CreditsScript:
 	db       JUNICHI_MASUDA, 1
 	db     SHIGEKI_MORIMOTO, 2
 	db        KOHJI_NISHINO, 3
+	db                LVL_3, 4
 
 	db CREDITS_WAIT, 12
 
@@ -111,6 +118,7 @@ CreditsScript:
 	db         TETSUJI_OOTA, 1
 	db          HITOMI_SATO, 2
 	db     KENJI_MATSUSHIMA, 3
+	db           SOUR_APPLE, 4
 
 	db CREDITS_WAIT, 12
 
@@ -124,17 +132,7 @@ CreditsScript:
 
 	db         POKEDEX_TEXT, 1
 	db  TOSHINOBU_MATSUMIYA, 2
-
-	db CREDITS_WAIT, 12
-
-	db     TOOL_PROGRAMMING, 1
-	db       SOUSUKE_TAMADA, 2
-	db        TAKENORI_OOTA, 3
-
-	db CREDITS_WAIT, 12
-
-	db    PARAMETRIC_DESIGN, 1
-	db        KOHJI_NISHINO, 2
+	db                LVL_3, 3
 
 	db CREDITS_WAIT, 12
 
@@ -146,15 +144,20 @@ CreditsScript:
 ; Update the banner.
 	db CREDITS_SCENE, 2 ; Ditto
 
-	db        SCRIPT_DESIGN, 1
-	db         TETSUJI_OOTA, 2
-	db        NOBUHIRO_SEYA, 3
+	db        SCRIPT_DESIGN, 0
+	db         TETSUJI_OOTA, 1
+	db        NOBUHIRO_SEYA, 2
+	db                LVL_3, 3
+	db           SOUR_APPLE, 4
+	db                  CAM, 5
 
 	db CREDITS_WAIT, 12
 
-	db      MAP_DATA_DESIGN, 1
-	db         TETSUJI_OOTA, 2
-	db      KAZUHITO_SEKINE, 3
+	db      MAP_DATA_DESIGN, 0
+	db         TETSUJI_OOTA, 1
+	db      KAZUHITO_SEKINE, 2
+	db                LVL_3, 3
+	db           SOUR_APPLE, 4
 
 	db CREDITS_WAIT, 12
 
@@ -162,11 +165,15 @@ CreditsScript:
 	db         TETSUJI_OOTA, 1
 	db        KOHJI_NISHINO, 2
 	db        NOBUHIRO_SEYA, 3
+	db           KOOLBOYMAN, 4
+	db                  CAM, 5
 
 	db CREDITS_WAIT, 12
 
-	db         COORDINATION, 1
-	db      HIROYUKI_ZINNAI, 2
+	db         COORDINATION, 0
+	db      HIROYUKI_ZINNAI, 1
+	db                 ROOL, 2
+	db                  CAM, 3
 
 	db CREDITS_WAIT, 12
 
@@ -174,6 +181,7 @@ CreditsScript:
 	db         SATORU_IWATA, 1
 	db       SATOSHI_YAMATO, 2
 	db     SHIGERU_MIYAMOTO, 3
+	db                 ROOL, 4
 
 	db CREDITS_WAIT, 12
 
@@ -181,6 +189,35 @@ CreditsScript:
 	db   TSUNEKAZU_ISHIHARA, 2
 
 	db CREDITS_WAIT, 12
+
+	db          BUG_TESTERS, 0
+	db       DEPRESSED_GABE, 1
+	db                GMERC, 2
+	db                 AHAB, 3
+	db         LE_RUSE_BIRD, 4
+	db         CYBERSHELL11, 5
+
+	db CREDITS_WAIT, 12
+	
+	db          BUG_TESTERS, 0
+	db       PASSION_WORKER, 1
+	db                  NEP, 2
+	db                LUCKY, 3
+	db             COCONUTZ, 4
+	db              RACIE_B, 5
+	
+	db CREDITS_WAIT, 12
+	
+	db          BUG_TESTERS, 0
+	db                 ADEM, 1
+	db             JUSTIN_N, 2
+	db                 CCCP, 3
+	db               MCDON7, 4
+	db    SPAGHETTI_CULTIST, 5
+	
+	db CREDITS_WAIT, 12
+	
+	
 
 ; Clear the banner.
 	db CREDITS_CLEAR
@@ -266,6 +303,7 @@ CreditsScript:
 	db       SPECIAL_THANKS, 0
 	db    MIKIHIRO_ISHIKAWA, 1
 	db   HIDEYUKI_HASHIMOTO, 2
+	db                LVL_3, 3
 
 	db CREDITS_WAIT, 12
 

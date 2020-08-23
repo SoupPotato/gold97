@@ -74,7 +74,7 @@
 	const CREDIT_UNKNOWN
 	const STAFF
 	const DIRECTOR
-	const CODIRECTOR
+	const CODIRECTORS
 	const PROGRAMMERS
 	const GRAPHICS_DIRECTOR
 	const MONSTER_DESIGN
@@ -103,6 +103,29 @@
 	const US_COORDINATION
 	const TEXT_TRANSLATION
 	const PAAD_TESTING
+	const BUG_TESTERS
+	const SOUR_APPLE
+	const ROOL
+	const CAM
+	const PFERO
+	const GMERC
+	const DEPRESSED_GABE
+	const LVL_3
+	const NEP
+	const AHAB
+	const LE_RUSE_BIRD
+	const SMALLS
+	const PASSION_WORKER
+	const COCONUTZ
+	const LUCKY
+	const ADEM
+	const JUSTIN_N
+	const MCDON7
+	const CCCP
+	const KOOLBOYMAN
+	const CYBERSHELL11
+	const RACIE_B
+	const SPAGHETTI_CULTIST
 
 ; CreditsScript indexes (see data/credits_script.asm)
 	const_def -7
