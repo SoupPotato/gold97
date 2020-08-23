@@ -6,9 +6,6 @@ General
 
 Kanto landmarks:
 
->celadon mansion
-Needs tileset palettes fixed up
-
 >Kanto Docks
 trainers, items, truck meme
 
@@ -23,9 +20,6 @@ trainers, NPCs, SCRIPTED EVENT ON THIRD FLOOR
 
 >power plant
 items, voltorbs, lt. surge battle (pichu with special move as reward)
-
->rock tunnel
-change items
 
 >seafoam islands
 items

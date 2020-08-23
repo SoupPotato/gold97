@@ -49,8 +49,8 @@ KantoCeladonMansion2FComputerText:
 	done
 
 KantoCeladonMansion2FMeetingRoomSignText:
-	text "GAME FREAK"
-	line "MEETING ROOM"
+	text "ROM HACK"
+	line "DEVELOPMENT ROOM"
 	done
 
 KantoCeladonMansion2F_MapEvents:
