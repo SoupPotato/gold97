@@ -98,9 +98,10 @@ NewPokedexOrder:
 	db NIDORAN_M
 	db NIDORINO
 	db NIDOKING
-	db CORASUN
-	db ANCHORAGE
-	db GROTESS
+	db RINRING
+	db BELLRUN
+	db KOTORA
+	db RAITORA
 	db SUNFLORA
 	db EXEGGCUTE
 	db EXEGGUTOR
@@ -138,6 +139,9 @@ NewPokedexOrder:
 	db NYANYA
 	db MEOWTH
 	db PERSIAN
+	db CORASUN
+	db ANCHORAGE
+	db GROTESS
 	db PSYDUCK
 	db GOLDUCK
 	db MACHOP
@@ -168,16 +172,12 @@ NewPokedexOrder:
 	db TENTACRUEL
 	db KRABBY
 	db KINGLER
-	db RINRING
-	db BELLRUN
 	db STARYU
 	db STARMIE
 	db SHELLDER
 	db CLOYSTER
 	db REMORAID
 	db OCTILLERY
-	db KOTORA
-	db RAITORA
 	db SEEL
 	db DEWGONG
 	db LICKITUNG
@@ -218,6 +218,8 @@ NewPokedexOrder:
 	db MURKROW
 	db HOUNDOUR
 	db HOUNDOOM
+	db WOLFAN
+	db WARWOLF
 	db SNEASEL
 	db PORYGON
 	db PORYGON2
@@ -248,8 +250,6 @@ NewPokedexOrder:
 	db DRATINI
 	db DRAGONAIR
 	db DRAGONITE
-	db WOLFAN
-	db WARWOLF
 	db LUGIA
 	db HO_OH
 	db MEWTWO
