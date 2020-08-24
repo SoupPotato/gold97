@@ -114,8 +114,7 @@ ENDM
 	connection south, Route103, ROUTE_103, 0
 	connection east, Route104, ROUTE_104, 0
 
-	map_attributes SunpointCity, SUNPOINT_CITY, $5D, EAST
-	connection east, Route111, ROUTE_111, 0
+	map_attributes SunpointCity, SUNPOINT_CITY, $5D, 0
 
 	map_attributes WestportCity, WESTPORT_CITY, $35, NORTH | EAST
 	connection north, Route103, ROUTE_103, 5
