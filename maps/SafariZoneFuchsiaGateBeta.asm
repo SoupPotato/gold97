@@ -1,7 +1,23 @@
+	const_def 2 
+	const GATESAFARIMAN
+	
 SafariZoneFuchsiaGateBeta_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
+
+
+SafariGateMan:
+	jumptextfaceplayer SafariGateManText
+	
+SafariGateManText:
+	text "Welcome to the"
+	line "SAFARI ZONE!"
+	
+	para "Catch as much"
+	line "as you please!"
+	done
+
 
 SafariZoneFuchsiaGateBeta_MapEvents:
 	db 0, 0 ; filler
@@ -16,4 +32,5 @@ SafariZoneFuchsiaGateBeta_MapEvents:
 
 	db 0 ; bg events
 
-	db 0 ; object events
+	db 1 ; object events
+	object_event  0,  4, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SafariGateMan, -1
