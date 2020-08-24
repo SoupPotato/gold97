@@ -2089,16 +2089,16 @@ SailorGroup:
 	db -1 ; end
 
 	; SAILOR (4)
-	db "KENT@", TRAINERTYPE_MOVES ; unused
-	db 18, KRABBY,     BUBBLE, LEER, VICEGRIP, HARDEN
-	db 20, KRABBY,     BUBBLEBEAM, LEER, VICEGRIP, HARDEN
+	db "KENT@", TRAINERTYPE_NORMAL ; used, kanto dock
+	db 45, KRABBY
+	db 40, KINGLER
 	db -1 ; end
 
-	; SAILOR (5) ; unused
+	; SAILOR (5) ; used, kanto dock
 	db "ERNEST@", TRAINERTYPE_NORMAL
-	db 18, MACHOP
-	db 18, MACHOP
-	db 18, POLIWHIRL
+	db 39, MACHOKE
+	db 40, MACHOKE
+	db 42, POLIWRATH
 	db -1 ; end
 
 	; SAILOR (6)
@@ -2149,6 +2149,13 @@ SailorGroup:
 	db "HUEY@", TRAINERTYPE_MOVES
 	db 38, POLITOED,   WHIRLPOOL, RAIN_DANCE, BODY_SLAM, PERISH_SONG
 	db 38, POLIWRATH,  SURF, STRENGTH, ICE_PUNCH, SUBMISSION
+	db -1 ; end
+	
+	;SAILOR (14)
+	db "SVEN@", TRAINERTYPE_NORMAL ; new, kanto docks
+	db 40, SNEASEL
+	db 38, DEWGONG
+	db 40, ANCHORAGE
 	db -1 ; end
 
 SuperNerdGroup:

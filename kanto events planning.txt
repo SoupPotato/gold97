@@ -2,12 +2,7 @@ General
 >check text on existing maps for inconsistencies in naming
 
 
-
-
 Kanto landmarks:
-
->Kanto Docks
-trainers, items, truck meme
 
 >safari zone
 items, NPCs
@@ -24,14 +19,8 @@ items, voltorbs, lt. surge battle (pichu with special move as reward)
 >seafoam islands
 items
 
->fossil lab
-DONE (add aerodactyl/old amber functionality possibly)
-
 >oak's lab
 scripted event with aide cleaning up, gives you item from oak (something good)
-
->red's house
-DONE
 
 >blue's house
 item to pick up, note from daisy

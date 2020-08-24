@@ -419,8 +419,8 @@ KRIS EQU __enum__
 	const EUGENE
 	const HUEY1
 	const TERRELL
-	const KENT
-	const ERNEST
+	const KENT ; used 
+	const ERNEST ; used
 	const JEFF
 	const GARRETT
 	const KENNETH
@@ -429,6 +429,7 @@ KRIS EQU __enum__
 	const HUEY2
 	const HUEY3
 	const HUEY4
+	const SVEN ; used new
 
 	trainerclass SUPER_NERD ; 29
 	const STAN
