@@ -1680,81 +1680,81 @@ JohtoGrassWildMons:
 	map_id ROCK_TUNNEL_1F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 40, CUBONE
-	db 41, GEODUDE
-	db 42, MACHOKE
+	db 37, CUBONE
+	db 38, GEODUDE
+	db 40, MACHOKE
 	db 42, GOLBAT
-	db 45, MACHOKE
+	db 41, MACHOKE
 	db 42, MAROWAK
 	db 42, MAROWAK
 	; day
-	db 40, CUBONE
-	db 41, GEODUDE
-	db 42, MACHOKE
+	db 37, CUBONE
+	db 38, GEODUDE
+	db 40, MACHOKE
 	db 42, GOLBAT
-	db 45, MACHOKE
+	db 41, MACHOKE
 	db 42, MAROWAK
 	db 42, MAROWAK
 	; nite
-	db 42, GOLBAT
-	db 41, GEODUDE
-	db 42, GRAVELER
-	db 47, HAUNTER
-	db 45, GOLBAT
-	db 45, GOLBAT
-	db 45, CROBAT
+	db 40, GOLBAT
+	db 38, GEODUDE
+	db 40, GRAVELER
+	db 42, HAUNTER
+	db 43, GOLBAT
+	db 44, GOLBAT
+	db 43, CROBAT
 
 	map_id ROCK_TUNNEL_B1F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 42, CUBONE
-	db 44, GRAVELER
-	db 46, ONIX
-	db 42, GOLBAT
-	db 45, MAROWAK
-	db 45, KANGASKHAN
-	db 45, KANGASKHAN
+	db 40, CUBONE
+	db 41, GRAVELER
+	db 43, ONIX
+	db 41, GOLBAT
+	db 42, MAROWAK
+	db 41, KANGASKHAN
+	db 41, KANGASKHAN
 	; day
-	db 42, CUBONE
-	db 44, GRAVELER
-	db 46, ONIX
-	db 42, GOLBAT
-	db 45, MAROWAK
-	db 45, KANGASKHAN
-	db 45, KANGASKHAN
+	db 40, CUBONE
+	db 41, GRAVELER
+	db 43, ONIX
+	db 41, GOLBAT
+	db 42, MAROWAK
+	db 41, KANGASKHAN
+	db 41, KANGASKHAN
 	; nite
-	db 42, GOLBAT
-	db 44, GRAVELER
-	db 46, ONIX
-	db 45, GOLBAT
-	db 45, HAUNTER
-	db 45, CROBAT
-	db 45, CROBAT
+	db 40, GOLBAT
+	db 41, GRAVELER
+	db 43, ONIX
+	db 41, GOLBAT
+	db 42, HAUNTER
+	db 43, CROBAT
+	db 43, CROBAT
 
 	map_id KANTO_POWER_PLANT
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 40, VOLTORB
-	db 41, MAGNEMITE
-	db 42, PIKACHU
-	db 42, MAGNETON
-	db 45, ELECTRODE
+	db 38, VOLTORB
+	db 38, MAGNEMITE
+	db 37, PIKACHU
+	db 40, MAGNETON
+	db 43, ELECTRODE
 	db 42, ELECTABUZZ
 	db 42, ELECTABUZZ
 	; day
-	db 40, VOLTORB
-	db 41, MAGNEMITE
-	db 42, PIKACHU
-	db 42, MAGNETON
-	db 45, ELECTRODE
+	db 38, VOLTORB
+	db 38, MAGNEMITE
+	db 37, PIKACHU
+	db 40, MAGNETON
+	db 43, ELECTRODE
 	db 42, ELECTABUZZ
 	db 42, ELECTABUZZ
 	; nite
-	db 40, VOLTORB
-	db 41, MAGNEMITE
-	db 42, PIKACHU
-	db 42, PIKACHU
-	db 45, MAGNETON
+	db 38, VOLTORB
+	db 38, MAGNEMITE
+	db 37, PIKACHU
+	db 40, PIKACHU
+	db 42, MAGNETON
 	db 42, RAICHU
 	db 42, ELECTABUZZ
 
@@ -1821,23 +1821,23 @@ JohtoGrassWildMons:
 	db 42, SLOWPOKE
 	db 42, PSYDUCK
 	db 45, GOLDUCK
-	db 45, SLOWBRO
+	db 43, SLOWBRO
 	; day
 	db 40, SEEL
 	db 41, SHELLDER
 	db 42, KRABBY
 	db 42, SLOWPOKE
 	db 42, PSYDUCK
-	db 45, GOLDUCK
-	db 45, SLOWBRO
+	db 43, GOLDUCK
+	db 43, SLOWBRO
 	; nite
 	db 40, SEEL
 	db 41, STARYU
 	db 42, KRABBY
 	db 42, STARYU
 	db 42, PSYDUCK
-	db 45, GOLDUCK
-	db 45, SLOWBRO
+	db 43, GOLDUCK
+	db 43, SLOWBRO
 
 	map_id SEAFOAM_ISLANDS_B1F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
@@ -1847,24 +1847,24 @@ JohtoGrassWildMons:
 	db 42, KRABBY
 	db 42, SLOWPOKE
 	db 42, JYNX
-	db 45, KINGLER
-	db 45, SLOWBRO
+	db 43, KINGLER
+	db 43, SLOWBRO
 	; day
 	db 40, SEEL
 	db 41, SHELLDER
 	db 42, KRABBY
 	db 42, SLOWPOKE
 	db 42, JYNX
-	db 45, KINGLER
-	db 45, SLOWBRO
+	db 43, KINGLER
+	db 43, SLOWBRO
 	; nite
 	db 40, SEEL
 	db 41, STARYU
 	db 42, KRABBY
 	db 42, STARYU
 	db 42, JYNX
-	db 45, GOLDUCK
-	db 45, SLOWBRO
+	db 43, GOLDUCK
+	db 43, SLOWBRO
 
 	map_id SAFARI_ZONE_BETA
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -1893,33 +1893,32 @@ JohtoGrassWildMons:
 	db 40, KANGASKHAN
 	db 43, CHANSEY
 
-
 	map_id KANTO_VICTORY_ROAD
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 44, GRAVELER
-	db 42, RHYHORN
+	db 40, GRAVELER
+	db 41, RHYHORN
 	db 43, ONIX
 	db 44, GOLBAT
-	db 45, SANDSLASH
-	db 45, RHYDON
-	db 45, RHYDON
+	db 42, SANDSLASH
+	db 43, RHYDON
+	db 43, RHYDON
 	; day
-	db 44, GRAVELER
-	db 42, RHYHORN
+	db 42, GRAVELER
+	db 41, RHYHORN
 	db 43, ONIX
 	db 44, GOLBAT
-	db 45, SANDSLASH
-	db 45, RHYDON
-	db 45, RHYDON
+	db 42, SANDSLASH
+	db 43, RHYDON
+	db 43, RHYDON
 	; nite
-	db 44, GOLBAT
-	db 44, GRAVELER
+	db 42, GOLBAT
+	db 41, GRAVELER
 	db 42, ONIX
-	db 46, GRAVELER
-	db 48, GRAVELER
-	db 50, GRAVELER
-	db 50, GRAVELER
+	db 43, GRAVELER
+	db 44, GRAVELER
+	db 45, GRAVELER
+	db 45, GRAVELER
 	
 	map_id ROUTE_115
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
