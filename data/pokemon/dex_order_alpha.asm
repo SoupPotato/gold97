@@ -7,7 +7,6 @@ AlphabeticalPokedexOrder:
 	db ALAKAZAM
 	db AMPHAROS
 	db ANCHORAGE
-	db METTO
 	db AQUALLO
 	db AQUARIUS
 	db ARBOK
@@ -15,6 +14,7 @@ AlphabeticalPokedexOrder:
 	db ARIADOS
 	db ARTICUNO
 	db AZUMARILL
+	db BALLERINE
 	db BEEDRILL
 	db BELLOSSOM
 	db BELLRUN
@@ -23,7 +23,6 @@ AlphabeticalPokedexOrder:
 	db BLASTOISE
 	db BLISSEY
 	db BOMSHEAL
-	db PETAMOLE
 	db BULBASAUR
 	db BUTTERFREE
 	db CATERPIE
@@ -37,11 +36,10 @@ AlphabeticalPokedexOrder:
 	db CLEFAIRY
 	db CLEFFA
 	db CLOYSTER
+	db CORASUN
 	db CROBAT
 	db CRUIZE
 	db CUBONE
-	db PANGSHI
-	db KURSTRAW
 	db DELIBIRD
 	db DEWGONG
 	db DIGLETT
@@ -57,9 +55,9 @@ AlphabeticalPokedexOrder:
 	db DYNABEAR
 	db EEVEE
 	db EKANS
+	db ELEBABE
 	db ELECTABUZZ
 	db ELECTRODE
-	db ELEBABE
 	db ENTEI
 	db ESPEON
 	db EXEGGCUTE
@@ -70,6 +68,7 @@ AlphabeticalPokedexOrder:
 	db FLAMBEAR
 	db FLAREON
 	db GASTLY
+	db GELANIA
 	db GENGAR
 	db GEODUDE
 	db GIRAFARIG
@@ -82,8 +81,8 @@ AlphabeticalPokedexOrder:
 	db GRIMBY
 	db GRIMER
 	db GROTESS
-	db PUDDIPUP
 	db GROWLITHE
+	db GUPGOLD
 	db GYARADOS
 	db HAUNTER
 	db HITMONCHAN
@@ -109,16 +108,15 @@ AlphabeticalPokedexOrder:
 	db KANGASKHAN
 	db KINGDRA
 	db KINGLER
-	db GUPGOLD
 	db KOFFING
 	db KOTORA
 	db KRABBY
+	db KURSTRAW
 	db LAPRAS
 	db LEAFEON
-	db TRIPSTAR
 	db LEDYBA
-	db LICKITUNG
 	db LICKILORD
+	db LICKITUNG
 	db LUGIA
 	db MACHAMP
 	db MACHOKE
@@ -135,13 +133,12 @@ AlphabeticalPokedexOrder:
 	db MARILL
 	db MAROWAK
 	db MEGANIUM
-	db NYANYA
 	db MEOWTH
 	db METAPOD
+	db METTO
 	db MEW
 	db MEWTWO
 	db MILTANK
-	db BALLERINE
 	db MOLTRES
 	db MR__MIME
 	db MUK
@@ -156,16 +153,19 @@ AlphabeticalPokedexOrder:
 	db NINETALES
 	db NOCTOWL
 	db NUMBPUFF
+	db NYANYA
 	db OCTILLERY
 	db ODDISH
 	db OMANYTE
 	db OMASTAR
 	db ONIX
-	db CORASUN
+	db PANGSHI
 	db PARAMITE
 	db PARAS
 	db PARASECT
 	db PERSIAN
+	db PETAMOLE
+	db PETICORN
 	db PHANPY
 	db PICHU
 	db PIDGEOT
@@ -173,17 +173,17 @@ AlphabeticalPokedexOrder:
 	db PIDGEY
 	db PIKACHU
 	db PINSIR
-	db PRAXE
 	db POLITOED
 	db POLIWAG
 	db POLIWHIRL
 	db POLIWRATH
-	db PETICORN
 	db PONYTA
 	db PORYGON
 	db PORYGON2
+	db PRAXE
 	db PRIMEAPE
 	db PSYDUCK
+	db PUDDIPUP
 	db QUAGSIRE
 	db QWILFISH
 	db RAICHU
@@ -222,13 +222,13 @@ AlphabeticalPokedexOrder:
 	db STEELIX
 	db SUICUNE
 	db SUNFLORA
-	db TANGTRIP
 	db TANGELA
-	db GELANIA
+	db TANGTRIP
 	db TAUROS
 	db TENTACOOL
 	db TENTACRUEL
 	db TOGEPI
+	db TRIPSTAR
 	db TRITALES
 	db TURBAN
 	db TWINZ
@@ -244,8 +244,8 @@ AlphabeticalPokedexOrder:
 	db VOLBEAR
 	db VOLTORB
 	db VULPIX
-	db WARWOLF
 	db WARTORTLE
+	db WARWOLF
 	db WEEDLE
 	db WEEPINBELL
 	db WEEZING
