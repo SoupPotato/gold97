@@ -10,9 +10,6 @@ NPCs
 >pokemon tower
 trainers, NPCs, SCRIPTED EVENT ON THIRD FLOOR
 
->power plant
-items, voltorbs, lt. surge battle (pichu with special move as reward)
-
 >seafoam islands
 items
 
