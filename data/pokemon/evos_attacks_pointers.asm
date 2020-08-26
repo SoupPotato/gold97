@@ -168,7 +168,7 @@ EvosAttacksPointers::
 	dw LedybaEvosAttacks
 	dw TripstarEvosAttacks
 	dw SpinarakEvosAttacks
-	dw AriadosEvosAttacks
+	dw TuheadEvosAttacks
 	dw CrobatEvosAttacks
 	dw KotoraEvosAttacks
 	dw RaitoraEvosAttacks

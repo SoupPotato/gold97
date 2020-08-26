@@ -251,15 +251,12 @@ MoveDescriptions::
 	dw RockSmashDescription
 	dw WhirlpoolDescription
 	dw BeatUpDescription
-	dw MoveFCDescription
-	dw MoveFDDescription
-	dw MoveFEDescription
+	dw CoinHurlDescription
+	dw MegaphoneDescription
+	dw RockHeadDescription
 	dw MoveFFDescription
 	dw Move00Description
 
-MoveFCDescription:
-MoveFDDescription:
-MoveFEDescription:
 MoveFFDescription:
 Move00Description:
 	db "?@"
@@ -352,6 +349,7 @@ VineWhipDescription:
 	db   "Whips the foe with"
 	next "slender vines.@"
 
+RockHeadDescription:
 StompDescription:
 	db   "An attack that may"
 	next "cause flinching.@"
@@ -1267,3 +1265,11 @@ WhirlpoolDescription:
 BeatUpDescription:
 	db   "Party #MON join"
 	next "in the attack.@"
+	
+CoinHurlDescription:
+	db   "Stronger the more"
+    next "¥ the owner has.@"
+	
+MegaphoneDescription:
+	db   "A loud noise that"
+	next "lowers SPCL.ATK.@"

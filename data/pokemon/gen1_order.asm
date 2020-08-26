@@ -206,7 +206,7 @@ Pokered_MonIndices:
 	db LEDYBA
 	db TRIPSTAR
 	db SPINARAK
-	db ARIADOS
+	db TUHEAD
 	db CROBAT
 	db KOTORA
 	db RAITORA

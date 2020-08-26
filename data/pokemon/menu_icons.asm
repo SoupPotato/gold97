@@ -168,7 +168,7 @@ MonMenuIcons:
 	db ICON_BUG         ; LEDYBA
 	db ICON_BUG         ; TRIPSTAR
 	db ICON_BUG         ; SPINARAK
-	db ICON_BUG         ; ARIADOS
+	db ICON_BUG         ; TUHEAD
 	db ICON_BAT         ; CROBAT
 	db ICON_FOX         ; KOTORA
 	db ICON_FOX         ; RAITORA

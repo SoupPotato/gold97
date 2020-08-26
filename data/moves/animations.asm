@@ -252,9 +252,9 @@ BattleAnimations::
 	dw BattleAnim_RockSmash
 	dw BattleAnim_Whirlpool
 	dw BattleAnim_BeatUp
-	dw BattleAnim_252
-	dw BattleAnim_253
-	dw BattleAnim_254
+	dw BattleAnim_CoinHurl
+	dw BattleAnim_Megaphone
+	dw BattleAnim_RockHead
 	dw BattleAnim_SweetScent2
 ; $100
 	dw BattleAnim_ThrowPokeBall
@@ -281,9 +281,6 @@ BattleAnimations::
 	dw BattleAnim_HitConfusion
 
 BattleAnim_0:
-BattleAnim_252:
-BattleAnim_253:
-BattleAnim_254:
 BattleAnim_MirrorMove:
 	anim_ret
 
@@ -4597,6 +4594,82 @@ BattleAnim_BeatUp:
 	anim_wait 8
 	anim_call BattleAnim_ShowMon_0
 	anim_ret
+	
+BattleAnim_CoinHurl:
+	anim_3gfx ANIM_GFX_HIT, ANIM_GFX_STATUS, ANIM_GFX_SPEED
+	anim_sound 0, 0, SFX_METRONOME
+.loop
+	anim_wait 8
+	anim_obj ANIM_OBJ_AE, 64, 88, $4
+	anim_wait 8
+	anim_obj ANIM_OBJ_AE, 64, 80, $4
+	anim_wait 8
+	anim_obj ANIM_OBJ_AE, 64, 96, $4
+	anim_wait 8
+	anim_sound 0, 1, SFX_POUND
+	anim_obj ANIM_OBJ_01, 128, 56, $0
+.loop2
+	anim_sound 0, 1, SFX_PAY_DAY
+	anim_obj ANIM_OBJ_PAY_DAY, 120, 76, $1
+	anim_wait 12
+	anim_loop 3, .loop2
+	anim_wait 8
+	anim_ret
+	
+BattleAnim_Megaphone:
+	anim_2gfx ANIM_GFX_MISC, ANIM_GFX_NOISE
+	anim_battlergfx_2row
+	anim_obj ANIM_OBJ_MEGAPHONE, 74, 96, $0
+.loop
+	anim_bgeffect ANIM_BG_1F, $14, $2, $0
+	anim_obj ANIM_OBJ_4B, 64, 76, $0
+	anim_obj ANIM_OBJ_4B, 64, 88, $1
+	anim_obj ANIM_OBJ_4B, 64, 100, $2
+	anim_wait 16
+	anim_loop 3, .loop
+	anim_wait 9
+	anim_bgeffect ANIM_BG_BATTLEROBJ_1ROW, $0, $1, $0
+	anim_wait 8
+	anim_bgeffect ANIM_BG_19, $0, $0, $40
+	anim_wait 64
+	anim_incbgeffect ANIM_BG_19
+	anim_wait 1
+	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
+	anim_wait 5
+	anim_incobj 10
+	anim_wait 8
+	anim_ret
+	
+BattleAnim_RockHead:
+	anim_2gfx ANIM_GFX_ROCKS, ANIM_GFX_HIT
+	anim_bgeffect ANIM_BG_1F, $1b, $2, $0
+	anim_sound 0, 0, SFX_OUTRAGE
+	anim_wait 32
+	anim_call BattleAnim_TargetObj_1Row
+	anim_bgeffect ANIM_BG_TACKLE, $0, $1, $0
+	anim_wait 4
+	anim_sound 0, 1, SFX_HEADBUTT
+	anim_wait 8
+	anim_sound 0, 1, SFX_KARATE_CHOP
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $2
+	anim_obj ANIM_OBJ_01, 128, 56, $0
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $28
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $5c
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $10
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $e8
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $9c
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $d0
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $1c
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $50
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $dc
+	anim_obj ANIM_OBJ_ROCK_SMASH, 128, 64, $90
+	anim_wait 32
+	anim_call BattleAnim_ShowMon_0
+	anim_ret
+	
+	
+	
+	
 
 BattleAnim_DreamEater_branch_cbab3:
 BattleAnim_GigaDrain_branch_cbab3:

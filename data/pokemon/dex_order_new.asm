@@ -31,7 +31,7 @@ NewPokedexOrder:
 	db LEDYBA
 	db TRIPSTAR
 	db SPINARAK
-	db ARIADOS
+	db TUHEAD
 	db GEODUDE
 	db GRAVELER
 	db GOLEM

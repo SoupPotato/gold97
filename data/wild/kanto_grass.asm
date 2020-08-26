@@ -159,7 +159,7 @@ KantoGrassWildMons:
 	; nite
 	db 49, EXEGGCUTE
 	db 48, NIDORINA
-	db 50, ARIADOS
+	db 50, TUHEAD
 	db 48, PINSIR
 	db 48, SCYTHER
 	db 48, CHANSEY

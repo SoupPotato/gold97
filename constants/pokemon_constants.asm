@@ -174,28 +174,28 @@ JOHTO_POKEMON EQU const_value
 	const CHIKORITA  ; 98
 	const PETAMOLE   ; 99
 	const MEGANIUM   ; 9a
-	const FLAMBEAR  ; 9b
+	const FLAMBEAR   ; 9b
 	const VOLBEAR    ; 9c
-	const DYNABEAR ; 9d
-	const CRUIZE   ; 9e
-	const AQUALLO   ; 9f
-	const AQUARIUS ; a0
-	const TANGTRIP    ; a1
-	const GELANIA     ; a2
+	const DYNABEAR   ; 9d
+	const CRUIZE     ; 9e
+	const AQUALLO    ; 9f
+	const AQUARIUS   ; a0
+	const TANGTRIP   ; a1
+	const GELANIA    ; a2
 	const HOOTHOOT   ; a3
 	const NOCTOWL    ; a4
 	const LEDYBA     ; a5
-	const TRIPSTAR     ; a6
+	const TRIPSTAR   ; a6
 	const SPINARAK   ; a7
-	const ARIADOS    ; a8
+	const TUHEAD     ; a8
 	const CROBAT     ; a9
-	const KOTORA   ; aa
+	const KOTORA     ; aa
 	const RAITORA    ; ab
 	const PICHU      ; ac
 	const CLEFFA     ; ad
 	const IGGLYBUFF  ; ae
 	const TOGEPI     ; af
-	const PETICORN    ; b0
+	const PETICORN   ; b0
 	const NATU       ; b1
 	const XATU       ; b2
 	const MAREEP     ; b3
@@ -203,8 +203,8 @@ JOHTO_POKEMON EQU const_value
 	const AMPHAROS   ; b5
 	const BELLOSSOM  ; b6
 	const MARILL     ; b7
-	const BOMSHEAL  ; b8
-	const BELMITT  ; b9
+	const BOMSHEAL   ; b8
+	const BELMITT    ; b9
 	const POLITOED   ; ba
 	const HOPPIP     ; bb
 	const SKIPLOOM   ; bc
@@ -212,36 +212,36 @@ JOHTO_POKEMON EQU const_value
 	const AIPOM      ; be
 	const GUPGOLD    ; bf
 	const SUNFLORA   ; c0
-	const CORASUN      ; c1
-	const ANCHORAGE     ; c2
-	const GROTESS   ; c3
+	const CORASUN    ; c1
+	const ANCHORAGE  ; c2
+	const GROTESS    ; c3
 	const ESPEON     ; c4
 	const UMBREON    ; c5
 	const MURKROW    ; c6
 	const SLOWKING   ; c7
-	const TRITALES ; c8
+	const TRITALES   ; c8
 	const UNOWN      ; c9
-	const TWINZ  ; ca
+	const TWINZ      ; ca
 	const GIRAFARIG  ; cb
 	const TURBAN     ; cc
-	const GRIMBY ; cd
-	const PARAMITE  ; ce
-	const METTO     ; cf
+	const GRIMBY     ; cd
+	const PARAMITE   ; ce
+	const METTO      ; cf
 	const STEELIX    ; d0
 	const SNUBBULL   ; d1
 	const QUAGSIRE   ; d2
-	const PRAXE   ; d3
+	const PRAXE      ; d3
 	const SCIZOR     ; d4
 	const RINRING    ; d5
-	const BELLRUN  ; d6
+	const BELLRUN    ; d6
 	const SNEASEL    ; d7
-	const QWILFISH  ; d8
+	const QWILFISH   ; d8
 	const NUMBPUFF   ; d9
 	const NYANYA     ; da
-	const MADAME   ; db
-	const KURSTRAW     ; dc
-	const PANGSHI  ; dd
-	const PUDDIPUP    ; de
+	const MADAME     ; db
+	const KURSTRAW   ; dc
+	const PANGSHI    ; dd
+	const PUDDIPUP   ; de
 	const REMORAID   ; df
 	const OCTILLERY  ; e0
 	const DELIBIRD   ; e1
@@ -253,25 +253,25 @@ JOHTO_POKEMON EQU const_value
 	const PHANPY     ; e7
 	const DONPHAN    ; e8
 	const PORYGON2   ; e9
-	const BALLERINE   ; ea
+	const BALLERINE  ; ea
 	const SMEARGLE   ; eb
 	const TYROGUE    ; ec
 	const HITMONTOP  ; ed
 	const SMOOCHUM   ; ee
-	const ELEBABE     ; ef
+	const ELEBABE    ; ef
 	const MAGBY      ; f0
-	const CHIX    ; f1
+	const CHIX       ; f1
 	const MILTANK    ; f2
 	const RAIKOU     ; f3
 	const ENTEI      ; f4
 	const SUICUNE    ; f5
-	const WOLFAN   ; f6
+	const WOLFAN     ; f6
 	const WARWOLF    ; f7
 	const LICKILORD  ; f8
-	const BLISSEY      ; f9
+	const BLISSEY    ; f9
 	const LUGIA      ; fa
 	const HO_OH      ; fb
-	const LEAFEON     ; fc
+	const LEAFEON    ; fc
 	const AZUMARILL  ; fd
 NUM_POKEMON EQU const_value + -1
 	const EGG        ; fe

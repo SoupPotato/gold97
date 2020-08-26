@@ -9,9 +9,9 @@ Unreferenced_MonPicBanks:
 	db KRABBY,    $15 + 3
 	db STARMIE,   $15 + 4
 	db ARTICUNO,  $15 + 5
-	db ARIADOS,   $15 + 6 ; JARANRA in pokegold-spaceworld
+	db TUHEAD,    $15 + 6 ; JARANRA in pokegold-spaceworld
 	db ESPEON,    $15 + 7 ; KOUNYA in pokegold-spaceworld
 	db OCTILLERY, $15 + 8 ; BOMBSEEKER in pokegold-spaceworld
-	db WOLFAN,  $15 + 9 ; NYULA in pokegold-spaceworld
+	db WOLFAN,    $15 + 9 ; NYULA in pokegold-spaceworld
 	db $ff,       $15 + 10
 	db $ff,       $15 + 11

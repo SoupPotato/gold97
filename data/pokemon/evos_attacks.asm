@@ -2537,7 +2537,7 @@ TripstarEvosAttacks:
 	db 0 ; no more level-up moves
 
 SpinarakEvosAttacks:
-	db EVOLVE_LEVEL, 22, ARIADOS
+	db EVOLVE_LEVEL, 22, TUHEAD
 	db 0 ; no more evolutions
 	db 1, POISON_STING
 	db 1, STRING_SHOT
@@ -2553,7 +2553,7 @@ SpinarakEvosAttacks:
 	db 45, PSYCHIC_M
 	db 0 ; no more level-up moves
 
-AriadosEvosAttacks:
+TuheadEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, POISON_STING
 	db 1, STRING_SHOT

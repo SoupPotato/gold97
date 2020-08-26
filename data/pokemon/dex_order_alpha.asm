@@ -11,7 +11,6 @@ AlphabeticalPokedexOrder:
 	db AQUARIUS
 	db ARBOK
 	db ARCANINE
-	db ARIADOS
 	db ARTICUNO
 	db AZUMARILL
 	db BALLERINE
@@ -230,6 +229,7 @@ AlphabeticalPokedexOrder:
 	db TOGEPI
 	db TRIPSTAR
 	db TRITALES
+	db TUHEAD
 	db TURBAN
 	db TWINZ
 	db TYROGUE

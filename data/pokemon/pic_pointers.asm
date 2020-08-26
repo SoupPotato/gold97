@@ -336,8 +336,8 @@ PokemonPicPointers::
 	dba_pic TripstarBackpic
 	dba_pic SpinarakFrontpic
 	dba_pic SpinarakBackpic
-	dba_pic AriadosFrontpic
-	dba_pic AriadosBackpic
+	dba_pic TuheadFrontpic
+	dba_pic TuheadBackpic
 	dba_pic CrobatFrontpic
 	dba_pic CrobatBackpic
 	dba_pic KotoraFrontpic

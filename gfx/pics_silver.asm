@@ -127,7 +127,7 @@ BellrunFrontpic:     INCBIN "gfx/pokemon/bellrun/front.animated.2bpp.lz"
 
 SECTION "Pics 6", ROMX
 
-AriadosFrontpic:     INCBIN "gfx/pokemon/ariados/front.animated.2bpp.lz"
+TuheadFrontpic:      INCBIN "gfx/pokemon/tuhead/front.animated.2bpp.lz"
 NoctowlFrontpic:     INCBIN "gfx/pokemon/noctowl/front.animated.2bpp.lz"
 WartortleFrontpic:   INCBIN "gfx/pokemon/wartortle/front_S.animated.2bpp.lz"
 LaprasFrontpic:      INCBIN "gfx/pokemon/lapras/front_S.animated.2bpp.lz"
@@ -483,7 +483,7 @@ MukBackpic:          INCBIN "gfx/pokemon/muk/back.2bpp.lz"
 DelibirdBackpic:     INCBIN "gfx/pokemon/delibird/back.2bpp.lz"
 SabrinaPic:          INCBIN "gfx/trainers/sabrina.2bpp.lz"
 MagikarpBackpic:     INCBIN "gfx/pokemon/magikarp/back.2bpp.lz"
-AriadosBackpic:      INCBIN "gfx/pokemon/ariados/back.2bpp.lz"
+TuheadBackpic:       INCBIN "gfx/pokemon/tuhead/back.2bpp.lz"
 SneaselBackpic:      INCBIN "gfx/pokemon/sneasel/back.2bpp.lz"
 UmbreonBackpic:      INCBIN "gfx/pokemon/umbreon/back.2bpp.lz"
 MurkrowBackpic:      INCBIN "gfx/pokemon/murkrow/back.2bpp.lz"

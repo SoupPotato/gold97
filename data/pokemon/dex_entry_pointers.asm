@@ -167,7 +167,7 @@ PokedexDataPointerTable:
 	dw LedybaPokedexEntry
 	dw LedianPokedexEntry
 	dw SpinarakPokedexEntry
-	dw AriadosPokedexEntry
+	dw TuheadPokedexEntry
 	dw CrobatPokedexEntry
 	dw KotoraPokedexEntry
 	dw RaitoraPokedexEntry

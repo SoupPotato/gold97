@@ -20,15 +20,15 @@ BugContestantPointers:
 
 BugContestant_BugCatcherDon:
 	db BUG_CATCHER, DON
-	dbw BEEDRILL,  300
-	dbw VENONAT,   285
-	dbw PARAS,     226
+	dbw BEEDRILL,   300
+	dbw VENONAT,    285
+	dbw PARAS,      226
 
 BugContestant_BugCatcherEd:
 	db BUG_CATCHER, ED
-	dbw VENOMOTH,  286
-	dbw PARASECT,  251
-	dbw ARIADOS,   237
+	dbw VENOMOTH,   286
+	dbw PARASECT,   251
+	dbw TUHEAD,     237
 
 BugContestant_CooltrainerMNick:
 	db COOLTRAINERM, NICK
@@ -56,8 +56,8 @@ BugContestant_CamperBarry:
 
 BugContestant_PicnickerCindy:
 	db PICNICKER, CINDY
-	dbw ARIADOS, 	341
-	dbw TRIPSTAR,     301
+	dbw TUHEAD, 	341
+	dbw TRIPSTAR,   301
 	dbw VENONAT,    264
 
 BugContestant_BugCatcherJosh:
@@ -68,7 +68,7 @@ BugContestant_BugCatcherJosh:
 
 BugContestant_YoungsterSamuel:
 	db YOUNGSTER, SAMUEL
-	dbw ARIADOS,    270
+	dbw TUHEAD,     270
 	dbw BEEDRILL,   282
 	dbw VENONAT,    251
 
