@@ -93,7 +93,7 @@ BirdonTownHiddenFullHeal:
 
 
 BirdonTownGrampsTextBefore:
-	text "ENOKI, the GYM"
+	text "MORTY, the GYM"
 	line "LEADER here, is a"
 	cont "mysterious man."
 	para "Not much is known"
