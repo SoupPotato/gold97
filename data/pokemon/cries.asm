@@ -165,14 +165,14 @@ PokemonCries::
 	mon_cry CRY_MANTINE,     $f90,  $090 ; CRUIZE
 	mon_cry CRY_GOLEM,       $300,  $0f0 ; AQUALLO
 	mon_cry CRY_CRUIZE,     -$010,  $0c0 ; AQUARIUS
-	mon_cry CRY_GOLEM,       $060,  $0c0 ; TANG
+	mon_cry CRY_MARILL,      $f4c,  $110 ; TANGTRIP
 	mon_cry CRY_GOLEM,      -$010,  $1a0 ; TANGROWTH
 	mon_cry CRY_HOOTHOOT,    $091,  $0d8 ; HOOTHOOT
 	mon_cry CRY_HOOTHOOT,    $000,  $1a0 ; NOCTOWL
 	mon_cry CRY_LEDYBA,      $000,  $0de ; LEDYBA
 	mon_cry CRY_LEDYBA,     -$096,  $138 ; TRIPSTAR
 	mon_cry CRY_SPINARAK,    $011,  $200 ; SPINARAK
-	mon_cry CRY_SPINARAK,   -$0ae,  $1e2 ; ARIADOS
+	mon_cry CRY_SPINARAK,   -$0ae,  $1e2 ; TUHEAD
 	mon_cry CRY_SQUIRTLE,   -$010,  $140 ; CROBAT
 	mon_cry CRY_PICHU,       $f60,  $200 ; KOTORA
 	mon_cry CRY_RAIKOU,      $db3,  $168 ; RAITORA
@@ -180,7 +180,7 @@ PokemonCries::
 	mon_cry CRY_CLEFFA,      $061,  $091 ; CLEFFA
 	mon_cry CRY_CHIKORITA,   $0e8,  $0e8 ; IGGLYBUFF
 	mon_cry CRY_TOGEPI,      $010,  $100 ; TOGEPI
-	mon_cry CRY_WEEPINBELL,  $03b,  $068 ; PETICORN
+	mon_cry CRY_WEEPINBELL,  $0c0,  $090 ; PETICORN
 	mon_cry CRY_NATU,       -$067,  $100 ; NATU
 	mon_cry CRY_NATU,       -$0a7,  $168 ; XATU
 	mon_cry CRY_MAREEP,      $022,  $0d8 ; MAREEP
@@ -188,7 +188,7 @@ PokemonCries::
 	mon_cry CRY_AMPHAROS,   -$07c,  $0e8 ; AMPHAROS
 	mon_cry CRY_CLEFFA,      $084,  $150 ; BELLOSSOM
 	mon_cry CRY_MARILL,      $11b,  $120 ; MARILL
-	mon_cry CRY_BULBASAUR,   $f40,  $180 ; BOMSHEAL
+	mon_cry CRY_CRUIZE,      $e90,  $160 ; BOMSHEAL
 	mon_cry CRY_CATERPIE,    $06d,  $160 ; BELMITT
 	mon_cry CRY_CLEFFA,     -$2a3,  $1c8 ; POLITOED
 	mon_cry CRY_CLEFFA,      $03b,  $0c8 ; HOPPIP
@@ -208,7 +208,7 @@ PokemonCries::
 	mon_cry CRY_HOOTHOOT,    $162,  $100 ; UNOWN
 	mon_cry CRY_GIRAFARIG,   $27b,  $144 ; TWINZ
 	mon_cry CRY_GIRAFARIG,   $041,  $200 ; GIRAFARIG
-	mon_cry CRY_DYNABEAR,   -$0e9,  $0f0 ; TURBAN
+	mon_cry CRY_MADAME,      $2f1,  $140 ; TURBAN
 	mon_cry CRY_GRIMER,      $080,  $0b0 ; GRIMBY
 	mon_cry CRY_PARAS,       $0c4,  $0b0 ; PARAMITE
 	mon_cry CRY_PIDGEY,      $162,  $120 ; METTO
@@ -221,7 +221,7 @@ PokemonCries::
 	mon_cry CRY_METTO,       $020,  $300 ; BELLRUN
 	mon_cry CRY_ANCHORAGE,   $053,  $0af ; SNEASEL
 	mon_cry CRY_SLOWKING,    $160,  $0e0 ; QWILFISH
-	mon_cry CRY_SLOWKING,    $07b,  $0f0 ; NUMBPUFF
+	mon_cry CRY_SLOWKING,    $fce,  $160 ; NUMBPUFF
 	mon_cry CRY_MARILL,      $0f4,  $0c0 ; NYANYA
 	mon_cry CRY_SPEAROW,     $02d,  $0a0 ; MADAME
 	mon_cry CRY_GRIMER,      $210,  $100 ; KURSTRAW
