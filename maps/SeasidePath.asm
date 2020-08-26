@@ -56,7 +56,7 @@ TrainerHikerTimothy:
 	end
 	
 SeasidePathCleanseTag:
-	itemball CLEANSE_TAG
+	itemball BIG_PEARL ; changed because of mr. fuji event
 
 
 SeasidePathSign:

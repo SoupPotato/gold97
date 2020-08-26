@@ -3161,6 +3161,12 @@ SageGroup:
 	db 10, PARAMITE
 	db 10, HOOTHOOT
 	db -1 ; end
+	
+	; SAGE (13)
+	db "WANG@", TRAINERTYPE_NORMAL ; new
+	db 40, NINETALES
+	db 41, PANGSHI
+	db -1 ; end
 
 MediumGroup:
 	; MEDIUM (1)
@@ -3187,8 +3193,8 @@ MediumGroup:
 	db -1 ; end
 
 	; MEDIUM (5)
-	db "ETHEL@", TRAINERTYPE_NORMAL
-	db 25, HAUNTER
+	db "ETHEL@", TRAINERTYPE_NORMAL ; used, pokemon tower
+	db 45, HAUNTER
 	db -1 ; end
 
 	; MEDIUM (6)
@@ -3201,6 +3207,19 @@ MediumGroup:
 	db "DORIS@", TRAINERTYPE_MOVES ;used, birdon gym
 	db 22, GASTLY, NIGHT_SHADE, CURSE, HYPNOSIS, MEAN_LOOK
 	db 22, GASTLY, NIGHT_SHADE, CURSE, HYPNOSIS, MEAN_LOOK
+	db -1 ; end
+	
+	; MEDIUM (8)
+	db "MURIEL@", TRAINERTYPE_NORMAL ; new
+	db 40, HAUNTER
+	db 44, TWINZ
+	db -1 ; end
+	
+	; MEDIUM (9)
+	db "ESTHER@", TRAINERTYPE_NORMAL ; new
+	db 42, MAROWAK
+	db 40, KURSTRAW
+	db 39, HAUNTER
 	db -1 ; end
 
 BoarderGroup:

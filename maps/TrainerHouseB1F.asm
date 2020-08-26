@@ -14,7 +14,7 @@ TrainerHouseB1F_MapScripts:
 TrainerHouseReceptionistScript:
 	turnobject PLAYER, UP
 	opentext
-	checkflag ENGINE_FOUGHT_IN_TRAINER_HALL_TODAY
+	checkflag ENGINE_FOUGHT_IN_TRAINER_HOUSE_TODAY
 	iftrue .FoughtTooManyTimes
 	writetext TrainerHouseB1FIntroText
 	buttonsound
@@ -31,7 +31,7 @@ TrainerHouseReceptionistScript:
 	writetext TrainerHouseB1FAskWantToBattleText
 	yesorno
 	iffalse .Declined
-	setflag ENGINE_FOUGHT_IN_TRAINER_HALL_TODAY
+	setflag ENGINE_FOUGHT_IN_TRAINER_HOUSE_TODAY
 	writetext TrainerHouseB1FGoRightInText
 	waitbutton
 	closetext

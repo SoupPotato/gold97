@@ -131,9 +131,9 @@ KarenScript_KarenDefeatText:
 	line "were different,"
 	
 	para "we could have been"
-	line "allies..."
+	line "allies…"
 	
-	para "Regardless..."
+	para "Regardless…"
 	
 	para "You have defeated"
 	line "me."
@@ -141,7 +141,7 @@ KarenScript_KarenDefeatText:
 	para "Proceed ahead."
 	
 	para "The CHAMPION is"
-	line "waiting..."
+	line "waiting…"
 	done
 
 GiovannisRoom_MapEvents:
