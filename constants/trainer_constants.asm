@@ -613,6 +613,7 @@ KRIS EQU __enum__
 	const GAKU
 	const MASA
 	const KOJI
+	const WANG ; new
 
 	trainerclass MEDIUM ; 39
 	const MARTHA

@@ -3161,6 +3161,12 @@ SageGroup:
 	db 10, PARAMITE
 	db 10, HOOTHOOT
 	db -1 ; end
+	
+	; SAGE (13)
+	db "WANG@", TRAINERTYPE_NORMAL ; new
+	db 40, NINETALES
+	db 41, PANGSHI
+	db -1 ; end
 
 MediumGroup:
 	; MEDIUM (1)
