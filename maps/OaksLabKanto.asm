@@ -1,4 +1,6 @@
 	const_def 2 ; object constants
+	const KANTOLABAIDE1
+	const KANTOLABAIDE2
 
 OaksLabKanto_MapScripts:
 	db 0 ; scene scripts
@@ -35,6 +37,74 @@ OaksLabKantoPCText:
 	line "on…"
 	done
 
+KantoAide1:
+	jumptextfaceplayer KantoAide1Text
+	
+KantoAide1Text:
+	text "When PROF.OAK up"
+	line "and moved base to"
+	cont "SILENT TOWN, we"
+	cont "had to stay back"
+	cont "to pack up the"
+	cont "old lab."
+	
+	para "I suppose it's a"
+	line "lot easier to"
+	cont "study #MON"
+	cont "out in the"
+	cont "countryside as"
+	cont "opposed to urban"
+	cont "KANTO."
+	done
+
+KantoAide2:
+	checkevent EVENT_GIVEN_BALL_FROM_AIDE
+	iftrue AideGivenLevelBall
+	faceplayer
+	opentext
+	writetext AideGivingLevelBallText
+	buttonsound
+	verbosegiveitem LEVEL_BALL
+	iffalse .noroom
+	setevent EVENT_GIVEN_BALL_FROM_AIDE
+	writetext AideGivenLevelBallText
+.noroom
+	waitbutton
+	closetext
+	end
+	
+AideGivenLevelBall:
+	jumptextfaceplayer AideGivenLevelBallText
+
+AideGivingLevelBallText:
+	text "PROF.OAK ordered"
+	line "a whole bunch of"
+	cont "custom # BALLs"
+	cont "for his research"
+	
+	para "I keep finding"
+	line "them while"
+	cont "sweeping up."
+	
+	para "Here, you can"
+	line "probably make"
+	cont "better use of"
+	cont "one of these."
+	done
+
+AideGivenLevelBallText:
+	text "He told me that"
+	line "a lot of these"
+	cont "BALLs were made"
+	cont "by none other"
+	cont "than the famous"
+	cont "KURT from PAGOTA"
+	cont "CITY!"
+	
+	para "Use it wisely!"
+	done
+
+
 OaksLabKanto_MapEvents:
 	db 0, 0 ; filler
 
@@ -53,4 +123,6 @@ OaksLabKanto_MapEvents:
 	bg_event  4,  0, BGEVENT_READ, OaksLabKantoPoster2
 	bg_event  0,  1, BGEVENT_READ, OaksLabKantoPC
 
-	db 0 ; object events
+	db 2 ; object events
+	object_event  2,  3, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KantoAide1, -1
+	object_event  5,  2, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KantoAide2, -1
