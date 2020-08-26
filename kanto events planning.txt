@@ -3,13 +3,6 @@ General
 
 
 Kanto landmarks:
-
->mr. fuji's house
-NPCs
-
->pokemon tower
-trainers, NPCs, SCRIPTED EVENT ON THIRD FLOOR
-
 >seafoam islands
 items
 

@@ -620,9 +620,11 @@ KRIS EQU __enum__
 	const GRACE
 	const BETHANY
 	const MARGRET
-	const ETHEL
+	const ETHEL ; used
 	const REBECCA
 	const DORIS
+	const MURIEL ; new
+	const ESTHER ; new
 
 	trainerclass BOARDER ; 3a
 	const RONALD

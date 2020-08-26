@@ -13,7 +13,7 @@ PokemonTower3F_MapScripts:
 	db 0 ; callbacks
 
 GengarTombScript:
-	checkflag EVENT_BEAT_TOWER_GENGAR
+	checkevent EVENT_BEAT_TOWER_GENGAR
 	iftrue defeatedGengar
 	opentext
 	writetext GengarAttackingText
@@ -24,7 +24,7 @@ GengarTombScript:
 	startbattle
 	if_equal $1, DidntBeatGengar
 	if_equal $2, DidntBeatGengar
-	setflag EVENT_BEAT_TOWER_GENGAR
+	setevent EVENT_BEAT_TOWER_GENGAR
 	reloadmapafterbattle
 	end
 	
@@ -56,7 +56,7 @@ GengarTombAfterText:
 ;----------------------------------------------------------------------------------------------------
 
 Tower3Medium1:
-	checkflag EVENT_BEAT_TOWER_GENGAR
+	checkevent EVENT_BEAT_TOWER_GENGAR
 	iftrue Tower3Medium1After
 	jumptextfaceplayer Tower3Medium1WearyText
 	
@@ -74,7 +74,7 @@ Tower3Medium1AfterText:
 	done
 
 Tower3Medium2:
-	checkflag EVENT_BEAT_TOWER_GENGAR
+	checkevent EVENT_BEAT_TOWER_GENGAR
 	iftrue Tower3Medium2After
 	jumptextfaceplayer Tower3Medium2WearyText
 	
@@ -93,7 +93,7 @@ Tower3Medium2AfterText:
 	done
 
 Tower3Medium3:
-	checkflag EVENT_BEAT_TOWER_GENGAR
+	checkevent EVENT_BEAT_TOWER_GENGAR
 	iftrue Tower3Medium3After
 	jumptextfaceplayer Tower3Medium3WearyText
 	
@@ -113,7 +113,7 @@ Tower3Medium3AfterText:
 	done
 
 Tower3Medium4:
-	checkflag EVENT_BEAT_TOWER_GENGAR
+	checkevent EVENT_BEAT_TOWER_GENGAR
 	iftrue Tower3Medium4After
 	jumptextfaceplayer Tower3Medium4WearyText
 	
@@ -135,7 +135,7 @@ Tower3Medium4AfterText:
 
 
 Tower3Pangshi:
-	checkflag EVENT_BEAT_TOWER_GENGAR
+	checkevent EVENT_BEAT_TOWER_GENGAR
 	iftrue Tower3PangshiAfter
 	faceplayer
 	opentext
@@ -175,11 +175,26 @@ TrainerSageWang:
 
 .Script:
 	endifjustbattled
+	checkevent EVENT_BEAT_TOWER_GENGAR
+	iftrue SageWangAfterGengar
 	opentext
 	writetext SageWangAfterBattleText
 	waitbutton
 	closetext
 	end
+
+SageWangAfterGengar:
+	opentext
+	writetext SageWangAfterGengarText
+	waitbutton
+	closetext
+	end
+	
+SageWangAfterGengarText:
+	text "I am sorry for"
+	line "doubting your"
+	cont "prowess before!"
+	done
 
 
 SageWangSeenText:
@@ -226,6 +241,6 @@ PokemonTower3F_MapEvents:
 	object_event 13,  9, SPRITE_GRANNY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, Tower3Medium3, -1
 	object_event 13, 11, SPRITE_GRANNY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, Tower3Medium4, -1
 	object_event 11, 10, SPRITE_MONSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Tower3Pangshi, -1
-	object_event  5,  7, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSageWang, EVENT_BEAT_SAGE_WANG
+	object_event  5,  7, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSageWang, -1
 	object_event 12,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Tower3Itemball, EVENT_TOWER3_ITEMBALL
 	

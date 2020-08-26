@@ -100,7 +100,7 @@
 	const ENGINE_FISH_SWARM
 	const ENGINE_TIME_CAPSULE
 	const ENGINE_ALL_FRUIT_TREES
-	const ENGINE_GOT_SHUCKIE_TODAY
+	const ENGINE_FOUGHT_IN_TRAINER_HOUSE_TODAY ; replaced the shuckie one to prevent battle club & trainer house locking eachother out daily
 	const ENGINE_GOLDENROD_UNDERGROUND_MERCHANT_CLOSED
 	const ENGINE_FOUGHT_IN_TRAINER_HALL_TODAY
 ; wDailyFlags2

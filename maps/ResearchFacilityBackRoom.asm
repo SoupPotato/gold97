@@ -17,7 +17,7 @@ MewtwoScript:
 	closetext
 	setevent EVENT_SWITCH_11
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
-	setflag ENGINE_GOT_SHUCKIE_TODAY
+	;setflag ENGINE_GOT_SHUCKIE_TODAY (this is never checked anywhere why is it used? Removed to free up a wDailyFlags1 flag)
 	writecode VAR_BATTLETYPE, BATTLETYPE_LEGENDKANTO
 	loadwildmon MEWTWO, 70
 	startbattle
