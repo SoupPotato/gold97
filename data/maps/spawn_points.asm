@@ -19,7 +19,7 @@ SpawnPoints:
 
 	spawn SILENT_TOWN,                 5, 13
 	spawn KOBAN_ISLAND,                9, 11
-	spawn KANTO_REGION,               49, 31
+	spawn KANTO_REGION,               29, 34
 	spawn STAND_CITY,                 33, 21
 	spawn FROSTPOINT_TOWN,            13, 13
 	spawn NIHON_LEAGUE,                9,  6
