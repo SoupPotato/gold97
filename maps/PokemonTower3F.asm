@@ -20,7 +20,7 @@ GengarTombScript:
 	cry GENGAR
 	pause 15
 	closetext
-	loadwildmon GENGAR, 50
+	loadwildmon GENGAR, 45
 	startbattle
 	if_equal $1, DidntBeatGengar
 	if_equal $2, DidntBeatGengar
