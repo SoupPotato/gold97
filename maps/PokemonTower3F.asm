@@ -123,7 +123,8 @@ Tower3Medium4After:
 Tower3Medium4WearyText:
 	text "Hurrgh… I'm being"
 	line "overwhelmed with"
-	cont "supernatural ki!"
+	cont "supernatural"
+	cont "energy!"
 	done
 	
 Tower3Medium4AfterText:

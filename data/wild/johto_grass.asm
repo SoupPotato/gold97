@@ -1759,7 +1759,7 @@ JohtoGrassWildMons:
 	db 42, ELECTABUZZ
 
 	map_id POKEMON_TOWER_2F
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 3 percent, 3 percent, 3 percent ; encounter rates: morn/day/nite
 	; morn
 	db 36, GASTLY
 	db 38, GASTLY
@@ -1786,7 +1786,7 @@ JohtoGrassWildMons:
 	db 42, CUBONE
 
 	map_id POKEMON_TOWER_3F
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 3 percent, 3 percent, 3 percent ; encounter rates: morn/day/nite
 	; morn
 	db 36, GASTLY
 	db 38, GASTLY
