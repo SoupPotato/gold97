@@ -180,7 +180,7 @@ PokemonCries::
 	mon_cry CRY_CLEFFA,      $061,  $091 ; CLEFFA
 	mon_cry CRY_CHIKORITA,   $0e8,  $0e8 ; IGGLYBUFF
 	mon_cry CRY_TOGEPI,      $010,  $100 ; TOGEPI
-	mon_cry CRY_WEEPINBELL,  $0c0,  $090 ; PETICORN
+	mon_cry CRY_MARILL,      $0c0,  $090 ; PETICORN
 	mon_cry CRY_NATU,       -$067,  $100 ; NATU
 	mon_cry CRY_NATU,       -$0a7,  $168 ; XATU
 	mon_cry CRY_MAREEP,      $022,  $0d8 ; MAREEP

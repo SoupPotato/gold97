@@ -90,7 +90,7 @@ ScytherFrontpic:     INCBIN "gfx/pokemon/scyther/front_S.animated.2bpp.lz"
 AerodactylFrontpic:  INCBIN "gfx/pokemon/aerodactyl/front_S.animated.2bpp.lz"
 SeakingFrontpic:     INCBIN "gfx/pokemon/seaking/front_S.animated.2bpp.lz"
 MukFrontpic:         INCBIN "gfx/pokemon/muk/front_S.animated.2bpp.lz"
-AqualloFrontpic:     INCBIN "gfx/pokemon/aquallo/front.animated.2bpp.lz"
+AqualloFrontpic:     INCBIN "gfx/pokemon/aquallo/front_S.animated.2bpp.lz"
 HypnoFrontpic:       INCBIN "gfx/pokemon/hypno/front_S.animated.2bpp.lz"
 NidorinoFrontpic:    INCBIN "gfx/pokemon/nidorino/front_S.animated.2bpp.lz"
 SandslashFrontpic:   INCBIN "gfx/pokemon/sandslash/front_S.animated.2bpp.lz"
@@ -127,7 +127,7 @@ BellrunFrontpic:     INCBIN "gfx/pokemon/bellrun/front.animated.2bpp.lz"
 
 SECTION "Pics 6", ROMX
 
-TuheadFrontpic:      INCBIN "gfx/pokemon/tuhead/front.animated.2bpp.lz"
+TuheadFrontpic:      INCBIN "gfx/pokemon/tuhead/front_S.animated.2bpp.lz"
 NoctowlFrontpic:     INCBIN "gfx/pokemon/noctowl/front.animated.2bpp.lz"
 WartortleFrontpic:   INCBIN "gfx/pokemon/wartortle/front_S.animated.2bpp.lz"
 LaprasFrontpic:      INCBIN "gfx/pokemon/lapras/front_S.animated.2bpp.lz"
