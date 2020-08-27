@@ -90,10 +90,18 @@ AmamiPoolText:
 	line "COMMUNITY POOL"
 	done
 	
+AmamiBTSign:
+	jumptext AmamiBTSignText
+	
+AmamiBTSignText:
+	text "BATTLE TOWER"
+	line "AHEAD"
+	done
+	
 AmamiTown_MapEvents:
 	db 0, 0 ; filler
 
-	db 9 ; warp events
+	db 11 ; warp events
 	warp_event  4,  2, AMAMI_PORT_PASSAGE, 1
 	warp_event  4,  3, AMAMI_PORT_PASSAGE, 2
 	warp_event 17,  4, AMAMI_POKECENTER_1F, 1
@@ -103,14 +111,17 @@ AmamiTown_MapEvents:
 	warp_event 23, 10, AMAMI_MART, 1
 	warp_event 31,  5, URASOE_TRAIL_SUPER_ROD_HOUSE, 1
 	warp_event 31, 13, NAGO_SPEECH_HOUSE, 1
+	warp_event 33,  9, AMAMI_BATTLE_TOWER_GATE, 2
+	warp_event 33,  8, AMAMI_BATTLE_TOWER_GATE, 1
 
 	db 0 ; coord events
 
-	db 4 ; bg events
+	db 5 ; bg events
 	bg_event 12,  4, BGEVENT_READ, AmamiTownSign
 	bg_event 28,  5, BGEVENT_READ, AmamiPoolSign
 	bg_event 18,  4, BGEVENT_READ, AmamiTownPokecenterSign
 	bg_event 24, 10, BGEVENT_READ, AmamiTownMartSign
+	bg_event 32,  7, BGEVENT_READ, AmamiBTSign
 
 	db 3 ; object events
 	object_event  8,  7, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AmamiTownBugCatcherScript, -1

@@ -795,8 +795,8 @@ BattleTower1F_MapEvents:
 	db 0, 0 ; filler
 
 	db 3 ; warp events
-	warp_event  7,  9, BATTLE_TOWER_OUTSIDE, 3
-	warp_event  8,  9, BATTLE_TOWER_OUTSIDE, 4
+	warp_event  7,  9, BATTLE_TOWER_OUTSIDE, 1
+	warp_event  8,  9, BATTLE_TOWER_OUTSIDE, 2
 	warp_event  7,  0, BATTLE_TOWER_ELEVATOR, 1
 
 	db 0 ; coord events

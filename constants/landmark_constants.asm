@@ -58,8 +58,6 @@
 	const NIHON_LEAGUE      ; 5a
 
 KANTO_LANDMARK EQU const_value
-
-	const BATTLE_TOWER      ; 1d
 	const MT_MORTAR         ; 23
 	const YORON_CITY        ; 33 1
 	const ICED_CAVERN       ; 3e 10
@@ -75,6 +73,7 @@ KANTO_LANDMARK EQU const_value
 	const ISEN_STRAIT       ; 53
 	const SEASIDE_PATH      ; 43 8
 	const JOULE_CAVE        ; 3b 6
+	const BATTLE_TOWER      ; 1d
 	const AMAMI_TOWN        ; 3d 7
 	const FAST_SHIP         ; 5f
 

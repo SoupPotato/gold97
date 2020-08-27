@@ -83,7 +83,7 @@ BattleTowerMons1:
 
 	db TWINZ
 	db FOCUS_BAND
-	db COUNTER, MIRROR_COAT, SAFEGUARD, DESTINY_BOND
+	db CONFUSE_RAY, PAIN_SPLIT, SHADOW_BALL, PERISH_SONG
 	dw 0 ; OT ID
 	dt 1000 ; Exp
 	; Stat exp
@@ -133,7 +133,7 @@ BattleTowerMons1:
 	bigdw 28 ; SDef
 	db "GARU-RA@@@@"
 
-	db PUDDIPUP
+	db PUDDIPUP ; CHANGE
 	db SCOPE_LENS
 	db SURF, PSYCHIC_M, RECOVER, ANCIENTPOWER
 	dw 0 ; OT ID
@@ -159,7 +159,7 @@ BattleTowerMons1:
 	bigdw 28 ; SDef
 	db "SANI-GO@@@@"
 
-	db CHIX
+	db CHIX ; CHANGE
 	db GOLD_BERRY
 	db BLIZZARD, EARTHQUAKE, HYPER_BEAM, TOXIC
 	dw 0 ; OT ID
@@ -289,7 +289,7 @@ BattleTowerMons1:
 	bigdw 31 ; SDef
 	db "PORIGON2@@@"
 
-	db TRITALES
+	db TRITALES ; change
 	db FOCUS_BAND
 	db PERISH_SONG, MEAN_LOOK, PAIN_SPLIT, SHADOW_BALL
 	dw 0 ; OT ID
@@ -315,7 +315,7 @@ BattleTowerMons1:
 	bigdw 29 ; SDef
 	db "MUUMA@@@@@@"
 
-	db HOUNDOUR
+	db HOUNDOUR ; change to deliberd
 	db GOLD_BERRY
 	db FAINT_ATTACK, SOLARBEAM, ROAR, SUNNY_DAY
 	dw 0 ; OT ID
@@ -367,7 +367,7 @@ BattleTowerMons1:
 	bigdw 24 ; SDef
 	db "KIRINRIKI@@"
 
-	db MILTANK
+	db MILTANK ; change to blissey
 	db QUICK_CLAW
 	db HEADBUTT, SOLARBEAM, ROLLOUT, STRENGTH
 	dw 0 ; OT ID
@@ -445,7 +445,7 @@ BattleTowerMons1:
 	bigdw 25 ; SDef
 	db "NAtuSI-@@@@"
 
-	db BELLRUN
+	db BELLRUN ; moveset change
 	db GOLD_BERRY
 	db REVERSAL, ENDURE, COUNTER, ROCK_SMASH
 	dw 0 ; OT ID
@@ -708,7 +708,7 @@ BattleTowerMons2:
 	bigdw 52 ; SDef
 	db "UINDEi@@@@@"
 
-	db BELLRUN
+	db BELLRUN ; change to praxe
 	db FOCUS_BAND
 	db ENDURE, REVERSAL, MEGAHORN, EARTHQUAKE
 	dw 0 ; OT ID
@@ -786,7 +786,7 @@ BattleTowerMons2:
 	bigdw 50 ; SDef
 	db "PUTERA@@@@@"
 
-	db MILTANK
+	db MILTANK ; change to blissey, or make a miltank set
 	db BRIGHTPOWDER
 	db PSYCHIC_M, SUBMISSION, SOFTBOILED, COUNTER
 	dw 0 ; OT ID
@@ -942,7 +942,7 @@ BattleTowerMons2:
 	bigdw 47 ; SDef
 	db "KENTAROSU@@"
 
-	db BOMSHEAL
+	db BOMSHEAL ; change moveset
 	db MYSTIC_WATER
 	db SURF, BLIZZARD, ATTRACT, RAIN_DANCE
 	dw 0 ; OT ID
@@ -968,7 +968,7 @@ BattleTowerMons2:
 	bigdw 49 ; SDef
 	db "MARIRURI@@@"
 
-	db CHIX
+	db CHIX ; change to miltank
 	db KINGS_ROCK
 	db EARTHQUAKE, THUNDER, ATTRACT, SURF
 	dw 0 ; OT ID
@@ -1072,7 +1072,7 @@ BattleTowerMons2:
 	bigdw 46 ; SDef
 	db "NIDOKINGU@@"
 
-	db GROTESS
+	db GROTESS ; change to quagsire
 	db QUICK_CLAW
 	db AMNESIA, EARTHQUAKE, SURF, RAIN_DANCE
 	dw 0 ; OT ID
@@ -1257,7 +1257,7 @@ BattleTowerMons3:
 	bigdw 88 ; SDef
 	db "KIREIHANA@@"
 
-	db MILTANK
+	db MILTANK ; change to blissey
 	db LEFTOVERS
 	db TOXIC, REFLECT, SOFTBOILED, PROTECT
 	dw 0 ; OT ID
@@ -1465,7 +1465,7 @@ BattleTowerMons3:
 	bigdw 81 ; SDef
 	db "RAPURASU@@@"
 
-	db RAITORA
+	db RAITORA ; change moveset
 	db GOLD_BERRY
 	db RAIN_DANCE, THUNDER, SURF, FLAIL
 	dw 0 ; OT ID
@@ -1569,7 +1569,7 @@ BattleTowerMons3:
 	bigdw 70 ; SDef
 	db "GENGA-@@@@@"
 
-	db NUMBPUFF
+	db NUMBPUFF ; change moveset
 	db GOLD_BERRY
 	db HEADBUTT, PROTECT, ROAR, LEER
 	dw 0 ; OT ID
@@ -1832,7 +1832,7 @@ BattleTowerMons4:
 	bigdw 105 ; SDef
 	db "SUTA-MI-@@@"
 
-	db TWINZ
+	db TWINZ ;change to different mon
 	db GOLD_BERRY
 	db COUNTER, MIRROR_COAT, SAFEGUARD, DESTINY_BOND
 	dw 0 ; OT ID
@@ -2014,7 +2014,7 @@ BattleTowerMons4:
 	bigdw 99 ; SDef
 	db "UINDEi@@@@@"
 
-	db GRIMBY
+	db GRIMBY ; change to belmitt
 	db LEFTOVERS
 	db RAPID_SPIN, PROTECT, TOXIC, SANDSTORM
 	dw 0 ; OT ID
@@ -2251,7 +2251,7 @@ BattleTowerMons5:
 	bigdw 127 ; SDef
 	db "HERUGA-@@@@"
 
-	db RINRING
+	db RINRING ; change to a different mon
 	db LEFTOVERS
 	db SANDSTORM, REST, TOXIC, WRAP
 	dw 0 ; OT ID
@@ -2615,7 +2615,7 @@ BattleTowerMons5:
 	bigdw 113 ; SDef
 	db "EA-MUDO@@@@"
 
-	db GRIMBY
+	db GRIMBY ; change to different mon
 	db LEFTOVERS
 	db SANDSTORM, TOXIC, EXPLOSION, SWAGGER
 	dw 0 ; OT ID
@@ -2774,7 +2774,7 @@ BattleTowerMons6:
 	bigdw 172 ; SDef
 	db "KINGUDORA@@"
 
-	db LICKILORD
+	db LICKILORD ; change moveset
 	db GOLD_BERRY
 	db CRUNCH, EARTHQUAKE, ROCK_SLIDE, HYPER_BEAM
 	dw 0 ; OT ID
@@ -2904,7 +2904,7 @@ BattleTowerMons6:
 	bigdw 161 ; SDef
 	db "SANDA-@@@@@"
 
-	db TWINZ
+	db TWINZ ; change to different mon
 	db GOLD_BERRY
 	db COUNTER, MIRROR_COAT, DESTINY_BOND, SAFEGUARD
 	dw 0 ; OT ID
@@ -3060,7 +3060,7 @@ BattleTowerMons6:
 	bigdw 135 ; SDef
 	db "EA-MUDO@@@@"
 
-	db MILTANK
+	db MILTANK ; another blissey change to different mon
 	db LEFTOVERS
 	db SOFTBOILED, TOXIC, PROTECT, PSYCHIC_M
 	dw 0 ; OT ID
@@ -3112,7 +3112,7 @@ BattleTowerMons6:
 	bigdw 184 ; SDef
 	db "KABIGON@@@@"
 
-	db BELLRUN
+	db BELLRUN ; change to different mon
 	db FOCUS_BAND
 	db REVERSAL, MEGAHORN, EARTHQUAKE, COUNTER
 	dw 0 ; OT ID
@@ -3375,7 +3375,7 @@ BattleTowerMons7:
 	bigdw 247 ; SDef
 	db "BURAtuKI-@@"
 
-	db MILTANK
+	db MILTANK ; so many blissey change
 	db GOLD_BERRY
 	db COUNTER, SOFTBOILED, SHADOW_BALL, THUNDERBOLT
 	dw 0 ; OT ID
@@ -3453,7 +3453,7 @@ BattleTowerMons7:
 	bigdw 175 ; SDef
 	db "HERUGA-@@@@"
 
-	db LICKILORD
+	db LICKILORD ; change moveset/mon
 	db LEFTOVERS
 	db EARTHQUAKE, CRUNCH, ROCK_SLIDE, HYPER_BEAM
 	dw 0 ; OT ID
@@ -3583,7 +3583,7 @@ BattleTowerMons7:
 	bigdw 204 ; SDef
 	db "GIyaRADOSU@"
 
-	db GROTESS
+	db GROTESS ; change moveset
 	db MIRACLEBERRY
 	db EARTHQUAKE, SURF, SLUDGE_BOMB, IRON_TAIL
 	dw 0 ; OT ID
@@ -3609,7 +3609,7 @@ BattleTowerMons7:
 	bigdw 152 ; SDef
 	db "NUO-@@@@@@@"
 
-	db NUMBPUFF
+	db NUMBPUFF ; change to different mon
 	db SCOPE_LENS
 	db SLASH, EARTHQUAKE, HYPER_BEAM, THUNDERPUNCH
 	dw 0 ; OT ID
@@ -3739,7 +3739,7 @@ BattleTowerMons7:
 	bigdw 217 ; SDef
 	db "SAWAMURA-@@"
 
-	db BELLRUN
+	db BELLRUN ; change to different mon
 	db BRIGHTPOWDER
 	db REVERSAL, ENDURE, MEGAHORN, EARTHQUAKE
 	dw 0 ; OT ID
@@ -3976,7 +3976,7 @@ BattleTowerMons8:
 	bigdw 218 ; SDef
 	db "RAPURASU@@@"
 
-	db LICKILORD
+	db LICKILORD ; change to different mon
 	db MIRACLEBERRY
 	db REST, CRUNCH, EARTHQUAKE, ROCK_SLIDE
 	dw 0 ; OT ID
@@ -4028,7 +4028,7 @@ BattleTowerMons8:
 	bigdw 189 ; SDef
 	db "GENGA-@@@@@"
 
-	db GRIMBY
+	db GRIMBY ; change to different mon
 	db LEFTOVERS
 	db EXPLOSION, TOXIC, SOLARBEAM, SWAGGER
 	dw 0 ; OT ID
@@ -4366,7 +4366,7 @@ BattleTowerMons8:
 	bigdw 157 ; SDef
 	db "KAIROSU@@@@"
 
-	db QUAGSIRE
+	db QUAGSIRE ; change to different mon
 	db BRIGHTPOWDER
 	db ROAR, SHADOW_BALL, HYPER_BEAM, THUNDERPUNCH
 	dw 0 ; OT ID
@@ -4577,7 +4577,7 @@ BattleTowerMons9:
 	bigdw 248 ; SDef
 	db "KINGUDORA@@"
 
-	db LICKILORD
+	db LICKILORD ; change moveset
 	db QUICK_CLAW
 	db HYPER_BEAM, CRUNCH, EARTHQUAKE, ROCK_SLIDE
 	dw 0 ; OT ID
@@ -4733,7 +4733,7 @@ BattleTowerMons9:
 	bigdw 226 ; SDef
 	db "UINDEi@@@@@"
 
-	db MILTANK
+	db MILTANK ; change to blissey
 	db LEFTOVERS
 	db SOLARBEAM, SUNNY_DAY, SOFTBOILED, FIRE_BLAST
 	dw 0 ; OT ID
@@ -4811,7 +4811,7 @@ BattleTowerMons9:
 	bigdw 193 ; SDef
 	db "EA-MUDO@@@@"
 
-	db RINRING
+	db RINRING ; change to different mon
 	db LEFTOVERS
 	db TOXIC, WRAP, PROTECT, ENCORE
 	dw 0 ; OT ID
@@ -4863,7 +4863,7 @@ BattleTowerMons9:
 	bigdw 265 ; SDef
 	db "BU-SUTA-@@@"
 
-	db CHIX
+	db CHIX ; change to different mon
 	db LEFTOVERS
 	db MILK_DRINK, EARTHQUAKE, ATTRACT, BODY_SLAM
 	dw 0 ; OT ID
@@ -5230,7 +5230,7 @@ BattleTowerMons10:
 	bigdw 212 ; SDef
 	db "ONIDORIRU@@"
 
-	db TRITALES
+	db TRITALES ; change to different mon
 	db FOCUS_BAND
 	db PERISH_SONG, MEAN_LOOK, PAIN_SPLIT, SHADOW_BALL
 	dw 0 ; OT ID
@@ -5308,7 +5308,7 @@ BattleTowerMons10:
 	bigdw 246 ; SDef
 	db "HAtuSAMU@@@"
 
-	db MILTANK
+	db MILTANK ; change to blissey
 	db LEFTOVERS
 	db THUNDERBOLT, BLIZZARD, FIRE_BLAST, SOFTBOILED
 	dw 0 ; OT ID
@@ -5334,7 +5334,7 @@ BattleTowerMons10:
 	bigdw 346 ; SDef
 	db "HAPINASU@@@"
 
-	db PANGSHI
+	db PANGSHI ; change moveset
 	db MINT_BERRY
 	db REST, BLIZZARD, HYPER_BEAM, EARTHQUAKE
 	dw 0 ; OT ID
@@ -5464,7 +5464,7 @@ BattleTowerMons10:
 	bigdw 280 ; SDef
 	db "EBIWARA-@@@"
 
-	db RAITORA
+	db RAITORA ; change moveset
 	db QUICK_CLAW
 	db SURF, RAIN_DANCE, ZAP_CANNON, CONFUSE_RAY
 	dw 0 ; OT ID

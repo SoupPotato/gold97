@@ -60,7 +60,6 @@ Landmarks:
 	landmark  92, 100, CrownCityName
 	landmark  96,  96, VictoryRoadName
 	landmark  92,  92, NihonLeagueName
-	landmark 123, 115, BattleTowerName
 	landmark 108, 108, MtMortarName
 	landmark  36, 100, YoronCityName
 	landmark  35,  99, IcedCavernName
@@ -76,6 +75,7 @@ Landmarks:
 	landmark  96,  52, IsenStraitName
 	landmark 112,  52, SeasidePathName
 	landmark 124,  52, JouleCaveName
+	landmark 118,  44, BattleTowerName
 	landmark 116,  44, AmamiCityName
 	landmark  36, 124, FastShipName
 

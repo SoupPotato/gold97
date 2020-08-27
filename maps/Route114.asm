@@ -220,7 +220,7 @@ Route114SignText:
 	text "ROUTE 114"
 
 	para "STAND CITY -"
-	line "KANTO"
+	line "KANTO REGION"
 	done
 
 Route114_MapEvents:

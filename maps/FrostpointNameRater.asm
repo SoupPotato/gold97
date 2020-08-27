@@ -15,7 +15,7 @@ FrostpointNameRater:
 	end
 	
 FrostpointNameRaterText:
-	text "NORTH ISLAND is"
+	text "FROSTPOINT is"
 	line "cold and remote."
 	para "We don't get many"
 	line "visitors."

@@ -170,6 +170,9 @@ PlayersHouse1F_Blocks:
 Route115KantoGate_Blocks:
 	INCBIN "maps/115gate.blk"
 
+AmamiBattleTowerGate_Blocks:
+	INCBIN "maps/AmamiBattleTowerGate.blk"
+
 Route118SunpointGate_Blocks: 
 IsenStraitSeasidePathGate_Blocks:
 RyukyuCityMeridianPathGate_Blocks:

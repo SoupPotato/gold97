@@ -121,7 +121,9 @@ AmamiGroupSprites:
 	db SPRITE_BUG_CATCHER
 	db SPRITE_LASS
 	db SPRITE_GRAMPS
-	; 4 of max 9 walking sprites
+	db SPRITE_BUENA
+	db SPRITE_SAILOR
+	; 7 of max 9 walking sprites
 	db SPRITE_BIG_SNORLAX
 	db SPRITE_MACHOP
 	db SPRITE_POKE_BALL

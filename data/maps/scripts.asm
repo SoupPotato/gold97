@@ -17,6 +17,7 @@ INCLUDE "maps/WestportDeptStoreElevator.asm"
 INCLUDE "maps/WestportDeptStoreRoof.asm"
 INCLUDE "maps/BoardwalkGameCorner.asm"
 INCLUDE "maps/KantoDock.asm"
+INCLUDE "maps/AmamiBattleTowerGate.asm"
 
 
 SECTION "Map Scripts 2", ROMX; removed 8

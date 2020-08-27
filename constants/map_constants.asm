@@ -247,6 +247,8 @@ ENDM
 	map_const RYUKYU_URASOE_GATE,                           5,  4 ;  7
 	map_const SEASIDE_PATH,                                30,  9 ;  8
 	map_const URASOE_TRAIL_SUPER_ROD_HOUSE,                 5,  4 ;  9
+	map_const AMAMI_BATTLE_TOWER_GATE,                      5, 4  ; new
+	map_const BATTLE_TOWER_OUTSIDE,                        10, 14 ; 16
 
 	newgroup                                                      ; 13
 
@@ -383,7 +385,6 @@ ENDM
 	map_const BATTLE_TOWER_BATTLE_ROOM,                     4,  4 ; 12
 	map_const BATTLE_TOWER_ELEVATOR,                        2,  2 ; 13
 	map_const BATTLE_TOWER_HALLWAY,                        11,  2 ; 14
-	map_const BATTLE_TOWER_OUTSIDE,                        10, 14 ; 16
 	map_const SUNPOINT_DOCKS,                              10, 18 ;  1
 	map_const SUNPOINT_DOCKS_SUNPOINT_GATE,                 5,  4 ; 14
 	map_const YORON_MART,                                   8,  4 ;  5
