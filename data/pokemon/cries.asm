@@ -206,7 +206,7 @@ PokemonCries::
 	mon_cry CRY_SLOWKING,    $104,  $200 ; SLOWKING
 	mon_cry CRY_LAPRAS,      $0B0,  $0D0 ; TRITALES
 	mon_cry CRY_HOOTHOOT,    $162,  $100 ; UNOWN
-	mon_cry CRY_GIRAFARIG,   $27b,  $144 ; TWINZ
+	mon_cry CRY_GIRAFARIG,   $06b,  $144 ; TWINZ
 	mon_cry CRY_GIRAFARIG,   $041,  $200 ; GIRAFARIG
 	mon_cry CRY_MADAME,      $2f1,  $140 ; TURBAN
 	mon_cry CRY_GRIMER,      $080,  $0b0 ; GRIMBY
