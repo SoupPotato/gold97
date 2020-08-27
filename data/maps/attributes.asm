@@ -492,7 +492,7 @@ ENDM
 	map_attributes BattleTowerBattleRoom, BATTLE_TOWER_BATTLE_ROOM, $00, 0
 	map_attributes BattleTowerElevator, BATTLE_TOWER_ELEVATOR, $00, 0
 	map_attributes BattleTowerHallway, BATTLE_TOWER_HALLWAY, $00, 0
-	map_attributes BattleTowerOutside, BATTLE_TOWER_OUTSIDE, $05, 0
+	map_attributes BattleTowerOutside, BATTLE_TOWER_OUTSIDE, $35, 0
 	map_attributes RocketShipBase, ROCKET_SHIP_BASE, $00, 0
 	map_attributes SanskritMart, SANSKRIT_MART, $00, 0
 	map_attributes SilentPokecenter1F, SILENT_POKECENTER_1F, $00, 0
