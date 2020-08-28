@@ -50,7 +50,9 @@ YoronGroupSprites:
 	db SPRITE_TEACHER
 	db SPRITE_LASS
 	db SPRITE_ROCKER
-	; 6 of 9 walking sprites
+	db SPRITE_JYNX
+	db SPRITE_MONSTER
+	; 8 of 9 walking sprites
 	db SPRITE_POKE_BALL
 	db SPRITE_FRUIT_TREE
 	db 0 ; end

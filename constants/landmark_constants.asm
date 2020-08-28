@@ -58,7 +58,9 @@
 	const NIHON_LEAGUE      ; 5a
 
 KANTO_LANDMARK EQU const_value
-	const MT_MORTAR         ; 23
+	const RAINBOW_ISLAND    ; new
+	const TROPICAL_ISLAND   ; new
+	const FORKED_STRAIT     ; new
 	const YORON_CITY        ; 33 1
 	const ICED_CAVERN       ; 3e 10
 	const YORON_POINT       ; 38 4

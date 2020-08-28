@@ -60,7 +60,9 @@ Landmarks:
 	landmark  92, 100, CrownCityName
 	landmark  96,  96, VictoryRoadName
 	landmark  92,  92, NihonLeagueName
-	landmark 108, 108, MtMortarName
+	landmark  20, 124, RainbowIslandName
+	landmark  52, 124, TropicalIslandName
+	landmark  36, 112, ForkedStraitName
 	landmark  36, 100, YoronCityName
 	landmark  35,  99, IcedCavernName
 	landmark  44, 100, YoronPointName
@@ -97,10 +99,10 @@ RadioTowerName:       db "RADIO TOWER@"
 NationalParkName:     db "NATIONAL¯PARK@"
 EndonCaveName:        db "ENDON CAVE@"
 WhirlIslandName:      db "WHIRL¯ISLAND@"
-MtMortarName:         db "NOT USED@"
+ForkedStraitName:     db "FORKED¯STRAIT@"
 DragonsMawName:       db "DRAGON'S¯MAW@"
 DeepwaterPassageName: db "DEEPWATER¯PASSAGE@"
-NotApplicableName:    db "N/A@" ; "オバケやしき" ("HAUNTED HOUSE") in Japanese
+TropicalIslandName:   db "TROPICAL¯ISLAND@"
 KobanIslandName:      db "KOBAN¯ISLAND@"
 CrownPassName:        db "CROWN¯PASS@"
 YoronCityName:        db "YORON CITY@"
@@ -152,4 +154,5 @@ FastShipName:         db "FAST SHIP@"
 IcedCavernName:       db "ICED CAVERN@"
 JouleCaveName:        db "JOULE CAVE@"
 BattleTowerName:      db "BATTLE¯TOWER@"
+RainbowIslandName:    db "RAINBOW¯ISLAND@"
 SpecialMapName:       db "SPECIAL@"

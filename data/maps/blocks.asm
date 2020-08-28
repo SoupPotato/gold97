@@ -193,6 +193,9 @@ OaksLabEntrance_Blocks:
 CrownCityTrainerHouse_Blocks:
 	INCBIN "maps/CrownCityTrainerHouse.blk"
 
+TropicalIsland_Blocks: ; new
+	INCBIN "maps/TropicalIsland.blk"
+
 
 SECTION "Map Blocks 2", ROMX
 
@@ -807,3 +810,15 @@ TrainerHouseB1F_Blocks:
 
 KantoDock_Blocks:
 	INCBIN "maps/KantoDock.blk"
+	
+TropicalIslandJungle_Blocks:
+	INCBIN "maps/TropicalIslandJungle.blk"
+	
+ForkedStrait_Blocks:
+	INCBIN "maps/ForkedStrait.blk"
+	
+ForkedStraitEastExit_Blocks:
+	INCBIN "maps/ForkedStraitEastExit.blk"
+	
+ForkedStraitGate_Blocks:
+	INCBIN "maps/ForkedStraitGate.blk"

@@ -736,7 +736,7 @@ TownMap_GetKantoLandmarkLimits:
 ;	bit STATUSFLAGS_HALL_OF_FAME_F, a
 ;	jr z, .not_hof
 	ld d, AMAMI_TOWN
-	ld e, YORON_CITY
+	ld e, RAINBOW_ISLAND
 	ret
 
 ;.not_hof
