@@ -39,7 +39,7 @@ CrownPokecenter1FGentlemanText:
 	done
 
 CrownPokecenter1FTeacherText:
-	text "PRINCE CITY is a"
+	text "CROWN CITY is a"
 	line "good meeting place"
 	para "for trainers look-"
 	line "ing to climb"

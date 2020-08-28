@@ -1101,7 +1101,7 @@ UnknownText_0x175f70:
 
 	para "Aren't you coming"
 	line "over to fish for"
-	cont "PRAXE?"
+	cont "QWILFISH?"
 
 	para "I'm on ROUTE 32,"
 	line "so hurry up!"
@@ -1228,10 +1228,10 @@ UnknownText_0x17638a:
 	text "Listen, listen!"
 
 	para "Do you know EARL,"
-	line "the teacher who"
+	line "the artist who"
 
-	para "runs the #MON"
-	line "ACADEMY in VIOLET?"
+	para "runs the ART"
+	line "STUDIO in PAGOTA?"
 
 	para "I saw him doing"
 	line "pirouettes while"
@@ -1283,7 +1283,7 @@ UnknownText_0x176599:
 	text "Listen, listen!"
 
 	para "There's a #MON"
-	line "SALON in GOLDENROD"
+	line "SALON in WESTPORT"
 
 	para "that's run by two"
 	line "brothers."
@@ -1310,7 +1310,7 @@ UnknownText_0x176599:
 UnknownText_0x1766ac:
 	text "Listen, listen!"
 
-	para "GOLDENROD GYM's"
+	para "TEKNOS GYM's"
 	line "WHITNEY began"
 
 	para "battling only a"
@@ -1616,7 +1616,7 @@ UnknownText_0x176feb:
 	line "one we've all been"
 	cont "waiting for!"
 
-	para "GOLDENROD DEPT."
+	para "CELADON DEPT."
 	line "STORE's bargain"
 	cont "sale is on now!"
 
@@ -1624,7 +1624,7 @@ UnknownText_0x176feb:
 	line "Want it lots?"
 
 	para "Don't miss this"
-	line "GOLDENROD chance!"
+	line "CELADON chance!"
 
 	para "Huh? I sound like"
 	line "a huckster?"
@@ -1659,7 +1659,7 @@ UnknownText_0x177138:
 
 UnknownText_0x17717c:
 	text "Haven't you gone"
-	line "to GOLDENROD DEPT."
+	line "to CELADON DEPT."
 
 	para "STORE? I've scoped"
 	line "it out already!"
@@ -1732,7 +1732,7 @@ UnknownText_0x177378:
 
 	para "They've taken over"
 	line "the RADIO TOWER in"
-	cont "GOLDENROD."
+	cont "WESTPORT."
 
 	para "Are the people"
 	line "inside safe?"

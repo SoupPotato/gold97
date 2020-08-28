@@ -48,7 +48,7 @@ YoronCityRockerScript:
 	
 YoronCityFisherText:
 	text "It's cold over in"
-	line "URUMA CAVERN."
+	line "ICED CAVERN."
 	para "Be prepared for"
 	line "that if you go"
 	cont "exploring."
@@ -56,7 +56,7 @@ YoronCityFisherText:
 	
 YoronCityLassText:
 	text "You've been to"
-	line "NORTH ISLAND?"
+	line "FROSTPOINT TOWN?"
 	para "Wow, that's so far"
 	line "from here."
 	done
@@ -83,7 +83,7 @@ YoronCitySignText:
 	done
 	
 UrumaCavernSignText:
-	text "URUMA CAVERN"
+	text "ICED CAVERN"
 	line "ENTRANCE"
 	done
 

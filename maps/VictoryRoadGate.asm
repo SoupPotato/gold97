@@ -72,12 +72,12 @@ VictoryRoadGateCooltrainerMText:
 	done
 	
 VictoryRoadGateCooltrainerFText:
-	text "PRINCELY PATH may"
+	text "CROWN PASS may"
 	line "be a cakewalk, but"
 	para "the real challenge"
 	line "is making it to"
 	para "the top of MT.FUJI"
-	line "from PRINCE CITY."
+	line "from CROWN CITY."
 	done
 	
 VictoryRoadGateNotEvenATrainer:
@@ -103,7 +103,7 @@ VictoryRoadGateNotEnoughBadgesText:
 	line "only trainers with"
 	para "enough badges are"
 	line "permitted to enter"
-	para "PRINCE CITY and"
+	para "CROWN CITY and"
 	line "climb MT.FUJI."
 	done
 

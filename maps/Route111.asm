@@ -116,7 +116,7 @@ SwimmermGeorgeBeatenText:
 
 SwimmermGeorgeAfterBattleText:
 	text "It's so far to"
-	line "NORTH ISLAND."
+	line "FROSTPOINT TOWN."
 
 	para "But it's no easy"
 	line "return trip to"

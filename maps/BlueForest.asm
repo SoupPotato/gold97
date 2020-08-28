@@ -191,8 +191,8 @@ BlackthornCooltrainerF2Text:
 	done
 	
 BlackthornCooltrainerF2TextNotWow:
-	text "I've never gone up"
-	line "to NORTH ISLAND."
+	text "I've never gone to"
+	line "FROSTPOINT TOWN."
 	para "Traveling through"
 	line "the DEEPWATER"
 	para "PASSAGE is too"

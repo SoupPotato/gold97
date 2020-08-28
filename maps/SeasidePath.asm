@@ -72,7 +72,7 @@ SeasidePathSignText:
 	done
 	
 MtMonwalSignText:
-	text "MT.MONWAL"
+	text "JOULE CAVE"
 	line "ENTRANCE"
 	done
 

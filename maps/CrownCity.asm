@@ -67,12 +67,12 @@ CrownCityRockerText:
 	done
 	
 CrownCitySign2Text:
-	text "PRINCE CITY"
+	text "CROWN CITY"
 	line "TRAINER HOUSE"
 	done
 	
 CrownCitySignText:
-	text "PRINCE CITY"
+	text "CROWN CITY"
 	para "The base camp for"
 	line "LEAGUE Challengers"
 	done

@@ -81,7 +81,7 @@ FrostpointTownGymSignText:
 	done
 
 FrostpointTownSignText:
-	text "NORTH ISLAND"
+	text "FROSTPOINT TOWN"
 
 	para "The frigid land"
 	line "of hardy people"
