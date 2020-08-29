@@ -4619,24 +4619,16 @@ BattleAnim_CoinHurl:
 BattleAnim_Megaphone:
 	anim_2gfx ANIM_GFX_MISC, ANIM_GFX_NOISE
 	anim_battlergfx_2row
-	anim_obj ANIM_OBJ_MEGAPHONE, 74, 96, $0
+	anim_obj ANIM_OBJ_MEGAPHONE, 64, 88, $0
+	anim_wait 16
 .loop
+	anim_sound 0, 1, SFX_BOAT
 	anim_bgeffect ANIM_BG_1F, $14, $2, $0
 	anim_obj ANIM_OBJ_4B, 64, 76, $0
 	anim_obj ANIM_OBJ_4B, 64, 88, $1
 	anim_obj ANIM_OBJ_4B, 64, 100, $2
 	anim_wait 16
-	anim_loop 3, .loop
-	anim_wait 9
-	anim_bgeffect ANIM_BG_BATTLEROBJ_1ROW, $0, $1, $0
-	anim_wait 8
-	anim_bgeffect ANIM_BG_19, $0, $0, $40
-	anim_wait 64
-	anim_incbgeffect ANIM_BG_19
-	anim_wait 1
-	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
-	anim_wait 5
-	anim_incobj 10
+	anim_loop 2, .loop
 	anim_wait 8
 	anim_ret
 	
