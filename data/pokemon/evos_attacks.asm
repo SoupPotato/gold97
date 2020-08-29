@@ -39,8 +39,6 @@ IvysaurEvosAttacks:
 	db EVOLVE_LEVEL, 32, VENUSAUR
 	db 0 ; no more evolutions
 	db 1, TACKLE
-	db 1, GROWL
-	db 1, LEECH_SEED
 	db 4, GROWL
 	db 7, LEECH_SEED
 	db 10, VINE_WHIP
@@ -58,9 +56,6 @@ IvysaurEvosAttacks:
 VenusaurEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
-	db 1, GROWL
-	db 1, LEECH_SEED
-	db 1, VINE_WHIP
 	db 4, GROWL
 	db 7, LEECH_SEED
 	db 10, VINE_WHIP
@@ -96,7 +91,6 @@ CharmeleonEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, GROWL
-	db 1, EMBER
 	db 7, EMBER
 	db 13, SMOKESCREEN
 	db 20, RAGE
@@ -111,8 +105,6 @@ CharizardEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, GROWL
-	db 1, EMBER
-	db 1, SMOKESCREEN
 	db 7, EMBER
 	db 13, SMOKESCREEN
 	db 20, RAGE
@@ -145,8 +137,6 @@ WartortleEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, TAIL_WHIP
-	db 1, BUBBLE
-	db 4, TAIL_WHIP
 	db 7, BUBBLE
 	db 10, WITHDRAW
 	db 13, WATER_GUN
@@ -161,9 +151,6 @@ WartortleEvosAttacks:
 BlastoiseEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
-	db 1, TAIL_WHIP
-	db 1, BUBBLE
-	db 1, WITHDRAW
 	db 4, TAIL_WHIP
 	db 7, BUBBLE
 	db 10, WITHDRAW
@@ -532,14 +519,15 @@ VulpixEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, EMBER
 	db 1, TAIL_WHIP
-	db 7, ROAR
+	db 7, DISABLE
 	db 11, QUICK_ATTACK
-	db 15, CONFUSE_RAY
-	db 19, FIRE_SPIN
-	db 25, FAINT_ATTACK
+	db 14, CONFUSE_RAY
+	db 20, FIRE_SPIN
+	db 24, SPITE
+	db 27, FAINT_ATTACK
 	db 33, FLAMETHROWER
-	db 41, SAFEGUARD
-	db 49, FIRE_BLAST
+	db 37, SAFEGUARD
+	db 40, FIRE_BLAST
 	db 0 ; no more level-up moves
 
 NinetalesEvosAttacks:
@@ -548,7 +536,7 @@ NinetalesEvosAttacks:
 	db 1, QUICK_ATTACK
 	db 1, CONFUSE_RAY
 	db 1, SAFEGUARD
-	db 41, FLAMETHROWER
+	db 39, FLAMETHROWER
 	db 0 ; no more level-up moves
 
 JigglypuffEvosAttacks:
@@ -3018,12 +3006,16 @@ TritalesEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, EMBER
 	db 1, TAIL_WHIP
-	db 6, QUICK_ATTACK
-	db 11, ROAR
-	db 15, CONFUSE_RAY
-	db 22, SAFEGUARD
-	db 25, FLAMETHROWER
-	db 28, FIRE_SPIN
+	db 1, CHARM
+	db 7, DISABLE
+	db 11, QUICK_ATTACK
+	db 14, CONFUSE_RAY
+	db 20, FIRE_SPIN
+	db 24, SPITE
+	db 27, FAINT_ATTACK
+	db 33, FLAMETHROWER
+	db 37, SAFEGUARD
+	db 40, FIRE_BLAST
 	db 0 ; no more level-up moves
 
 UnownEvosAttacks:
