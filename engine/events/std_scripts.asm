@@ -618,6 +618,13 @@ InitializeEventsScript:
 	setevent WHITNEY_FIGHTING_ROCKETS
 	setevent WHITNEY_DEFEATS_ROCKETS
 	setevent EVENT_WHIRL_ISLANDS_SAGE_GONE
+	setevent EVENT_MEW_SPOT_2_FOUND
+	setevent EVENT_MEW_SPOT_3_FOUND
+	setevent EVENT_MEW_SPOT_4_FOUND
+	setevent EVENT_MEW_SPOT_5_FOUND
+	setevent EVENT_MEW_SPOT_6_FOUND
+	setevent EVENT_MEW_SPOT_7_FOUND
+	setevent EVENT_MEW_SPOT_8_FOUND
 	return
 
 AskNumber1MScript:

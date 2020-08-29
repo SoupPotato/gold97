@@ -383,4 +383,58 @@ KantoGrassWildMons:
 	db 56, WARWOLF
 	db 58, SNEASEL
 
+
+	map_id TROPICAL_ISLAND
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 55, SLOWPOKE
+	db 56, WEEPINBELL
+	db 55, PSYDUCK
+	db 55, EXEGGUTOR
+	db 57, EXEGGUTOR
+	db 56, BELMITT
+	db 58, BELMITT
+	; day
+	db 55, SLOWPOKE
+	db 56, WEEPINBELL
+	db 55, PSYDUCK
+	db 55, EXEGGUTOR
+	db 57, EXEGGUTOR
+	db 56, BELMITT
+	db 58, BELMITT
+	; nite
+	db 55, SLOWPOKE
+	db 56, POLIWHIRL
+	db 55, GOLDUCK
+	db 55, EXEGGUTOR
+	db 57, EXEGGUTOR
+	db 56, POLITOED
+	db 58, POLITOED
+
+	map_id TROPICAL_ISLAND_JUNGLE
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 55, WEEPINBELL
+	db 56, BUTTERFREE
+	db 55, LICKITUNG
+	db 55, PRIMEAPE
+	db 57, PARASECT
+	db 56, LICKILORD
+	db 58, LICKILORD
+	; day
+	db 55, WEEPINBELL
+	db 56, BUTTERFREE
+	db 55, LICKITUNG
+	db 55, PRIMEAPE
+	db 57, PARASECT
+	db 56, LICKILORD
+	db 58, LICKILORD
+	; nite
+	db 55, GLOOM
+	db 56, VENOMOTH
+	db 55, LICKITUNG
+	db 55, PRIMEAPE
+	db 57, PARASECT
+	db 56, LICKILORD
+	db 58, VILEPLUME
 	db -1 ; end
