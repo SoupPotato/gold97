@@ -193,8 +193,18 @@ ENDM
 	connection north, SanskritTown, SANSKRIT_TOWN, 3
 	connection south, TeknosCity, TEKNOS_CITY, -8
 
-	map_attributes YoronCity, YORON_CITY, $35, EAST
+	map_attributes YoronCity, YORON_CITY, $35, SOUTH | EAST
+	connection south, ForkedStrait, FORKED_STRAIT, 1 ; new
 	connection east, YoronPoint, YORON_POINT, 9
+	
+	map_attributes ForkedStrait, FORKED_STRAIT, $35, NORTH
+	connection north, YoronCity, YORON_CITY, -1 ; new
+
+	map_attributes ForkedStraitEastExit, FORKED_STRAIT_EAST_EXIT, $34, EAST
+	connection east, TropicalIsland, TROPICAL_ISLAND, -22 ; new
+	
+	map_attributes TropicalIsland, TROPICAL_ISLAND, $34, WEST
+	connection west, ForkedStraitEastExit, FORKED_STRAIT_EAST_EXIT, 22 ; new
 
 	map_attributes Route116, ROUTE_116, $65, WEST
 	connection west, Route117, ROUTE_117, 0
@@ -557,3 +567,5 @@ ENDM
 	map_attributes KantoFujiHouse, KANTO_FUJI_HOUSE, $00, 0
 	map_attributes KantoDock, KANTO_DOCK, $00, 0
 	map_attributes AmamiBattleTowerGate, AMAMI_BATTLE_TOWER_GATE, $00, 0
+	map_attributes ForkedStraitGate, FORKED_STRAIT_GATE, $00, 0
+	map_attributes TropicalIslandJungle, TROPICAL_ISLAND_JUNGLE, $5D, 0

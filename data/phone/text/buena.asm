@@ -394,14 +394,8 @@ UnknownText_0xa19b1:
 	para "TOWER are going on"
 	line "a company vacation"
 
-	para "to the RADIO TOWER"
-	line "in LAVENDER."
-
-	para "We're wasting our"
-	line "vacation on a trip"
-
-	para "to another RADIO"
-	line "TOWER?"
+	para "to the BATTLE"
+	line "TOWER in AMAMI."
 
 	para "I'd much rather go"
 	line "to the beach!"
@@ -451,7 +445,7 @@ UnknownText_0xa1bed:
 	cont "soon."
 
 	para "It'll be great if"
-	line "GOLDENROD DEPT."
+	line "CELADON DEPT."
 
 	para "STORE has a sale"
 	line "on when we go…"

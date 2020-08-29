@@ -270,6 +270,11 @@ ENDM
 	map_const URASOE_TRAIL,                                10, 18 ;  7
 	map_const KERAMA_STRAIT,                               30,  9 ;  8
 	map_const YORON_POINT,                                 10,  9 ;  9
+	map_const FORKED_STRAIT,                               10, 27 ; new
+	map_const FORKED_STRAIT_GATE,                          11, 8  ; new
+	map_const FORKED_STRAIT_EAST_EXIT,                     13, 8  ; new
+	map_const TROPICAL_ISLAND,                             30, 30 ; new
+	map_const TROPICAL_ISLAND_JUNGLE,                      15, 20 ; new
 
 	newgroup                                                      ; 15
 

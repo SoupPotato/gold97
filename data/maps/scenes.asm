@@ -36,7 +36,7 @@ MapScenes::
 	scene_var BATTLE_TOWER_BATTLE_ROOM,                    wBattleTowerBattleRoomSceneID
 	scene_var BATTLE_TOWER_ELEVATOR,                       wBattleTowerElevatorSceneID
 	scene_var BATTLE_TOWER_HALLWAY,                        wBattleTowerHallwaySceneID
-	scene_var BATTLE_TOWER_OUTSIDE,                        wBattleTowerOutsideSceneID ; unused
+	scene_var BATTLE_TOWER_OUTSIDE,                        wBattleTowerOutsideSceneID
 	scene_var BOULDER_MINES_B4F,                           wMountMoonSceneID
 	scene_var BRASS_TOWER_3F,                              wSproutTower3FSceneID
 	scene_var RADIO_TOWER_5F,                              wRadioTower5FSceneID
@@ -82,4 +82,5 @@ MapScenes::
 	scene_var TRAINER_HOUSE_B1F,                           wTrainerHouseB1FSceneID
 	scene_var MOUNT_MOON_SQUARE,                           wMountMoonSquareSceneID
 	scene_var WHIRL_ISLAND_B3F,                            wWhirlIslandB3FSceneID
+	scene_var FORKED_STRAIT_GATE,                          wForkedStraitGateSceneID
 	db -1

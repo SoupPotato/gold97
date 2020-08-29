@@ -126,7 +126,7 @@ SupernerdMarkusBeatenText:
 
 SupernerdMarkusAfterBattleText:
 	text "I came to explore"
-	line "MT.MONWAL, but"
+	line "JOULE CAVE, but"
 	para "I haven't found"
 	line "anything cool."
 	done

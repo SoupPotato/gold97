@@ -74,4 +74,21 @@ KantoWaterWildMons:
 	db 50, SLOWBRO
 	db 48, DEWGONG
 
+	map_id FORKED_STRAIT
+	db 2 percent ; encounter rate
+	db 45, TENTACOOL
+	db 48, TENTACRUEL
+	db 50, ANCHORAGE
+
+	map_id FORKED_STRAIT_EAST_EXIT
+	db 2 percent
+	db 45, TENTACOOL
+	db 48, TENTACOOL
+	db 50, TENTACRUEL
+	
+	map_id TROPICAL_ISLAND
+	db 2 percent
+	db 46, MARILL
+	db 50, TENTACRUEL
+	db 48, LAPRAS
 	db -1 ; end

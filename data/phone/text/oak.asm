@@ -168,7 +168,7 @@ OakPhoneDisasterText:
 	line "of BIRDON TOWN?"
 	
 	para "It's a small town"
-	line "north of WEST"
+	line "north of WESTPORT"
 	cont "CITY."
 	
 	para "BIRDON TOWN is"
@@ -237,7 +237,7 @@ OakPhoneRocketText:
 	
 	para "I'd check the"
 	line "JOPM RADIO TOWER"
-	cont "in WEST CITY."
+	cont "in WESTPORT CITY."
 	
 	para "I will try and"
 	line "do what I can from"

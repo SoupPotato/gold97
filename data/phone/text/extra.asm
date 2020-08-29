@@ -10,7 +10,7 @@ UnknownText_0x64032:
 	text "<PLAY_G>, have you"
 	line "heard?"
 
-	para "WEST's RADIO"
+	para "WESTPORT's RADIO"
 	line "TOWER has been"
 
 	para "taken over by TEAM"
@@ -202,7 +202,7 @@ IrwinCalledRightAwayText:
 UnknownText_0x646df:
 	text "I saw, I heard!"
 
-	para "You beat ENOKI of"
+	para "You beat MORTY of"
 	line "BIRDON GYM!"
 
 	para "Th-that's just"
@@ -1307,7 +1307,7 @@ UnknownText_0x667f7:
 
 UnknownText_0x66801:
 	text "I bought some PINK"
-	line "BOWS at GOLDENROD"
+	line "BOWS at CELADON"
 
 	para "DEPT.STORE for my"
 	line "CLEFAIRY."
@@ -1521,8 +1521,8 @@ WiltonWantThisText:
 	text "…"
 	line "Just head from"
 
-	para "MAHOGANY toward"
-	line "BLACKTHORN!"
+	para "STAND CITY toward"
+	line "BLUE FOREST!" ; he's on route 112
 	done
 
 UnknownText_0x66dab:
@@ -1573,7 +1573,7 @@ UnknownText_0x66ed3:
 
 KenjiBreakText:
 	text "I'm taking a break"
-	line "on ROUTE 45!"
+	line "on ROUTE 45!" ; kenji seems to be unused, can't find his location
 
 	para "Why not drop by if"
 	line "you are free?"

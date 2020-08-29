@@ -69,8 +69,8 @@ PryceGreetingText:
 	line "wait."
 	
 	para "I have family that"
-	line "live up on NORTH"
-	cont "ISLAND."
+	line "live in FROSTPOINT"
+	cont "TOWN."
 	
 	para "I have already"
 	line "informed them that"
@@ -83,7 +83,7 @@ PryceGreetingText:
 	para "If you insist on a"
 	line "battle, come visit"
 	cont "my family home in"
-	cont "NORTH ISLAND."
+	cont "FROSTPOINT TOWN."
 
 	para "I will then return"
 	line "to the GYM once I"

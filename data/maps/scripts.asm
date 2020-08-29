@@ -75,6 +75,11 @@ INCLUDE "maps/Route106Pokecenter1F.asm"
 INCLUDE "maps/Route103WestportGate.asm"
 INCLUDE "maps/Route112StandCityGate.asm"
 INCLUDE "maps/NationalParkStandGate.asm"
+INCLUDE "maps/ForkedStrait.asm"
+INCLUDE "maps/ForkedStraitGate.asm"
+INCLUDE "maps/ForkedStraitEastExit.asm"
+INCLUDE "maps/TropicalIsland.asm"
+INCLUDE "maps/TropicalIslandJungle.asm"
 
 
 SECTION "Map Scripts 6", ROMX
