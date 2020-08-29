@@ -353,9 +353,9 @@ KRIS EQU __enum__
 	const MARVIN
 	const TULLY1
 	const ANDRE ; used now
-	const RAYMOND
+	const STIRNER ; used now
 	const WILTON1
-	const EDGAR
+	const EDGAR ; used now
 	const JONAH
 	const MARTIN
 	const STEPHEN
