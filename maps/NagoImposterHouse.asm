@@ -70,5 +70,5 @@ NagoImposterHouse_MapEvents:
 	db 0 ; bg events
 
 	db 2 ; object events
-	object_event  7,  4, SPRITE_SURGE, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NagoImposterHouseFishingGuruScript, EVENT_TELEPORT_GUY
+	object_event  7,  4, SPRITE_SURGE, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, NagoImposterHouseFishingGuruScript, EVENT_TELEPORT_GUY
 	object_event  3,  5, SPRITE_DIGLETT, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CeruleanDiglett, EVENT_TELEPORT_GUY
