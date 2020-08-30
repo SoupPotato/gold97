@@ -118,17 +118,12 @@ Route36GateRivalScript:
 
 	
 Route112StandCityGateOfficerScript:
-;	clearevent EVENT_ILEX_FOREST_FARFETCHD
-;	setevent EVENT_CLEARED_RADIO_TOWER
-;	setevent EVENT_BEAT_CHUCK
-;	setevent EVENT_ILEX_FOREST_APPRENTICE
-;	setevent EVENT_BLACKTHORN_CITY_SUPER_NERD_DOES_NOT_BLOCK_GYM
 	jumptextfaceplayer Route112StandCityGateOfficerText
 
 Route112StandCityGateGrampsScript:
 	faceplayer
 	opentext
-	checkflag EVENT_BLACKTHORN_CITY_SUPER_NERD_DOES_NOT_BLOCK_GYM
+	checkevent EVENT_STAND_CITY_ROCKETS_DEPARTED
 	iftrue .RocketsGoneRoute36Gate
 	writetext StandCitySomethingIsUpText
 	waitbutton

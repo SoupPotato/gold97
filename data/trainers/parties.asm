@@ -1589,13 +1589,13 @@ BugCatcherGroup:
 	db -1 ; end
 
 	; BUG_CATCHER (10)
-	db "WADE@", TRAINERTYPE_NORMAL; wade 2
+	db "WADE@", TRAINERTYPE_NORMAL ; unused
 	db  23, TRIPSTAR
 	db  23, BUTTERFREE
 	db -1 ; end
 
 	; BUG_CATCHER (11)
-	db "WADE@", TRAINERTYPE_NORMAL; wade 3
+	db "WADE@", TRAINERTYPE_NORMAL ; unused
 	db  25, TRIPSTAR
 	db  26, BUTTERFREE
 	db -1 ; end
@@ -1617,13 +1617,13 @@ BugCatcherGroup:
 	db -1 ; end
 
 	; BUG_CATCHER (15)
-	db "WADE@", TRAINERTYPE_NORMAL; wade 4
+	db "WADE@", TRAINERTYPE_NORMAL ; unused
 	db  28, TRIPSTAR
 	db  28, BUTTERFREE
 	db -1 ; end
 
 	; BUG_CATCHER (16)
-	db "WADE@", TRAINERTYPE_MOVES; wade 5
+	db "WADE@", TRAINERTYPE_MOVES ; unused
 	db 33, TRIPSTAR, TRI_ATTACK, SWIFT, DOUBLE_TEAM, AGILITY
 	db 34, BUTTERFREE, CONFUSION, STUN_SPORE, SUPERSONIC, GUST
 	db -1 ; end
@@ -2319,7 +2319,7 @@ HikerGroup:
 	db -1 ; end
 
 	; HIKER (5)
-	db "ANTHONY@", TRAINERTYPE_NORMAL; anthony 2
+	db "ANTHONY@", TRAINERTYPE_NORMAL ; unused
 	db 23, MACHOKE
 	db 24, PHANPY
 	db -1 ; end
@@ -2352,7 +2352,7 @@ HikerGroup:
 
 
 	; HIKER (12)
-	db "ANTHONY@", TRAINERTYPE_NORMAL; anthony 3
+	db "ANTHONY@", TRAINERTYPE_NORMAL ; unused
 	db 32, MACHOKE
 	db 31, DONPHAN
 	db -1 ; end
@@ -2401,14 +2401,14 @@ HikerGroup:
 	db -1 ; end
 
 	; HIKER (21)
-	db "ANTHONY@", TRAINERTYPE_NORMAL; anthony 4
+	db "ANTHONY@", TRAINERTYPE_NORMAL ; unused
 	db 33, GRAVELER
 	db 34, MACHOKE
 	db 33, DONPHAN
 	db -1 ; end
 
 	; HIKER (22)
-	db "ANTHONY@", TRAINERTYPE_MOVES; anthony 5
+	db "ANTHONY@", TRAINERTYPE_MOVES ; unused
 	db 36, GOLEM,   MAGNITUDE, SELFDESTRUCT, DEFENSE_CURL, ROLLOUT
 	db 38, DONPHAN,      TAKE_DOWN, EARTHQUAKE, SWAGGER, ROLLOUT
 	db 37, MACHOKE,    KARATE_CHOP, VITAL_THROW, HEADBUTT, DIG

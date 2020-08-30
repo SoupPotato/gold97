@@ -162,6 +162,12 @@ JohtoWaterWildMons:
 	db 28, GOLDEEN
 	db 25, POLIWHIRL
 	
+	map_id AMPARE_CAVERN_B1F
+	db 4 percent ; encounter rate
+	db 25, POLIWAG
+	db 28, GOLDEEN
+	db 25, MARILL
+	
 	map_id ROUTE_110
 	db 4 percent ; encounter rate
 	db 25, TENTACOOL

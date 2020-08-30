@@ -36,10 +36,12 @@ BlueForestGymPryceScript:
 	checkevent EVENT_GOT_TM16_ICY_WIND
 	iftrue PryceScript_Defeat
 	setevent EVENT_BEAT_SKIER_ROXANNE
+	setevent EVENT_BEAT_SKIER_CLARISSA
+	setevent EVENT_BEAT_BOARDER_RONALD
 	setevent EVENT_BEAT_BOARDER_BRAD
 	setevent EVENT_BEAT_BOARDER_DOUGLAS
-	setevent EVENT_BLACKTHORN_CITY_SUPER_NERD_BLOCKS_GYM; for workers south of town
-	setevent EVENT_ILEX_FOREST_FARFETCHD; makes normal pokes in zoo disappear
+	setevent EVENT_ROUTE_112_WORKERS_AT_STAND_GATE
+	setevent EVENT_STAND_CITY_ZOO_MONS_GONE
 	writetext PryceText_GlacierBadgeSpeech
 	buttonsound
 	verbosegiveitem TM_ICY_WIND
