@@ -437,4 +437,32 @@ KantoGrassWildMons:
 	db 57, PARASECT
 	db 56, LICKILORD
 	db 58, VILEPLUME
+	
+	
+	map_id RAINBOW_ISLAND
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 55, BUTTERFREE
+	db 56, TRIPSTAR
+	db 55, JIGGLYPUFF
+	db 55, PIKACHU
+	db 57, EXEGGUTOR
+	db 56, DODRIO
+	db 58, TOGEPI
+	; day
+	db 55, BUTTERFREE
+	db 56, TRIPSTAR
+	db 55, JIGGLYPUFF
+	db 55, PIKACHU
+	db 57, EXEGGUTOR
+	db 56, PIDGEOT
+	db 58, TOGEPI
+	; nite
+	db 55, GLOOM
+	db 56, RATICATE
+	db 55, JIGGLYPUFF
+	db 55, MEOWTH
+	db 57, EXEGGUTOR
+	db 56, ONIX
+	db 58, TOGEPI
 	db -1 ; end
