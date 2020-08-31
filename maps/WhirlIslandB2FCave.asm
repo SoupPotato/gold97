@@ -14,7 +14,7 @@ SuicuneEvent:
 	pause 15
 	closetext
 	setevent EVENT_RIVAL_TEAM_ROCKET_BASE
-;	writecode VAR_BATTLETYPE, BATTLETYPE_ROAMING
+	writecode VAR_BATTLETYPE, BATTLETYPE_ROAMING
 	loadwildmon SUICUNE, 40
 	startbattle
 	disappear WHIRLISLAND_SUICUNE

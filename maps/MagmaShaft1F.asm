@@ -22,7 +22,7 @@ EnteiEvent:
 	pause 15
 	closetext
 	setevent EVENT_RIVAL_AZALEA_TOWN
-;	writecode VAR_BATTLETYPE, BATTLETYPE_ROAMING
+	writecode VAR_BATTLETYPE, BATTLETYPE_ROAMING
 	loadwildmon ENTEI, 40
 	startbattle
 	disappear ICEPATHB2FBLACKTHORNSIDE_ENTEI

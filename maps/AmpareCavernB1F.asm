@@ -22,7 +22,7 @@ RaikouEvent:
 	pause 15
 	closetext
 	setevent EVENT_AZALEA_TOWN_SLOWPOKES
-;	writecode VAR_BATTLETYPE, BATTLETYPE_ROAMING
+	writecode VAR_BATTLETYPE, BATTLETYPE_ROAMING
 	loadwildmon RAIKOU, 40
 	startbattle
 	disappear DARKCAVEVIOLETENTRANCE_RAIKOU
