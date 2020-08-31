@@ -1844,8 +1844,7 @@ MrMimeEvosAttacks:
 	db 0 ; no more level-up moves
 
 ScytherEvosAttacks:
-	db EVOLVE_ITEM, TRADE_STONE, SCIZOR
-	db EVOLVE_TRADE, METAL_COAT, SCIZOR
+	db EVOLVE_LEVEL, 41, SCIZOR
 	db 0 ; no more evolutions
 	db 1, QUICK_ATTACK
 	db 1, LEER
@@ -3149,15 +3148,16 @@ PraxeEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, VICEGRIP
 	db 7, FOCUS_ENERGY
-	db 15, BIND
-	db 22, SEISMIC_TOSS
-	db 28, HARDEN
-	db 31, DIG
-	db 35, GUILLOTINE
-	db 41, SUBMISSION
-	db 44, MEGAHORN
-	db 46, SWORDS_DANCE
-	db 48, EARTHQUAKE
+	db 13, BIND
+	db 19, SEISMIC_TOSS
+	db 25, HARDEN
+	db 30, FURY_CUTTER
+	db 35, THRASH
+	db 38, SWORDS_DANCE
+	db 42, METAL_CLAW
+	db 44, SUBMISSION
+	db 52, GUILLOTINE
+	db 60, MEGAHORN
 	db 0 ; no more level-up moves
 
 ScizorEvosAttacks:
@@ -3169,9 +3169,11 @@ ScizorEvosAttacks:
 	db 18, FALSE_SWIPE
 	db 24, AGILITY
 	db 30, WING_ATTACK
-	db 36, SLASH
-	db 42, SWORDS_DANCE
-	db 50, DOUBLE_TEAM
+	db 34, FURY_CUTTER
+	db 39, SLASH
+	db 43, RAZOR_WIND
+	db 48, SWORDS_DANCE
+	db 54, DOUBLE_TEAM
 	db 0 ; no more level-up moves
 
 RinringEvosAttacks:
