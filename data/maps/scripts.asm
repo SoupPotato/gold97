@@ -90,6 +90,9 @@ INCLUDE "maps/TeamRocketBaseB1F.asm"
 INCLUDE "maps/TeamRocketBaseB2F.asm"
 INCLUDE "maps/JadeForest.asm"
 INCLUDE "maps/VictoryRoad2F.asm"
+INCLUDE "maps/ForkedStraitWestExit.asm"
+INCLUDE "maps/RainbowIsland.asm"
+INCLUDE "maps/RainbowIslandCave.asm"
 
 
 SECTION "Map Scripts 7", ROMX

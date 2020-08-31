@@ -822,3 +822,12 @@ ForkedStraitEastExit_Blocks:
 	
 ForkedStraitGate_Blocks:
 	INCBIN "maps/ForkedStraitGate.blk"
+
+ForkedStraitWestExit_Blocks:
+	INCBIN "maps/ForkedStraitWestExit.blk"
+
+RainbowIsland_Blocks:
+	INCBIN "maps/RainbowIsland.blk"
+	
+RainbowIslandCave_Blocks:
+	INCBIN "maps/RainbowIslandCave.blk"

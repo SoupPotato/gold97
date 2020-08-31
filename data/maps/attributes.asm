@@ -206,6 +206,12 @@ ENDM
 	map_attributes TropicalIsland, TROPICAL_ISLAND, $34, WEST
 	connection west, ForkedStraitEastExit, FORKED_STRAIT_EAST_EXIT, 22 ; new
 
+	map_attributes ForkedStraitWestExit, FORKED_STRAIT_WEST_EXIT, $34, WEST
+	connection west, RainbowIsland, RAINBOW_ISLAND, -22 ; new
+
+	map_attributes RainbowIsland, RAINBOW_ISLAND, $34, EAST
+	connection east, ForkedStraitWestExit, FORKED_STRAIT_WEST_EXIT, 22 ; new
+
 	map_attributes Route116, ROUTE_116, $65, WEST
 	connection west, Route117, ROUTE_117, 0
 
@@ -569,3 +575,4 @@ ENDM
 	map_attributes AmamiBattleTowerGate, AMAMI_BATTLE_TOWER_GATE, $00, 0
 	map_attributes ForkedStraitGate, FORKED_STRAIT_GATE, $00, 0
 	map_attributes TropicalIslandJungle, TROPICAL_ISLAND_JUNGLE, $5D, 0
+	map_attributes RainbowIslandCave, RAINBOW_ISLAND_CAVE, $09, 0

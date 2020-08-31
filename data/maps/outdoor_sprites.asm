@@ -189,7 +189,8 @@ CrownGroupSprites:; actually do whatever now
 	db SPRITE_COOLTRAINER_M
 	db SPRITE_ROCKER
 	db SPRITE_JANINE
-	; 5 of 9 walking sprites
+	db SPRITE_BLUE
+	; 6 of 9 walking sprites
 	db SPRITE_POKE_BALL
 	db SPRITE_FRUIT_TREE
 	db 0 ;end
