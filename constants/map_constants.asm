@@ -275,7 +275,6 @@ ENDM
 	map_const FORKED_STRAIT_EAST_EXIT,                     13, 8  ; new
 	map_const TROPICAL_ISLAND,                             30, 30 ; new
 	map_const TROPICAL_ISLAND_JUNGLE,                      15, 20 ; new
-	map_const FORKED_STRAIT_WEST_EXIT,                     13, 8  ; new
 
 
 	newgroup                                                      ; 15
@@ -435,5 +434,6 @@ ENDM
 	map_const CROWN_CITY_SCOPE_LENS_HOUSE,                  5,  4 ;  9
 	map_const CROWN_CITY_SPEECH_HOUSE,                      5,  4 ;  7
 	map_const CROWN_CITY_TRAINER_HOUSE,                     8,  4 ; 23
+	map_const FORKED_STRAIT_WEST_EXIT,                     13, 8  ; new
 	map_const RAINBOW_ISLAND,                              30, 30 ; new (in crown mapgroup for roof colors & outdoor sprites)
 	map_const RAINBOW_ISLAND_CAVE,                         8,  10 ; new

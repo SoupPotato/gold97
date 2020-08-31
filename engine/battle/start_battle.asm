@@ -99,7 +99,7 @@ PlayBattleMusic:
 	ld de, MUSIC_CHAMPION_BATTLE
 	cp CHAMPION
 	jr z, .done
-	cp RED
+	cp BLUE
 	jr z, .done
 
 	; They should have included EXECUTIVEM, EXECUTIVEF, and SCIENTIST too...so i'll add those

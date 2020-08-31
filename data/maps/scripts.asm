@@ -88,7 +88,6 @@ INCLUDE "maps/Route120.asm"
 INCLUDE "maps/TeamRocketBaseB2FOffice.asm"
 INCLUDE "maps/TeamRocketBaseB1F.asm"
 INCLUDE "maps/TeamRocketBaseB2F.asm"
-INCLUDE "maps/JadeForest.asm"
 INCLUDE "maps/VictoryRoad2F.asm"
 INCLUDE "maps/ForkedStraitWestExit.asm"
 INCLUDE "maps/RainbowIsland.asm"
@@ -134,6 +133,7 @@ INCLUDE "maps/FastShipCabins_SW_SSW_NW.asm"
 INCLUDE "maps/FastShipCabins_SE_SSE_CaptainsCabin.asm"
 INCLUDE "maps/FastShipB1F.asm"
 INCLUDE "maps/WestportPortPassage.asm"
+INCLUDE "maps/JadeForest.asm"
 
 SECTION "Map Scripts 9", ROMX
 

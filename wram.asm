@@ -2647,8 +2647,9 @@ wOlivineLighthouse1FID::						db
 wOlivineLighthouse2FID::						db
 wWhirlIslandB3FSceneID::						db
 wForkedStraitGateSceneID::                      db ; new, DS went from 23 to 22
+wRainbowIslandCaveSceneID::                     db ; new, DS went from 22 to 21
 
-	ds 22
+	ds 21
 
 ; fight counts
 wJackFightCount::    db ; d9f2
