@@ -14,16 +14,11 @@ SilentTown_MapScripts:
 	callback MAPCALLBACK_TILES, .ClearRocks
 
 .ClearRocks:
-	checkevent EVENT_BEAT_ERIKA
-	iftrue .CheckNewBark2
-	changeblock  19, 15, $25 ; rock
-	return
-
-.CheckNewBark2:
-	checkevent EVENT_RELEASED_THE_BEASTS
+	checkevent EVENT_ROUTE_115_ROCKS_DEMOLISHED
 	iftrue .NewBarkRocksDone
 	changeblock  19, 15, $25 ; rock
 	return
+
 	
 .NewBarkRocksDone
 	return

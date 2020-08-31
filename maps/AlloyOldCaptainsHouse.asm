@@ -38,8 +38,8 @@ ELIF DEF(_SILVER)
 ENDC
 	
 .NoEvilLeft
-	checkevent EVENT_GOT_5F_SAGE_BLESSING
-	iffalse .NotBlessed
+	checkevent EVENT_GOT_HM07_WATERFALL
+	iffalse .NoWaterfall
 	writetext AlloyOldCaptainsHouseElderText2
 	yesorno
 	iffalse OlivineElderNoStory
@@ -127,8 +127,8 @@ ELIF DEF(_SILVER)
 	end
 ENDC
 	
-.NotBlessed
-	writetext AlloyOldCaptainsHouseElderNotBlessedText
+.NoWaterfall
+	writetext AlloyOldCaptainsHouseElderNoWaterfallText
 	waitbutton
 	closetext
 	end
@@ -353,15 +353,12 @@ AlloyOldCaptainsHouseElderEvilText:
 	cont "until it is gone."
 	done
 	
-AlloyOldCaptainsHouseElderNotBlessedText:
+AlloyOldCaptainsHouseElderNoWaterfallText:
 	text "The time could be"
 	line "any day now, yet"
-	para "I do not sense"
-	line "that you are the"
-	para "type of trainer"
-	line "that the bird"
-	para "would present"
-	line "itself to."
+	para "I do not beleive"
+	line "you are quite"
+	para "ready yet."
 	done
 
 AlloyOldCaptainsHouse_MapEvents:

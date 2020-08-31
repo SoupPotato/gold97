@@ -8,6 +8,7 @@
 	const ROUTE27_POKE_BALL1
 	const ROUTE27_POKE_BALL2
 	const ROUTE27_FISHER
+	const ROUTE27_POKE_BALL3
 
 Route115_MapScripts:
 	db 0 ; scene scripts
@@ -16,21 +17,13 @@ Route115_MapScripts:
 	callback MAPCALLBACK_TILES, .ClearRocks27
 
 .ClearRocks27:
-	checkevent EVENT_BEAT_ERIKA
-	iftrue .Check27_2
-	changeblock   5,  7, $25 ; rock
-	changeblock   7,  5, $25 ; rock
-	changeblock   5,  9, $25 ; rock
-	return
-
-.Check27_2:
-	checkevent EVENT_RELEASED_THE_BEASTS
+	checkevent EVENT_ROUTE_115_ROCKS_DEMOLISHED
 	iftrue .R27RocksDone
 	changeblock   5,  7, $25 ; rock
 	changeblock   7,  5, $25 ; rock
 	changeblock   5,  9, $25 ; rock
 	return
-	
+
 .R27RocksDone
 	return
 
@@ -46,116 +39,14 @@ TrainerPsychicGilbert:
 	end
 
 TrainerBirdKeeperJose2:
-	trainer BIRD_KEEPER, JOSE2, EVENT_BEAT_BIRD_KEEPER_JOSE2, BirdKeeperJose2SeenText, BirdKeeperJose2BeatenText, 0, .Script
+	trainer BIRD_KEEPER, JOSE1, EVENT_BEAT_BIRD_KEEPER_JOSE2, BirdKeeperJose2SeenText, BirdKeeperJose2BeatenText, 0, .Script
 
 .Script:
-	writecode VAR_CALLERID, PHONE_BIRDKEEPER_JOSE
 	endifjustbattled
 	opentext
-	checkflag ENGINE_JOSE
-	iftrue .WantsBattle
-	checkflag ENGINE_JOSE_HAS_STAR_PIECE
-	iftrue .HasStarPiece
-	checkcellnum PHONE_BIRDKEEPER_JOSE
-	iftrue .NumberAccepted
-	checkevent EVENT_JOSE_ASKED_FOR_PHONE_NUMBER
-	iftrue .AskedAlready
 	writetext BirdKeeperJose2AfterBattleText
-	buttonsound
-	setevent EVENT_JOSE_ASKED_FOR_PHONE_NUMBER
-	scall .AskNumber1
-	jump .AskForNumber
-
-.AskedAlready:
-	scall .AskNumber2
-.AskForNumber:
-	askforphonenumber PHONE_BIRDKEEPER_JOSE
-	ifequal PHONE_CONTACTS_FULL, .PhoneFull
-	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
-	trainertotext BIRD_KEEPER, JOSE2, MEM_BUFFER_0
-	scall .RegisteredNumber
-	jump .NumberAccepted
-
-.WantsBattle:
-	scall .Rematch
-	winlosstext BirdKeeperJose2BeatenText, 0
-	copybytetovar wJoseFightCount
-	ifequal 2, .Fight2
-	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
-.Fight2:
-	checkevent EVENT_FAST_SHIP_CABINS_SE_SSE_GENTLEMAN
-	iftrue .LoadFight2
-.Fight1:
-	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .LoadFight1
-.LoadFight0:
-	loadtrainer BIRD_KEEPER, JOSE2
-	startbattle
-	reloadmapafterbattle
-	loadvar wJoseFightCount, 1
-	clearflag ENGINE_JOSE
-	end
-
-.LoadFight1:
-	loadtrainer BIRD_KEEPER, JOSE1
-	startbattle
-	reloadmapafterbattle
-	loadvar wJoseFightCount, 2
-	clearflag ENGINE_JOSE
-	end
-
-.LoadFight2:
-	loadtrainer BIRD_KEEPER, JOSE3
-	startbattle
-	reloadmapafterbattle
-	clearflag ENGINE_JOSE
-	end
-
-.HasStarPiece:
-	scall .Gift
-	verbosegiveitem STAR_PIECE
-	iffalse .NoRoom
-	clearflag ENGINE_JOSE_HAS_STAR_PIECE
-	jump .NumberAccepted
-
-.NoRoom:
-	jump .PackFull
-
-.AskNumber1:
-	jumpstd asknumber1m
-	end
-
-.AskNumber2:
-	jumpstd asknumber2m
-	end
-
-.RegisteredNumber:
-	jumpstd registerednumberm
-	end
-
-.NumberAccepted:
-	jumpstd numberacceptedm
-	end
-
-.NumberDeclined:
-	jumpstd numberdeclinedm
-	end
-
-.PhoneFull:
-	jumpstd phonefullm
-	end
-
-.Rematch:
-	jumpstd rematchm
-	end
-
-.Gift:
-	jumpstd giftm
-	end
-
-.PackFull:
-	jumpstd packfullm
+	waitbutton
+	closetext
 	end
 
 TrainerCooltrainermBlake:
@@ -184,93 +75,11 @@ TrainerCooltrainerfReena:
 	trainer COOLTRAINERF, REENA1, EVENT_BEAT_COOLTRAINERF_REENA, CooltrainerfReenaSeenText, CooltrainerfReenaBeatenText, 0, .Script
 
 .Script:
-	writecode VAR_CALLERID, PHONE_COOLTRAINERF_REENA
 	endifjustbattled
 	opentext
-	checkflag ENGINE_REENA
-	iftrue .WantsBattle
-	checkcellnum PHONE_COOLTRAINERF_REENA
-	iftrue .NumberAccepted
-	checkevent EVENT_REENA_ASKED_FOR_PHONE_NUMBER
-	iftrue .AskedAlready
 	writetext CooltrainerfReenaAfterBattleText
-	buttonsound
-	setevent EVENT_REENA_ASKED_FOR_PHONE_NUMBER
-	scall .AskNumber1
-	jump .AskForNumber
-
-.AskedAlready:
-	scall .AskNumber2
-.AskForNumber:
-	askforphonenumber PHONE_COOLTRAINERF_REENA
-	ifequal PHONE_CONTACTS_FULL, .PhoneFull
-	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
-	trainertotext COOLTRAINERF, REENA1, MEM_BUFFER_0
-	scall .RegisteredNumber
-	jump .NumberAccepted
-
-.WantsBattle:
-	scall .Rematch
-	winlosstext CooltrainerfReenaBeatenText, 0
-	copybytetovar wReenaFightCount
-	ifequal 2, .Fight2
-	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
-.Fight2:
-	checkevent EVENT_FAST_SHIP_CABINS_SE_SSE_GENTLEMAN
-	iftrue .LoadFight2
-.Fight1:
-	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .LoadFight1
-.LoadFight0:
-	loadtrainer COOLTRAINERF, REENA1
-	startbattle
-	reloadmapafterbattle
-	loadvar wReenaFightCount, 1
-	clearflag ENGINE_REENA
-	end
-
-.LoadFight1:
-	loadtrainer COOLTRAINERF, REENA2
-	startbattle
-	reloadmapafterbattle
-	loadvar wReenaFightCount, 2
-	clearflag ENGINE_REENA
-	end
-
-.LoadFight2:
-	loadtrainer COOLTRAINERF, REENA3
-	startbattle
-	reloadmapafterbattle
-	clearflag ENGINE_REENA
-	end
-
-.AskNumber1:
-	jumpstd asknumber1f
-	end
-
-.AskNumber2:
-	jumpstd asknumber2f
-	end
-
-.RegisteredNumber:
-	jumpstd registerednumberf
-	end
-
-.NumberAccepted:
-	jumpstd numberacceptedf
-	end
-
-.NumberDeclined:
-	jumpstd numberdeclinedf
-	end
-
-.PhoneFull:
-	jumpstd phonefullf
-	end
-
-.Rematch:
-	jumpstd rematchf
+	waitbutton
+	closetext
 	end
 
 TrainerCooltrainerfMegan:
@@ -294,75 +103,279 @@ Route115RareCandy:
 Route115FisherScript:
 	faceplayer
 	opentext
-	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
-	iftrue .RocksStillThere
-	checkevent EVENT_BEAT_ERIKA
-	iffalse .RocksStillThere
-	checkevent EVENT_RELEASED_THE_BEASTS
-	iffalse .RocksStillThere
-	checkevent EVENT_GOT_HM07_WATERFALL
-	iffalse .GiveWaterfallScript
-	writetext Route115FisherRocksGoneText
+	;checkevent EVENT_BEAT_ERIKA
+	;iffalse .RocksStillThere
+	writetext Route115FisherReadyToBlowText
 	waitbutton
 	closetext
-	end
-	
-.GiveWaterfallScript
-	writetext IFoundThisInTheRubble
+	checkcode VAR_FACING
+	ifequal UP, .WalkUpBehindTrees
+	follow ROUTE27_FISHER, PLAYER
+	applymovement ROUTE27_FISHER, TakeCoverMovement
+	stopfollow
+	turnobject ROUTE27_FISHER, DOWN
+	applymovement PLAYER, PlayerTakeCoverMovement
+	turnobject PLAYER, DOWN
+	special FadeOutMusic
+	pause 30
+	playsound SFX_POUND
+	pause 2
+	playsound SFX_POUND
+	pause 2
+	playsound SFX_POUND
+	pause 2
+	playsound SFX_POUND
+	pause 2
+	playsound SFX_POUND
+	pause 2
+	playsound SFX_POUND
+	pause 2
+	playsound SFX_POUND
+	pause 2
+	playsound SFX_POUND
+	pause 2
+	playsound SFX_POUND
+	pause 2
+	playsound SFX_POUND
+	pause 2
+	playsound SFX_EGG_BOMB
+	earthquake 10
+	pause 8
+	playsound SFX_EGG_BOMB
+	earthquake 10
+	pause 8
+	playsound SFX_EGG_BOMB
+	earthquake 10
+	pause 8
+	playsound SFX_EMBER
+	earthquake 160
+	pause 16	
+	changeblock   5,  7, $01 ; clear
+	changeblock   7,  5, $01 ; clear
+	changeblock   5,  9, $01 ; clear
+	moveobject ROUTE27_POKE_BALL3, 5, 7
+	special RestartMapMusic
+	follow ROUTE27_FISHER, PLAYER
+	applymovement ROUTE27_FISHER, ReturnMovement
+	stopfollow
+	applymovement PLAYER, PlayerReturnMovement
+	opentext
+	writetext Route115FisherLoveThisJobText
 	waitbutton
+	closetext
+	showemote EMOTE_SHOCK, ROUTE27_FISHER, 15
+	opentext
+	writetext Route115LookieText
+	waitbutton
+	closetext
+	applymovement PLAYER, PickUpMovement
+	disappear ROUTE27_POKE_BALL3
+	opentext
 	verbosegiveitem HM_WATERFALL
 	setevent EVENT_GOT_HM07_WATERFALL
-	writetext IFoundThisInTheRubble2
+	turnobject PLAYER, RIGHT
+	opentext
+	writetext Route115ThatWasGreatText
 	waitbutton
 	closetext
+	applymovement ROUTE27_FISHER, LeaveMovement
+	disappear ROUTE27_FISHER
+	setevent EVENT_ROUTE_115_ROCKS_DEMOLISHED
+	end
+	
+	
+.WalkUpBehindTrees
+	follow ROUTE27_FISHER, PLAYER
+	applymovement ROUTE27_FISHER, TakeCoverMovement2
+	stopfollow
+	turnobject ROUTE27_FISHER, DOWN
+	applymovement PLAYER, PlayerTakeCoverMovement
+	turnobject PLAYER, DOWN
+	special FadeOutMusic
+	pause 30
+	playsound SFX_POUND
+	pause 2
+	playsound SFX_POUND
+	pause 2
+	playsound SFX_POUND
+	pause 2
+	playsound SFX_POUND
+	pause 2
+	playsound SFX_POUND
+	pause 2
+	playsound SFX_POUND
+	pause 2
+	playsound SFX_POUND
+	pause 2
+	playsound SFX_POUND
+	pause 2
+	playsound SFX_POUND
+	pause 2
+	playsound SFX_POUND
+	pause 2
+	playsound SFX_EGG_BOMB
+	earthquake 10
+	pause 8
+	playsound SFX_EGG_BOMB
+	earthquake 10
+	pause 8
+	playsound SFX_EGG_BOMB
+	earthquake 10
+	pause 8
+	playsound SFX_EMBER
+	earthquake 160
+	pause 16	
+	changeblock   5,  7, $01 ; clear
+	changeblock   7,  5, $01 ; clear
+	changeblock   5,  9, $01 ; clear
+	moveobject ROUTE27_POKE_BALL3, 5, 7
+	special RestartMapMusic
+	follow ROUTE27_FISHER, PLAYER
+	applymovement ROUTE27_FISHER, ReturnMovement
+	stopfollow
+	applymovement PLAYER, PlayerReturnMovement
+	opentext
+	writetext Route115FisherLoveThisJobText
+	waitbutton
+	closetext
+	showemote EMOTE_SHOCK, ROUTE27_FISHER, 15
+	opentext
+	writetext Route115LookieText
+	waitbutton
+	closetext
+	applymovement PLAYER, PickUpMovement
+	disappear ROUTE27_POKE_BALL3
+	opentext
+	verbosegiveitem HM_WATERFALL
+	setevent EVENT_GOT_HM07_WATERFALL
+	turnobject PLAYER, RIGHT
+	opentext
+	writetext Route115ThatWasGreatText
+	waitbutton
+	closetext
+	applymovement ROUTE27_FISHER, LeaveMovement
+	disappear ROUTE27_FISHER
+	setevent EVENT_ROUTE_115_ROCKS_DEMOLISHED
 	end
 
 .RocksStillThere
-	writetext Route115FisherRocksStillThereText
+	writetext Route115FisherSettingUpText
 	waitbutton
 	closetext
-	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	turnobject ROUTE27_FISHER, LEFT
 	end
 	
-Route115FisherRocksStillThereText:
-	text "I'm so sick of"
-	line "these rocks that"
-	para "have been blocking"
-	line "the path to SILENT"
+TakeCoverMovement:
+	step DOWN
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step UP
+	step UP
+	step_end
+
+TakeCoverMovement2:
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step UP
+	step_end
+	
+PlayerTakeCoverMovement:
+	step RIGHT	
+	step UP
+	step_end
+	
+ReturnMovement:
+	step DOWN
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
+	step_end
+	
+PlayerReturnMovement:
+	step DOWN
+	step LEFT
+	step_end
+	
+PickUpMovement:
+	step LEFT
+	step_end
+	
+LeaveMovement:
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step_end
+	
+Route115FisherLoveThisJobText:
+	text "Wahaha!"
+	
+	para "I love this job!"
+	done
+	
+Route115LookieText:
+	text "Oh! Looky there!"
+	
+	para "Looks like some"
+	line "-thing was inside"
+	cont "that boulder."
+
+	para "Why don't you take"
+	line "take it?"
+	done
+	
+Route115ThatWasGreatText:
+	text "That was great!"
+	
+	para "The path to"
+	line "SILENT TOWN is"
+	cont "finally clear."
+
+	para "Well, take care,"
+	line "kid!"
+	done
+
+	
+Route115FisherSettingUpText:
+	text "These rocks have"
+	line "been blocking the"
+	cont "path to SILENT"
 	cont "TOWN for months!"
-	para "Since no one wants"
-	line "to get them out"
-	para "of the way, I'll"
-	line "just do it myself!"
-	para "Hopefully I'll"
-	line "have them gone"
-	cont "soon."
+	
+	para "But don't worry,"
+	line "I will blast em'"
+	cont "away soon!"
+	
+	para "I just need some"
+	line "time to set up"
+	cont "the explosives."
+	
+	para "Why don't you go"
+	line "challenge the GYM"
+	cont "in KANTO while"
+	cont "you wait?"
 	done
 	
-IFoundThisInTheRubble:
-	text "Ah, finally!"
-	para "The rocks have"
-	line "been cleared!"
-	para "Hey, kid! I found"
-	line "this in the"
-	cont "rubble."
-	para "I have no use for"
-	line "it, so you can"
-	cont "have it."
-	done
+Route115FisherReadyToBlowText:
+	text "Ah, just in time!"
 	
-Route115FisherRocksGoneText:
-	text "What a nice clear"
-	line "path this is!"
-	done
+	para "These rocks are"
+	line "ready to blow!"
 	
-IFoundThisInTheRubble2:
-	text "I'm so glad the"
-	line "path is clear."
-	para "Sometimes, if you"
-	line "want something"
-	para "done, you gotta"
-	line "do it yourself!"
+	para "We need to get to"
+	line "a safe distance!"
 	done
 
 CooltrainermBlakeSeenText:
@@ -496,7 +509,7 @@ Route115_MapEvents:
 
 	db 0 ; bg events
 
-	db 9 ; object events
+	db 10 ; object events
 	object_event 39,  7, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerCooltrainermBlake, -1
 	object_event 48,  7, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerCooltrainermBrian, -1
 	object_event 26,  6, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerCooltrainerfReena, -1
@@ -505,4 +518,5 @@ Route115_MapEvents:
 	object_event  9, 10, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperJose2, -1
 	object_event 31, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route115TMSolarbeam, EVENT_ROUTE_27_TM_SOLARBEAM
 	object_event 15,  5, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route115RareCandy, EVENT_ROUTE_27_RARE_CANDY
-	object_event  8,  5, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 1,  0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route115FisherScript, -1
+	object_event  6,  6, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 1,  0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route115FisherScript, EVENT_ROUTE_115_ROCKS_DEMOLISHED
+	object_event  9,  -8, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, ObjectEvent, -1

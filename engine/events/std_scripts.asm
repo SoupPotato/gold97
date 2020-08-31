@@ -625,6 +625,7 @@ InitializeEventsScript:
 	setevent EVENT_MEW_SPOT_6_FOUND
 	setevent EVENT_MEW_SPOT_7_FOUND
 	setevent EVENT_MEW_SPOT_8_FOUND
+	setevent EVENT_IMPOSTER_FIGHTING_OKERA
 	return
 
 AskNumber1MScript:
