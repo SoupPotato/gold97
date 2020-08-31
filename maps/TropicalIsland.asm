@@ -25,6 +25,7 @@ MewSpot2Script:
 	special FadeOutPalettes
 	playsound SFX_WARP_TO
 	pause 10
+	special LoadMapPalettes
 	special FadeInPalettes
 	disappear MEW_SPOT_2
 	setevent EVENT_MEW_SPOT_2_FOUND
@@ -42,6 +43,7 @@ MewSpot3Script:
 	special FadeOutPalettes
 	playsound SFX_WARP_TO
 	pause 10
+	special LoadMapPalettes
 	special FadeInPalettes
 	disappear MEW_SPOT_3
 	setevent EVENT_MEW_SPOT_3_FOUND
@@ -59,6 +61,7 @@ MewSpot4Script:
 	special FadeOutPalettes
 	playsound SFX_WARP_TO
 	pause 10
+	special LoadMapPalettes
 	special FadeInPalettes
 	disappear MEW_SPOT_4
 	setevent EVENT_MEW_SPOT_4_FOUND
@@ -75,6 +78,7 @@ MewSpot6Script:
 	special FadeOutPalettes
 	playsound SFX_WARP_TO
 	pause 10
+	special LoadMapPalettes
 	special FadeInPalettes
 	disappear MEW_SPOT_6
 	setevent EVENT_MEW_SPOT_6_FOUND
@@ -92,6 +96,7 @@ MewSpot7Script:
 	special FadeOutPalettes
 	playsound SFX_WARP_TO
 	pause 10
+	special LoadMapPalettes
 	special FadeInPalettes
 	disappear MEW_SPOT_7
 	setevent EVENT_MEW_SPOT_7_FOUND

@@ -626,6 +626,9 @@ InitializeEventsScript:
 	setevent EVENT_MEW_SPOT_7_FOUND
 	setevent EVENT_MEW_SPOT_8_FOUND
 	setevent EVENT_IMPOSTER_FIGHTING_OKERA
+	setevent EVENT_INIT_RIC_OBJECTS_HIDDEN
+	setevent EVENT_RIC_BLUE_HIDDEN
+	setevent EVENT_RI_BLUEBATTLE_HIDDEN
 	return
 
 AskNumber1MScript:

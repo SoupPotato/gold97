@@ -83,4 +83,5 @@ MapScenes::
 	scene_var MOUNT_MOON_SQUARE,                           wMountMoonSquareSceneID
 	scene_var WHIRL_ISLAND_B3F,                            wWhirlIslandB3FSceneID
 	scene_var FORKED_STRAIT_GATE,                          wForkedStraitGateSceneID
+	scene_var RAINBOW_ISLAND_CAVE,                         wRainbowIslandCaveSceneID
 	db -1

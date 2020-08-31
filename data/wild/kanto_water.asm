@@ -91,4 +91,16 @@ KantoWaterWildMons:
 	db 46, MARILL
 	db 50, TENTACRUEL
 	db 48, LAPRAS
+	
+	map_id RAINBOW_ISLAND
+	db 2 percent
+	db 46, GOLDEEN
+	db 50, SLOWPOKE
+	db 48, LAPRAS
+	
+	map_id FORKED_STRAIT_WEST_EXIT
+	db 2 percent
+	db 45, TENTACOOL
+	db 48, TENTACOOL
+	db 50, TENTACRUEL
 	db -1 ; end
