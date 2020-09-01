@@ -33,7 +33,6 @@ INCBIN "data/tilesets/players_room_metatiles.bin"
 TilesetPlayersRoomColl:
 INCLUDE "data/tilesets/players_room_collision.asm"
 
-
 SECTION "Tileset Data 2", ROMX
 
 TilesetPokecenterGFX:
@@ -358,4 +357,15 @@ INCBIN "data/tilesets/johto_metatiles.bin"
 Tileset0Coll:
 TilesetJohtoColl:
 INCLUDE "data/tilesets/johto_collision.asm"
+
+SECTION "Tileset Data 10", ROMX
+
+TilesetTropicalGFX:
+INCBIN "gfx/tilesets/tropical.2bpp.lz"
+
+TilesetTropicalColl:
+INCLUDE "data/tilesets/tropical_collision.asm"
+
+TilesetTropicalMeta:
+INCBIN "data/tilesets/tropical_metatiles.bin"
 

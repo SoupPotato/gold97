@@ -200,16 +200,16 @@ ENDM
 	map_attributes ForkedStrait, FORKED_STRAIT, $35, NORTH
 	connection north, YoronCity, YORON_CITY, -1 ; new
 
-	map_attributes ForkedStraitEastExit, FORKED_STRAIT_EAST_EXIT, $34, EAST
+	map_attributes ForkedStraitEastExit, FORKED_STRAIT_EAST_EXIT, $0D, EAST
 	connection east, TropicalIsland, TROPICAL_ISLAND, -22 ; new
 	
-	map_attributes TropicalIsland, TROPICAL_ISLAND, $34, WEST
+	map_attributes TropicalIsland, TROPICAL_ISLAND, $0D, WEST
 	connection west, ForkedStraitEastExit, FORKED_STRAIT_EAST_EXIT, 22 ; new
 
-	map_attributes ForkedStraitWestExit, FORKED_STRAIT_WEST_EXIT, $34, WEST
+	map_attributes ForkedStraitWestExit, FORKED_STRAIT_WEST_EXIT, $0D, WEST
 	connection west, RainbowIsland, RAINBOW_ISLAND, -22 ; new
 
-	map_attributes RainbowIsland, RAINBOW_ISLAND, $34, EAST
+	map_attributes RainbowIsland, RAINBOW_ISLAND, $0D, EAST
 	connection east, ForkedStraitWestExit, FORKED_STRAIT_WEST_EXIT, 22 ; new
 
 	map_attributes Route116, ROUTE_116, $65, WEST
@@ -574,5 +574,5 @@ ENDM
 	map_attributes KantoDock, KANTO_DOCK, $00, 0
 	map_attributes AmamiBattleTowerGate, AMAMI_BATTLE_TOWER_GATE, $00, 0
 	map_attributes ForkedStraitGate, FORKED_STRAIT_GATE, $00, 0
-	map_attributes TropicalIslandJungle, TROPICAL_ISLAND_JUNGLE, $5D, 0
+	map_attributes TropicalIslandJungle, TROPICAL_ISLAND_JUNGLE, $05, 0
 	map_attributes RainbowIslandCave, RAINBOW_ISLAND_CAVE, $09, 0

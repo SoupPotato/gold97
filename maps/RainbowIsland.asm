@@ -11,107 +11,111 @@ RainbowIsland_MapScripts:
 .RainbowIslandRestored:
 	checkevent EVENT_RI_RESTORED
 	iffalse .Done
-	changeblock $C, $6, $CA ; the rainbow
-	changeblock $C, $4, $BF
-	changeblock $E, $6, $BE
-	changeblock $E, $2, $BF
-	changeblock $E, $4, $BD
-	changeblock $10, $2, $C0
-	changeblock $10, $4, $BE
-	changeblock $12, $2, $BC
-	changeblock $14, $2, $BC
-	changeblock $16, $2, $BC
-	changeblock $18, $2, $BC
-	changeblock $1A, $2, $BC
-	changeblock $1C, $2, $BC
-	changeblock $1E, $2, $BC
-	changeblock $20, $2, $BC
-	changeblock $22, $2, $BC
-	changeblock $24, $2, $BC
-	changeblock $26, $2, $BC
-	changeblock $28, $2, $BC
-	changeblock $2A, $2, $BC
-	changeblock $2C, $2, $BC
-	changeblock $2E, $2, $C1
-	changeblock $2E, $4, $C4
-	changeblock $30, $2, $C2
-	changeblock $30, $4, $C3
-	changeblock $30, $6, $C4
-	changeblock $32, $4, $C2
-	changeblock $32, $6, $CB
+	changeblock $C, $6, $48 ; the rainbow
+	changeblock $C, $4, $44
+	changeblock $E, $6, $49
+	changeblock $E, $4, $45
+	changeblock $10, $2, $52
+	changeblock $10, $4, $53
+	changeblock $12, $2, $50
+	changeblock $12, $4, $51
+	changeblock $14, $2, $4E
+	changeblock $14, $4, $4F
+	changeblock $16, $2, $4E
+	changeblock $16, $4, $4F
+	changeblock $18, $2, $4D
+	changeblock $1A, $2, $4D
+	changeblock $1C, $2, $4D
+	changeblock $1E, $2, $4D
+	changeblock $20, $2, $4D
+	changeblock $22, $2, $4D
+	changeblock $24, $2, $4D
+	changeblock $26, $2, $4D	
+	changeblock $28, $2, $4E
+	changeblock $28, $4, $4F	
+	changeblock $2A, $2, $4E
+	changeblock $2A, $4, $4F
+	changeblock $2C, $2, $50
+	changeblock $2C, $4, $51
+	changeblock $2E, $2, $52
+	changeblock $2E, $4, $53
+	changeblock $30, $4, $46
+	changeblock $30, $6, $4A
+	changeblock $32, $6, $4B
+	changeblock $32, $4, $47
 	
-	changeblock $1C, $4, $D8 ;battle arena at top of map
-	changeblock $1C, $6, $D9
-	changeblock $20, $4, $D8
-	changeblock $20, $6, $D9
+	changeblock $1C, $4, $23 ;battle arena at top of map
+	changeblock $1C, $6, $22
+	changeblock $20, $4, $23
+	changeblock $20, $6, $22
 	
-	changeblock $1E, $12, $B9 ; palmtrees
-	changeblock $26, $12, $B9
-	changeblock $14, $14, $B9
-	changeblock $C, $18, $B9
-	changeblock $E, $1A, $B9
-	changeblock $C, $1C, $B9
-	changeblock $C, $22, $B9
-	changeblock $A, $26, $B9
-	changeblock $C, $26, $B9
-	changeblock $8, $28, $B9
-	changeblock $A, $28, $B9
-	changeblock $C, $28, $B9
-	changeblock $8, $2A, $B9
-	changeblock $A, $2A, $B9
-	changeblock $16, $2A, $B9
-	changeblock $18, $28, $B9
-	changeblock $1E, $26, $B9
-	changeblock $20, $26, $B9
-	changeblock $26, $28, $B9
-	changeblock $28, $2A, $B9
-	changeblock $32, $26, $B9
-	changeblock $34, $26, $B9
-	changeblock $32, $28, $B9
-	changeblock $34, $28, $B9
-	changeblock $36, $28, $B9
-	changeblock $34, $2A, $B9
-	changeblock $36, $2A, $B9
-	changeblock $34, $1E, $B9
-	changeblock $32, $1C, $B9
-	changeblock $30, $1A, $B9
-	changeblock $2E, $18, $B9
-	changeblock $2C, $18, $B9
-	changeblock $22, $1A, $B9
-	changeblock $20, $1A, $B9
+	changeblock $1E, $12, $12 ; palmtrees
+	changeblock $26, $12, $12
+	changeblock $14, $14, $12
+	changeblock $C, $18, $12
+	changeblock $E, $1A, $12
+	changeblock $C, $1C, $12
+	changeblock $C, $22, $12
+	changeblock $A, $26, $12
+	changeblock $C, $26, $12
+	changeblock $8, $28, $12
+	changeblock $A, $28, $12
+	changeblock $C, $28, $12
+	changeblock $8, $2A, $12
+	changeblock $A, $2A, $12
+	changeblock $16, $2A, $12
+	changeblock $18, $28, $12
+	changeblock $1E, $26, $12
+	changeblock $20, $26, $12
+	changeblock $26, $28, $12
+	changeblock $28, $2A, $12
+	changeblock $32, $26, $12
+	changeblock $34, $26, $12
+	changeblock $32, $28, $12
+	changeblock $34, $28, $12
+	changeblock $36, $28, $12
+	changeblock $34, $2A, $12
+	changeblock $36, $2A, $12
+	changeblock $34, $1E, $12
+	changeblock $32, $1C, $12
+	changeblock $30, $1A, $12
+	changeblock $2E, $18, $12
+	changeblock $2C, $18, $12
+	changeblock $22, $1A, $12
+	changeblock $20, $1A, $12
 	
-	changeblock $E, $26, $B8 ; flowers
-	changeblock $E, $28, $B8
-	changeblock $C, $2A, $B8
-	changeblock $E, $2A, $B8
-	changeblock $10, $2C, $B8
-	changeblock $A, $2C, $B8
-	changeblock $C, $2C, $B8
-	changeblock $E, $2C, $B8
-	changeblock $C, $2E, $B8
-	changeblock $E, $2E, $B8
-	changeblock $10, $2E, $B8
-	changeblock $16, $2C, $B8
-	changeblock $18, $2A, $B8
-	changeblock $1A, $28, $B8
-	changeblock $1C, $28, $B8
-	changeblock $1E, $28, $B8
-	changeblock $20, $28, $B8
-	changeblock $22, $28, $B8
-	changeblock $24, $28, $B8
-	changeblock $26, $2A, $B8
-	changeblock $28, $2C, $B8
-	changeblock $30, $26, $B8
-	changeblock $30, $28, $B8
-	changeblock $30, $2A, $B8
-	changeblock $32, $2A, $B8
-	changeblock $2E, $2C, $B8
-	changeblock $30, $2C, $B8
-	changeblock $32, $2C, $B8
-	changeblock $34, $2C, $B8
-	changeblock $2E, $2E, $B8
-	changeblock $30, $2E, $B8
-	changeblock $32, $2E, $B8
+	changeblock $E, $26, $40 ; flowers
+	changeblock $E, $28, $40
+	changeblock $C, $2A, $40
+	changeblock $E, $2A, $40
+	changeblock $10, $2C, $40
+	changeblock $A, $2C, $40
+	changeblock $C, $2C, $40
+	changeblock $E, $2C, $40
+	changeblock $C, $2E, $40
+	changeblock $E, $2E, $40
+	changeblock $10, $2E, $40
+	changeblock $16, $2C, $40
+	changeblock $18, $2A, $40
+	changeblock $1A, $28, $40
+	changeblock $1C, $28, $40
+	changeblock $1E, $28, $40
+	changeblock $20, $28, $40
+	changeblock $22, $28, $40
+	changeblock $24, $28, $40
+	changeblock $26, $2A, $40
+	changeblock $28, $2C, $40
+	changeblock $30, $26, $40
+	changeblock $30, $28, $40
+	changeblock $30, $2A, $40
+	changeblock $32, $2A, $40
+	changeblock $2E, $2C, $40
+	changeblock $30, $2C, $40
+	changeblock $32, $2C, $40
+	changeblock $34, $2C, $40
+	changeblock $2E, $2E, $40
+	changeblock $30, $2E, $40
+	changeblock $32, $2E, $40
 .Done:
 	return
 
@@ -159,7 +163,7 @@ BluePt1Text:
 
 BluePt2Text:
 	text "Look at these"
-	line "flowers and palms,"
+	line "palms and grass,"
 	cont "they're totally"
 	cont "gray!"
 	

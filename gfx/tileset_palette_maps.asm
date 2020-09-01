@@ -115,6 +115,9 @@ INCLUDE "gfx/tilesets/west_palette_map.asm"
 TilesetGraveyardPalMap:
 INCLUDE "gfx/tilesets/graveyard_palette_map.asm"
 
+TilesetTropicalPalMap:
+INCLUDE "gfx/tilesets/tropical_palette_map.asm"
+
 ; unused
 rept 26
 	db $06

@@ -51,3 +51,4 @@ Tilesets::
 	tileset TilesetAerodactylWordRoom
 	tileset TilesetMuseum
 	tileset TilesetGraveyard
+	tileset TilesetTropical

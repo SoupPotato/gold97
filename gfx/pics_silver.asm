@@ -149,7 +149,7 @@ JumpluffFrontpic:    INCBIN "gfx/pokemon/jumpluff/front_S.animated.2bpp.lz"
 MarowakFrontpic:     INCBIN "gfx/pokemon/marowak/front_S.animated.2bpp.lz"
 VulpixFrontpic:      INCBIN "gfx/pokemon/vulpix/front_S.animated.2bpp.lz"
 MettoFrontpic:       INCBIN "gfx/pokemon/metto/front_S.animated.2bpp.lz"
-ParamiteFrontpic:    INCBIN "gfx/pokemon/paramite/front.animated.2bpp.lz"
+ParamiteFrontpic:    INCBIN "gfx/pokemon/paramite/front_S.animated.2bpp.lz"
 
 
 SECTION "Pics 7", ROMX
