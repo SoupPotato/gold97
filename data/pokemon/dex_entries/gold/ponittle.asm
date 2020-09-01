@@ -7,4 +7,4 @@
 
 	page "have to train hard"
 	next "to keep up with"
-	next "its family.@"
+	next "their family.@"

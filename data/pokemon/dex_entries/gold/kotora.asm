@@ -3,7 +3,7 @@
 
 	db   "When charged up"
 	next "its fur crackles"
-	next "like a plasma ball"
+	next "like lightning."
 
 	page "If its tail is"
 	next "standing on end,"
