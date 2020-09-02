@@ -30,6 +30,17 @@ CredCheckLeft:
 	waitbutton
 	closetext
 	setevent EVENT_DONE_FS_GATE_CHECK
+	setevent EVENT_BLUE_IN_ELMS_LAB ; blue no longer in the lab at silent town
+	setevent EVENT_MEW_SPOT_2_FOUND ; islands events initializing
+	setevent EVENT_MEW_SPOT_3_FOUND
+	setevent EVENT_MEW_SPOT_4_FOUND
+	setevent EVENT_MEW_SPOT_5_FOUND
+	setevent EVENT_MEW_SPOT_6_FOUND
+	setevent EVENT_MEW_SPOT_7_FOUND
+	setevent EVENT_MEW_SPOT_8_FOUND
+	setevent EVENT_INIT_RIC_OBJECTS_HIDDEN
+	setevent EVENT_RIC_BLUE_HIDDEN
+	setevent EVENT_RI_BLUEBATTLE_HIDDEN
 .finish
 	end
 
@@ -47,6 +58,16 @@ CredCheckRight:
 	waitbutton
 	closetext
 	setevent EVENT_DONE_FS_GATE_CHECK
+	setevent EVENT_MEW_SPOT_2_FOUND ; islands events initializing
+	setevent EVENT_MEW_SPOT_3_FOUND
+	setevent EVENT_MEW_SPOT_4_FOUND
+	setevent EVENT_MEW_SPOT_5_FOUND
+	setevent EVENT_MEW_SPOT_6_FOUND
+	setevent EVENT_MEW_SPOT_7_FOUND
+	setevent EVENT_MEW_SPOT_8_FOUND
+	setevent EVENT_INIT_RIC_OBJECTS_HIDDEN
+	setevent EVENT_RIC_BLUE_HIDDEN
+	setevent EVENT_RI_BLUEBATTLE_HIDDEN
 .finish
 	end
 

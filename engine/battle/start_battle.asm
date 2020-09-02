@@ -89,7 +89,7 @@ PlayBattleMusic:
 	cp NITE_F
 	jp nz, .done
 	ld de, MUSIC_JOHTO_WILD_BATTLE_NIGHT
-	jr .done
+	jp .done
 
 .kantowild
 	ld de, MUSIC_KANTO_WILD_BATTLE
@@ -99,6 +99,7 @@ PlayBattleMusic:
 	ld de, MUSIC_CHAMPION_BATTLE
 	cp CHAMPION
 	jr z, .done
+	ld de, MUSIC_BLUE_BATTLE
 	cp BLUE
 	jr z, .done
 

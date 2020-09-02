@@ -8,7 +8,6 @@ KobanClairsHouse_MapScripts:
 
 KobanClairsHouseClairScript:
 	faceplayer
-	opentext
 	checkevent EVENT_SWITCH_14
 	iftrue .AfterDratiniGift
 	checkitem MACHINE_PART
@@ -16,18 +15,26 @@ KobanClairsHouseClairScript:
 	checkevent EVENT_GOT_DRATINI
 	iffalse .GiveDratiniClair
 .AfterDratiniGift
+	checkevent EVENT_BATTLE_AVAILABLE_CLAIR
+	iftrue rematchscriptClair
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue postrematchscriptClair
+	
+	opentext
 	writetext DragonsAreGreatText
 	waitbutton
 	closetext
 	end
 	
 .NoOrbYet
+	opentext
 	writetext GoGetTheOrbText
 	waitbutton
 	closetext
 	end
 	
 .GiveDratiniClair
+	opentext
 	writetext ClairTakeThisDratiniText
 	waitbutton
 	checkcode VAR_PARTYCOUNT
@@ -52,6 +59,82 @@ KobanClairsHouseClairScript:
 	waitbutton
 	closetext
 	end
+	
+	
+rematchscriptClair:
+	opentext
+	writetext ClairRematchText
+	waitbutton
+	closetext
+	winlosstext ClairRematchWinText, 0
+	loadtrainer CLAIR, CLAIR1
+	startbattle
+	reloadmapafterbattle
+	clearevent EVENT_BATTLE_AVAILABLE_CLAIR
+	opentext
+	writetext ClairAfterRematchText
+	waitbutton
+	closetext
+	end
+
+postrematchscriptClair:
+	opentext
+	writetext ClairAfterRematchText
+	waitbutton
+	closetext
+	end
+
+ClairRematchText:
+	text "So you've met my"
+	line "cousin, LANCE."
+	
+	para "And that means"
+	line "you've beaten"
+	cont "the #MON"
+	cont "LEAGUE!"
+	
+	para "Both LANCE and I"
+	line "come from a long"
+	cont "line of powerful"
+	cont "DRAGON trainers."
+	
+	para "Oblige me the"
+	line "honor of showing"
+	cont "you my own skill!"
+	done
+
+ClairRematchWinText:
+	text "I lost?"
+	
+	para "Well, I cannot"
+	line "say it surprises"
+	cont "me much!"
+	
+	para "You wear your"
+	line "CHAMPION's title"
+	cont "with honor!"
+	done
+
+ClairAfterRematchText:
+	text "If it weren't"
+	line "for my duties"
+	cont "here at KOBAN"
+	cont "ISLAND, I could"
+	cont "be a GYM LEADER."
+	
+	para "Perhaps I'll"
+	line "consider it if"
+	cont "the LEAGUE ever"
+	cont "chooses to build"
+	cont "one here."
+	
+	para "Next time you"
+	line "see LANCE, give"
+	cont "him a reckoning"
+	cont "for my sake!"
+	done
+	
+	
 	
 ClairPlayerReceivedDratiniText:
 	text "<PLAYER> received"

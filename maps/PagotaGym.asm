@@ -23,6 +23,11 @@ PagotaGym_MapScripts:
 
 PagotaGymFalknerScript:
 	faceplayer
+	checkevent EVENT_REMATCH_AVAILABLE_FALKNER
+	iftrue rematchscriptFalkner
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue postrematchscriptFalkner
+	
 	opentext
 	checkevent EVENT_BEAT_FALKNER
 	iftrue .FightDone
@@ -68,6 +73,60 @@ PagotaGymFalknerScript:
 .NoRoomForMudSlap:
 	closetext
 	end
+
+rematchscriptFalkner:
+	opentext
+	writetext FalknerRematchText
+	waitbutton
+	closetext
+	winlosstext FalknerRematchWinText, 0
+	loadtrainer FALKNER, FALKNER2
+	startbattle
+	reloadmapafterbattle
+	clearevent EVENT_REMATCH_AVAILABLE_FALKNER
+	opentext
+	writetext FalknerAfterRematchText
+	waitbutton
+	closetext
+	end
+
+postrematchscriptFalkner:
+	opentext
+	writetext FalknerAfterRematchText
+	waitbutton
+	closetext
+	end
+
+FalknerRematchText:
+	text "I was told you"
+	line "won at the"
+	cont "#MON LEAGUE,"
+	cont "congratulations!"
+	
+	para "I've been doing"
+	line "lots of training"
+	cont "here at the"
+	cont "PAGOTA GYM."
+	
+	para "Lets see if you"
+	line "can still beat"
+	cont "me!"
+	done
+
+FalknerRematchWinText:
+	text "It's no wonder"
+	line "you won!"
+	done
+
+FalknerAfterRematchText:
+	text "I'm glad I was"
+	line "your first"
+	cont "stepping stone"
+	cont "to greatness!"
+	
+	para "Keep on fighting!"
+	done
+
 
 PagotaGymActivateRockets:
 	ifequal 7, .RadioTowerRockets

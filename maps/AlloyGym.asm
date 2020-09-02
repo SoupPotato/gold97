@@ -86,6 +86,11 @@ AlloyGym_MapScripts:
 
 AlloyGymJasmineScript:
 	faceplayer
+	checkevent EVENT_REMATCH_AVAILABLE_JASMINE
+	iftrue rematchscriptjasmine
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue postrematchscriptjasmine
+	
 	opentext
 	checkevent EVENT_BEAT_JASMINE
 	iftrue .FightDone
@@ -116,13 +121,64 @@ AlloyGymJasmineScript:
 	waitbutton
 	closetext
 	end
-
 .GotIronTail:
 	writetext Jasmine_GoodLuck
 	waitbutton
 .NoRoomForIronTail:
 	closetext
 	end
+
+
+rematchscriptjasmine:
+	opentext
+	writetext JasmineRematchText
+	waitbutton
+	closetext
+	winlosstext JasmineRematchWinText, 0
+	loadtrainer JASMINE, JASMINE2
+	startbattle
+	reloadmapafterbattle
+	clearevent EVENT_REMATCH_AVAILABLE_JASMINE
+	opentext
+	writetext JasmineAfterRematchText
+	waitbutton
+	closetext
+	end
+
+postrematchscriptjasmine:
+	opentext
+	writetext JasmineAfterRematchText
+	waitbutton
+	closetext
+	end
+
+JasmineRematchText:
+	text "I had faith that"
+	line "you would make"
+	cont "it through the"
+	cont "#MON LEAGUE!"
+	
+	para "Now, show me how"
+	line "much you've"
+	cont "improved since"
+	cont "last time!"
+	done
+
+JasmineRematchWinText:
+	text "I hold strong"
+	line "that you are"
+	cont "indeed the better"
+	cont "trainer!"
+	done
+
+JasmineAfterRematchText:
+	text "I hope to see"
+	line "you excel in"
+	cont "whatever other"
+	cont "challenges you"
+	cont "seek out!"
+	done
+
 
 AlloyGymActivateRockets:
 	ifequal 7, .RadioTowerRockets
@@ -274,7 +330,7 @@ Jasmine_GoodLuck:
 AlloyGymGuyText:
 	text "JASMINE uses the"
 	line "newly discovered"
-	cont "steel-type."
+	cont "STEEL-type."
 
 	para "I don't know very"
 	line "much about it."
@@ -283,7 +339,7 @@ AlloyGymGuyText:
 AlloyGymGuyWinText:
 	text "That was awesome."
 
-	para "The steel-type,"
+	para "The STEEL-type,"
 	line "huh?"
 
 	para "That was a close"

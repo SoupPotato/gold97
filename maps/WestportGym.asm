@@ -14,6 +14,11 @@ WestportGym_MapScripts:
 
 WestportGymBugsyScript:
 	faceplayer
+	checkevent EVENT_REMATCH_AVAILABLE_BUGSY
+	iftrue rematchscriptBugsy
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue postrematchscriptBugsy
+	
 	opentext
 	checkevent EVENT_BEAT_BUGSY
 	iftrue .FightDone
@@ -60,6 +65,68 @@ WestportGymBugsyScript:
 .NoRoomForFuryCutter:
 	closetext
 	end
+
+rematchscriptBugsy:
+	opentext
+	writetext BugsyRematchText
+	waitbutton
+	closetext
+	winlosstext BugsyRematchWinText, 0
+	loadtrainer BUGSY, BUGSY2
+	startbattle
+	reloadmapafterbattle
+	clearevent EVENT_REMATCH_AVAILABLE_BUGSY
+	opentext
+	writetext BugsyAfterRematchText
+	waitbutton
+	closetext
+	end
+
+postrematchscriptBugsy:
+	opentext
+	writetext BugsyAfterRematchText
+	waitbutton
+	closetext
+	end
+
+BugsyRematchText:
+	text "I've continued"
+	line "my deep study"
+	cont "on BUG #MON!"
+	
+	para "Allow me to"
+	line "show you the"
+	cont "fruits of my"
+	cont "labor!"
+	done
+
+BugsyRematchWinText:
+	text "Amazing!"
+	
+	para "I still have"
+	line "much to learn!"
+	done
+
+BugsyAfterRematchText:
+	text "CHAMPION, huh?"
+	
+	para "So I guess that"
+	line "makes you an"
+	cont "expert on all"
+	cont "#MON types!"
+	
+	para "I think I'll"
+	line "continue to"
+	cont "specialize in"
+	cont "BUG #MON."
+	
+	para "Every type of"
+	line "#MON has a"
+	cont "lot to learn"
+	cont "from!"
+	done
+
+
 
 WestportGymActivateRockets:
 	ifequal 7, .RadioTowerRockets

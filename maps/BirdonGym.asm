@@ -69,6 +69,11 @@ TrainerMediumRebecca:
 
 BirdonGymMortyScript:
 	faceplayer
+	checkevent EVENT_REMATCH_AVAILABLE_MORTY
+	iftrue rematchscriptMorty
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue postrematchscriptMorty
+	
 	opentext
 	checkevent EVENT_BEAT_MORTY
 	iftrue .FightDone
@@ -114,6 +119,65 @@ BirdonGymMortyScript:
 .NoRoomForShadowBall:
 	closetext
 	end
+
+rematchscriptMorty:
+	opentext
+	writetext MortyRematchText
+	waitbutton
+	closetext
+	winlosstext MortyRematchWinText, 0
+	loadtrainer MORTY, MORTY2
+	startbattle
+	reloadmapafterbattle
+	clearevent EVENT_REMATCH_AVAILABLE_MORTY
+	opentext
+	writetext MortyAfterRematchText
+	waitbutton
+	closetext
+	end
+
+postrematchscriptMorty:
+	opentext
+	writetext MortyAfterRematchText
+	waitbutton
+	closetext
+	end
+
+MortyRematchText:
+	text "Am I seeing a"
+	line "ghost, or have"
+	cont "you returned to"
+	cont "my GYM once more?"
+	
+	para "if it be true,"
+	line "then please"
+	cont "indulge me in a"
+	cont "battle once"
+	cont "again so I may"
+	cont "further my"
+	cont "training!"
+	done
+
+MortyRematchWinText:
+	text "Impeccable…"
+	done
+
+MortyAfterRematchText:
+	text "That rainbow bird"
+	line "of legend… did"
+	cont "you ever witness"
+	cont "it during your"
+	cont "travels?"
+	
+	para "If it were to"
+	line "appear for anyone"
+	cont "I would think it"
+	cont "to be you."
+	done
+
+
+
+
 
 BirdonGymActivateRockets:
 	ifequal 7, .RadioTowerRockets

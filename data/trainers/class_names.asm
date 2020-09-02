@@ -7,7 +7,7 @@ TrainerClassNames::
 	db "LEADER@"
 	db "LEADER@"
 	db "LEADER@"
-	db "LEADER@"
+	db "DRAGON CLAN@"
 	db "RIVAL@"
 	db "#MON PROF.@"
 	db "ELITE FOUR@"

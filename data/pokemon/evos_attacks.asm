@@ -1972,9 +1972,13 @@ LaprasEvosAttacks:
 	db 0 ; no more level-up moves
 
 DittoEvosAttacks:
-MettoEvosAttacks:
 	db EVOLVE_ITEM, TRADE_STONE, METTO
 	db EVOLVE_TRADE, METAL_COAT, METTO
+	db 0 ; no more evolutions
+	db 1, TRANSFORM
+	db 0 ; no more level-up moves
+	
+MettoEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TRANSFORM
 	db 0 ; no more level-up moves

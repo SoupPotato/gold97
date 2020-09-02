@@ -49,7 +49,10 @@ BrunoScript_Battle:
 	waitbutton
 	closetext
 	winlosstext BrunoScript_BrunoBeatenText, 0
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue AgathaRematchTeam
 	loadtrainer BRUNO, BRUNO1
+returntomainAgatha:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ELITE_4_BRUNO
@@ -70,6 +73,11 @@ BrunoScript_AfterBattle:
 	waitbutton
 	closetext
 	end
+
+AgathaRematchTeam:
+	loadtrainer BRUNO, BRUNO2
+	jump returntomainAgatha
+
 
 AgathasRoom_EnterMovement:
 	step UP

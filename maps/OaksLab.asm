@@ -16,9 +16,8 @@ OaksLab_MapScripts:
 	scene_script .DummyScene4 ; SCENE_ELMSLAB_UNUSED
 	scene_script .DummyScene5 ; SCENE_ELMSLAB_AIDE_GIVES_POTION
 
-	db 2 ; callbacks
+	db 1 ; callbacks
 	callback MAPCALLBACK_OBJECTS, .MoveElmCallback
-	callback MAPCALLBACK_OBJECTS, .IsBlueAtRI
 
 .MeetElm:
 	priorityjump .WalkUpToElm
@@ -44,13 +43,6 @@ OaksLab_MapScripts:
 	iftrue .Skip ; not SCENE_DEFAULT
 	moveobject ELMSLAB_ELM, 4, 2
 .Skip:
-	return
-
-.IsBlueAtRI
-	checkflag ENGINE_FLYPOINT_PEWTER ; once the player's been to yoron, blue hangs around rainbow island instead of the lab
-	iffalse .skipbluemove
-	disappear ELMSLAB_BLUE
-.skipbluemove:
 	return
 	
 
