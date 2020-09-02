@@ -25,6 +25,7 @@ OutdoorSprites:
 	dw SilentGroupSprites
 	dw RyukyuGroupSprites
 	dw CrownGroupSprites
+	dw RainbowGroupSprites
 
 
 KobanGroupSprites:
@@ -183,6 +184,7 @@ SilentGroupSprites:
 	db SPRITE_FRUIT_TREE
 	db 0 ;end
 
+RainbowGroupSprites:
 CrownGroupSprites:; actually do whatever now
 	db SPRITE_POKEFAN_M
 	db SPRITE_LASS

@@ -107,10 +107,17 @@ LoadSpecialMapPalette:
 .not_charred_summit
 	ld a, [wMapGroup]
 	cp GROUP_CHARRED_SUMMIT_CAVE
-	jp nz, .do_nothing
+	jp nz, .not_charred_summit_cave
 	ld a, [wMapNumber]
 	cp MAP_CHARRED_SUMMIT_CAVE
 	jp z, .LavaOverRedCoalOverBrownBGPalette
+.not_charred_summit_cave
+	ld a, [wMapGroup]
+	cp GROUP_RAINBOW_ISLAND
+	jp nz, .do_nothing
+	ld a, [wMapNumber]
+	cp MAP_RAINBOW_ISLAND
+	jp z, .RainbowBGPalette
 
 .do_nothing
 	and a
@@ -224,7 +231,7 @@ LoadSpecialMapPalette:
 	ret
 	
 .CharredOverBrownSkyOverYellowBGPalette
-	ld hl,CharredOverBrownSkyOverYellow
+	ld hl, CharredOverBrownSkyOverYellow
 	ld a, [wTimeOfDayPal]
 	maskbits NUM_DAYTIMES
 	ld bc, 8 palettes
@@ -238,6 +245,18 @@ LoadSpecialMapPalette:
 .TealOverBrownBGPalette
 	ld hl, TealOverBrown
 	ld bc, 8 palettes
+	ld de, wBGPals1
+	ld a, BANK(wBGPals1)
+	call FarCopyWRAM
+	scf
+	ret
+	
+.RainbowBGPalette
+	ld hl, Rainbow
+	ld a, [wTimeOfDayPal]
+	maskbits NUM_DAYTIMES
+	ld bc, 8 palettes
+	call AddNTimes
 	ld de, wBGPals1
 	ld a, BANK(wBGPals1)
 	call FarCopyWRAM
