@@ -165,7 +165,7 @@ BluePt2Text:
 	text "Look at these"
 	line "palms and grass,"
 	cont "they're totally"
-	cont "gray!"
+	cont "brown!"
 	
 	para "Old stories and"
 	line "legends of this"
