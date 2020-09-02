@@ -49,8 +49,8 @@ RainbowIsland_MapScripts:
 	changeblock $20, $4, $23
 	changeblock $20, $6, $22
 	
-	changeblock $1E, $12, $12 ; palmtrees
-	changeblock $26, $12, $12
+	changeblock $1E, $12, $8B ; palmtrees
+	changeblock $26, $12, $8B
 	changeblock $14, $14, $12
 	changeblock $C, $18, $12
 	changeblock $E, $1A, $12
@@ -81,8 +81,8 @@ RainbowIsland_MapScripts:
 	changeblock $30, $1A, $12
 	changeblock $2E, $18, $12
 	changeblock $2C, $18, $12
-	changeblock $22, $1A, $12
-	changeblock $20, $1A, $12
+	changeblock $22, $1A, $8B
+	changeblock $20, $1A, $8B
 	
 	changeblock $E, $26, $40 ; flowers
 	changeblock $E, $28, $40
