@@ -49,7 +49,10 @@ KarenScript_Battle:
 	waitbutton
 	closetext
 	winlosstext KarenScript_KarenBeatenText, 0
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue GiovanniRematchTeam
 	loadtrainer KAREN, KAREN1
+returntomainGiovanni:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ELITE_4_KAREN
@@ -70,6 +73,10 @@ KarenScript_AfterBattle:
 	waitbutton
 	closetext
 	end
+
+GiovanniRematchTeam:
+	loadtrainer KAREN, KAREN2
+	jump returntomainGiovanni
 
 GiovannisRoom_EnterMovement:
 	step UP

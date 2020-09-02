@@ -30,6 +30,7 @@ CredCheckLeft:
 	waitbutton
 	closetext
 	setevent EVENT_DONE_FS_GATE_CHECK
+	setevent EVENT_BLUE_IN_ELMS_LAB ; blue no longer in the lab at silent town
 	setevent EVENT_MEW_SPOT_2_FOUND ; islands events initializing
 	setevent EVENT_MEW_SPOT_3_FOUND
 	setevent EVENT_MEW_SPOT_4_FOUND

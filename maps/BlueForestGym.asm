@@ -14,6 +14,11 @@ BlueForestGym_MapScripts:
 
 BlueForestGymPryceScript:
 	faceplayer
+	checkevent EVENT_REMATCH_AVAILABLE_PRYCE
+	iftrue rematchscriptpryce
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue postrematchscriptpryce
+	
 	opentext
 	checkevent EVENT_BEAT_PRYCE
 	iftrue .FightDone
@@ -58,6 +63,67 @@ PryceScript_Defeat:
 BlueForestGym_NoRoomForIcyWind:
 	closetext
 	end
+
+rematchscriptpryce:
+	opentext
+	writetext PryceRematchText
+	waitbutton
+	closetext
+	winlosstext PryceRematchWinText, 0
+	loadtrainer PRYCE, PRYCE2
+	startbattle
+	reloadmapafterbattle
+	clearevent EVENT_REMATCH_AVAILABLE_PRYCE
+	opentext
+	writetext PryceAfterRematchText
+	waitbutton
+	closetext
+	end
+
+postrematchscriptpryce:
+	opentext
+	writetext PryceAfterRematchText
+	waitbutton
+	closetext
+	end
+
+PryceRematchText:
+	text "So, you have"
+	line "returned from the"
+	cont "LEAGUE."
+	
+	para "Just because you"
+	line "have climbed the"
+	cont "peak don't assume"
+	cont "you're no longer"
+	cont "subject to the"
+	cont "mountain's frozen"
+	cont "winds!"
+	
+	para "Let me show you"
+	line "the full arsenal"
+	cont "of what I've"
+	cont "learned in my"
+	cont "time!"
+	done
+
+PryceRematchWinText:
+	text "Perhaps there is"
+	line "something to be"
+	cont "said of youth…"
+	done
+
+PryceAfterRematchText:
+	text "I am impressed"
+	line "by your prowess."
+	
+	para "With your strong"
+	line "will, I know you"
+	cont "will overcome all"
+	cont "life's obstacles!"
+	done
+
+
 
 BlueForestGymActivateRockets:
 	ifequal 7, .RadioTowerRockets
@@ -172,7 +238,7 @@ BlueForestGymGuyNotAroundText:
 	
 	para "Maybe you could go"
 	line "ask him for a"
-	cont "battle..."
+	cont "battle…"
 
 PryceText_Intro:
 	text "So nice to see"
@@ -200,7 +266,7 @@ PryceText_Intro:
 	cont "experience."
 	
 	para "Come child, we"
-	line "shall do so..."
+	line "shall do so…"
 	done
 
 

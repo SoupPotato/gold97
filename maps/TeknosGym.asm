@@ -26,6 +26,11 @@ TeknosGym_MapScripts:
 
 TeknosGymWhitneyScript:
 	faceplayer
+	checkevent EVENT_REMATCH_AVAILABLE_WHITNEY
+	iftrue rematchscriptWhitney
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue postrematchscriptWhitney
+	
 	opentext
 	checkevent EVENT_BEAT_WHITNEY
 	iftrue .FightDone
@@ -68,6 +73,62 @@ TeknosGymWhitneyScript:
 .NoRoomForAttract
 	closetext
 	end
+
+rematchscriptWhitney:
+	opentext
+	writetext WhitneyRematchText
+	waitbutton
+	closetext
+	winlosstext WhitneyRematchWinText, 0
+	loadtrainer WHITNEY, WHITNEY2
+	startbattle
+	reloadmapafterbattle
+	clearevent EVENT_REMATCH_AVAILABLE_WHITNEY
+	opentext
+	writetext WhitneyAfterRematchText
+	waitbutton
+	closetext
+	end
+
+postrematchscriptWhitney:
+	opentext
+	writetext WhitneyAfterRematchText
+	waitbutton
+	closetext
+	end
+
+WhitneyRematchText:
+	text "Did you come all"
+	line "the way back here"
+	cont "just to see me?"
+	
+	para "Or did you come"
+	line "here for another"
+	cont "battle?"
+	
+	para "Either way, you"
+	line "can have both!"
+	done
+
+WhitneyRematchWinText:
+	text "Waah! No wonder"
+	line "you beat me"
+	cont "before!"
+	done
+
+WhitneyAfterRematchText:
+	text "I heard that you"
+	line "got rid of TEAM"
+	cont "ROCKET for good!"
+	
+	para "I'm glad! I"
+	line "haven't seen a"
+	cont "single ROCKET"
+	cont "since they were"
+	cont "at the AQUARIUM."
+	done
+
+
 
 TeknosGymActivateRockets:
 	ifequal 7, .RadioTowerRockets

@@ -66,7 +66,6 @@ INCLUDE "maps/Route101PagotaGate.asm"
 SECTION "Map Scripts 5", ROMX
 
 INCLUDE "maps/PagotaMart.asm"
-INCLUDE "maps/PagotaGym.asm"
 INCLUDE "maps/PagotaTrainerSchool.asm"
 INCLUDE "maps/PagotaNicknameSpeechHouse.asm"
 INCLUDE "maps/PagotaPokecenter1F.asm"
@@ -115,6 +114,7 @@ INCLUDE "maps/KantoLeftoversHouse.asm"
 INCLUDE "maps/CrownCityTrainerHouse.asm"
 INCLUDE "maps/Route118SunpointGate.asm"
 INCLUDE "maps/IsenStraitSeasidePathGate.asm"
+INCLUDE "maps/PagotaGym.asm"
 
 
 SECTION "Map Scripts 8", ROMX

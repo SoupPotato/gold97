@@ -10,6 +10,11 @@ StandGym_MapScripts:
 	
 StandGymChuckScript:
 	faceplayer
+	checkevent EVENT_REMATCH_AVAILABLE_OKERA
+	iftrue rematchscriptOkera
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue postrematchscriptOkera
+	
 	opentext
 	checkevent EVENT_BEAT_CHUCK
 	iftrue .FightDone
@@ -52,6 +57,64 @@ StandGymChuckScript:
 .BagFull:
 	closetext
 	end
+
+rematchscriptOkera:
+	opentext
+	writetext OkeraRematchText
+	waitbutton
+	closetext
+	winlosstext OkeraRematchWinText, 0
+	loadtrainer CHUCK, CHUCK2
+	startbattle
+	reloadmapafterbattle
+	clearevent EVENT_REMATCH_AVAILABLE_OKERA
+	opentext
+	writetext OkeraAfterRematchText
+	waitbutton
+	closetext
+	end
+
+postrematchscriptOkera:
+	opentext
+	writetext OkeraAfterRematchText
+	waitbutton
+	closetext
+	end
+
+OkeraRematchText:
+	text "What do you want?"
+	
+	para "Aren't you the"
+	line "CHAMPION now?"
+	
+	para "You want a second"
+	line "BADGE from me or"
+	cont "something?"
+	
+	para "Don't think I'll"
+	line "back down from"
+	cont "a challenge like"
+	cont "this!"
+	done
+
+OkeraRematchWinText:
+	text "Heh."
+	done
+
+OkeraAfterRematchText:
+	text "I wasn't really"
+	line "expecting to win,"
+	cont "but I'd never"
+	cont "back out of a"
+	cont "fight. Even if"
+	cont "all bets are"
+	cont "against me."
+	
+	para "You're the same"
+	line "way, aren't you?"
+	done
+
+
 
 ;StandGymActivateRockets:
 ;	ifequal 7, .RadioTowerRockets

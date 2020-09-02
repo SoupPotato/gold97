@@ -14,6 +14,11 @@ KantoGym_MapScripts:
 
 KantoGymErikaScript:
 	faceplayer
+	checkevent EVENT_REMATCH_AVAILABLE_RED
+	iftrue rematchscriptRed
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue postrematchscriptRed
+	
 	opentext
 	checkflag ENGINE_RISINGBADGE
 	iftrue .FightDone
@@ -35,6 +40,44 @@ KantoGymErikaScript:
 	waitbutton
 	closetext
 	end
+
+
+rematchscriptRed:
+	opentext
+	writetext RedRematchText
+	waitbutton
+	closetext
+	winlosstext RedRematchWinText, 0
+	loadtrainer RED, RED1
+	startbattle
+	reloadmapafterbattle
+	clearevent EVENT_REMATCH_AVAILABLE_RED
+	opentext
+	writetext RedAfterRematchText
+	waitbutton
+	closetext
+	end
+
+postrematchscriptRed:
+	opentext
+	writetext RedAfterRematchText
+	waitbutton
+	closetext
+	end
+
+RedRematchText:
+	text "..?"
+	done
+
+RedRematchWinText:
+	text "..!"
+	done
+
+RedAfterRematchText:
+	text "..."
+	done
+
+
 
 KantoGymStatue:
 	checkflag ENGINE_RISINGBADGE

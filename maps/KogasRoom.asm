@@ -49,7 +49,10 @@ KogaScript_Battle:
 	waitbutton
 	closetext
 	winlosstext KogaScript_KogaBeatenText, 0
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue KogaRematchTeam
 	loadtrainer KOGA, KOGA1
+returntomainKoga:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ELITE_4_KOGA
@@ -70,6 +73,10 @@ KogaScript_AfterBattle:
 	waitbutton
 	closetext
 	end
+
+KogaRematchTeam:
+	loadtrainer KOGA, KOGA2
+	jump returntomainKoga
 
 KogasRoom_EnterMovement:
 	step UP

@@ -141,6 +141,7 @@ INCLUDE "audio/music/unioncaveslow.asm"
 INCLUDE "audio/music/clair.asm"
 INCLUDE "audio/music/mobileadapter.asm"
 INCLUDE "audio/music/credits.asm"
+INCLUDE "audio/music/vsblue.asm"
 
 SECTION "Sound Effects", ROMX
 

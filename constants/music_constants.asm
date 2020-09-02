@@ -107,6 +107,7 @@
 	const MUSIC_SUICUNE_BATTLE               ; 64
 	const MUSIC_BATTLE_TOWER_LOBBY           ; 65
 	const MUSIC_MOBILE_CENTER                ; 66
+	const MUSIC_BLUE_BATTLE                  ; coral's new remix
 	const MUSIC_UNION_CAVE_SLOW
 
 ; GetMapMusic picks music for this value (see home/map.asm)
