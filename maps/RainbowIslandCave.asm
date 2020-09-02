@@ -112,7 +112,6 @@ StandingOnStartTile:
 	closetext
 	special FadeOutPalettes
 	pause 16
-	;dontrestartmapmusic
 	warpsound
 	disappear RIC_BLUE
 	setevent EVENT_RIC_BLUE_HIDDEN
