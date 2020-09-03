@@ -11,9 +11,16 @@ WhirlIslandB3F_MapScripts:
 	callback MAPCALLBACK_TILES, .AddStairs
 
 .AddStairs:
+IF DEF(_GOLD)
+	checkevent EVENT_REPAIRED_SHIP_FUEL_LINE
+	iffalse .DoneCave
+	changeblock   7, 25, $37 ; cave
+	
+ELIF DEF(_SILVER)
 	checkevent EVENT_LUGIA_CAVE_OPEN
 	iffalse .DoneCave
 	changeblock   7, 25, $37 ; cave
+ENDC
 .DoneCave:
 	return
 	
@@ -49,23 +56,7 @@ LugiaEventMainScene:
 	
 	
 SageScriptSilver:
-	checkevent EVENT_LUGIA_CAVE_OPEN
-	iftrue .DuringLugia
-	setevent EVENT_GOT_5F_SAGE_BLESSING
-	faceplayer
-	opentext
-	writetext Text_5FSage
-	waitbutton
-	closetext
-	end
-	
-.DuringLugia
-	faceplayer
-	opentext
-	writetext Text_5FSageDuringLugia
-	waitbutton
-	closetext
-	end
+	jumptext Text_5FSageDuringLugia
 	
 PlayerWalksToLugiaGroup:
 	step LEFT

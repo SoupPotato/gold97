@@ -1925,7 +1925,7 @@
 	const EVENT_FAST_SHIP_CABINS_NNW_NNE_NE_SAILOR
 	const EVENT_FAST_SHIP_B1F_SAILOR_LEFT
 	const EVENT_FAST_SHIP_B1F_SAILOR_RIGHT
-	const EVENT_FAST_SHIP_CABINS_SE_SSE_GENTLEMAN; used for returning ship part to dock sailor, also marking that islands are fully open
+	const EVENT_REPAIRED_SHIP_FUEL_LINE
 	const EVENT_FAST_SHIP_CABINS_SE_SSE_CAPTAINS_CABIN_TWIN_1; unused, needs to be reset if going to use
 	const EVENT_FAST_SHIP_CABINS_SE_SSE_CAPTAINS_CABIN_TWIN_2; used for setting up scene with captain and broken ship
 	const EVENT_OLIVINE_PORT_PASSAGE_POKEFAN_M

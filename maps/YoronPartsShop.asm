@@ -9,7 +9,7 @@ YoronPartsShop_MapScripts:
 FuelLineGuruScript:
 	faceplayer
 	opentext
-	checkevent EVENT_FAST_SHIP_CABINS_SE_SSE_GENTLEMAN
+	checkevent EVENT_REPAIRED_SHIP_FUEL_LINE
 	iftrue .SSAquaDoingGreat
 	checkevent EVENT_USED_THE_CARD_KEY_IN_THE_RADIO_TOWER
 	iffalse .GiveCard

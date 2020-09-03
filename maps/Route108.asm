@@ -63,7 +63,7 @@ TrainerLassDana1:
 	ifequal 1, .Fight1
 	ifequal 0, .LoadFight0
 .Fight4:
-	checkevent EVENT_FAST_SHIP_CABINS_SE_SSE_GENTLEMAN
+	checkevent EVENT_REPAIRED_SHIP_FUEL_LINE
 	iftrue .LoadFight4
 .Fight3:
 	checkevent EVENT_BEAT_ELITE_FOUR

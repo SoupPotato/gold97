@@ -10,7 +10,7 @@ IsenStrait_MapScripts:
 	callback MAPCALLBACK_TILES, .IsenStraitClearRocks
 	
 .IsenStraitClearRocks:
-	checkevent EVENT_FAST_SHIP_CABINS_SE_SSE_GENTLEMAN
+	checkevent EVENT_REPAIRED_SHIP_FUEL_LINE
 	iftrue .Done20
 	changeblock  51, 5, $39 ; rock
 .Done20:

@@ -31,7 +31,7 @@ AmamiTownBugCatcherScript:
 AmamiTownLassScript:
 	faceplayer
 	opentext
-	checkevent EVENT_FAST_SHIP_CABINS_SE_SSE_GENTLEMAN
+	checkevent EVENT_REPAIRED_SHIP_FUEL_LINE
 	iffalse .FirstTimeLass
 	writetext AmamiTownLassText2
 	waitbutton

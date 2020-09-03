@@ -24,7 +24,7 @@ AmamiPort_MapScripts:
 
 .LeaveFastShipScript:
 	disappear VERMILIONPORT_SAILOR1
-	checkevent EVENT_FAST_SHIP_CABINS_SE_SSE_GENTLEMAN
+	checkevent EVENT_REPAIRED_SHIP_FUEL_LINE
 	iffalse .NeedNewPart
 	applymovement PLAYER, AmamiPlayerLeavesShip
 	applymovement VERMILIONPORT_SAILOR2, AmamiSailorMovesAway
@@ -32,8 +32,6 @@ AmamiPort_MapScripts:
 	applymovement VERMILIONPORT_SAILOR2, AmamiSailorBlocksEntry
 	appear VERMILIONPORT_SAILOR1
 	setscene SCENE_DEFAULT
-;	setevent EVENT_FAST_SHIP_CABINS_SE_SSE_CAPTAINS_CABIN_TWIN_1
-;	setevent EVENT_FAST_SHIP_CABINS_SE_SSE_GENTLEMAN
 	setevent EVENT_FAST_SHIP_PASSENGERS_FIRST_TRIP
 	clearevent EVENT_OLIVINE_PORT_PASSAGE_POKEFAN_M
 	setevent EVENT_FAST_SHIP_FIRST_TIME
@@ -55,8 +53,6 @@ AmamiPort_MapScripts:
 	applymovement PLAYER, AmamiPlayerLeavesShip2
 	applymovement VERMILIONPORT_SAILOR2, AmamiSailorBlocksEntry
 	setscene SCENE_DEFAULT
-;	setevent EVENT_FAST_SHIP_CABINS_SE_SSE_CAPTAINS_CABIN_TWIN_1
-;	setevent EVENT_FAST_SHIP_CABINS_SE_SSE_GENTLEMAN
 	setevent EVENT_FAST_SHIP_PASSENGERS_FIRST_TRIP
 	clearevent EVENT_OLIVINE_PORT_PASSAGE_POKEFAN_M
 	setevent EVENT_FAST_SHIP_FIRST_TIME
@@ -68,7 +64,7 @@ AmamiPort_MapScripts:
 AmamiPortSailorGuardScript:
 	faceplayer
 	opentext
-	checkevent EVENT_FAST_SHIP_CABINS_SE_SSE_GENTLEMAN
+	checkevent EVENT_REPAIRED_SHIP_FUEL_LINE
 	iffalse .StillNeedToReturnPart
 	writetext AmamiPortSailorGoToWestportText
 	yesorno
@@ -134,7 +130,7 @@ AmamiPortSailorGuardScript:
 	writetext ThanksForTheFuelLine
 	waitbutton
 	closetext
-	setevent EVENT_FAST_SHIP_CABINS_SE_SSE_GENTLEMAN
+	setevent EVENT_REPAIRED_SHIP_FUEL_LINE
 	clearevent EVENT_TELEPORT_GUY
 	end
 	

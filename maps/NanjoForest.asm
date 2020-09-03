@@ -30,7 +30,7 @@ TriWingYoungsterScript:
 	faceplayer
 	checkevent EVENT_EXPLODING_TRAP_12
 	iftrue .AlreadyGaveTriWing
-	checkevent EVENT_FAST_SHIP_CABINS_SE_SSE_GENTLEMAN
+	checkevent EVENT_REPAIRED_SHIP_FUEL_LINE
 	iftrue .TryGivingTriWing
 .NoTriWingYet
 	opentext

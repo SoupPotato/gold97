@@ -77,7 +77,7 @@ TrainerPicnickerGina1:
 	checkevent EVENT_EXPLODING_TRAP_16
 	iftrue .LoadFight4
 .Fight3:
-	checkevent EVENT_FAST_SHIP_CABINS_SE_SSE_GENTLEMAN
+	checkevent EVENT_REPAIRED_SHIP_FUEL_LINE
 	iftrue .LoadFight3
 .Fight2:
 	checkevent EVENT_BEAT_ELITE_FOUR

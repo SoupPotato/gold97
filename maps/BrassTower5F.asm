@@ -10,9 +10,17 @@ BrassTower5F_MapScripts:
 	callback MAPCALLBACK_TILES, .AddStairs
 
 .AddStairs:
+IF DEF(_GOLD)
 	checkevent EVENT_HO_OH_STAIRS_APPEAR
 	iffalse .DoneStairs
 	changeblock   0,  5, $3C ; ladder
+	
+ELIF DEF(_SILVER)
+	checkevent EVENT_REPAIRED_SHIP_FUEL_LINE
+	iffalse .DoneStairs
+	changeblock   0,  5, $3C ; ladder
+ENDC
+
 .DoneStairs:
 	return
 

@@ -257,7 +257,7 @@ BrentBillTriviaScript:
 	jump PhoneScript_HangupText_Male
 
 IrwinRumorScript:
-	checkevent EVENT_FAST_SHIP_CABINS_SE_SSE_GENTLEMAN
+	checkevent EVENT_REPAIRED_SHIP_FUEL_LINE
 	iftrue .MtSilver
 	checkflag ENGINE_FLYPOINT_VERMILION
 	iftrue .VermilionCity
