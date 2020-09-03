@@ -126,6 +126,9 @@
 	const CYBERSHELL11
 	const RACIE_B
 	const SPAGHETTI_CULTIST
+	const CORAL
+	const PIK
+	const ACTUALLY_TC
 
 ; CreditsScript indexes (see data/credits_script.asm)
 	const_def -7

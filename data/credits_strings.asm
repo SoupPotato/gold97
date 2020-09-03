@@ -126,6 +126,9 @@ CreditsStrings:
 	dw .CyberShell11
 	dw .RacieB
 	dw .Spaghetti_Cultist
+	dw .Coral
+	dw .Pik
+	dw .ActuallyTC
 
 .SatoshiTajiri:       db "   SATOSHI TAJIRI@"         ; "たじり　さとし@"
 .JunichiMasuda:       db "   JUNICHI MASUDA@"         ; "ますだ　じゅんいち@"
@@ -255,7 +258,10 @@ CreditsStrings:
 .KoolBoyMan			  db "     KOOLBOYMAN@"	
 .CyberShell11         db "    CYBERSHELL11@"
 .RacieB               db "       RACIEB@"
-.Spaghetti_Cultist   db "  SPAGHETTI CULTIST@"
+.Spaghetti_Cultist    db "  SPAGHETTI CULTIST@"
+.Coral:               db "      CORALDEV@"
+.Pik:                 db "        PIK@"
+.ActuallyTC:          db "         TC@"
 
 .Copyright:
 	;    (C) 1  9  9  5 - 2  0  0  1     N  i  n  t  e  n  d  o

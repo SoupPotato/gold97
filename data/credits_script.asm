@@ -69,11 +69,17 @@ CreditsScript:
 	db       ATSUKO_NISHIDA, 1
 	db          MUNEO_SAITO, 2
 	db       RENA_YOSHIKAWA, 3
-	db                 ROOL, 4
-	db               SMALLS, 5
 	
 	db CREDITS_WAIT, 12
+
+	db       MONSTER_DESIGN, 0
+	db      	       ROOL, 1
+	db               SMALLS, 2
+	db           SOUR_APPLE, 3
+	db                  PIK, 4
+	db          ACTUALLY_TC, 4
 	
+	db CREDITS_WAIT, 12	
 	
 ; Clear the banner.
 	db CREDITS_CLEAR
@@ -96,6 +102,7 @@ CreditsScript:
 	db       JUNICHI_MASUDA, 1
 	db        MORIKAZU_AOKI, 2
 	db          GO_ICHINOSE, 3
+	db                CORAL, 4
 
 	db CREDITS_WAIT, 12
 
@@ -133,6 +140,7 @@ CreditsScript:
 	db         POKEDEX_TEXT, 1
 	db  TOSHINOBU_MATSUMIYA, 2
 	db                LVL_3, 3
+	db                  CAM, 4
 
 	db CREDITS_WAIT, 12
 
@@ -181,12 +189,8 @@ CreditsScript:
 	db         SATORU_IWATA, 1
 	db       SATOSHI_YAMATO, 2
 	db     SHIGERU_MIYAMOTO, 3
-	db                 ROOL, 4
-
-	db CREDITS_WAIT, 12
-
-	db            PRODUCERS, 1
-	db   TSUNEKAZU_ISHIHARA, 2
+	db   TSUNEKAZU_ISHIHARA, 4
+	db                 ROOL, 5
 
 	db CREDITS_WAIT, 12
 
