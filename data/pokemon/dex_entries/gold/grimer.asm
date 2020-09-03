@@ -5,6 +5,6 @@
 	next "loses bits of its"
 	next "body from which"
 
-	page "new GRIMER emerge."
+	page "new GRIMBY emerge."
 	next "This worsens the"
 	next "stench around it.@"
