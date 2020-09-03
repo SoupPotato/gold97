@@ -2,8 +2,8 @@
 	dw 100, 120 ; height, weight
 
 	db   "It is doused with"
-	next "mushroom spores"
-	next "when it is born."
+	next "spores from when"
+	next "it was a PARAMITE."
 
 	page "As its body grows,"
 	next "mushrooms sprout"

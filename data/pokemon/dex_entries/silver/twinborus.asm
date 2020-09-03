@@ -6,5 +6,5 @@
 	next "that has split"
 
 	page "into two separate"
-	next "#MON with unique"
+	next "#MON with two"
 	next "personalities.@"
