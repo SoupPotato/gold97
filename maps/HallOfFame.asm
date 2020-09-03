@@ -43,9 +43,9 @@ HallOfFame_MapScripts:
 	setevent EVENT_BATTLE_AVAILABLE_CLAIR
 
 	checkevent EVENT_BEAT_BLUE_ONCE_BEFORE
-	iffalse .skipblueflag
+	iffalse skipblueflag
 	clearevent EVENT_RI_BLUEBATTLE_HIDDEN
-.skipblueflag:
+skipblueflag:
 	setevent EVENT_OLIVINE_PORT_SPRITES_BEFORE_HALL_OF_FAME
 	clearevent EVENT_OLIVINE_PORT_SPRITES_AFTER_HALL_OF_FAME
 ;	setmapscene BRASS_TOWER_3F, SCENE_FINISHED
