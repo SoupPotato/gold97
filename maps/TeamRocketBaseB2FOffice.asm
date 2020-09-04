@@ -16,19 +16,7 @@
 TeamRocketBaseB2FOffice_MapScripts:
 	db 0 ; scene scripts
 
-	db 1 ; callbacks
-	callback MAPCALLBACK_OBJECTS, .ImposterandOkera
-	
-.ImposterandOkera
-	checkevent EVENT_OKERA_AT_BASE
-	iftrue .fighting
-	return
-	
-.fighting
-	appear TEAMROCKETBASEB1F_OKERA2
-	appear TEAMROCKETBASEB1F_IMPOSTER2
-	return
-	
+	db 0 ; callbacks
 
 TeamRocketBaseB2FOfficeHyperPotion:
 	itemball HYPER_POTION

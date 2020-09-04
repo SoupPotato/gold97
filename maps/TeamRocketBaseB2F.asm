@@ -191,9 +191,6 @@ GruntM17AfterBattleText:
 	line "our names."
 	done
 
-
-
-
 TeamRocketBaseB2F_MapEvents:
 	db 0, 0 ; filler
 

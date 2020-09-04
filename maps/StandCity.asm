@@ -120,6 +120,7 @@ ImposterSceneScript:
 	setevent EVENT_ILEX_FOREST_APPRENTICE
 	setscene SCENE_DEFAULT
 	setevent EVENT_OKERA_AT_BASE
+	setevent EVENT_IMPOSTER_FIGHTING_OKERA
 	end
 
 
