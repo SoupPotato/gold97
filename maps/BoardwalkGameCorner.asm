@@ -49,7 +49,7 @@ MoveTutorInsideScript:
 BoardwalkGameCornerCoinVendorScript:
 	jumpstd gamecornercoinvendor
 
-BoardwalkGameCornerTMVendorScript:
+BoardwalkGameCornerSpecialVendorScript:
 	faceplayer
 	opentext
 	writetext BoardwalkGameCornerPrizeVendorIntroText
@@ -57,60 +57,229 @@ BoardwalkGameCornerTMVendorScript:
 	checkitem COIN_CASE
 	iffalse BoardwalkGameCornerPrizeVendor_NoCoinCaseScript
 	writetext BoardwalkGameCornerPrizeVendorWhichPrizeText
-BoardwalkGameCornerTMVendor_LoopScript:
 	special DisplayCoinCaseBalance
-	loadmenu BoardwalkGameCornerTMVendorMenuHeader
+	loadmenu BoardwalkGameCornerSpecialVendorMenuHeader
 	verticalmenu
 	closewindow
-	ifequal 1, .Poison
-	ifequal 2, .Trade
-	ifequal 3, .Moon
+	ifequal 1, BoardwalkGameCornerStoneVendorScript
+	ifequal 2, BoardwalkGameCornerItemVendorScript
+	jump BoardwalkGameCornerPrizeVendor_CancelPurchaseScript
+	
+BoardwalkGameCornerStoneVendorScript:
+	special DisplayCoinCaseBalance
+	loadmenu BoardwalkGameCornerStoneVendorMenuHeader
+	verticalmenu
+	closewindow
+	ifequal 1, .FireStone
+	ifequal 2, .ThunderStone
+	ifequal 3, .WaterStone
+	ifequal 4, .LeafStone
+	ifequal 5, .NextMenu
 	jump BoardwalkGameCornerPrizeVendor_CancelPurchaseScript
 
-.Poison:
-	checkcoins 800
+.FireStone:
+	checkcoins 1000
+	ifequal HAVE_LESS, BoardwalkGameCornerPrizeVendor_NotEnoughCoinsScript
+	itemtotext FIRE_STONE, MEM_BUFFER_0
+	scall BoardwalkGameCornerPrizeVendor_ConfirmPurchaseScript
+	iffalse BoardwalkGameCornerPrizeVendor_CancelPurchaseScript
+	giveitem FIRE_STONE
+	iffalse BoardwalkGameCornerPrizeMonVendor_NoRoomForPrizeScript
+	takecoins 1000
+	jump BoardwalkGameCornerStoneVendor_FinishScript
+
+.ThunderStone:
+	checkcoins 1000
+	ifequal HAVE_LESS, BoardwalkGameCornerPrizeVendor_NotEnoughCoinsScript
+	itemtotext THUNDERSTONE, MEM_BUFFER_0
+	scall BoardwalkGameCornerPrizeVendor_ConfirmPurchaseScript
+	iffalse BoardwalkGameCornerPrizeVendor_CancelPurchaseScript
+	giveitem THUNDERSTONE
+	iffalse BoardwalkGameCornerPrizeMonVendor_NoRoomForPrizeScript
+	takecoins 1000
+	jump BoardwalkGameCornerStoneVendor_FinishScript
+
+.WaterStone:
+	checkcoins 1000
+	ifequal HAVE_LESS, BoardwalkGameCornerPrizeVendor_NotEnoughCoinsScript
+	itemtotext WATER_STONE, MEM_BUFFER_0
+	scall BoardwalkGameCornerPrizeVendor_ConfirmPurchaseScript
+	iffalse BoardwalkGameCornerPrizeVendor_CancelPurchaseScript
+	giveitem WATER_STONE
+	iffalse BoardwalkGameCornerPrizeMonVendor_NoRoomForPrizeScript
+	takecoins 1000
+	jump BoardwalkGameCornerStoneVendor_FinishScript
+	
+.LeafStone:
+	checkcoins 1000
+	ifequal HAVE_LESS, BoardwalkGameCornerPrizeVendor_NotEnoughCoinsScript
+	itemtotext LEAF_STONE, MEM_BUFFER_0
+	scall BoardwalkGameCornerPrizeVendor_ConfirmPurchaseScript
+	iffalse BoardwalkGameCornerPrizeVendor_CancelPurchaseScript
+	giveitem LEAF_STONE
+	iffalse BoardwalkGameCornerPrizeMonVendor_NoRoomForPrizeScript
+	takecoins 1000
+	jump BoardwalkGameCornerStoneVendor_FinishScript
+	
+.PoisonStone:
+	checkcoins 1000
 	ifequal HAVE_LESS, BoardwalkGameCornerPrizeVendor_NotEnoughCoinsScript
 	itemtotext POISON_STONE, MEM_BUFFER_0
 	scall BoardwalkGameCornerPrizeVendor_ConfirmPurchaseScript
 	iffalse BoardwalkGameCornerPrizeVendor_CancelPurchaseScript
 	giveitem POISON_STONE
 	iffalse BoardwalkGameCornerPrizeMonVendor_NoRoomForPrizeScript
-	takecoins 800
-	jump BoardwalkGameCornerTMVendor_FinishScript
-
-.Trade:
-	checkcoins 800
+	takecoins 1000
+	jump BoardwalkGameCornerStoneVendor_FinishScript
+	
+.HeartStone:
+	checkcoins 1000
 	ifequal HAVE_LESS, BoardwalkGameCornerPrizeVendor_NotEnoughCoinsScript
-	itemtotext TRADE_STONE, MEM_BUFFER_0
+	itemtotext HEART_STONE, MEM_BUFFER_0
 	scall BoardwalkGameCornerPrizeVendor_ConfirmPurchaseScript
 	iffalse BoardwalkGameCornerPrizeVendor_CancelPurchaseScript
-	giveitem TRADE_STONE
+	giveitem HEART_STONE
 	iffalse BoardwalkGameCornerPrizeMonVendor_NoRoomForPrizeScript
-	takecoins 800
-	jump BoardwalkGameCornerTMVendor_FinishScript
-
-.Moon:
-	checkcoins 800
+	takecoins 1000
+	jump BoardwalkGameCornerStoneVendor_FinishScript
+	
+.MoonStone:
+	checkcoins 1000
 	ifequal HAVE_LESS, BoardwalkGameCornerPrizeVendor_NotEnoughCoinsScript
 	itemtotext MOON_STONE, MEM_BUFFER_0
 	scall BoardwalkGameCornerPrizeVendor_ConfirmPurchaseScript
 	iffalse BoardwalkGameCornerPrizeVendor_CancelPurchaseScript
 	giveitem MOON_STONE
 	iffalse BoardwalkGameCornerPrizeMonVendor_NoRoomForPrizeScript
-	takecoins 800
-	jump BoardwalkGameCornerTMVendor_FinishScript
+	takecoins 1000
+	jump BoardwalkGameCornerStoneVendor_FinishScript
+	
+.NextMenu
+	loadmenu BoardwalkGameCornerStoneVendorMenu2Header
+	verticalmenu
+	closewindow
+	ifequal 1, .PoisonStone
+	ifequal 2, .HeartStone
+	ifequal 3, .MoonStone
+	jump BoardwalkGameCornerPrizeVendor_CancelPurchaseScript
+	
+BoardwalkGameCornerItemVendorScript:
+	special DisplayCoinCaseBalance
+	loadmenu BoardwalkGameCornerItemVendorMenuHeader
+	verticalmenu
+	closewindow
+	ifequal 1, .KingsRock
+	ifequal 2, .MetalCoat
+	ifequal 3, .CovenantOrb
+	jump BoardwalkGameCornerPrizeVendor_CancelPurchaseScript
+
+.KingsRock:
+	checkcoins 2000
+	ifequal HAVE_LESS, BoardwalkGameCornerPrizeVendor_NotEnoughCoinsScript
+	itemtotext KINGS_ROCK, MEM_BUFFER_0
+	scall BoardwalkGameCornerPrizeVendor_ConfirmPurchaseScript
+	iffalse BoardwalkGameCornerPrizeVendor_CancelPurchaseScript
+	giveitem KINGS_ROCK
+	iffalse BoardwalkGameCornerPrizeMonVendor_NoRoomForPrizeScript
+	takecoins 2000
+	jump BoardwalkGameCornerItemVendor_FinishScript
+
+.MetalCoat:
+	checkcoins 2000
+	ifequal HAVE_LESS, BoardwalkGameCornerPrizeVendor_NotEnoughCoinsScript
+	itemtotext METAL_COAT, MEM_BUFFER_0
+	scall BoardwalkGameCornerPrizeVendor_ConfirmPurchaseScript
+	iffalse BoardwalkGameCornerPrizeVendor_CancelPurchaseScript
+	giveitem METAL_COAT
+	iffalse BoardwalkGameCornerPrizeMonVendor_NoRoomForPrizeScript
+	takecoins 2000
+	jump BoardwalkGameCornerItemVendor_FinishScript
+
+.CovenantOrb:
+	checkcoins 3000
+	ifequal HAVE_LESS, BoardwalkGameCornerPrizeVendor_NotEnoughCoinsScript
+	itemtotext COVENANT_ORB, MEM_BUFFER_0
+	scall BoardwalkGameCornerPrizeVendor_ConfirmPurchaseScript
+	iffalse BoardwalkGameCornerPrizeVendor_CancelPurchaseScript
+	giveitem COVENANT_ORB
+	iffalse BoardwalkGameCornerPrizeMonVendor_NoRoomForPrizeScript
+	takecoins 3000
+	jump BoardwalkGameCornerItemVendor_FinishScript
+	
+BoardwalkGameCornerSpecialVendorMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 3, 19, TEXTBOX_Y - 2
+	dw .MenuDataSpecial
+	db 1 ; default option
+
+.MenuDataSpecial:
+	db STATICMENU_CURSOR ; flags
+	db 3 ; items
+	db "EVOLUTION STONES@"
+	db "EVOLUTION ITEMS@"
+	db "CANCEL@"
+
+BoardwalkGameCornerStoneVendorMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 2, 19, TEXTBOX_Y - -1
+	dw .MenuDataStone
+	db 1 ; default option
+
+.MenuDataStone:
+	db STATICMENU_CURSOR ; flags
+	db 5 ; items
+	db "FIRE STONE   1000@"
+	db "THUNDERSTONE 1000@"
+	db "WATER STONE  1000@"
+	db "LEAF STONE   1000@"
+	db "NEXT@"
+	
+BoardwalkGameCornerStoneVendorMenu2Header
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 2, 19, TEXTBOX_Y - 1
+	dw .MenuDataStone2
+	db 1 ; default option
+	
+.MenuDataStone2:
+	db STATICMENU_CURSOR ; flags
+	db 4 ; items
+	db "POISON STONE 1000@"
+	db "HEART STONE  1000@"
+	db "MOON STONE   1000@"
+	db "CANCEL@"
+	
+BoardwalkGameCornerItemVendorMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 2, 19, TEXTBOX_Y - 1
+	dw .MenuDataItems
+	db 1 ; default option
+
+.MenuDataItems:
+	db STATICMENU_CURSOR ; flags
+	db 4 ; items
+	db "KING'S ROCK  2000@"
+	db "METAL COAT   2000@"
+	db "COVENANT ORB 3000@"
+	db "CANCEL@"
+	
+BoardwalkGameCornerStoneVendor_FinishScript:
+	waitsfx
+	playsound SFX_TRANSACTION
+	writetext BoardwalkGameCornerPrizeVendorHereYouGoText
+	waitbutton
+	jump BoardwalkGameCornerStoneVendorScript
+	
+BoardwalkGameCornerItemVendor_FinishScript:
+	waitsfx
+	playsound SFX_TRANSACTION
+	writetext BoardwalkGameCornerPrizeVendorHereYouGoText
+	waitbutton
+	jump BoardwalkGameCornerItemVendorScript
 
 BoardwalkGameCornerPrizeVendor_ConfirmPurchaseScript:
 	writetext BoardwalkGameCornerPrizeVendorConfirmPrizeText
 	yesorno
 	end
-
-BoardwalkGameCornerTMVendor_FinishScript:
-	waitsfx
-	playsound SFX_TRANSACTION
-	writetext BoardwalkGameCornerPrizeVendorHereYouGoText
-	waitbutton
-	jump BoardwalkGameCornerTMVendor_LoopScript
 
 BoardwalkGameCornerPrizeVendor_NotEnoughCoinsScript:
 	writetext BoardwalkGameCornerPrizeVendorNeedMoreCoinsText
@@ -135,20 +304,6 @@ BoardwalkGameCornerPrizeVendor_NoCoinCaseScript:
 	waitbutton
 	closetext
 	end
-
-BoardwalkGameCornerTMVendorMenuHeader:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 2, 19, TEXTBOX_Y - 1
-	dw .MenuData
-	db 1 ; default option
-
-.MenuData:
-	db STATICMENU_CURSOR ; flags
-	db 4 ; items
-	db "POISON STONE  800@"
-	db "TRADE STONE   800@"
-	db "MOON STONE    800@"
-	db "CANCEL@"
 
 BoardwalkGameCornerPrizeMonVendorScript:
 	faceplayer
@@ -477,7 +632,7 @@ BoardwalkGameCorner_MapEvents:
 
 	db 12 ; object events
 	object_event  3,  2, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BoardwalkGameCornerCoinVendorScript, -1
-	object_event 16,  2, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BoardwalkGameCornerTMVendorScript, -1
+	object_event 16,  2, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BoardwalkGameCornerSpecialVendorScript, -1
 	object_event 18,  2, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BoardwalkGameCornerPrizeMonVendorScript, -1
 	object_event  8,  7, SPRITE_PHARMACIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, DAY, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BoardwalkGameCornerPharmacistScript, -1
 	object_event  8,  7, SPRITE_PHARMACIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, NITE, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BoardwalkGameCornerPharmacistScript, -1
