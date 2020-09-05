@@ -485,7 +485,7 @@ SlotsAction_PayoutAnim:
 	ld [hl], d
 	ld a, [wSlotsDelay]
 	and $7
-	ret z ; ret nz would be more appropriate
+	ret nz ; fixed
 	ld de, SFX_GET_COIN_FROM_SLOTS
 	call PlaySFX
 	ret

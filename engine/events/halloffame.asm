@@ -359,7 +359,7 @@ _HallOfFamePC:
 	pop hl
 	call DisplayHOFMon
 	ld a, [wHallOfFameTempWinCount]
-	cp HOF_MASTER_COUNT + 1 ; should be HOF_MASTER_COUNT
+	cp HOF_MASTER_COUNT ; fixed
 	jr c, .print_num_hof
 	ld de, .HOFMaster
 	hlcoord 1, 2
