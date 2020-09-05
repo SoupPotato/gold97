@@ -609,7 +609,8 @@ BluApricornDesc:
 	db   "A blue APRICORN.@"
 
 TeruSama6Desc:
-	db   "?@"
+	db   "Raises #MON"
+	next "catch rate. (HOLD)@"
 
 AmuletCoinDesc:
 	db   "Doubles monetary"
@@ -645,7 +646,8 @@ BlkApricornDesc:
 	next "@"
 
 TeruSama7Desc:
-	db   "?@"
+	db   "Raises #MON"
+	next "catch rate. (HOLD)@"
 
 PnkApricornDesc:
 	db   "A pink APRICORN."
