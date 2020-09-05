@@ -11,7 +11,6 @@
 	const GOLDENRODCITY_ROCKET4
 	const GOLDENRODCITY_ROCKET5
 	const GOLDENRODCITY_ROCKET6
-	const GOLDENRODCITY_MOVETUTOR
 	const GOLDENRODCITY_FAIRY
 	const GOLDENRODCITY_ROCKETEXTRA
 	const GOLDENRODCITY_SILVER
@@ -19,138 +18,13 @@
 WestportCity_MapScripts:
 	db 0 ; scene scripts
 
-	db 2 ; callbacks
+	db 1 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
-	callback MAPCALLBACK_OBJECTS, .MoveTutor
 
 .FlyPoint:
 	setflag ENGINE_FLYPOINT_GOLDENROD
 	setflag ENGINE_REACHED_GOLDENROD
 	return
-
-.MoveTutor:
-	checkevent EVENT_BEAT_ELITE_FOUR
-	iffalse .MoveTutorDone
-	checkitem COIN_CASE
-	iffalse .MoveTutorDisappear
-	checkcode VAR_WEEKDAY
-	ifequal WEDNESDAY, .MoveTutorAppear
-	ifequal SATURDAY, .MoveTutorAppear
-.MoveTutorDisappear:
-	disappear GOLDENRODCITY_MOVETUTOR
-	return
-
-.MoveTutorAppear:
-	checkflag ENGINE_DAILY_MOVE_TUTOR
-	iftrue .MoveTutorDone
-	appear GOLDENRODCITY_MOVETUTOR
-.MoveTutorDone:
-	return
-
-MoveTutorScript:
-	faceplayer
-	opentext
-	writetext UnknownText_0x199042
-	yesorno
-	iffalse .Refused
-	special DisplayCoinCaseBalance
-	writetext UnknownText_0x199090
-	yesorno
-	iffalse .Refused2
-	checkcoins 4000
-	ifequal HAVE_LESS, .NotEnoughMoney
-	writetext UnknownText_0x1990ce
-	loadmenu .MoveMenuHeader
-	verticalmenu
-	closewindow
-	ifequal MOVETUTOR_FLAMETHROWER, .Flamethrower
-	ifequal MOVETUTOR_THUNDERBOLT, .Thunderbolt
-	ifequal MOVETUTOR_ICE_BEAM, .IceBeam
-	jump .Incompatible
-
-.Flamethrower:
-	writebyte MOVETUTOR_FLAMETHROWER
-	writetext UnknownText_0x1991cf
-	special MoveTutor
-	ifequal FALSE, .TeachMove
-	jump .Incompatible
-
-.Thunderbolt:
-	writebyte MOVETUTOR_THUNDERBOLT
-	writetext UnknownText_0x1991cf
-	special MoveTutor
-	ifequal FALSE, .TeachMove
-	jump .Incompatible
-
-.IceBeam:
-	writebyte MOVETUTOR_ICE_BEAM
-	writetext UnknownText_0x1991cf
-	special MoveTutor
-	ifequal FALSE, .TeachMove
-	jump .Incompatible
-
-.MoveMenuHeader:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 2, 15, TEXTBOX_Y - 1
-	dw .MenuData
-	db 1 ; default option
-
-.MenuData:
-	db STATICMENU_CURSOR ; flags
-	db 4 ; items
-	db "FLAMETHROWER@"
-	db "THUNDERBOLT@"
-	db "ICE BEAM@"
-	db "CANCEL@"
-
-.Refused:
-	writetext UnknownText_0x1990b4
-	waitbutton
-	closetext
-	end
-
-.Refused2:
-	writetext UnknownText_0x199107
-	waitbutton
-	closetext
-	end
-
-.TeachMove:
-	writetext UnknownText_0x19913a
-	buttonsound
-	takecoins 4000
-	waitsfx
-	playsound SFX_TRANSACTION
-	special DisplayCoinCaseBalance
-	writetext UnknownText_0x19918b
-	waitbutton
-	closetext
-	checkcode VAR_FACING
-	ifequal LEFT, .WalkAroundPlayer
-	applymovement GOLDENRODCITY_MOVETUTOR, MovementData_0x198a5f
-	jump .GoInside
-
-.WalkAroundPlayer:
-	applymovement GOLDENRODCITY_MOVETUTOR, MovementData_0x198a63
-.GoInside:
-	playsound SFX_ENTER_DOOR
-	disappear GOLDENRODCITY_MOVETUTOR
-	clearevent EVENT_GOLDENROD_GAME_CORNER_MOVE_TUTOR
-	setflag ENGINE_DAILY_MOVE_TUTOR
-	waitsfx
-	end
-
-.Incompatible:
-	writetext UnknownText_0x1991a4
-	waitbutton
-	closetext
-	end
-
-.NotEnoughMoney:
-	writetext UnknownText_0x1991ac
-	waitbutton
-	closetext
-	end
 
 
 WestportCityYoungster1Script:
@@ -584,68 +458,6 @@ GoldenrodUndergroundSignText:
 	line "UNDERGROUND ENTRY"
 	done
 
-UnknownText_0x199042:
-	text "I can teach your"
-	line "#MON amazing"
-
-	para "moves if you'd"
-	line "like."
-
-	para "Should I teach a"
-	line "new move?"
-	done
-
-UnknownText_0x199090:
-	text "It will cost you"
-	line "4000 coins. Okay?"
-	done
-
-UnknownText_0x1990b4:
-	text "Aww… But they're"
-	line "amazing…"
-	done
-
-UnknownText_0x1990ce:
-	text "Wahahah! You won't"
-	line "regret it!"
-
-	para "Which move should"
-	line "I teach?"
-	done
-
-UnknownText_0x199107:
-	text "Hm, too bad. I'll"
-	line "have to get some"
-	cont "cash from home…"
-	done
-
-UnknownText_0x19913a:
-	text "If you understand"
-	line "what's so amazing"
-
-	para "about this move,"
-	line "you've made it as"
-	cont "a trainer."
-	done
-
-UnknownText_0x19918b:
-	text "Wahahah!"
-	line "Farewell, kid!"
-	done
-
-UnknownText_0x1991a4:
-	text "B-but…"
-	done
-
-UnknownText_0x1991ac:
-	text "…You don't have"
-	line "enough coins here…"
-	done
-
-UnknownText_0x1991cf:
-	text_start
-	done
-
 WestportCity_MapEvents:
 	db 0, 0 ; filler
 
@@ -682,7 +494,7 @@ WestportCity_MapEvents:
 	bg_event 10,  7, BGEVENT_READ, WestportCityDocksSign
 	bg_event 14, 14, BGEVENT_READ, GoldenrodUndergroundSign
 
-	db 16 ; object events
+	db 15 ; object events
 	object_event 21, 21, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WestportCityYoungster1Script, EVENT_GOLDENROD_CITY_CIVILIANS
 	object_event 23, 16, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, WestportCityCooltrainerF1Script, EVENT_GOLDENROD_CITY_CIVILIANS
 	object_event 27, 10, SPRITE_ROCKER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, WestportCityCooltrainerF2Script, EVENT_GOLDENROD_CITY_CIVILIANS
@@ -695,7 +507,6 @@ WestportCity_MapEvents:
 	object_event 14, 20, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WestportCityRocket4Script, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
 	object_event 15, 20, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WestportCityRocket5Script, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
 	object_event 32, 20, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WestportCityRocket6Script, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
-	object_event 15, 22, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, MoveTutorScript, EVENT_GOLDENROD_CITY_MOVE_TUTOR
 	object_event 28, 14, SPRITE_FAIRY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, WestportCityMonScript, EVENT_GOLDENROD_CITY_CIVILIANS
 	object_event 18, 13, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WestportCityRocket5Script, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
 	object_event -5, -5, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
