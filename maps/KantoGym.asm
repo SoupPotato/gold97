@@ -372,7 +372,7 @@ ErikaBeatenText:
 
 PlayerReceivedRainbowBadgeText:
 	text "<PLAYER> received"
-	line "EARTHBADGE."
+	line "INDIGOBADGE."
 	done
 
 ErikaExplainTMText:

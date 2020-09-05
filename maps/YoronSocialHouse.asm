@@ -71,7 +71,7 @@ YoronSocialHouseN64LassUpMovement:
 	step_end
 	
 YoronSocialHouseYoungsterText:
-	text "I think WILL is"
+	text "I think KOGA is"
 	line "the coolest member"
 	cont "of the ELITE FOUR."
 	para "It's not even"
@@ -80,8 +80,8 @@ YoronSocialHouseYoungsterText:
 	
 YoronSocialHouseCooltrainerfText:
 	text "It's definitely"
-	line "MISTY who is the"
-	cont "coolest!"
+	line "LORELEI who is"
+	cont "the coolest!"
 	para "She has so much"
 	line "style!"
 	done
@@ -144,8 +144,8 @@ YoronSocialHouse_MapEvents:
 
 
 	db 5 ; object events
-	object_event  5,  1, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, YoronSocialHouseN64LassScript, EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_3
-	object_event  3,  3, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, YoronSocialHouseYoungsterScript, -1
-	object_event  0,  3, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, YoronSocialHouseCooltrainerfScript, -1
-	object_event  6,  5, SPRITE_POKEFAN_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, YoronSocialHousePokefanfScript, -1
-	object_event  7,  3, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, YoronSocialHouseFisherScript, -1
+	object_event  5,  1, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, YoronSocialHouseN64LassScript, EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_3
+	object_event  3,  3, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, YoronSocialHouseYoungsterScript, -1
+	object_event  0,  3, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, YoronSocialHouseCooltrainerfScript, -1
+	object_event  6,  5, SPRITE_POKEFAN_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, YoronSocialHousePokefanfScript, -1
+	object_event  7,  3, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, YoronSocialHouseFisherScript, -1

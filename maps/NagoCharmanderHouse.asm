@@ -34,6 +34,7 @@ NagoCharmanderHouseTeacher:
 	givepoke CHARMANDER, 5
 	writetext GiveCharmanderText
 	waitbutton
+	disappear VERMILION_CHARMANDER_1
 	closetext
 	setevent EVENT_EXPLODING_TRAP_6
 	end
@@ -114,7 +115,7 @@ NagoCharmanderHouse_MapEvents:
 	db 0 ; bg events
 
 	db 7 ; object events
-	object_event  9,  7, SPRITE_CHARMANDER, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, NagoCharmanderHouseCharmander, -1
+	object_event  9,  7, SPRITE_CHARMANDER, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, NagoCharmanderHouseCharmander, EVENT_EXPLODING_TRAP_6
 	object_event  6,  2, SPRITE_CHARMANDER, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, NagoCharmanderHouseCharmander, -1
 	object_event  8,  1, SPRITE_CHARMANDER, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, NagoCharmanderHouseCharmander, -1
 	object_event  4,  5, SPRITE_CHARMANDER, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, NagoCharmanderHouseCharmander, -1

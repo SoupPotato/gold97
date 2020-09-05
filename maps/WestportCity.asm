@@ -384,7 +384,7 @@ SilverHasItFiguredOut2:
 	cont "ALLOY CITY."
 	
 	para "He's got some"
-	line "relly interesting"
+	line "very interesting"
 	cont "stories!"
 	
 	para "Maybe you should"

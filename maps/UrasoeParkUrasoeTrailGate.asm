@@ -11,7 +11,7 @@ UrasoeParkUrasoeTrailGateOfficerScript:
 
 UrasoeParkUrasoeTrailGateOfficerText:
 	text "Have you been to"
-	line "WEST CITY?"
+	line "WESTPORT CITY?"
 
 	para "There's a tall"
 	line "RADIO TOWER there."

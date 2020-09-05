@@ -30,32 +30,57 @@ BattleTowerOutsideSailorScript:
 BattleTowerOutsideSign:
 	jumptext BattleTowerOutsideSignText
 	
-LassNewBTScript:
-	jumptextfaceplayer BattleTowerOutsideYoungsterText_NotYetOpen
-
-BattleTowerOutsideYoungsterText_NotYetOpen:
-; used now
-	text "Wow, the BATTLE"
-	line "TOWER is huge! My"
-
-	para "neck is tired from"
-	line "looking up at it."
+ThiefNewBTScript:
+	faceplayer
+	opentext
+	checkevent EVENT_GOT_EXTRA_THIEF_TM
+	iftrue .afterwards
+	writetext ThiefManIntroText
+	waitbutton
+	verbosegiveitem TM_THIEF
+	setevent EVENT_GOT_EXTRA_THIEF_TM
+.afterwards:
+	writetext ThiefManSecondText
+	waitbutton
+	closetext
+	end
+	
+ThiefManIntroText:
+	text "Psst..."
+	line "Hey kid..."
+	
+	para "Ya wanna know"
+	line "how to win at"
+	cont "the BATTLE TOWER?"
+	
+	para "You need items"
+	line "to put on your"
+	cont "#MON!"
+	
+	para "But held items are"
+	line "hard to come by,"
+	cont "right?"
+	
+	para "Here, I got a lil'"
+	line "somethin' to make"
+	cont "em' easier to get!"
 	done
 
-BattleTowerOutsideYoungsterText_Mobile:
-; unreferenced
-	text "Wow, the BATTLE"
-	line "TOWER is huge!"
-
-	para "Since there are a"
-	line "whole bunch of"
-
-	para "trainers inside,"
-	line "there must also be"
-
-	para "a wide variety of"
-	line "#MON."
+ThiefManSecondText:
+	text "With THIEF, you"
+	line "can snatch the"
+	cont "held items right"
+	cont "off trainers!"
+	
+	para "I bet if you go"
+	line "and try this on"
+	cont "the GYM LEADERS"
+	cont "offering rematch"
+	cont "battles, you'll"
+	cont "find all kinds"
+	cont "of things..."
 	done
+
 
 BattleTowerOutsideYoungsterText:
 	text "Wow, the BATTLE"
@@ -64,18 +89,6 @@ BattleTowerOutsideYoungsterText:
 	para "There must be many"
 	line "kinds of #MON"
 	cont "in there!"
-	done
-
-BattleTowerOutsideBuenaText_NotYetOpen:
-; unreferenced
-	text "What on earth do"
-	line "they do here?"
-
-	para "If the name says"
-	line "anything, I guess"
-
-	para "it must be for"
-	line "#MON battles."
 	done
 
 BattleTowerOutsideBuenaText:
@@ -89,17 +102,6 @@ BattleTowerOutsideBuenaText:
 	line "battle…"
 	done
 
-BattleTowerOutsideSailorText_Mobile:
-; unreferenced
-	text "Ehehehe…"
-	line "I sneaked out of"
-	cont "work to come here."
-
-	para "I'm never giving"
-	line "up until I become"
-	cont "a LEADER!"
-	done
-
 BattleTowerOutsideSailorText:
 	text "Hehehe, I snuck"
 	line "out from work."
@@ -111,11 +113,6 @@ BattleTowerOutsideSailorText:
 	line "all. That I must!"
 	done
 
-BattleTowerOutsideSignText_NotYetOpen:
-; unused; originally shown when the Battle Tower was closed
-	text "BATTLE TOWER"
-	done
-
 BattleTowerOutsideSignText:
 	text "BATTLE TOWER"
 
@@ -123,16 +120,6 @@ BattleTowerOutsideSignText:
 	line "Trainer Challenge!"
 	done
 
-BattleTowerOutsideText_DoorsClosed:
-; unused; originally shown when the Battle Tower was closed
-	text "The BATTLE TOWER's"
-	line "doors are closed…"
-	done
-
-BattleTowerOutsideText_DoorsOpen:
-; unused; originally shown after the Battle Tower opened
-	text "It's open!"
-	done
 
 BattleTowerOutside_MapEvents:
 	db 0, 0 ; filler
@@ -151,4 +138,4 @@ BattleTowerOutside_MapEvents:
 	object_event  6, 12, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BattleTowerOutsideYoungsterScript, -1
 	object_event 13, 13, SPRITE_BUENA, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, BattleTowerOutsideBuenaScript, -1
 	object_event 12, 18, SPRITE_SAILOR, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BattleTowerOutsideSailorScript, EVENT_BATTLE_TOWER_OUTSIDE_SAILOR_NEW
-	object_event  5, 17, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LassNewBTScript, -1
+	object_event  5, 17, SPRITE_PHARMACIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ThiefNewBTScript, -1
