@@ -66,11 +66,8 @@ BattleCommand_Teleport:
 	srl b
 	srl b
 	cp b
-	; This does the wrong thing. What was
-	; probably intended was jr c, .failed
-	; The way this is made makes enemy use
-	; of Teleport always succeed if able
-	jr nc, .run_away
+	; fixed
+	jr c, .failed
 .run_away
 	call UpdateBattleMonInParty
 	xor a

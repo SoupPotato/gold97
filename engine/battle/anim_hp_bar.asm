@@ -179,16 +179,13 @@ LongAnim_UpdateVariables:
 	ld c, a
 	ld a, [hli]
 	ld b, a
-	; This routine is buggy. The result from ComputeHPBarPixels is stored
-	; in e. However, the pop de opcode deletes this result before it is even
-	; used. The game then proceeds as though it never deleted that output.
-	; To fix, uncomment the line below.
+	; fixed
 	call ComputeHPBarPixels
-	; ld a, e
+	ld a, e
 	pop bc
 	pop de
 	pop hl
-	ld a, e ; Comment or delete this line to fix the above bug.
+	;ld a, e ; Comment or delete this line to fix the above bug.
 	ld hl, wCurHPBarPixels
 	cp [hl]
 	jr z, .loop
@@ -373,9 +370,7 @@ ShortHPBar_CalcPixelFrame:
 	call AddNTimes
 
 	ld b, 0
-; This routine is buggy. If [wCurHPAnimMaxHP] * [wCurHPBarPixels] is
-; divisible by HP_BAR_LENGTH_PX, the loop runs one extra time.
-; To fix, uncomment the line below.
+; fixed
 .loop
 	ld a, l
 	sub HP_BAR_LENGTH_PX
@@ -383,7 +378,7 @@ ShortHPBar_CalcPixelFrame:
 	ld a, h
 	sbc $0
 	ld h, a
-	; jr z, .done
+	jr z, .done
 	jr c, .done
 	inc b
 	jr .loop
