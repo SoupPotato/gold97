@@ -181,7 +181,6 @@ RyukyuFakeGymPokefanMScript:
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_19
 .AfterBattle
-	opentext
 	checkevent EVENT_EXPLODING_TRAP_20
 	iftrue .AlreadyGotEgg2Water
 	writetext HaveStarter2Egg

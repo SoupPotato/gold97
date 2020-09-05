@@ -1473,15 +1473,16 @@ UnknownText_0x1bd621::
 	text_ram wStringBuffer1
 	text "?"
 	
-	para "I got a fossil"
-	line "revived over in"
-	para "KANTO, but the"
-	line "#MON kind of"
-	cont "scares me."
+	para "I hatched this"
+	line "#MON EGG I"
+	cont "got in NIHON,"
+	cont "but it grew"
+	cont "up to be big"
+	cont "and scary!"
 
 	para "Want to trade"
-	line "CHANSEY for my"
-	cont "AERODACTYL?"
+	line "CLEFAIRY for my"
+	cont "SKARMORY?"
 	done
 
 UnknownText_0x1bd673::

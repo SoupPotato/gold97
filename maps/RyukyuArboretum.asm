@@ -27,6 +27,7 @@ SaffronMagnetTrainSpeechHouseCooltrainer:
 	writetext GiveBulbasaurText
 	waitbutton
 	closetext
+	disappear SAFFRON_MAGNET_TRAIN_STATION_BULBASAUR
 	setevent EVENT_EXPLODING_TRAP_14
 	end
 	
@@ -136,7 +137,7 @@ ILoveBulbasaurText:
 	para "that let light in"
 	line "for the trees."
 	para "It's also full of"
-	line "grass #MON to"
+	line "GRASS #MON to"
 	cont "take care of them!"
 	para "I can only keep so"
 	line "many #MON here,"
@@ -171,6 +172,6 @@ RyukyuArboretum_MapEvents:
 	db 5 ; object events
 	object_event  7,  4, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SaffronMagnetTrainSpeechHouseCooltrainer, -1
 	object_event  5, 13, SPRITE_ODDISH, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SaffronMagnetTrainOddishScript, -1
-	object_event 14,  8, SPRITE_BULBASAUR, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SaffronMagnetTrainBulbasaurScript, -1
-	object_event  6,  7, SPRITE_PARAS, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SaffronMagnetTrainParasScript, -1
+	object_event 14,  8, SPRITE_BULBASAUR, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SaffronMagnetTrainBulbasaurScript, EVENT_EXPLODING_TRAP_14
+	object_event  6,  7, SPRITE_PARAS, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SaffronMagnetTrainParasScript, -1
 	object_event 12, 11, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SaffronMagnetTrainSpeechHouseYoungsterScript, -1
