@@ -864,7 +864,7 @@ PoliwagEvosAttacks:
 
 PoliwhirlEvosAttacks:
 	db EVOLVE_ITEM, WATER_STONE, POLIWRATH
-	db EVOLVE_ITEM, TRADE_STONE, POLITOED
+	db EVOLVE_ITEM, KINGS_ROCK, POLITOED
 	db EVOLVE_TRADE, KINGS_ROCK, POLITOED
 	db 0 ; no more evolutions
 	db 1, BUBBLE
@@ -898,7 +898,7 @@ AbraEvosAttacks:
 
 KadabraEvosAttacks:
 	db EVOLVE_TRADE, $ff, ALAKAZAM
-	db EVOLVE_ITEM, TRADE_STONE, ALAKAZAM
+	db EVOLVE_ITEM, COVENANT_ORB, ALAKAZAM
 	db 0 ; no more evolutions
 	db 1, TELEPORT
 	db 1, KINESIS
@@ -945,7 +945,7 @@ MachopEvosAttacks:
 
 MachokeEvosAttacks:
 	db EVOLVE_TRADE, $ff, MACHAMP
-	db EVOLVE_ITEM, TRADE_STONE, MACHAMP
+	db EVOLVE_ITEM, COVENANT_ORB, MACHAMP
 	db 0 ; no more evolutions
 	db 1, LOW_KICK
 	db 1, LEER
@@ -1062,7 +1062,7 @@ GeodudeEvosAttacks:
 
 GravelerEvosAttacks:
 	db EVOLVE_TRADE, $ff, GOLEM
-	db EVOLVE_ITEM, TRADE_STONE, GOLEM
+	db EVOLVE_ITEM, COVENANT_ORB, GOLEM
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, DEFENSE_CURL
@@ -1125,7 +1125,7 @@ RapidashEvosAttacks:
 
 SlowpokeEvosAttacks:
 	db EVOLVE_LEVEL, 37, SLOWBRO
-	db EVOLVE_ITEM, TRADE_STONE, SLOWKING
+	db EVOLVE_ITEM, KINGS_ROCK, SLOWKING
 	db EVOLVE_TRADE, KINGS_ROCK, SLOWKING
 	db 0 ; no more evolutions
 	db 1, CURSE
@@ -1354,7 +1354,7 @@ GastlyEvosAttacks:
 
 HaunterEvosAttacks:
 	db EVOLVE_TRADE, $ff, GENGAR
-	db EVOLVE_ITEM, TRADE_STONE, GENGAR
+	db EVOLVE_ITEM, COVENANT_ORB, GENGAR
 	db 0 ; no more evolutions
 	db 1, HYPNOSIS
 	db 1, LICK
@@ -1387,7 +1387,7 @@ GengarEvosAttacks:
 	db 0 ; no more level-up moves
 
 OnixEvosAttacks:
-	db EVOLVE_ITEM, TRADE_STONE, STEELIX
+	db EVOLVE_ITEM, METAL_COAT, STEELIX
 	db EVOLVE_TRADE, METAL_COAT, STEELIX
 	db 0 ; no more evolutions
 	db 1, TACKLE
@@ -1748,7 +1748,7 @@ HorseaEvosAttacks:
 	db 0 ; no more level-up moves
 
 SeadraEvosAttacks:
-	db EVOLVE_ITEM, TRADE_STONE, KINGDRA
+	db EVOLVE_ITEM, DRAGON_SCALE, KINGDRA
 	db EVOLVE_TRADE, DRAGON_SCALE, KINGDRA
 	db 0 ; no more evolutions
     db 1, BUBBLE
@@ -1972,7 +1972,7 @@ LaprasEvosAttacks:
 	db 0 ; no more level-up moves
 
 DittoEvosAttacks:
-	db EVOLVE_ITEM, TRADE_STONE, METTO
+	db EVOLVE_ITEM, METAL_COAT, METTO
 	db EVOLVE_TRADE, METAL_COAT, METTO
 	db 0 ; no more evolutions
 	db 1, TRANSFORM
@@ -2050,7 +2050,7 @@ FlareonEvosAttacks:
 	db 0 ; no more level-up moves
 
 PorygonEvosAttacks:
-	db EVOLVE_ITEM, TRADE_STONE, PORYGON2
+	db EVOLVE_ITEM, UP_GRADE, PORYGON2
 	db EVOLVE_TRADE, UP_GRADE, PORYGON2
 	db 0 ; no more evolutions
 	db 1, TACKLE

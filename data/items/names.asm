@@ -23,7 +23,7 @@ ItemNames::
 	db "FIRE STONE@"
 	db "THUNDERSTONE@"
 	db "WATER STONE@"
-	db "TRADE STONE@"
+	db "COVENANT ORB@"
 	db "HP UP@"
 	db "PROTEIN@"
 	db "IRON@"
