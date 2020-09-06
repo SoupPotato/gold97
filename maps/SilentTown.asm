@@ -3,6 +3,7 @@
 	const SilentTown_FISHER
 	const SilentTown_SILVER
 	const SilentTown_BLUE
+	const SilentTown_PACKAGE
 
 SilentTown_MapScripts:
 	db 2 ; scene scripts
@@ -256,6 +257,45 @@ PlayerEntersLab:
 	step UP
 	step_end
 	
+	
+TrophyPackageScript:
+	opentext
+	checkevent EVENT_GOLD_TROPHY_IN_PACKAGE
+	iftrue .goldtrophy
+	checkevent EVENT_SILVER_TROPHY_IN_PACKAGE
+	iftrue .silvertrophy
+.dummynotrophy
+	closetext
+	end
+.goldtrophy
+	writetext PackageIsHereText
+	waitbutton
+	verbosegiveitem GORGEOUS_BOX
+	iffalse .dummynotrophy
+	setevent EVENT_PACKAGE_TAKEN_NO_SHOW
+	setevent EVENT_TAKEN_GOLD_TROPHY
+	disappear SilentTown_PACKAGE
+	jump .dummynotrophy
+.silvertrophy
+	writetext PackageIsHereText
+	waitbutton
+	verbosegiveitem NORMAL_BOX
+	iffalse .dummynotrophy
+	setevent EVENT_PACKAGE_TAKEN_NO_SHOW
+	setevent EVENT_TAKEN_SILVER_TROPHY
+	disappear SilentTown_PACKAGE
+	jump .dummynotrophy
+	
+PackageIsHereText:
+	text "It's a package"
+	line "addressed to…"
+	
+	para "<PLAYER>!"
+	
+	para "What could be"
+	line "inside this?"
+	done
+	
 Text_Study101:
 	text "…And if we spend"
 	line "just a few more"
@@ -374,7 +414,7 @@ SilentTown_MapEvents:
 	db 0, 0 ; filler
 
 	db 7 ; warp events
-	warp_event 14, 19, OAKS_LAB_ENTRANCE, 1 
+	warp_event 14, 19, OAKS_LAB_ENTRANCE, 1
 	warp_event  5, 12, PLAYERS_HOUSE_1F, 1
 	warp_event 13, 12, SILENT_POKECENTER_1F, 1
 	warp_event  3, 20, SILENT_HOUSE, 1
@@ -395,8 +435,9 @@ SilentTown_MapEvents:
 	bg_event  6, 20, BGEVENT_READ, SilentTownRivalsHouseSign
 	bg_event 14, 12, BGEVENT_READ, SilentTownPokecenterSign
 
-	db 4 ; object events
+	db 5 ; object events
 	object_event  9, 14, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilentTownTeacherScript, -1
 	object_event 12, 21, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1,  0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SilentTownFisherScript, -1
 	object_event  7, 18, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilentTownRivalScript, EVENT_RIVAL_SILENT_TOWN
 	object_event  7, 17, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SilentTownBlueScript, EVENT_BLUE_SILENT_TOWN
+	object_event  4, 13, SPRITE_BELMITT, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TrophyPackageScript, EVENT_PACKAGE_TAKEN_NO_SHOW

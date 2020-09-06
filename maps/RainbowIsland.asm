@@ -233,6 +233,13 @@ BlueBattleScript:
 	special FadeInQuickly
 	pause 30
 	special HealParty
+	checkevent EVENT_PACKAGE_TAKEN_NO_SHOW
+	iffalse .skipPackages1 ; if package is sitting there unopened
+	checkevent EVENT_TAKEN_GOLD_TROPHY
+	iftrue .skipPackages1
+	setevent EVENT_GOLD_TROPHY_IN_PACKAGE
+	clearevent EVENT_PACKAGE_TAKEN_NO_SHOW
+.skipPackages1:
 	refreshscreen
 	credits
 	end
@@ -258,6 +265,13 @@ BlueBattleScript:
 	special FadeInQuickly
 	pause 30
 	special HealParty
+	checkevent EVENT_PACKAGE_TAKEN_NO_SHOW
+	iffalse .skipPackages2 ; if package is sitting there unopened
+	checkevent EVENT_TAKEN_GOLD_TROPHY
+	iftrue .skipPackages2
+	setevent EVENT_GOLD_TROPHY_IN_PACKAGE
+	clearevent EVENT_PACKAGE_TAKEN_NO_SHOW
+.skipPackages2:
 	refreshscreen
 	credits
 	end

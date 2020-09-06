@@ -6,7 +6,7 @@
 	db NORMAL, FLYING ; type
 	db 45 ; catch rate
 	db 177 ; base exp
-	db NO_ITEM, STICK ; items
+	db STICK, STICK ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
 	db 20 ; step cycles to hatch

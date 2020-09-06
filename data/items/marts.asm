@@ -37,6 +37,7 @@ Marts:
 	dw MartUnderground
 	dw MartTestGarden
 	dw MartSugar
+	dw MartWestportNewItems
 .End
 
 MartCherrygrove:
@@ -443,4 +444,15 @@ MartSugar:
 	db AWAKENING
 	db ICE_HEAL
 	db SUPER_REPEL
+	db -1 ; end
+
+MartWestportNewItems:
+	db 7 ; # items
+	db SHARP_HORNS
+	db STEEL_SHELL
+	db POWER_WINGS
+	db WISDOM_ORB
+	db ENERGY_WALL
+	db DETECT_ORB
+	db FOCUS_ORB
 	db -1 ; end
