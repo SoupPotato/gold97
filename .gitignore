@@ -39,7 +39,6 @@ pokecrystal.txt
 
 *.dimensions
 *.gbcpal
-*.2bpp
 *.1bpp
 *.lz
 *.animated.tilemap

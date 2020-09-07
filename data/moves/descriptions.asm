@@ -164,7 +164,7 @@ MoveDescriptions::
 	dw SuperFangDescription
 	dw SlashDescription
 	dw SubstituteDescription
-	dw StruggleDescription
+	dw CrossCutterDescription
 	dw SketchDescription
 	dw TripleKickDescription
 	dw ThiefDescription
@@ -254,10 +254,9 @@ MoveDescriptions::
 	dw CoinHurlDescription
 	dw MegaphoneDescription
 	dw RockHeadDescription
-	dw MoveFFDescription
+	dw StruggleDescription
 	dw Move00Description
 
-MoveFFDescription:
 Move00Description:
 	db "?@"
 
@@ -1273,3 +1272,7 @@ CoinHurlDescription:
 MegaphoneDescription:
 	db   "A loud noise that"
 	next "lowers SPCL.ATK.@"
+	
+CrossCutterDescription:
+	db   "Has a high criti-"
+	next "cal hit ratio.@"

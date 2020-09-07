@@ -113,10 +113,10 @@ BattleCommand_CheckTurn:
 
 ; Repurposed as hardcoded turn handling. Useless as a command.
 
-; Move $ff immediately ends the turn.
+; NO_MOVE immediately ends the turn.
 	ld a, BATTLE_VARS_MOVE
 	call GetBattleVar
-	inc a
+	and a ; NO_MOVE?
 	jp z, EndTurn
 
 	xor a

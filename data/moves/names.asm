@@ -163,7 +163,7 @@ MoveNames::
 	db "SUPER FANG@"
 	db "SLASH@"
 	db "SUBSTITUTE@"
-	db "STRUGGLE@"
+	db "CROSS CUTTER@"
 	db "SKETCH@"
 	db "TRIPLE KICK@"
 	db "THIEF@"
@@ -253,3 +253,4 @@ MoveNames::
 	db "COIN HURL@"
 	db "MEGAPHONE@"
 	db "ROCK HEAD@"
+	db "STRUGGLE@"

@@ -16,10 +16,10 @@ BattleCommand_Metronome:
 
 .GetMove:
 	call BattleRandom
-
-; No invalid moves.
-	cp NUM_ATTACKS + 1
-	jr nc, .GetMove
+	
+; No Struggle.
+	cp STRUGGLE
+	jr z, .GetMove
 
 ; None of the moves in MetronomeExcepts.
 	push af

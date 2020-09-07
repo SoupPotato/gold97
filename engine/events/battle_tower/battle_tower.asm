@@ -433,12 +433,8 @@ endr
 	ld d, NUM_MOVES - 1
 	ld a, [hli]
 	and a
-	jr z, .not_move
-	cp NUM_ATTACKS + 1
-	jr nc, .not_move
-	jr .valid_move
+	jr nz, .valid_move
 
-.not_move
 	dec hl
 	ld a, POUND
 	ld [hli], a
@@ -449,13 +445,7 @@ endr
 	jr .done_moves
 
 .valid_move
-	ld a, [hl]
-	cp NUM_ATTACKS + 1
-	jr c, .next
-	ld [hl], $0
-
-.next
-	inc hl
+	ld a, [hli]
 	dec d
 	jr nz, .valid_move
 

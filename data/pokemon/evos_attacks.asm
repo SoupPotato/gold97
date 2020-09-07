@@ -1909,16 +1909,6 @@ MagmarEvosAttacks:
 PinsirEvosAttacks:
 	db EVOLVE_LEVEL, 42, PRAXE
 	db 0 ; no more evolutions
-	db 1, VICEGRIP
-	db 7, FOCUS_ENERGY
-	db 13, BIND
-	db 19, SEISMIC_TOSS
-	db 25, HARDEN
-	db 30, FURY_CUTTER
-	db 35, THRASH
-	db 38, SWORDS_DANCE
-	db 42, SUBMISSION
-	db 47, GUILLOTINE
 	db 0 ; no more level-up moves
 
 TaurosEvosAttacks:

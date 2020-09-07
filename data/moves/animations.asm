@@ -165,7 +165,7 @@ BattleAnimations::
 	dw BattleAnim_SuperFang
 	dw BattleAnim_Slash
 	dw BattleAnim_Substitute
-	dw BattleAnim_Struggle
+	dw BattleAnim_CrossCutter
 	dw BattleAnim_Sketch
 	dw BattleAnim_TripleKick
 	dw BattleAnim_Thief
@@ -255,8 +255,9 @@ BattleAnimations::
 	dw BattleAnim_CoinHurl
 	dw BattleAnim_Megaphone
 	dw BattleAnim_RockHead
-	dw BattleAnim_SweetScent2
+	dw BattleAnim_Struggle
 ; $100
+	dw BattleAnim_SweetScent2
 	dw BattleAnim_ThrowPokeBall
 	dw BattleAnim_SendOutMon
 	dw BattleAnim_ReturnMon
@@ -3850,6 +3851,15 @@ BattleAnim_FuryCutter:
 .okay
 	anim_wait 16
 	anim_jumpuntil .loop
+	anim_ret
+	
+BattleAnim_CrossCutter:
+	anim_1gfx ANIM_GFX_CUT
+	anim_sound 0, 1, SFX_CUT
+	anim_bgeffect ANIM_BG_1F, $08, $2, $0
+	anim_obj ANIM_OBJ_3A, 150, 40, $0
+	anim_obj ANIM_OBJ_3B, 118, 40, $0
+	anim_wait 32
 	anim_ret
 
 BattleAnim_SteelWing:

@@ -1,6 +1,6 @@
 	db PRAXE ; 211
 
-	db  75, 130, 100,  75,  60,  75
+	db  75, 140, 100,  55,  60,  95
 	;   hp  atk  def  spd  sat  sdf
 
 	db BUG, STEEL ; type
