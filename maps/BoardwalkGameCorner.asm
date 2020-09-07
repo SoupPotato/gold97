@@ -234,7 +234,7 @@ BoardwalkGameCornerStoneVendorMenuHeader:
 	db "LEAF STONE   1000@"
 	db "NEXT@"
 	
-BoardwalkGameCornerStoneVendorMenu2Header
+BoardwalkGameCornerStoneVendorMenu2Header:
 	db MENU_BACKUP_TILES ; flags
 	menu_coords 0, 2, 19, TEXTBOX_Y - 1
 	dw .MenuDataStone2

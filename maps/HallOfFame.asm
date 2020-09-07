@@ -42,6 +42,13 @@ HallOfFame_MapScripts:
 	setevent EVENT_REMATCH_AVAILABLE_RED
 	setevent EVENT_BATTLE_AVAILABLE_CLAIR
 
+	checkevent EVENT_PACKAGE_TAKEN_NO_SHOW
+	iffalse .skipPackages ; if package is sitting there unopened
+	checkevent EVENT_TAKEN_SILVER_TROPHY
+	iftrue .skipPackages
+	setevent EVENT_SILVER_TROPHY_IN_PACKAGE
+	clearevent EVENT_PACKAGE_TAKEN_NO_SHOW
+.skipPackages:
 	checkevent EVENT_BEAT_BLUE_ONCE_BEFORE
 	iffalse skipblueflag
 	clearevent EVENT_RI_BLUEBATTLE_HIDDEN

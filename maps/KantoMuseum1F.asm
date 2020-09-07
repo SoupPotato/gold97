@@ -101,7 +101,7 @@ MuseumOtherScientistText:
 	done
 
 OldAmberItemSprite:
-	itemball ITEM_32
+	itemball OLD_AMBER
 
 KabutopsFossil:
 	jumptext KabutopsFossilText

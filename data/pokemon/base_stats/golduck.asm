@@ -6,7 +6,7 @@
 	db WATER, WATER ; type
 	db 75 ; catch rate
 	db 174 ; base exp
-	db NO_ITEM, NO_ITEM ; items
+	db WISDOM_ORB, MYSTIC_WATER ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
 	db 20 ; step cycles to hatch

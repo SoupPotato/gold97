@@ -15,7 +15,7 @@ KantoFossilLabFossilScientist:
 	iftrue .GetOmanyte
 	checkitem SILVER_WING; dome fossil
 	iftrue .GetKabuto
-	checkitem ITEM_32 ; old amber
+	checkitem OLD_AMBER ; old amber
 	iftrue .GetAerodactyl
 	writetext FossilScientistIntroText
 	waitbutton
@@ -168,7 +168,7 @@ KantoFossilLabFossilScientist:
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	givepoke AERODACTYL, 15
-	takeitem ITEM_32
+	takeitem OLD_AMBER
 	writetext IfYouHaveAnyOtherFossilsText
 	waitbutton
 	closetext

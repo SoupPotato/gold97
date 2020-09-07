@@ -725,8 +725,9 @@ FocusBandDesc:
 	db   "May prevent faint-"
 	next "ing. (HOLD)@"
 
-TeruSama8Desc:
-	db   "?@"
+TeruSama8Desc: ; apple
+	db   "A self-restore"
+	next "item. (50HP, HOLD)@"
 
 EnergyPowderDesc:
 	db   "Restores #MON"
@@ -783,14 +784,17 @@ PassDesc:
 	db   "A pass for the"
 	next "KANTO BATTLE CLUB.@"
 
-TeruSama9Desc:
-	db   "?@"
+TeruSama9Desc: ; snakeskin
+	db   "Prevents poison."
+	next "(HOLD)@"
 
-TeruSama10Desc:
-	db   "?@"
+TeruSama10Desc: ; pretty tail
+	db   "Prevents poison."
+	next "(HOLD)@"
 
-TeruSama11Desc:
-	db   "?@"
+TeruSama11Desc: ; earthen clay
+	db   "Prevents paralysis."
+	next "(HOLD)@"
 
 CharcoalDesc:
 	db   "Powers up fire-"
@@ -804,11 +808,13 @@ ScopeLensDesc:
 	db   "Raises critical"
 	next "hit ratio. (HOLD)@"
 
-TeruSama12Desc:
-	db   "?@"
+TeruSama12Desc: ; stimulus orb
+	db   "Prevents sleep."
+	next "(HOLD)@"
 
-TeruSama13Desc:
-	db   "?@"
+TeruSama13Desc: ; confuse claw
+	db   "Prevents confuse."
+	next "(HOLD)@"
 
 MetalCoatDesc:
 	db   "Powers up steel-"
@@ -818,21 +824,25 @@ DragonFangDesc:
 	db   "Powers up dragon-"
 	next "type moves. (HOLD)@"
 
-TeruSama14Desc:
-	db   "?@"
+TeruSama14Desc: ; focus orb
+	db   "Boosts accuracy"
+	next "once. (HOLD)@"
 
 LeftoversDesc:
 	db   "Restores HP during"
 	next "battle. (HOLD)@"
 
-TeruSama15Desc:
-	db   "?@"
+TeruSama15Desc: ; calm seed
+	db   "Prevents confuse."
+	next "(HOLD)@"
 
-TeruSama16Desc:
-	db   "?@"
+TeruSama16Desc: ; water tail
+	db   "Prevents burn."
+	next "(HOLD)@"
 
-TeruSama17Desc:
-	db   "?@"
+TeruSama17Desc: ; fire tail
+	db   "Prevents freeze."
+	next "(HOLD)@"
 
 MysteryBerryDesc:
 	db   "A self-restore"
@@ -846,14 +856,17 @@ BerserkGeneDesc:
 	db   "Boosts ATTACK but"
 	next "causes confusion.@"
 
-TeruSama18Desc:
-	db   "?@"
+TeruSama18Desc: ; thunder tail
+	db   "Prevents paralysis."
+	next "(HOLD)@"
 
-TeruSama19Desc:
-	db   "?@"
+TeruSama19Desc: ; wisdom orb
+	db   "Boosts SP. ATTACK"
+	next "once. (HOLD)@"
 
-TeruSama20Desc:
-	db   "?@"
+TeruSama20Desc: ; detect orb
+	db   "Boosts EVASION"
+	next "once. (HOLD)@"
 
 SacredAshDesc:
 	db   "Fully revives all"
@@ -879,8 +892,9 @@ FastBallDesc:
 	db   "A BALL for catch-"
 	next "ing fast #MON.@"
 
-TeruSama21Desc:
-	db   "?@"
+TeruSama21Desc: ; sharp horns
+	db   "Boosts ATTACK"
+	next "once. (HOLD)@"
 
 LightBallDesc:
 	db   "An odd, electrical"
@@ -914,8 +928,9 @@ PolkadotBowDesc:
 	db   "Powers up normal-"
 	next "type moves. (HOLD)@"
 
-TeruSama22Desc:
-	db   "?@"
+TeruSama22Desc: ; power wings
+	db   "Boosts SPEED"
+	next "once. (HOLD)@"
 
 UpGradeDesc:
 	db   "A mysterious box"
@@ -933,8 +948,9 @@ SquirtBottleDesc:
 	db   "A bottle used for"
 	next "watering plants.@"
 
-TeruSama23Desc:
-	db   "?@"
+TeruSama23Desc: ; energy wall
+	db   "Boosts SP. DEFENSE"
+	next "once. (HOLD)@"
 
 ParkBallDesc:
 	db   "The Bug-Catching"
@@ -944,8 +960,9 @@ RainbowWingDesc:
 	db   "A mystical feather"
 	next "of rainbow colors.@"
 
-TeruSama24Desc:
-	db   "?@"
+TeruSama24Desc: ; steel shell
+	db   "Boosts DEFENSE"
+	next "once. (HOLD)@"
 
 BrickPieceDesc:
 	db   "A rare chunk of"

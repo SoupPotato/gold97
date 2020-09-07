@@ -6,7 +6,7 @@
 	db WATER, ICE ; type
 	db 45 ; catch rate
 	db 183 ; base exp
-	db NO_ITEM, NO_ITEM ; items
+	db BERRY, RARE_CANDY ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
 	db 20 ; step cycles to hatch

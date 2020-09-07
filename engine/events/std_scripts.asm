@@ -619,6 +619,7 @@ InitializeEventsScript:
 	setevent WHITNEY_DEFEATS_ROCKETS
 	setevent EVENT_WHIRL_ISLANDS_SAGE_GONE
 	setevent EVENT_IMPOSTER_FIGHTING_OKERA
+	setevent EVENT_PACKAGE_TAKEN_NO_SHOW
 	return
 
 AskNumber1MScript:

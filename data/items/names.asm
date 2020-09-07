@@ -54,7 +54,7 @@ ItemNames::
 	db "X SPECIAL@"
 	db "COIN CASE@"
 	db "ITEMFINDER@"
-	db "TERU-SAMA@"
+	db "TERU-SAMA@" ; pokeflute
 	db "EXP.SHARE@"
 	db "OLD ROD@"
 	db "GOOD ROD@"
@@ -118,7 +118,7 @@ ItemNames::
 	db "MIRACLE SEED@"
 	db "THICK CLUB@"
 	db "FOCUS BAND@"
-	db "TERU-SAMA@"
+	db "APPLE@" ; apple
 	db "ENERGYPOWDER@"
 	db "ENERGY ROOT@"
 	db "HEAL POWDER@"
@@ -133,34 +133,34 @@ ItemNames::
 	db "STAR PIECE@"
 	db "SHIP KEY@"
 	db "BATTLE PASS@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@"
+	db "SNAKESKIN@" ; snakeskin
+	db "PRETTY TAIL@" ; pretty tail
+	db "EARTHEN CLAY@" ; earthen clay
 	db "CHARCOAL@"
 	db "BERRY JUICE@"
 	db "SCOPE LENS@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@"
+	db "STIMULUS ORB@" ; stimulus orb
+	db "CONFUSE CLAW@" ; confuse claw
 	db "METAL COAT@"
 	db "DRAGON FANG@"
-	db "TERU-SAMA@"
+	db "FOCUS ORB@" ; focus orb
 	db "LEFTOVERS@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@"
+	db "CALM SEED@" ; calm seed
+	db "WATER TAIL@" ; water tail
+	db "FIRE TAIL@" ; fire tail
 	db "MYSTERYBERRY@"
 	db "DRAGON SCALE@"
 	db "BERSERK GENE@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@"
-	db "TERU-SAMA@"
+	db "THUNDER TAIL@" ; thunder tail
+	db "WISDOM ORB@" ; wisdom orb
+	db "DETECT ORB@" ; detect orb
 	db "SACRED ASH@"
 	db "HEAVY BALL@"
 	db "FLOWER MAIL@"
 	db "LEVEL BALL@"
 	db "LURE BALL@"
 	db "FAST BALL@"
-	db "TERU-SAMA@"
+	db "SHARP HORNS@" ; sharp horns
 	db "LIGHT BALL@"
 	db "FRIEND BALL@"
 	db "MOON BALL@"
@@ -169,15 +169,15 @@ ItemNames::
 	db "GORGEOUS BOX@"
 	db "HEART STONE@"
 	db "POLKADOT BOW@"
-	db "TERU-SAMA@"
+	db "POWER WINGS@" ; power wings
 	db "UP-GRADE@"
 	db "BERRY@"
 	db "GOLD BERRY@"
 	db "SQUIRTBOTTLE@"
-	db "TERU-SAMA@"
+	db "ENERGY WALL@" ; energy wall
 	db "PARK BALL@"
 	db "RAINBOW WING@"
-	db "TERU-SAMA@"
+	db "STEEL SHELL@" ; steel shell
 	db "BRICK PIECE@"
 	db "SURF MAIL@"
 	db "LITEBLUEMAIL@"
