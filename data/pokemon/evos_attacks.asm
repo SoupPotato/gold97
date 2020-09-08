@@ -238,8 +238,6 @@ PidgeottoEvosAttacks:
 	db EVOLVE_LEVEL, 36, PIDGEOT
 	db 0 ; no more evolutions
 	db 1, TACKLE
-	db 1, SAND_ATTACK
-	db 1, GUST
 	db 5, SAND_ATTACK
 	db 9, GUST
 	db 13, QUICK_ATTACK
@@ -254,9 +252,6 @@ PidgeottoEvosAttacks:
 PidgeotEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
-	db 1, SAND_ATTACK
-	db 1, GUST
-	db 1, QUICK_ATTACK
 	db 5, SAND_ATTACK
 	db 9, GUST
 	db 13, QUICK_ATTACK
@@ -287,7 +282,6 @@ RaticateEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, TAIL_WHIP
-	db 1, QUICK_ATTACK
 	db 7, QUICK_ATTACK
 	db 11, FOCUS_ENERGY
 	db 15, BITE
@@ -3254,7 +3248,7 @@ NumbpuffEvosAttacks:
 	db 1, SPIKES
 	db 1, TACKLE
 	db 1, POISON_STING
-	db 10, WATER_GUN
+	db 1, WATER_GUN
 	db 9, HARDEN
 	db 9, MINIMIZE
 	db 13, THUNDER_WAVE
@@ -3271,12 +3265,13 @@ NyanyaEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, GROWL
-	db 9, BITE
-	db 16, PAY_DAY
-	db 22, FAINT_ATTACK
-	db 31, SCREECH
-	db 34, FURY_SWIPES
-	db 40, SLASH
+	db 7, BITE
+	db 13, PAY_DAY
+	db 19, FURY_SWIPES
+	db 25, FAINT_ATTACK
+	db 31, COIN_HURL
+	db 37, SCREECH
+	db 43, SLASH
 	db 0 ; no more level-up moves
 
 MadameEvosAttacks:
