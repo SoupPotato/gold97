@@ -2075,3 +2075,24 @@ DefenseCurl:
 	statupmessage
 	statupfailtext
 	endmove
+
+CoinHurl:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	coinhurl
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	kingsrock
+	endmove
