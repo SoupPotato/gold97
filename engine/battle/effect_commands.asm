@@ -6469,6 +6469,8 @@ INCLUDE "engine/battle/move_effects/future_sight.asm"
 
 INCLUDE "engine/battle/move_effects/thunder.asm"
 
+INCLUDE "engine/battle/move_effects/coin_hurl.asm"
+
 CheckHiddenOpponent:
 	xor a ; fixed bug
 	ret
