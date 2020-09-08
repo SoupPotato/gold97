@@ -324,77 +324,6 @@ BugCatcherArnieOsunfishText:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-TrainerSailorEugene:
-	trainer SAILOR, EUGENE, EVENT_BEAT_SAILOR_EUGENE, SailorEugeneSeenText, SailorEugeneBeatenText, 0, .Script
-
-.Script:
-	endifjustbattled
-	opentext
-	writetext SailorEugeneAfterBattleText
-	waitbutton
-	closetext
-	end
-	
-
-SailorEugeneSeenText:
-	text "I just got back"
-	line "from sea."
-
-	para "So how about a"
-	line "#MON battle?"
-	done
-
-SailorEugeneBeatenText:
-	text "Awaaargh!"
-	done
-
-SailorEugeneAfterBattleText:
-	text "My #MON were"
-	line "caught and raised"
-	cont "overseas."
-
-	para "They're my compan-"
-	line "ions on those long"
-	cont "voyages."
-	done
-
-	object_event  4, 63, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerSailorEugene, -1
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	object_event  8, 10, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerSwimmerfElaine, -1
 	object_event 22, 10, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSwimmerfPaula, -1
 	
@@ -481,16 +410,7 @@ TrainerSwimmerfSusie:
 	closetext
 	end
 
-TrainerSwimmerfDenise:
-	trainer SWIMMERF, DENISE, EVENT_BEAT_SWIMMERF_DENISE, SwimmerfDeniseSeenText, SwimmerfDeniseBeatenText, 0, .Script
 
-.Script:
-	endifjustbattled
-	opentext
-	writetext SwimmerfDeniseAfterBattleText
-	waitbutton
-	closetext
-	end
 
 TrainerSwimmerfKara:
 	trainer SWIMMERF, KARA, EVENT_BEAT_SWIMMERF_KARA, SwimmerfKaraSeenText, SwimmerfKaraBeatenText, 0, .Script
@@ -503,16 +423,7 @@ TrainerSwimmerfKara:
 	closetext
 	end
 
-TrainerSwimmerfWendy:
-	trainer SWIMMERF, WENDY, EVENT_BEAT_SWIMMERF_WENDY, SwimmerfWendySeenText, SwimmerfWendyBeatenText, 0, .Script
 
-.Script:
-	endifjustbattled
-	opentext
-	writetext SwimmerfWendyAfterBattleText
-	waitbutton
-	closetext
-	end
 
 TrainerSwimmermCharlie:
 	trainer SWIMMERM, CHARLIE, EVENT_BEAT_SWIMMERM_CHARLIE, SwimmermCharlieSeenText, SwimmermCharlieBeatenText, 0, .Script
@@ -632,26 +543,7 @@ SwimmerfSusieAfterBattleText:
 	cont "riding a LAPRAS?"
 	done
 
-SwimmerfDeniseSeenText:
-	text "The weather is so"
-	line "beautiful, I'm in"
-	cont "a daze!"
-	done
 
-SwimmerfDeniseBeatenText:
-	text "Ohhh!"
-	done
-
-SwimmerfDeniseAfterBattleText:
-	text "A sunburn is the"
-	line "worst for skin."
-
-	para "But I don't use a"
-	line "sunblock."
-
-	para "I won't pollute"
-	line "the water."
-	done
 
 SwimmerfKaraSeenText:
 	text "If you need to"
@@ -676,29 +568,10 @@ SwimmerfKaraAfterBattleText:
 	cont "ISLANDS."
 	done
 
-SwimmerfWendySeenText:
-	text "At night, STARYU"
-	line "gather near the"
-	cont "water's surface."
-	done
 
-SwimmerfWendyBeatenText:
-	text "Oh, dear…"
-	done
-
-SwimmerfWendyAfterBattleText:
-	text "The clusters of"
-	line "STARYU light up"
-	cont "at the same time."
-
-	para "It's so beautiful,"
-	line "it's scary."
-	done
 	
 	object_event 13, 17, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSwimmerfSusie, -1
-	object_event 14, 32, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSwimmerfDenise, -1
 	object_event 12, 41, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerSwimmerfKara, -1
-	object_event 11, 38, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerSwimmerfWendy, -1
 	object_event 10,  9, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerSwimmermCharlie, -1
 	object_event 15, 27, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerSwimmermGeorge, -1
 	object_event 13, 45, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerSwimmermBerke, -1

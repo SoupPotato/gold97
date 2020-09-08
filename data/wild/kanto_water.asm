@@ -103,4 +103,16 @@ KantoWaterWildMons:
 	db 45, TENTACOOL
 	db 48, TENTACOOL
 	db 50, TENTACRUEL
+	
+	map_id TATSUGO_PATH
+	db 2 percent
+	db 45, POLIWHIRL
+	db 45, GOLDUCK
+	db 46, GOLDEEN
+	
+	map_id KIKAI_STRAIT
+	db 2 percent ; encounter rate
+	db 40, TENTACOOL
+	db 42, STARYU
+	db 40, BOMSHEAL
 	db -1 ; end

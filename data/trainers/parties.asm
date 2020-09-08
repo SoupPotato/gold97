@@ -1629,6 +1629,12 @@ TeacherGroup:
 	db "SHIRLEY@", TRAINERTYPE_NORMAL
 	db 35, JIGGLYPUFF
 	db -1 ; end
+	
+	; new
+	db "HOLLY@", TRAINERTYPE_NORMAL
+	db 48, JYNX
+	db 50, NIDOQUEEN
+	db -1
 
 SabrinaGroup:
 	; SABRINA (1)
@@ -2100,8 +2106,9 @@ SwimmerFGroup:
 	db -1 ; end
 
 	; SWIMMERF (5)
-	db "DENISE@", TRAINERTYPE_NORMAL;unused, in sailorhuey
-	db 22, SEEL
+	db "DENISE@", TRAINERTYPE_NORMAL;used now, moved from sailorhuey.asm
+	db 49, SEEL
+	db 48, SEADRA
 	db -1 ; end
 
 	; SWIMMERF (6)
@@ -2111,9 +2118,9 @@ SwimmerFGroup:
 	db -1 ; end
 
 	; SWIMMERF (7)
-	db "WENDY@", TRAINERTYPE_MOVES;unused, in sailorhuey
-	db 21, HORSEA,     BUBBLE, SMOKESCREEN, LEER, WATER_GUN
-	db 21, HORSEA,     DRAGON_RAGE, SMOKESCREEN, LEER, WATER_GUN
+	db "WENDY@", TRAINERTYPE_NORMAL;used now, moved from sailorhuey.asm
+	db 50, MARILL
+	db 48, MANTINE
 	db -1 ; end
 
 	; SWIMMERF (8)
@@ -2186,10 +2193,10 @@ SwimmerFGroup:
 
 SailorGroup:
 	; SAILOR (1)
-	db "EUGENE@", TRAINERTYPE_NORMAL; unused, in sailorhuey
-	db 17, POLIWHIRL
-	db 17, RATICATE
-	db 19, KRABBY
+	db "EUGENE@", TRAINERTYPE_NORMAL; used, moved from sailorhuey
+	db 47, POLIWHIRL
+	db 47, RATICATE
+	db 49, KINGLER
 	db -1 ; end
 
 	; SAILOR (2)
@@ -2343,8 +2350,9 @@ SuperNerdGroup:
 	db -1 ; end
 
 	; SUPER_NERD (12)
-	db "NORTON@", TRAINERTYPE_MOVES
-	db 30, PORYGON,    CONVERSION, CONVERSION2, RECOVER, TRI_ATTACK
+	db "NORTON@", TRAINERTYPE_NORMAL ; used, tatsugo path
+	db 48, MUK
+	db 52, PORYGON2
 	db -1 ; end
 
 	; SUPER_NERD (13)
@@ -2711,12 +2719,11 @@ JugglerGroup:
 	db -1 ; end
 
 BlackbeltGroup:
-	; BLACKBELT_T (1) ;unused
-	db "KENJI@", TRAINERTYPE_NORMAL
-	db 27, ONIX
-	db 30, HITMONLEE
-	db 27, ONIX
-	db 32, MACHOKE
+	; BLACKBELT_T (1) ; used kikai caldera
+	db "IZO@", TRAINERTYPE_NORMAL
+	db 47, MACHOKE
+	db 50, HITMONCHAN
+	db 47, RHYDON
 	db -1 ; end
 
 	; BLACKBELT_T (2)
@@ -2725,11 +2732,11 @@ BlackbeltGroup:
 	db -1 ; end
 
 	; BLACKBELT_T (3)
-	db "KENJI@", TRAINERTYPE_MOVES
-	db 33, ONIX,       BIND, ROCK_THROW, TOXIC, DIG
-	db 38, MACHAMP,    HEADBUTT, SWAGGER, THUNDERPUNCH, VITAL_THROW
-	db 33, STEELIX,    EARTHQUAKE, ROCK_THROW, IRON_TAIL, SANDSTORM
-	db 36, HITMONLEE,  DOUBLE_TEAM, HI_JUMP_KICK, MUD_SLAP, SWIFT
+	db "KENJI@", TRAINERTYPE_MOVES ; used, kept his cool moveset that was already here
+	db 46, ONIX,       BIND, ROCK_THROW, TOXIC, DIG
+	db 48, MACHOKE,    HEADBUTT, SWAGGER, THUNDERPUNCH, VITAL_THROW
+	db 47, STEELIX,    EARTHQUAKE, ROCK_THROW, IRON_TAIL, SANDSTORM
+	db 49, HITMONLEE,  DOUBLE_TEAM, HI_JUMP_KICK, MUD_SLAP, SWIFT
 	db -1 ; end
 
 	; BLACKBELT_T (4)
@@ -2758,8 +2765,8 @@ BlackbeltGroup:
 	db -1 ; end
 
 	; BLACKBELT_T (8)
-	db "KENJI@", TRAINERTYPE_NORMAL
-	db 28, MACHOKE
+	db "TARO@", TRAINERTYPE_NORMAL ; used kikai caldera
+	db 55, MACHAMP
 	db -1 ; end
 
 	; BLACKBELT_T (9)
@@ -2767,6 +2774,13 @@ BlackbeltGroup:
 	db 32, MACHOKE
 	db 34, MACHOKE
 	db 35, MACHAMP
+	db -1 ; end
+	
+	;new
+	db "OKUMA@", TRAINERTYPE_NORMAL ; used kikai caldera
+	db 46, PRIMEAPE
+	db 47, PRIMEAPE
+	db 50, DYNABEAR
 	db -1 ; end
 
 ExecutiveMGroup:
@@ -3792,6 +3806,12 @@ InstructorGroup:; use gentleman sprite
 	db 45, AMPHAROS
 	db 46, EXEGGUTOR
 	db -1 ; end
+	
+	; new
+	db "MOSHE@", TRAINERTYPE_NORMAL ; used tatsugo path
+	db 48, SEAKING
+	db 50, NIDOKING
+	db -1
 	
 FledglingGroup:; use bug catcher sprite
 	; FLEDGLING (1)

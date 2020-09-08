@@ -465,4 +465,88 @@ KantoGrassWildMons:
 	db 57, EXEGGUTOR
 	db 56, ONIX
 	db 58, TOGEPI
+	
+
+	map_id TATSUGO_PATH
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 44, SKIPLOOM
+	db 45, FEAROW
+	db 45, PIDGEOTTO
+	db 48, PIDGEOT
+	db 44, JUMPLUFF
+	db 46, BELLOSSOM
+	db 48, BELLOSSOM
+	; day
+	db 44, SKIPLOOM
+	db 45, FEAROW
+	db 45, PIDGEOTTO
+	db 48, PIDGEOT
+	db 44, JUMPLUFF
+	db 46, BELLOSSOM
+	db 48, BELLOSSOM
+	; nite
+	db 44, GLOOM
+	db 45, MURKROW
+	db 45, GOLBAT
+	db 48, NOCTOWL
+	db 44, POLIWHIRL
+	db 46, VILEPLUME
+	db 48, VILEPLUME
+
+	map_id KIKAI_CALDERA_1F
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	; morn
+	db 50, MACHOKE
+	db 48, GRAVELER
+	db 48, MACHOKE
+	db 52, WEEZING
+	db 50, BOMSHEAL
+	db 50, MAGMAR
+	db 52, MAGMAR
+	; day
+	db 50, MACHOKE
+	db 48, GRAVELER
+	db 48, MACHOKE
+	db 52, WEEZING
+	db 50, BOMSHEAL
+	db 50, MAGMAR
+	db 52, MAGMAR
+	; nite
+	db 50, MACHOKE
+	db 48, GRAVELER
+	db 48, MACHOKE
+	db 52, WEEZING
+	db 50, BOMSHEAL
+	db 50, MAGMAR
+	db 52, MAGMAR
+
+
+	map_id KIKAI_CALDERA_2F
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	; morn
+	db 50, MACHOKE
+	db 48, GRAVELER
+	db 48, MACHOKE
+	db 52, WEEZING
+	db 50, BOMSHEAL
+	db 50, HITMONCHAN
+	db 50, HITMONLEE
+	; day
+	db 50, MACHOKE
+	db 48, GRAVELER
+	db 48, MACHOKE
+	db 52, WEEZING
+	db 50, BOMSHEAL
+	db 50, HITMONCHAN
+	db 50, HITMONLEE
+	; nite
+	db 50, MACHOKE
+	db 48, GRAVELER
+	db 48, MACHOKE
+	db 52, WEEZING
+	db 50, BOMSHEAL
+	db 50, HITMONCHAN
+	db 50, HITMONLEE
+	
 	db -1 ; end
