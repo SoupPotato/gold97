@@ -331,6 +331,7 @@ KRIS EQU __enum__
 	trainerclass TEACHER ; 22
 	const HILLARY
 	const SHIRLEY
+	const HOLLY
 
 	trainerclass SABRINA ; 23
 	const SABRINA1
@@ -428,7 +429,7 @@ KRIS EQU __enum__
 	const BRIANA
 
 	trainerclass SAILOR ; 28
-	const EUGENE
+	const EUGENE ; used now
 	const HUEY1
 	const TERRELL
 	const KENT ; used 
@@ -455,7 +456,7 @@ KRIS EQU __enum__
 	const SHAWN
 	const TERU
 	const RUSS
-	const NORTON
+	const NORTON ; used now
 	const HUGH
 	const MARKUS
 
@@ -526,15 +527,16 @@ KRIS EQU __enum__
 	const DWAYNE
 
 	trainerclass BLACKBELT_T ; 32
-	const KENJI1
+	const IZO ; new
 	const YOSHI
-	const KENJI2
+	const KENJI ; new
 	const LAO
 	const NOB
 	const KIYO
 	const LUNG
-	const KENJI3
+	const TARO ; new
 	const WAI
+	const OKUMA ; new
 
 	trainerclass EXECUTIVEM ; 33
 	const EXECUTIVEM_1
@@ -736,6 +738,7 @@ KRIS EQU __enum__
 	const RAND
 	const MORGAN
 	const GEOFF
+	const MOSHE
 	
 	trainerclass FLEDGLING
 	const CLAYTON

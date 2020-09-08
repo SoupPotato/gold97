@@ -76,6 +76,7 @@ const_value = -1
 	const SPAWN_AMAMI
 	const SPAWN_LAVENDER
 	const SPAWN_RYUKYU
+	const SPAWN_KIKAI
 ; johto                      ; DO NOT DELETE STRINGS ONLY RENAME
 	const SPAWN_SILENT
 	const SPAWN_KOBAN

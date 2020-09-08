@@ -39,13 +39,8 @@ INCLUDE "maps/EndonCaveB1F.asm"
 INCLUDE "maps/RadioTower6F.asm"
 INCLUDE "maps/KantoBattleClub1F.asm"
 
-INCLUDE "maps/TatsugoPath.asm"
-INCLUDE "maps/KikaiStrait.asm"
 INCLUDE "maps/KikaiPokecenter1F.asm"
 INCLUDE "maps/KikaiMart.asm"
-INCLUDE "maps/KikaiCaldera1F.asm"
-INCLUDE "maps/KikaiCaldera2F.asm"
-INCLUDE "maps/KikaiCaldera3F.asm"
 
 SECTION "Map Scripts 3", ROMX
 
@@ -75,6 +70,10 @@ INCLUDE "maps/StandCity.asm"
 INCLUDE "maps/StandRocketHouse2F.asm"
 INCLUDE "maps/Route101PagotaGate.asm"
 
+INCLUDE "maps/KikaiCaldera1F.asm"
+INCLUDE "maps/KikaiCaldera2F.asm"
+INCLUDE "maps/KikaiCaldera3F.asm"
+
 SECTION "Map Scripts 5", ROMX
 
 INCLUDE "maps/PagotaMart.asm"
@@ -103,6 +102,9 @@ INCLUDE "maps/VictoryRoad2F.asm"
 INCLUDE "maps/ForkedStraitWestExit.asm"
 INCLUDE "maps/RainbowIsland.asm"
 INCLUDE "maps/RainbowIslandCave.asm"
+
+INCLUDE "maps/TatsugoPath.asm"
+INCLUDE "maps/KikaiStrait.asm"
 
 
 SECTION "Map Scripts 7", ROMX

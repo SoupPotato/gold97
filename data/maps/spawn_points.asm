@@ -16,6 +16,7 @@ SpawnPoints:
 	spawn AMAMI_TOWN,                 17,  5
 	spawn PLAYERS_HOUSE_2F,           -1, -1 ;duplicate
 	spawn RYUKYU_CITY,                11,  5
+	spawn KIKAI_VILLAGE,              15, 23
 
 	spawn SILENT_TOWN,                 5, 13
 	spawn KOBAN_ISLAND,                9, 11
