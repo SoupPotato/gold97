@@ -33,7 +33,7 @@ silver_obj := $(gold_obj:.o=_silver.o)
 ### Build targets
 
 .SUFFIXES:
-.PHONY: all gold silver clean compare tools
+.PHONY: all gold silver clean tools
 .SECONDEXPANSION:
 .PRECIOUS:
 .SECONDARY:
@@ -47,9 +47,6 @@ clean:
 	find gfx \( -name "*.[12]bpp" -o -name "*.lz" -o -name "*.gbcpal" -o -name "*.sgb.tilemap" \) -delete
 	find gfx/pokemon -mindepth 1 ! -path "gfx/pokemon/unown/*" \( -name "bitmask.asm" -o -name "frames.asm" -o -name "front.animated.tilemap" -o -name "front.dimensions" \) -delete
 	$(MAKE) clean -C tools/
-
-compare: $(roms)
-	@$(SHA1) -c roms.sha1
 
 tools:
 	$(MAKE) -C tools/
@@ -79,11 +76,11 @@ endif
 
 
 pokegold97.gbc: $(gold_obj) pokecrystal.link
-	$(RGBLINK) -n pokecrystal.sym -m pokecrystal.map -l pokecrystal.link -o $@ $(gold_obj)
+	$(RGBLINK) -n pokegold97.sym -m pokegold97.map -l pokecrystal.link -o $@ $(gold_obj)
 	$(RGBFIX) -Cjv -i BYTE -k 01 -l 0x33 -m 0x10 -p 0 -r 3 -t PM_CRYSTAL $@
 
 pokesilver97.gbc: $(silver_obj) pokecrystal.link
-	$(RGBLINK) -n pokecrystal11.sym -m pokecrystal11.map -l pokecrystal.link -o $@ $(silver_obj)
+	$(RGBLINK) -n pokesilver97.sym -m pokesilver97.map -l pokecrystal.link -o $@ $(silver_obj)
 	$(RGBFIX) -Cjv -i BYTE -k 01 -l 0x33 -m 0x10 -p 0 -r 3 -t PM_CRYSTAL $@
 
 
