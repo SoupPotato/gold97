@@ -25,7 +25,7 @@ KantoRegion_MapScripts:
 	return
 	
 KantoRegionTMDetect:
-	itemball TM_DETECT
+	itemball TM_ROCK_HEAD
 
 KantoFisherScript:
 	jumptextfaceplayer KantoFisherText

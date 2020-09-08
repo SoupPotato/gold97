@@ -29,7 +29,7 @@ AmpareCavern1FRevive:
 	itemball REVIVE
 
 AmpareCavern1FTMSnore:
-	itemball TM_SNORE
+	itemball TM_MEGAPHONE
 
 AmpareCavern1FPharmacistText1:
 	text "Whoa! You startled"

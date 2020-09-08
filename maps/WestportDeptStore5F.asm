@@ -87,7 +87,7 @@ WestportDeptStore5FReceptionistScript:
 .NotVeryHappy:
 	writetext UnknownText_0x561d8
 	buttonsound
-	verbosegiveitem TM_FRUSTRATION
+	verbosegiveitem BERRY
 	iffalse .Done
 	setflag ENGINE_GOLDENROD_DEPT_STORE_TM27_RETURN
 	closetext
@@ -166,9 +166,9 @@ UnknownText_0x561a6:
 	done
 
 UnknownText_0x561d8:
-	text "It looks evil. How"
-	line "about this TM for"
-	cont "it?"
+	text "It looks angry."
+	line "Maybe a BERRY will"
+	cont "chher it up?"
 	done
 
 UnknownText_0x56202:

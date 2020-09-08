@@ -90,7 +90,7 @@ JadeForestRevive:
 	itemball REVIVE
 
 JadeForestXAttack:
-	itemball X_ATTACK
+	itemball TM_CROSS_CUTTER
 
 JadeForestAntidote:
 	itemball ANTIDOTE

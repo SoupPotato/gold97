@@ -40,7 +40,6 @@ pokecrystal.txt
 *.dimensions
 *.gbcpal
 *.1bpp
-*.2bpp
 *.lz
 *.animated.tilemap
 gfx/pokemon/*/bitmask.asm

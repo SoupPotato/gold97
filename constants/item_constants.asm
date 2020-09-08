@@ -216,12 +216,12 @@ ENDM
 	add_tm ROAR         ; c4
 	add_tm TOXIC        ; c5
 	add_tm ZAP_CANNON   ; c6
-	add_tm FLASH   ; c7
+	add_tm FLASH        ; c7
 	add_tm PSYCH_UP     ; c8
 	add_tm HIDDEN_POWER ; c9
 	add_tm SUNNY_DAY    ; ca
 	add_tm SWEET_SCENT  ; cb
-	add_tm SNORE        ; cc
+	add_tm MEGAPHONE    ; cc
 	add_tm BLIZZARD     ; cd
 	add_tm HYPER_BEAM   ; ce
 	add_tm ICY_WIND     ; cf
@@ -229,7 +229,7 @@ ENDM
 	add_tm RAIN_DANCE   ; d1
 	add_tm GIGA_DRAIN   ; d2
 	add_tm ENDURE       ; d3
-	add_tm FRUSTRATION  ; d4
+	add_tm CROSS_CUTTER ; d4
 	add_tm SOLARBEAM    ; d5
 	add_tm IRON_TAIL    ; d6
 	add_tm DRAGONBREATH ; d7
@@ -252,7 +252,7 @@ ENDM
 	add_tm DEFENSE_CURL ; e8
 	add_tm THUNDERPUNCH ; e9
 	add_tm DREAM_EATER  ; ea
-	add_tm DETECT       ; eb
+	add_tm ROCK_HEAD    ; eb
 	add_tm REST         ; ec
 	add_tm ATTRACT      ; ed
 	add_tm THIEF        ; ee

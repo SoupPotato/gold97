@@ -731,25 +731,26 @@ MeowthEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, GROWL
-	db 11, BITE
-	db 20, PAY_DAY
-	db 28, FAINT_ATTACK
-	db 35, SCREECH
-	db 41, FURY_SWIPES
-	db 46, SLASH
+	db 7, BITE
+	db 13, PAY_DAY
+	db 19, FURY_SWIPES
+	db 25, FAINT_ATTACK
+	db 31, COIN_HURL
+	db 37, SCREECH
+	db 43, SLASH
 	db 0 ; no more level-up moves
 
 PersianEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, GROWL
-	db 1, BITE
-	db 11, BITE
-	db 20, PAY_DAY
-	db 29, FAINT_ATTACK
-	db 38, SCREECH
-	db 46, FURY_SWIPES
-	db 53, SLASH
+	db 7, BITE
+	db 13, PAY_DAY
+	db 19, FURY_SWIPES
+	db 25, FAINT_ATTACK
+	db 33, COIN_HURL
+	db 41, SCREECH
+	db 49, SLASH
 	db 0 ; no more level-up moves
 
 PsyduckEvosAttacks:
@@ -1053,11 +1054,12 @@ GeodudeEvosAttacks:
 	db 6, DEFENSE_CURL
 	db 11, ROCK_THROW
 	db 16, MAGNITUDE
-	db 21, SELFDESTRUCT
-	db 26, HARDEN
-	db 31, ROLLOUT
+	db 21, ROLLOUT
+	db 26, SELFDESTRUCT
+	db 31, ROCK_HEAD
 	db 36, EARTHQUAKE
 	db 41, EXPLOSION
+	db 46, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 GravelerEvosAttacks:
@@ -1065,32 +1067,29 @@ GravelerEvosAttacks:
 	db EVOLVE_ITEM, COVENANT_ORB, GOLEM
 	db 0 ; no more evolutions
 	db 1, TACKLE
-	db 1, DEFENSE_CURL
-	db 1, ROCK_THROW
 	db 6, DEFENSE_CURL
 	db 11, ROCK_THROW
 	db 16, MAGNITUDE
-	db 21, SELFDESTRUCT
-	db 27, HARDEN
-	db 34, ROLLOUT
+	db 21, ROLLOUT
+	db 27, SELFDESTRUCT
+	db 34, ROCK_HEAD
 	db 41, EARTHQUAKE
 	db 48, EXPLOSION
+	db 55, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 GolemEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
-	db 1, DEFENSE_CURL
-	db 1, ROCK_THROW
-	db 1, MAGNITUDE
 	db 6, DEFENSE_CURL
 	db 11, ROCK_THROW
 	db 16, MAGNITUDE
-	db 21, SELFDESTRUCT
-	db 27, HARDEN
-	db 34, ROLLOUT
+	db 21, ROLLOUT
+	db 27, SELFDESTRUCT
+	db 34, ROCK_HEAD
 	db 41, EARTHQUAKE
 	db 48, EXPLOSION
+	db 55, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 PonytaEvosAttacks:
@@ -1392,18 +1391,19 @@ OnixEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, HARDEN
-	db 4, SCREECH
-	db 8, BIND
-	db 12, ROCK_THROW
-	db 17, RAGE
-	db 22, SANDSTORM
-	db 26, SLAM
-	db 31, DRAGONBREATH
-	db 35, CURSE
-	db 40, IRON_TAIL
-	db 44, DIG
-	db 49, DOUBLE_EDGE
-	db 53, ROCK_SLIDE
+	db 1, BIND
+	db 5, CURSE
+	db 9, ROCK_THROW
+	db 13, RAGE
+	db 17, SCREECH
+	db 21, SLAM
+	db 25, DRAGONBREATH
+	db 29, ROCK_SLIDE
+	db 33, SANDSTORM
+	db 37, IRON_TAIL
+	db 41, DIG
+	db 45, DOUBLE_EDGE
+	db 49, ROCK_HEAD
 	db 0 ; no more level-up moves
 
 DrowzeeEvosAttacks:
@@ -1914,7 +1914,7 @@ PinsirEvosAttacks:
 	db 13, BIND
 	db 19, SEISMIC_TOSS
 	db 25, HARDEN
-	db 30, FURY_CUTTER
+	db 30, CROSS_CUTTER
 	db 35, THRASH
 	db 38, SWORDS_DANCE
 	db 42, SUBMISSION
@@ -2472,14 +2472,15 @@ HoothootEvosAttacks:
 	db 1, TACKLE
 	db 1, GROWL
 	db 1, FORESIGHT
-	db 7, PECK
-	db 12, HYPNOSIS
-	db 17, REFLECT
-	db 22, CONFUSION
+	db 6, PECK
+	db 10, HYPNOSIS
+	db 15, REFLECT
+	db 19, MEGAPHONE
+	db 24, CONFUSION
 	db 28, TAKE_DOWN
-	db 34, WING_ATTACK
-	db 45, DREAM_EATER
-	db 52, SKY_ATTACK
+	db 33, WING_ATTACK
+	db 37, DREAM_EATER
+	db 43, SKY_ATTACK
 	db 0 ; no more level-up moves
 
 NoctowlEvosAttacks:
@@ -2487,14 +2488,15 @@ NoctowlEvosAttacks:
 	db 1, TACKLE
 	db 1, GROWL
 	db 1, FORESIGHT
-	db 7, PECK
-	db 12, HYPNOSIS
-	db 17, REFLECT
-	db 23, CONFUSION
-	db 30, WING_ATTACK
-	db 38, TAKE_DOWN
-	db 52, DREAM_EATER
-	db 58, SKY_ATTACK
+	db 6, PECK
+	db 10, HYPNOSIS
+	db 15, REFLECT
+	db 19, MEGAPHONE
+	db 26, CONFUSION
+	db 32, TAKE_DOWN
+	db 38, WING_ATTACK
+	db 44, DREAM_EATER
+	db 50, SKY_ATTACK
 	db 0 ; no more level-up moves
 
 LedybaEvosAttacks:
@@ -3111,15 +3113,20 @@ ParamiteEvosAttacks:
 SteelixEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
-	db 1, SCREECH
-	db 10, BIND
-	db 14, ROCK_THROW
-	db 23, HARDEN
-	db 27, RAGE
-	db 36, SANDSTORM
-	db 40, SLAM
+	db 1, HARDEN
+	db 1, BIND
+	db 5, CURSE
+	db 9, ROCK_THROW
+	db 13, RAGE
+	db 17, SCREECH
+	db 21, SLAM
+	db 25, DRAGONBREATH
+	db 29, ROCK_SLIDE
+	db 33, SANDSTORM
+	db 37, IRON_TAIL
+	db 41, DIG
+	db 45, DOUBLE_EDGE
 	db 49, CRUNCH
-	db 54, IRON_TAIL
 	db 0 ; no more level-up moves
 
 SnubbullEvosAttacks:
@@ -3155,7 +3162,7 @@ PraxeEvosAttacks:
 	db 13, BIND
 	db 19, SEISMIC_TOSS
 	db 25, HARDEN
-	db 30, FURY_CUTTER
+	db 30, CROSS_CUTTER
 	db 35, THRASH
 	db 38, SWORDS_DANCE
 	db 42, METAL_CLAW
@@ -3185,30 +3192,28 @@ RinringEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, GROWL
-	db 9, BITE
-	db 14, HEADBUTT
-	db 20, GLARE
-	db 25, DISABLE
-	db 35, FAINT_ATTACK
-	db 37, FURY_SWIPES
-	db 41, PURSUIT
-	db 44, SLASH
-	db 50, ATTRACT
+	db 7, PURSUIT
+	db 12, DISABLE
+	db 18, COIN_HURL
+	db 23, FURY_SWIPES
+	db 29, FAINT_ATTACK
+	db 34, CONFUSE_RAY
+	db 40, SLASH
+	db 45, ATTRACT
 	db 0 ; no more level-up moves
 
 BellrunEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, GROWL
-	db 11, BITE
-	db 16, HEADBUTT
-	db 23, GLARE
-	db 27, DISABLE
-	db 36, FAINT_ATTACK
-	db 39, FURY_SWIPES
-	db 44, PURSUIT
-	db 46, SLASH
-	db 53, ATTRACT
+	db 7, PURSUIT
+	db 12, DISABLE
+	db 18, COIN_HURL
+	db 23, FURY_SWIPES
+	db 31, FAINT_ATTACK
+	db 39, CONFUSE_RAY
+	db 47, SLASH
+	db 56, ATTRACT
 	db 0 ; no more level-up moves
 
 SneaselEvosAttacks:
