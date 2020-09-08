@@ -93,4 +93,7 @@
 ; group 27 (Rainbow)
 	RGB 12,25,01, 05,14,00 ; morn/day
 	RGB 12,25,01, 05,14,00 ; nite
-
+	
+; group 28 (Kikai)
+	RGB 29,02,03, 14,01,01 ; morn/day
+	RGB 16,02,02, 10,01,01 ; nite

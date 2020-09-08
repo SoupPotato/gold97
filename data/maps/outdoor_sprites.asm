@@ -26,6 +26,7 @@ OutdoorSprites:
 	dw RyukyuGroupSprites
 	dw CrownGroupSprites
 	dw RainbowGroupSprites
+	dw KikaiGroupSprites
 
 
 KobanGroupSprites:
@@ -363,6 +364,22 @@ FastShipGroupSprites:
 	db SPRITE_POKE_BALL
 	db SPRITE_ROCK
 	db SPRITE_HO_OH
+	db 0 ; end
+
+KikaiGroupSprites:
+	db SPRITE_YOUNGSTER
+	db SPRITE_BLACK_BELT
+	db SPRITE_SWIMMER_GUY
+	db SPRITE_LASS
+	db SPRITE_GRAMPS
+	db SPRITE_SWIMMER_GIRL
+	db SPRITE_SAILOR
+	db SPRITE_PHARMACIST
+	db SPRITE_BRUNO
+	; 9 of max 9 walking sprites
+	db SPRITE_ROCK
+	db SPRITE_POKE_BALL
+	db SPRITE_FRUIT_TREE
 	db 0 ; end
 
 CableClubGroupSprites:

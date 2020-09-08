@@ -214,6 +214,7 @@ BlueBattleScript:
 	special FadeOutMusic
 	opentext
 	writetext BlueFirstChallengeText
+	waitbutton ; added this just now
 	winlosstext BlueFirstWinText, 0
 	loadtrainer BLUE, BLUE1
 	startbattle

@@ -94,8 +94,9 @@ AmamiBTSign:
 	jumptext AmamiBTSignText
 	
 AmamiBTSignText:
-	text "BATTLE TOWER"
-	line "AHEAD"
+	text "TATSUGO PATH &"
+	line "BATTLE TOWER"
+	cont "this way."
 	done
 	
 AmamiTown_MapEvents:

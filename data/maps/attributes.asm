@@ -288,6 +288,20 @@ ENDM
 	
 	map_attributes CharredSummit, CHARRED_SUMMIT, $98, WEST
 	connection west, MeridianPath, MERIDIAN_PATH, 7
+	
+	map_attributes BattleTowerOutside, BATTLE_TOWER_OUTSIDE, $05, EAST
+	connection east, TatsugoPath, TATSUGO_PATH, 5
+	
+	map_attributes TatsugoPath, TATSUGO_PATH, $05, WEST | EAST
+	connection west, BattleTowerOutside, BATTLE_TOWER_OUTSIDE, -5
+	connection east, KikaiStrait, KIKAI_STRAIT, -3
+	
+	map_attributes KikaiStrait, KIKAI_STRAIT, $35, NORTH | WEST
+	connection north, KikaiVillage, KIKAI_VILLAGE, 0
+	connection west, TatsugoPath, TATSUGO_PATH, 3
+	
+	map_attributes KikaiVillage, KIKAI_VILLAGE, $05, SOUTH
+	connection south, KikaiStrait, KIKAI_STRAIT, 0
 
 	map_attributes BrassTower1F, BRASS_TOWER_1F, $00, 0
 	map_attributes BrassTower2F, BRASS_TOWER_2F, $00, 0
@@ -508,7 +522,6 @@ ENDM
 	map_attributes BattleTowerBattleRoom, BATTLE_TOWER_BATTLE_ROOM, $00, 0
 	map_attributes BattleTowerElevator, BATTLE_TOWER_ELEVATOR, $00, 0
 	map_attributes BattleTowerHallway, BATTLE_TOWER_HALLWAY, $00, 0
-	map_attributes BattleTowerOutside, BATTLE_TOWER_OUTSIDE, $35, 0
 	map_attributes RocketShipBase, ROCKET_SHIP_BASE, $00, 0
 	map_attributes SanskritMart, SANSKRIT_MART, $00, 0
 	map_attributes SilentPokecenter1F, SILENT_POKECENTER_1F, $00, 0
@@ -576,3 +589,10 @@ ENDM
 	map_attributes ForkedStraitGate, FORKED_STRAIT_GATE, $00, 0
 	map_attributes TropicalIslandJungle, TROPICAL_ISLAND_JUNGLE, $05, 0
 	map_attributes RainbowIslandCave, RAINBOW_ISLAND_CAVE, $09, 0
+	map_attributes KikaiPokecenter1F, KIKAI_POKECENTER_1F, $00, 0
+	map_attributes KikaiMart, KIKAI_MART, $00, 0
+	map_attributes KikaiHouse1, KIKAI_HOUSE_1, $00, 0
+	map_attributes KikaiHouse2, KIKAI_HOUSE_2, $00, 0
+	map_attributes KikaiCaldera1F, KIKAI_CALDERA_1F, $59, 0
+	map_attributes KikaiCaldera2F, KIKAI_CALDERA_2F, $59, 0
+	map_attributes KikaiCaldera3F, KIKAI_CALDERA_3F, $59, 0

@@ -110,6 +110,8 @@ KantoHouse2_Blocks:
 KantoHouse3_Blocks:
 KantoHouse4_Blocks:
 KantoFujiHouse_Blocks:
+KikaiHouse1_Blocks:
+KikaiHouse2_Blocks:
 	INCBIN "maps/House1.blk"
 
 Route109Route110Gate_Blocks:
@@ -214,6 +216,7 @@ FrostpointMart_Blocks:
 SanskritMart_Blocks:
 RyukyuMart_Blocks:
 CrownMart_Blocks:
+KikaiMart_Blocks:
 	INCBIN "maps/Mart.blk"
 
 SeasidePath_Blocks:
@@ -239,6 +242,7 @@ SilentPokecenter1F_Blocks:
 RyukyuPokecenter1F_Blocks:
 CrownPokecenter1F_Blocks:
 KantoPokecenter1F_Blocks:
+KikaiPokecenter1F_Blocks:
 	INCBIN "maps/Pokecenter1F.blk"
 
 PagotaTrainerSchool_Blocks:
@@ -831,3 +835,24 @@ RainbowIsland_Blocks:
 	
 RainbowIslandCave_Blocks:
 	INCBIN "maps/RainbowIslandCave.blk"
+
+	
+SECTION "Map Blocks 4", ROMX
+
+TatsugoPath_Blocks:
+	INCBIN "maps/TatsugoPath.blk"
+	
+KikaiStrait_Blocks:
+	INCBIN "maps/KikaiStrait.blk"
+	
+KikaiVillage_Blocks:
+	INCBIN "maps/KikaiVillage.blk"
+	
+KikaiCaldera1F_Blocks:
+	INCBIN "maps/KikaiCaldera1F.blk"
+	
+KikaiCaldera2F_Blocks:
+	INCBIN "maps/KikaiCaldera2F.blk"
+	
+KikaiCaldera3F_Blocks:
+	INCBIN "maps/KikaiCaldera3F.blk"

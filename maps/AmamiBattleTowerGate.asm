@@ -18,6 +18,9 @@ AmamiBattleTowerGateRockerScript:
 AmamiBattleTowerGateTwinScript:
 	jumptextfaceplayer AmamiBattleTowerGateTwinText
 
+AmamiBTGateCopScript:
+	jumptextfaceplayer AmamiBTGateCopText
+
 UnknownText_0x9f66f:
 	text "Did you come to"
 	line "see the BATTLE"
@@ -68,19 +71,34 @@ AmamiBattleTowerGateTwinText:
 	line "them now!"
 	done
 
+AmamiBTGateCopText:
+	text "If you keep going"
+	line "east, you'll"
+	cont "be heading to"
+	cont "KIKAI VILLAGE."
+	
+	para "More people come"
+	line "for the BATTLE"
+	cont "TOWER though."
+	done
+
+
 AmamiBattleTowerGate_MapEvents:
 	db 0, 0 ; filler
 
-	db 4 ; warp events
+	db 6 ; warp events
 	warp_event  0,  4, AMAMI_TOWN, 11
 	warp_event  0,  5, AMAMI_TOWN, 10
 	warp_event  7,  0, BATTLE_TOWER_OUTSIDE, 3
 	warp_event  8,  0, BATTLE_TOWER_OUTSIDE, 4
+	warp_event  9,  4, BATTLE_TOWER_OUTSIDE, 5
+	warp_event  9,  5, BATTLE_TOWER_OUTSIDE, 6
 
 	db 0 ; coord events
 
 	db 0 ; bg events
 
-	db 2 ; object events
-	object_event  3,  3, SPRITE_ROCKER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AmamiBattleTowerGateRockerScript, EVENT_BATTLE_TOWER_OUTSIDE_SAILOR
-	object_event  7,  5, SPRITE_TWIN, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AmamiBattleTowerGateTwinScript, -1
+	db 3 ; object events
+	object_event  3,  1, SPRITE_ROCKER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AmamiBattleTowerGateRockerScript, EVENT_BATTLE_TOWER_OUTSIDE_SAILOR
+	object_event  5,  4, SPRITE_TWIN, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AmamiBattleTowerGateTwinScript, -1
+	object_event  4,  7, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AmamiBTGateCopScript, -1

@@ -75,6 +75,10 @@ KANTO_LANDMARK EQU const_value
 	const ISEN_STRAIT       ; 53
 	const SEASIDE_PATH      ; 43 8
 	const JOULE_CAVE        ; 3b 6
+	const KIKAI_CALDERA     ; new
+	const KIKAI_VILLAGE     ; new
+	const KIKAI_STRAIT      ; new
+	const TATSUGO_PATH      ; new
 	const BATTLE_TOWER      ; 1d
 	const AMAMI_TOWN        ; 3d 7
 	const FAST_SHIP         ; 5f

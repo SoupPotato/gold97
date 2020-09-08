@@ -248,7 +248,6 @@ ENDM
 	map_const SEASIDE_PATH,                                30,  9 ;  8
 	map_const URASOE_TRAIL_SUPER_ROD_HOUSE,                 5,  4 ;  9
 	map_const AMAMI_BATTLE_TOWER_GATE,                      5, 4  ; new
-	map_const BATTLE_TOWER_OUTSIDE,                        10, 14 ; 16
 
 	newgroup                                                      ; 13
 
@@ -439,4 +438,18 @@ ENDM
 	
 	newgroup
 	
-	map_const RAINBOW_ISLAND,                              30, 30 ; new (in crown mapgroup for roof colors & outdoor sprites)
+	map_const RAINBOW_ISLAND,                              30, 30 ; new
+	
+	newgroup
+	
+	map_const BATTLE_TOWER_OUTSIDE,                        10, 14 ; 16
+	map_const TATSUGO_PATH,                                30, 9 ; new
+	map_const KIKAI_STRAIT,                                10, 12 ; new
+	map_const KIKAI_VILLAGE,                               10, 15 ; new
+	map_const KIKAI_POKECENTER_1F,                         8, 4 ; new
+	map_const KIKAI_MART,                                  8, 4 ; new
+	map_const KIKAI_HOUSE_1,                               5, 4 ; new
+	map_const KIKAI_HOUSE_2,                               5, 4 ; new
+	map_const KIKAI_CALDERA_1F,                            15, 10 ; new
+	map_const KIKAI_CALDERA_2F,                            10, 8  ; new
+	map_const KIKAI_CALDERA_3F,                            5, 4 ; new

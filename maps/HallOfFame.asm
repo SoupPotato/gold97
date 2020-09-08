@@ -41,6 +41,7 @@ HallOfFame_MapScripts:
 	setevent EVENT_REMATCH_AVAILABLE_OKERA
 	setevent EVENT_REMATCH_AVAILABLE_RED
 	setevent EVENT_BATTLE_AVAILABLE_CLAIR
+	clearevent EVENT_BRUNO_BATTLE_DONE
 
 	checkevent EVENT_PACKAGE_TAKEN_NO_SHOW
 	iffalse .skipPackages ; if package is sitting there unopened

@@ -25,7 +25,7 @@ TrainerClassNames::
 	db "SCHOOLBOY@"
 	db "BIRD KEEPER@"
 	db "LASS@"
-	db "LEADER@"
+	db "ELITE FOUR@"
 	db "COOLTRAINER@"
 	db "COOLTRAINER@"
 	db "BEAUTY@"

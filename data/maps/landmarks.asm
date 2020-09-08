@@ -77,6 +77,10 @@ Landmarks:
 	landmark  96,  52, IsenStraitName
 	landmark 112,  52, SeasidePathName
 	landmark 124,  52, JouleCaveName
+	landmark 148, 28,  KikaiCalderaName
+	landmark 140, 36,  KikaiVillageName
+	landmark 140, 44,  KikaiStraitName
+	landmark 132, 44,  TatsugoPathName  
 	landmark 118,  44, BattleTowerName
 	landmark 116,  44, AmamiCityName
 	landmark  36, 124, FastShipName
@@ -155,4 +159,8 @@ IcedCavernName:       db "ICED CAVERN@"
 JouleCaveName:        db "JOULE CAVE@"
 BattleTowerName:      db "BATTLE¯TOWER@"
 RainbowIslandName:    db "RAINBOW¯ISLAND@"
+TatsugoPathName:      db "TATSUGO¯PATH@"
+KikaiStraitName:      db "KIKAI¯STRAIT@"
+KikaiVillageName:     db "KIKAI¯VILLAGE@"
+KikaiCalderaName:     db "KIKAI¯CALDERA@"
 SpecialMapName:       db "SPECIAL@"

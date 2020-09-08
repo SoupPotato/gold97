@@ -30,6 +30,9 @@ BattleTowerOutsideSailorScript:
 BattleTowerOutsideSign:
 	jumptext BattleTowerOutsideSignText
 	
+TatsugoPathSign:
+	jumptext TatsugoPathSignText
+	
 ThiefNewBTScript:
 	faceplayer
 	opentext
@@ -120,22 +123,32 @@ BattleTowerOutsideSignText:
 	line "Trainer Challenge!"
 	done
 
+TatsugoPathSignText:
+	text "TATSUGO PATH"
+	
+	para "AMAMI TOWN -"
+	line "KIKAI VILLAGE"
+	done
 
 BattleTowerOutside_MapEvents:
 	db 0, 0 ; filler
 
-	db 4 ; warp events
+	db 6 ; warp events
 	warp_event  8,  9, BATTLE_TOWER_1F, 1
 	warp_event  9,  9, BATTLE_TOWER_1F, 2
 	warp_event 10, 21, AMAMI_BATTLE_TOWER_GATE, 3
 	warp_event 11, 21, AMAMI_BATTLE_TOWER_GATE, 4
+	warp_event 12, 24, AMAMI_BATTLE_TOWER_GATE, 5
+	warp_event 12, 25, AMAMI_BATTLE_TOWER_GATE, 6
+	
 	db 0 ; coord events
 
-	db 1 ; bg events
+	db 2 ; bg events
 	bg_event 12, 10, BGEVENT_READ, BattleTowerOutsideSign
+	bg_event 18, 22, BGEVENT_READ, TatsugoPathSign
 
 	db 4 ; object events
 	object_event  6, 12, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BattleTowerOutsideYoungsterScript, -1
-	object_event 13, 13, SPRITE_BUENA, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, BattleTowerOutsideBuenaScript, -1
+	object_event 13, 13, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, BattleTowerOutsideBuenaScript, -1
 	object_event 12, 18, SPRITE_SAILOR, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BattleTowerOutsideSailorScript, EVENT_BATTLE_TOWER_OUTSIDE_SAILOR_NEW
 	object_event  5, 17, SPRITE_PHARMACIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ThiefNewBTScript, -1

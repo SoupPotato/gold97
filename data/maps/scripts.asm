@@ -39,6 +39,14 @@ INCLUDE "maps/EndonCaveB1F.asm"
 INCLUDE "maps/RadioTower6F.asm"
 INCLUDE "maps/KantoBattleClub1F.asm"
 
+INCLUDE "maps/TatsugoPath.asm"
+INCLUDE "maps/KikaiStrait.asm"
+INCLUDE "maps/KikaiPokecenter1F.asm"
+INCLUDE "maps/KikaiMart.asm"
+INCLUDE "maps/KikaiCaldera1F.asm"
+INCLUDE "maps/KikaiCaldera2F.asm"
+INCLUDE "maps/KikaiCaldera3F.asm"
+
 SECTION "Map Scripts 3", ROMX
 
 INCLUDE "maps/NationalPark.asm"
@@ -49,6 +57,10 @@ INCLUDE "maps/RadioTower3F.asm"
 INCLUDE "maps/RadioTower4F.asm"
 INCLUDE "maps/KantoPokecenter1F.asm"
 INCLUDE "maps/TeknosAquarium1F.asm"
+
+INCLUDE "maps/KikaiVillage.asm"
+INCLUDE "maps/KikaiHouse1.asm"
+INCLUDE "maps/KikaiHouse2.asm"
 
 
 SECTION "Map Scripts 4", ROMX; removed 0
