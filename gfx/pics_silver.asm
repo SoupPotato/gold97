@@ -31,7 +31,7 @@ TaurosFrontpic:      INCBIN "gfx/pokemon/tauros/front_S.animated.2bpp.lz"
 VenusaurFrontpic:    INCBIN "gfx/pokemon/venusaur/front_S.animated.2bpp.lz"
 EnteiFrontpic:       INCBIN "gfx/pokemon/entei/front.animated.2bpp.lz"
 SuicuneFrontpic:     INCBIN "gfx/pokemon/suicune/front.animated.2bpp.lz"
-DynabearFrontpic:    INCBIN "gfx/pokemon/dynabear/front.animated.2bpp.lz"
+DynabearFrontpic:    INCBIN "gfx/pokemon/dynabear/front_S.animated.2bpp.lz"
 
 
 SECTION "Pics 2", ROMX
