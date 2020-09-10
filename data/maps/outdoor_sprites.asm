@@ -27,6 +27,7 @@ OutdoorSprites:
 	dw CrownGroupSprites
 	dw RainbowGroupSprites
 	dw KikaiGroupSprites
+	dw DaitoGroupSprites
 
 
 KobanGroupSprites:
@@ -263,6 +264,7 @@ WestportGroupSprites:
 	db SPRITE_FRUIT_TREE
 	db 0 ;end
 
+DaitoGroupSprites:
 SunpointGroupSprites:
 	db SPRITE_TWIN
 	db SPRITE_FISHER

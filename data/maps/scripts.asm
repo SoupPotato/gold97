@@ -160,6 +160,10 @@ INCLUDE "maps/BrassTowerRoof.asm"
 INCLUDE "maps/VictoryRoadOutside.asm"
 INCLUDE "maps/AmamiPortPassage.asm"
 
+INCLUDE "maps/GreatEastStrait.asm"
+INCLUDE "maps/DaitoRanch.asm"
+INCLUDE "maps/DaitoAppleOrchard.asm"
+
 SECTION "Map Scripts 10", ROMX
 
 INCLUDE "maps/WestportUnderground.asm"

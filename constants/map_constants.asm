@@ -114,7 +114,7 @@ ENDM
 	map_const BOULDER_MINES_B4F,                           17, 11 ; 44
 	map_const BOULDER_MINES_B2F,                           22, 11 ; 45
 	map_const BOULDER_MINES_B3F,                           20,  9 ; 46
-	map_const NANJO_FOREST,                                20, 18 ; 47
+	map_const NANJO_FOREST,                                22, 20 ; 47
 	map_const VICTORY_ROAD,                                20, 27 ; 48
 	map_const VICTORY_ROAD_2F,                             20, 27 ; 49
 	map_const SILENT_HILLS,                                25, 18 ; 50
@@ -453,3 +453,9 @@ ENDM
 	map_const KIKAI_CALDERA_1F,                            15, 10 ; new
 	map_const KIKAI_CALDERA_2F,                            10, 8  ; new
 	map_const KIKAI_CALDERA_3F,                            5, 4 ; new
+	
+	newgroup
+	
+	map_const GREAT_EAST_STRAIT,                           60, 9 ; new
+	map_const DAITO_RANCH,                                 12, 16; new
+	map_const DAITO_APPLE_ORCHARD,                         12, 8 ; new

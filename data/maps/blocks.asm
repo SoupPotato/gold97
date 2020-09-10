@@ -856,3 +856,12 @@ KikaiCaldera2F_Blocks:
 	
 KikaiCaldera3F_Blocks:
 	INCBIN "maps/KikaiCaldera3F.blk"
+	
+GreatEastStrait_Blocks:
+	INCBIN "maps/GreatEastStrait.blk"
+	
+DaitoRanch_Blocks:
+	INCBIN "maps/DaitoRanch.blk"
+	
+DaitoAppleOrchard_Blocks:
+	INCBIN "maps/DaitoAppleOrchard.blk"

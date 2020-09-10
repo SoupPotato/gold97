@@ -303,6 +303,16 @@ ENDM
 	map_attributes KikaiVillage, KIKAI_VILLAGE, $05, SOUTH
 	connection south, KikaiStrait, KIKAI_STRAIT, 0
 
+	map_attributes GreatEastStrait, GREAT_EAST_STRAIT, $07, EAST
+	connection east, DaitoRanch, DAITO_RANCH, -7
+	
+	map_attributes DaitoRanch, DAITO_RANCH, $07, NORTH | WEST
+	connection north, DaitoAppleOrchard, DAITO_APPLE_ORCHARD, 0
+	connection west, GreatEastStrait, GREAT_EAST_STRAIT, 7
+
+	map_attributes DaitoAppleOrchard, DAITO_APPLE_ORCHARD, $07, SOUTH
+	connection south, DaitoRanch, DAITO_RANCH, 0
+
 	map_attributes BrassTower1F, BRASS_TOWER_1F, $00, 0
 	map_attributes BrassTower2F, BRASS_TOWER_2F, $00, 0
 	map_attributes BrassTower3F, BRASS_TOWER_3F, $00, 0

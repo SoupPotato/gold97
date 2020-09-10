@@ -66,6 +66,9 @@ KANTO_LANDMARK EQU const_value
 	const YORON_POINT       ; 38 4
 	const KERAMA_STRAIT     ; 52
 	const URASOE_TRAIL      ; 4a
+	const APPLE_ORCHARD     ; new
+	const DAITO_RANCH       ; new
+	const GREAT_EAST_STRAIT ; new
 	const NANJO_FOREST      ; 54
 	const URASOE_PARK       ; 35 2
 	const RYUKYU_CITY       ; 48 9
