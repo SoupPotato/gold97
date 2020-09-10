@@ -27,6 +27,7 @@ Flypoints:
 KANTO_FLYPOINT EQU const_value
 	flypoint YORON,        YORON_CITY
 	flypoint RYUKYU,       RYUKYU_CITY
+	flypoint DAITO,        DAITO_RANCH
 	flypoint NAGO,         NAGO_VILLAGE
 	flypoint KIKAI,        KIKAI_VILLAGE
 	flypoint AMAMI,        AMAMI_TOWN
