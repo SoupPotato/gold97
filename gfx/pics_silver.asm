@@ -31,7 +31,7 @@ TaurosFrontpic:      INCBIN "gfx/pokemon/tauros/front_S.animated.2bpp.lz"
 VenusaurFrontpic:    INCBIN "gfx/pokemon/venusaur/front_S.animated.2bpp.lz"
 EnteiFrontpic:       INCBIN "gfx/pokemon/entei/front.animated.2bpp.lz"
 SuicuneFrontpic:     INCBIN "gfx/pokemon/suicune/front.animated.2bpp.lz"
-DynabearFrontpic:    INCBIN "gfx/pokemon/dynabear/front.animated.2bpp.lz"
+DynabearFrontpic:    INCBIN "gfx/pokemon/dynabear/front_S.animated.2bpp.lz"
 
 
 SECTION "Pics 2", ROMX
@@ -201,7 +201,7 @@ MewFrontpic:         INCBIN "gfx/pokemon/mew/front_S.animated.2bpp.lz"
 OctilleryFrontpic:   INCBIN "gfx/pokemon/octillery/front_S.animated.2bpp.lz"
 JynxFrontpic:        INCBIN "gfx/pokemon/jynx/front_S.animated.2bpp.lz"
 TwinzFrontpic:       INCBIN "gfx/pokemon/twinz/front_S.animated.2bpp.lz"
-DelibirdFrontpic:    INCBIN "gfx/pokemon/delibird/front.animated.2bpp.lz"
+DelibirdFrontpic:    INCBIN "gfx/pokemon/delibird/front_S.animated.2bpp.lz"
 TripstarFrontpic:    INCBIN "gfx/pokemon/tripstar/front_S.animated.2bpp.lz"
 GloomFrontpic:       INCBIN "gfx/pokemon/gloom/front_S.animated.2bpp.lz"
 FlaaffyFrontpic:     INCBIN "gfx/pokemon/flaaffy/front_S.animated.2bpp.lz"
