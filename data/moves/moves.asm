@@ -263,7 +263,7 @@ Moves:
 	move ROCK_SMASH,   EFFECT_DEFENSE_DOWN_HIT,   20, FIGHTING, 100, 15,  50
 	move WHIRLPOOL,    EFFECT_TRAP_TARGET,        15, WATER,     70, 15,   0
 	move BEAT_UP,      EFFECT_BEAT_UP,            10, DARK,     100, 10,   0
-	move COIN_HURL,    EFFECT_COIN_HURL,          40, NORMAL,    80, 20,   0
+	move COIN_HURL,    EFFECT_COIN_HURL,          40, NORMAL,   100, 20,   0
 	move MEGAPHONE,    EFFECT_SP_ATK_DOWN,         0, NORMAL,   100, 40,   0
 	move ROCK_HEAD,    EFFECT_FLINCH_HIT,         90, ROCK,     100, 10,  30
 	move STRUGGLE,     EFFECT_RECOIL_HIT,         50, NORMAL,   100,  1,   0
