@@ -64,4 +64,4 @@ Route104GardenersHouse_MapEvents:
 	bg_event  1,  0, BGEVENT_READ, Route104GardenersHouseBookshelf
 
 	db 1 ; object events
-	object_event  4,  3, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, Route104GardenersHousePokefanMScript, -1
+	object_event  4,  3, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, Route104GardenersHousePokefanMScript, EVENT_GEOFFREY_GONE_TO_DAITO

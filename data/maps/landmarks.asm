@@ -68,6 +68,9 @@ Landmarks:
 	landmark  44, 100, YoronPointName
 	landmark  60, 100, KeramaStraitName
 	landmark  76,  96, UrasoeTrailName
+	landmark  148,  92, AppleOrchardName
+	landmark  148, 100, DaitoRanchName
+	landmark  116, 100, GreatEastStraitName
 	landmark  84, 100, NanjoForestName
 	landmark  76,  84, UrasoeParkName
 	landmark  76,  76, RyukyuCityName
@@ -84,6 +87,7 @@ Landmarks:
 	landmark 118,  44, BattleTowerName
 	landmark 116,  44, AmamiCityName
 	landmark  36, 124, FastShipName
+	; the formula to get these numbers from the X/Y in tilemap studio is: (X or Y) * 8 + 4
 
 SilentTownName:       db "SILENT TOWN@"
 CrownCityName:        db "CROWN CITY@"
@@ -163,4 +167,7 @@ TatsugoPathName:      db "TATSUGO¯PATH@"
 KikaiStraitName:      db "KIKAI¯STRAIT@"
 KikaiVillageName:     db "KIKAI¯VILLAGE@"
 KikaiCalderaName:     db "KIKAI¯CALDERA@"
+GreatEastStraitName:  db "GREAT EAST¯STRAIT@"
+DaitoRanchName:       db "DAITO¯RANCH@"
+AppleOrchardName:     db "APPLE¯ORCHARD@"
 SpecialMapName:       db "SPECIAL@"

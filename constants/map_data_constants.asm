@@ -98,5 +98,7 @@ const_value = -1
 	const SPAWN_BLUEFOREST
 	const SPAWN_MT_SILVER
 	const SPAWN_FAST_SHIP
+; why won't these work normally I am going to scream and shit
+	const SPAWN_DAITO
 NUM_SPAWNS EQU const_value
 

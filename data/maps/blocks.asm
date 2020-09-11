@@ -112,6 +112,9 @@ KantoHouse4_Blocks:
 KantoFujiHouse_Blocks:
 KikaiHouse1_Blocks:
 KikaiHouse2_Blocks:
+DaitoRanchHouse_Blocks:
+AppleOrchardHouse_Blocks:
+DaitoGardenerGeoffHouse_Blocks:
 	INCBIN "maps/House1.blk"
 
 Route109Route110Gate_Blocks:
@@ -856,3 +859,15 @@ KikaiCaldera2F_Blocks:
 	
 KikaiCaldera3F_Blocks:
 	INCBIN "maps/KikaiCaldera3F.blk"
+	
+GreatEastStrait_Blocks:
+	INCBIN "maps/GreatEastStrait.blk"
+	
+DaitoRanch_Blocks:
+	INCBIN "maps/DaitoRanch.blk"
+	
+DaitoAppleOrchard_Blocks:
+	INCBIN "maps/DaitoAppleOrchard.blk"
+	
+DaitoRanchBarn_Blocks:
+	INCBIN "maps/DaitoRanchBarn.blk"

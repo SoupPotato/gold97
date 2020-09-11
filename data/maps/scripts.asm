@@ -160,6 +160,10 @@ INCLUDE "maps/BrassTowerRoof.asm"
 INCLUDE "maps/VictoryRoadOutside.asm"
 INCLUDE "maps/AmamiPortPassage.asm"
 
+INCLUDE "maps/GreatEastStrait.asm"
+INCLUDE "maps/DaitoRanch.asm"
+INCLUDE "maps/DaitoAppleOrchard.asm"
+
 SECTION "Map Scripts 10", ROMX
 
 INCLUDE "maps/WestportUnderground.asm"
@@ -235,6 +239,9 @@ INCLUDE "maps/LancesRoom.asm"
 INCLUDE "maps/HallOfFame.asm"
 INCLUDE "maps/NanjoForest.asm"
 
+INCLUDE "maps/DaitoRanchHouse.asm"
+INCLUDE "maps/AppleOrchardHouse.asm"
+INCLUDE "maps/DaitoRanchBarn.asm"
 
 SECTION "Map Scripts 14", ROMX; removed 2
 
@@ -244,6 +251,8 @@ INCLUDE "maps/BrassTower2F.asm"
 INCLUDE "maps/BrassTower3F.asm"
 INCLUDE "maps/BrassTower4F.asm"
 INCLUDE "maps/BrassTower5F.asm"
+
+INCLUDE "maps/DaitoGardenerGeoffHouse.asm"
 
 
 SECTION "Map Scripts 15", ROMX

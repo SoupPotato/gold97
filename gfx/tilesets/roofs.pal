@@ -97,3 +97,7 @@
 ; group 28 (Kikai)
 	RGB 29,02,03, 14,01,01 ; morn/day
 	RGB 16,02,02, 10,01,01 ; nite
+	
+; group 29 (Daito)
+	RGB 20,31,14, 11,23,05 ; morn/day
+	RGB 09,13,08, 06,09,04 ; nite

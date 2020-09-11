@@ -27,6 +27,7 @@ OutdoorSprites:
 	dw CrownGroupSprites
 	dw RainbowGroupSprites
 	dw KikaiGroupSprites
+	dw DaitoGroupSprites
 
 
 KobanGroupSprites:
@@ -382,6 +383,17 @@ KikaiGroupSprites:
 	db SPRITE_POKE_BALL
 	db SPRITE_FRUIT_TREE
 	db 0 ; end
+
+DaitoGroupSprites:
+	db SPRITE_FISHER
+	db SPRITE_FISHING_GURU
+	db SPRITE_OFFICER
+	db SPRITE_TAUROS
+	; 4 of max 9 walking sprites
+	db SPRITE_FRUIT_TREE
+	db SPRITE_POKE_BALL
+	db 0 ; end
+
 
 CableClubGroupSprites:
 	; no outdoor maps

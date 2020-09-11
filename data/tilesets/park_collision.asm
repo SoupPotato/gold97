@@ -149,3 +149,12 @@
 	tilecoll WALL, FLOOR, FLOOR, FLOOR ; 94
 	tilecoll FLOOR, FLOOR, WALL, FLOOR ; 95
 	tilecoll FLOOR, WARP_CARPET_RIGHT, FLOOR, WARP_CARPET_RIGHT ; 96
+	tilecoll WALL, WALL, WALL, WALL ; 97
+	tilecoll WALL, WALL, WATER, WHIRLPOOL ; 98
+	tilecoll WATER, WHIRLPOOL, WALL, WALL ; 99
+	tilecoll WALL, WATER, WALL, WALL ; 9a
+	tilecoll WATER, WALL, WATER, WALL ; 9b
+	tilecoll WATER, WALL, WATER, WALL ; 9c
+	tilecoll WALL, WALL, FLOOR, FLOOR ; 9d
+	tilecoll WALL, WATER, WALL, WATER ; 9e
+	tilecoll WALL, WATER, WALL, WATER ; 9f

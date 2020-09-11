@@ -62,6 +62,8 @@ WhirlpoolBlockPointers:
 .park:
 ; facing block, replacement block, animation
 	db $7C, $3B, 0
+	db $98, $6E, 0
+	db $99, $7A, 0
 	db -1 ; end
 	
 .battle_tower:

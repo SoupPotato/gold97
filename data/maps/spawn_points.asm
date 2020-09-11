@@ -38,4 +38,6 @@ SpawnPoints:
 	spawn BLUE_FOREST,                13, 19
 	spawn PLAYERS_HOUSE_2F,           -1, -1 ;duplicate
 	spawn FAST_SHIP_CABINS_SW_SSW_NW,  6,  2
+	
+	spawn DAITO_RANCH,                 11, 9
 	spawn N_A,                        -1, -1

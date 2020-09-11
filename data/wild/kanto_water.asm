@@ -115,4 +115,22 @@ KantoWaterWildMons:
 	db 40, TENTACOOL
 	db 42, STARYU
 	db 40, BOMSHEAL
+	
+	map_id GREAT_EAST_STRAIT
+	db 3 percent 
+	db 43, CORASUN
+	db 43, TENTACRUEL
+	db 45, ANCHORAGE
+	
+	map_id DAITO_RANCH
+	db 2 percent 
+	db 43, CORASUN
+	db 43, TENTACOOL
+	db 45, TENTACRUEL
+	
+	map_id DAITO_APPLE_ORCHARD
+	db 2 percent 
+	db 43, CORASUN
+	db 43, TENTACOOL
+	db 45, TENTACRUEL
 	db -1 ; end
