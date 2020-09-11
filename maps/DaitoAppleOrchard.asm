@@ -21,53 +21,30 @@ AppleOrchardSignText:
 	line "ORCHARD"
 	done
 
-; THE APPLE TREES WILL BREAK SAVE COMPAT FOR THE TESTERS, I'LL RE-ENABLE THESE RIGHT BEFORE WE ACTUALLY RELEASE THE GAME - Cam
-
 Appletree1:
-	jumptext TestingDummyTextLmao
-	;fruittree FRUITTREE_ORCHARD1
+	fruittree FRUITTREE_ORCHARD1
 	
 Appletree2:
-	jumptext TestingDummyTextLmao
-	;fruittree FRUITTREE_ORCHARD2
+	fruittree FRUITTREE_ORCHARD2
 	
 Appletree3:
-	jumptext TestingDummyTextLmao
-	;fruittree FRUITTREE_ORCHARD3
+	fruittree FRUITTREE_ORCHARD3
 	
 Appletree4:
-	jumptext TestingDummyTextLmao
-	;fruittree FRUITTREE_ORCHARD4
+	fruittree FRUITTREE_ORCHARD4
 	
 Appletree5:
-	jumptext TestingDummyTextLmao
-	;fruittree FRUITTREE_ORCHARD5
+	fruittree FRUITTREE_ORCHARD5
 	
 Appletree6:
-	jumptext TestingDummyTextLmao
-	;fruittree FRUITTREE_ORCHARD6
+	fruittree FRUITTREE_ORCHARD6
 	
 Appletree7:
-	jumptext TestingDummyTextLmao
-	;fruittree FRUITTREE_ORCHARD7
+	fruittree FRUITTREE_ORCHARD7
 	
 Appletree8:
-	jumptext TestingDummyTextLmao
-	;fruittree FRUITTREE_ORCHARD8
+	fruittree FRUITTREE_ORCHARD8
 
-
-TestingDummyTextLmao:
-	text "Adding more fruit"
-	line "trees breaks old"
-	cont "save compat so"
-	cont "just pretend that"
-	cont "these apple trees"
-	cont "work for now and"
-	cont "I'll re-enable"
-	cont "them for release."
-	
-	para "- Cam"
-	done
 
 DaitoAppleOrchard_MapEvents:
 	db 0, 0 ; filler
