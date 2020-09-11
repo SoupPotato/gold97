@@ -606,3 +606,7 @@ ENDM
 	map_attributes KikaiCaldera1F, KIKAI_CALDERA_1F, $59, 0
 	map_attributes KikaiCaldera2F, KIKAI_CALDERA_2F, $59, 0
 	map_attributes KikaiCaldera3F, KIKAI_CALDERA_3F, $59, 0
+	map_attributes DaitoRanchHouse, DAITO_RANCH_HOUSE, $00, 0
+	map_attributes AppleOrchardHouse, APPLE_ORCHARD_HOUSE, $00, 0
+	map_attributes DaitoGardenerGeoffHouse, DAITO_GG_HOUSE, $00, 0
+	map_attributes DaitoRanchBarn, DAITO_RANCH_BARN, $00, 0

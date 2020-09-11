@@ -4,7 +4,7 @@ treemon_map: MACRO
 ENDM
 
 TreeMonMaps:
-	treemon_map ROUTE_101,                  TREEMON_SET_ROUTE
+	treemon_map ROUTE_101,                 TREEMON_SET_ROUTE
 	treemon_map SILENT_HILLS,              TREEMON_SET_ROUTE
 	treemon_map ROUTE_120,                 TREEMON_SET_ROUTE
 	treemon_map ROUTE_119,                 TREEMON_SET_LAKE
@@ -32,7 +32,10 @@ TreeMonMaps:
 	treemon_map JADE_FOREST,               TREEMON_SET_FOREST
 	treemon_map NANJO_FOREST,              TREEMON_SET_FOREST
 	treemon_map NATIONAL_PARK,             TREEMON_SET_ROUTE
-
+	treemon_map TATSUGO_PATH,              TREEMON_SET_ROUTE
+	treemon_map KIKAI_VILLAGE,             TREEMON_SET_TOWN
+	treemon_map DAITO_RANCH,               TREEMON_SET_TOWN
+	treemon_map DAITO_APPLE_ORCHARD,       TREEMON_SET_TOWN
 	db -1
 
 RockMonMaps:

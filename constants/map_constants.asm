@@ -459,3 +459,7 @@ ENDM
 	map_const GREAT_EAST_STRAIT,                           60, 9 ; new
 	map_const DAITO_RANCH,                                 12, 16; new
 	map_const DAITO_APPLE_ORCHARD,                         12, 8 ; new
+	map_const DAITO_RANCH_HOUSE,                           5, 4 ; new
+	map_const DAITO_RANCH_BARN,                            4, 4 ; new
+	map_const APPLE_ORCHARD_HOUSE,                         5, 4 ; new
+	map_const DAITO_GG_HOUSE,                              5, 4 ; new

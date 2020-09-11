@@ -3771,8 +3771,11 @@ SoldierGroup:; use officer sprite
 	db -1 ; end
 	
 	; SOLDIER (3)
-	db "DAN@", TRAINERTYPE_NORMAL ;unused
-	db 17, GROWLITHE
+	db "MAD DAN@", TRAINERTYPE_NORMAL ;used, great east strait
+	db 53, ARCANINE
+	db 54, NUMBPUFF
+	db 55, ELECTRODE
+	db 60, OCTILLERY
 	db -1 ; end
 	
 	; SOLDIER (4)
