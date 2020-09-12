@@ -187,3 +187,5 @@
 	tilecoll WATER, WALL, WATER, WALL ; ba
 	tilecoll BUOY, WATER, BUOY, WATER ; bb
 	tilecoll WATER, BUOY, WATER, BUOY ; bc
+	tilecoll DOWN_WALL, DOWN_WALL, WALL, CAVE ; bd
+	tilecoll DOWN_WALL, DOWN_WALL, WALL, WALL ; be
