@@ -36,6 +36,7 @@ TreeMonMaps:
 	treemon_map KIKAI_VILLAGE,             TREEMON_SET_TOWN
 	treemon_map DAITO_RANCH,               TREEMON_SET_TOWN
 	treemon_map DAITO_APPLE_ORCHARD,       TREEMON_SET_TOWN
+	treemon_map SAFARI_ZONE_BETA,          TREEMON_SET_KANTO
 	db -1
 
 RockMonMaps:
