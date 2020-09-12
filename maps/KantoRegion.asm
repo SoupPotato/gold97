@@ -531,7 +531,7 @@ KantoRegion_MapEvents:
 	warp_event 29, 33, KANTO_POKECENTER_1F, 1
 	warp_event 23, 27, KANTO_GAME_CORNER, 1
 	warp_event 27, 27, KANTO_GAME_CORNER_PRIZE_ROOM, 1
-	warp_event  2,  5, KANTO_GYM, 1
+	warp_event  6,  5, KANTO_GYM, 1
 	warp_event 35, 13, KANTO_LEFTOVERS_HOUSE, 1
 	warp_event  4, 24, ROUTE_115_KANTO_GATE, 3
 	warp_event  4, 25, ROUTE_115_KANTO_GATE, 4
@@ -539,7 +539,7 @@ KantoRegion_MapEvents:
 	warp_event 20, 19, DIGLETTS_CAVE,3
 	warp_event 25, 21, KANTO_DEPT_STORE_1F, 2
 	warp_event 48, 29, ROCK_TUNNEL_1F,2
-	warp_event  3,  5, KANTO_GYM, 2
+	warp_event  7,  5, KANTO_GYM, 2
 	warp_event 46, 17, ROCK_TUNNEL_1F,1
 	warp_event 14, 45, OAKS_KANTO_LAB, 1
 	warp_event 15, 45, OAKS_KANTO_LAB, 2
@@ -549,21 +549,21 @@ KantoRegion_MapEvents:
 	warp_event 32,  7, MOUNT_MOON, 2
 	warp_event 47, 53, KANTO_BATTLE_CLUB_1F, 1
 	warp_event 37,  7, KANTO_HOUSE_1, 1
-	warp_event 11, 11, KANTO_HOUSE_2, 1
+	warp_event 13, 11, KANTO_HOUSE_2, 1
 	warp_event 17, 23, KANTO_HOUSE_3, 1
 	warp_event 49,  5, KANTO_HOUSE_4, 1
 	warp_event  8, 55, KANTO_FOSSIL_LAB, 1
-	warp_event  2, 15, KANTO_VICTORY_ROAD,1
+	warp_event  6, 15, KANTO_VICTORY_ROAD,1
 	warp_event 37, 17, KANTO_CAFE, 1
 	warp_event  0,  0, KANTO_CAFE, 2 ; daycare house
-	warp_event  2,  9, KANTO_VICTORY_ROAD,10
-	warp_event  3,  9, KANTO_VICTORY_ROAD,10
+	warp_event  6,  9, KANTO_VICTORY_ROAD,10
+	warp_event  7,  9, KANTO_VICTORY_ROAD,10
 	warp_event 35, 45, SAFARI_ZONE_FUCHSIA_GATE_BETA,3
 	warp_event 47, 23, KANTO_POWER_PLANT,1
 	warp_event 20, 55, SEAFOAM_ISLANDS_1F,1
 	warp_event 26, 55, SEAFOAM_ISLANDS_1F,2
-	warp_event 14,  7, KANTO_MUSEUM_1F, 1
-	warp_event 19,  5, KANTO_MUSEUM_1F, 3
+	warp_event 16,  7, KANTO_MUSEUM_1F, 1
+	warp_event 21,  5, KANTO_MUSEUM_1F, 3
 	warp_event 54, 31, POKEMON_TOWER_1F, 1
 	warp_event 15, 29, TRAINER_HOUSE_1F,1
 	warp_event 51, 33, KANTO_FUJI_HOUSE, 1
@@ -575,7 +575,7 @@ KantoRegion_MapEvents:
 	db 26 ; bg events
 	bg_event 58, 36, BGEVENT_READ, KantoSign
 	bg_event 30, 33, BGEVENT_READ, KantoPokecenterSign
-	bg_event  4,  6, BGEVENT_READ, KantoGymSign
+	bg_event  8,  6, BGEVENT_READ, KantoGymSign
 	bg_event  9, 43, BGEVENT_READ, PalletTownSign2
 	bg_event 10, 40, BGEVENT_READ, RedsHouseSign2
 	bg_event 16, 40, BGEVENT_READ, BluesHouseSign2
@@ -592,8 +592,8 @@ KantoRegion_MapEvents:
 	bg_event 38, 30, BGEVENT_READ, SilphCoSign
 	bg_event 24, 28, BGEVENT_READ, GameCornerSign
 	bg_event 13, 29, BGEVENT_READ, TrainerHouseSign
-	bg_event  3, 16, BGEVENT_READ, VictoryRoadKSign
-	bg_event 13,  8, BGEVENT_READ, PewterMuseumSign
+	bg_event  7, 16, BGEVENT_READ, VictoryRoadKSign
+	bg_event 15,  8, BGEVENT_READ, PewterMuseumSign
 	bg_event 19,  9, BGEVENT_READ, PewterGardenSign
 	bg_event 29,  8, BGEVENT_READ, MtMoonSign
 	bg_event 47,  5, BGEVENT_READ, SeaCottageSign
@@ -604,10 +604,10 @@ KantoRegion_MapEvents:
 	object_event  9, 46, SPRITE_FISHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoFisherScript, -1
 	object_event 38, 19, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoCooltrainerMScript, -1
 	object_event 23, 23, SPRITE_TEACHER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoTeacherScript, -1
-	object_event 15, 12, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoPokefanMScript, -1
+	object_event 16, 13, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoPokefanMScript, -1
 	object_event 34, 30, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoLassScript, -1
 	object_event 22, 29, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoSuperNerdScript, -1
-	object_event  5, 17, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoYoungsterScript, -1
+	object_event  4, 17, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoYoungsterScript, -1
 	object_event 37, 53, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoFisher2Script, -1
 	object_event 10, 57, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoLass2Script, -1
 	object_event 29, 42, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, KantoRegionTMDetect, EVENT_LAKE_OF_RAGE_TM_DETECT

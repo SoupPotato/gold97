@@ -234,7 +234,7 @@ ENDM
 	map_attributes StandCity, STAND_CITY, $05, SOUTH
 	connection south, Route113, ROUTE_113, 10
 
-	map_attributes KantoRegion, KANTO_REGION, $0f, EAST
+	map_attributes KantoRegion, KANTO_REGION, $43, EAST
 	connection east, Route114, ROUTE_114, 14
 
 	map_attributes Route119, ROUTE_119, $07, EAST
