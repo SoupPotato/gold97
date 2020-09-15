@@ -11,7 +11,7 @@ SpawnPoints:
 	spawn PLAYERS_HOUSE_2F,           -1, -1 ;duplicate
 
 	spawn PLAYERS_HOUSE_2F,           -1, -1 ;duplicate
-	spawn YORON_CITY,                 25, 19
+	spawn KUME_CITY,                 25, 19
 	spawn NAGO_VILLAGE,                5,  5
 	spawn AMAMI_TOWN,                 17,  5
 	spawn PLAYERS_HOUSE_2F,           -1, -1 ;duplicate

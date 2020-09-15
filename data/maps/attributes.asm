@@ -193,12 +193,12 @@ ENDM
 	connection north, SanskritTown, SANSKRIT_TOWN, 3
 	connection south, TeknosCity, TEKNOS_CITY, -8
 
-	map_attributes YoronCity, YORON_CITY, $35, SOUTH | EAST
+	map_attributes KumeCity, KUME_CITY, $35, SOUTH | EAST
 	connection south, ForkedStrait, FORKED_STRAIT, 1 ; new
-	connection east, YoronPoint, YORON_POINT, 9
+	connection east, KumePoint, KUME_POINT, 9
 	
 	map_attributes ForkedStrait, FORKED_STRAIT, $35, NORTH
-	connection north, YoronCity, YORON_CITY, -1 ; new
+	connection north, KumeCity, KUME_CITY, -1 ; new
 
 	map_attributes ForkedStraitEastExit, FORKED_STRAIT_EAST_EXIT, $0D, EAST
 	connection east, TropicalIsland, TROPICAL_ISLAND, -22 ; new
@@ -228,7 +228,7 @@ ENDM
 	connection west, NagoVillage, NAGO_VILLAGE, 0
 
 	map_attributes KeramaStrait, KERAMA_STRAIT, $35, WEST | EAST
-	connection west, YoronPoint, YORON_POINT, 0
+	connection west, KumePoint, KUME_POINT, 0
 	connection east, UrasoeTrail, URASOE_TRAIL, -9
 
 	map_attributes StandCity, STAND_CITY, $05, SOUTH
@@ -259,8 +259,8 @@ ENDM
 	map_attributes Route114, ROUTE_114, $0f, WEST
 	connection west, KantoRegion, KANTO_REGION, -14
 
-	map_attributes YoronPoint, YORON_POINT, $35, WEST | EAST
-	connection west, YoronCity, YORON_CITY, -9
+	map_attributes KumePoint, KUME_POINT, $35, WEST | EAST
+	connection west, KumeCity, KUME_CITY, -9
 	connection east, KeramaStrait, KERAMA_STRAIT, 0
 
 	map_attributes MeridianPath, MERIDIAN_PATH, $35, NORTH | EAST
@@ -469,11 +469,11 @@ ENDM
 	map_attributes RedsHouse2F, REDS_HOUSE_2F, $00, 0
 	map_attributes BluesHouse, BLUES_HOUSE, $00, 0
 	map_attributes OaksLabKanto, OAKS_KANTO_LAB, $00, 0
-	map_attributes YoronPartsShop, YORON_PARTS_SHOP, $00, 0
-	map_attributes YoronSocialHouse, YORON_SOCIAL_HOUSE, $00, 0
-	map_attributes YoronMart, YORON_MART, $00, 0
-	map_attributes YoronPokecenter1F, YORON_POKECENTER_1F, $00, 0
-	map_attributes YoronSnoozeSpeechHouse, YORON_SNOOZE_SPEECH_HOUSE, $00, 0
+	map_attributes KumePartsShop, KUME_PARTS_SHOP, $00, 0
+	map_attributes KumeSocialHouse, KUME_SOCIAL_HOUSE, $00, 0
+	map_attributes KumeMart, KUME_MART, $00, 0
+	map_attributes KumePokecenter1F, KUME_POKECENTER_1F, $00, 0
+	map_attributes KumeSnoozeSpeechHouse, KUME_SNOOZE_SPEECH_HOUSE, $00, 0
 	map_attributes WestportPort, WESTPORT_PORT, $0a, 0
 	map_attributes AmamiPort, AMAMI_PORT, $0a, 0
 	map_attributes FastShip1F, FAST_SHIP_1F, $00, 0

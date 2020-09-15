@@ -550,7 +550,7 @@ InitializeEventsScript:
 	setevent EVENT_LAKE_OF_RAGE_LANCE
 	setevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_2; makes rocker disappear in n64 house
 	setevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_1; makes rocker disappear in game corner
-	setevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_3; makes lass disappear in yoron house
+	setevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_3; makes lass disappear in kume house
 	setevent EVENT_GOLDENROD_UNDERGROUND_WAREHOUSE_BLOCKED_OFF; makes lass disappear in n64 house
 	setevent EVENT_DRAGONS_DEN_CLAIR
 	setevent EVENT_RIVAL_OLIVINE_CITY

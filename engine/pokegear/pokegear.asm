@@ -2317,7 +2317,7 @@ FlyMap:
 ; Kanto's map is only loaded if we've visited Indigo Plateau, gonna change this to the islands eventually
 
 ; Flypoints begin at Pallet Town...
-	ld a, FLY_YORON
+	ld a, FLY_KUME
 	ld [wStartFlypoint], a
 ; ...and end at Indigo Plateau
 	ld a, FLY_AMAMI

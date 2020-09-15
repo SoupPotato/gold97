@@ -61,19 +61,19 @@ KANTO_LANDMARK EQU const_value
 	const RAINBOW_ISLAND    ; new
 	const TROPICAL_ISLAND   ; new
 	const FORKED_STRAIT     ; new
-	const YORON_CITY        ; 33 1
 	const ICED_CAVERN       ; 3e 10
-	const YORON_POINT       ; 38 4
+	const KUME_CITY        ; 33 1
+	const KUME_POINT       ; 38 4
 	const KERAMA_STRAIT     ; 52
-	const URASOE_TRAIL      ; 4a
 	const APPLE_ORCHARD     ; new
 	const DAITO_RANCH       ; new
 	const GREAT_EAST_STRAIT ; new
 	const NANJO_FOREST      ; 54
+	const URASOE_TRAIL      ; 4a
 	const URASOE_PARK       ; 35 2
 	const RYUKYU_CITY       ; 48 9
-	const MERIDIAN_PATH     ; 39 5
 	const CHARRED_SUMMIT    ; 42 11
+	const MERIDIAN_PATH     ; 39 5
 	const CASTLE_MOUNTAIN   ; new
 	const IE_TOWN           ; new
 	const MOTOBU_PATH       ; new

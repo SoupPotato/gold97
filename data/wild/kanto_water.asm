@@ -56,13 +56,13 @@ KantoWaterWildMons:
 	db 48, TENTACRUEL
 	db 50, ANCHORAGE
 	
-	map_id YORON_POINT
+	map_id KUME_POINT
 	db 2 percent ; encounter rate
 	db 45, TENTACOOL
 	db 48, TENTACRUEL
 	db 50, ANCHORAGE
 	
-	map_id YORON_CITY
+	map_id KUME_CITY
 	db 2 percent ; encounter rate
 	db 45, TENTACOOL
 	db 48, TENTACRUEL
@@ -133,4 +133,10 @@ KantoWaterWildMons:
 	db 43, CORASUN
 	db 43, TENTACOOL
 	db 45, TENTACRUEL
+	
+	map_id MOTOBU_PATH
+	db 2 percent
+	db 38, TENTACOOL
+	db 40, STARYU
+	db 42, CORASUN
 	db -1 ; end

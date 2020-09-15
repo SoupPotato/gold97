@@ -221,7 +221,7 @@ SSAquaCaptainShipIsBrokenText:
 	para "could you help us"
 	line "out?"
 	para "There's a guy"
-	line "over in YORON CITY"
+	line "over in KUME CITY"
 	cont "who repairs ships."
 	para "He'll have the"
 	line "part we need."

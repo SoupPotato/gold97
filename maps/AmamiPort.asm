@@ -264,7 +264,7 @@ NeedANewPartText:
 	cont "LINE!"
 	
 	para "There's a guy in"
-	line "YORON CITY who'll"
+	line "KUME CITY who'll"
 	cont "have a new one for"
 	cont "us."
 	
@@ -273,7 +273,7 @@ NeedANewPartText:
 	cont "WESTPORT."
 	
 	para "Can you head to"
-	line "YORON CITY and"
+	line "KUME CITY and"
 	cont "pick up the new"
 	cont "FUEL LINE?"
 	
@@ -286,7 +286,7 @@ GoGetThePart:
 	line "need a new FUEL"
 	cont "LINE."
 	para "There's a guy in"
-	line "YORON CITY who'll"
+	line "KUME CITY who'll"
 	cont "have what we need."
 	para "Bring it back here"
 	line "when you have it!"

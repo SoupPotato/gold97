@@ -1,7 +1,7 @@
 	const_def 2 ; object constants
-	const YoronPartsShop_GURU
+	const KumePartsShop_GURU
 
-YoronPartsShop_MapScripts:
+KumePartsShop_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
@@ -66,12 +66,12 @@ AlreadyGotFuelLineText:
 	line "to the whole crew!"
 	done
 
-YoronPartsShop_MapEvents:
+KumePartsShop_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  2,  7, YORON_CITY, 3
-	warp_event  3,  7, YORON_CITY, 3
+	warp_event  2,  7, KUME_CITY, 3
+	warp_event  3,  7, KUME_CITY, 3
 
 	db 0 ; coord events
 

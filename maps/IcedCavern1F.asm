@@ -71,7 +71,7 @@ IcedCavern1F_MapEvents:
 	warp_event 37, 33, ICED_CAVERN_B1F, 5
 	warp_event 19, 31, ICED_CAVERN_B1F, 6
 	warp_event 27, 29, ICED_CAVERN_B1F, 7
-	warp_event  4, 33, YORON_CITY, 6
+	warp_event  4, 33, KUME_CITY, 6
 
 	db 0 ; coord events
 

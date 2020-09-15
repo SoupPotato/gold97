@@ -64,8 +64,8 @@ Landmarks:
 	landmark  52, 124, TropicalIslandName
 	landmark  36, 112, ForkedStraitName
 	landmark  36,  92, IcedCavernName
-	landmark  36, 100, YoronCityName
-	landmark  44, 100, YoronPointName
+	landmark  36, 100, KumeCityName
+	landmark  44, 100, KumePointName
 	landmark  60, 100, KeramaStraitName
 	landmark  148,  92, AppleOrchardName
 	landmark  148, 100, DaitoRanchName
@@ -116,7 +116,7 @@ DeepwaterPassageName: db "DEEPWATER¯PASSAGE@"
 TropicalIslandName:   db "TROPICAL¯ISLAND@"
 KobanIslandName:      db "KOBAN¯ISLAND@"
 CrownPassName:        db "CROWN¯PASS@"
-YoronCityName:        db "YORON CITY@"
+KumeCityName:        db "KUME CITY@"
 NagoVillageName:      db "NAGO¯VILLAGE@"
 AmamiCityName:        db "AMAMI TOWN@"
 KantoRegionName:      db "KANTO¯REGION@"
@@ -141,7 +141,7 @@ Route121Name:         db "ROUTE 121@"
 KeramaStraitName:     db "KERAMA¯STRAIT@"
 IsenStraitName:       db "ISEN STRAIT@"
 Route107Name:         db "ROUTE 107@"
-YoronPointName:       db "YORON POINT@"
+KumePointName:       db "KUME POINT@"
 MeridianPathName:     db "MERIDIAN¯PATH@"
 Route115Name:         db "ROUTE 115@"
 Route101Name:         db "ROUTE 101@"

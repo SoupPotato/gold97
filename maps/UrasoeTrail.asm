@@ -94,7 +94,7 @@ FisherBarneyBeatenText:
 FisherBarneyAfterBattleText:
 	text "Rumors going"
 	line "around say that"
-	para "YORON POINT on"
+	para "KUME POINT on"
 	line "the other side of"
 	para "the STRAIT is a"
 	line "better spot for"
@@ -132,7 +132,7 @@ UrasoeTrailSignText:
 	text "URASOE TRAIL"
 
 	para "RYUKYU CITY -"
-	line "YORON CITY"
+	line "KUME CITY"
 	done
 
 FishingSpotSignText:

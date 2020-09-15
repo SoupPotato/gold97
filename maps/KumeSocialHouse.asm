@@ -5,24 +5,24 @@
 	const PEWTER_GYM_POKEFAN_F
 	const PEWTER_GYM_FISHER
 
-YoronSocialHouse_MapScripts:
+KumeSocialHouse_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
-YoronSocialHouseN64LassScript:
+KumeSocialHouseN64LassScript:
 	faceplayer
 	opentext
 	writetext SendN64LassOffText
 	waitbutton
 	closetext
 	checkcode VAR_FACING
-	ifequal RIGHT, YoronSocialHouseN64LassRightScript
-	jump YoronSocialHouseN64LassUpScript
+	ifequal RIGHT, KumeSocialHouseN64LassRightScript
+	jump KumeSocialHouseN64LassUpScript
 	end
 	
-YoronSocialHouseN64LassRightScript:
-	applymovement PEWTER_GYM_N64_LASS, YoronSocialHouseN64LassRightMovement
+KumeSocialHouseN64LassRightScript:
+	applymovement PEWTER_GYM_N64_LASS, KumeSocialHouseN64LassRightMovement
 	playsound SFX_EXIT_BUILDING
 	disappear PEWTER_GYM_N64_LASS
 	setevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_3
@@ -30,8 +30,8 @@ YoronSocialHouseN64LassRightScript:
 	waitsfx
 	end
 	
-YoronSocialHouseN64LassUpScript:
-	applymovement PEWTER_GYM_N64_LASS, YoronSocialHouseN64LassUpMovement
+KumeSocialHouseN64LassUpScript:
+	applymovement PEWTER_GYM_N64_LASS, KumeSocialHouseN64LassUpMovement
 	playsound SFX_EXIT_BUILDING
 	disappear PEWTER_GYM_N64_LASS
 	setevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_3
@@ -39,19 +39,19 @@ YoronSocialHouseN64LassUpScript:
 	waitsfx
 	end
 	
-YoronSocialHouseYoungsterScript:
-	jumptextfaceplayer YoronSocialHouseYoungsterText
+KumeSocialHouseYoungsterScript:
+	jumptextfaceplayer KumeSocialHouseYoungsterText
 	
-YoronSocialHouseCooltrainerfScript:
-	jumptextfaceplayer YoronSocialHouseCooltrainerfText
+KumeSocialHouseCooltrainerfScript:
+	jumptextfaceplayer KumeSocialHouseCooltrainerfText
 	
-YoronSocialHousePokefanfScript:
-	jumptextfaceplayer YoronSocialHousePokefanfText
+KumeSocialHousePokefanfScript:
+	jumptextfaceplayer KumeSocialHousePokefanfText
 	
-YoronSocialHouseFisherScript:
-	jumptextfaceplayer YoronSocialHouseFisherText
+KumeSocialHouseFisherScript:
+	jumptextfaceplayer KumeSocialHouseFisherText
 	
-YoronSocialHouseN64LassRightMovement:
+KumeSocialHouseN64LassRightMovement:
 	step DOWN
 	step DOWN
 	step DOWN
@@ -60,7 +60,7 @@ YoronSocialHouseN64LassRightMovement:
 	step DOWN
 	step_end
 	
-YoronSocialHouseN64LassUpMovement:
+KumeSocialHouseN64LassUpMovement:
 	step LEFT
 	step DOWN
 	step DOWN
@@ -70,7 +70,7 @@ YoronSocialHouseN64LassUpMovement:
 	step DOWN
 	step_end
 	
-YoronSocialHouseYoungsterText:
+KumeSocialHouseYoungsterText:
 	text "I think KOGA is"
 	line "the coolest member"
 	cont "of the ELITE FOUR."
@@ -78,7 +78,7 @@ YoronSocialHouseYoungsterText:
 	line "close!"
 	done
 	
-YoronSocialHouseCooltrainerfText:
+KumeSocialHouseCooltrainerfText:
 	text "It's definitely"
 	line "LORELEI who is"
 	cont "the coolest!"
@@ -86,7 +86,7 @@ YoronSocialHouseCooltrainerfText:
 	line "style!"
 	done
 	
-YoronSocialHousePokefanfText:
+KumeSocialHousePokefanfText:
 	text "I hear that some"
 	line "kids took down"
 	cont "TEAM ROCKET!"
@@ -95,7 +95,7 @@ YoronSocialHousePokefanfText:
 	cont "me, honestly."
 	done
 
-YoronSocialHouseFisherText:
+KumeSocialHouseFisherText:
 	text "This place is"
 	line "where people come"
 	para "to socialize and"
@@ -131,12 +131,12 @@ SendN64LassOffText:
 	para "Thanks!"
 	done
 	
-YoronSocialHouse_MapEvents:
+KumeSocialHouse_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  2,  7, YORON_CITY, 5
-	warp_event  3,  7, YORON_CITY, 5
+	warp_event  2,  7, KUME_CITY, 5
+	warp_event  3,  7, KUME_CITY, 5
 
 	db 0 ; coord events
 
@@ -144,8 +144,8 @@ YoronSocialHouse_MapEvents:
 
 
 	db 5 ; object events
-	object_event  5,  1, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, YoronSocialHouseN64LassScript, EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_3
-	object_event  3,  3, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, YoronSocialHouseYoungsterScript, -1
-	object_event  0,  3, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, YoronSocialHouseCooltrainerfScript, -1
-	object_event  6,  5, SPRITE_POKEFAN_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, YoronSocialHousePokefanfScript, -1
-	object_event  7,  3, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, YoronSocialHouseFisherScript, -1
+	object_event  5,  1, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KumeSocialHouseN64LassScript, EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_3
+	object_event  3,  3, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KumeSocialHouseYoungsterScript, -1
+	object_event  0,  3, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KumeSocialHouseCooltrainerfScript, -1
+	object_event  6,  5, SPRITE_POKEFAN_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KumeSocialHousePokefanfScript, -1
+	object_event  7,  3, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KumeSocialHouseFisherScript, -1

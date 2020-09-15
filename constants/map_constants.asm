@@ -276,15 +276,15 @@ ENDM
 
 	newgroup                                                      ; 14
 
-	map_const YORON_CITY,                                  20, 18 ;  1
-	map_const YORON_PARTS_SHOP,                             4,  4 ;  2
-	map_const YORON_SOCIAL_HOUSE,                           5,  4 ;  3
-	map_const YORON_POKECENTER_1F,                          8,  4 ;  4
-	map_const YORON_SNOOZE_SPEECH_HOUSE,                    5,  4 ;  5
+	map_const KUME_CITY,                                  20, 18 ;  1
+	map_const KUME_PARTS_SHOP,                             4,  4 ;  2
+	map_const KUME_SOCIAL_HOUSE,                           5,  4 ;  3
+	map_const KUME_POKECENTER_1F,                          8,  4 ;  4
+	map_const KUME_SNOOZE_SPEECH_HOUSE,                    5,  4 ;  5
 	map_const NAGO_MART,                                    8,  4 ;  6
 	map_const URASOE_TRAIL,                                10, 18 ;  7
 	map_const KERAMA_STRAIT,                               30,  9 ;  8
-	map_const YORON_POINT,                                 10,  9 ;  9
+	map_const KUME_POINT,                                 10,  9 ;  9
 	map_const FORKED_STRAIT,                               10, 27 ; new
 	map_const FORKED_STRAIT_GATE,                          11, 8  ; new
 	map_const FORKED_STRAIT_EAST_EXIT,                     13, 8  ; new
@@ -408,7 +408,7 @@ ENDM
 	map_const BATTLE_TOWER_HALLWAY,                        11,  2 ; 14
 	map_const SUNPOINT_DOCKS,                              10, 18 ;  1
 	map_const SUNPOINT_DOCKS_SUNPOINT_GATE,                 5,  4 ; 14
-	map_const YORON_MART,                                   8,  4 ;  5
+	map_const KUME_MART,                                   8,  4 ;  5
 	map_const ROUTE_119_SUNPOINT_GATE,                      5,  4 ; 13
 	map_const ROCKET_SHIP_BASE,                            20, 18 ;  4
 	map_const ISEN_STRAIT_SEASIDE_PATH_GATE,                5,  4 ; 26

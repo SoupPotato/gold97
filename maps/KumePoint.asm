@@ -2,7 +2,7 @@
 	const ROUTE12_FISHER1
 	const ROUTE12_FISHER2
 
-YoronPoint_MapScripts:
+KumePoint_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
@@ -70,7 +70,7 @@ FisherKyleAfterBattleText:
 	line "is better."
 	done
 
-YoronPoint_MapEvents:
+KumePoint_MapEvents:
 	db 0, 0 ; filler
 
 	db 0 ; warp events

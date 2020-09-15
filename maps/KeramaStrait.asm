@@ -61,7 +61,7 @@ SwimmermTuckerSeenText:
 	line "Just… a little…"
 
 	para "farther… to…"
-	line "YORON…"
+	line "KUME…"
 	done
 
 SwimmermTuckerBeatenText:
@@ -71,7 +71,7 @@ SwimmermTuckerBeatenText:
 SwimmermTuckerAfterBattleText:
 	text "I… asked my girl-"
 	line "friend to swim to"
-	cont "YORON… Gasp…"
+	cont "KUME… Gasp…"
 	done
 
 SwimmerfDawnSeenText:
@@ -86,7 +86,7 @@ SwimmerfDawnBeatenText:
 
 SwimmerfDawnAfterBattleText:
 	text "It's a quick swim"
-	line "to YORON CITY…"
+	line "to KUME CITY…"
 
 	para "Sheesh, some big"
 	line "man my boyfriend"
@@ -137,7 +137,7 @@ KeramaStraitFisher2Text:
 KeramaStraitSignText:
 	text "KERAMA STRAIT"
 
-	para "West to YORON CITY"
+	para "West to KUME CITY"
 	done
 
 

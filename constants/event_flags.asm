@@ -756,7 +756,7 @@
 	const EVENT_SWITCH_9; used after talking to heal lass on mt fuji for the first time
 	const EVENT_SWITCH_10; scope lens from granny in prince city
 	const EVENT_SWITCH_11; used for mewtwo
-	const EVENT_SWITCH_12; used for getting starter 2 in pewter city/yoron city
+	const EVENT_SWITCH_12; used for getting starter 2 in pewter city/kume city
 	const EVENT_SWITCH_13 ; 2e0
 	const EVENT_SWITCH_14; event set after getting dratini
 	const EVENT_2D1
@@ -795,7 +795,7 @@
 	const EVENT_OPENED_DOOR_TO_GIOVANNIS_OFFICE
 	const EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_1; used to make rocker appear in game corner
 	const EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_2; used to make rocker appear in n64 house
-	const EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_3; used to make lass appear in yoron building
+	const EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_3; used to make lass appear in kume building
 	const EVENT_GOLDENROD_UNDERGROUND_WAREHOUSE_BLOCKED_OFF; used to make lass appear in n64 house
 	const EVENT_LEFT_MONS_WITH_CONTEST_OFFICER
 	const EVENT_WILLS_ROOM_ENTRANCE_CLOSED

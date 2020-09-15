@@ -24,7 +24,7 @@ TreeMonMaps:
 	treemon_map STAND_CITY,                TREEMON_SET_CITY
 	treemon_map CROWN_CITY,                TREEMON_SET_CITY
 	treemon_map AMAMI_TOWN,                TREEMON_SET_CITY
-	treemon_map YORON_CITY,                TREEMON_SET_CITY
+	treemon_map KUME_CITY,                TREEMON_SET_CITY
 	treemon_map ALLOY_CITY,                TREEMON_SET_CITY
 	treemon_map SANSKRIT_TOWN,             TREEMON_SET_TOWN
 	treemon_map NAGO_VILLAGE,              TREEMON_SET_TOWN
@@ -37,6 +37,8 @@ TreeMonMaps:
 	treemon_map DAITO_RANCH,               TREEMON_SET_TOWN
 	treemon_map DAITO_APPLE_ORCHARD,       TREEMON_SET_TOWN
 	treemon_map SAFARI_ZONE_BETA,          TREEMON_SET_KANTO
+	treemon_map IE_TOWN,                   TREEMON_SET_TOWN
+	treemon_map MOTOBU_PATH,               TREEMON_SET_ROUTE
 	db -1
 
 RockMonMaps:

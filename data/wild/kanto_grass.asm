@@ -274,7 +274,7 @@ KantoGrassWildMons:
 	db 53, AIPOM
 	db 55, AIPOM
 
-	map_id YORON_POINT
+	map_id KUME_POINT
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 54, PIDGEOTTO
@@ -549,4 +549,31 @@ KantoGrassWildMons:
 	db 50, HITMONCHAN
 	db 50, HITMONLEE
 	
+	
+	map_id MOTOBU_PATH
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 46, KRABBY
+	db 46, MANKEY
+	db 47, PRIMEAPE
+	db 50, EXEGGCUTE
+	db 47, KINGLER
+	db 48, RAITORA
+	db 50, PRIMEAPE
+	; day
+	db 46, KRABBY
+	db 46, MANKEY
+	db 47, PRIMEAPE
+	db 50, EXEGGCUTE
+	db 47, KINGLER
+	db 48, RAITORA
+	db 50, PRIMEAPE
+	; nite
+	db 46, KRABBY
+	db 47, RINRING
+	db 47, BELLRUN
+	db 50, TANGELA
+	db 46, KINGLER
+	db 48, RAITORA
+	db 50, GELANIA
 	db -1 ; end

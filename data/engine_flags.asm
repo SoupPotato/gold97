@@ -76,7 +76,7 @@ EngineFlags:
 	engine_flag wVisitedSpawns, SPAWN_DEBUG
 	engine_flag wVisitedSpawns, SPAWN_KOBAN
 	engine_flag wVisitedSpawns, NUM_SPAWNS
-	engine_flag wVisitedSpawns, SPAWN_YORON
+	engine_flag wVisitedSpawns, SPAWN_KUME
 	engine_flag wVisitedSpawns, SPAWN_NAGO ; $38
 	engine_flag wVisitedSpawns, SPAWN_ROCK_TUNNEL
 	engine_flag wVisitedSpawns, SPAWN_AMAMI

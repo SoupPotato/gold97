@@ -71,7 +71,7 @@ const_value = -1
 	const SPAWN_DEBUG
 ; kanto
 	const SPAWN_VIRIDIAN
-	const SPAWN_YORON
+	const SPAWN_KUME
 	const SPAWN_NAGO
 	const SPAWN_AMAMI
 	const SPAWN_LAVENDER

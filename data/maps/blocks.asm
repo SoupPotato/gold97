@@ -48,14 +48,14 @@ KobanIsland_Blocks:
 MeridianPath_Blocks:
 	INCBIN "maps/MeridianPath.blk"
 
-YoronPoint_Blocks:
-	INCBIN "maps/YoronPoint.blk"
+KumePoint_Blocks:
+	INCBIN "maps/KumePoint.blk"
 
 Route117_Blocks:
 	INCBIN "maps/Route117.blk"
 
-YoronCity_Blocks:
-	INCBIN "maps/YoronCity.blk"
+KumeCity_Blocks:
+	INCBIN "maps/KumeCity.blk"
 
 UrasoeTrail_Blocks:
 	INCBIN "maps/UrasoeTrail.blk"
@@ -88,7 +88,7 @@ WestportNameRater_Blocks:
 NagoCharmanderHouse_Blocks:
 NagoSpeechHouse_Blocks:
 BluesHouse_Blocks:
-YoronSnoozeSpeechHouse_Blocks:
+KumeSnoozeSpeechHouse_Blocks:
 BillsBrothersHouse_Blocks:
 PrycesFamilyHouse_Blocks:
 FrostpointNameRater_Blocks:
@@ -215,7 +215,7 @@ NagoMart_Blocks:
 BirdonMart_Blocks:
 PagotaMart_Blocks:
 AmamiMart_Blocks:
-YoronMart_Blocks:
+KumeMart_Blocks:
 StandMart_Blocks:
 FrostpointMart_Blocks:
 SanskritMart_Blocks:
@@ -239,7 +239,7 @@ PagotaPokecenter1F_Blocks:
 Route106Pokecenter1F_Blocks:
 WestpointPokecenter1F_Blocks:
 AmamiPokecenter1F_Blocks:
-YoronPokecenter1F_Blocks:
+KumePokecenter1F_Blocks:
 StandPokecenter1F_Blocks:
 KobanPokecenter1F_Blocks:
 SunpointPokecenter1F_Blocks:
@@ -652,8 +652,8 @@ SanskritRocketHouse_Blocks:
 DayCare_Blocks:
 	INCBIN "maps/DayCare.blk"
 
-YoronSocialHouse_Blocks:
-	INCBIN "maps/YoronSocialHouse.blk"
+KumeSocialHouse_Blocks:
+	INCBIN "maps/KumeSocialHouse.blk"
 
 KantoGym_Blocks:
 	INCBIN "maps/KantoGym.blk"
@@ -758,8 +758,8 @@ EarlsArtHouse_Blocks:
 CharredSummit_Blocks:
 	INCBIN "maps/CharredSummit.blk"
 
-YoronPartsShop_Blocks:
-	INCBIN "maps/YoronPartsShop.blk"
+KumePartsShop_Blocks:
+	INCBIN "maps/KumePartsShop.blk"
 	
 JouleCaveZapdosRoom_Blocks:
 	INCBIN "maps/JouleCaveZapdosRoom.blk"

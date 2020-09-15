@@ -15,7 +15,7 @@ OutdoorSprites:
 	dw WestportGroupSprites
 	dw AmamiGroupSprites
 	dw KobanGroupSprites
-	dw YoronGroupSprites
+	dw KumeGroupSprites
 	dw FastShipGroupSprites
 	dw LeagueGroupSprites
 	dw StandGroupSprites
@@ -45,7 +45,7 @@ KobanGroupSprites:
 	db SPRITE_FRUIT_TREE
 	db 0 ; end
 
-YoronGroupSprites:
+KumeGroupSprites:
 	db SPRITE_FISHER
 	db SPRITE_SWIMMER_GIRL
 	db SPRITE_SWIMMER_GUY
