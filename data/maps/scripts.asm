@@ -198,7 +198,6 @@ INCLUDE "maps/SilentPokecenter1F.asm"
 INCLUDE "maps/Route116Gate.asm"
 INCLUDE "maps/VictoryRoadGate.asm"
 INCLUDE "maps/KantoHouse3.asm"
-
 INCLUDE "maps/MotobuPath.asm"
 INCLUDE "maps/IeTown.asm"
 INCLUDE "maps/IeTMShop.asm"
@@ -387,6 +386,17 @@ INCLUDE "maps/YoronSocialHouse.asm"
 INCLUDE "maps/YoronMart.asm"
 INCLUDE "maps/YoronPokecenter1F.asm"
 INCLUDE "maps/YoronSnoozeSpeechHouse.asm"
+
+INCLUDE "maps/CastleMountain1F.asm"
+INCLUDE "maps/CastleMountain1FDanceHall.asm"
+INCLUDE "maps/CastleMountain1FDiningHall.asm"
+INCLUDE "maps/CastleMountain1FLongHall.asm"
+INCLUDE "maps/CastleMountain1FStairs.asm"
+INCLUDE "maps/CastleMountain1FCave.asm"
+INCLUDE "maps/CastleMountain2F.asm"
+INCLUDE "maps/CastleMountain3FA.asm"
+INCLUDE "maps/CastleMountain3FB.asm"
+INCLUDE "maps/CastleMountainB1F.asm"
 
 
 SECTION "Map Scripts 22", ROMX

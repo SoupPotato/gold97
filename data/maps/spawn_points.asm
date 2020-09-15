@@ -40,4 +40,5 @@ SpawnPoints:
 	spawn FAST_SHIP_CABINS_SW_SSW_NW,  6,  2
 	
 	spawn DAITO_RANCH,                 11, 9
+	spawn IE_TOWN,                     5, 7
 	spawn N_A,                        -1, -1

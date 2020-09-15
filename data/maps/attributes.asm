@@ -622,3 +622,13 @@ ENDM
 	map_attributes IePokecenter1F, IE_POKECENTER_1F, $00, 0
 	map_attributes IeHouse1, IE_HOUSE_1, $00, 0
 	map_attributes IeHouse2, IE_HOUSE_2, $00, 0
+	map_attributes CastleMountain1F, CASTLE_MOUNTAIN_1F, $00, 0
+	map_attributes CastleMountain1FDanceHall, CASTLE_MOUNTAIN_1F_DANCE_HALL, $00, 0
+	map_attributes CastleMountain1FDiningHall, CASTLE_MOUNTAIN_1F_DINING_HALL, $00, 0
+	map_attributes CastleMountain1FStairs, CASTLE_MOUNTAIN_1F_STAIRS, $00, 0
+	map_attributes CastleMountain1FLongHall, CASTLE_MOUNTAIN_1F_LONG_HALL, $00, 0
+	map_attributes CastleMountain1FCave, CASTLE_MOUNTAIN_1F_CAVE, $00, 0
+	map_attributes CastleMountain2F, CASTLE_MOUNTAIN_2F, $00, 0
+	map_attributes CastleMountain3FA, CASTLE_MOUNTAIN_3FA, $00, 0
+	map_attributes CastleMountain3FB, CASTLE_MOUNTAIN_3FB, $00, 0
+	map_attributes CastleMountainB1F, CASTLE_MOUNTAIN_B1F, $09, 0

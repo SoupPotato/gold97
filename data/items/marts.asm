@@ -446,11 +446,13 @@ MartWestportNewItems:
 	db -1 ; end
 	
 MartIeTMShop:
-	db 5 ; items
+	db 7 ; items
 	db TM_REST
 	db TM_SLEEP_TALK
+	db TM_ROAR
 	db TM_CURSE
 	db TM_TOXIC
+	db TM_SHADOW_BALL
 	db TM_EARTHQUAKE
 	db -1
 	

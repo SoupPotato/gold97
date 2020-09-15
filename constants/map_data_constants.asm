@@ -100,5 +100,6 @@ const_value = -1
 	const SPAWN_FAST_SHIP
 ; why won't these work normally I am going to scream and shit
 	const SPAWN_DAITO
+	const SPAWN_IE
 NUM_SPAWNS EQU const_value
 

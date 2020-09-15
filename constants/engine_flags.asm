@@ -91,6 +91,7 @@
 	const ENGINE_FLYPOINT_SILVER_CAVE
 	const ENGINE_FLYPOINT_UNUSED
 	const ENGINE_FLYPOINT_DAITO ; new
+	const ENGINE_FLYPOINT_IE ; new
 ; wLuckyNumberShowFlag
 	const ENGINE_LUCKY_NUMBER_SHOW
 ; wStatusFlags2

@@ -178,6 +178,16 @@ ENDM
 	map_const IE_POKECENTER_1F,                            8, 4 ; new
 	map_const IE_HOUSE_1,                                  5, 4 ; new
 	map_const IE_HOUSE_2,                                  5, 4 ; new
+	map_const CASTLE_MOUNTAIN_1F,                          15, 12 ; new
+	map_const CASTLE_MOUNTAIN_1F_DANCE_HALL,               8, 10 ; new
+	map_const CASTLE_MOUNTAIN_1F_DINING_HALL,              8, 10 ; new
+	map_const CASTLE_MOUNTAIN_1F_LONG_HALL,                31, 5 ; new
+	map_const CASTLE_MOUNTAIN_1F_STAIRS,                   9, 8 ; new
+	map_const CASTLE_MOUNTAIN_1F_CAVE,                     12, 10 ; new
+	map_const CASTLE_MOUNTAIN_2F,                          15, 10 ;new
+	map_const CASTLE_MOUNTAIN_3FA,                         10, 36 ; new
+	map_const CASTLE_MOUNTAIN_3FB,                         10, 36 ; new
+	map_const CASTLE_MOUNTAIN_B1F,                         15, 16 ; new
 
 	newgroup                                                      ;  8
 

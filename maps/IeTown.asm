@@ -5,7 +5,12 @@
 IeTown_MapScripts:
 	db 0 ; scene scripts
 
-	db 0 ; callbacks
+	db 1 ; callbacks
+	callback MAPCALLBACK_NEWMAP, .FlyPoint
+
+.FlyPoint:
+	setflag ENGINE_FLYPOINT_IE
+	return
 
 IeTownSign:
 	jumptext IeTownSignText
@@ -61,12 +66,14 @@ IeTownNPC2Text:
 IeTown_MapEvents:
 	db 0, 0 ; filler
 
-	db 5 ; warp events
+	db 7 ; warp events
 	warp_event  5,  6, IE_POKECENTER_1F, 1
 	warp_event 22,  7, IE_TM_SHOP, 1
 	warp_event 23,  7, IE_TM_SHOP, 2
 	warp_event  8, 11, IE_HOUSE_1, 1
 	warp_event 20, 11, IE_HOUSE_2, 1
+	warp_event 13,  5, CASTLE_MOUNTAIN_1F, 1
+	warp_event 14,  5, CASTLE_MOUNTAIN_1F, 2
 
 	db 0 ; coord events
 

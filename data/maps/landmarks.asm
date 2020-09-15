@@ -63,19 +63,19 @@ Landmarks:
 	landmark  20, 124, RainbowIslandName
 	landmark  52, 124, TropicalIslandName
 	landmark  36, 112, ForkedStraitName
+	landmark  36,  92, IcedCavernName
 	landmark  36, 100, YoronCityName
-	landmark  35,  99, IcedCavernName
 	landmark  44, 100, YoronPointName
 	landmark  60, 100, KeramaStraitName
-	landmark  76,  96, UrasoeTrailName
 	landmark  148,  92, AppleOrchardName
 	landmark  148, 100, DaitoRanchName
 	landmark  116, 100, GreatEastStraitName
 	landmark  84, 100, NanjoForestName
+	landmark  76,  96, UrasoeTrailName
 	landmark  76,  84, UrasoeParkName
 	landmark  76,  76, RyukyuCityName
-	landmark  84,  68, MeridianPathName
 	landmark  92,  68, CharredSummitName
+	landmark  84,  68, MeridianPathName
 	landmark  44,  44, CastleMountainName
 	landmark  44,  52, IeTownName
 	landmark  68,  52, MotobuPathName
@@ -171,7 +171,7 @@ KikaiStraitName:      db "KIKAI¯STRAIT@"
 KikaiVillageName:     db "KIKAI¯VILLAGE@"
 KikaiCalderaName:     db "KIKAI¯CALDERA@"
 GreatEastStraitName:  db "GREAT EAST¯STRAIT@"
-DaitoRanchName:       db "DAITO¯RANCH@"
+DaitoRanchName:       db "DAITO RANCH@"
 AppleOrchardName:     db "APPLE¯ORCHARD@"
 MotobuPathName:       db "MOTOBU PATH@"
 IeTownName:           db "IE TOWN@"

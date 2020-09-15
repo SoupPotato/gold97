@@ -883,3 +883,33 @@ IeTown_Blocks:
 	
 MotobuPath_Blocks:
 	INCBIN "maps/MotobuPath.blk"
+	
+CastleMountain1F_Blocks:
+	INCBIN "maps/CastleMountain1F.blk"
+
+CastleMountain1FDanceHall_Blocks:
+	INCBIN "maps/CastleMountain1FDanceHall.blk"
+
+CastleMountain1FDiningHall_Blocks:
+	INCBIN "maps/CastleMountain1FDiningHall.blk"
+	
+CastleMountain1FLongHall_Blocks:
+	INCBIN "maps/CastleMountain1FLongHall.blk"
+	
+CastleMountain1FStairs_Blocks:
+	INCBIN "maps/CastleMountain1FStairs.blk"
+	
+CastleMountain1FCave_Blocks:
+	INCBIN "maps/CastleMountain1FCave.blk"
+	
+CastleMountain2F_Blocks:
+	INCBIN "maps/CastleMountain2F.blk"
+	
+CastleMountain3FA_Blocks:
+	INCBIN "maps/CastleMountain3FA.blk"
+	
+CastleMountain3FB_Blocks:
+	INCBIN "maps/CastleMountain3FB.blk"
+	
+CastleMountainB1F_Blocks:
+	INCBIN "maps/CastleMountainB1F.blk"
