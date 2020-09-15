@@ -168,10 +168,16 @@ ENDM
 	map_const MERIDIAN_PATH,                               10, 27 ;  4
 	map_const NAGO_VILLAGE,                                10, 18 ;  5
 	map_const CHARRED_SUMMIT,							   11, 24 ;  6
-	map_const RESEARCH_FACILITY_BACK_ROOM,                  5,  4 ;  7
+	map_const RESEARCH_FACILITY_BACK_ROOM,                 5,  4 ;  7
 	map_const RESEARCH_FACILITY_ENTRANCE,                  20,  9 ;  8
 	map_const ISEN_STRAIT,                                 30,  9 ;  9
-	map_const NAGO_CHARMANDER_HOUSE,                        5,  4 ; 10
+	map_const NAGO_CHARMANDER_HOUSE,                       5,  4 ; 10
+	map_const MOTOBU_PATH,                                 30, 9 ; new
+	map_const IE_TOWN,                                     15, 9 ; new
+	map_const IE_TM_SHOP,                                  8, 6 ; new
+	map_const IE_POKECENTER_1F,                            8, 4 ; new
+	map_const IE_HOUSE_1,                                  5, 4 ; new
+	map_const IE_HOUSE_2,                                  5, 4 ; new
 
 	newgroup                                                      ;  8
 

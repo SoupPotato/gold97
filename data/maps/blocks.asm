@@ -115,6 +115,8 @@ KikaiHouse2_Blocks:
 DaitoRanchHouse_Blocks:
 AppleOrchardHouse_Blocks:
 DaitoGardenerGeoffHouse_Blocks:
+IeHouse1_Blocks:
+IeHouse2_Blocks:
 	INCBIN "maps/House1.blk"
 
 Route109Route110Gate_Blocks:
@@ -246,6 +248,7 @@ RyukyuPokecenter1F_Blocks:
 CrownPokecenter1F_Blocks:
 KantoPokecenter1F_Blocks:
 KikaiPokecenter1F_Blocks:
+IePokecenter1F_Blocks:
 	INCBIN "maps/Pokecenter1F.blk"
 
 PagotaTrainerSchool_Blocks:
@@ -871,3 +874,12 @@ DaitoAppleOrchard_Blocks:
 	
 DaitoRanchBarn_Blocks:
 	INCBIN "maps/DaitoRanchBarn.blk"
+	
+IeTMShop_Blocks:
+	INCBIN "maps/IeTMShop.blk"
+	
+IeTown_Blocks:
+	INCBIN "maps/IeTown.blk"
+	
+MotobuPath_Blocks:
+	INCBIN "maps/MotobuPath.blk"

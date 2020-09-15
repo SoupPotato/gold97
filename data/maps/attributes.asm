@@ -251,8 +251,9 @@ ENDM
 
 	map_attributes SunpointDocks, SUNPOINT_DOCKS, $0A, 0
 
-	map_attributes NagoVillage, NAGO_VILLAGE, $35, SOUTH | EAST
+	map_attributes NagoVillage, NAGO_VILLAGE, $35, SOUTH | WEST | EAST
 	connection south, MeridianPath, MERIDIAN_PATH, 0
+	connection west, MotobuPath, MOTOBU_PATH, 0
 	connection east, IsenStrait, ISEN_STRAIT, 0
 
 	map_attributes Route114, ROUTE_114, $0f, WEST
@@ -312,6 +313,13 @@ ENDM
 
 	map_attributes DaitoAppleOrchard, DAITO_APPLE_ORCHARD, $07, SOUTH
 	connection south, DaitoRanch, DAITO_RANCH, 0
+
+	map_attributes MotobuPath, MOTOBU_PATH, $35, WEST | EAST
+	connection west, IeTown, IE_TOWN, 0
+	connection east, NagoVillage, NAGO_VILLAGE, 0
+	
+	map_attributes IeTown, IE_TOWN, $05, EAST
+	connection east, MotobuPath, MOTOBU_PATH, 0
 
 	map_attributes BrassTower1F, BRASS_TOWER_1F, $00, 0
 	map_attributes BrassTower2F, BRASS_TOWER_2F, $00, 0
@@ -610,3 +618,7 @@ ENDM
 	map_attributes AppleOrchardHouse, APPLE_ORCHARD_HOUSE, $00, 0
 	map_attributes DaitoGardenerGeoffHouse, DAITO_GG_HOUSE, $00, 0
 	map_attributes DaitoRanchBarn, DAITO_RANCH_BARN, $00, 0
+	map_attributes IeTMShop, IE_TM_SHOP, $00, 0
+	map_attributes IePokecenter1F, IE_POKECENTER_1F, $00, 0
+	map_attributes IeHouse1, IE_HOUSE_1, $00, 0
+	map_attributes IeHouse2, IE_HOUSE_2, $00, 0

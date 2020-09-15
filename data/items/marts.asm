@@ -35,9 +35,9 @@ Marts:
 	dw MartMtMoon
 	dw MartIndigoPlateau
 	dw MartUnderground
-	dw MartTestGarden
 	dw MartSugar
 	dw MartWestportNewItems
+	dw MartIeTMShop
 .End
 
 MartCherrygrove:
@@ -421,18 +421,6 @@ DefaultMart:
 	db POKE_BALL
 	db POTION
 	db -1 ; end
-	
-MartTestGarden:
-	db 8 ; # items
-	db MASTER_BALL
-	db ULTRA_BALL
-	db COVENANT_ORB
-	db MAX_REVIVE
-	db HEART_STONE
-	db POISON_STONE
-	db FULL_HEAL
-	db RARE_CANDY
-	db -1 ; end
 
 MartSugar:
 	db 8 ; # items
@@ -456,3 +444,13 @@ MartWestportNewItems:
 	db DETECT_ORB
 	db FOCUS_ORB
 	db -1 ; end
+	
+MartIeTMShop:
+	db 5 ; items
+	db TM_REST
+	db TM_SLEEP_TALK
+	db TM_CURSE
+	db TM_TOXIC
+	db TM_EARTHQUAKE
+	db -1
+	

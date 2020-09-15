@@ -2080,13 +2080,13 @@ SwimmerMGroup:
 
 SwimmerFGroup:
 	; SWIMMERF (1)
-	db "ELAINE@", TRAINERTYPE_NORMAL; used, route 4
+	db "ELAINE@", TRAINERTYPE_NORMAL; used, route 118
 	db 25, STARYU
 	db 25, PSYDUCK
 	db -1 ; end
 
 	; SWIMMERF (2)
-	db "PAULA@", TRAINERTYPE_NORMAL; used, route 4
+	db "PAULA@", TRAINERTYPE_NORMAL; used, route 118
 	db 24, STARYU
 	db 24, SHELLDER
 	db 24, TURBAN
@@ -2130,18 +2130,21 @@ SwimmerFGroup:
 	db -1 ; end
 
 	; SWIMMERF (9)
-	db "JILL@", TRAINERTYPE_NORMAL
-	db 28, DEWGONG
+	db "JILL@", TRAINERTYPE_NORMAL ; used, motobu path
+	db 50, DEWGONG
+	db 51, MANTINE
 	db -1 ; end
 
 	; SWIMMERF (10)
-	db "MARY@", TRAINERTYPE_NORMAL
-	db 20, SEAKING
+	db "MARY@", TRAINERTYPE_NORMAL ; used, motobu path
+	db 51, SEAKING
+	db 52, SEADRA
+	db 50, STARMIE
 	db -1 ; end
 
 	; SWIMMERF (11)
-	db "KATIE@", TRAINERTYPE_NORMAL
-	db 33, DEWGONG
+	db "KATIE@", TRAINERTYPE_NORMAL ; used, motobu path
+	db 61, MARILL
 	db -1 ; end
 
 	; SWIMMERF (12)

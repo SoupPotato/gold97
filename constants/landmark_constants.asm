@@ -74,6 +74,9 @@ KANTO_LANDMARK EQU const_value
 	const RYUKYU_CITY       ; 48 9
 	const MERIDIAN_PATH     ; 39 5
 	const CHARRED_SUMMIT    ; 42 11
+	const CASTLE_MOUNTAIN   ; new
+	const IE_TOWN           ; new
+	const MOTOBU_PATH       ; new
 	const NAGO_VILLAGE      ; 37 3
 	const ISEN_STRAIT       ; 53
 	const SEASIDE_PATH      ; 43 8

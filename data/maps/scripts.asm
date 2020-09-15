@@ -38,7 +38,6 @@ INCLUDE "maps/TeknosAquarium2F.asm"
 INCLUDE "maps/EndonCaveB1F.asm"
 INCLUDE "maps/RadioTower6F.asm"
 INCLUDE "maps/KantoBattleClub1F.asm"
-
 INCLUDE "maps/KikaiPokecenter1F.asm"
 INCLUDE "maps/KikaiMart.asm"
 
@@ -52,7 +51,6 @@ INCLUDE "maps/RadioTower3F.asm"
 INCLUDE "maps/RadioTower4F.asm"
 INCLUDE "maps/KantoPokecenter1F.asm"
 INCLUDE "maps/TeknosAquarium1F.asm"
-
 INCLUDE "maps/KikaiVillage.asm"
 INCLUDE "maps/KikaiHouse1.asm"
 INCLUDE "maps/KikaiHouse2.asm"
@@ -69,7 +67,6 @@ INCLUDE "maps/KantoBattleClubB1F.asm"
 INCLUDE "maps/StandCity.asm"
 INCLUDE "maps/StandRocketHouse2F.asm"
 INCLUDE "maps/Route101PagotaGate.asm"
-
 INCLUDE "maps/KikaiCaldera1F.asm"
 INCLUDE "maps/KikaiCaldera2F.asm"
 INCLUDE "maps/KikaiCaldera3F.asm"
@@ -102,7 +99,6 @@ INCLUDE "maps/VictoryRoad2F.asm"
 INCLUDE "maps/ForkedStraitWestExit.asm"
 INCLUDE "maps/RainbowIsland.asm"
 INCLUDE "maps/RainbowIslandCave.asm"
-
 INCLUDE "maps/TatsugoPath.asm"
 INCLUDE "maps/KikaiStrait.asm"
 
@@ -159,7 +155,6 @@ INCLUDE "maps/PlayersHouse2F.asm"
 INCLUDE "maps/BrassTowerRoof.asm"
 INCLUDE "maps/VictoryRoadOutside.asm"
 INCLUDE "maps/AmamiPortPassage.asm"
-
 INCLUDE "maps/GreatEastStrait.asm"
 INCLUDE "maps/DaitoRanch.asm"
 INCLUDE "maps/DaitoAppleOrchard.asm"
@@ -204,6 +199,13 @@ INCLUDE "maps/Route116Gate.asm"
 INCLUDE "maps/VictoryRoadGate.asm"
 INCLUDE "maps/KantoHouse3.asm"
 
+INCLUDE "maps/MotobuPath.asm"
+INCLUDE "maps/IeTown.asm"
+INCLUDE "maps/IeTMShop.asm"
+INCLUDE "maps/IePokecenter1F.asm"
+INCLUDE "maps/IeHouse1.asm"
+INCLUDE "maps/IeHouse2.asm"
+
 SECTION "Map Scripts 12", ROMX
 
 INCLUDE "maps/AlloyPokecenter1F.asm"
@@ -238,7 +240,6 @@ INCLUDE "maps/GiovannisRoom.asm"
 INCLUDE "maps/LancesRoom.asm"
 INCLUDE "maps/HallOfFame.asm"
 INCLUDE "maps/NanjoForest.asm"
-
 INCLUDE "maps/DaitoRanchHouse.asm"
 INCLUDE "maps/AppleOrchardHouse.asm"
 INCLUDE "maps/DaitoRanchBarn.asm"
@@ -251,7 +252,6 @@ INCLUDE "maps/BrassTower2F.asm"
 INCLUDE "maps/BrassTower3F.asm"
 INCLUDE "maps/BrassTower4F.asm"
 INCLUDE "maps/BrassTower5F.asm"
-
 INCLUDE "maps/DaitoGardenerGeoffHouse.asm"
 
 

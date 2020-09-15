@@ -76,6 +76,9 @@ Landmarks:
 	landmark  76,  76, RyukyuCityName
 	landmark  84,  68, MeridianPathName
 	landmark  92,  68, CharredSummitName
+	landmark  44,  44, CastleMountainName
+	landmark  44,  52, IeTownName
+	landmark  68,  52, MotobuPathName
 	landmark  84,  52, NagoVillageName
 	landmark  96,  52, IsenStraitName
 	landmark 112,  52, SeasidePathName
@@ -170,4 +173,7 @@ KikaiCalderaName:     db "KIKAI¯CALDERA@"
 GreatEastStraitName:  db "GREAT EAST¯STRAIT@"
 DaitoRanchName:       db "DAITO¯RANCH@"
 AppleOrchardName:     db "APPLE¯ORCHARD@"
+MotobuPathName:       db "MOTOBU PATH@"
+IeTownName:           db "IE TOWN@"
+CastleMountainName:   db "CASTLE¯MOUNTAIN@"
 SpecialMapName:       db "SPECIAL@"
