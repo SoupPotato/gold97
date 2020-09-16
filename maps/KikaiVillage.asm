@@ -16,6 +16,12 @@ KikaiVillage_MapScripts:
 	setflag ENGINE_FLYPOINT_LAVENDER
 	return
 
+KikaiPokecenterSign:
+	jumpstd pokecentersign
+
+KikaiMartSign:
+	jumpstd martsign
+
 KikaiSummitRock:
 	jumpstd smashrock
 	
@@ -165,9 +171,11 @@ KikaiVillage_MapEvents:
 
 	db 0 ; coord events
 
-	db 2 ; bg events
+	db 4 ; bg events
 	bg_event 12, 24, BGEVENT_READ, KikaiSign
 	bg_event  8, 16, BGEVENT_READ, CalderaSign
+	bg_event 16, 22, BGEVENT_READ, KikaiPokecenterSign
+	bg_event  4, 18, BGEVENT_READ, KikaiMartSign
 
 	db 6 ; object events
 	object_event 11,  4, SPRITE_BRUNO, SPRITEMOVEDATA_STANDING_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KikaiBrunoScript, -1

@@ -1,7 +1,15 @@
 CastleMountain2F_MapScripts:
 	db 0 ; scene scripts
 
-	db 0 ; callbacks
+	db 1 ; callbacks
+	callback MAPCALLBACK_TILES, .UnblockStairs
+	
+.UnblockStairs:
+	checkevent EVENT_UNBLOCK_STAIRS_ROOM
+	iffalse .Done
+	changeblock $E, $12, $70
+.Done:
+	return
 
 
 CastleMountain2F_MapEvents:

@@ -1,7 +1,15 @@
 CastleMountain1FLongHall_MapScripts:
 	db 0 ; scene scripts
 
-	db 0 ; callbacks
+	db 1 ; callbacks
+	callback MAPCALLBACK_TILES, .UnblockStairs
+	
+.UnblockStairs:
+	checkevent EVENT_UNBLOCK_STAIRS_ROOM
+	iffalse .Done
+	changeblock $1E, $2, $46
+.Done:
+	return
 
 
 CastleMountain1FLongHall_MapEvents:

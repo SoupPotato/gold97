@@ -84,4 +84,7 @@ MapScenes::
 	scene_var WHIRL_ISLAND_B3F,                            wWhirlIslandB3FSceneID
 	scene_var FORKED_STRAIT_GATE,                          wForkedStraitGateSceneID
 	scene_var RAINBOW_ISLAND_CAVE,                         wRainbowIslandCaveSceneID
+	scene_var CASTLE_MOUNTAIN_1F_DANCE_HALL,               wCastleMountainDanceHallSceneID
+	scene_var CASTLE_MOUNTAIN_3FB,                         wCastleMountain3FBSceneID
+	scene_var CASTLE_MOUNTAIN_B1F,                         wCastleMountainB1FSceneID
 	db -1

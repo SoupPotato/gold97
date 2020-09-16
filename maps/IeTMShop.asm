@@ -12,7 +12,7 @@ IeTMShop_MapScripts:
 
 IeMartClerkScript:
 	opentext
-	pokemart MARTTYPE_STANDARD, MART_PEWTER
+	pokemart MARTTYPE_STANDARD, MART_VERMILION
 	closetext
 	end
 

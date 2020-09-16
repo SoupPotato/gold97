@@ -612,7 +612,6 @@ KRIS EQU __enum__
 
 	trainerclass EXECUTIVEF ; 37
 	const EXECUTIVEF_1
-	const EXECUTIVEF_2
 
 	trainerclass SAGE ; 38
 	const CHOW

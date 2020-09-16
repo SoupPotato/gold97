@@ -12,6 +12,9 @@ IeTown_MapScripts:
 	setflag ENGINE_FLYPOINT_IE
 	return
 
+IeTownPokecenterSign:
+	jumpstd pokecentersign
+
 IeTownSign:
 	jumptext IeTownSignText
 	
@@ -77,9 +80,10 @@ IeTown_MapEvents:
 
 	db 0 ; coord events
 
-	db 2 ; bg events
+	db 3 ; bg events
 	bg_event 26,  6, BGEVENT_READ, IeTownSign
 	bg_event 19,  7, BGEVENT_READ, TMShopSign
+	bg_event  6,  6, BGEVENT_READ, IeTownPokecenterSign
 
 	db 2 ; object events
 	object_event 15, 13, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IeTownNPC1Script, -1

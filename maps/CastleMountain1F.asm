@@ -1,7 +1,15 @@
 CastleMountain1F_MapScripts:
 	db 0 ; scene scripts
 
-	db 0 ; callbacks
+	db 1 ; callbacks
+	callback MAPCALLBACK_TILES, .UnblockLongHall
+	
+.UnblockLongHall:
+	checkevent EVENT_DANCE_HALL_ROCKETS_ESCAPED
+	iffalse .Done
+	changeblock $E, $2, $46
+.Done:
+	return
 
 
 CastleMountain1F_MapEvents:

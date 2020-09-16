@@ -1037,7 +1037,7 @@ _BuenaRadioText5::
 
 _BuenaRadioText6::
 	text_start
-	line "I'm in WEST's"
+	line "I'm in WESTPORT's"
 	done
 
 _BuenaRadioText7::
