@@ -11,6 +11,37 @@ CastleMountain1FDiningHall_MapScripts:
 .Done:
 	return
 
+LeftoverFoodScript:
+	opentext
+	checkevent EVENT_TOOK_DINING_HALL_LEFTOVERS
+	iftrue .aftertaken
+	writetext SuspiciousFoodText
+	waitbutton
+	writetext TakeSomeAnywayText
+	waitbutton
+	verbosegiveitem LEFTOVERS
+	iffalse .NoRoom
+	setevent EVENT_TOOK_DINING_HALL_LEFTOVERS
+.NoRoom:
+	closetext
+	end
+.aftertaken:
+	writetext SuspiciousFoodText
+	waitbutton
+	closetext
+	end
+
+SuspiciousFoodText:
+	text "This food is"
+	line "suspiciously fresh"
+	cont "for being in an"
+	cont "abandoned castle."
+	done
+
+TakeSomeAnywayText:
+	text "Can't hurt to"
+	line "take some right?"
+	done
 
 CastleMountain1FDiningHall_MapEvents:
 	db 0, 0 ; filler
@@ -23,6 +54,7 @@ CastleMountain1FDiningHall_MapEvents:
 
 	db 0 ; coord events
 
-	db 0 ; bg events
+	db 1 ; bg events
+	bg_event  4, 11, BGEVENT_READ, LeftoverFoodScript
 
 	db 0 ; object events

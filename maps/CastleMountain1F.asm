@@ -11,6 +11,18 @@ CastleMountain1F_MapScripts:
 .Done:
 	return
 
+HiddenDebris5:
+	hiddenitem BRICK_PIECE, EVENT_CM_HIDDENITEM5
+	
+HiddenDebris6:
+	hiddenitem BRICK_PIECE, EVENT_CM_HIDDENITEM6
+	
+HiddenDebris7:
+	hiddenitem STAR_PIECE, EVENT_CM_HIDDENITEM7
+	
+HiddenDebris8:
+	hiddenitem BRICK_PIECE, EVENT_CM_HIDDENITEM8
+
 
 CastleMountain1F_MapEvents:
 	db 0, 0 ; filler
@@ -27,6 +39,10 @@ CastleMountain1F_MapEvents:
 
 	db 0 ; coord events
 
-	db 0 ; bg events
+	db 4 ; bg events
+	bg_event 19,  7, BGEVENT_ITEM, HiddenDebris5
+	bg_event 22, 14, BGEVENT_ITEM, HiddenDebris6
+	bg_event  9, 21, BGEVENT_ITEM, HiddenDebris7
+	bg_event  8,  4, BGEVENT_ITEM, HiddenDebris8
 
 	db 0 ; object events

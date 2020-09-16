@@ -139,4 +139,16 @@ KantoWaterWildMons:
 	db 38, TENTACOOL
 	db 40, STARYU
 	db 42, CORASUN
+	
+	map_id CASTLE_MOUNTAIN_1F_CAVE
+	db 1 percent
+	db 40, MAGIKARP
+	db 45, MAGIKARP
+	db 50, GYARADOS
+	
+	map_id CASTLE_MOUNTAIN_B1F
+	db 1 percent
+	db 45, MAGIKARP
+	db 50, MAGIKARP
+	db 55, GYARADOS
 	db -1 ; end

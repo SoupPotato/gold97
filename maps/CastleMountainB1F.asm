@@ -1,6 +1,8 @@
 	const_def 2
 	const CM_B1F_EXEC
 	const CM_B1F_DRAGONITE
+	const CM_B1F_ITEMBALL1
+	const CM_B1F_ITEMBALL2
 
 CastleMountainB1F_MapScripts:
 	db 0 ; scene scripts
@@ -64,6 +66,15 @@ ArianaDungeonScript:
 	special FadeInPalettes
 	setevent EVENT_CASTLE_B1F_SPRITES_NOT_SHOWN
 	setevent EVENT_CASTLE_MTN_EVENTS_COMPLETE
+	setevent EVENT_CM3A_NUGGET1
+	setevent EVENT_CM3A_NUGGET2
+	setevent EVENT_CM3A_NUGGET3
+	setevent EVENT_CM3A_NUGGET4
+	setevent EVENT_CM3A_NUGGET5
+	setevent EVENT_CM3A_NUGGET6
+	setevent EVENT_CM3A_NUGGET7
+	setevent EVENT_CM3A_NUGGET8
+	clearevent EVENT_DESERTER_ROCKET_GRUNT
 	end
 	
 OuchFallText:
@@ -134,6 +145,12 @@ DontForgetTRText:
 	cont "little twerp!"
 	done
 
+CMB1Itemball1:
+	itemball KINGS_ROCK
+	
+CMB1Itemball2:
+	itemball ESCAPE_ROPE
+
 CastleMountainB1F_MapEvents:
 	db 0, 0 ; filler
 
@@ -146,6 +163,8 @@ CastleMountainB1F_MapEvents:
 
 	db 0 ; bg events
 
-	db 2 ; object events
+	db 4 ; object events
 	object_event 14,  7, SPRITE_ERIKA, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ArianaDungeonScript, EVENT_CASTLE_B1F_SPRITES_NOT_SHOWN
 	object_event 14,  2, SPRITE_DRAGON, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CASTLE_DRAGONITE_NOT_SHOWN
+	object_event 26, 23, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, CMB1Itemball1, EVENT_CMB1_ITEMBALL1
+	object_event 15, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, CMB1Itemball2, EVENT_CMB1_ITEMBALL2

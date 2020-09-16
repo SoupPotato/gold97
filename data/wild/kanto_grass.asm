@@ -576,4 +576,247 @@ KantoGrassWildMons:
 	db 46, KINGLER
 	db 48, RAITORA
 	db 50, GELANIA
+	
+	map_id CASTLE_MOUNTAIN_1F
+	db 5 percent, 5 percent, 5 percent ; encounter rates: morn/day/nite
+	; morn
+	db 52, RATICATE
+	db 52, KURSTRAW
+	db 53, HAUNTER
+	db 53, TUHEAD
+	db 52, HAUNTER
+	db 53, PANGSHI
+	db 53, TUHEAD
+	; day
+	db 52, RATICATE
+	db 52, KURSTRAW
+	db 53, HAUNTER
+	db 53, TUHEAD
+	db 52, HAUNTER
+	db 53, PANGSHI
+	db 53, TUHEAD
+	; nite
+	db 52, RATICATE
+	db 52, KURSTRAW
+	db 53, HAUNTER
+	db 53, TUHEAD
+	db 52, HAUNTER
+	db 53, PANGSHI
+	db 53, TUHEAD
+	
+	map_id CASTLE_MOUNTAIN_1F_LONG_HALL
+	db 5 percent, 5 percent, 5 percent ; encounter rates: morn/day/nite
+	; morn
+	db 52, RATICATE
+	db 52, KURSTRAW
+	db 53, HAUNTER
+	db 53, TUHEAD
+	db 52, HAUNTER
+	db 53, PANGSHI
+	db 53, TUHEAD
+	; day
+	db 52, RATICATE
+	db 52, KURSTRAW
+	db 53, HAUNTER
+	db 53, TUHEAD
+	db 52, HAUNTER
+	db 53, PANGSHI
+	db 53, TUHEAD
+	; nite
+	db 52, RATICATE
+	db 52, KURSTRAW
+	db 53, HAUNTER
+	db 53, TUHEAD
+	db 52, HAUNTER
+	db 53, PANGSHI
+	db 53, TUHEAD
+	
+	map_id CASTLE_MOUNTAIN_1F_DANCE_HALL
+	db 3 percent, 3 percent, 3 percent ; encounter rates: morn/day/nite
+	; morn
+	db 52, RATICATE
+	db 52, KURSTRAW
+	db 53, HAUNTER
+	db 53, TUHEAD
+	db 52, HAUNTER
+	db 53, PANGSHI
+	db 53, TUHEAD
+	; day
+	db 52, RATICATE
+	db 52, KURSTRAW
+	db 53, HAUNTER
+	db 53, TUHEAD
+	db 52, HAUNTER
+	db 53, PANGSHI
+	db 53, TUHEAD
+	; nite
+	db 52, RATICATE
+	db 52, KURSTRAW
+	db 53, HAUNTER
+	db 53, TUHEAD
+	db 52, HAUNTER
+	db 53, PANGSHI
+	db 53, TUHEAD
+	
+	map_id CASTLE_MOUNTAIN_1F_DINING_HALL
+	db 3 percent, 3 percent, 3 percent ; encounter rates: morn/day/nite
+	; morn
+	db 52, RATICATE
+	db 52, KURSTRAW
+	db 53, HAUNTER
+	db 53, TUHEAD
+	db 52, HAUNTER
+	db 53, PANGSHI
+	db 53, TUHEAD
+	; day
+	db 52, RATICATE
+	db 52, KURSTRAW
+	db 53, HAUNTER
+	db 53, TUHEAD
+	db 52, HAUNTER
+	db 53, PANGSHI
+	db 53, TUHEAD
+	; nite
+	db 52, RATICATE
+	db 52, KURSTRAW
+	db 53, HAUNTER
+	db 53, TUHEAD
+	db 52, HAUNTER
+	db 53, PANGSHI
+	db 53, TUHEAD
+	
+	map_id CASTLE_MOUNTAIN_2F
+	db 5 percent, 5 percent, 5 percent ; encounter rates: morn/day/nite
+	; morn
+	db 52, HAUNTER
+	db 52, KURSTRAW
+	db 53, RATICATE
+	db 53, BELLRUN
+	db 52, HAUNTER
+	db 53, PANGSHI
+	db 56, TUHEAD
+	; day
+	db 52, HAUNTER
+	db 52, KURSTRAW
+	db 53, RATICATE
+	db 53, BELLRUN
+	db 52, HAUNTER
+	db 53, PANGSHI
+	db 56, TUHEAD
+	; nite
+	db 52, HAUNTER
+	db 52, KURSTRAW
+	db 53, RATICATE
+	db 53, BELLRUN
+	db 52, HAUNTER
+	db 53, PANGSHI
+	db 56, TUHEAD
+	
+	map_id CASTLE_MOUNTAIN_3FA
+	db 3 percent, 3 percent, 3 percent ; encounter rates: morn/day/nite
+	; morn
+	db 52, MURKROW
+	db 52, KURSTRAW
+	db 53, HAUNTER
+	db 53, TUHEAD
+	db 52, RATICATE
+	db 53, PANGSHI
+	db 53, TUHEAD
+	; day
+	db 52, MURKROW
+	db 52, KURSTRAW
+	db 53, HAUNTER
+	db 53, TUHEAD
+	db 52, RATICATE
+	db 53, PANGSHI
+	db 53, TUHEAD
+	; nite
+	db 52, MURKROW
+	db 52, KURSTRAW
+	db 53, HAUNTER
+	db 53, TUHEAD
+	db 52, RATICATE
+	db 53, PANGSHI
+	db 53, TUHEAD
+	
+	map_id CASTLE_MOUNTAIN_3FB
+	db 3 percent, 3 percent, 3 percent ; encounter rates: morn/day/nite
+	; morn
+	db 52, MURKROW
+	db 52, KURSTRAW
+	db 53, HAUNTER
+	db 53, TUHEAD
+	db 52, RATICATE
+	db 53, PANGSHI
+	db 53, TUHEAD
+	; day
+	db 52, MURKROW
+	db 52, KURSTRAW
+	db 53, HAUNTER
+	db 53, TUHEAD
+	db 52, RATICATE
+	db 53, PANGSHI
+	db 53, TUHEAD
+	; nite
+	db 52, MURKROW
+	db 52, KURSTRAW
+	db 53, HAUNTER
+	db 53, TUHEAD
+	db 52, RATICATE
+	db 53, PANGSHI
+	db 53, TUHEAD
+	
+	map_id CASTLE_MOUNTAIN_1F_CAVE
+	db 3 percent, 3 percent, 3 percent ; encounter rates: morn/day/nite
+	; morn
+	db 52, DIGLETT
+	db 52, GRAVELER
+	db 53, DUGTRIO
+	db 53, GRAVELER
+	db 52, DUGTRIO
+	db 53, ONIX
+	db 53, GOLEM
+	; day
+	db 52, DIGLETT
+	db 52, GRAVELER
+	db 53, DUGTRIO
+	db 53, GRAVELER
+	db 52, DUGTRIO
+	db 53, ONIX
+	db 53, GOLEM
+	; nite
+	db 52, DIGLETT
+	db 52, GRAVELER
+	db 53, DUGTRIO
+	db 53, GRAVELER
+	db 52, DUGTRIO
+	db 53, ONIX
+	db 53, GOLEM
+	
+	map_id CASTLE_MOUNTAIN_B1F
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	; morn
+	db 52, ONIX
+	db 52, GRAVELER
+	db 53, DUGTRIO
+	db 53, GRAVELER
+	db 52, DUGTRIO
+	db 53, RHYDON
+	db 53, STEELIX
+	; day
+	db 52, ONIX
+	db 52, GRAVELER
+	db 53, DUGTRIO
+	db 53, GRAVELER
+	db 52, DUGTRIO
+	db 53, RHYDON
+	db 53, STEELIX
+	; nite
+	db 52, ONIX
+	db 52, GRAVELER
+	db 53, DUGTRIO
+	db 53, GRAVELER
+	db 52, DUGTRIO
+	db 53, RHYDON
+	db 53, STEELIX
 	db -1 ; end

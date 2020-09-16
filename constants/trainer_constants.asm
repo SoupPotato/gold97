@@ -316,6 +316,15 @@ KRIS EQU __enum__
 	const GRUNTM_31
 	const GRUNTM_32
 	const GRUNTM_33
+	const GRUNTM_34
+	const GRUNTM_35
+	const GRUNTM_36
+	const GRUNTM_37
+	const GRUNTM_38
+	const GRUNTM_39
+	
+	const GRUNTM_40
+	const GRUNTM_41
 
 	trainerclass GENTLEMAN ; 20
 	const PRESTON
@@ -674,19 +683,14 @@ KRIS EQU __enum__
 	const ANNANDANNE1
 	const ANNANDANNE2
 	const AMYANDMAY2
-	const JOANDZOE1
-	const JOANDZOE2
 	const MEGANDPEG1
 	const MEGANDPEG2
 	const LEAANDPIA1
-	const LEAANDPIA2
 
 	trainerclass POKEFANF ; 3e
 	const COLETTE
 	const BEVERLY1
 	const RUTH
-	const BEVERLY2
-	const BEVERLY3
 	const GEORGIA
 	const JAIME
 
@@ -709,6 +713,15 @@ KRIS EQU __enum__
 	const GRUNTF_6
 	const GRUNTF_7
 	const GRUNTF_8
+	const GRUNTF_9
+	const GRUNTF_10
+	const GRUNTF_11
+	const GRUNTF_12
+	const GRUNTF_13
+	
+	const GRUNTF_14
+	const GRUNTF_15
+	const GRUNTF_16
 
 	trainerclass MYSTICALMAN ; 43
 	const EUSINE
@@ -717,7 +730,6 @@ KRIS EQU __enum__
 	const DAVIDSON
 	const LANDON
 	const RICARDO
-	const MARKSON
 	const HARRIS
 	
 	trainerclass SPORTSMAN
