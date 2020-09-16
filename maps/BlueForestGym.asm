@@ -239,6 +239,7 @@ BlueForestGymGuyNotAroundText:
 	para "Maybe you could go"
 	line "ask him for a"
 	cont "battle…"
+	done
 
 PryceText_Intro:
 	text "So nice to see"
