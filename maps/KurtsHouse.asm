@@ -5,13 +5,17 @@
 
 KurtsHouse_MapScripts:
 	db 2 ; scene scripts
-	scene_script .SceneFalknerVisit ; SCENE_DEFAULT
+	scene_script .SceneFalknerVisit1 ; SCENE_DEFAULT
 	scene_script .SceneKurtsHouseNothing ;
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_OBJECTS, .KurtCallback
 	
-.SceneFalknerVisit
+.SceneFalknerVisit1:
+	priorityjump .SceneFalknerVisit2
+	end
+	
+.SceneFalknerVisit2
 	checkevent EVENT_GOT_5F_SAGE_BLESSING
 	iftrue .Falknerapproves
 	checkevent EVENT_FALKNER_AT_GYM
