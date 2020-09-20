@@ -75,7 +75,8 @@ KurtsHouse_MapScripts:
 	iffalse .NoRoomForLureBall
 	closetext
 	setevent EVENT_KURT_GAVE_YOU_LURE_BALL
-	setscene SCENE_KURTS_HOUSE_NOTHING
+	;setscene SCENE_KURTS_HOUSE_NOTHING
+	setevent EVENT_THIS_WHOLE_SCRIPT_WAS_A_MISTAKE
 	end
 	
 .NoRoomForLureBall:
@@ -83,6 +84,12 @@ KurtsHouse_MapScripts:
 	end
 	
 .SceneKurtsHouseNothing:
+	checkevent EVENT_THIS_WHOLE_SCRIPT_WAS_A_MISTAKE
+	iftrue .endofscene
+	checkevent EVENT_GOT_5F_SAGE_BLESSING
+	iftrue .Falknerapproves
+.endofscene:
+	setmapscene KURTS_HOUSE, 1
 	end
 
 .KurtCallback:
