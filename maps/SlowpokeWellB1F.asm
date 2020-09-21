@@ -4,10 +4,14 @@
 
 SlowpokeWellB1F_MapScripts:
 	db 2 ; scene scripts
-	scene_script .SceneSlowpoke1Rival ; SCENE_DEFAULT
+	scene_script .SceneSlowpoke1RivalDummy ; SCENE_DEFAULT
 	scene_script .SceneSlowpoke1Nothing ;
 
 	db 0 ; callbacks
+
+.SceneSlowpoke1RivalDummy:
+	priorityjump .SceneSlowpoke1Rival
+	end
 
 .SceneSlowpoke1Rival:
 	showemote EMOTE_SHOCK, SLOWPOKE_WELL_B1F_SILVER, 15

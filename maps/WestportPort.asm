@@ -151,7 +151,7 @@ WestportPortSailorGuardScript:
 	
 WestportPortLocationMenu:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 4, 19, TEXTBOX_Y - 4
+	menu_coords 0, 4, 19, TEXTBOX_Y - 3
 	dw .MenuData
 	db 1 ; default option
 
