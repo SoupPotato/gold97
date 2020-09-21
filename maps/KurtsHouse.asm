@@ -15,9 +15,13 @@ KurtsHouse_MapScripts:
 	priorityjump .SceneFalknerVisit2
 	end
 	
+.SceneAAAAAAA
+	priorityjump .Falknerapproves
+	end
+	
 .SceneFalknerVisit2
 	checkevent EVENT_GOT_5F_SAGE_BLESSING
-	iftrue .Falknerapproves
+	iftrue .SceneAAAAAAA
 	checkevent EVENT_FALKNER_AT_GYM
 	iftrue .SceneKurtsHouseNothing
 	checkevent EVENT_TALKED_TO_KURT_AND_FALKNER
@@ -87,7 +91,7 @@ KurtsHouse_MapScripts:
 	checkevent EVENT_THIS_WHOLE_SCRIPT_WAS_A_MISTAKE
 	iftrue .endofscene
 	checkevent EVENT_GOT_5F_SAGE_BLESSING
-	iftrue .Falknerapproves
+	iftrue .SceneAAAAAAA
 .endofscene:
 	setmapscene KURTS_HOUSE, 1
 	end
