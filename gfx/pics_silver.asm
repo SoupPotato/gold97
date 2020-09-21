@@ -252,7 +252,7 @@ SECTION "Pics 10", ROMX
 TritalesFrontpic:    INCBIN "gfx/pokemon/tritales/front.animated.2bpp.lz"
 HoundourFrontpic:    INCBIN "gfx/pokemon/houndour/front_S.animated.2bpp.lz"
 MankeyFrontpic:      INCBIN "gfx/pokemon/mankey/front_S.animated.2bpp.lz"
-LeafeonFrontpic:     INCBIN "gfx/pokemon/leafeon/front.animated.2bpp.lz"
+LeafeonFrontpic:     INCBIN "gfx/pokemon/leafeon/front_S.animated.2bpp.lz"
 MediumPic:           INCBIN "gfx/trainers/medium.2bpp.lz"
 TurbanFrontpic:      INCBIN "gfx/pokemon/turban/front_S.animated.2bpp.lz"
 KrabbyFrontpic:      INCBIN "gfx/pokemon/krabby/front_S.animated.2bpp.lz"
@@ -426,7 +426,7 @@ SECTION "Pics 14", ROMX
 
 BelmittBackpic:      INCBIN "gfx/pokemon/belmitt/back.2bpp.lz"
 FlaaffyBackpic:      INCBIN "gfx/pokemon/flaaffy/back.2bpp.lz"
-TangtripFrontpic:    INCBIN "gfx/pokemon/tangtrip/front.animated.2bpp.lz"
+TangtripFrontpic:    INCBIN "gfx/pokemon/tangtrip/front_S.animated.2bpp.lz"
 PeticornBackpic:     INCBIN "gfx/pokemon/peticorn/back.2bpp.lz"
 BugsyPic:            INCBIN "gfx/trainers/bugsy.2bpp.lz"
 MarowakBackpic:      INCBIN "gfx/pokemon/marowak/back.2bpp.lz"
