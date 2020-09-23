@@ -80,7 +80,7 @@ EngineFlags:
 	engine_flag wVisitedSpawns, SPAWN_NAGO ; $38
 	engine_flag wVisitedSpawns, SPAWN_ROCK_TUNNEL
 	engine_flag wVisitedSpawns, SPAWN_AMAMI
-	engine_flag wVisitedSpawns, NUM_SPAWNS
+	engine_flag wVisitedSpawns, SPAWN_KIKAI
 	engine_flag wVisitedSpawns, SPAWN_RYUKYU
 	engine_flag wVisitedSpawns, SPAWN_KANTO
 	engine_flag wVisitedSpawns, SPAWN_STAND
