@@ -3640,7 +3640,7 @@ RaikouEvosAttacks:
 	db 1, BITE
 	db 1, LEER
 	db 8, THUNDERSHOCK
-	db 15, ROAR
+	db 15, FURY_SWIPES
 	db 22, QUICK_ATTACK
 	db 29, SPARK
 	db 36, REFLECT
@@ -3657,7 +3657,7 @@ EnteiEvosAttacks:
 	db 1, BITE
 	db 1, LEER
 	db 8, EMBER
-	db 15, ROAR
+	db 15, FURY_SWIPES
 	db 22, FIRE_SPIN
 	db 29, STOMP
 	db 36, FLAME_WHEEL
@@ -3674,16 +3674,16 @@ SuicuneEvosAttacks:
 	db 1, BITE
 	db 1, LEER
 	db 8, BUBBLEBEAM
-	db 15, RAIN_DANCE
+	db 15, FURY_SWIPES
 	db 22, GUST
 	db 29, AURORA_BEAM
 	db 36, MIST
 	db 43, MIRROR_COAT
 	db 50, ICE_BEAM
 	db 57, PSYCHIC
-	db 64, HYDRO_PUMP
+	db 64, RAIN_DANCE
 	db 71, AMNESIA
-	db 78, BLIZZARD
+	db 78, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 WolfanEvosAttacks:
