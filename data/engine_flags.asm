@@ -100,6 +100,7 @@ EngineFlags:
 	engine_flag wVisitedSpawns, NUM_SPAWNS
 	engine_flag wVisitedSpawns, NUM_SPAWNS ; unused
 	engine_flag wVisitedSpawns, SPAWN_DAITO ; new
+	engine_flag wVisitedSpawns, SPAWN_IE ; new
 
 	engine_flag wLuckyNumberShowFlag, LUCKYNUMBERSHOW_GAME_OVER_F
 
