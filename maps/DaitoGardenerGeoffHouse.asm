@@ -282,5 +282,5 @@ DaitoGardenerGeoffHouse_MapEvents:
 	db 0 ; bg events
 
 	db 2 ; object events
-	object_event 7,  4, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN,0, 0, -1, NITE, PAL_NPC_BROWN , OBJECTTYPE_SCRIPT, 0, GeoffInsideScript, -1
+	object_event 7,  4, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN,0, 0, -1, NITE, PAL_NPC_BROWN , OBJECTTYPE_SCRIPT, 0, GeoffInsideScript, -1
 	object_event  5,  4, SPRITE_PAPER, 0, 0, 0, -1, MORN, PAL_OW_SILVER, OBJECTTYPE_SCRIPT, 0, GeoffOutNote, -1

@@ -138,9 +138,9 @@ RyukyuFakeGym_MapScripts:
 	
 RyukyuFakeGymPokefanMScript:
 	faceplayer
-	opentext
 	checkevent EVENT_EXPLODING_TRAP_19
 	iftrue .AfterBattle
+	opentext
 	writetext TrevorBeforeText
 	waitbutton
 	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
@@ -152,6 +152,7 @@ RyukyuFakeGymPokefanMScript:
 	
 .TrevorFire	
 	writetext TrevorFireText
+	waitbutton
 	closetext
 	winlosstext TrevorWinTextFake, TrevorLossTextFake
 	loadtrainer POKEFANM, TREVOR2
@@ -163,6 +164,7 @@ RyukyuFakeGymPokefanMScript:
 	
 .TrevorGrass	
 	writetext TrevorGrassText
+	waitbutton
 	closetext
 	winlosstext TrevorWinTextFake, TrevorLossTextFake
 	loadtrainer POKEFANM, TREVOR1
@@ -174,6 +176,7 @@ RyukyuFakeGymPokefanMScript:
 	
 .TrevorWater
 	writetext TrevorWaterText
+	waitbutton
 	closetext
 	winlosstext TrevorWinTextFake, TrevorLossTextFake
 	loadtrainer POKEFANM, TREVOR3
@@ -183,6 +186,7 @@ RyukyuFakeGymPokefanMScript:
 .AfterBattle
 	checkevent EVENT_EXPLODING_TRAP_20
 	iftrue .AlreadyGotEgg2Water
+	opentext ; was missing lmao
 	writetext HaveStarter2Egg
 	waitbutton
 	checkevent EVENT_GOT_CHIKORITA_FROM_ELM

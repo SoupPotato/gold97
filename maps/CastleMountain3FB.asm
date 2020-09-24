@@ -275,7 +275,7 @@ TrainerGruntF14:
 	
 GruntF14SeenText:
 	text "Your little"
-	line "mideval adventure"
+	line "medieval quest"
 	cont "ends right here!"
 	done
 	
