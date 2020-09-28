@@ -128,7 +128,7 @@ BellrunFrontpic:     INCBIN "gfx/pokemon/bellrun/front.animated.2bpp.lz"
 SECTION "Pics 6", ROMX
 
 TuheadFrontpic:      INCBIN "gfx/pokemon/tuhead/front_S.animated.2bpp.lz"
-NoctowlFrontpic:     INCBIN "gfx/pokemon/noctowl/front.animated.2bpp.lz"
+NoctowlFrontpic:     INCBIN "gfx/pokemon/noctowl/front_S.animated.2bpp.lz"
 WartortleFrontpic:   INCBIN "gfx/pokemon/wartortle/front_S.animated.2bpp.lz"
 LaprasFrontpic:      INCBIN "gfx/pokemon/lapras/front_S.animated.2bpp.lz"
 GolemFrontpic:       INCBIN "gfx/pokemon/golem/front_S.animated.2bpp.lz"
