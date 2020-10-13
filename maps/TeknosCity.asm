@@ -269,13 +269,11 @@ TeknosCityGramps1Text:
 	done
 
 TeknosCityGramps2Text:
-	text "This city is going"
-	line "to grow even more"
-	para "once the BOARDWALK"
-	line "is finished."
-	para "Many more people"
-	line "will be passing"
-	cont "through."
+	text "We're not getting"
+	line "as many tourists"
+	cont "with the road to"
+	cont "the BOARDWALK"
+	cont "damaged..."
 	done
 	
 TeknosCityGramps2Text2:

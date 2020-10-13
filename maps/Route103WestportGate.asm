@@ -113,18 +113,10 @@ UnknownText_0x69fd9:
 	done
 
 Route103WestportGatePokefanFText:
-	text "The ground north"
-	line "of here is prone"
-	para "to instability"
-	line "due to the lack"
-	cont "of foliage."
-	para "Some rocks have"
-	line "moved and blocked"
-	cont "the road ahead."
-	para "I don't think"
-	line "you'll be able"
-	para "to get by right"
-	line "now."
+	text "I heard some"
+	line "SLOWPOKE blocked"
+	cont "the road ahead,"
+	cont "keep an eye out!"
 	done
 
 Route103WestportGatePokefanFText_FoughtBipetal:
