@@ -129,6 +129,7 @@ CreditsStrings:
 	dw .Coral
 	dw .Pik
 	dw .ActuallyTC
+	dw .Scarlax
 
 .SatoshiTajiri:       db "   SATOSHI TAJIRI@"         ; "たじり　さとし@"
 .JunichiMasuda:       db "   JUNICHI MASUDA@"         ; "ますだ　じゅんいち@"
@@ -262,6 +263,7 @@ CreditsStrings:
 .Coral:               db "      CORALDEV@"
 .Pik:                 db "        PIK@"
 .ActuallyTC:          db "         TC@"
+.Scarlax:             db "      SCARLAX@"
 
 .Copyright:
 	;    (C) 1  9  9  5 - 2  0  0  1     N  i  n  t  e  n  d  o

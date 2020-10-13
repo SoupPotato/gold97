@@ -129,6 +129,7 @@
 	const CORAL
 	const PIK
 	const ACTUALLY_TC
+	const SCARLAX
 
 ; CreditsScript indexes (see data/credits_script.asm)
 	const_def -7

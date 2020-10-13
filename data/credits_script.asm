@@ -69,15 +69,16 @@ CreditsScript:
 	db       ATSUKO_NISHIDA, 1
 	db          MUNEO_SAITO, 2
 	db       RENA_YOSHIKAWA, 3
+	db                 ROOL, 4
 	
 	db CREDITS_WAIT, 12
 
-	db       MONSTER_DESIGN, 0
-	db      	       ROOL, 1
-	db               SMALLS, 2
-	db           SOUR_APPLE, 3
-	db                  PIK, 4
-	db          ACTUALLY_TC, 4
+	db         MONSTER_DESIGN, 0
+	db      	       SMALLS, 1
+	db             SOUR_APPLE, 2
+	db                    PIK, 3
+	db                SCARLAX, 4
+	db            ACTUALLY_TC, 5
 	
 	db CREDITS_WAIT, 12	
 	
