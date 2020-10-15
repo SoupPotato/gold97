@@ -38,7 +38,7 @@ AlloyPokecenter1FFisherText:
 
 AlloyPokecenter1FTeacherText:
 	text "There's a person"
-	line "in SUGAR TOWN"
+	line "on KOBAN ISLAND"
 	cont "across the sea."
 
 	para "I hear she's a"

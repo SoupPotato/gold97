@@ -126,7 +126,7 @@ LassEllenAfterBattleText:
 
 SchoolboyJoeSeenText:
 	text "You've traveled"
-	line "all of JADE?"
+	line "all of NIHON?"
 	para "That's cool."
 	para "But do you stand"
 	line "a chance against"

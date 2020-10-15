@@ -283,7 +283,7 @@ FirebreatherWaltAfterBattleText:
 	text "It's pretty chilly"
 	line "in here."
 	para "Have you ever been"
-	line "in MOUNTAIN CAVE?"
+	line "in MAGMA SHAFT?"
 	para "It's much more"
 	line "toasty there!"
 	done
