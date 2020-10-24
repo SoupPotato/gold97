@@ -207,7 +207,7 @@ GloomFrontpic:       INCBIN "gfx/pokemon/gloom/front_S.animated.2bpp.lz"
 FlaaffyFrontpic:     INCBIN "gfx/pokemon/flaaffy/front_S.animated.2bpp.lz"
 IvysaurFrontpic:     INCBIN "gfx/pokemon/ivysaur/front_S.animated.2bpp.lz"
 GelaniaFrontpic:     INCBIN "gfx/pokemon/gelania/front_S.animated.2bpp.lz"
-FlambearFrontpic:    INCBIN "gfx/pokemon/flambear/front.animated.2bpp.lz"
+FlambearFrontpic:    INCBIN "gfx/pokemon/flambear/front_S.animated.2bpp.lz"
 HitmonchanFrontpic:  INCBIN "gfx/pokemon/hitmonchan/front_S.animated.2bpp.lz"
 GrotessFrontpic:     INCBIN "gfx/pokemon/grotess/front_S.animated.2bpp.lz"
 
