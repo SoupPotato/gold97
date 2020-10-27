@@ -215,7 +215,7 @@ GrotessFrontpic:     INCBIN "gfx/pokemon/grotess/front_S.animated.2bpp.lz"
 SECTION "Pics 9", ROMX
 
 EkansFrontpic:       INCBIN "gfx/pokemon/ekans/front_S.animated.2bpp.lz"
-BelmittFrontpic:     INCBIN "gfx/pokemon/belmitt/front.animated.2bpp.lz"
+BelmittFrontpic:     INCBIN "gfx/pokemon/belmitt/front_S.animated.2bpp.lz"
 PikachuFrontpic:     INCBIN "gfx/pokemon/pikachu/front_S.animated.2bpp.lz"
 SeadraFrontpic:      INCBIN "gfx/pokemon/seadra/front_S.animated.2bpp.lz"
 MagbyFrontpic:       INCBIN "gfx/pokemon/magby/front.animated.2bpp.lz"
