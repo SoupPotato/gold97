@@ -350,6 +350,7 @@ INCLUDE "maps/RedsHouse2F.asm"
 INCLUDE "maps/BluesHouse.asm"
 INCLUDE "maps/OaksLabKanto.asm"
 INCLUDE "maps/KantoHouse4.asm"
+INCLUDE "maps/SkateboarderHouse.asm"
 
 SECTION "Map Scripts 20", ROMX
 

@@ -5,7 +5,7 @@ ItemDescriptions:
 	dw BrightpowderDesc
 	dw GreatBallDesc
 	dw PokeBallDesc
-	dw SkateboardDesc
+	dw TeruSama1Desc
 	dw BicycleDesc
 	dw MoonStoneDesc
 	dw AntidoteDesc
@@ -276,9 +276,8 @@ PokeBallDesc:
 	db   "An item for catch-"
 	next "ing #MON.@"
 
-SkateboardDesc:
-	db   "A board to ride"
-	next "in many locations.@"
+TeruSama1Desc:
+	db   "?@"
 
 BicycleDesc:
 	db   "A collapsible bike"

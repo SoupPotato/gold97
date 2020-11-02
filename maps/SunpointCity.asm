@@ -177,7 +177,7 @@ CianwoodPokeSeerSignText:
 SunpointCity_MapEvents:
 	db 0, 0 ; filler
 
-	db 10 ; warp events
+	db 11 ; warp events
 	warp_event 18, 13, MAGMA_SHAFT_1F, 1
 	warp_event 33, 16, SUNPOINT_POKECENTER_1F, 1
 	warp_event 19, 24, KUME_MART, 1
@@ -188,6 +188,7 @@ SunpointCity_MapEvents:
 	warp_event 31,  5, SUNPOINT_DOCKS_SUNPOINT_GATE, 4
 	warp_event 30, 31, ROUTE_119_SUNPOINT_GATE, 1
 	warp_event 31, 31, ROUTE_119_SUNPOINT_GATE, 2
+	warp_event 25, 23, SKATEBOARDER_HOUSE, 1
 
 	db 0 ; coord events
 
@@ -203,7 +204,7 @@ SunpointCity_MapEvents:
 	db 7 ; object events
 	object_event 27, 15, SPRITE_FISHING_GURU, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SunpointCityYoungster, -1
 	object_event 16, 29, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SunpointCityPokefanM, -1
-	object_event 27, 22, SPRITE_ROCKER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SunpointCityLass, -1
+	object_event 32, 21, SPRITE_ROCKER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SunpointCityLass, -1
 	object_event 19, 19, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SunpointCityRock, -1
 	object_event 17, 18, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SunpointCityRock, -1
 	object_event 15, 29, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SunpointCityChucksWife, -1

@@ -412,6 +412,7 @@ ENDM
 	map_const ROUTE_119_SUNPOINT_GATE,                      5,  4 ; 13
 	map_const ROCKET_SHIP_BASE,                            20, 18 ;  4
 	map_const ISEN_STRAIT_SEASIDE_PATH_GATE,                5,  4 ; 26
+	map_const SKATEBOARDER_HOUSE,                             5,  4
 
 	newgroup                                                      ; 24
 

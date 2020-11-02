@@ -117,6 +117,7 @@ AppleOrchardHouse_Blocks:
 DaitoGardenerGeoffHouse_Blocks:
 IeHouse1_Blocks:
 IeHouse2_Blocks:
+SkateboarderHouse_Blocks:
 	INCBIN "maps/House1.blk"
 
 Route109Route110Gate_Blocks:

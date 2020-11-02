@@ -446,8 +446,7 @@ MartWestportNewItems:
 	db -1 ; end
 	
 MartIeTMShop:
-	db 8 ; items
-	db SKATEBOARD
+	db 7 ; items
 	db TM_REST
 	db TM_SLEEP_TALK
 	db TM_ROAR

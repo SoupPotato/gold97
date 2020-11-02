@@ -4,7 +4,7 @@ ItemNames::
 	db "BRIGHTPOWDER@"
 	db "GREAT BALL@"
 	db "# BALL@"
-	db "SKATEBOARD@"
+	db "TERU-SAMA@"
 	db "BICYCLE@"
 	db "MOON STONE@"
 	db "ANTIDOTE@"

@@ -632,3 +632,4 @@ ENDM
 	map_attributes CastleMountain3FA, CASTLE_MOUNTAIN_3FA, $00, 0
 	map_attributes CastleMountain3FB, CASTLE_MOUNTAIN_3FB, $00, 0
 	map_attributes CastleMountainB1F, CASTLE_MOUNTAIN_B1F, $09, 0
+	map_attributes SkateboarderHouse, SKATEBOARDER_HOUSE, $00, 0
