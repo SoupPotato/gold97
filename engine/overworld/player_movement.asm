@@ -37,8 +37,6 @@ DoPlayerMovement::
 	jr z, .Normal
 	cp PLAYER_SURF
 	jr z, .Surf
-	cp PLAYER_SURF_PIKA
-	jr z, .Surf
 	cp PLAYER_BIKE
 	jr z, .Normal
 	cp PLAYER_SKATE
@@ -259,8 +257,6 @@ DoPlayerMovement::
 ; Surfing actually calls .TrySurf directly instead of passing through here.
 	ld a, [wPlayerState]
 	cp PLAYER_SURF
-	jr z, .TrySurf
-	cp PLAYER_SURF_PIKA
 	jr z, .TrySurf
 
 	call .CheckLandPerms
@@ -724,6 +720,8 @@ ENDM
 .BikeCheck:
 	ld a, [wPlayerState]
 	cp PLAYER_BIKE
+	ret z
+	cp PLAYER_SURF_PIKA
 	ret z
 	cp PLAYER_SKATE
 	ret

@@ -18,7 +18,7 @@ ItemEffects:
 	dw NoEffect            ; BRIGHTPOWDER
 	dw PokeBallEffect      ; GREAT_BALL
 	dw PokeBallEffect      ; POKE_BALL
-	dw TownMapEffect       ; TOWN_MAP
+	dw SkateboardEffect	   ; SKATEBOARD
 	dw BicycleEffect       ; BICYCLE
 	dw EvoStoneEffect      ; MOON_STONE
 	dw StatusHealingEffect ; ANTIDOTE
@@ -1116,6 +1116,148 @@ TownMapEffect:
 BicycleEffect:
 	farcall BikeFunction
 	ret
+
+;lvl3's skateboard functions
+SkateboardEffect:
+	call .TryBoard
+	and $7f
+	ld [wFieldMoveSucceeded], a
+	ret
+
+.TryBoard:
+	call .CheckEnvironment
+	jr c, .CannotUseBoard
+	ld a, [wPlayerState]
+	cp PLAYER_NORMAL
+	jr z, .GetOnBoard
+	cp PLAYER_SURF_PIKA
+	jr z, .GetOffBoard
+	jr .CannotUseBoard
+
+.GetOnBoard:
+	ld hl, Script_GetOnBoard
+	ld de, Script_GetOnBoard_Register
+	call .CheckIfRegistered
+	call QueueScript
+	xor a
+	ld [wMusicFade], a
+	ld de, MUSIC_NONE
+	call PlayMusic
+	call DelayFrame
+	call MaxVolume
+	ld de, MUSIC_BICYCLE
+	ld a, e
+	ld [wMapMusic], a
+	call PlayMusic
+	ld a, $1
+	ret
+
+.GetOffBoard:
+	ld hl, wBikeFlags
+	bit BIKEFLAGS_ALWAYS_ON_BIKE_F, [hl]
+	jr nz, .CantGetOffBoard
+	ld hl, Script_GetOffBoard
+	ld de, Script_GetOffBoard_Register
+	call .CheckIfRegistered
+	ld a, BANK(Script_GetOffBoard)
+	jr .done
+
+.CantGetOffBoard:
+	ld hl, Script_CantGetOffBoard
+	jr .done
+
+.CannotUseBoard:
+	ld a, $0
+	ret
+
+.done
+	call QueueScript
+	ld a, $1
+	ret
+
+.CheckIfRegistered:
+	ld a, [wUsingItemWithSelect]
+	and a
+	ret z
+	ld h, d
+	ld l, e
+	ret
+
+.CheckEnvironment:
+	call GetMapEnvironment
+	call CheckOutdoorMap
+	jr z, .ok
+	cp CAVE
+	jr z, .ok
+	cp GATE
+	jr z, .ok
+	cp DUNGEON
+	jr z, .ok
+	jr .nope
+
+.ok
+	call GetPlayerStandingTile
+	and $f ; lo nybble only
+	jr nz, .nope ; not FLOOR_TILE
+	xor a
+	ret
+
+.nope
+	scf
+	ret
+
+Script_GetOnBoard:
+	reloadmappart
+	special UpdateTimePals
+	loadvar VAR_MOVEMENT, PLAYER_SURF_PIKA
+	writetext GotOnBoardText
+	waitbutton
+	closetext
+	special ReplaceKrisSprite
+	end
+
+Script_GetOnBoard_Register:
+	loadvar VAR_MOVEMENT, PLAYER_SURF_PIKA
+	closetext
+	special ReplaceKrisSprite
+	end
+
+Script_GetOffBoard:
+	reloadmappart
+	special UpdateTimePals
+	loadvar VAR_MOVEMENT, PLAYER_NORMAL
+	writetext GotOffBoardText
+	waitbutton
+
+FinishGettingOffBoard:
+	closetext
+	special ReplaceKrisSprite
+	special PlayMapMusic
+	end
+
+Script_GetOffBoard_Register:
+	loadvar VAR_MOVEMENT, PLAYER_NORMAL
+	jump FinishGettingOffBoard
+
+Script_CantGetOffBoard:
+	writetext .CantGetOffBoardText
+	waitbutton
+	closetext
+	end
+
+.CantGetOffBoardText:
+	text_far UnknownText_0x1c099a
+	text_end
+
+GotOnBoardText:
+	text_far UnknownText_0x1c09b2
+	text_end
+
+GotOffBoardText:
+	text_far UnknownText_0x1c09c7
+	text_end
+
+;-------------------------------------------------------end
 
 EvoStoneEffect:
 	ld b, PARTYMENUACTION_EVO_STONE

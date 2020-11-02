@@ -110,3 +110,8 @@ RaikouSpriteGFX::              INCBIN "gfx/sprites/raikou.2bpp"
 StandingYoungsterSpriteGFX::   INCBIN "gfx/sprites/standing_youngster.2bpp"
 OldAmberSpriteGFX::            INCBIN "gfx/sprites/old_amber.2bpp"
 SurgeNewSpriteGFX::            INCBIN "gfx/sprites/surge_new.2bpp"
+
+SECTION "Sprites 3", ROMX
+
+ChrisSkateSpriteGFX::           INCBIN "gfx/sprites/chris_skate.2bpp"
+KrisSkateSpriteGFX::            INCBIN "gfx/sprites/kris_skate.2bpp"

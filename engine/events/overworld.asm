@@ -361,8 +361,6 @@ SurfFunction:
 	ld a, [wPlayerState]
 	cp PLAYER_SURF
 	jr z, .alreadyfail
-	cp PLAYER_SURF_PIKA
-	jr z, .alreadyfail
 	call GetFacingTileCoord
 	call GetTileCollision
 	cp WATERTILE
@@ -452,7 +450,7 @@ GetSurfType:
 
 	ld a, [hl]
 	cp PIKACHU
-	ld a, PLAYER_SURF_PIKA
+	ld a, PLAYER_SURF;_PIKA
 	ret z
 	ld a, PLAYER_SURF
 	ret
@@ -494,8 +492,6 @@ TrySurfOW::
 
 ; Don't ask to surf if already fail.
 	ld a, [wPlayerState]
-	cp PLAYER_SURF_PIKA
-	jr z, .quit
 	cp PLAYER_SURF
 	jr z, .quit
 
@@ -1487,8 +1483,6 @@ FishFunction:
 .TryFish:
 	ld a, [wPlayerState]
 	cp PLAYER_SURF
-	jr z, .fail
-	cp PLAYER_SURF_PIKA
 	jr z, .fail
 	call GetFacingTileCoord
 	call GetTileCollision

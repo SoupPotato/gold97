@@ -112,3 +112,5 @@ OverworldSprites:
 	overworld_sprite StandingYoungsterSpriteGFX, 12, STANDING_SPRITE, PAL_OW_BLUE
 	overworld_sprite OldAmberSpriteGFX, 4, STILL_SPRITE, PAL_OW_BROWN
 	overworld_sprite SurgeNewSpriteGFX, 12, WALKING_SPRITE, PAL_OW_GREEN
+	overworld_sprite ChrisSkateSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite KrisSkateSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
