@@ -189,7 +189,7 @@ ItemDescriptions:
 	dw BlueSkyMailDesc
 	dw MusicMailDesc
 	dw MewMailDesc
-	dw TeruSama25Desc
+	dw SkateboardDesc
 	dw TeruSama26Desc
 	dw TeruSama26Desc
 	dw TeruSama26Desc
@@ -1005,8 +1005,9 @@ MewMailDesc:
 	db   "MEW-print MAIL."
 	next "(HOLD)@"
 
-TeruSama25Desc:
-	db   "?@"
+SkateboardDesc:
+	db   "A board to ride"
+	next "in many locations.@"
 
 TeruSama26Desc:
 	db   "?@"

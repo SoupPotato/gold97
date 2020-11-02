@@ -188,7 +188,7 @@ ItemNames::
 	db "BLUESKY MAIL@"
 	db "MUSIC MAIL@"
 	db "MIRAGE MAIL@"
-	db "TERU-SAMA@"
+	db "SKATEBOARD@"
 	db "TM01@"
 	db "TM02@"
 	db "TM03@"

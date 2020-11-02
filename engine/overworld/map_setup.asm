@@ -146,7 +146,7 @@ CheckReplaceKrisSprite:
 	nop
 	call .CheckBiking
 	jr c, .ok
-	call .CheckBoarding
+	call .CheckBoard
 	jr c, .ok
 	call .CheckSurfing
 	jr c, .ok
@@ -170,7 +170,7 @@ CheckReplaceKrisSprite:
 	scf
 	ret
 
-.CheckBoarding:
+.CheckBoard:
 	and a
 	ld hl, wBikeFlags
 	bit BIKEFLAGS_ALWAYS_ON_BIKE_F, [hl]
@@ -233,11 +233,10 @@ CheckReplaceKrisSprite:
 	ld [wPlayerState], a
 	scf
 	ret
-	
+
 .nope3
 	and a
 	ret
-
 
 .CheckSurfing:
 	call CheckOnWater
@@ -276,6 +275,8 @@ RotatePalettesRightMapAndMusic:
 ForceMapMusic:
 	ld a, [wPlayerState]
 	cp PLAYER_BIKE
+	cp PLAYER_SURF_PIKA
+	jr nz, .notbiking
 	cp PLAYER_SURF_PIKA
 	jr nz, .notbiking
 	call VolumeOff

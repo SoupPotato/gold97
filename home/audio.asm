@@ -371,6 +371,8 @@ EnterMapMusic::
 	ld a, [wPlayerState]
 	cp PLAYER_BIKE
 	jr z, .play
+	cp PLAYER_SURF_PIKA
+	jr z, .play
 	call GetMapMusic_MaybeSpecial
 .play
 	push de
@@ -423,8 +425,6 @@ RestartMapMusic::
 SpecialMapMusic::
 	ld a, [wPlayerState]
 	cp PLAYER_SURF
-	jr z, .surf
-	cp PLAYER_SURF_PIKA
 	jr z, .surf
 
 	ld a, [wStatusFlags2]

@@ -192,6 +192,17 @@ ItemEffects:
 	dw PokeBallEffect      ; PARK_BALL
 	dw NoEffect            ; RAINBOW_WING
 	dw NoEffect            ; ITEM_B3
+	dw NoEffect            ; B4
+	dw NoEffect            ; B5
+	dw NoEffect            ; B6
+	dw NoEffect            ; B7
+	dw NoEffect            ; B8
+	dw NoEffect            ; B9
+	dw NoEffect            ; BA
+	dw NoEffect            ; BB
+	dw NoEffect            ; BC
+	dw NoEffect            ; BD
+	dw SkateboardEffect    ; ITEM_BE
 
 PokeBallEffect:
 	ld a, [wBattleMode]
@@ -1116,8 +1127,7 @@ TownMapEffect:
 BicycleEffect:
 	farcall BikeFunction
 	ret
-
-;lvl3's skateboard functions
+  
 SkateboardEffect:
 	call .TryBoard
 	and $7f
@@ -1209,7 +1219,7 @@ SkateboardEffect:
 Script_GetOnBoard:
 	reloadmappart
 	special UpdateTimePals
-	loadvar VAR_MOVEMENT, PLAYER_SURF_PIKA
+	writecode VAR_MOVEMENT, PLAYER_SURF_PIKA
 	writetext GotOnBoardText
 	waitbutton
 	closetext
@@ -1217,7 +1227,7 @@ Script_GetOnBoard:
 	end
 
 Script_GetOnBoard_Register:
-	loadvar VAR_MOVEMENT, PLAYER_SURF_PIKA
+	writecode VAR_MOVEMENT, PLAYER_SURF_PIKA
 	closetext
 	special ReplaceKrisSprite
 	end
@@ -1225,7 +1235,7 @@ Script_GetOnBoard_Register:
 Script_GetOffBoard:
 	reloadmappart
 	special UpdateTimePals
-	loadvar VAR_MOVEMENT, PLAYER_NORMAL
+	writecode VAR_MOVEMENT, PLAYER_NORMAL
 	writetext GotOffBoardText
 	waitbutton
 
@@ -1236,7 +1246,7 @@ FinishGettingOffBoard:
 	end
 
 Script_GetOffBoard_Register:
-	loadvar VAR_MOVEMENT, PLAYER_NORMAL
+	writecode VAR_MOVEMENT, PLAYER_NORMAL
 	jump FinishGettingOffBoard
 
 Script_CantGetOffBoard:
@@ -1246,18 +1256,16 @@ Script_CantGetOffBoard:
 	end
 
 .CantGetOffBoardText:
-	text_far UnknownText_0x1c099a
+	text_far _CantGetOffBoardText
 	text_end
 
 GotOnBoardText:
-	text_far UnknownText_0x1c09b2
+	text_far _GotOnBoardText
 	text_end
 
 GotOffBoardText:
-	text_far UnknownText_0x1c09c7
+	text_far _GotOffBoardText
 	text_end
-
-;-------------------------------------------------------end
 
 EvoStoneEffect:
 	ld b, PARTYMENUACTION_EVO_STONE
