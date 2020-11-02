@@ -210,25 +210,25 @@ JohtoGrassWildMons:
 	; morn
 	db 8, HOPPIP
 	db 8, CHIX
-	db 8, BELLSPROUT
+	db 8, NIDORAN_M
 	db 9, PUDDIPUP
-	db 7, LEDYBA
+	db 7, NIDORAN_F
 	db 8, TANGTRIP
 	db 10, TANGTRIP
 	; day
 	db 8, HOPPIP
 	db 8, CHIX
-	db 8, BELLSPROUT
+	db 8, NIDORAN_M
 	db 9, PUDDIPUP
-	db 7, PIDGEY
+	db 7, NIDORAN_F
 	db 8, TANGTRIP
 	db 10, TANGTRIP
 	; nite
-	db 8, SPINARAK
+	db 8, HOPPIP
 	db 8, ODDISH
-	db 8, BELLSPROUT
+	db 8, NIDORAN_M
 	db 9, HOOTHOOT
-	db 7, HOOTHOOT
+	db 7, NIDORAN_F
 	db 8, GASTLY
 	db 10, GASTLY
 	
@@ -236,25 +236,25 @@ JohtoGrassWildMons:
 	; morn
 	db 8, LEDYBA
 	db 8, CHIX
-	db 8, BELLSPROUT
+	db 8, NIDORAN_F
 	db 9, TRITALES
-	db 7, PIDGEY
+	db 7, NIDORAN_M
 	db 8, TANGTRIP
 	db 10, TANGTRIP
 	; day
 	db 8, HOPPIP
 	db 8, CHIX
-	db 8, BELLSPROUT
+	db 8, NIDORAN_F
 	db 9, TRITALES
-	db 7, PIDGEY
+	db 7, NIDORAN_M
 	db 8, TANGTRIP
 	db 10, TANGTRIP
 	; nite
 	db 8, ODDISH
 	db 8, ODDISH
-	db 8, BELLSPROUT
+	db 8, NIDORAN_F
 	db 9, HOOTHOOT
-	db 7, SPINARAK
+	db 7, NIDORAN_M
 	db 8, GASTLY
 	db 10, GASTLY
 	ENDC
@@ -265,7 +265,7 @@ JohtoGrassWildMons:
 	IF DEF(_GOLD)
 	; morn
 	db 12, MAREEP
-	db 13, HOPPIP
+	db 13, BELLSPROUT
 	db 13, KOTORA
 	db 14, PETICORN
 	db 12, PHANPY
@@ -273,7 +273,7 @@ JohtoGrassWildMons:
 	db 14, EXEGGCUTE
 	; day
 	db 12, MAREEP
-	db 13, HOPPIP
+	db 13, BELLSPROUT
 	db 13, KOTORA
 	db 14, PETICORN
 	db 12, PHANPY
@@ -283,7 +283,7 @@ JohtoGrassWildMons:
 	db 12, MAREEP
 	db 13, RINRING
 	db 13, KOTORA
-	db 14, ZUBAT
+	db 14, BELLSPROUT
 	db 12, ZUBAT
 	db 14, EXEGGCUTE
 	db 14, EXEGGCUTE
@@ -294,7 +294,7 @@ JohtoGrassWildMons:
 	db 13, PHANPY
 	db 13, KOTORA
 	db 14, PETICORN
-	db 12, HOPPIP
+	db 12, BELLSPROUT
 	db 14, EXEGGCUTE
 	db 14, EXEGGCUTE
 	; day
@@ -302,12 +302,12 @@ JohtoGrassWildMons:
 	db 13, PHANPY
 	db 13, KOTORA
 	db 14, PETICORN
-	db 12, HOPPIP
+	db 12, BELLSPROUT
 	db 14, EXEGGCUTE
 	db 14, EXEGGCUTE
 	; nite
 	db 12, MAREEP
-	db 13, ZUBAT
+	db 13, BELLSPROUT
 	db 13, KOTORA
 	db 14, ZUBAT
 	db 12, RINRING
@@ -485,18 +485,18 @@ JohtoGrassWildMons:
 	db 14, NIDORAN_F
 	db 14, NIDORAN_M
 	db 12, GRIMBY
-	db 12, SANDSHREW
-	db 13, ABRA
-	db 12, PUDDIPUP
-	db 12, TRITALES
+	db 12, SPEAROW
+	db 13, SANDSHREW
+	db 12, ABRA
+	db 12, ABRA
 	; day
 	db 14, NIDORAN_F
 	db 14, NIDORAN_M
 	db 12, GRIMBY
-	db 12, SANDSHREW
-	db 13, ABRA
-	db 12, PUDDIPUP
-	db 12, TRITALES
+	db 12, SPEAROW
+	db 13, SANDSHREW
+	db 12, ABRA
+	db 12, ABRA
 	; nite
 	db 14, ABRA
 	db 14, DROWZEE
@@ -511,18 +511,18 @@ JohtoGrassWildMons:
 	db 14, NIDORAN_M
 	db 14, NIDORAN_F
 	db 12, GRIMBY
-	db 12, SANDSHREW
-	db 13, ABRA
-	db 12, TRITALES
-	db 12, PUDDIPUP
+	db 12, SPEAROW
+	db 13, SANDSHREW
+	db 12, ABRA
+	db 12, ABRA
 	; day
 	db 14, NIDORAN_M
 	db 14, NIDORAN_F
 	db 12, GRIMBY
-	db 12, SANDSHREW
-	db 13, ABRA
-	db 12, TRITALES
-	db 12, PUDDIPUP
+	db 12, SPEAROW
+	db 13, SANDSHREW
+	db 12, ABRA
+	db 12, ABRA
 	; nite
 	db 14, ABRA
 	db 14, DROWZEE
