@@ -108,6 +108,8 @@
 	const SPRITE_STANDING_YOUNGSTER ; 66
 	const SPRITE_OLD_AMBER
 	const SPRITE_SURGE_NEW
+	const SPRITE_CHRIS_SKATE
+	const SPRITE_KRIS_SKATE
 
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)
 	const_def $80
