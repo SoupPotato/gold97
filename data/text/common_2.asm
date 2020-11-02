@@ -512,6 +512,25 @@ UnknownText_0x1c09c7::
 	text "."
 	done
 
+_CantGetOffBoardText::
+	text "You can't get off"
+	line "here!"
+	done
+
+_GotOnBoardText::
+	text "<PLAYER> got on the"
+	line "@"
+	text_ram wStringBuffer2
+	text "."
+	done
+
+_GotOffBoardText::
+	text "<PLAYER> got off"
+	line "the @"
+	text_ram wStringBuffer2
+	text "."
+	done
+
 UnknownText_0x1c09dd::
 	text "This tree can be"
 	line "CUT!"

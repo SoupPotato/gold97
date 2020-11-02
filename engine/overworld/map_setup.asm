@@ -146,9 +146,13 @@ CheckReplaceKrisSprite:
 	nop
 	call .CheckBiking
 	jr c, .ok
+	call .CheckBoard
+	jr c, .ok
 	call .CheckSurfing
 	jr c, .ok
 	call .CheckSurfing2
+	jr c, .ok
+	call .CheckSurfing3
 	jr c, .ok
 	ret
 
@@ -166,6 +170,16 @@ CheckReplaceKrisSprite:
 	scf
 	ret
 
+.CheckBoard:
+	and a
+	ld hl, wBikeFlags
+	bit BIKEFLAGS_ALWAYS_ON_BIKE_F, [hl]
+	ret z
+	ld a, PLAYER_SURF_PIKA
+	ld [wPlayerState], a
+	scf
+	ret
+
 .CheckSurfing2:
 	ld a, [wPlayerState]
 	cp PLAYER_NORMAL
@@ -173,8 +187,6 @@ CheckReplaceKrisSprite:
 	cp PLAYER_SKATE
 	jr z, .nope
 	cp PLAYER_SURF
-	jr z, .surfing
-	cp PLAYER_SURF_PIKA
 	jr z, .surfing
 	call GetMapEnvironment
 	cp INDOOR
@@ -198,13 +210,38 @@ CheckReplaceKrisSprite:
 	and a
 	ret
 
+.CheckSurfing3:
+	ld a, [wPlayerState]
+	cp PLAYER_NORMAL
+	jr z, .nope3
+	cp PLAYER_SKATE
+	jr z, .nope3
+	cp PLAYER_SURF
+	jr z, .surfing3
+	call GetMapEnvironment
+	cp INDOOR
+	jr z, .no_boarding
+	cp ENVIRONMENT_5
+	jr z, .no_boarding
+	jr .nope
+.no_boarding
+	ld a, [wPlayerState]
+	cp PLAYER_SURF_PIKA
+	jr nz, .nope3
+.surfing3
+	ld a, PLAYER_NORMAL
+	ld [wPlayerState], a
+	scf
+	ret
+.nope3
+	and a
+	ret
+
 .CheckSurfing:
 	call CheckOnWater
 	jr nz, .ret_nc
 	ld a, [wPlayerState]
 	cp PLAYER_SURF
-	jr z, ._surfing
-	cp PLAYER_SURF_PIKA
 	jr z, ._surfing
 	ld a, PLAYER_SURF
 	ld [wPlayerState], a
@@ -237,6 +274,8 @@ RotatePalettesRightMapAndMusic:
 ForceMapMusic:
 	ld a, [wPlayerState]
 	cp PLAYER_BIKE
+	jr nz, .notbiking
+	cp PLAYER_SURF_PIKA
 	jr nz, .notbiking
 	call VolumeOff
 	ld a, $88

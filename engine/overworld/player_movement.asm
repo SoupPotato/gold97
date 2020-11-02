@@ -37,8 +37,6 @@ DoPlayerMovement::
 	jr z, .Normal
 	cp PLAYER_SURF
 	jr z, .Surf
-	cp PLAYER_SURF_PIKA
-	jr z, .Surf
 	cp PLAYER_BIKE
 	jr z, .Normal
 	cp PLAYER_SKATE
@@ -261,7 +259,7 @@ DoPlayerMovement::
 	cp PLAYER_SURF
 	jr z, .TrySurf
 	cp PLAYER_SURF_PIKA
-	jr z, .TrySurf
+	jr z, .TrySkate
 
 	call .CheckLandPerms
 	jr c, .bump
@@ -316,6 +314,22 @@ DoPlayerMovement::
 	ret
 
 .bump
+	xor a
+	ret
+
+.TrySkate:
+	call .CheckLandPerms
+	jr c, .skate_bump
+	call .CheckNPC
+	and a
+	jr z, .bump
+	cp 2
+	jr z, .bump
+	ld a, STEP_ICE
+	call .DoStep
+	scf
+	ret
+.skate_bump
 	xor a
 	ret
 

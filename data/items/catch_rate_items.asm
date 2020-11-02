@@ -8,7 +8,7 @@ TimeCapsule_CatchRateItems:
 	db LONG_VINE, BERRY
 	db APPLE, BERRY
 	db SNAKESKIN, BERRY
-	db ITEM_BE, BERRY
+;	db ITEM_BE, BERRY
 	db ITEM_C3, BERRY
 	db ITEM_DC, BERRY
 	db ITEM_FA, BERRY
