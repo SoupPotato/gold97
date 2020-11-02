@@ -325,7 +325,7 @@ DoPlayerMovement::
 	jr z, .bump
 	cp 2
 	jr z, .bump
-	ld a, STEP_ICE
+	ld a, STEP_BIKE
 	call .DoStep
 	scf
 	ret
