@@ -18,7 +18,7 @@ ItemEffects:
 	dw NoEffect            ; BRIGHTPOWDER
 	dw PokeBallEffect      ; GREAT_BALL
 	dw PokeBallEffect      ; POKE_BALL
-	dw TownMapEffect       ; TOWN_MAP
+	dw SkateboardEffect	   ; SKATEBOARD
 	dw BicycleEffect       ; BICYCLE
 	dw EvoStoneEffect      ; MOON_STONE
 	dw StatusHealingEffect ; ANTIDOTE
@@ -1127,7 +1127,7 @@ TownMapEffect:
 BicycleEffect:
 	farcall BikeFunction
 	ret
-
+  
 SkateboardEffect:
 	call .TryBoard
 	and $7f

@@ -739,6 +739,8 @@ ENDM
 	ld a, [wPlayerState]
 	cp PLAYER_BIKE
 	ret z
+	cp PLAYER_SURF_PIKA
+	ret z
 	cp PLAYER_SKATE
 	ret
 

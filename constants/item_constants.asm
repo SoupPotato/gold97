@@ -11,7 +11,7 @@
 	const BRIGHTPOWDER ; 03
 	const GREAT_BALL   ; 04
 	const POKE_BALL    ; 05
-	const TOWN_MAP     ; 06
+	const SKATEBOARD 
 	const BICYCLE      ; 07
 	const MOON_STONE   ; 08
 	const ANTIDOTE     ; 09
