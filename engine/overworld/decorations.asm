@@ -1,8 +1,12 @@
 InitDecorations:
 	ld a, DECO_FEATHERY_BED
 	ld [wDecoBed], a
-	ld a, DECO_TOWN_MAP
-	ld [wDecoPoster], a
+	ld a, DECO_RED_CARPET
+	ld [wDecoCarpet], a
+	ld a, DECO_N64
+	ld [wDecoConsole], a
+	;ld a, DECO_TOWN_MAP	; not present in original sw97
+	;ld [wDecoPoster], a	; should we keep this?
 	ret
 
 _PlayerDecorationMenu:
@@ -1045,31 +1049,47 @@ DecorationDesc_NullPoster:
 
 DecorationDesc_LeftOrnament:
 	ld a, [wDecoLeftOrnament]
-	jr DecorationDesc_OrnamentOrConsole
+	jr DecorationDesc_OrnamentScript
 
 DecorationDesc_RightOrnament:
 	ld a, [wDecoRightOrnament]
-	jr DecorationDesc_OrnamentOrConsole
+	jr DecorationDesc_OrnamentScript
 
 DecorationDesc_Console:
 	ld a, [wDecoConsole]
-	jr DecorationDesc_OrnamentOrConsole
+	jr DecorationDesc_OrnamentScript
 
-DecorationDesc_OrnamentOrConsole:
+DecorationDesc_OrnamentScript:
 	ld c, a
 	ld de, wStringBuffer3
 	call GetDecorationName_c_de
-	ld b, BANK(.OrnamentConsoleScript)
-	ld de, .OrnamentConsoleScript
+	ld b, BANK(.OrnamentScript)
+	ld de, .OrnamentScript
 	ret
 
-.OrnamentConsoleScript:
-	jumptext .OrnamentConsoleText
+.OrnamentScript:
+	jumptext .OrnamentText
 
-.OrnamentConsoleText:
+.OrnamentText:
 	; It's an adorable @ .
 	text_far UnknownText_0x1bc5d7
 	text_end
+
+DecorationDesc_ConsoleScript:
+	ld c, a
+	ld de, wStringBuffer3
+	call GetDecorationName_c_de
+	ld b, BANK(.ConsoleScript)
+	ld de, .ConsoleScript
+	ret
+
+.ConsoleScript:
+	jumptext .ConsoleLookText
+
+.ConsoleLookText:
+	text_far _ConsoleDecoText
+	text_end
+
 
 DecorationDesc_GiantOrnament:
 	ld b, BANK(.BigDollScript)
@@ -1086,33 +1106,41 @@ DecorationDesc_GiantOrnament:
 
 ToggleMaptileDecorations:
 	; tile coordinates work the same way as for changeblock
-	lb de, 0, 4 ; bed coordinates
+	; beds
+	lb de, 0, 2 ; first
 	ld a, [wDecoBed]
+	and a
+	jr z, .only_carpet
 	call SetDecorationTile
-	lb de, 7, 4 ; plant coordinates
+				; apply carpet to bed
+	ld b, a
+	ld a, [wDecoCarpet]
+	and a
+	jr z, .plant
+	sub CARPETS
+	sla a
+	sla a
+	add b
+	ld [hl], a
+	jr .plant		; carpet + bed applied, skip to next
+	
+.only_carpet
+	lb de, 4, 2
+	ld a, [wDecoCarpet]
+	call SetDecorationTile
+	
+.plant
+; plant
+	lb de, 9, 6 ; plant coordinates
 	ld a, [wDecoPlant]
 	call SetDecorationTile
-	lb de, 6, 0 ; poster coordinates
+	
+.poster
+	; poster
+	lb de, 8, 0 ; poster coordinates
 	ld a, [wDecoPoster]
 	call SetDecorationTile
 	call SetPosterVisibility
-	lb de, 0, 0 ; carpet top-left coordinates
-	call PadCoords_de
-	ld a, [wDecoCarpet]
-	and a
-	ret z
-	call _GetDecorationSprite
-	ld [hl], a
-	push af
-	lb de, 0, 2 ; carpet bottom-left coordinates
-	call PadCoords_de
-	pop af
-	inc a
-	ld [hli], a ; carpet bottom-left block
-	inc a
-	ld [hli], a ; carpet bottom-middle block
-	dec a
-	ld [hl], a ; carpet bottom-right block
 	ret
 
 SetPosterVisibility:

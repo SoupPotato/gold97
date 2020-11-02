@@ -340,6 +340,15 @@ UnknownText_0x1bc5d7::
 	text "."
 	done
 
+_ConsoleDecoText::
+	text "<PLAYER> is playing"
+	line "the @"
+	text_ram wStringBuffer3
+	text "!"
+	para "...Alright!"
+	line "Time to get going!"
+	done
+
 UnknownText_0x1bc5ef::
 	text "A giant doll! It's"
 	line "fluffy and cuddly."

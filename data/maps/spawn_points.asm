@@ -7,7 +7,7 @@ ENDM
 SpawnPoints:
 ; entries correspond to SPAWN_* constants
 
-	spawn PLAYERS_HOUSE_2F,            3,  3
+	spawn PLAYERS_HOUSE_2F,            4,  4
 	spawn PLAYERS_HOUSE_2F,           -1, -1 ;duplicate
 
 	spawn PLAYERS_HOUSE_2F,           -1, -1 ;duplicate
