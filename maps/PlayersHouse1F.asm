@@ -72,10 +72,12 @@ MeetMomScript:
 .ExplainPhone:
 	writetext DontKnowTheInstructionsText
 	buttonsound
+	writetext InstructionsNextText
+	buttonsound
 	jump .FinishPhone
 
 .FinishPhone:
-	writetext InstructionsNextText
+	writetext RivalNameText
 	waitbutton
 	closetext
 	special NameRival
@@ -241,11 +243,10 @@ ComeHomeForDSTText:
 	done
 
 KnowTheInstructionsText:
-	text "Don't you just"
-	line "turn the #GEAR"
-
-	para "on and select the"
-	line "PHONE icon?"
+	text "Oh, I see."
+	
+	para "Aren't you a"
+	line "clever one?"
 	done
 
 DontKnowTheInstructionsText:
@@ -266,8 +267,10 @@ InstructionsNextText:
 
 	para "Gee, isn't that"
 	line "convenient?"
+	done
 	
-	para "By the way, that"
+RivalNameText:
+	text "By the way, that"
 	line "friend of yours"
 	
 	para "stopped by looking"
@@ -275,8 +278,6 @@ InstructionsNextText:
 	
 	para "I can't remember"
 	line "his name though…"
-	
-	
 	done
 
 HurryUpOakIsWaitingText:
