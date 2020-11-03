@@ -3,6 +3,8 @@
 	const PLAYERSHOUSE2F_DOLL_1
 	const PLAYERSHOUSE2F_DOLL_2
 	const PLAYERSHOUSE2F_BIG_DOLL
+	const PLAYERSHOUSE_CLEFDOLL
+	const PLAYERSHOUSE2F_KEN
 
 PlayersHouse2F_MapScripts:
 	db 0 ; scene scripts
@@ -31,6 +33,83 @@ PlayersHouse2F_MapScripts:
 	return
 
 	db 0, 0, 0 ; filler
+
+MeetKenScript:
+	turnobject PLAYER, LEFT
+	turnobject PLAYERSHOUSE2F_KEN, RIGHT
+PlayersHouse2F_Ken:
+	faceplayer
+	opentext
+	checkevent EVENT_TALKED_TO_MOM_AT_BEGINNING
+	iftrue .KenPart2
+	writetext KenGreeting
+	waitbutton
+	closetext
+	setscene SCENE_PLAYERS_HOUSE_2F_NOTHING
+	end
+	
+.KenPart2
+	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
+	iftrue .KenPart3
+	writetext KenGreeting2
+	waitbutton
+	closetext
+	end
+	
+.KenPart3
+	writetext KenGreeting3
+	waitbutton
+	closetext
+	end
+
+KenGreeting:
+	text "KEN: Hey <PLAYER>!"
+	para "That shiny thing"
+	line "on your wrist…"
+	para "You finally got"
+	line "a #GEAR!"
+	para "Sweet! But since"
+	line "it's new and all,"
+	para "you can't really"
+	line "do much with it"
+	cont "yet…"
+	para "Have MOM help you"
+	line "set it up!"
+	para "Come see me later"
+	line "before you head"
+	cont "out anywhere!"
+	para "Oh, yeah!"
+	para "I think I saw that"
+	line "you got a new"
+	cont "e-mail on your PC."
+	para "You might want to"
+	line "check that before"
+	cont "you leave."
+	done
+	
+KenGreeting2:
+	text "KEN: Hey <PLAYER>!"
+	para "PROF.OAK asked you"
+	line "to help him make"
+	cont "a new #DEX?"
+	para "Wow, that's wild!"
+	line "Good luck on your"
+	cont "#MON journey!"
+	done
+	
+KenGreeting3:
+	text "I got an interview"
+	line "for a job as a"
+	para "radio DJ in"
+	line "WESTPORT CITY!"
+	para "I could be on the"
+	line "radio! How crazy!"
+	para "Listen for me in"
+	line "the future!"
+	para "And good luck out"
+	line "there!"
+	done
+
 
 Doll1Script:
 	describedecoration DECODESC_LEFT_DOLL
@@ -190,7 +269,8 @@ PlayersHouse2F_MapEvents:
 	db 1 ; warp events
 	warp_event  9,  0, PLAYERS_HOUSE_1F, 3
 
-	db 0 ; coord events
+	db 1 ; coord events
+	coord_event  9,  1, SCENE_DEFAULT, MeetKenScript
 
 	db 5 ; bg events
 	bg_event  3,  1, BGEVENT_UP, PlayersHousePCScript
@@ -199,9 +279,10 @@ PlayersHouse2F_MapEvents:
 	bg_event  1,  1, BGEVENT_READ, PlayersHouseBookshelfScript
 	bg_event  8,  0, BGEVENT_IFSET, PlayersHousePosterScript
 
-	db 5 ; object events
+	db 6 ; object events
 	object_event  7,  2, SPRITE_CONSOLE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GameConsoleScript, EVENT_PLAYERS_HOUSE_2F_CONSOLE
 	object_event  4,  6, SPRITE_DOLL_1, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Doll1Script, EVENT_PLAYERS_HOUSE_2F_DOLL_1
 	object_event  5,  6, SPRITE_DOLL_2, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Doll2Script, EVENT_PLAYERS_HOUSE_2F_DOLL_2
 	object_event  0,  6, SPRITE_BIG_DOLL, SPRITEMOVEDATA_BIGDOLL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BigDollScript, EVENT_PLAYERS_HOUSE_2F_BIG_DOLL
 	object_event  6,  1, SPRITE_CLEFAIRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PlayersDollScript, -1
+	object_event  8,  1, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PlayersHouse2F_Ken, EVENT_ROUTE_102_SILVER

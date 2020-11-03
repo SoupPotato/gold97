@@ -52,12 +52,19 @@ RadioTower4fSuperNerd:
 	opentext
 	checkflag ENGINE_ROCKETS_IN_RADIO_TOWER
 	iftrue .MidRocketTakeover4fSuperNerd
+	checkevent EVENT_CLEARED_RADIO_TOWER
+	iftrue .KenAfterRadioTower
 	writetext RadioTower4fSuperNerdText
 	waitbutton
 	closetext
 	end
 .MidRocketTakeover4fSuperNerd
 	writetext RadioTower4fSuperNerdTextTakeover
+	waitbutton
+	closetext
+	end
+.KenAfterRadioTower
+	writetext RadioTower4fSuperNerdTextAfter
 	waitbutton
 	closetext
 	end
@@ -206,26 +213,30 @@ RadioTower4fRockerTextTakeover:
 	
 	
 RadioTower4fSuperNerdText:
-	text "KEN: Hello! I hope"
-	line "you enjoy my"
-	cont "broadcast!"
-	para "I work directly"
-	line "with PROF.OAK to"
-	para "help research the"
-	line "locations #MON"
-	cont "live at!"
-	para "…"
-	para "Ah, you're helping"
-	line "him with his"
-	cont "research?"
-	para "Thanks, kid. I owe"
-	line "ya one!"
+	text "KEN: Hey <PLAYER>!"
+	line "I did it!"
+	para "I'm a DJ now!"
+	para "And the research"
+	line "you've been doing"
+	para "for PROF.OAK is"
+	line "super useful for"
+	cont "my radio show!"
+	para "I owe ya one!"
 	done
 	
 RadioTower4fSuperNerdTextTakeover:
-	text "KEN: How do we get"
-	line "these guys to"
-	cont "leave?"
+	text "KEN: Hey, what are"
+	line "you doing here!?"
+	para "Stay safe!"
+	done
+	
+RadioTower4fSuperNerdTextAfter:
+	text "KEN: Did you kick"
+	line "those ROCKETS out"
+	cont "of here?"
+	para "Wow, you and your"
+	line "#MON are"
+	cont "seriously strong!"
 	done
 	
 RadioTower4FStudio2SignText:
@@ -245,9 +256,9 @@ RadioTower4F_MapEvents:
 	bg_event  5,  0, BGEVENT_READ, RadioTower4FStudio2Sign
 
 	db 7 ; object events
-	object_event  4,  1, SPRITE_ROCKER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RadioTower4fRocker, -1
+	object_event  4,  1, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RadioTower4fRocker, -1
 	object_event  7,  5, SPRITE_PHARMACIST, SPRITEMOVEDATA_STANDING_LEFT, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, RadioTower4fBurglar, -1
-	object_event  2,  6, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, RadioTower4fSuperNerd, -1
+	object_event  2,  6, SPRITE_ROCKER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, RadioTower4fSuperNerd, -1
 	object_event  0,  5, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RadioTower4fTeacher, -1
 	object_event  6,  4, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerScientistMarc, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
 	object_event  1,  1, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerGruntM27, EVENT_RADIO_TOWER_ROCKET_TAKEOVER

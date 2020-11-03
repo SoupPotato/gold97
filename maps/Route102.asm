@@ -226,6 +226,7 @@ Route102SilverScript:
 	setscene SCENE_ROUTE36_NOTHING
 	waitsfx
 	playmapmusic
+	setevent EVENT_ROUTE_102_SILVER
 	end
 
 Route102SilverTalkScript:

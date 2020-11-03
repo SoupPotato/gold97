@@ -112,6 +112,7 @@ MeetMomScript:
 .Finish:
 	special RestartMapMusic
 	turnobject PLAYERSHOUSE1F_MOM1, LEFT
+	setevent EVENT_TALKED_TO_MOM_AT_BEGINNING
 	end
 
 MeetMomTalkedScript:

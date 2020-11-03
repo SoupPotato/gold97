@@ -163,7 +163,7 @@ CooltrainerfCarolAfterBattleText:
 	done
 
 PokemaniacEthanSeenText:
-	text "Do you know BUENA?"
+	text "Do you know MARY?"
 	line "She's the best"
 	cont "radio DJ."
 	done

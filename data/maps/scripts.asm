@@ -126,6 +126,7 @@ INCLUDE "maps/CrownCityTrainerHouse.asm"
 INCLUDE "maps/Route118SunpointGate.asm"
 INCLUDE "maps/IsenStraitSeasidePathGate.asm"
 INCLUDE "maps/PagotaGym.asm"
+INCLUDE "maps/JadeForest.asm"
 
 
 SECTION "Map Scripts 8", ROMX
@@ -159,7 +160,7 @@ INCLUDE "maps/AmamiPortPassage.asm"
 INCLUDE "maps/GreatEastStrait.asm"
 INCLUDE "maps/DaitoRanch.asm"
 INCLUDE "maps/DaitoAppleOrchard.asm"
-INCLUDE "maps/JadeForest.asm"
+
 
 SECTION "Map Scripts 10", ROMX
 
