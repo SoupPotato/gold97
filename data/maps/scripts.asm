@@ -17,7 +17,7 @@ INCLUDE "maps/WestportDeptStoreElevator.asm"
 INCLUDE "maps/WestportDeptStoreRoof.asm"
 INCLUDE "maps/BoardwalkGameCorner.asm"
 INCLUDE "maps/KantoDock.asm"
-INCLUDE "maps/AmamiBattleTowerGate.asm"
+
 
 
 SECTION "Map Scripts 2", ROMX; removed 8
@@ -54,6 +54,7 @@ INCLUDE "maps/TeknosAquarium1F.asm"
 INCLUDE "maps/KikaiVillage.asm"
 INCLUDE "maps/KikaiHouse1.asm"
 INCLUDE "maps/KikaiHouse2.asm"
+INCLUDE "maps/AmamiBattleTowerGate.asm"
 
 
 SECTION "Map Scripts 4", ROMX; removed 0
@@ -143,7 +144,7 @@ INCLUDE "maps/FastShipCabins_SW_SSW_NW.asm"
 INCLUDE "maps/FastShipCabins_SE_SSE_CaptainsCabin.asm"
 INCLUDE "maps/FastShipB1F.asm"
 INCLUDE "maps/WestportPortPassage.asm"
-INCLUDE "maps/JadeForest.asm"
+
 
 SECTION "Map Scripts 9", ROMX
 
@@ -158,6 +159,7 @@ INCLUDE "maps/AmamiPortPassage.asm"
 INCLUDE "maps/GreatEastStrait.asm"
 INCLUDE "maps/DaitoRanch.asm"
 INCLUDE "maps/DaitoAppleOrchard.asm"
+INCLUDE "maps/JadeForest.asm"
 
 SECTION "Map Scripts 10", ROMX
 

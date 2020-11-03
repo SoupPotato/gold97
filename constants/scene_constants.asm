@@ -273,3 +273,7 @@ SCENE_FINISHED EQU 1
 ;wWhirlIslandB3FSceneID
 	const_def 1
 	const SCENE_LUGIA_EVENT
+	
+; wPlayersHouse2FSceneID
+	const_def 1
+	const SCENE_PLAYERS_HOUSE_2F_NOTHING

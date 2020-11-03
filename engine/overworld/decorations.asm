@@ -1057,7 +1057,7 @@ DecorationDesc_RightOrnament:
 
 DecorationDesc_Console:
 	ld a, [wDecoConsole]
-	jr DecorationDesc_OrnamentScript
+	jr DecorationDesc_ConsoleScript
 
 DecorationDesc_OrnamentScript:
 	ld c, a

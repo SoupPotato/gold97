@@ -132,7 +132,7 @@ WestportDeptStore5FPoliScript:
 	faceplayer
 	opentext
 	writetext WestportDeptStore5FPoliText
-	cry POLIWHIRL
+	cry POLIWRATH
 	waitbutton
 	closetext
 	end
@@ -197,16 +197,16 @@ WestportDeptStore5FLassText:
 	text "Some #MON can"
 	line "evolve into many"
 	cont "forms, like EEVEE."
-	para "I'm having trouble"
-	line "deciding if I"
-	para "should evolve my"
-	line "POLIWHIRL into"
-	para "POLIWRATH or"
-	line "POLITOED."
+	para "My POLIWRATH"
+	line "evolved from a"
+	cont "POLIWHIRL."
+	para "But I also could"
+	line "have evolved it"
+	cont "into POLITOED."
 	done
 
 WestportDeptStore5FPoliText:
-	text "POLIWHIRL:"
+	text "POLIWRATH:"
 	line "Polipoli!"
 	done
 

@@ -12,7 +12,7 @@ DecorationNames:
 	db "VIRTUAL BOY@"
 	db "GOLD TROPHY@"
 	db "SILVER TROPHY@"
-	db "SURF PIKACHU DOLL@"
+	db "POLIWRATH DOLL@"
 	db " BED@"
 	db " CARPET@"
 	db " POSTER@"

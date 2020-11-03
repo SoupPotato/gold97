@@ -2646,13 +2646,13 @@ wEcruteakCitySceneID::                             db
 wOlivineLighthouse1FID::						db
 wOlivineLighthouse2FID::						db
 wWhirlIslandB3FSceneID::						db
+wPlayersHouse2FSceneID::                        db ; new 18 to 17
 wForkedStraitGateSceneID::                      db ; new, DS went from 23 to 22
 wRainbowIslandCaveSceneID::                     db ; new, DS went from 22 to 21
 wCastleMountainDanceHallSceneID::               db ; new, 21 to 20
 wCastleMountain3FBSceneID::                     db ; new 20 to 19
 wCastleMountainB1FSceneID::                     db ; new 19 to 18
-
-	ds 18 
+	ds 17 
 
 ; fight counts
 wJackFightCount::    db ; d9f2

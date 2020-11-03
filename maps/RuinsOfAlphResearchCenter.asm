@@ -106,11 +106,30 @@ RuinsOfAlphResearchCenterScientist1Script:
 	end
 
 .GotAllUnown:
+	checkevent EVENT_GOT_UNOWN_DOLL_FROM_SCIENTIST
+	iffalse .GetDoll
 	writetext RuinsOfAlphResearchCenterScientist1Text_GotAllUnown
 	waitbutton
 	closetext
 	clearevent EVENT_RUINS_OF_ALPH_OUTSIDE_TOURIST_YOUNGSTERS
 	end
+
+
+.GetDoll
+	writetext RuinsOfAlphResearchCenterScientist2Text_GetDoll
+	waitbutton
+	waitsfx
+	writetext GotUnownDollText
+	playsound SFX_ITEM
+	waitsfx
+;	waitbutton
+	setevent EVENT_GOT_UNOWN_DOLL_FROM_SCIENTIST
+	setevent EVENT_DECO_UNOWN_DOLL
+	writetext RuinsOfAlphResearchCenterScientist2Text_GetDoll2
+	waitbutton
+	closetext
+	end
+
 
 RuinsOfAlphResearchCenterScientist2Script:
 	faceplayer
@@ -418,6 +437,27 @@ RuinsOfAlphResearchCenterAcademicBooksText:
 	line "Mysteries of the"
 	cont "Ancients…"
 	done
+
+GotUnownDollText:
+	text "<PLAYER> got"
+	line "UNOWN DOLL!"
+	done
+	
+RuinsOfAlphResearchCenterScientist2Text_GetDoll:
+	text "Wow! You got every"
+	line "kind of UNOWN!"
+	para "Here's a small"
+	line "gift to celebrate"
+	cont "the occasion!"
+	done
+	
+RuinsOfAlphResearchCenterScientist2Text_GetDoll2:
+	text "It's a decorative"
+	line "UNOWN DOLL."
+	para "Set it up in your"
+	line "bedroom!"
+	done
+
 
 RuinsOfAlphResearchCenter_MapEvents:
 	db 0, 0 ; filler

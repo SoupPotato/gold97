@@ -32,8 +32,15 @@ RuinsOfAlphOutside_MapScripts:
 	jump .NoScientist
 
 .YesScientist:
+	checkevent EVENT_TALKED_TO_OUTSIDE_SCIENTIST
+	iftrue .ActuallyNoScientist
 	appear RUINSOFALPHOUTSIDE_SCIENTIST
 	setscene SCENE_RUINSOFALPHOUTSIDE_GET_UNOWN_DEX
+	return
+
+.ActuallyNoScientist
+	disappear RUINSOFALPHOUTSIDE_SCIENTIST
+	setscene SCENE_RUINSOFALPHOUTSIDE_NOTHING
 	return
 
 .NoScientist:
@@ -60,6 +67,8 @@ RuinsOfAlphOutsideScientistSceneContinue:
 	closetext
 	applymovement RUINSOFALPHOUTSIDE_SCIENTIST, MovementData_0x580ba
 	disappear RUINSOFALPHOUTSIDE_SCIENTIST
+	setevent EVENT_TALKED_TO_OUTSIDE_SCIENTIST
+	setscene SCENE_RUINSOFALPHOUTSIDE_NOTHING
 	setmapscene RUINS_OF_ALPH_RESEARCH_CENTER, SCENE_RUINSOFALPHRESEARCHCENTER_GET_UNOWN_DEX
 	warpcheck
 	end
