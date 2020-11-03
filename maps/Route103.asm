@@ -80,59 +80,14 @@ TrainerBirdKeeperBryan:
 	end
 
 TrainerJugglerIrwin:
-	trainer JUGGLER, IRWIN1, EVENT_BEAT_JUGGLER_IRWIN, JugglerIrwin1SeenText, JugglerIrwin1BeatenText, 0, .Script
+	trainer JUGGLER, IRWIN, EVENT_BEAT_JUGGLER_IRWIN, JugglerIrwin1SeenText, JugglerIrwin1BeatenText, 0, .Script
 
 .Script:
-	writecode VAR_CALLERID, PHONE_JUGGLER_IRWIN
 	endifjustbattled
 	opentext
-	checkcellnum PHONE_JUGGLER_IRWIN
-	iftrue Route103NumberAcceptedM
-	checkevent EVENT_IRWIN_ASKED_FOR_PHONE_NUMBER
-	iftrue .AskedAlready
 	writetext JugglerIrwinAfterBattleText
-	buttonsound
-	setevent EVENT_IRWIN_ASKED_FOR_PHONE_NUMBER
-	scall Route103AskNumber1M
-	jump .AskForNumber
-
-.AskedAlready:
-	scall Route103AskNumber2M
-.AskForNumber:
-	askforphonenumber PHONE_JUGGLER_IRWIN
-	ifequal PHONE_CONTACTS_FULL, Route103PhoneFullM
-	ifequal PHONE_CONTACT_REFUSED, Route103NumberDeclinedM
-	trainertotext JUGGLER, IRWIN1, MEM_BUFFER_0
-	scall Route103RegisteredNumberM
-	jump Route103NumberAcceptedM
-
-Route103AskNumber1M:
-	jumpstd asknumber1m
-	end
-
-Route103AskNumber2M:
-	jumpstd asknumber2m
-	end
-
-Route103RegisteredNumberM:
-	jumpstd registerednumberm
-	end
-
-Route103NumberAcceptedM:
-	jumpstd numberacceptedm
-	end
-
-Route103NumberDeclinedM:
-	jumpstd numberdeclinedm
-	end
-
-Route103PhoneFullM:
-	jumpstd phonefullm
-	end
-
-Route103RematchM:
-	jumpstd rematchm
-	end
+	waitbutton
+	closetext
 
 TrainerCamperIvan:
 	trainer CAMPER, IVAN, EVENT_BEAT_CAMPER_IVAN, CamperIvanSeenText, CamperIvanBeatenText, 0, .Script

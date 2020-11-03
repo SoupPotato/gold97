@@ -120,44 +120,28 @@ KRIS EQU __enum__
 	const ERIKA1
 
 	trainerclass YOUNGSTER ; 16
-	const JOEY1
+	const JOEY
 	const MIKEY
 	const ALBERT
 	const GORDON
 	const IAN
-	const JOEY2
-	const JOEY3
 	const WARREN
 	const JIMMY
-	const JOEY4
-	const JOEY5
 	const JASON1
 	const JASON2
 	const JASON3
 
 	trainerclass SCHOOLBOY ; 17
-	const ALAN1
-	const JACK1
+	const ALAN
+	const JACK
 	const DANNY
 	const TOMMY
 	const DUDLEY
 	const JOE
 	const BILLY
-	const CHAD1
+	const CHAD
 	const NATE
 	const RICKY
-	const JACK2
-	const JACK3
-	const ALAN2
-	const ALAN3
-	const CHAD2
-	const CHAD3
-	const JACK4
-	const JACK5
-	const ALAN4
-	const ALAN5
-	const CHAD4
-	const CHAD5
 
 	trainerclass BIRD_KEEPER ; 18
 	const ROD
@@ -166,37 +150,27 @@ KRIS EQU __enum__
 	const THEO
 	const TOBY
 	const DENIS
-	const VANCE1
+	const VANCE
 	const HANK
 	const ROY
 	const BORIS
 	const BOB
-	const JOSE1
+	const JOSE
 	const PETER
-	const JOSE2
 	const PERRY
 	const BRET
-	const JOSE3
-	const VANCE2
-	const VANCE3
 
 	trainerclass LASS ; 19
 	const VICTORIA
 	const CARRIE
 	const BRIDGET
 	const KRISE
-	const CONNIE1
+	const CONNIE
 	const LAURA
 	const SHANNON
 	const MICHELLE
-	const DANA1
+	const DANA
 	const ELLEN
-	const CONNIE2
-	const CONNIE3
-	const DANA2
-	const DANA3
-	const DANA4
-	const DANA5
 	const LINDA1
 	const LINDA2
 	const LINDA3
@@ -238,7 +212,7 @@ KRIS EQU __enum__
 	const KELLY
 	const JOYCE
 	const BETH ; changed
-	const REENA1
+	const REENA
 	const MEGAN
 	const KENZIE ; changed
 	const CAROL
@@ -247,8 +221,6 @@ KRIS EQU __enum__
 	const CYBIL
 	const JENN
 	const ALLY ; changed
-	const REENA2
-	const REENA3
 	const CARA
 	const JULIA
 
@@ -346,49 +318,32 @@ KRIS EQU __enum__
 	trainerclass BUG_CATCHER ; 24
 	const DON
 	const ED
-	const WADE1
+	const WADE
 	const BUG_CATCHER_BENNY
 	const AL
 	const JOSH
-	const ARNIE1
+	const ARNIE
 	const KEN
-	const WADE2
-	const WADE3
 	const DOUG
-	const ARNIE2
-	const ARNIE3
-	const WADE4
-	const WADE5
-	const ARNIE4
-	const ARNIE5
 	const WAYNE
 
 	trainerclass FISHER ; 25
 	const JUSTIN
-	const RALPH1
+	const RALPH
 	const ARNOLD
 	const KYLE
 	const HENRY
 	const MARVIN
-	const TULLY1
+	const TULLY
 	const ANDRE ; used now
 	const STIRNER ; used now
-	const WILTON1
+	const WILTON
 	const EDGAR ; used now
 	const JONAH
 	const MARTIN
 	const STEPHEN
 	const BARNEY
-	const RALPH2
-	const RALPH3
-	const TULLY2
-	const TULLY3
-	const WILTON2
 	const SCOTT
-	const WILTON3
-	const RALPH4
-	const RALPH5
-	const TULLY4
 
 	trainerclass SWIMMERM ; 26
 	const HAROLD
@@ -436,7 +391,7 @@ KRIS EQU __enum__
 
 	trainerclass SAILOR ; 28
 	const EUGENE ; used now
-	const HUEY1
+	const HUEY
 	const TERRELL
 	const KENT ; used 
 	const ERNEST ; used
@@ -445,9 +400,6 @@ KRIS EQU __enum__
 	const KENNETH
 	const STANLY
 	const HARRY
-	const HUEY2
-	const HUEY3
-	const HUEY4
 	const SVEN ; used new
 
 	trainerclass SUPER_NERD ; 29
@@ -476,16 +428,14 @@ KRIS EQU __enum__
 	const VINCENT
 
 	trainerclass HIKER ; 2c
-	const ANTHONY1
+	const ANTHONY
 	const RUSSELL
 	const PHILLIP
 	const LEONARD
-	const ANTHONY2
 	const BENJAMIN
 	const ERIK
 	const MICHAEL
 	const TIMOTHY
-	const ANTHONY3
 	const TIM
 	const NOLAND
 	const SIDNEY
@@ -493,8 +443,6 @@ KRIS EQU __enum__
 	const JIM
 	const DANIEL
 	const PARRY
-	const ANTHONY4
-	const ANTHONY5
 
 	trainerclass BIKER ; 2d
 	const BIKER_BENNY
@@ -524,12 +472,9 @@ KRIS EQU __enum__
 	const LYLE
 
 	trainerclass JUGGLER ; 31
-	const IRWIN1
+	const IRWIN
 	const FRITZ
 	const HORTON
-	const IRWIN2
-	const IRWIN3
-	const IRWIN4
 	const DWAYNE
 
 	trainerclass BLACKBELT_T ; 32
@@ -565,36 +510,23 @@ KRIS EQU __enum__
 	const RODNEY
 
 	trainerclass PICNICKER ; 35
-	const LIZ1
-	const GINA1
+	const LIZ
+	const GINA
 	const BROOKE
 	const KIM
 	const CINDY
 	const HOPE
 	const SHARON
 	const DEBRA
-	const GINA2
-	const ERIN1
-	const LIZ2
-	const LIZ3
+	const ERIN
 	const HEIDI
 	const EDNA
-	const GINA3
-	const TIFFANY1
-	const TIFFANY2
-	const ERIN2
-	const TIFFANY3
-	const ERIN3
-	const LIZ4
-	const LIZ5
-	const GINA4
-	const GINA5
-	const TIFFANY4
+	const TIFFANY
 
 	trainerclass CAMPER ; 36
 	const SAMUEL
 	const ROLAND
-	const TODD1
+	const TODD
 	const IVAN
 	const ELLIOT
 	const BARRY
@@ -604,16 +536,12 @@ KRIS EQU __enum__
 	const HARVEY
 	const DALE
 	const TED
-	const TODD2
-	const TODD3
 	const THOMAS
 	const LEROY
 	const DAVID
 	const JOHN
 	const JERRY
 	const SPENCER
-	const TODD4
-	const TODD5
 	const QUENTIN
 
 	trainerclass EXECUTIVEF ; 37
@@ -652,7 +580,7 @@ KRIS EQU __enum__
 
 	trainerclass POKEFANM ; 3b
 	const WILLIAM
-	const DEREK1
+	const DEREK
 	const ROBERT
 	const JOSHUA
 	const TREVOR1
@@ -661,8 +589,6 @@ KRIS EQU __enum__
 	const BRANDON
 	const JEREMY
 	const COLIN
-	const DEREK2
-	const DEREK3
 	const REX
 	const ALEX
 	const ALLAN
@@ -686,7 +612,7 @@ KRIS EQU __enum__
 
 	trainerclass POKEFANF ; 3e
 	const COLETTE
-	const BEVERLY1
+	const BEVERLY
 	const RUTH
 	const GEORGIA
 	const JAIME

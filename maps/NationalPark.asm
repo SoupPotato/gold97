@@ -70,121 +70,14 @@ NationalParkGameboyKidScript:
 	end
 
 TrainerSchoolboyJack1:
-	trainer SCHOOLBOY, JACK1, EVENT_BEAT_SCHOOLBOY_JACK, SchoolboyJack1SeenText, SchoolboyJack1BeatenText, 0, .Script
+	trainer SCHOOLBOY, JACK, EVENT_BEAT_SCHOOLBOY_JACK, SchoolboyJack1SeenText, SchoolboyJack1BeatenText, 0, .Script
 
 .Script:
-	writecode VAR_CALLERID, PHONE_SCHOOLBOY_JACK
 	endifjustbattled
 	opentext
-	checkflag ENGINE_JACK
-	iftrue .Rematch
-	checkcellnum PHONE_SCHOOLBOY_JACK
-	iftrue .NumberAccepted
-	checkevent EVENT_JACK_ASKED_FOR_PHONE_NUMBER
-	iftrue .AskAgain
 	writetext UnknownText_0x5c4f3
-	buttonsound
-	setevent EVENT_JACK_ASKED_FOR_PHONE_NUMBER
-	scall .AskNumber1
-	jump .RequestNumber
-
-.AskAgain:
-	scall .AskNumber2
-.RequestNumber:
-	askforphonenumber PHONE_SCHOOLBOY_JACK
-	ifequal PHONE_CONTACTS_FULL, .PhoneFull
-	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
-	trainertotext SCHOOLBOY, JACK1, MEM_BUFFER_0
-	scall .RegisteredNumber
-	jump .NumberAccepted
-
-.Rematch:
-	scall .RematchStd
-	winlosstext SchoolboyJack1BeatenText, 0
-	copybytetovar wJackFightCount
-	ifequal 4, .Fight4
-	ifequal 3, .Fight3
-	ifequal 2, .Fight2
-	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
-.Fight4:
-	checkevent EVENT_EXPLODING_TRAP_16
-	iftrue .LoadFight4
-.Fight3:
-	checkevent EVENT_REPAIRED_SHIP_FUEL_LINE
-	iftrue .LoadFight3
-.Fight2:
-	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .LoadFight2
-.Fight1:
-	checkevent EVENT_BEAT_ERIKA
-	iftrue .LoadFight1
-.LoadFight0:
-	loadtrainer SCHOOLBOY, JACK1
-	startbattle
-	reloadmapafterbattle
-	loadvar wJackFightCount, 1
-	clearflag ENGINE_JACK
-	end
-
-.LoadFight1:
-	loadtrainer SCHOOLBOY, JACK2
-	startbattle
-	reloadmapafterbattle
-	loadvar wJackFightCount, 2
-	clearflag ENGINE_JACK
-	end
-
-.LoadFight2:
-	loadtrainer SCHOOLBOY, JACK3
-	startbattle
-	reloadmapafterbattle
-	loadvar wJackFightCount, 3
-	clearflag ENGINE_JACK
-	end
-
-.LoadFight3:
-	loadtrainer SCHOOLBOY, JACK4
-	startbattle
-	reloadmapafterbattle
-	loadvar wJackFightCount, 4
-	clearflag ENGINE_JACK
-	end
-
-.LoadFight4:
-	loadtrainer SCHOOLBOY, JACK5
-	startbattle
-	reloadmapafterbattle
-	clearflag ENGINE_JACK
-	end
-
-.AskNumber1:
-	jumpstd asknumber1m
-	end
-
-.AskNumber2:
-	jumpstd asknumber2m
-	end
-
-.RegisteredNumber:
-	jumpstd registerednumberm
-	end
-
-.NumberAccepted:
-	jumpstd numberacceptedm
-	end
-
-.NumberDeclined:
-	jumpstd numberdeclinedm
-	end
-
-.PhoneFull:
-	jumpstd phonefullm
-	end
-
-.RematchStd:
-	jumpstd rematchm
-	end
+	waitbutton
+	closetext
 
 TrainerPokefanmWilliam:
 	trainer POKEFANM, WILLIAM, EVENT_BEAT_POKEFANM_WILLIAM, PokefanmWilliamSeenText, PokefanmWilliamBeatenText, 0, .Script
@@ -198,83 +91,14 @@ TrainerPokefanmWilliam:
 	end
 
 TrainerPokefanfBeverly1:
-	trainer POKEFANF, BEVERLY1, EVENT_BEAT_POKEFANF_BEVERLY, PokefanfBeverly1SeenText, PokefanfBeverly1BeatenText, 0, .Script
+	trainer POKEFANF, BEVERLY, EVENT_BEAT_POKEFANF_BEVERLY, PokefanfBeverly1SeenText, PokefanfBeverly1BeatenText, 0, .Script
 
 .Script:
-	writecode VAR_CALLERID, PHONE_POKEFAN_BEVERLY
 	endifjustbattled
 	opentext
-	checkflag ENGINE_BEVERLY_HAS_NUGGET
-	iftrue .GiveNugget
-	checkcellnum PHONE_POKEFAN_BEVERLY
-	iftrue .NumberAccepted
-	checkpoke MARILL
-	iffalse .NoMarill
-	checkevent EVENT_BEVERLY_ASKED_FOR_PHONE_NUMBER
-	iftrue .AskAgain
 	writetext UnknownText_0x5c5bd
-	buttonsound
-	setevent EVENT_BEVERLY_ASKED_FOR_PHONE_NUMBER
-	scall .AskNumber1
-	jump .RequestNumber
-
-.AskAgain:
-	scall .AskNumber2
-.RequestNumber:
-	askforphonenumber PHONE_POKEFAN_BEVERLY
-	ifequal PHONE_CONTACTS_FULL, .PhoneFull
-	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
-	trainertotext POKEFANF, BEVERLY1, MEM_BUFFER_0
-	scall .RegisteredNumber
-	jump .NumberAccepted
-
-.GiveNugget:
-	scall .Gift
-	verbosegiveitem NUGGET
-	iffalse .NoRoom
-	clearflag ENGINE_BEVERLY_HAS_NUGGET
-	jump .NumberAccepted
-
-.NoRoom:
-	jump .PackFull
-
-.NoMarill:
-	writetext UnknownText_0x5c68a
 	waitbutton
 	closetext
-	end
-
-.AskNumber1:
-	jumpstd asknumber1f
-	end
-
-.AskNumber2:
-	jumpstd asknumber2f
-	end
-
-.RegisteredNumber:
-	jumpstd registerednumberf
-	end
-
-.NumberAccepted:
-	jumpstd numberacceptedf
-	end
-
-.NumberDeclined:
-	jumpstd numberdeclinedf
-	end
-
-.PhoneFull:
-	jumpstd phonefullf
-	end
-
-.Gift:
-	jumpstd giftf
-	end
-
-.PackFull:
-	jumpstd packfullf
-	end
 
 TrainerLassKrise:
 	trainer LASS, KRISE, EVENT_BEAT_LASS_KRISE, LassKriseSeenText, LassKriseBeatenText, 0, .Script

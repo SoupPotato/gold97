@@ -52,7 +52,7 @@ TrainerCamperRoland:
 	end
 
 TrainerFisherWilton1:
-	trainer FISHER, WILTON1, EVENT_BEAT_FISHER_WILTON, FisherWilton1SeenText, FisherWilton1BeatenText, 0, .Script
+	trainer FISHER, WILTON, EVENT_BEAT_FISHER_WILTON, FisherWilton1SeenText, FisherWilton1BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -63,7 +63,7 @@ TrainerFisherWilton1:
 	end
 
 TrainerPicnickerLiz1:
-	trainer PICNICKER, LIZ1, EVENT_BEAT_PICNICKER_LIZ, PicnickerLiz1SeenText, PicnickerLiz1BeatenText, 0, .Script
+	trainer PICNICKER, LIZ, EVENT_BEAT_PICNICKER_LIZ, PicnickerLiz1SeenText, PicnickerLiz1BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled

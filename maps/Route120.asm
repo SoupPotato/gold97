@@ -60,7 +60,7 @@ SceneFoundGirlScript:
 	end
 	
 TrainerYoungsterJoey:
-	trainer YOUNGSTER, JOEY1, EVENT_BEAT_YOUNGSTER_JOEY, YoungsterJoey1SeenText, YoungsterJoey1BeatenText, 0, .Script
+	trainer YOUNGSTER, JOEY, EVENT_BEAT_YOUNGSTER_JOEY, YoungsterJoey1SeenText, YoungsterJoey1BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -82,7 +82,7 @@ TrainerSchoolboyDudley:
 	end
 
 TrainerLassConnie:
-	trainer LASS, CONNIE1, EVENT_BEAT_LASS_CONNIE, LassConnie1SeenText, LassConnie1BeatenText, 0, .Script
+	trainer LASS, CONNIE, EVENT_BEAT_LASS_CONNIE, LassConnie1SeenText, LassConnie1BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -101,7 +101,7 @@ Route120GrampsScript:
 	end
 	
 TrainerFisherTully:
-	trainer FISHER, TULLY1, EVENT_BEAT_FISHER_TULLY, FisherTullySeenText, FisherTullyBeatenText, 0, .Script
+	trainer FISHER, TULLY, EVENT_BEAT_FISHER_TULLY, FisherTullySeenText, FisherTullyBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled

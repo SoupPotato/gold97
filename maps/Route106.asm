@@ -87,7 +87,7 @@ DayCareMon2Script:
 
 
 TrainerBugCatcherWade1:
-	trainer BUG_CATCHER, WADE1, EVENT_BEAT_BUG_CATCHER_WADE, BugCatcherWade1SeenText, BugCatcherWade1BeatenText, 0, .Script
+	trainer BUG_CATCHER, WADE, EVENT_BEAT_BUG_CATCHER_WADE, BugCatcherWade1SeenText, BugCatcherWade1BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -97,7 +97,7 @@ TrainerBugCatcherWade1:
 	end
 
 TrainerHikerAnthony:
-	trainer HIKER, ANTHONY1, EVENT_BEAT_HIKER_ANTHONY, HikerAnthony2SeenText, HikerAnthony2BeatenText, 0, .Script
+	trainer HIKER, ANTHONY, EVENT_BEAT_HIKER_ANTHONY, HikerAnthony2SeenText, HikerAnthony2BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled

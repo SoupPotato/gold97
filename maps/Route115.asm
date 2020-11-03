@@ -39,7 +39,7 @@ TrainerPsychicGilbert:
 	end
 
 TrainerBirdKeeperJose2:
-	trainer BIRD_KEEPER, JOSE1, EVENT_BEAT_BIRD_KEEPER_JOSE2, BirdKeeperJose2SeenText, BirdKeeperJose2BeatenText, 0, .Script
+	trainer BIRD_KEEPER, JOSE, EVENT_BEAT_BIRD_KEEPER_JOSE2, BirdKeeperJose2SeenText, BirdKeeperJose2BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -72,7 +72,7 @@ TrainerCooltrainermBrian:
 	end
 
 TrainerCooltrainerfReena:
-	trainer COOLTRAINERF, REENA1, EVENT_BEAT_COOLTRAINERF_REENA, CooltrainerfReenaSeenText, CooltrainerfReenaBeatenText, 0, .Script
+	trainer COOLTRAINERF, REENA, EVENT_BEAT_COOLTRAINERF_REENA, CooltrainerfReenaSeenText, CooltrainerfReenaBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled

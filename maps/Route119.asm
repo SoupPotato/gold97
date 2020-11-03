@@ -48,132 +48,15 @@ TrainerFisherJustin:
 
 
 TrainerFisherRalph1:
-	trainer FISHER, RALPH1, EVENT_BEAT_FISHER_RALPH, FisherRalph1SeenText, FisherRalph1BeatenText, 0, .Script
+	trainer FISHER, RALPH, EVENT_BEAT_FISHER_RALPH, FisherRalph1SeenText, FisherRalph1BeatenText, 0, .Script
 
 .Script:
-	writecode VAR_CALLERID, PHONE_FISHER_RALPH
 	endifjustbattled
 	opentext
-	checkflag ENGINE_RALPH
-	iftrue .Rematch
-	checkflag ENGINE_FISH_SWARM
-	iftrue .Swarm
-	checkcellnum PHONE_FISHER_RALPH
-	iftrue .NumberAccepted
-	checkevent EVENT_RALPH_ASKED_FOR_PHONE_NUMBER
-	iftrue .AskAgain
 	writetext FisherRalphAfterText
-	buttonsound
-	setevent EVENT_RALPH_ASKED_FOR_PHONE_NUMBER
-	scall .AskNumber1
-	jump .AskForNumber
-
-.AskAgain:
-	scall .AskNumber2
-.AskForNumber:
-	askforphonenumber PHONE_FISHER_RALPH
-	ifequal PHONE_CONTACTS_FULL, .PhoneFull
-	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
-	trainertotext FISHER, RALPH1, MEM_BUFFER_0
-	scall .RegisteredNumber
-	jump .NumberAccepted
-
-.Rematch:
-	scall .RematchStd
-	winlosstext FisherRalph1BeatenText, 0
-	copybytetovar wRalphFightCount
-	ifequal 4, .Fight4
-	ifequal 3, .Fight3
-	ifequal 2, .Fight2
-	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
-.Fight4:
-	checkevent EVENT_REPAIRED_SHIP_FUEL_LINE
-	iftrue .LoadFight4
-.Fight3:
-	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .LoadFight3
-.Fight2:
-	checkevent EVENT_BEAT_JASMINE
-	iftrue .LoadFight2
-.Fight1:
-	checkevent EVENT_BEAT_MORTY
-	iftrue .LoadFight1
-.LoadFight0:
-	loadtrainer FISHER, RALPH1
-	startbattle
-	reloadmapafterbattle
-	loadvar wRalphFightCount, 1
-	clearflag ENGINE_RALPH
-	end
-
-.LoadFight1:
-	loadtrainer FISHER, RALPH2
-	startbattle
-	reloadmapafterbattle
-	loadvar wRalphFightCount, 2
-	clearflag ENGINE_RALPH
-	end
-
-.LoadFight2:
-	loadtrainer FISHER, RALPH3
-	startbattle
-	reloadmapafterbattle
-	loadvar wRalphFightCount, 3
-	clearflag ENGINE_RALPH
-	end
-
-.LoadFight3:
-	loadtrainer FISHER, RALPH4
-	startbattle
-	reloadmapafterbattle
-	loadvar wRalphFightCount, 4
-	clearflag ENGINE_RALPH
-	end
-
-.LoadFight4:
-	loadtrainer FISHER, RALPH5
-	startbattle
-	reloadmapafterbattle
-	clearflag ENGINE_RALPH
-	end
-
-.Swarm:
-	writetext FisherRalphSwarmText
 	waitbutton
 	closetext
-	end
 
-.AskNumber1:
-	jumpstd asknumber1m
-	end
-
-.AskNumber2:
-	jumpstd asknumber2m
-	end
-
-.RegisteredNumber:
-	jumpstd registerednumberm
-	end
-
-.NumberAccepted:
-	jumpstd numberacceptedm
-	end
-
-.NumberDeclined:
-	jumpstd numberdeclinedm
-	end
-
-.PhoneFull:
-	jumpstd phonefullm
-	end
-
-.RematchStd:
-	jumpstd rematchm
-	end
-	
-	
-	
 Route119Rocket1Script:
 	opentext
 	writetext Route119Rocket1Text

@@ -108,142 +108,14 @@ Route102LassScript:
 
 
 TrainerSchoolboyAlan1:
-	trainer SCHOOLBOY, ALAN1, EVENT_BEAT_SCHOOLBOY_ALAN, SchoolboyAlan1SeenText, SchoolboyAlan1BeatenText, 0, .Script
+	trainer SCHOOLBOY, ALAN, EVENT_BEAT_SCHOOLBOY_ALAN, SchoolboyAlan1SeenText, SchoolboyAlan1BeatenText, 0, .Script
 
 .Script:
-	writecode VAR_CALLERID, PHONE_SCHOOLBOY_ALAN
 	endifjustbattled
 	opentext
-	checkflag ENGINE_ALAN
-	iftrue .ChooseRematch
-	checkflag ENGINE_ALAN_HAS_FIRE_STONE
-	iftrue .GiveFireStone
-	checkcellnum PHONE_SCHOOLBOY_ALAN
-	iftrue .NumberAccepted
-	checkevent EVENT_ALAN_ASKED_FOR_PHONE_NUMBER
-	iftrue .AskAgainForPhoneNumber
 	writetext UnknownText_0x1947aa
-	buttonsound
-	setevent EVENT_ALAN_ASKED_FOR_PHONE_NUMBER
-	scall .AskNumber1
-	jump .ContinueAskForPhoneNumber
-
-.AskAgainForPhoneNumber:
-	scall .AskNumber2
-.ContinueAskForPhoneNumber:
-	askforphonenumber PHONE_SCHOOLBOY_ALAN
-	ifequal PHONE_CONTACTS_FULL, .PhoneFull
-	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
-	trainertotext SCHOOLBOY, ALAN1, MEM_BUFFER_0
-	scall .RegisteredNumber
-	jump .NumberAccepted
-
-.ChooseRematch:
-	scall .Rematch
-	winlosstext SchoolboyAlan1BeatenText, 0
-	copybytetovar wAlanFightCount
-	ifequal 4, .Fight4
-	ifequal 3, .Fight3
-	ifequal 2, .Fight2
-	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
-.Fight4:
-	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .LoadFight4
-.Fight3:
-	checkevent EVENT_CLEARED_RADIO_TOWER
-	iftrue .LoadFight3
-.Fight2:
-	checkevent EVENT_BEAT_PRYCE
-	iftrue .LoadFight2
-.Fight1:
-	checkevent EVENT_BEAT_MORTY
-	iftrue .LoadFight1
-.LoadFight0:
-	loadtrainer SCHOOLBOY, ALAN1
-	startbattle
-	reloadmapafterbattle
-	loadvar wAlanFightCount, 1
-	clearflag ENGINE_ALAN
-	end
-
-.LoadFight1:
-	loadtrainer SCHOOLBOY, ALAN2
-	startbattle
-	reloadmapafterbattle
-	loadvar wAlanFightCount, 2
-	clearflag ENGINE_ALAN
-	end
-
-.LoadFight2:
-	loadtrainer SCHOOLBOY, ALAN3
-	startbattle
-	reloadmapafterbattle
-	loadvar wAlanFightCount, 3
-	clearflag ENGINE_ALAN
-	end
-
-.LoadFight3:
-	loadtrainer SCHOOLBOY, ALAN4
-	startbattle
-	reloadmapafterbattle
-	loadvar wAlanFightCount, 4
-	clearflag ENGINE_ALAN
-	end
-
-.LoadFight4:
-	loadtrainer SCHOOLBOY, ALAN5
-	startbattle
-	reloadmapafterbattle
-	clearflag ENGINE_ALAN
-	end
-
-.GiveFireStone:
-	scall .Gift
-	verbosegiveitem FIRE_STONE
-	iffalse .BagFull
-	clearflag ENGINE_ALAN_HAS_FIRE_STONE
-	setevent EVENT_ALAN_GAVE_FIRE_STONE
-	jump .NumberAccepted
-
-.BagFull:
-	jump .PackFull
-
-.AskNumber1:
-	jumpstd asknumber1m
-	end
-
-.AskNumber2:
-	jumpstd asknumber2m
-	end
-
-.RegisteredNumber:
-	jumpstd registerednumberm
-	end
-
-.NumberAccepted:
-	jumpstd numberacceptedm
-	end
-
-.NumberDeclined:
-	jumpstd numberdeclinedm
-	end
-
-.PhoneFull:
-	jumpstd phonefullm
-	end
-
-.Rematch:
-	jumpstd rematchm
-	end
-
-.Gift:
-	jumpstd giftm
-	end
-
-.PackFull:
-	jumpstd packfullm
-	end
+	waitbutton
+	closetext
 
 TrainerPsychicMark:
 	trainer PSYCHIC_T, MARK, EVENT_BEAT_PSYCHIC_MARK, PsychicMarkSeenText, PsychicMarkBeatenText, 0, .Script

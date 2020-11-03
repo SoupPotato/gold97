@@ -25,7 +25,7 @@ TrainerSailorHarry:
 	end
 
 TrainerSchoolboyChad1:
-	trainer SCHOOLBOY, CHAD1, EVENT_BEAT_SCHOOLBOY_CHAD, SchoolboyChad1SeenText, SchoolboyChad1BeatenText, 0, .Script
+	trainer SCHOOLBOY, CHAD, EVENT_BEAT_SCHOOLBOY_CHAD, SchoolboyChad1SeenText, SchoolboyChad1BeatenText, 0, .Script
 
 .Script
 	endifjustbattled
@@ -37,7 +37,7 @@ TrainerSchoolboyChad1:
 
 
 TrainerPokefanmDerek:
-	trainer POKEFANM, DEREK1, EVENT_BEAT_POKEFANM_DEREK, PokefanmDerekSeenText, PokefanmDerekBeatenText, 0, .Script
+	trainer POKEFANM, DEREK, EVENT_BEAT_POKEFANM_DEREK, PokefanmDerekSeenText, PokefanmDerekBeatenText, 0, .Script
 
 .Script
 	endifjustbattled

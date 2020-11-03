@@ -12,7 +12,7 @@ Route113_MapScripts:
 	db 0 ; callbacks
 
 TrainerCamperTodd1:
-	trainer CAMPER, TODD1, EVENT_BEAT_CAMPER_TODD, CamperTodd1SeenText, CamperTodd1BeatenText, 0, .Script
+	trainer CAMPER, TODD, EVENT_BEAT_CAMPER_TODD, CamperTodd1SeenText, CamperTodd1BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -34,142 +34,14 @@ SoldierGeraldScript:
 	end
 
 TrainerPicnickerGina1:
-	trainer PICNICKER, GINA1, EVENT_BEAT_PICNICKER_GINA, PicnickerGina1SeenText, PicnickerGina1BeatenText, 0, .Script
+	trainer PICNICKER, GINA, EVENT_BEAT_PICNICKER_GINA, PicnickerGina1SeenText, PicnickerGina1BeatenText, 0, .Script
 
 .Script:
-	writecode VAR_CALLERID, PHONE_PICNICKER_GINA
 	endifjustbattled
 	opentext
-	checkflag ENGINE_GINA
-	iftrue .Rematch
-	checkflag ENGINE_GINA_HAS_LEAF_STONE
-	iftrue .LeafStone
-	checkcellnum PHONE_PICNICKER_GINA
-	iftrue .NumberAccepted
-	checkevent EVENT_GINA_ASKED_FOR_PHONE_NUMBER
-	iftrue .AskAgain
 	writetext PicnickerGina1AfterText
-	buttonsound
-	setevent EVENT_GINA_ASKED_FOR_PHONE_NUMBER
-	scall .AskNumber1
-	jump .FinishAsk
-
-.AskAgain:
-	scall .AskNumber2
-.FinishAsk:
-	askforphonenumber PHONE_PICNICKER_GINA
-	ifequal PHONE_CONTACTS_FULL, .PhoneFull
-	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
-	trainertotext PICNICKER, GINA1, MEM_BUFFER_0
-	scall .RegisteredNumber
-	jump .NumberAccepted
-
-.Rematch:
-	scall .RematchStd
-	winlosstext PicnickerGina1BeatenText, 0
-	copybytetovar wGinaFightCount
-	ifequal 4, .Fight4
-	ifequal 3, .Fight3
-	ifequal 2, .Fight2
-	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
-.Fight4:
-	checkevent EVENT_EXPLODING_TRAP_16
-	iftrue .LoadFight4
-.Fight3:
-	checkevent EVENT_REPAIRED_SHIP_FUEL_LINE
-	iftrue .LoadFight3
-.Fight2:
-	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .LoadFight2
-.Fight1:
-	checkflag EVENT_BEAT_ERIKA
-	iftrue .LoadFight1
-.LoadFight0:
-	loadtrainer PICNICKER, GINA1
-	startbattle
-	reloadmapafterbattle
-	loadvar wGinaFightCount, 1
-	clearflag ENGINE_GINA
-	end
-
-.LoadFight1:
-	loadtrainer PICNICKER, GINA2
-	startbattle
-	reloadmapafterbattle
-	loadvar wGinaFightCount, 2
-	clearflag ENGINE_GINA
-	end
-
-.LoadFight2:
-	loadtrainer PICNICKER, GINA3
-	startbattle
-	reloadmapafterbattle
-	loadvar wGinaFightCount, 3
-	clearflag ENGINE_GINA
-	end
-
-.LoadFight3:
-	loadtrainer PICNICKER, GINA4
-	startbattle
-	reloadmapafterbattle
-	loadvar wGinaFightCount, 4
-	clearflag ENGINE_GINA
-	end
-
-.LoadFight4:
-	loadtrainer PICNICKER, GINA5
-	startbattle
-	reloadmapafterbattle
-	clearflag ENGINE_GINA
-	end
-
-.LeafStone:
-	scall .Gift
-	verbosegiveitem LEAF_STONE
-	iffalse .BagFull
-	clearflag ENGINE_GINA_HAS_LEAF_STONE
-	setevent EVENT_GINA_GAVE_LEAF_STONE
-	jump .NumberAccepted
-
-.BagFull:
-	jump .PackFull
-
-.AskNumber1:
-	jumpstd asknumber1f
-	end
-
-.AskNumber2:
-	jumpstd asknumber2f
-	end
-
-.RegisteredNumber:
-	jumpstd registerednumberf
-	end
-
-.NumberAccepted:
-	jumpstd numberacceptedf
-	end
-
-.NumberDeclined:
-	jumpstd numberdeclinedf
-	end
-
-.PhoneFull:
-	jumpstd phonefullf
-	end
-
-.RematchStd:
-	jumpstd rematchf
-	end
-
-.Gift:
-	jumpstd giftf
-	end
-
-.PackFull:
-	jumpstd packfullf
-	end
+	waitbutton
+	closetext
 
 OfficerKeithScript:
 	faceplayer
