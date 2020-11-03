@@ -2899,7 +2899,7 @@ CorasunEvosAttacks:
 	db 10, RAGE
 	db 15, SUPERSONIC
 	db 19, BUBBLEBEAM
-	db 24, CHARM
+	db 24, SCREECH
 	db 28, SLAM
 	db 33, ACID_ARMOR
 	db 37, CONFUSE_RAY
@@ -2917,7 +2917,7 @@ AnchorageEvosAttacks:
 	db 10, RAGE
 	db 15, SUPERSONIC
 	db 19, BUBBLEBEAM
-	db 24, CHARM
+	db 24, SCREECH
 	db 28, IRON_TAIL
 	db 34, ACID_ARMOR
 	db 39, SCARY_FACE
@@ -2934,7 +2934,7 @@ GrotessEvosAttacks:
 	db 10, RAGE
 	db 15, SUPERSONIC
 	db 19, BUBBLEBEAM
-	db 24, CHARM
+	db 24, SCREECH
 	db 28, IRON_TAIL
 	db 34, ACID_ARMOR
 	db 39, SCARY_FACE
