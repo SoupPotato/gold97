@@ -19,6 +19,7 @@
 	const ENDON_CAVE        ; 1c
 	const SANSKRIT_TOWN     ; 24
 	const RUINS_OF_ALPH     ; 09
+	const TIDAL_GROTTO      ; 09
 	const ROUTE_118         ; 36
 	const SUNPOINT_CITY     ; 21
 	const MAGMA_SHAFT       ; 18

@@ -914,3 +914,9 @@ CastleMountain3FB_Blocks:
 	
 CastleMountainB1F_Blocks:
 	INCBIN "maps/CastleMountainB1F.blk"
+	
+TidalGrottoB1F_Blocks:
+	INCBIN "maps/TidalGrottoB1F.blk"
+
+TidalGrotto1F_Blocks:
+	INCBIN "maps/TidalGrotto1F.blk"

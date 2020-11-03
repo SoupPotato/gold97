@@ -23,6 +23,7 @@ Landmarks:
 	landmark  52,  60, EndonCaveName
 	landmark  44,  60, SanskritTownName
 	landmark  44,  52, RuinsOfAlphName
+	landmark  50,  48, TidalGrottoName
 	landmark  32,  60, Route118Name
 	landmark  20,  60, SunpointCityName
 	landmark  19,  59, MagmaShaftName
@@ -104,6 +105,7 @@ SanskritTownName:     db "SANSKRIT¯TOWN@"
 BlueForestName:       db "BLUE FOREST@"
 BrassTowerName:       db "BRASS TOWER@"
 RuinsOfAlphName:      db "RUINS OF¯ALPH@"
+TidalGrottoName:      db "TIDAL¯GROTTO@"
 BoulderMinesName:     db "BOULDER¯MINES@"
 SlowpokeWellName:     db "SLOWPOKE¯WELL@"
 RadioTowerName:       db "RADIO TOWER@"
@@ -116,7 +118,7 @@ DeepwaterPassageName: db "DEEPWATER¯PASSAGE@"
 TropicalIslandName:   db "TROPICAL¯ISLAND@"
 KobanIslandName:      db "KOBAN¯ISLAND@"
 CrownPassName:        db "CROWN¯PASS@"
-KumeCityName:        db "KUME CITY@"
+KumeCityName:         db "KUME CITY@"
 NagoVillageName:      db "NAGO¯VILLAGE@"
 AmamiCityName:        db "AMAMI TOWN@"
 KantoRegionName:      db "KANTO¯REGION@"
@@ -141,7 +143,7 @@ Route121Name:         db "ROUTE 121@"
 KeramaStraitName:     db "KERAMA¯STRAIT@"
 IsenStraitName:       db "ISEN STRAIT@"
 Route107Name:         db "ROUTE 107@"
-KumePointName:       db "KUME POINT@"
+KumePointName:        db "KUME POINT@"
 MeridianPathName:     db "MERIDIAN¯PATH@"
 Route115Name:         db "ROUTE 115@"
 Route101Name:         db "ROUTE 101@"

@@ -118,6 +118,8 @@ ENDM
 	map_const VICTORY_ROAD,                                20, 27 ; 48
 	map_const VICTORY_ROAD_2F,                             20, 27 ; 49
 	map_const SILENT_HILLS,                                25, 18 ; 50
+	map_const TIDAL_GROTTO_B1F,                            20, 18 ; 51
+	map_const TIDAL_GROTTO_1F,                             15, 18 ; 52
 
 	newgroup                                                      ;  4
 

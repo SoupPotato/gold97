@@ -114,6 +114,45 @@ MahoganyGymSignText:
 	line "RUINS RESEARCH"
 	cont "CENTER"
 	done
+	
+SanskritWaterfall:
+	opentext
+	writetext ItsAWaterfallText
+	buttonsound
+	checkevent EVENT_GOT_HM07_WATERFALL
+	iffalse .no
+	writetext AttemptToClimbText
+	yesorno
+	iffalse .no
+	closetext
+	playsound SFX_BUBBLEBEAM
+	applymovement PLAYER, CimbWaterfallMove
+	playsound SFX_ENTER_DOOR
+	special FadeOutPalettes
+	warpfacing UP, TIDAL_GROTTO_1F, 2, 5
+	end
+.no
+	closetext
+	end
+	
+CimbWaterfallMove:
+	turn_waterfall UP
+	turn_waterfall UP
+	turn_waterfall UP	
+	step_end
+	
+ItsAWaterfallText:
+	text "It's a mysterious"
+	line "waterfall..."
+	done
+	
+AttemptToClimbText:
+	text "A strange power is"
+	line "emanating from it."
+	
+	para "Will you try to"
+	line "climb it?"
+	done
 
 SanskritTown_MapEvents:
 	db 0, 0 ; filler
@@ -127,11 +166,12 @@ SanskritTown_MapEvents:
 
 	db 0 ; coord events
 
-	db 4 ; bg events
+	db 5 ; bg events
 	bg_event  6, 12, BGEVENT_READ, SanskritTownSign
 	bg_event 16,  4, BGEVENT_READ, SanskritTownRagecandybarSign
 	bg_event 14, 12, BGEVENT_READ, MahoganyGymSign
 	bg_event  4, 12, BGEVENT_READ, SanskritTownPokecenterSign
+	bg_event 10,  8, BGEVENT_READ, SanskritWaterfall
 
 	db 4 ; object events
 	object_event  2,  4, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HontoTownCooltrainermScript, -1
