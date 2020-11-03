@@ -274,15 +274,12 @@ KRIS EQU __enum__
 	const ANDREW
 	const CALVIN
 	const SHANE
-	const BRENT1
+	const BRENT
 	const RON
 	const ETHAN
-	const BRENT2
-	const BRENT3
 	const ISAAC
 	const DONALD
 	const ZACH
-	const BRENT4
 	const MILLER
 
 	trainerclass GRUNTM ; 1f

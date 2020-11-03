@@ -35,5 +35,4 @@ PhoneContacts:
 	phone TRAINER_NONE, PHONE_00,           N_A,              0,       UnusedPhoneScript,   0,       UnusedPhoneScript
 	phone LASS,         DANA1,              ROUTE_108,        ANYTIME, DanaPhoneScript1,    ANYTIME, DanaPhoneScript2
 	phone POKEFANM,     DEREK1,             ROUTE_109,        ANYTIME, DerekPhoneScript1,   ANYTIME, DerekPhoneScript2
-	phone POKEMANIAC,   BRENT1,             BOARDWALK,        ANYTIME, BrentPhoneScript1,   ANYTIME, BrentPhoneScript2
 	phone TRAINER_NONE, PHONECONTACT_BUENA, WESTPORT_DEPT_STORE_ROOF, ANYTIME, BuenaPhoneScript1, ANYTIME, BuenaPhoneScript2

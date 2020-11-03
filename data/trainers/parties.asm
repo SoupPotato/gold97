@@ -1351,20 +1351,6 @@ PokemaniacGroup:
 	db 36, RHYDON
 	db -1 ; end
 
-	; POKEMANIAC (9)
-	db "BRENT@", TRAINERTYPE_NORMAL
-	db 21, LICKITUNG
-	db 20, SLOWBRO
-	db 22, TURBAN
-	db -1 ; end	db -1 ; end
-
-	; POKEMANIAC (10)
-	db "BRENT@", TRAINERTYPE_MOVES
-	db 28, LICKITUNG
-	db 27, SLOWBRO
-	db 27, TURBAN
-	db -1 ; end
-
 	; POKEMANIAC (11)
 	db "ISAAC@", TRAINERTYPE_MOVES ; used, goldenrod underground
 	db 15, LICKITUNG,  LICK, SUPERSONIC, CUT, NO_MOVE
@@ -1380,13 +1366,6 @@ PokemaniacGroup:
 	db "ZACH@", TRAINERTYPE_NORMAL ;unused
 	db 27, RHYHORN
 	db -1 ; end
-
-	; POKEMANIAC (14)
-	db "BRENT@", TRAINERTYPE_NORMAL
-	db 34, LICKITUNG
-	db 33, SLOWBRO
-	db 34, TURBAN
-	db -1 ; end	db -1 ; end
 
 	; POKEMANIAC (15)
 	db "MILLER@", TRAINERTYPE_NORMAL; used, mount mortar
