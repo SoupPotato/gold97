@@ -240,6 +240,10 @@ TilesetDarkCaveAnim:
 	dw WhirlpoolFrames2, AnimateWhirlpoolTile
 	dw WhirlpoolFrames3, AnimateWhirlpoolTile
 	dw WhirlpoolFrames4, AnimateWhirlpoolTile
+	dw vTiles2 tile $46, AnimateCurrentDownTile
+	dw vTiles2 tile $47, AnimateCurrentRightTile
+	dw vTiles2 tile $48, AnimateCurrentUpTile
+	dw vTiles2 tile $49, AnimateCurrentLeftTile
 	dw NULL,  DoneTileAnimation
 
 TilesetIcePathAnim:
@@ -526,6 +530,146 @@ AnimateWaterTile:
 
 WaterTileFrames:
 	INCBIN "gfx/tilesets/water/water.2bpp"
+	
+AnimateCurrentRightTile:
+; Draw a water tile for the current frame in VRAM tile at de.
+
+; Save sp in bc (see WriteTile).
+	ld hl, sp+0
+	ld b, h
+	ld c, l
+
+	ld a, [wTileAnimationTimer]
+
+; 4 tile graphics, updated every other frame.
+	and %110
+
+; 2 x 8 = 16 bytes per tile
+	add a
+	add a
+	add a
+
+	add LOW(CurrentRightTileFrames)
+	ld l, a
+	ld a, 0
+	adc HIGH(CurrentRightTileFrames)
+	ld h, a
+
+; The stack now points to the start of the tile for this frame.
+	ld sp, hl
+
+	ld l, e
+	ld h, d
+
+	jp WriteTile
+
+CurrentRightTileFrames:
+	INCBIN "gfx/tilesets/water-currents/right.2bpp"
+	
+AnimateCurrentUpTile:
+; Draw a water tile for the current frame in VRAM tile at de.
+
+; Save sp in bc (see WriteTile).
+	ld hl, sp+0
+	ld b, h
+	ld c, l
+
+	ld a, [wTileAnimationTimer]
+
+; 4 tile graphics, updated every other frame.
+	and %110
+
+; 2 x 8 = 16 bytes per tile
+	add a
+	add a
+	add a
+
+	add LOW(CurrentUpTileFrames)
+	ld l, a
+	ld a, 0
+	adc HIGH(CurrentUpTileFrames)
+	ld h, a
+
+; The stack now points to the start of the tile for this frame.
+	ld sp, hl
+
+	ld l, e
+	ld h, d
+
+	jp WriteTile
+
+CurrentUpTileFrames:
+	INCBIN "gfx/tilesets/water-currents/up.2bpp"
+	
+AnimateCurrentLeftTile:
+; Draw a water tile for the current frame in VRAM tile at de.
+
+; Save sp in bc (see WriteTile).
+	ld hl, sp+0
+	ld b, h
+	ld c, l
+
+	ld a, [wTileAnimationTimer]
+
+; 4 tile graphics, updated every other frame.
+	and %110
+
+; 2 x 8 = 16 bytes per tile
+	add a
+	add a
+	add a
+
+	add LOW(CurrentLeftTileFrames)
+	ld l, a
+	ld a, 0
+	adc HIGH(CurrentLeftTileFrames)
+	ld h, a
+
+; The stack now points to the start of the tile for this frame.
+	ld sp, hl
+
+	ld l, e
+	ld h, d
+
+	jp WriteTile
+
+CurrentLeftTileFrames:
+	INCBIN "gfx/tilesets/water-currents/left.2bpp"
+	
+AnimateCurrentDownTile:
+; Draw a water tile for the current frame in VRAM tile at de.
+
+; Save sp in bc (see WriteTile).
+	ld hl, sp+0
+	ld b, h
+	ld c, l
+
+	ld a, [wTileAnimationTimer]
+
+; 4 tile graphics, updated every other frame.
+	and %110
+
+; 2 x 8 = 16 bytes per tile
+	add a
+	add a
+	add a
+
+	add LOW(CurrentDownTileFrames)
+	ld l, a
+	ld a, 0
+	adc HIGH(CurrentDownTileFrames)
+	ld h, a
+
+; The stack now points to the start of the tile for this frame.
+	ld sp, hl
+
+	ld l, e
+	ld h, d
+
+	jp WriteTile
+
+CurrentDownTileFrames:
+	INCBIN "gfx/tilesets/water-currents/down.2bpp"
 
 ForestTreeLeftAnimation:
 	ld hl, sp+0
