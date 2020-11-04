@@ -130,6 +130,7 @@ CreditsStrings:
 	dw .Pik
 	dw .ActuallyTC
 	dw .Scarlax
+	dw .Zumi
 
 .SatoshiTajiri:       db "   SATOSHI TAJIRI@"         ; "たじり　さとし@"
 .JunichiMasuda:       db "   JUNICHI MASUDA@"         ; "ますだ　じゅんいち@"
@@ -264,6 +265,7 @@ CreditsStrings:
 .Pik:                 db "        PIK@"
 .ActuallyTC:          db "         TC@"
 .Scarlax:             db "      SCARLAX@"
+.Zubi:                db "        ZUMI@"
 
 .Copyright:
 	;    (C) 1  9  9  5 - 2  0  0  1     N  i  n  t  e  n  d  o

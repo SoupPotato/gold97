@@ -37,15 +37,16 @@ CreditsScript:
 	db       HISASHI_SOGABE, 2
 	db         KEITA_KAGAYA, 3
 	db    YOSHINORI_MATSUDA, 4
+	db     SHIGEKI_MORIMOTO, 5
 
 	db CREDITS_WAIT, 12
 
 	db          PROGRAMMERS, 0
-	db     SHIGEKI_MORIMOTO, 1
-	db     TETSUYA_WATANABE, 2
-	db        TAKENORI_OOTA, 3
-	db                PFERO, 4
-	db           SOUR_APPLE, 5
+	db     TETSUYA_WATANABE, 1
+	db        TAKENORI_OOTA, 2
+	db                PFERO, 3
+	db           SOUR_APPLE, 4
+	db                 ZUMI, 5
 
 	db CREDITS_WAIT, 12
 
