@@ -221,9 +221,6 @@ SECTION "Tileset Data 6", ROMX
 TilesetForestGFX:
 INCBIN "gfx/tilesets/forest.2bpp.lz"
 
-TilesetChampionsRoomGFX:
-INCBIN "gfx/tilesets/champions_room.2bpp.lz"
-
 TilesetChampionsRoomMeta:
 INCBIN "data/tilesets/champions_room_metatiles.bin"
 
@@ -370,4 +367,7 @@ INCLUDE "data/tilesets/tropical_collision.asm"
 
 TilesetTropicalMeta:
 INCBIN "data/tilesets/tropical_metatiles.bin"
+
+TilesetChampionsRoomGFX:
+INCBIN "gfx/tilesets/champions_room.2bpp.lz"
 
