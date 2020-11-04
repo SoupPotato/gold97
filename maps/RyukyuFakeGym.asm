@@ -147,7 +147,7 @@ RyukyuFakeGymPokefanMScript:
 	iftrue .TrevorFire
 	checkevent EVENT_GOT_CRUIZE_FROM_ELM
 	iftrue .TrevorGrass
-	checkevent EVENT_GOT_CRUIZE_FROM_ELM
+	checkevent EVENT_GOT_FLAMBEAR_FROM_ELM
 	iftrue .TrevorWater
 	
 .TrevorFire	
