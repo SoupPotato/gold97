@@ -53,5 +53,5 @@ KikaiCaldera2F_MapEvents:
 	db 0 ; bg events
 
 	db 2 ; object events
-	object_event  2,  9, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerBBOkuma, -1
+	object_event  0,  9, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerBBOkuma, -1
 	object_event  0, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, KKC2Itemball, EVENT_KKC2_ITEMBALL
