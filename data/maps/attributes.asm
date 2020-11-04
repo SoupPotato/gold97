@@ -633,5 +633,5 @@ ENDM
 	map_attributes CastleMountain3FB, CASTLE_MOUNTAIN_3FB, $00, 0
 	map_attributes CastleMountainB1F, CASTLE_MOUNTAIN_B1F, $09, 0
 	map_attributes SkateboarderHouse, SKATEBOARDER_HOUSE, $00, 0
-	map_attributes TidalGrottoB1F, TIDAL_GROTTO_B1F, $1D, 0
+	map_attributes TidalGrottoB1F, TIDAL_GROTTO_B1F, $09, 0
 	map_attributes TidalGrotto1F, TIDAL_GROTTO_1F, $09, 0

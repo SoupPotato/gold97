@@ -113,6 +113,20 @@ LoadSpecialMapPalette:
 	jp z, .LavaOverRedCoalOverBrownBGPalette
 .not_charred_summit_cave
 	ld a, [wMapGroup]
+	cp GROUP_TIDAL_GROTTO_1F
+	jp nz, .not_tidal_grotto_1f
+	ld a, [wMapNumber]
+	cp MAP_TIDAL_GROTTO_1F
+	jp z, .TidalGrottoBGPalette
+.not_tidal_grotto_1f
+	ld a, [wMapGroup]
+	cp GROUP_TIDAL_GROTTO_B1F
+	jp nz, .not_tidal_grotto_b1f
+	ld a, [wMapNumber]
+	cp MAP_TIDAL_GROTTO_B1F
+	jp z, .TidalGrottoBGPalette
+.not_tidal_grotto_b1f
+	ld a, [wMapGroup]
 	cp GROUP_RAINBOW_ISLAND
 	jp nz, .do_nothing
 	ld a, [wMapNumber]
@@ -244,6 +258,15 @@ LoadSpecialMapPalette:
 
 .TealOverBrownBGPalette
 	ld hl, TealOverBrown
+	ld bc, 8 palettes
+	ld de, wBGPals1
+	ld a, BANK(wBGPals1)
+	call FarCopyWRAM
+	scf
+	ret
+	
+.TidalGrottoBGPalette
+	ld hl, TidalGrottoSapphire
 	ld bc, 8 palettes
 	ld de, wBGPals1
 	ld a, BANK(wBGPals1)
