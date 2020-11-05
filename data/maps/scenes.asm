@@ -87,5 +87,7 @@ MapScenes::
 	scene_var CASTLE_MOUNTAIN_1F_DANCE_HALL,               wCastleMountainDanceHallSceneID
 	scene_var CASTLE_MOUNTAIN_3FB,                         wCastleMountain3FBSceneID
 	scene_var CASTLE_MOUNTAIN_B1F,                         wCastleMountainB1FSceneID
-	scene_var PLAYERS_HOUSE_2F,								wPlayersHouse2FSceneID
+	scene_var PLAYERS_HOUSE_2F,							   wPlayersHouse2FSceneID
+	scene_var TIDAL_GROTTO_1F,                             wTidalGrotto1FSceneID
+	scene_var TIDAL_GROTTO_B1F,                            wTidalGrottoB1FSceneID
 	db -1

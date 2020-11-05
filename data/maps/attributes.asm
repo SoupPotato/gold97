@@ -368,7 +368,6 @@ ENDM
 	map_attributes MagmaShaft1F, MAGMA_SHAFT_1F, $59, 0
 	map_attributes DeepwaterPassageB1F, DEEPWATER_PASSAGE_B1F, $09, 0
 	map_attributes DeepwaterPassageB3F, DEEPWATER_PASSAGE_B3F, $09, 0
-	map_attributes WhirlIslandB2FCave, WHIRL_ISLAND_B2F_CAVE, $09, 0
 	map_attributes WhirlIsland1F, WHIRL_ISLAND_1F, $09, 0
 	map_attributes WhirlIslandB1F, WHIRL_ISLAND_B1F, $09, 0
 	map_attributes WhirlIslandB2F, WHIRL_ISLAND_B2F, $09, 0

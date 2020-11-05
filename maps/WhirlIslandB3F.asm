@@ -115,7 +115,7 @@ WhirlIslandB3F_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event 11,  5, WHIRL_ISLAND_B2F, 4
+	warp_event 11,  5, WHIRL_ISLAND_B2F, 3
 	warp_event  7, 25, WHIRL_ISLAND_LUGIA_CHAMBER, 1
 
 	db 2 ; coord events

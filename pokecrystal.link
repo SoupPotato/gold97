@@ -123,7 +123,7 @@ ROMX $2c
 ROMX $2d
 	"Tileset Data 5"
 ROMX $2e
-	"bank2E"
+	"Phone Text 2"
 ROMX $2f
 	"bank2F"
 ROMX $30
@@ -269,7 +269,6 @@ ROMX $6a
 ROMX $6b
 	"Map Scripts 24"
 ROMX $6c
-	"Phone Text 2"
 	"Map Scripts 25"
 ROMX $6d
 	"Special Phone Text"

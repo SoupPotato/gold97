@@ -24,6 +24,50 @@ SuicuneEvent:
 SuicuneText:
 	text "Groroa!"
 	done
+	
+WhirlWarpToSanskrit:
+	playsound SFX_BUBBLEBEAM
+	turnobject PLAYER, LEFT
+	pause 3
+	turnobject PLAYER, UP
+	pause 3
+	turnobject PLAYER, RIGHT
+	pause 3
+	turnobject PLAYER, DOWN
+	pause 3
+	turnobject PLAYER, LEFT
+	pause 3
+	turnobject PLAYER, UP
+	pause 3
+	turnobject PLAYER, RIGHT
+	pause 3
+	turnobject PLAYER, DOWN
+	pause 3
+	special FadeOutPalettes
+	warpfacing DOWN, SANSKRIT_TOWN, 11, 9
+	end
+	
+WhirlWarpToSanskrit2:
+	playsound SFX_BUBBLEBEAM
+	turnobject PLAYER, LEFT
+	pause 3
+	turnobject PLAYER, UP
+	pause 3
+	turnobject PLAYER, RIGHT
+	pause 3
+	turnobject PLAYER, DOWN
+	pause 3
+	turnobject PLAYER, LEFT
+	pause 3
+	turnobject PLAYER, UP
+	pause 3
+	turnobject PLAYER, RIGHT
+	pause 3
+	turnobject PLAYER, DOWN
+	pause 3
+	special FadeOutPalettes
+	warpfacing DOWN, SANSKRIT_TOWN, 11, 9
+	end
 
 TidalGrotto1F_MapEvents:
 	db 0, 0 ; filler
@@ -32,7 +76,9 @@ TidalGrotto1F_MapEvents:
 	warp_event  3,  2, TIDAL_GROTTO_B1F, 1
 	warp_event 18, 33, TIDAL_GROTTO_B1F, 2
 
-	db 0 ; coord events
+	db 2 ; coord events
+	coord_event  3,  5, 0, WhirlWarpToSanskrit
+	coord_event 18, 22, 0, WhirlWarpToSanskrit2
 
 	db 0 ; bg events
 

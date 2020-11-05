@@ -172,6 +172,18 @@ CheckIceTile::
 	ret z
 	scf
 	ret
+	
+CheckWaterCurrentTile::
+	cp COLL_CURRENT_UP
+	ret z
+	cp COLL_CURRENT_DOWN
+	ret z
+	cp COLL_CURRENT_LEFT
+	ret z
+	cp COLL_CURRENT_RIGHT
+	ret z
+	scf
+	ret
 
 CheckWhirlpoolTile::
 	nop

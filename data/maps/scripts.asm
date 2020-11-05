@@ -279,7 +279,6 @@ INCLUDE "maps/SunPointDocksSunPointGate.asm"
 SECTION "Map Scripts 16", ROMX
 
 INCLUDE "maps/KumeCity.asm"
-INCLUDE "maps/WhirlIslandB2FCave.asm"
 INCLUDE "maps/WhirlIsland1F.asm"
 INCLUDE "maps/WhirlIslandB1F.asm"
 INCLUDE "maps/WhirlIslandB2F.asm"

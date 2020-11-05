@@ -453,9 +453,6 @@ WhirlIslandB1F_Blocks:
 WhirlIslandB2F_Blocks:
 	INCBIN "maps/WhirlIslandB2F.blk"
 	
-WhirlIslandB2FCave_Blocks:
-	INCBIN "maps/WhirlIslandB2FCave.blk"
-	
 WhirlIslandB3F_Blocks:
 	INCBIN "maps/WhirlIslandB3F.blk"
 

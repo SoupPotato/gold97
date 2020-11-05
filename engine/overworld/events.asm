@@ -1123,11 +1123,12 @@ TryTileCollisionEvent::
 
 RandomEncounter::
 ; Random encounter
-
 	call CheckWildEncounterCooldown
 	jr c, .nope
 	call CanUseSweetScent
 	jr nc, .nope
+	call CheckWaterCurrentTile
+	jr z, .nope
 	ld hl, wStatusFlags2
 	bit STATUSFLAGS2_BUG_CONTEST_TIMER_F, [hl]
 	jr nz, .bug_contest
