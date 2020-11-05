@@ -289,5 +289,17 @@ JohtoWaterWildMons:
 	db 38, SEAKING
 	db 38, GOLDUCK
 	db 35, DRATINI
+	
+	map_id TIDAL_GROTTO_1F
+	db 4 percent ; encounter rate
+	db 38, GOLDUCK
+	db 38, ANCHORAGE
+	db 35, DRATINI
+	
+	map_id TIDAL_GROTTO_B1F
+	db 4 percent ; encounter rate
+	db 38, GOLDUCK
+	db 38, ANCHORAGE
+	db 35, DRAGONAIR
 
 	db -1 ; end

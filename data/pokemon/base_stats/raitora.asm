@@ -1,6 +1,6 @@
 	db RAITORA ; 171
 
-	db 115,  85,  80,  60, 85,  90
+	db 115,  85,  65,  70, 85,  80
 	;   hp  atk  def  spd  sat  sdf
 
 	db ELECTRIC, ELECTRIC ; type

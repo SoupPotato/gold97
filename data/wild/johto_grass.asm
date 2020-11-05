@@ -2000,5 +2000,59 @@ JohtoGrassWildMons:
 	db 46, RHYDON
 	db 45, KANGASKHAN
 	db 46, KANGASKHAN
+	
+	map_id TIDAL_GROTTO_1F
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	; morn
+	db 37, GOLBAT
+	db 38, POLIWHIRL
+	db 37, TURBAN
+	db 39, POLIWHIRL
+	db 40, GOLDUCK
+	db 40, SLOWBRO
+	db 40, SLOWBRO
+	; day
+	db 37, GOLBAT
+	db 38, POLIWHIRL
+	db 37, TURBAN
+	db 39, POLIWHIRL
+	db 40, GOLDUCK
+	db 40, SLOWBRO
+	db 40, SLOWBRO
+	; nite
+	db 37, GOLBAT
+	db 38, POLIWHIRL
+	db 37, TURBAN
+	db 39, POLIWHIRL
+	db 40, GOLDUCK
+	db 40, SLOWBRO
+	db 40, SLOWBRO
+	
+	map_id TIDAL_GROTTO_B1F
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	; morn
+	db 37, GOLBAT
+	db 38, POLIWHIRL
+	db 37, TURBAN
+	db 39, POLIWHIRL
+	db 40, GOLDUCK
+	db 40, SLOWBRO
+	db 40, SLOWBRO
+	; day
+	db 37, GOLBAT
+	db 38, POLIWHIRL
+	db 37, TURBAN
+	db 39, POLIWHIRL
+	db 40, GOLDUCK
+	db 40, SLOWBRO
+	db 40, SLOWBRO
+	; nite
+	db 37, GOLBAT
+	db 38, POLIWHIRL
+	db 37, TURBAN
+	db 39, POLIWHIRL
+	db 40, GOLDUCK
+	db 40, SLOWBRO
+	db 40, SLOWBRO
 
 	db -1 ; end
