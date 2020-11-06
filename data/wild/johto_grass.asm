@@ -727,52 +727,52 @@ JohtoGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	IF DEF(_GOLD)
 	; morn
-	db 20, RATTATA
-	db 21, RATTATA
-	db 21, PIDGEY
-	db 21, PIDGEY
+	db 20, NATU
+	db 21, NATU
+	db 21, NATU
+	db 21, SMEARGLE
 	db 20, SMEARGLE
 	db 22, PHANPY
 	db 22, PHANPY
 	; day
-	db 20, RATTATA
-	db 21, RATTATA
-	db 21, PIDGEY
-	db 21, PIDGEY
+	db 20, NATU
+	db 21, NATU
+	db 21, NATU
+	db 21, SMEARGLE
 	db 20, SMEARGLE
-	db 22, PIDGEY
-	db 22, PIDGEY
+	db 22, PHANPY
+	db 22, PHANPY
 	; nite
-	db 20, RATTATA
-	db 21, RATTATA
+	db 20, HOOTHOOT
 	db 21, RINRING
 	db 21, RINRING
+	db 21, SMEARGLE
 	db 20, SMEARGLE
 	db 22, HOOTHOOT
 	db 22, NOCTOWL
 	
 	ELIF DEF(_SILVER)
 	; morn
-	db 20, RATTATA
-	db 21, RATTATA
+	db 20, NATU
+	db 21, NATU
+	db 21, NATU
 	db 21, PHANPY
-	db 21, PHANPY
-	db 20, SMEARGLE
-	db 22, PIDGEY
-	db 22, PIDGEY
+	db 20, PHANPY
+	db 22, SMEARGLE
+	db 22, SMEARGLE
 	; day
-	db 20, RATTATA
-	db 21, RATTATA
-	db 21, PIDGEY
-	db 21, PIDGEY
-	db 20, SMEARGLE
-	db 22, PIDGEY
-	db 22, PIDGEY
+	db 20, NATU
+	db 21, NATU
+	db 21, NATU
+	db 21, PHANPY
+	db 20, PHANPY
+	db 22, SMEARGLE
+	db 22, SMEARGLE
 	; nite
-	db 20, RATTATA
-	db 21, RATTATA
+	db 20, HOOTHOOT
 	db 21, HOOTHOOT
 	db 21, NOCTOWL
+	db 21, SMEARGLE
 	db 20, SMEARGLE
 	db 22, RINRING
 	db 22, RINRING
