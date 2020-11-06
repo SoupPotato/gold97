@@ -198,9 +198,6 @@ INCBIN "data/tilesets/gate_metatiles.bin"
 TilesetGateColl:
 INCLUDE "data/tilesets/gate_collision.asm"
 
-TilesetJohtoModernGFX:
-INCBIN "gfx/tilesets/johto_modern.2bpp.lz"
-
 TilesetJohtoModernMeta:
 INCBIN "data/tilesets/johto_modern_metatiles.bin"
 
@@ -293,7 +290,8 @@ INCBIN "data/tilesets/museum_metatiles.bin"
 TilesetMuseumColl::
 INCLUDE "data/tilesets/museum_collision.asm"
 
-
+TilesetJohtoModernGFX:
+INCBIN "gfx/tilesets/johto_modern.2bpp.lz"
 
 
 SECTION "Tileset Data 8", ROMX

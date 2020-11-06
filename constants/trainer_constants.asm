@@ -388,6 +388,7 @@ KRIS EQU __enum__
 	const NIKKI
 	const DIANA
 	const BRIANA
+	const HIKARI
 
 	trainerclass SAILOR ; 28
 	const EUGENE ; used now

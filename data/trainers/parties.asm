@@ -1957,6 +1957,13 @@ SwimmerFGroup:
 	db 35, SEAKING
 	db 35, SEAKING
 	db -1 ; end
+	
+	; SWIMMERF (20)
+	db "HIKARI@", TRAINERTYPE_NORMAL 
+	db 20, CORASUN
+	db 23, POLIWHIRL
+	db 20, STARYU
+	db -1 ; end
 
 SailorGroup:
 	; SAILOR (1)

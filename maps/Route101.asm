@@ -45,7 +45,16 @@ TrainerTeacherColette:
 	closetext
 	end
 
+TrainerSwimmerfHikari:
+	trainer SWIMMERF, HIKARI, EVENT_BEAT_SWIMMERF_HIKARI, SwimmerfHikariSeenText, SwimmerfHikariBeatenText, 0, .Script
 
+.Script:
+	endifjustbattled
+	opentext
+	writetext SwimmerfHikariAfterBattleText
+	waitbutton
+	closetext
+	end
 
 Route101Tutorial1:
 	turnobject ROUTE29_COOLTRAINER_M1, UP
@@ -195,6 +204,9 @@ Route101Pokeball:
 	
 Route101Ether:
 	itemball ETHER
+	
+Route101RareCandy:
+	itemball RARE_CANDY
 
 DudeMovementData1a:
 	step UP
@@ -391,6 +403,22 @@ FledglingHugoAfterBattleText:
 	text "How did you get"
 	line "so good?"
 	done
+	
+SwimmerfHikariSeenText:
+	text "Oops!"
+	para "You found my"
+	line "secret swim-spot!"
+	done
+
+SwimmerfHikariBeatenText:
+	text "Aw..."
+	line "...bubble..."
+	done
+
+SwimmerfHikariAfterBattleText:
+	text "Don't tell anyone,"
+	line "'kay?"
+	done
 
 Route101_MapEvents:
 	db 0, 0 ; filler
@@ -412,7 +440,7 @@ Route101_MapEvents:
 	bg_event 10, 22, BGEVENT_READ, Route101Sign2
 	bg_event 34, 27, BGEVENT_READ, SilentHillsEntranceSign
 
-	db 12 ; object events
+	db 14 ; object events
 	object_event 45, 31, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CatchingTutorialDudeScript, -1
 	object_event 34, 25, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route101YoungsterScript, -1
 	object_event 39, 27, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route101TeacherScript, -1
@@ -425,3 +453,5 @@ Route101_MapEvents:
 	object_event  9, 16, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerFledglingHugo, -1
 	object_event 24, 32, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route101Pokeball, EVENT_ROUTE_29_POKEBALL
 	object_event 16,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route101Ether, EVENT_ROUTE_29_ETHER
+	object_event 32, 15, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSwimmerfHikari, -1
+	object_event 41, 14, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route101RareCandy, EVENT_ROUTE_101_RARE_CANDY
