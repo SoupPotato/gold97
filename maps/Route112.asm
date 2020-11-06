@@ -131,7 +131,7 @@ Route112Sign:
 	jumptext Route112SignText
 
 Route112FruitTree:
-	fruittree FRUITTREE_ROUTE_44
+	fruittree FRUITTREE_ROUTE_112
 
 Route112HiddenGreatBall:
 	hiddenitem GREAT_BALL, EVENT_ROUTE_32_HIDDEN_GREAT_BALL

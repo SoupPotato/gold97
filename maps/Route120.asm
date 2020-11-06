@@ -126,7 +126,7 @@ Route120UndergroundPathSign:
 	jumptext Route120UndergroundPathSignText
 
 Route120FruitTree:
-	fruittree FRUITTREE_ROUTE_8
+	fruittree FRUITTREE_ROUTE_120
 	
 Route120ParlyzHeal:
 	itemball PARLYZ_HEAL

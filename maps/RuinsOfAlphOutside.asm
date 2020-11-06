@@ -53,11 +53,6 @@ RuinsOfAlphOutsideScientistScene1:
 	turnobject PLAYER, DOWN
 	jump RuinsOfAlphOutsideScientistSceneContinue
 
-RuinsOfAlphOutsideScientistScene2:
-	turnobject RUINSOFALPHOUTSIDE_SCIENTIST, LEFT
-	turnobject PLAYER, RIGHT
-	jump RuinsOfAlphOutsideScientistSceneContinue
-
 RuinsOfAlphOutsideScientistScript:
 	faceplayer
 RuinsOfAlphOutsideScientistSceneContinue:
@@ -126,13 +121,11 @@ TrainerSuperNerdStan:
 	closetext
 	end
 
-
+RuinsOfAlphFruitTree:
+	fruittree FRUITTREE_RUINS_OF_ALPH
 
 RuinsOfAlphSign:
 	jumptext RuinsOfAlphSignText
-
-RuinsOfAlphResearchCenterSign:
-	jumptext RuinsOfAlphResearchCenterSignText
 
 MovementData_0x580ba:
 	step DOWN
@@ -231,11 +224,6 @@ RuinsOfAlphSignText:
 	line "OBSERVATION CENTER"
 	done
 
-RuinsOfAlphResearchCenterSignText:
-	text "RUINS OF ALPH"
-	line "RESEARCH CENTER"
-	done
-
 RuinsOfAlphOutsideFisherText1:
 	text "While exploring"
 	line "the RUINS, we"
@@ -278,25 +266,23 @@ RuinsOfAlphOutsideYoungster2Text:
 RuinsOfAlphOutside_MapEvents:
 	db 0, 0 ; filler
 
-	db 6 ; warp events
+	db 5 ; warp events
 	warp_event 15,  9, RUINS_OF_ALPH_HO_OH_CHAMBER, 1
 	warp_event  5, 27, RUINS_OF_ALPH_KABUTO_CHAMBER, 1
 	warp_event  5,  3, RUINS_OF_ALPH_OMANYTE_CHAMBER, 1
 	warp_event  3, 17, RUINS_OF_ALPH_AERODACTYL_CHAMBER, 1
 	warp_event  9, 19, RUINS_OF_ALPH_INNER_CHAMBER, 1
-	warp_event  4, 22, RUINS_OF_ALPH_RESEARCH_CENTER, 1
 
-	db 2 ; coord events
+	db 1 ; coord events
 	coord_event  9, 20, SCENE_RUINSOFALPHOUTSIDE_GET_UNOWN_DEX, RuinsOfAlphOutsideScientistScene1
-	coord_event 11, 15, SCENE_RUINSOFALPHOUTSIDE_GET_UNOWN_DEX, RuinsOfAlphOutsideScientistScene2
 
-	db 2 ; bg events
+	db 1 ; bg events
 	bg_event  8, 32, BGEVENT_READ, RuinsOfAlphSign
-	bg_event  5, 22, BGEVENT_READ, RuinsOfAlphResearchCenterSign
 
-	db 5 ; object events
+	db 6 ; object events
 	object_event  8,  2, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerPsychicNathan, -1
 	object_event  9, 21, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphOutsideScientistScript, EVENT_RUINS_OF_ALPH_OUTSIDE_SCIENTIST
 	object_event 11, 26, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphOutsideFisherScript, EVENT_RUINS_OF_ALPH_OUTSIDE_TOURIST_FISHER
 	object_event  3, 29, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphOutsideYoungster1Script, EVENT_RUINS_OF_ALPH_OUTSIDE_TOURIST_YOUNGSTERS
 	object_event  8, 27, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphOutsideYoungster2Script, EVENT_RUINS_OF_ALPH_OUTSIDE_TOURIST_YOUNGSTERS
+	object_event 12, 11, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphFruitTree, -1

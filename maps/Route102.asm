@@ -248,7 +248,7 @@ Route102GameHouse:
 	jumptext Route102GameHouseText
 
 Route102FruitTree:
-	fruittree FRUITTREE_ROUTE_36
+	fruittree FRUITTREE_ROUTE_102
 
 BipetalShakeMovement:
 	tree_shake ; shake

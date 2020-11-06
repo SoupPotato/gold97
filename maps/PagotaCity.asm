@@ -75,7 +75,7 @@ PagotaCityRareCandy:
 	
 
 PagotaCityFruitTree:
-	fruittree FRUITTREE_OLD_CITY
+	fruittree FRUITTREE_PAGOTA_CITY 
 
 PagotaCityHiddenHyperPotion:
 	hiddenitem HYPER_POTION, EVENT_OLD_CITY_HIDDEN_HYPER_POTION

@@ -1,11 +1,13 @@
 	const_def 2 ; object constants
-	const CIANWOODCITY_STANDING_YOUNGSTER
-	const CIANWOODCITY_POKEFAN_M
-	const CIANWOODCITY_LASS
-	const CIANWOODCITY_ROCK1
-	const CIANWOODCITY_ROCK3
-	const CIANWOODCITY_POKEFAN_F
-	const CIANWOODCITY_BALL
+	const SUNPOINTCITY_STANDING_YOUNGSTER
+	const SUNPOINTCITY_POKEFAN_M
+	const SUNPOINTCITY_LASS
+	const SUNPOINTCITY_ROCK1
+	const SUNPOINTCITY_ROCK3
+	const SUNPOINTCITY_POKEFAN_F
+	const SUNPOINTCITY_BALL
+	const SUNPOINTCITY_FRUIT_TREE_1
+	const SUNPOINTCITY_FRUIT_TREE_2
 
 
 SunpointCity_MapScripts:
@@ -32,28 +34,22 @@ SunpointCityPokefanM:
 SunpointCityLass:
 	jumptextfaceplayer SunpointCityLassText
 
-SunpointCityUnusedScript:
-; unreferenced
-	jumptextfaceplayer SunpointCityUnusedText
-
 SunpointCitySign:
 	jumptext SunpointCitySignText
 	
-CianwoodHiddenWaterStone:
+SunpointHiddenWaterStone:
 	hiddenitem WATER_STONE, EVENT_SOUTH_POINT_HIDDEN_WATER_STONE
 
-CianwoodPharmacySign:
+SunpointPharmacySign:
 	jumpstd martsign
 
-CianwoodPhotoStudioSign:
-	jumptext CianwoodPhotoStudioSignText
+SunpointPhotoStudioSign:
+	jumptext SunpointPhotoStudioSignText
 
-CianwoodPokeSeerSign:
-	jumptext CianwoodPokeSeerSignText
+SunpointPokeSeerSign:
+	jumptext SunpointPokeSeerSignText
 
-CianwoodPokecenterSign:
-	;giveitem HM_ROCK_SMASH
-	;setflag ENGINE_STORMBADGE
+SunpointPokecenterSign:
 	jumpstd pokecentersign
 
 SunpointCityRock:
@@ -64,6 +60,12 @@ SunpointCityHiddenRevive:
 
 SunpointCityHiddenMaxEther:
 	itemball MAX_ETHER
+	
+SunpointFruitTree1:
+	fruittree FRUITTREE_SUNPOINT_CITY_1
+	
+SunpointFruitTree2:
+	fruittree FRUITTREE_SUNPOINT_CITY_2
 
 ChucksWifeFlySpeechText:
 	text "The climate on"
@@ -113,18 +115,6 @@ SunpointCityLassText:
 	line "needs one, though."
 	done
 
-SunpointCityUnusedText:
-; unused
-	text "There are several"
-	line "islands between"
-	cont "here and OLIVINE."
-
-	para "A mythical sea"
-	line "creature supposed-"
-	cont "ly lives there."
-	done
-
-
 SunpointCitySignText:
 	text "SUNPOINT CITY"
 	para "NIHON's link to"
@@ -132,28 +122,15 @@ SunpointCitySignText:
 	cont "trade."
 	done
 
-CianwoodGymSignText:
-	text "CIANWOOD CITY"
-	line "#MON GYM"
-
-	para "LEADER: CHUCK"
-
-	para "His Roaring Fists"
-	line "Do the Talking"
-	done
-
-CianwoodPharmacySignText:
-	text "500 Years of"
-	line "Tradition"
-
-	para "CIANWOOD CITY"
+SunpointPharmacySignText:
+	text "SUNPOINT CITY"
 	line "PHARMACY"
 
 	para "We Await Your"
 	line "Medicinal Queries"
 	done
 
-CianwoodPhotoStudioSignText:
+SunpointPhotoStudioSignText:
 	text "TRAINER TIPS"
 	para "Certain HM moves"
 	line "require BADGEs to"
@@ -164,7 +141,7 @@ CianwoodPhotoStudioSignText:
 	cont "battle, though."
 	done
 
-CianwoodPokeSeerSignText:
+SunpointPokeSeerSignText:
 	text "NOTICE:"
 	para "Dangerous rocks"
 	line "frequently fall"
@@ -194,14 +171,14 @@ SunpointCity_MapEvents:
 
 	db 7 ; bg events
 	bg_event 28, 20, BGEVENT_READ, SunpointCitySign
-	bg_event 23, 33, BGEVENT_ITEM, CianwoodHiddenWaterStone
-	bg_event 34, 16, BGEVENT_READ, CianwoodPokecenterSign
-	bg_event 20, 24, BGEVENT_READ, CianwoodPharmacySign
-	bg_event 16, 24, BGEVENT_READ, CianwoodPhotoStudioSign
-	bg_event 30, 16, BGEVENT_READ, CianwoodPokeSeerSign
+	bg_event 23, 33, BGEVENT_ITEM, SunpointHiddenWaterStone
+	bg_event 34, 16, BGEVENT_READ, SunpointPokecenterSign
+	bg_event 20, 24, BGEVENT_READ, SunpointPharmacySign
+	bg_event 16, 24, BGEVENT_READ, SunpointPhotoStudioSign
+	bg_event 30, 16, BGEVENT_READ, SunpointPokeSeerSign
 	bg_event 35, 27, BGEVENT_ITEM, SunpointCityHiddenRevive
 
-	db 7 ; object events
+	db 9 ; object events
 	object_event 27, 15, SPRITE_FISHING_GURU, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SunpointCityYoungster, -1
 	object_event 16, 29, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SunpointCityPokefanM, -1
 	object_event 32, 21, SPRITE_ROCKER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SunpointCityLass, -1
@@ -209,3 +186,5 @@ SunpointCity_MapEvents:
 	object_event 17, 18, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SunpointCityRock, -1
 	object_event 15, 29, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SunpointCityChucksWife, -1
 	object_event 7,  26, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SunpointCityHiddenMaxEther, EVENT_CIANWOOD_CITY_HIDDEN_MAX_ETHER
+	object_event  1,  8, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SunpointFruitTree1, -1
+	object_event  2,  7, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SunpointFruitTree2, -1

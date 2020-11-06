@@ -1,7 +1,8 @@
 	const_def 2 ; object constants
-	const NORTH_ISLAND_TWIN
-	const NORTH_ISLAND_ROCKER
-	const NORTH_ISLAND_TEACHER
+	const FROSTPOINT_TWIN
+	const FROSTPOINT_ROCKER
+	const FROSTPOINT_TEACHER
+	const FROSTPOINT_FRUIT_TREE
 
 FrostpointTown_MapScripts:
 	db 0 ; scene scripts
@@ -13,7 +14,9 @@ FrostpointTown_MapScripts:
 	setflag ENGINE_FLYPOINT_CINNABAR
 	return
 
-
+FrostpointTownFruitTree:
+	fruittree FRUITTREE_FROSTPOINT_TOWN
+	
 FrostpointTownGymSign:
 	jumptext FrostpointTownGymSignText
 
@@ -106,7 +109,8 @@ FrostpointTown_MapEvents:
 	bg_event  8, 14, BGEVENT_READ, FrostpointTownSign
 	bg_event  8,  6, BGEVENT_ITEM, FrostpointTownHiddenRareCandy
 
-	db 3 ; object events
+	db 4 ; object events
 	object_event  8, 11, SPRITE_TWIN, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NorthIslandTwinScript, -1
 	object_event 13,  7, SPRITE_ROCKER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NorthIslandRockerScript, -1
 	object_event  6,  9, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NorthIslandTeacherScript, -1
+	object_event 10,  9, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FrostpointTownFruitTree, -1

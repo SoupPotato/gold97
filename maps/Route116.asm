@@ -60,7 +60,7 @@ Route116MaxPotion:
 
 
 Route116FruitTree:
-	fruittree FRUITTREE_ROUTE_2
+	fruittree FRUITTREE_ROUTE_116
 
 
 BugCatcherDougSeenText:

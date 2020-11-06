@@ -6,6 +6,7 @@
 	const Route114_POKEFAN_M1
 	const Route114_POKEFAN_M2
 	const Route114_COOLTRAINER
+	const Route114_FRUIT_TREE
 
 Route114_MapScripts:
 	db 0 ; scene scripts
@@ -94,6 +95,9 @@ Route114Sign:
 
 Route114HiddenEther:
 	hiddenitem ETHER, EVENT_ROUTE_9_HIDDEN_ETHER
+	
+Route114FruitTree:
+	fruittree FRUITTREE_ROUTE_114
 	
 SportsmanJacobSeenText:
 	text "I'm taking a break"
@@ -236,7 +240,7 @@ Route114_MapEvents:
 	bg_event 19, 11, BGEVENT_READ, Route114Sign
 	bg_event 35, 14, BGEVENT_ITEM, Route114HiddenEther
 
-	db 7 ; object events
+	db 8 ; object events
 	object_event 18, 14, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerCamperDean, -1
 	object_event 28, 10, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerPicnickerHeidi, -1
 	object_event  6,  8, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerCamperSid, -1
@@ -244,3 +248,4 @@ Route114_MapEvents:
 	object_event 14, 10, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerHikerTim, -1
 	object_event 21,  8, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerHikerSidney, -1
 	object_event 31,  7, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerSportsmanJacob, -1
+	object_event 36, 10, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route116FruitTree, -1

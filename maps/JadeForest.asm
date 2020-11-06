@@ -119,13 +119,13 @@ JadeForestSignpost2:
 	
 
 Route42FruitTree1:
-	fruittree FRUITTREE_ROUTE_42_1
+	fruittree FRUITTREE_JADE_FOREST_1
 
 Route42FruitTree2:
-	fruittree FRUITTREE_ROUTE_42_2
+	fruittree FRUITTREE_JADE_FOREST_2
 
 Route42FruitTree3:
-	fruittree FRUITTREE_ROUTE_42_3
+	fruittree FRUITTREE_JADE_FOREST_3
 
 Text_HeadbuttIntro:
 	text "What am I doing?"

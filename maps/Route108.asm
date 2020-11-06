@@ -1,8 +1,6 @@
 	const_def 2 ; object constants
-	const ROUTE38_STANDING_YOUNGSTER1
 	const ROUTE38_LASS
-	const ROUTE38_STANDING_YOUNGSTER2
-	const ROUTE38_SAILOR
+	const ROUTE38_YOUNGSTER
 	const ROUTE38_FRUIT_TREE
 	const ROUTE38_BUENA2
 
@@ -50,7 +48,7 @@ Route108TrainerTips:
 	jumptext Route108TrainerTipsText
 
 Route108FruitTree:
-	fruittree FRUITTREE_ROUTE_38
+	fruittree FRUITTREE_ROUTE_108
 
 BirdKeeperTobySeenText:
 	text "Fly high into the"

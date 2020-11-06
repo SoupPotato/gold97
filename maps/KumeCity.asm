@@ -29,10 +29,10 @@ UrumaCavernSign:
 	jumptext UrumaCavernSignText
 
 KumeCityFruitTree1:
-	fruittree FRUITTREE_PEWTER_CITY_1
+	fruittree FRUITTREE_KUME_CITY_1
 
 KumeCityFruitTree2:
-	fruittree FRUITTREE_PEWTER_CITY_2
+	fruittree FRUITTREE_KUME_CITY_2
 	
 KumeCityFisherScript:
 	jumptextfaceplayer KumeCityFisherText	

@@ -182,7 +182,7 @@ SilentHillsEntranceSign:
 	jumptext SilentHillsEntranceSignText
 
 Route101FruitTree:
-	fruittree FRUITTREE_ROUTE_29
+	fruittree FRUITTREE_ROUTE_101
 
 Route101Potion:
 	itemball POTION

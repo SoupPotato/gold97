@@ -119,7 +119,7 @@ Route109TrainerTips:
 	jumptext Route109TrainerTipsText
 
 Route109FruitTree:
-	fruittree FRUITTREE_ROUTE_39
+	fruittree FRUITTREE_ROUTE_109
 
 Route109HiddenNugget:
 	hiddenitem NUGGET, EVENT_ROUTE_39_HIDDEN_NUGGET

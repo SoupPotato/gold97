@@ -1,17 +1,16 @@
 	const_def 2 ; object constants
-	const ROUTE30_YOUNGSTER3
-	const ROUTE30_YOUNGSTER4
-	const ROUTE30_COOLTRAINER_F
-	const ROUTE30_POKE_BALL
-	const ROUTE30_POKE_BALL2
+	const ROUTE105_YOUNGSTER3
+	const ROUTE105_YOUNGSTER4
+	const ROUTE105_COOLTRAINER_F
+	const ROUTE105_POKE_BALL
+	const ROUTE105_POKE_BALL2
+	const ROUTE105_FRUIT_TREE_1
+	const ROUTE105_FRUIT_TREE_2
 
 Route105_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
-
-
-
 
 
 TrainerYoungsterMikey:
@@ -24,7 +23,6 @@ TrainerYoungsterMikey:
 	waitbutton
 	closetext
 	end
-
 
 
 Route105YoungsterScript:
@@ -52,15 +50,13 @@ Route105PoisonStone:
 	itemball POISON_STONE
 
 Route105FruitTree1:
-	fruittree FRUITTREE_ROUTE_30_1
+	fruittree FRUITTREE_ROUTE_105_1
 
 Route105FruitTree2:
-	fruittree FRUITTREE_ROUTE_30_2
+	fruittree FRUITTREE_ROUTE_105_2
 
 Route105HiddenHyperPotion:
 	hiddenitem HYPER_POTION, EVENT_ROUTE_30_HIDDEN_HYPER_POTION
-
-
 
 
 YoungsterMikeySeenText:
@@ -151,9 +147,11 @@ Route105_MapEvents:
 	bg_event  6, 28, BGEVENT_READ, Route105Sign
 	bg_event 19, 28, BGEVENT_ITEM, Route105HiddenHyperPotion
 
-	db 5 ; object events
+	db 7 ; object events
 	object_event  8, 15, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerYoungsterMikey, -1
 	object_event  7, 22, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route105YoungsterScript, -1
 	object_event 10,  6, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route105CooltrainerFScript, -1
 	object_event 14,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route105MaxEther, EVENT_ROUTE_30_MAX_ETHER
 	object_event 17, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route105PoisonStone, EVENT_ROUTE_30_POISON_STONE
+	object_event 17,  4, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route105FruitTree1, -1
+	object_event  5, 14, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route105FruitTree1, -1

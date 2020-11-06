@@ -4,6 +4,7 @@
 	const ROUTE110_MONICA
 	const ROUTE110_POKEFAN_M
 	const ROUTE110_SUPER_NERD
+	const ROUTE110_FRUIT_TREE
 
 Route110_MapScripts:
 	db 0 ; scene scripts
@@ -128,7 +129,9 @@ MovementData_0x1a622a:
 	step UP
 	step UP
 	step_end
-	
+
+Route110FruitTree:
+	fruittree FRUITTREE_ROUTE_110
 
 EngineerRicardoSeenText:
 	text "The air here is"
@@ -183,8 +186,6 @@ Route110PokefanMText_Mobile:
 
 	para "What? What?"
 	done
-
-
 
 MeetMonicaText:
 	text "MONICA: Glad to"
@@ -249,9 +250,10 @@ Route110_MapEvents:
 	bg_event 10,  6, BGEVENT_READ, Route110Sign
 	bg_event 33, 13, BGEVENT_ITEM, Route110HiddenHyperPotion
 
-	db 5 ; object events
+	db 6 ; object events
 	object_event 22,  9, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerSwimmermSimon, -1
 	object_event 37, 11, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route110Lass1Script, -1
-	object_event 45,  6, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MonicaScript, EVENT_ROUTE_40_MONICA_OF_MONDAY
+	object_event 44,  5, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MonicaScript, EVENT_ROUTE_40_MONICA_OF_MONDAY
 	object_event 40,  4, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route110PokefanMScript, -1
 	object_event 40,  8, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerEngineerRicardo, -1
+	object_event 45,  5, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route110FruitTree, -1

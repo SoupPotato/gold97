@@ -122,7 +122,7 @@ Route103SuperPotion:
 	itemball SUPER_POTION
 
 Route103FruitTree:
-	fruittree FRUITTREE_ROUTE_35
+	fruittree FRUITTREE_ROUTE_103
 	
 
 SlowpokeTailSalesmanScript:

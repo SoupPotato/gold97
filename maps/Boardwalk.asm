@@ -206,9 +206,6 @@ BoardwalkSign2:
 BoardwalkTrainerTips:
 	jumptext BoardwalkTrainerTipsText
 
-BoardwalkFruitTree:
-	fruittree FRUITTREE_ROUTE_43
-
 
 FledglingHidalgoSeenText:
 	text "Can I try battling"
