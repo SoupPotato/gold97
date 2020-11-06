@@ -1,5 +1,5 @@
 	const_def 2 ; object constants
-	const EarlsArtHouse_GRAMPS
+	const EARLMUSEUM_FISHER
 	const EARLMUSEUM_BIRD
 	const EARLMUSEUM_DRAGON
 	const EARLMUSEUM_LASS
@@ -8,27 +8,7 @@
 EarlsArtHouse_MapScripts:
 	db 0 ; scene scripts
 
-	db 1 ; callbacks
-	callback MAPCALLBACK_OBJECTS, .statues
-	
-.statues
-	checkevent EVENT_SHOWED_PICHU_TO_BILLS_GRANDPA
-	iffalse .birdgone
-	checkevent EVENT_SHOWED_GROWLITHE_VULPIX_TO_BILLS_GRANDPA
-	iffalse .dragongone
-	return
-	
-.birdgone
-	disappear EARLMUSEUM_BIRD
-	checkevent EVENT_SHOWED_GROWLITHE_VULPIX_TO_BILLS_GRANDPA
-	iffalse .dragongone
-	return
-	
-.dragongone
-	disappear EARLMUSEUM_DRAGON
-	disappear EARLMUSEUM_LASS
-	disappear EARLMUSEUM_POKEFAN_M
-	return
+	db 0 ; callbacks
 	
 BirdScript:
 	opentext
@@ -44,26 +24,24 @@ DragonScript:
 	closetext
 	end
 
-BillsGrandpa:
+EarlScript:
 	faceplayer
 	opentext
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	iftrue .JustShowedSomething
-	checkevent EVENT_GOT_THUNDERSTONE_FROM_BILLS_GRANDPA
-	iftrue .GotThunderstone
-	checkevent EVENT_MET_BILLS_GRANDPA
-	iftrue .MetGrandpa
-	writetext BillsGrandpaIntroText
+	checkevent EVENT_MET_EARL
+	iftrue .MetEarl
+	writetext EarlIntroText
 	buttonsound
-	setevent EVENT_MET_BILLS_GRANDPA
-.MetGrandpa:
-	checkevent EVENT_SHOWED_ODDISH_TO_BILLS_GRANDPA
-	iftrue .ShowedOddish
-	checkevent EVENT_SHOWED_LICKITUNG_TO_BILLS_GRANDPA
-	iftrue .ShowedLickitung
-	writetext BillsGrandpaLickitungText
+	setevent EVENT_MET_EARL
+.MetEarl:
+	checkevent EVENT_SHOWED_DRATINI_TO_EARL
+	iftrue .ShowedDratini
+	checkevent EVENT_SHOWED_MADAME_TO_EARL
+	iftrue .ShowedMadame
+	writetext EarlMadameText
 	buttonsound
-	writetext BillsGrandpaAskToSeeMonText
+	writetext EarlAskToSeeMonText
 	yesorno
 	iffalse .SaidNo
 	scall .ExcitedToSee
@@ -71,13 +49,13 @@ BillsGrandpa:
 	iffalse .SaidNo
 	ifnotequal MADAME, .WrongPokemon
 	scall .CorrectPokemon
-	setevent EVENT_SHOWED_LICKITUNG_TO_BILLS_GRANDPA
-	jump .ShowedLickitung
+	setevent EVENT_SHOWED_MADAME_TO_EARL
+	jump .ShowedMadame
 
 .GotEverstone:
-	writetext BillsGrandpaOddishText
+	writetext EarlDratiniText
 	buttonsound
-	writetext BillsGrandpaAskToSeeMonText
+	writetext EarlAskToSeeMonText
 	yesorno
 	iffalse .SaidNo
 	scall .ExcitedToSee
@@ -85,66 +63,60 @@ BillsGrandpa:
 	iffalse .SaidNo
 	ifnotequal DRATINI, .WrongPokemon; edit here, change back to dratini
 	scall .CorrectPokemon
-	clearevent EVENT_SHOWED_GROWLITHE_VULPIX_TO_BILLS_GRANDPA
-	setevent EVENT_SHOWED_ODDISH_TO_BILLS_GRANDPA
-	jump .ShowedOddish
+	clearevent EVENT_EARL_DRATINI_STATUE_GONE
+	setevent EVENT_SHOWED_DRATINI_TO_EARL
+	jump .ShowedDratini
 
 
-.ShowedOddish:
+.ShowedDratini:
 	scall .ReceiveItem
 	verbosegiveitem EXP_SHARE
 	iffalse .BagFull
-	setevent EVENT_GOT_THUNDERSTONE_FROM_BILLS_GRANDPA
+	setevent EVENT_GOT_EXP_SHARE_FROM_EARL
 	closetext
 	end
 
-.ShowedLickitung:
-	checkevent EVENT_GOT_EVERSTONE_FROM_BILLS_GRANDPA
+.ShowedMadame:
+	checkevent EVENT_GOT_EVERSTONE_FROM_EARL
 	iftrue .GotEverstone
 	scall .ReceiveItem
 	verbosegiveitem EVERSTONE
 	iffalse .BagFull
-	setevent EVENT_GOT_EVERSTONE_FROM_BILLS_GRANDPA
-	clearevent EVENT_SHOWED_PICHU_TO_BILLS_GRANDPA
+	setevent EVENT_GOT_EVERSTONE_FROM_EARL
+	clearevent EVENT_EARL_BIRD_STATUE_GONE
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	closetext
 	end
 
 .ExcitedToSee:
-	writetext BillsGrandpaExcitedToSeeText
+	writetext EarlExcitedToSeeText
 	buttonsound
 	end
 
 .SaidNo:
-	writetext BillsGrandpaYouDontHaveItTextText
+	writetext EarlYouDontHaveItTextText
 	waitbutton
 	closetext
 	end
 
 .CorrectPokemon:
-	writetext BillsGrandpaShownPokemonText
+	writetext EarlShownPokemonText
 	buttonsound
 	end
 
 .ReceiveItem:
-	writetext BillsGrandpaTokenOfAppreciationText
+	writetext EarlTokenOfAppreciationText
 	buttonsound
 	end
 
 .JustShowedSomething:
-	writetext BillsGrandpaComeAgainText
-	waitbutton
-	closetext
-	end
-
-.GotThunderstone:
-	writetext BillsGrandpaShownAllThePokemonText
+	writetext EarlComeAgainText
 	waitbutton
 	closetext
 	end
 
 .WrongPokemon:
-	writetext BillsGrandpaWrongPokemonText
+	writetext EarlWrongPokemonText
 	waitbutton
 	closetext
 	end
@@ -188,7 +160,7 @@ ArtSignText:
 	line "do not touch."
 	done
 
-BillsGrandpaIntroText:
+EarlIntroText:
 	text "Oh, boo."
 	line "I'm a failure."
 	
@@ -215,23 +187,23 @@ BillsGrandpaIntroText:
 	line "finished."
 	done
 
-BillsGrandpaAskToSeeMonText:
+EarlAskToSeeMonText:
 	text "If you have that"
 	line "#MON, may I see"
 	cont "it, please?"
 	done
 
-BillsGrandpaExcitedToSeeText:
+EarlExcitedToSeeText:
 	text "You will show me?"
 	line "How good of you!"
 	done
 
-BillsGrandpaYouDontHaveItTextText:
+EarlYouDontHaveItTextText:
 	text "You don't have it?"
 	line "That's too bad…"
 	done
 
-BillsGrandpaShownPokemonText:
+EarlShownPokemonText:
 	text "Ah, yes! That is"
 	line "@"
 	text_ram wStringBuffer3
@@ -241,17 +213,17 @@ BillsGrandpaShownPokemonText:
 	line "I feel inspired!"
 	done
 
-BillsGrandpaTokenOfAppreciationText:
+EarlTokenOfAppreciationText:
 	text "This is a token of"
 	line "my appreciation."
 	done
 
-BillsGrandpaComeAgainText:
+EarlComeAgainText:
 	text "Come by again"
 	line "sometime."
 	done
 
-BillsGrandpaShownAllThePokemonText:
+EarlShownAllThePokemonText:
 	text "Thanks for showing"
 	line "me those #MON."
 	para "With your help,"
@@ -260,7 +232,7 @@ BillsGrandpaShownAllThePokemonText:
 	line "dream!"
 	done
 
-BillsGrandpaWrongPokemonText:
+EarlWrongPokemonText:
 	text "Hm?"
 
 	para "That's not the"
@@ -268,7 +240,7 @@ BillsGrandpaWrongPokemonText:
 	cont "thinking about."
 	done
 
-BillsGrandpaLickitungText:
+EarlMadameText:
 	text "If I could only"
 	line "see a MADAME in"
 	para "person, I might"
@@ -277,7 +249,7 @@ BillsGrandpaLickitungText:
 	done
 	
 
-BillsGrandpaOddishText:
+EarlDratiniText:
 	text "I've finished my"
 	line "MADAME statue!"
 	para "Now I'd like to"
@@ -315,8 +287,8 @@ EarlsArtHouse_MapEvents:
 	bg_event 2, 3, BGEVENT_READ, ArtSign
 
 	db 5 ; object events
-	object_event  1,  5, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BillsGrandpa, -1
-	object_event  5,  4, SPRITE_BIRD, SPRITEMOVEDATA_STANDING_DOWN, 0, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BirdScript, EVENT_SHOWED_PICHU_TO_BILLS_GRANDPA
-	object_event  9,  4, SPRITE_EKANS, SPRITEMOVEDATA_STANDING_DOWN, 0, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DragonScript, EVENT_SHOWED_GROWLITHE_VULPIX_TO_BILLS_GRANDPA
-	object_event 13,  7, SPRITE_LASS, SPRITEMOVEDATA_STANDING_UP, 0, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ArtHouseLassScript, EVENT_SHOWED_GROWLITHE_VULPIX_TO_BILLS_GRANDPA
-	object_event  5,  2, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ArtHousePokefanMScript, EVENT_SHOWED_GROWLITHE_VULPIX_TO_BILLS_GRANDPA
+	object_event  1,  5, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, EarlScript, -1
+	object_event  5,  4, SPRITE_BIRD, SPRITEMOVEDATA_STANDING_DOWN, 0, 2, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, BirdScript, EVENT_EARL_BIRD_STATUE_GONE
+	object_event  9,  4, SPRITE_EKANS, SPRITEMOVEDATA_STANDING_DOWN, 0, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DragonScript, EVENT_EARL_DRATINI_STATUE_GONE
+	object_event 13,  7, SPRITE_LASS, SPRITEMOVEDATA_STANDING_UP, 0, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ArtHouseLassScript, EVENT_EARL_DRATINI_STATUE_GONE
+	object_event  5,  2, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ArtHousePokefanMScript, EVENT_EARL_DRATINI_STATUE_GONE
