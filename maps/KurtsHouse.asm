@@ -1,6 +1,5 @@
 	const_def 2 ; object constants
 	const KURTSHOUSE_KURT1
-	const KURTSHOUSE_KURT2
 	const KURTSHOUSE_FALKNER
 
 KurtsHouse_MapScripts:
@@ -99,15 +98,8 @@ KurtsHouse_MapScripts:
 .KurtCallback:
 	checkevent EVENT_FALKNER_AT_GYM
 	iftrue .Falknergone
-	checkflag ENGINE_KURT_MAKING_BALLS
-	iftrue .MakingBalls
-	disappear KURTSHOUSE_KURT2
-	appear KURTSHOUSE_KURT1
 	return
 
-.MakingBalls:
-	disappear KURTSHOUSE_KURT1
-	appear KURTSHOUSE_KURT2
 .Falknergone:
 	disappear KURTSHOUSE_FALKNER
 	return
@@ -119,8 +111,6 @@ Kurt1:
 	checkevent EVENT_GOT_5F_SAGE_BLESSING
 	iffalse .notdonetower
 .GotLureBall:
-	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
-	iftrue .WaitForApricorns
 	checkevent EVENT_GAVE_KURT_RED_APRICORN
 	iftrue .GiveLevelBall
 	checkevent EVENT_GAVE_KURT_BLU_APRICORN
@@ -217,11 +207,16 @@ Kurt1:
 
 .GaveKurtApricorns:
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
-	setflag ENGINE_KURT_MAKING_BALLS
 .WaitForApricorns:
 	writetext UnknownText_0x18e779
 	waitbutton
 	closetext
+	special FadeBlackQuickly
+	special ReloadSpritesNoPalettes
+	pause 15
+	special FadeInQuickly
+	opentext
+	jump .GotLureBall
 	end
 
 .Cancel:
@@ -230,8 +225,6 @@ Kurt1:
 	closetext
 	end
 
-._ThatTurnedOutGreat:
-	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
 .ThatTurnedOutGreat:
 	writetext UnknownText_0x18e82a
 	waitbutton
@@ -240,94 +233,60 @@ Kurt1:
 	end
 
 .GiveLevelBall:
-	checkflag ENGINE_KURT_MAKING_BALLS
-	iftrue KurtMakingBallsScript
 	writetext UnknownText_0x18e7fb
 	buttonsound
 	verbosegiveitem2 LEVEL_BALL, VAR_KURT_APRICORNS
 	iffalse .NoRoomForBall
 	clearevent EVENT_GAVE_KURT_RED_APRICORN
-	jump ._ThatTurnedOutGreat
+	jump .ThatTurnedOutGreat
 
 .GiveLureBall:
-	checkflag ENGINE_KURT_MAKING_BALLS
-	iftrue KurtMakingBallsScript
 	writetext UnknownText_0x18e7fb
 	buttonsound
 	verbosegiveitem2 LURE_BALL, VAR_KURT_APRICORNS
 	iffalse .NoRoomForBall
 	clearevent EVENT_GAVE_KURT_BLU_APRICORN
-	jump ._ThatTurnedOutGreat
+	jump .ThatTurnedOutGreat
 
 .GiveMoonBall:
-	checkflag ENGINE_KURT_MAKING_BALLS
-	iftrue KurtMakingBallsScript
 	writetext UnknownText_0x18e7fb
 	buttonsound
 	verbosegiveitem2 MOON_BALL, VAR_KURT_APRICORNS
 	iffalse .NoRoomForBall
 	clearevent EVENT_GAVE_KURT_YLW_APRICORN
-	jump ._ThatTurnedOutGreat
+	jump .ThatTurnedOutGreat
 
 .GiveFriendBall:
-	checkflag ENGINE_KURT_MAKING_BALLS
-	iftrue KurtMakingBallsScript
 	writetext UnknownText_0x18e7fb
 	buttonsound
 	verbosegiveitem2 FRIEND_BALL, VAR_KURT_APRICORNS
 	iffalse .NoRoomForBall
 	clearevent EVENT_GAVE_KURT_GRN_APRICORN
-	jump ._ThatTurnedOutGreat
+	jump .ThatTurnedOutGreat
 
 .GiveFastBall:
-	checkflag ENGINE_KURT_MAKING_BALLS
-	iftrue KurtMakingBallsScript
 	writetext UnknownText_0x18e7fb
 	buttonsound
 	verbosegiveitem2 FAST_BALL, VAR_KURT_APRICORNS
 	iffalse .NoRoomForBall
 	clearevent EVENT_GAVE_KURT_WHT_APRICORN
-	jump ._ThatTurnedOutGreat
+	jump .ThatTurnedOutGreat
 
 .GiveHeavyBall:
-	checkflag ENGINE_KURT_MAKING_BALLS
-	iftrue KurtMakingBallsScript
 	writetext UnknownText_0x18e7fb
 	buttonsound
 	verbosegiveitem2 HEAVY_BALL, VAR_KURT_APRICORNS
 	iffalse .NoRoomForBall
 	clearevent EVENT_GAVE_KURT_BLK_APRICORN
-	jump ._ThatTurnedOutGreat
+	jump .ThatTurnedOutGreat
 
 .GiveLoveBall:
-	checkflag ENGINE_KURT_MAKING_BALLS
-	iftrue KurtMakingBallsScript
 	writetext UnknownText_0x18e7fb
 	buttonsound
 	verbosegiveitem2 LOVE_BALL, VAR_KURT_APRICORNS
 	iffalse .NoRoomForBall
 	clearevent EVENT_GAVE_KURT_PNK_APRICORN
-	jump ._ThatTurnedOutGreat
-
-Kurt2:
-	faceplayer
-	opentext
-KurtMakingBallsScript:
-	checkevent EVENT_BUGGING_KURT_TOO_MUCH
-	iffalse Script_FirstTimeBuggingKurt
-	writetext UnknownText_0x18e7d8
-	waitbutton
-	closetext
-	turnobject KURTSHOUSE_KURT2, LEFT
-	end
-
-Script_FirstTimeBuggingKurt:
-	writetext UnknownText_0x18e863
-	waitbutton
-	closetext
-	turnobject KURTSHOUSE_KURT2, LEFT
-	setevent EVENT_BUGGING_KURT_TOO_MUCH
-	end
+	jump .ThatTurnedOutGreat
 
 Falkner:
 	faceplayer
@@ -396,21 +355,15 @@ UnknownText_0x18e736:
 	done
 
 UnknownText_0x18e779:
-	text "KURT: It'll take a"
-	line "day to make you a"
+	text "KURT: Splendid!"
 
-	para "BALL. Come back"
-	line "for it later."
+	para "I'll start working"
+	line "right away."
 	done
 
 UnknownText_0x18e7bc:
 	text "KURT: Oh…"
 	line "That's a letdown."
-	done
-
-UnknownText_0x18e7d8:
-	text "KURT: I'm working!"
-	line "Don't bother me!"
 	done
 
 UnknownText_0x18e7fb:
@@ -425,15 +378,6 @@ UnknownText_0x18e82a:
 
 	para "Try catching"
 	line "#MON with it."
-	done
-
-UnknownText_0x18e863:
-	text "I feel like I've"
-	line "improved at this,"
-
-	para "and can work much"
-	line "faster than I used"
-	cont "to be able to."
 	done
 
 
@@ -583,7 +527,6 @@ KurtsHouse_MapEvents:
 	db 1 ; bg events
 	bg_event  5,  1, BGEVENT_READ, KurtsHouseBookshelf
 
-	db 3 ; object events
+	db 2 ; object events
 	object_event  4,  2, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Kurt1, EVENT_KURTS_HOUSE_KURT_1
-	object_event 15,  4, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Kurt2, EVENT_KURTS_HOUSE_KURT_2
 	object_event  6,  2, SPRITE_FALKNER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Falkner, EVENT_KURTS_HOUSE_FALKNER
