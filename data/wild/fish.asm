@@ -54,10 +54,10 @@ FishGroups:
 .Lake_Old:
 	db  70 percent + 1, MAGIKARP,   10
 	db  85 percent + 1, MAGIKARP,   10
-	db 100 percent,     GOLDEEN,    10
+	db 100 percent,     GUPGOLD,    10
 .Lake_Good:
 	db  35 percent,     MAGIKARP,   20
-	db  70 percent,     GOLDEEN,    20
+	db  70 percent,     GUPGOLD,    20
 	db  90 percent + 1, GOLDEEN,    20
 	db 100 percent,     time_group 4
 .Lake_Super:

@@ -61,7 +61,7 @@ JohtoWaterWildMons:
 	
 	map_id ROUTE_120
 	db 6 percent ; encounter rate
-	db 15, GOLDEEN
+	db 15, GUPGOLD
 	db 18, POLIWAG
 	db 18, MARILL
 	
@@ -85,25 +85,25 @@ JohtoWaterWildMons:
 	
 	map_id BOULDER_MINES_1F
 	db 4 percent ; encounter rate
-	db 15, GOLDEEN
+	db 15, GUPGOLD
 	db 18, POLIWAG
 	db 18, MARILL
 
 	map_id BOULDER_MINES_B1F
 	db 4 percent ; encounter rate
-	db 15, GOLDEEN
+	db 15, GUPGOLD
 	db 18, POLIWAG
 	db 18, MARILL
 
 	map_id BOULDER_MINES_B2F
 	db 4 percent ; encounter rate
-	db 15, GOLDEEN
+	db 15, GUPGOLD
 	db 18, POLIWAG
 	db 18, MARILL
 	
 	map_id BOULDER_MINES_B3F
 	db 4 percent ; encounter rate
-	db 15, GOLDEEN
+	db 15, GUPGOLD
 	db 18, POLIWAG
 	db 18, MARILL
 	
