@@ -441,6 +441,11 @@ SpecialMapMusic::
 	ret
 
 .surf
+	ld a, [wMapGroup]
+	cp GROUP_TIDAL_GROTTO_1F
+	jr z, .no
+	cp GROUP_TIDAL_GROTTO_B1F
+	jr z, .no
 	ld de, MUSIC_SURF
 	scf
 	ret
