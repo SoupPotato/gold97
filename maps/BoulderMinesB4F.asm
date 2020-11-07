@@ -17,9 +17,8 @@ BoulderMinesB4F_MapScripts:
 	end
 	
 
-
 BoulderMinesB4FDomeFossil:
-	itemball SILVER_WING
+	itemball DOME_FOSSIL
 	
 BoulderMinesB4FTMGigaDrain:
 	itemball TM_GIGA_DRAIN
