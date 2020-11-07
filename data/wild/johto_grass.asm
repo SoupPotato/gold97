@@ -71,7 +71,7 @@ JohtoGrassWildMons:
 	; morn
 	db 4, CATERPIE
 	db 4, PIDGEY
-	db 5, CATERPIE
+	db 5, WEEDLE
 	db 5, PIDGEY
 	db 4, HOPPIP
 	db 5, METAPOD
@@ -79,11 +79,11 @@ JohtoGrassWildMons:
 	; day
 	db 4, CATERPIE
 	db 4, RATTATA
-	db 5, CATERPIE
+	db 5, WEEDLE
 	db 5, PIDGEY
 	db 4, HOPPIP
 	db 5, METAPOD
-	db 6, METAPOD
+	db 6, KAKUNA
 	; nite
 	db 4, HOOTHOOT
 	db 4, RATTATA
@@ -95,20 +95,20 @@ JohtoGrassWildMons:
 	
 	ELIF DEF(_SILVER)
 	; morn
-	db 4, CATERPIE
+	db 4, WEEDLE
 	db 4, PIDGEY
 	db 5, CATERPIE
 	db 5, LEDYBA
 	db 4, HOPPIP
-	db 5, METAPOD
+	db 5, KAKUNA
 	db 6, METAPOD
 	; day
-	db 4, CATERPIE
+	db 4, WEEDLE
 	db 4, RATTATA
 	db 5, CATERPIE
 	db 5, PIDGEY
 	db 4, HOPPIP
-	db 5, METAPOD
+	db 5, KAKUNA
 	db 6, METAPOD
 	; nite
 	db 4, HOOTHOOT
@@ -618,7 +618,7 @@ JohtoGrassWildMons:
 	ELIF DEF(_SILVER)
 	; morn
 	db 16, IGGLYBUFF
-	db 17, METAPOD
+	db 17, KAKUNA
 	db 18, SPEAROW
 	db 16, SPEAROW
 	db 18, CUBONE
@@ -626,7 +626,7 @@ JohtoGrassWildMons:
 	db 19, JIGGLYPUFF
 	; day
 	db 16, IGGLYBUFF
-	db 17, METAPOD
+	db 17, KAKUNA
 	db 18, SPEAROW
 	db 16, SPEAROW
 	db 18, CUBONE
