@@ -560,28 +560,33 @@ ZubatEvosAttacks:
 	db EVOLVE_LEVEL, 22, GOLBAT
 	db 0 ; no more evolutions
 	db 1, LEECH_LIFE
-	db 6, SUPERSONIC
-	db 12, BITE
-	db 17, WING_ATTACK
-	db 22, CONFUSE_RAY
-	db 27, SWIFT
+	db 5, SUPERSONIC
+	db 9, BITE
+	db 13, SWIFT
+	db 17, CONFUSE_RAY
+	db 21, HAZE
+	db 25, WING_ATTACK
+	db 29, CRUNCH
 	db 33, MEAN_LOOK
-	db 40, HAZE
+	db 37, TOXIC
 	db 0 ; no more level-up moves
 
 GolbatEvosAttacks:
 	db EVOLVE_HAPPINESS, TR_ANYTIME, CROBAT
+CrobatEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SCREECH
 	db 1, LEECH_LIFE
 	db 1, SUPERSONIC
-	db 6, SUPERSONIC
-	db 12, BITE
-	db 17, WING_ATTACK
-	db 24, CONFUSE_RAY
-	db 30, SWIFT
-	db 37, MEAN_LOOK
-	db 45, HAZE
+	db 5, SUPERSONIC
+	db 9, BITE
+	db 13, SWIFT
+	db 17, CONFUSE_RAY
+	db 21, HAZE
+	db 27, WING_ATTACK
+	db 33, CRUNCH
+	db 39, MEAN_LOOK
+	db 45, TOXIC
 	db 0 ; no more level-up moves
 
 OddishEvosAttacks:
@@ -1968,10 +1973,6 @@ LaprasEvosAttacks:
 DittoEvosAttacks:
 	db EVOLVE_ITEM, METAL_COAT, METTO
 	db EVOLVE_TRADE, METAL_COAT, METTO
-	db 0 ; no more evolutions
-	db 1, TRANSFORM
-	db 0 ; no more level-up moves
-	
 MettoEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TRANSFORM
@@ -2558,20 +2559,6 @@ TuheadEvosAttacks:
 	db 37, AGILITY
     db 43, PIN_MISSILE
 	db 50, PSYCHIC_M
-	db 0 ; no more level-up moves
-
-CrobatEvosAttacks:
-	db 0 ; no more evolutions
-	db 1, SCREECH
-	db 1, LEECH_LIFE
-	db 1, SUPERSONIC
-	db 6, SUPERSONIC
-	db 12, BITE
-	db 17, WING_ATTACK
-	db 24, CONFUSE_RAY
-	db 30, SWIFT
-	db 37, MEAN_LOOK
-	db 45, HAZE
 	db 0 ; no more level-up moves
 
 KotoraEvosAttacks:
