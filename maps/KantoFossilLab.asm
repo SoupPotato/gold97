@@ -11,11 +11,11 @@ KantoFossilLab_MapScripts:
 KantoFossilLabFossilScientist:
 	faceplayer
 	opentext
-	checkitem CLEAR_BELL; helix fossil
+	checkitem HELIX_FOSSIL
 	iftrue .GetOmanyte
-	checkitem SILVER_WING; dome fossil
+	checkitem DOME_FOSSIL
 	iftrue .GetKabuto
-	checkitem OLD_AMBER ; old amber
+	checkitem OLD_AMBER 
 	iftrue .GetAerodactyl
 	writetext FossilScientistIntroText
 	waitbutton
@@ -62,7 +62,7 @@ KantoFossilLabFossilScientist:
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	givepoke OMANYTE, 15
-	takeitem CLEAR_BELL
+	takeitem HELIX_FOSSIL
 	writetext IfYouHaveAnyOtherFossilsText
 	waitbutton
 	closetext
@@ -115,7 +115,7 @@ KantoFossilLabFossilScientist:
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	givepoke KABUTO, 15
-	takeitem SILVER_WING
+	takeitem DOME_FOSSIL
 	writetext IfYouHaveAnyOtherFossilsText
 	waitbutton
 	closetext

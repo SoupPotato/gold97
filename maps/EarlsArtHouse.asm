@@ -48,11 +48,12 @@ EarlScript:
 	special BillsGrandfather
 	iffalse .SaidNo
 	ifnotequal MADAME, .WrongPokemon
-	scall .CorrectPokemon
+	writetext EarlShownPokemonText
+	buttonsound
 	setevent EVENT_SHOWED_MADAME_TO_EARL
 	jump .ShowedMadame
 
-.GotEverstone:
+.GotExpShare:
 	writetext EarlDratiniText
 	buttonsound
 	writetext EarlAskToSeeMonText
@@ -62,29 +63,38 @@ EarlScript:
 	special BillsGrandfather
 	iffalse .SaidNo
 	ifnotequal DRATINI, .WrongPokemon; edit here, change back to dratini
-	scall .CorrectPokemon
-	clearevent EVENT_EARL_DRATINI_STATUE_GONE
+	writetext EarlShownPokemonText
+	buttonsound
 	setevent EVENT_SHOWED_DRATINI_TO_EARL
 	jump .ShowedDratini
 
 
 .ShowedDratini:
+	checkevent EVENT_GOT_LUCKY_EGG_FROM_EARL
+	iftrue .GotLuckyEgg
 	scall .ReceiveItem
-	verbosegiveitem EXP_SHARE
-	iffalse .BagFull
-	setevent EVENT_GOT_EXP_SHARE_FROM_EARL
+	verbosegiveitem LUCKY_EGG
+	iffalse .BagFull	
+	setevent EVENT_GOT_LUCKY_EGG_FROM_EARL
+	clearevent EVENT_EARL_DRATINI_STATUE_GONE
 	closetext
 	end
 
 .ShowedMadame:
-	checkevent EVENT_GOT_EVERSTONE_FROM_EARL
-	iftrue .GotEverstone
+	checkevent EVENT_GOT_EXP_SHARE_FROM_EARL
+	iftrue .GotExpShare
 	scall .ReceiveItem
-	verbosegiveitem EVERSTONE
+	verbosegiveitem EXP_SHARE
 	iffalse .BagFull
-	setevent EVENT_GOT_EVERSTONE_FROM_EARL
+	setevent EVENT_GOT_EXP_SHARE_FROM_EARL
 	clearevent EVENT_EARL_BIRD_STATUE_GONE
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	closetext
+	end
+	
+.GotLuckyEgg
+	writetext EarlShownAllThePokemonText
+	waitbutton
 	closetext
 	end
 
@@ -97,11 +107,6 @@ EarlScript:
 	writetext EarlYouDontHaveItTextText
 	waitbutton
 	closetext
-	end
-
-.CorrectPokemon:
-	writetext EarlShownPokemonText
-	buttonsound
 	end
 
 .ReceiveItem:

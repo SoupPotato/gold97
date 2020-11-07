@@ -821,11 +821,11 @@
 	const EVENT_SHOWED_STARYU_TO_BILLS_GRANDPA
 	const EVENT_EARL_DRATINI_STATUE_GONE
 	const EVENT_EARL_BIRD_STATUE_GONE
-	const EVENT_GOT_EVERSTONE_FROM_EARL ; 320
+	const EVENT_GOT_EXP_SHARE_FROM_EARL ; 320
 	const EVENT_GOT_LEAF_STONE_FROM_BILLS_GRANDPA; used to make youngster disappear from over world and go to...
 	const EVENT_GOT_WATER_STONE_FROM_BILLS_GRANDPA; ...the n64 house, this makes him appear
 	const EVENT_GOT_FIRE_STONE_FROM_BILLS_GRANDPA; used to trigger the search for n64 trainers
-	const EVENT_GOT_EXP_SHARE_FROM_EARL
+	const EVENT_GOT_LUCKY_EGG_FROM_EARL
 	const EVENT_LISTENED_TO_INITIAL_RADIO
 ; More Crystal-exclusive events in Johto
 	const EVENT_WALL_OPENED_IN_HO_OH_CHAMBER

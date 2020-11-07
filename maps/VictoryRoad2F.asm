@@ -21,8 +21,7 @@ VictoryRoad2F_MapScripts:
 	
 
 VictoryRoad2FHelixFossil:
-	itemball CLEAR_BELL
-
+	itemball HELIX_FOSSIL
 	
 Route45Nugget:
 	itemball NUGGET

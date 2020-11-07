@@ -2815,7 +2815,7 @@ SageGroup:
 	db -1 ; end
 
 	; SAGE (3)
-	db "JIN@", TRAINERTYPE_NORMAL ;used
+	db "JIN@", TRAINERTYPE_NORMAL ; unused
 	db  9, PUDDIPUP
 	db -1 ; end
 
@@ -2827,7 +2827,8 @@ SageGroup:
 
 	; SAGE (5)
 	db "JEFFREY@", TRAINERTYPE_NORMAL ;used
-	db 9, RINRING
+	db 8, RINRING
+	db 8, PUDDIPUP
 	db -1 ; end
 
 	; SAGE (6)
@@ -2845,14 +2846,15 @@ SageGroup:
 
 	; SAGE (8)
 	db "NEAL@", TRAINERTYPE_NORMAL ;used
-	db  10, HOOTHOOT
+	db  8, HOOTHOOT
+	db  9, KURSTRAW
 	db -1 ; end
 
 	; SAGE (9)
 	db "LI@", TRAINERTYPE_NORMAL ;used
 	db 7, BELLSPROUT
 	db 7, ODDISH
-	db 9, HOOTHOOT
+	db 8, HOOTHOOT
 	db -1 ; end
 
 	; SAGE (10)
@@ -2870,7 +2872,7 @@ SageGroup:
 	db -1 ; end
 
 	; SAGE (12)
-	db "KOJI@", TRAINERTYPE_NORMAL ;used
+	db "KOJI@", TRAINERTYPE_NORMAL ;unused
 	db 10, PARAMITE
 	db 10, HOOTHOOT
 	db -1 ; end
@@ -2901,7 +2903,7 @@ MediumGroup:
 	db -1 ; end
 
 	; MEDIUM (4)
-	db "MARGRET@", TRAINERTYPE_NORMAL ;used
+	db "MARGRET@", TRAINERTYPE_NORMAL ; unused
 	db 10, ODDISH
 	db -1 ; end
 

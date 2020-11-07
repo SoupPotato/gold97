@@ -2,7 +2,7 @@
 	const SPROUTTOWER2F_MEDIUM1
 	const SPROUTTOWER2F_MEDIUM2
 	const SPROUTTOWER2F_MEDIUM3
-	const SPROUTTOWER2F_MEDIUM4
+	;const SPROUTTOWER2F_MEDIUM4
 	const SPROUTTOWER2F_POKE_BALL
 
 BrassTower2F_MapScripts:
@@ -125,32 +125,32 @@ MediumBethanyAfterBattleText:
 	cont "all can feel it."
 	done
 	
-TrainerMediumMargret:
-	trainer MEDIUM, MARGRET, EVENT_BEAT_MEDIUM_MARGRET, MediumMargretSeenText, MediumMargretBeatenText, 0, .Script
+;TrainerMediumMargret:
+;	trainer MEDIUM, MARGRET, EVENT_BEAT_MEDIUM_MARGRET, MediumMargretSeenText, MediumMargretBeatenText, 0, .Script
 
-.Script:
-	endifjustbattled
-	opentext
-	writetext MediumMargretAfterBattleText
-	waitbutton
-	closetext
-	end
+;.Script:
+;	endifjustbattled
+;	opentext
+;	writetext MediumMargretAfterBattleText
+;	waitbutton
+;	closetext
+;	end
 
 
-MediumMargretSeenText:
-	text "Ah! You disturbed"
-	line "me!"
-	done
+;MediumMargretSeenText:
+;	text "Ah! You disturbed"
+;	line "me!"
+;	done
 
-MediumMargretBeatenText:
-	text "It is important to"
-	line "keep focused."
-	done
+;MediumMargretBeatenText:
+;	text "It is important to"
+;	line "keep focused."
+;	done
 
-MediumMargretAfterBattleText:
-	text "Focus on the"
-	line "messages."
-	done
+;MediumMargretAfterBattleText:
+;	text "Focus on the"
+;	line "messages."
+;	done
 
 
 BrassTower2F_MapEvents:
@@ -165,9 +165,9 @@ BrassTower2F_MapEvents:
 	db 1 ; bg events
 	bg_event  8,  1, BGEVENT_READ, BrassTower2FSign
 
-	db 5 ; object events
-	object_event  10,  2, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerMediumMartha, EVENT_OLD_CITY_EARL
-	object_event  1,  5, SPRITE_GRANNY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerMediumGrace, EVENT_OLD_CITY_EARL
+	db 4 ; object events
+	object_event 10,  2, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerMediumMartha, EVENT_OLD_CITY_EARL
+	object_event  1,  7, SPRITE_GRANNY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerMediumGrace, EVENT_OLD_CITY_EARL
 	object_event  9,  6, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerMediumBethany, EVENT_OLD_CITY_EARL
-	object_event  7,  9, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerMediumMargret, EVENT_OLD_CITY_EARL
+	;object_event  7, 10, SPRITE_GRANNY, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerMediumMargret, EVENT_OLD_CITY_EARL
 	object_event 11,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, BrassTower2FXAccuracy, EVENT_SPROUT_TOWER2F_X_ACCURACY
