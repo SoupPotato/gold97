@@ -2,7 +2,7 @@
 	const TINTOWER4F_POKE_BALL1
 	const TINTOWER4F_SAGE1
 	const TINTOWER4F_SAGE2
-	const TINTOWER4F_SAGE3
+	;const TINTOWER4F_SAGE3
 
 BrassTower4F_MapScripts:
 	db 0 ; scene scripts
@@ -89,33 +89,33 @@ SageGakuAfterBattleText:
 	line "thoughts in a day."
 	done
 	
-TrainerSageKoji:
-	trainer SAGE, KOJI, EVENT_BEAT_SAGE_KOJI, SageKojiSeenText, SageKojiBeatenText, 0, .Script
+;TrainerSageKoji:
+;	trainer SAGE, KOJI, EVENT_BEAT_SAGE_KOJI, SageKojiSeenText, SageKojiBeatenText, 0, .Script
 
-.Script:
-	endifjustbattled
-	opentext
-	writetext SageKojiAfterBattleText
-	waitbutton
-	closetext
-	end
+;.Script:
+;	endifjustbattled
+;	opentext
+;	writetext SageKojiAfterBattleText
+;	waitbutton
+;	closetext
+;	end
 
 
-SageKojiSeenText:
-	text "I one day wish"
-	line "to see the sacred"
-	para "bird with my own"
-	line "eyes."
-	done
+;SageKojiSeenText:
+;	text "I one day wish"
+;	line "to see the sacred"
+;	para "bird with my own"
+;	line "eyes."
+;	done
 
-SageKojiBeatenText:
-	text "It shall be."
-	done
+;SageKojiBeatenText:
+;	text "It shall be."
+;	done
 
-SageKojiAfterBattleText:
-	text "I hope you have"
-	line "felt enlightened."
-	done
+;SageKojiAfterBattleText:
+;	text "I hope you have"
+;	line "felt enlightened."
+;	done
 
 
 BrassTower4F_MapEvents:
@@ -130,8 +130,8 @@ BrassTower4F_MapEvents:
 	db 1 ; bg events
 	bg_event  8,  1, BGEVENT_READ, SproutTower4FSign
 
-	db 4 ; object events
+	db 3 ; object events
 	object_event  0,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, BrassTower4FEscapeRope, EVENT_TIN_TOWER_4F_ESCAPE_ROPE
-	object_event  4,  9, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerSageLi, EVENT_OLD_CITY_EARL
+	object_event  3,  1, SPRITE_SAGE, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerSageLi, EVENT_OLD_CITY_EARL
 	object_event  9,  9, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerSageGaku, EVENT_OLD_CITY_EARL
-	object_event  3,  1, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerSageKoji, EVENT_OLD_CITY_EARL
+	;object_event  3,  1, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerSageKoji, EVENT_OLD_CITY_EARL

@@ -2,7 +2,7 @@
 	const SPROUTTOWER1F_SAGE1
 	const SPROUTTOWER1F_SAGE2
 	const SPROUTTOWER1F_SAGE3
-	const SPROUTTOWER1F_SAGE4
+	;const SPROUTTOWER1F_SAGE4
 	const SPROUTTOWER1F_POKE_BALL
 
 BrassTower1F_MapScripts:
@@ -91,39 +91,38 @@ SageNicoAfterBattleText:
 	cont "already stood."
 	done
 
-TrainerSageJin:
-	trainer SAGE, JIN, EVENT_BEAT_SAGE_JIN, SageJinSeenText, SageJinBeatenText, 0, .Script
+;TrainerSageJin:
+;	trainer SAGE, JIN, EVENT_BEAT_SAGE_JIN, SageJinSeenText, SageJinBeatenText, 0, .Script
 
-.Script:
-	endifjustbattled
-	opentext
-	writetext SageJinAfterBattleText
-	waitbutton
-	closetext
-	end
+;.Script:
+;	endifjustbattled
+;	opentext
+;	writetext SageJinAfterBattleText
+;	waitbutton
+;	closetext
+;	end
 
 
-SageJinSeenText:
-	text "All #MON have"
-	line "a lesson to teach"
-	cont "us."
-	para "It is our"
-	line "responsibility to"
-	para "take the time to"
-	line "stop and listen."
-	
-	done
+;SageJinSeenText:
+;	text "All #MON have"
+;	line "a lesson to teach"
+;	cont "us."
+;	para "It is our"
+;	line "responsibility to"
+;	para "take the time to"
+;	line "stop and listen."	
+;	done
 
-SageJinBeatenText:
-	text "Do you hear?"
-	done
+;SageJinBeatenText:
+;	text "Do you hear?"
+;	done
 
-SageJinAfterBattleText:
-	text "#MON teach much"
-	line "to humans."
-	para "More than most"
-	line "people realize."
-	done
+;SageJinAfterBattleText:
+;	text "#MON teach much"
+;	line "to humans."
+;	para "More than most"
+;	line "people realize."
+;	done
 	
 TrainerSageTroy:
 	trainer SAGE, TROY, EVENT_BEAT_SAGE_TROY, SageTroySeenText, SageTroyBeatenText, 0, .Script
@@ -196,9 +195,9 @@ BrassTower1F_MapEvents:
 	bg_event  4,  1, BGEVENT_READ, BrassTower1FSign
 	
 
-	db 5 ; object events
+	db 4 ; object events
 	object_event  0,  2, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSageChow, EVENT_OLD_CITY_EARL
 	object_event  2, 11, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerSageNico, EVENT_OLD_CITY_EARL
-	object_event  7,  1, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerSageJin, EVENT_OLD_CITY_EARL
-	object_event 11,  7, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerSageTroy, EVENT_OLD_CITY_EARL
+	;object_event  7,  1, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerSageJin, EVENT_OLD_CITY_EARL
+	object_event 10,  6, SPRITE_SAGE, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerSageTroy, EVENT_OLD_CITY_EARL
 	object_event  0,  5, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, BrassTower1FParlyzHeal, EVENT_SPROUT_TOWER1F_PARLYZ_HEAL
