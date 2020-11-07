@@ -52,7 +52,7 @@ EarlScript:
 	setevent EVENT_SHOWED_MADAME_TO_EARL
 	jump .ShowedMadame
 
-.GotEverstone:
+.GotExpShare:
 	writetext EarlDratiniText
 	buttonsound
 	writetext EarlAskToSeeMonText
@@ -70,7 +70,7 @@ EarlScript:
 
 .ShowedDratini:
 	scall .ReceiveItem
-	verbosegiveitem EXP_SHARE
+	verbosegiveitem LUCKY_EGG
 	iffalse .BagFull
 	setevent EVENT_GOT_EXP_SHARE_FROM_EARL
 	closetext
@@ -78,9 +78,9 @@ EarlScript:
 
 .ShowedMadame:
 	checkevent EVENT_GOT_EVERSTONE_FROM_EARL
-	iftrue .GotEverstone
+	iftrue .GotExpShare
 	scall .ReceiveItem
-	verbosegiveitem EVERSTONE
+	verbosegiveitem EXP_SHARE
 	iffalse .BagFull
 	setevent EVENT_GOT_EVERSTONE_FROM_EARL
 	clearevent EVENT_EARL_BIRD_STATUE_GONE
