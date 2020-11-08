@@ -291,8 +291,8 @@ OakSpeechText:
 	para "But TEAM ROCKET"
 	line "returning..."
 	
-	para "After three years,"
-	line "why now?"
+	para "After all this"
+	line "time, why now?"
 	
 	para "BLUE, we best re"
 	line "-turn to the lab"
