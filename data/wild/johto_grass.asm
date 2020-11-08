@@ -322,7 +322,7 @@ JohtoGrassWildMons:
 	db 12, GEODUDE
 	db 12, SANDSHREW
 	db 12, ZUBAT
-	db 14, RATTATA
+	db 14, KOFFING
 	db 13, MACHOP
 	db 12, ONIX
 	db 14, ONIX
@@ -330,7 +330,7 @@ JohtoGrassWildMons:
 	db 12, GEODUDE
 	db 12, SANDSHREW
 	db 12, ZUBAT
-	db 14, RATTATA
+	db 14, KOFFING
 	db 13, MACHOP
 	db 12, ONIX
 	db 14, ONIX
@@ -338,7 +338,7 @@ JohtoGrassWildMons:
 	db 12, GEODUDE
 	db 12, SANDSHREW
 	db 12, ZUBAT
-	db 14, RATTATA
+	db 14, KOFFING
 	db 13, MACHOP
 	db 12, ONIX
 	db 14, ONIX
@@ -349,7 +349,7 @@ JohtoGrassWildMons:
 	db 12, GEODUDE
 	db 12, SANDSHREW
 	db 12, ZUBAT
-	db 14, RATTATA
+	db 14, KOFFING
 	db 13, MACHOP
 	db 12, ONIX
 	db 14, ONIX
@@ -357,7 +357,7 @@ JohtoGrassWildMons:
 	db 12, GEODUDE
 	db 12, SANDSHREW
 	db 12, ZUBAT
-	db 14, RATTATA
+	db 14, KOFFING
 	db 13, MACHOP
 	db 12, ONIX
 	db 14, ONIX
@@ -365,7 +365,7 @@ JohtoGrassWildMons:
 	db 12, GEODUDE
 	db 12, SANDSHREW
 	db 12, ZUBAT
-	db 14, RATTATA
+	db 14, KOFFING
 	db 13, MACHOP
 	db 12, ONIX
 	db 14, ONIX
@@ -376,7 +376,7 @@ JohtoGrassWildMons:
 	db 12, GEODUDE
 	db 12, SANDSHREW
 	db 14, ZUBAT
-	db 14, RATTATA
+	db 14, KOFFING
 	db 12, MARILL
 	db 14, ONIX
 	db 14, TURBAN
@@ -384,7 +384,7 @@ JohtoGrassWildMons:
 	db 12, GEODUDE
 	db 12, SANDSHREW
 	db 14, ZUBAT
-	db 14, RATTATA
+	db 14, KOFFING
 	db 12, MARILL
 	db 14, ONIX
 	db 14, TURBAN
@@ -392,7 +392,7 @@ JohtoGrassWildMons:
 	db 12, GEODUDE
 	db 12, SANDSHREW
 	db 14, ZUBAT
-	db 14, RATTATA
+	db 14, KOFFING
 	db 12, MARILL
 	db 14, ONIX
 	db 14, TURBAN
@@ -403,7 +403,7 @@ JohtoGrassWildMons:
 	db 12, GEODUDE
 	db 12, SANDSHREW
 	db 12, ZUBAT
-	db 14, RATTATA
+	db 14, KOFFING
 	db 13, MACHOP
 	db 12, ONIX
 	db 14, ONIX
@@ -411,7 +411,7 @@ JohtoGrassWildMons:
 	db 12, GEODUDE
 	db 12, SANDSHREW
 	db 12, ZUBAT
-	db 14, RATTATA
+	db 14, KOFFING
 	db 13, MACHOP
 	db 12, ONIX
 	db 14, ONIX
@@ -419,7 +419,7 @@ JohtoGrassWildMons:
 	db 12, GEODUDE
 	db 12, SANDSHREW
 	db 12, ZUBAT
-	db 14, RATTATA
+	db 14, KOFFING
 	db 13, MACHOP
 	db 12, ONIX
 	db 14, ONIX
@@ -430,7 +430,7 @@ JohtoGrassWildMons:
 	db 12, GEODUDE
 	db 12, SANDSHREW
 	db 12, ZUBAT
-	db 14, RATTATA
+	db 14, KOFFING
 	db 13, MACHOP
 	db 12, ONIX
 	db 14, ONIX
@@ -438,7 +438,7 @@ JohtoGrassWildMons:
 	db 12, GEODUDE
 	db 12, SANDSHREW
 	db 12, ZUBAT
-	db 14, RATTATA
+	db 14, KOFFING
 	db 13, MACHOP
 	db 12, ONIX
 	db 14, ONIX
@@ -446,7 +446,7 @@ JohtoGrassWildMons:
 	db 12, GEODUDE
 	db 12, SANDSHREW
 	db 12, ZUBAT
-	db 14, RATTATA
+	db 14, KOFFING
 	db 13, MACHOP
 	db 12, ONIX
 	db 14, ONIX
