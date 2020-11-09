@@ -474,13 +474,13 @@ PokemaniacDonaldAfterBattleText:
 	line "#DEX? Here's a"
 	cont "hot tip."
 
-	para "Some trainers will"
-	line "phone you if they"
-	para "see any rare"
-	line "#MON."
-	para "You'll have to"
-	line "figure out who"
-	cont "they are."
+	para "Some rare #MON"
+	line "can also appear in"
+	cont "in swarms."
+
+	para "You can find them"
+	line "much easier when"
+	cont "they do."
 	done
 
 

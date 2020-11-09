@@ -395,8 +395,8 @@ FledglingHugoSeenText:
 	done
 
 FledglingHugoBeatenText:
-	text "Wow, you dont seem"
-	line "new..."
+	text "Wow, you don't"
+	line "seem new..."
 	done
 
 FledglingHugoAfterBattleText:

@@ -40,7 +40,7 @@ MeetKenScript:
 PlayersHouse2F_Ken:
 	faceplayer
 	opentext
-	checkevent EVENT_TALKED_TO_MOM_AT_BEGINNING
+	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
 	iftrue .KenPart2
 	writetext KenGreeting
 	waitbutton
@@ -49,7 +49,7 @@ PlayersHouse2F_Ken:
 	end
 	
 .KenPart2
-	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
+	checkevent EVENT_GOT_TM31_MUD_SLAP
 	iftrue .KenPart3
 	writetext KenGreeting2
 	waitbutton

@@ -248,7 +248,7 @@ TeknosCityRocket1Text:
 	
 	para "Sorry kid, we"
 	line "grown-ups have"
-	cont "buisness here!"
+	cont "business here!"
 	done
 	
 TeknosCityRocket2Text:
