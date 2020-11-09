@@ -107,15 +107,16 @@ Route102LassScript:
 	end
 
 
-TrainerSchoolboyAlan1:
-	trainer SCHOOLBOY, ALAN, EVENT_BEAT_SCHOOLBOY_ALAN, SchoolboyAlan1SeenText, SchoolboyAlan1BeatenText, 0, .Script
+TrainerSchoolboyAlan:
+	trainer SCHOOLBOY, ALAN, EVENT_BEAT_SCHOOLBOY_ALAN, SchoolboyAlanSeenText, SchoolboyAlanBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
 	opentext
-	writetext UnknownText_0x1947aa
+	writetext SchoolboyAlanAfterBattleText
 	waitbutton
 	closetext
+	end
 
 TrainerPsychicMark:
 	trainer PSYCHIC_T, MARK, EVENT_BEAT_PSYCHIC_MARK, PsychicMarkSeenText, PsychicMarkBeatenText, 0, .Script
@@ -392,18 +393,18 @@ PsychicMarkAfterBattleText:
 	line "was thinking."
 	done
 
-SchoolboyAlan1SeenText:
+SchoolboyAlanSeenText:
 	text "Thanks to my stud-"
 	line "ies, I'm ready for"
 	cont "any #MON!"
 	done
 
-SchoolboyAlan1BeatenText:
+SchoolboyAlanBeatenText:
 	text "Oops! Computation"
 	line "error?"
 	done
 
-UnknownText_0x1947aa:
+SchoolboyAlanAfterBattleText:
 	text "Darn. I study five"
 	line "hours a day too."
 
@@ -593,7 +594,7 @@ Route102_MapEvents:
 
 	db 12 ; object events
 	object_event  8, 9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerPsychicMark, -1
-	object_event 29,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TrainerSchoolboyAlan1, -1
+	object_event 29,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TrainerSchoolboyAlan, -1
 	object_event 50,  7, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route102LassScript, -1
 	object_event 39,  5, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route102FruitTree, -1
 	object_event 40,  8, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ArthurScript, EVENT_ROUTE_36_ARTHUR_OF_THURSDAY

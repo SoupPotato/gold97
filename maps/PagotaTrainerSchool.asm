@@ -1,9 +1,9 @@
 	const_def 2 ; object constants
 	const EARLSPOKEMONACADEMY_EARL
-	const EARLSPOKEMONACADEMY_YOUNGSTER1
+	const EARLSPOKEMONACADEMY_JANINE
 	const EARLSPOKEMONACADEMY_GAMEBOY_KID1
 	const EARLSPOKEMONACADEMY_GAMEBOY_KID2
-	const EARLSPOKEMONACADEMY_YOUNGSTER2
+	const EARLSPOKEMONACADEMY_YOUNGSTER
 	const EARLSPOKEMONACADEMY_POKEDEX
 
 PagotaTrainerSchool_MapScripts:
@@ -37,7 +37,13 @@ AcademyEarl:
 	end
 
 PagotaTrainerSchoolYoungster1Script:
-	jumptextfaceplayer PagotaTrainerSchoolYoungster1Text
+	faceplayer
+	opentext
+	writetext PagotaTrainerSchoolYoungster1Text
+	waitbutton
+	closetext
+	turnobject EARLSPOKEMONACADEMY_JANINE, UP
+	end
 
 PagotaTrainerSchoolGameboyKid1Script:
 	faceplayer
@@ -134,6 +140,10 @@ AcademyNotebook:
 	iffalse .Done
 	writetext AcademyNotebookText3
 	waitbutton
+	turnobject EARLSPOKEMONACADEMY_JANINE, LEFT
+	writetext AcademyJanineText_Book
+	waitbutton
+	turnobject EARLSPOKEMONACADEMY_JANINE, UP
 .Done:
 	closetext
 	end
@@ -389,12 +399,15 @@ AcademyNotebookText3:
 
 	para "The next page"
 	line "is… Blank!"
-
-	para "Boy: E-he-he…"
+	done
+	
+AcademyJanineText_Book:
+	text "Girl: E-he-he…"
 
 	para "I haven't written"
 	line "anymore…"
 	done
+	
 
 AcademyStickerMachineText:
 	text "This super machine"

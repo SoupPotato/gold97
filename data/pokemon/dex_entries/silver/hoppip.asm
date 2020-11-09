@@ -6,5 +6,5 @@
 	next "grip the ground"
 
 	page "firmly with its"
-	next "feet to keep from"
+	next "tail to keep from"
 	next "being blown away.@"
