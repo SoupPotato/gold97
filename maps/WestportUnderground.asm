@@ -471,16 +471,10 @@ PokemaniacDonaldBeatenText:
 
 PokemaniacDonaldAfterBattleText:
 	text "Are you making a"
-	line "#DEX? Here's a"
-	cont "hot tip."
+	line "#DEX?"
 
-	para "Some rare #MON"
-	line "can also appear in"
-	cont "in swarms."
-
-	para "You can find them"
-	line "much easier when"
-	cont "they do."
+	para "Wow, I'm so"
+	line "jealous!"
 	done
 
 
