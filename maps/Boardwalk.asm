@@ -7,6 +7,7 @@
 	const BOARDWALK_YOUNGSTER
 	const BOARDWALK_INSTRUCTOR
 	const BOARDWALK_POKEFAN_M
+	const BOARDWALK_ITEMBALL
 
 Boardwalk_MapScripts:
 	db 0 ; scene scripts
@@ -206,6 +207,8 @@ BoardwalkSign2:
 BoardwalkTrainerTips:
 	jumptext BoardwalkTrainerTipsText
 
+BoardwalkAmuletCoin:
+	itemball AMULET_COIN
 
 FledglingHidalgoSeenText:
 	text "Can I try battling"
@@ -481,7 +484,7 @@ Boardwalk_MapEvents:
 	bg_event  8, 24, BGEVENT_READ, BoardwalkSign2
 	bg_event 12, 40, BGEVENT_READ, BoardwalkTrainerTips
 
-	db 8 ; object events
+	db 9 ; object events
 	object_event 15, 16, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerFledglingHidalgo, -1
 	object_event  9, 32, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TrainerPokemaniacBrent, -1
 	object_event  8, 11, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerPokemaniacRon, -1
@@ -490,3 +493,4 @@ Boardwalk_MapEvents:
 	object_event  8, 42, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerCamperSpencer, -1
 	object_event 13, 24, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerInstructorCliff, -1
 	object_event  9, 24, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, MoveTutorScript, 0
+	object_event 14, 28, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, BoardwalkAmuletCoin, EVENT_BOARDWALK_AMULET_COIN

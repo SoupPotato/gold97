@@ -51,8 +51,8 @@ TrainerCooltrainermNick:
 	end
 	
 
-EndonCaveB1FEther:
-	itemball ETHER
+EndonCaveB1FSmokeBall:
+	itemball SMOKE_BALL
 
 BirdKeeperTheoSeenText:
 	text "My beautiful birds"
@@ -127,5 +127,5 @@ EndonCaveB1F_MapEvents:
 	object_event 34, 13, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerSailorTerrell, -1
 	object_event 48, 13, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerCooltrainermNick, -1
 	object_event  8,  9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerBirdKeeperTheo, -1
-	object_event 21,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, EndonCaveB1FEther, EVENT_OLIVINE_LIGHTHOUSE_3F_ETHER
+	object_event 21,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, EndonCaveB1FSmokeBall, EVENT_OLIVINE_LIGHTHOUSE_3F_ETHER
 	object_event  2,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route45Elixer, EVENT_ROUTE_45_ELIXER
