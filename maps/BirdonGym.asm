@@ -434,7 +434,7 @@ BirdonGym_MapEvents:
 	warp_event  3,  5, BIRDON_GYM, 3
 	warp_event  3,  4, BIRDON_GYM, 3
 	warp_event 19,  4, BIRDON_GYM, 3
-	warp_event 15,  2, BIRDON_GYM, 3
+	warp_event 14,  2, BIRDON_GYM, 3
 	warp_event 13,  8, BIRDON_GYM, 3
 	warp_event 13,  7, BIRDON_GYM, 3
 
@@ -447,7 +447,7 @@ BirdonGym_MapEvents:
 	db 6 ; object events
 	object_event 10,  1, SPRITE_MORTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, BirdonGymMortyScript, -1
 	object_event  5,  7, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BirdonGymGuyScript, -1
-	object_event  2,  2, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerMediumRebecca, -1
+	object_event  2,  2, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerMediumRebecca, -1
 	object_event 13,  6, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerMediumDoris, -1
 	object_event 17,  4, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerSageMasa, -1
 	object_event  6,  4, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerSageEdmond, -1

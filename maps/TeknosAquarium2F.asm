@@ -183,7 +183,7 @@ GruntM1BeatenText:
 
 TrainerGruntM1WhenTalkText:
 	text "Drat!"
-	para "I can't beleive"
+	para "I can't believe"
 	line "our plan was"
 	cont "foiled by a kid!"
 

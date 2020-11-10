@@ -19,6 +19,11 @@ ReturnFromMapSetupScript::
 	jr z, .nationalparkgate
 
 	call GetMapEnvironment
+	ld a, [wMapGroup]
+	cp GROUP_SILENT_HILLS	
+	jr z, .not_gate
+	cp GROUP_DRAGONS_MAW	
+	jr z, .not_gate
 	cp GATE
 	jr nz, .not_gate
 

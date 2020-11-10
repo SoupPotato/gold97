@@ -88,6 +88,7 @@ TrainerJugglerIrwin:
 	writetext JugglerIrwinAfterBattleText
 	waitbutton
 	closetext
+	end
 
 TrainerCamperIvan:
 	trainer CAMPER, IVAN, EVENT_BEAT_CAMPER_IVAN, CamperIvanSeenText, CamperIvanBeatenText, 0, .Script
@@ -185,8 +186,6 @@ CamperIvanAfterBattleText:
 	line "changes the moods"
 	cont "of wild #MON."
 	done
-
-
 
 PicnickerKimSeenText:
 	text "Have you been to"
