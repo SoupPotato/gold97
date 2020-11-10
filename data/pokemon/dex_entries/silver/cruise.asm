@@ -2,7 +2,7 @@
 	dw 207, 310 ; height, weight
 
 	db   "Its body is very"
-	next "moist and slick"
+	next "moist and slick,"
 	next "and is able to"
 
 	page "keep its skin wet"

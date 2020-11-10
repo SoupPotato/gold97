@@ -5,6 +5,6 @@
 	next "poor. However, its"
 	next "other senses are"
 
-	page "hightened and it"
+	page "heightened and it"
 	next "uses its vines to"
 	next "observe around it.@"

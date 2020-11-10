@@ -5,6 +5,6 @@
 	next "a cover for its"
 	next "general lack of"
 
-	page "intellegence and"
-	next "manuverability in"
+	page "intelligence and"
+	next "maneuverability in"
 	next "the water.@"

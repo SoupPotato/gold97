@@ -5,6 +5,6 @@
 	next "severely, rather"
 	next "than fighting with"
 
-	page "it's claws it will"
+	page "its claws, it will"
 	next "turn around and"
 	next "blast a heat wave.@"
