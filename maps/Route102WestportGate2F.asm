@@ -62,7 +62,7 @@ Route102WestportGate2FSign2Text:
 	text "<PLAY_G> peeked"
 	line "through the"
 	cont "telescope!"
-	para "Its the WESTPORT"
+	para "It's the WESTPORT"
 	line "RADIO TOWER!"
 	done
 	
