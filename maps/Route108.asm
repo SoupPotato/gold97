@@ -29,6 +29,7 @@ TrainerLassDana1:
 	writetext UnknownText_0x1a20ec
 	waitbutton
 	closetext
+	end
 
 TrainerBeautyOlivia:
 	trainer BEAUTY, OLIVIA, EVENT_BEAT_BEAUTY_OLIVIA, BeautyOliviaSeenText, BeautyOliviaBeatenText, 0, .Script
