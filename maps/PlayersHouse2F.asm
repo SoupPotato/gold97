@@ -249,7 +249,7 @@ PlayersHouse2F_MapEvents:
 	db 0, 0 ; filler
 
 	db 1 ; warp events
-	warp_event  9,  0, TEKNOS_AQUARIUM_1F, 1
+	warp_event  9,  0, PLAYER_HOUSE_1F, 3
 
 	db 1 ; coord events
 	coord_event  9,  1, SCENE_DEFAULT, MeetKenScript
