@@ -3670,8 +3670,8 @@ WarwolfEvosAttacks:
 	db 18, SAFEGUARD
 	db 23, LOW_KICK
 	db 29, ICY_WIND
-	db 34, SLASH
-	db 35, ICE_PUNCH
+	db 31, ICE_PUNCH
+	db 35, SLASH
 	db 41, SCREECH
 	db 49, CONFUSE_RAY
 	db 56, BLIZZARD
