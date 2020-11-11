@@ -100,7 +100,7 @@ Route2NuggetHouseFisherText_GotNugget:
 PokemaniacCalvinSeenText:
 	text "I spend all my"
 	line "time in this cave,"
-	cont "rasing my #MON."
+	cont "raising my team."
 	para "I wish to battle"
 	line "with you."
 	done
