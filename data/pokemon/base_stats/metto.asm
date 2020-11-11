@@ -14,7 +14,7 @@
 	INCBIN "gfx/pokemon/metto/front.dimensions"
 	db 0, 0, 0, 0 ; padding
 	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_NONE, EGG_NONE ; egg groups
+	dn EGG_DITTO, EGG_DITTO ; egg groups
 
 	; tm/hm learnset
 	tmhm
