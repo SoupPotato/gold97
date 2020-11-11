@@ -159,4 +159,4 @@
 	tilecoll WALL, WATER, WALL, WATER ; 9e
 	tilecoll WALL, WATER, WALL, WATER ; 9f
 	tilecoll WALL, WATER, WALL, WATER ; a0
-	tilecoll WATER, WATER, WALL, WATER ; a1
+	tilecoll WATER, WATER, WATER, WATER ; a1

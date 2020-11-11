@@ -424,9 +424,17 @@ LoadSpecialMapOBPalette:
 .not_blackthorn_city
 	ld a, [wMapGroup]
 	cp GROUP_ROUTE_112
-	jr nz, .do_nothing
+	jr nz, .not_route_112
 	ld a, [wMapNumber]
 	cp MAP_ROUTE_112
+	jp z, .SnowOverTreeOBPalette
+	
+.not_route_112
+	ld a, [wMapGroup]
+	cp GROUP_FROSTPOINT_TOWN
+	jr nz, .do_nothing
+	ld a, [wMapNumber]
+	cp MAP_FROSTPOINT_TOWN
 	jp z, .SnowOverTreeOBPalette
 
 .do_nothing
