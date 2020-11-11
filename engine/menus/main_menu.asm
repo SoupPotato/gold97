@@ -304,7 +304,7 @@ MainMenu_PrintCurrentTimeAndDay:
 	
 	
 .VersionNumberPrint:
-	db "     v1.2@"
+	db "     v1.3@"
 
 
 .Days:
