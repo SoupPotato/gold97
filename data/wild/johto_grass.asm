@@ -214,7 +214,7 @@ JohtoGrassWildMons:
 	db 9, PUDDIPUP
 	db 7, NIDORAN_F
 	db 8, TANGTRIP
-	db 10, TANGTRIP
+	db 10, TRITALES
 	; day
 	db 8, HOPPIP
 	db 8, CHIX
@@ -222,7 +222,7 @@ JohtoGrassWildMons:
 	db 9, PUDDIPUP
 	db 7, NIDORAN_F
 	db 8, TANGTRIP
-	db 10, TANGTRIP
+	db 10, TRITALES
 	; nite
 	db 8, HOPPIP
 	db 8, ODDISH
@@ -240,7 +240,7 @@ JohtoGrassWildMons:
 	db 9, TRITALES
 	db 7, NIDORAN_M
 	db 8, TANGTRIP
-	db 10, TANGTRIP
+	db 10, PUDDIPUP
 	; day
 	db 8, HOPPIP
 	db 8, CHIX
@@ -248,7 +248,7 @@ JohtoGrassWildMons:
 	db 9, TRITALES
 	db 7, NIDORAN_M
 	db 8, TANGTRIP
-	db 10, TANGTRIP
+	db 10, PUDDIPUP
 	; nite
 	db 8, ODDISH
 	db 8, ODDISH
@@ -842,7 +842,7 @@ JohtoGrassWildMons:
 	db 28, GROWLITHE
 	db 26, FLAAFFY
 	db 28, MAGNEMITE
-	db 27, MAGNEMITE
+	db 27, VULPIX
 	; day
 	db 28, DODUO
 	db 27, RATTATA
@@ -850,7 +850,7 @@ JohtoGrassWildMons:
 	db 28, GROWLITHE
 	db 26, FLAAFFY
 	db 28, MAGNEMITE
-	db 27, MAGNEMITE
+	db 27, VULPIX
 	; nite
 	db 28, MURKROW
 	db 27, TWINZ
@@ -868,7 +868,7 @@ JohtoGrassWildMons:
 	db 28, VULPIX
 	db 26, FLAAFFY
 	db 28, MAGNEMITE
-	db 27, MAGNEMITE
+	db 27, GROWLITHE
 	; day
 	db 28, DODUO
 	db 27, RATTATA
@@ -876,7 +876,7 @@ JohtoGrassWildMons:
 	db 28, VULPIX
 	db 26, FLAAFFY
 	db 28, MAGNEMITE
-	db 27, MAGNEMITE
+	db 27, GROWLITHE
 	; nite
 	db 28, MURKROW
 	db 27, TWINZ
