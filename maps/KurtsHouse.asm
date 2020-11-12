@@ -426,7 +426,7 @@ KurtTalks:
 	line "complete the"
 	cont "#DEX would be"
 	cont "to take the"
-	cont "#MON league"
+	cont "#MON LEAGUE"
 	cont "challenge."
 	
 	para "There are many"
