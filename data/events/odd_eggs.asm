@@ -10,36 +10,36 @@ ENDM
 OddEggProbabilities:
 prob_total = 0
 ; Pichu
-	prob 6
-	prob 6
-	prob 2
-	prob 2
-; Igglybuff
-	prob 2
-	prob 8
-	prob 1
+	prob 4
+	prob 4
 	prob 3
-; Mime Jr
+	prob 3
+; Igglybuff/cleffa
 	prob 2
-	prob 8
+	prob 6
 	prob 1
+	prob 5
+; Mime Jr
+	prob 4
+	prob 4
+	prob 3
 	prob 3
 ; Smoochum
-	prob 10
-	prob 4
-; Magby
 	prob 8
+	prob 6
+; Magby
+	prob 6
 	prob 2
-	prob 3
+	prob 5
 	prob 1
 ; Elekid
-	prob 8
+	prob 6
 	prob 2
-	prob 3
+	prob 5
 	prob 1
 ; Tyrogue
-	prob 10
-	prob 4
+	prob 8
+	prob 6
 
 
 OddEggs:
@@ -150,9 +150,15 @@ OddEgg2:
 	bigdw 9 ; SDef
 	db "EGG@@@@@@@@"
 
+	IF DEF(_GOLD)
+	db CLEFFA
+	db NO_ITEM
+	db POUND, CHARM, ENCORE, DIZZY_PUNCH
+	ELIF DEF(_SILVER)
 	db IGGLYBUFF
 	db NO_ITEM
-	db SING, CHARM, DIZZY_PUNCH, 0
+	db POUND, CHARM, SING, DIZZY_PUNCH
+	ENDC
 	dw 04096 ; OT ID
 	dt 125 ; Exp
 	; Stat exp
@@ -162,7 +168,11 @@ OddEgg2:
 	bigdw 0
 	bigdw 0
 	db $9a, $aa ; DVs
-	db 15, 20, 10, 0 ; PP
+	IF DEF(_GOLD)
+	db 35, 20, 5, 10 ; PP
+	ELIF DEF(_SILVER)
+	db 35, 20, 15, 10 ; PP
+	ENDC
 	db 20 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 5 ; Level
@@ -176,9 +186,15 @@ OddEgg2:
 	bigdw 8 ; SDef
 	db "EGG@@@@@@@@"
 
+	IF DEF(_GOLD)
+	db CLEFFA
+	db NO_ITEM
+	db POUND, CHARM, ENCORE, DIZZY_PUNCH
+	ELIF DEF(_SILVER)
 	db IGGLYBUFF
 	db NO_ITEM
-	db SING, CHARM, DIZZY_PUNCH, 0
+	db POUND, CHARM, SING, DIZZY_PUNCH
+	ENDC
 	dw 04096 ; OT ID
 	dt 125 ; Exp
 	; Stat exp
@@ -188,7 +204,11 @@ OddEgg2:
 	bigdw 0
 	bigdw 0
 	db $5a, $aa ; DVs
-	db 15, 20, 10, 0 ; PP
+	IF DEF(_GOLD)
+	db 35, 20, 5, 10 ; PP
+	ELIF DEF(_SILVER)
+	db 35, 20, 15, 10 ; PP
+	ENDC
 	db 20 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 5 ; Level
@@ -202,9 +222,15 @@ OddEgg2:
 	bigdw 8 ; SDef
 	db "EGG@@@@@@@@"
 	
+	IF DEF(_GOLD)
+	db CLEFFA
+	db NO_ITEM
+	db POUND, CHARM, ENCORE, DIZZY_PUNCH
+	ELIF DEF(_SILVER)
 	db IGGLYBUFF
 	db NO_ITEM
-	db SING, CHARM, DIZZY_PUNCH, 0
+	db POUND, CHARM, SING, DIZZY_PUNCH
+	ENDC
 	dw 04096 ; OT ID
 	dt 125 ; Exp
 	; Stat exp
@@ -214,7 +240,11 @@ OddEgg2:
 	bigdw 0
 	bigdw 0
 	db $aa, $aa ; DVs
-	db 15, 20, 10, 0 ; PP
+	IF DEF(_GOLD)
+	db 35, 20, 5, 10 ; PP
+	ELIF DEF(_SILVER)
+	db 35, 20, 15, 10 ; PP
+	ENDC
 	db 20 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 5 ; Level
@@ -228,9 +258,15 @@ OddEgg2:
 	bigdw 8 ; SDef
 	db "EGG@@@@@@@@"
 	
+	IF DEF(_GOLD)
+	db CLEFFA
+	db NO_ITEM
+	db POUND, CHARM, ENCORE, DIZZY_PUNCH
+	ELIF DEF(_SILVER)
 	db IGGLYBUFF
 	db NO_ITEM
-	db SING, CHARM, DIZZY_PUNCH, 0
+	db POUND, CHARM, SING, DIZZY_PUNCH
+	ENDC
 	dw 04096 ; OT ID
 	dt 125 ; Exp
 	; Stat exp
@@ -240,7 +276,11 @@ OddEgg2:
 	bigdw 0
 	bigdw 0
 	db $7a, $aa ; DVs
-	db 15, 20, 10, 0 ; PP
+	IF DEF(_GOLD)
+	db 35, 20, 5, 10 ; PP
+	ELIF DEF(_SILVER)
+	db 35, 20, 15, 10 ; PP
+	ENDC
 	db 20 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 5 ; Level
