@@ -171,7 +171,7 @@ BoardwalkGameCornerItemVendorScript:
 	closewindow
 	ifequal 1, .KingsRock
 	ifequal 2, .MetalCoat
-	ifequal 3, .CovenantOrb
+	ifequal 3, .NextMenu2
 	jump BoardwalkGameCornerPrizeVendor_CancelPurchaseScript
 
 .KingsRock:
@@ -192,6 +192,37 @@ BoardwalkGameCornerItemVendorScript:
 	scall BoardwalkGameCornerPrizeVendor_ConfirmPurchaseScript
 	iffalse BoardwalkGameCornerPrizeVendor_CancelPurchaseScript
 	giveitem METAL_COAT
+	iffalse BoardwalkGameCornerPrizeMonVendor_NoRoomForPrizeScript
+	takecoins 2000
+	jump BoardwalkGameCornerItemVendor_FinishScript
+	
+.NextMenu2
+	loadmenu BoardwalkGameCornerItemVendorMenu2Header
+	verticalmenu
+	closewindow
+	ifequal 1, .DragonScale
+	ifequal 2, .Up_Grade
+	ifequal 3, .CovenantOrb
+	jump BoardwalkGameCornerPrizeVendor_CancelPurchaseScript
+	
+.DragonScale:
+	checkcoins 2000
+	ifequal HAVE_LESS, BoardwalkGameCornerPrizeVendor_NotEnoughCoinsScript
+	itemtotext DRAGON_SCALE, MEM_BUFFER_0
+	scall BoardwalkGameCornerPrizeVendor_ConfirmPurchaseScript
+	iffalse BoardwalkGameCornerPrizeVendor_CancelPurchaseScript
+	giveitem DRAGON_SCALE
+	iffalse BoardwalkGameCornerPrizeMonVendor_NoRoomForPrizeScript
+	takecoins 2000
+	jump BoardwalkGameCornerItemVendor_FinishScript
+	
+.Up_Grade:
+	checkcoins 2000
+	ifequal HAVE_LESS, BoardwalkGameCornerPrizeVendor_NotEnoughCoinsScript
+	itemtotext UP_GRADE, MEM_BUFFER_0
+	scall BoardwalkGameCornerPrizeVendor_ConfirmPurchaseScript
+	iffalse BoardwalkGameCornerPrizeVendor_CancelPurchaseScript
+	giveitem UP_GRADE
 	iffalse BoardwalkGameCornerPrizeMonVendor_NoRoomForPrizeScript
 	takecoins 2000
 	jump BoardwalkGameCornerItemVendor_FinishScript
@@ -251,15 +282,28 @@ BoardwalkGameCornerStoneVendorMenu2Header:
 	
 BoardwalkGameCornerItemVendorMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 2, 19, TEXTBOX_Y - 1
+	menu_coords 0, 2, 19, TEXTBOX_Y - 3
 	dw .MenuDataItems
 	db 1 ; default option
 
 .MenuDataItems:
 	db STATICMENU_CURSOR ; flags
-	db 4 ; items
+	db 3 ; items
 	db "KING'S ROCK  2000@"
 	db "METAL COAT   2000@"
+	db "NEXT@"
+	
+BoardwalkGameCornerItemVendorMenu2Header:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 2, 19, TEXTBOX_Y - 1
+	dw .MenuDataItems2
+	db 1 ; default option
+	
+.MenuDataItems2:
+	db STATICMENU_CURSOR ; flags
+	db 4 ; items
+	db "DRAGON SCALE 2000@"
+	db "UP-GRADE     2000@"
 	db "COVENANT ORB 3000@"
 	db "CANCEL@"
 	
