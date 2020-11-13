@@ -21,7 +21,7 @@ TeknosCity_MapScripts:
 
 	db 3 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
-	callback MAPCALLBACK_TILES, .ClearTekuCityRocks
+	callback MAPCALLBACK_TILES, .TeknosBridgeRepair
 	callback MAPCALLBACK_OBJECTS, .rockets
 	
 .rockets
@@ -34,8 +34,8 @@ TeknosCity_MapScripts:
 	disappear ECRUTEAKCITY_ROCKET1
 	return
 	
-.ClearTekuCityRocks:
-	checkevent EVENT_CINNABAR_ROCKS_CLEARED
+.TeknosBridgeRepair:
+	checkevent EVENT_TEKNOS_BRIDGE_REPAIRED
 	iftrue .Done
 	changeblock 23,  5, $80 ; water
 .Done:
@@ -104,7 +104,7 @@ TeknosCityGramps1Script:
 TeknosCityGramps2Script:
 	faceplayer
 	opentext
-	checkevent EVENT_CINNABAR_ROCKS_CLEARED
+	checkevent EVENT_TEKNOS_BRIDGE_REPAIRED
 	iftrue .Gramps2Script2
 	writetext TeknosCityGramps2Text
 	waitbutton
@@ -483,7 +483,7 @@ TeknosCity_MapEvents:
 	object_event  6, 28, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TeknosCityRocket1Script, EVENT_BURNED_TOWER_MORTY
 	object_event  7, 28, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TeknosCityRocket2Script, EVENT_BURNED_TOWER_MORTY
 	object_event  22, 22, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ECRUTEAK_SCARED_LASS
-	object_event 22,  6, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, WorkerScript, EVENT_CINNABAR_ROCKS_CLEARED
-	object_event 23,  6, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, WorkerScript, EVENT_CINNABAR_ROCKS_CLEARED
+	object_event 22,  6, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, WorkerScript, EVENT_TEKNOS_BRIDGE_REPAIRED
+	object_event 23,  6, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, WorkerScript, EVENT_TEKNOS_BRIDGE_REPAIRED
 
 	

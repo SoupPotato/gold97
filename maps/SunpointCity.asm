@@ -18,7 +18,7 @@ SunpointCity_MapScripts:
 
 .FlyPoint:
 	setflag ENGINE_FLYPOINT_CIANWOOD
-	setevent EVENT_CINNABAR_ROCKS_CLEARED
+	setevent EVENT_TEKNOS_BRIDGE_REPAIRED
 	return
 
 

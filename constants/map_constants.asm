@@ -63,7 +63,7 @@ ENDM
 	map_const SANSKRIT_ROCKET_HOUSE,                       10,  4 ; 11
 	map_const SANSKRIT_MART,                                8,  4 ; 12
 	map_const BOARDWALK_GAME_CORNER,                       10,  7 ; 13
-	map_const BOARDWALK_SANSKRIT_GATE,                      5,  4 ;  4
+	map_const BOARDWALK_SANSKRIT_GATE,                      5,  4 ; 14
 
 	newgroup                                                      ;  3
 
