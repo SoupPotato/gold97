@@ -1,20 +1,17 @@
 	const_def 2 ; object constants
 	const ROUTE2_BUG_CATCHER3
 	const ROUTE2_HIKER
-;	const ROUTE2_POKE_BALL1
 	const ROUTE2_POKE_BALL2
-;	const ROUTE2_POKE_BALL3
-;	const ROUTE2_POKE_BALL4
 	const ROUTE2_FRUIT_TREE
 
 Route116_MapScripts:
 	db 0 ; scene scripts
 
 	db 1 ; callbacks
-	callback MAPCALLBACK_NEWMAP, .ClearTekuRocks
+	callback MAPCALLBACK_NEWMAP, .TeknosBridgeIsRepaired
 
-.ClearTekuRocks:
-	setevent EVENT_CINNABAR_ROCKS_CLEARED
+.TeknosBridgeIsRepaired:
+	setevent EVENT_TEKNOS_BRIDGE_REPAIRED
 	return
 
 TrainerJugglerDwayne:
@@ -134,7 +131,7 @@ Route116_MapEvents:
 
 
 	db 5 ; object events
-	object_event  4, 26, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TrainerBugCatcherDoug, -1
+	object_event  7, 26, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerBugCatcherDoug, -1
 	object_event  8, 19, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerHikerRussell, -1
 	object_event  4, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route116MaxPotion, EVENT_ROUTE_2_MAX_POTION
 	object_event  5, 22, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route116FruitTree, -1
