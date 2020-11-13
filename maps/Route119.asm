@@ -56,6 +56,7 @@ TrainerFisherRalph1:
 	writetext FisherRalphAfterText
 	waitbutton
 	closetext
+	end
 
 Route119Rocket1Script:
 	opentext
