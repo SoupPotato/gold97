@@ -190,7 +190,7 @@ PokefanmBrandonAfterText:
 	line "have enough"
 	para "motivation to go"
 	line "through with a"
-	cont "LEAGUE CHALLENGE."
+	cont "LEAGUE challenge."
 	done
 
 

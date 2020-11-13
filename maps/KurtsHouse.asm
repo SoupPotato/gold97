@@ -455,7 +455,7 @@ FalknerTalks:
 	
 	para "Ah, so you're tak"
 	line "-ing the #MON"
-	cont "League Challenge."
+	cont "League challenge."
 	
 	para "My name is"
 	line "FALKNER."

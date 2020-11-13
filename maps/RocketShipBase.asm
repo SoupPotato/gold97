@@ -464,7 +464,7 @@ CaptainRTellsImposterOff2:
 	
 ImposterOakIsShocked2:
 	text "IMPOSTER OAK: Yes,"
-	line "Sir!"
+	line "sir!"
 	done
 	
 CaptainRFinishesSpeech:

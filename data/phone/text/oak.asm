@@ -43,7 +43,7 @@ OakPhoneEggUnhatchedText:
 	line "I hear you're"
 	para "taking the NIHON"
 	line "#MON LEAGUE"
-	cont "CHALLENGE."
+	cont "challenge."
 	para "That's great!"
 	line "I'm sure you've"
 	para "got a fighting"
@@ -56,7 +56,7 @@ OakPhoneEggHatchedText:
 	line "I hear you're"
 	para "taking the NIHON"
 	line "#MON LEAGUE"
-	cont "CHALLENGE."
+	cont "challenge."
 	para "That's great!"
 	line "I'm sure you've"
 	para "got a fighting"
@@ -76,7 +76,7 @@ OakPhoneRocketsText:
 	para "Keep up the great"
 	line "work with catching"
 	para "#MON and the"
-	line "LEAGUE CHALLENGE!"
+	line "LEAGUE challenge!"
 	done
 
 OakPhoneDiscovery2Text:
@@ -155,7 +155,7 @@ OakAfterRadioTower:
 OakPhoneDisasterText:
 	text "Hello, <PLAY_G>?"
 	para "How goes the"
-	line "LEAGUE CHALLENGE?"
+	line "LEAGUE challenge?"
 	para "..."
 	
 	para "Ah! You've already"
