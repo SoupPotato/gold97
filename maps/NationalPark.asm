@@ -78,6 +78,7 @@ TrainerSchoolboyJack1:
 	writetext UnknownText_0x5c4f3
 	waitbutton
 	closetext
+	end
 
 TrainerPokefanmWilliam:
 	trainer POKEFANM, WILLIAM, EVENT_BEAT_POKEFANM_WILLIAM, PokefanmWilliamSeenText, PokefanmWilliamBeatenText, 0, .Script
@@ -99,6 +100,7 @@ TrainerPokefanfBeverly1:
 	writetext UnknownText_0x5c5bd
 	waitbutton
 	closetext
+	end
 
 TrainerLassKrise:
 	trainer LASS, KRISE, EVENT_BEAT_LASS_KRISE, LassKriseSeenText, LassKriseBeatenText, 0, .Script
