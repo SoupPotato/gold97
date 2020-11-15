@@ -61,7 +61,7 @@ LoadSpecialMapPalette:
 	jp nz, .not_blueforest_gym
 	ld a, [wMapNumber]
 	cp MAP_BLUE_FOREST_GYM
-	jp z, .ice_path
+	jp z, .ice_gym
 .not_blueforest_gym
 	ld a, [wMapGroup]
 	cp GROUP_FROSTPOINT_TOWN
@@ -177,6 +177,13 @@ LoadSpecialMapPalette:
 	cp MAP_MAGMA_SHAFT_B2F
 	jr z, .LavaOverRedCoalOverBrownBGPalette
 .ice
+	call LoadIcePathPalette
+	scf
+	ret
+	
+.ice_gym
+	ld a, [wEnvironment]
+	and $7
 	call LoadIcePathPalette
 	scf
 	ret
