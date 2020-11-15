@@ -1,5 +1,5 @@
 	const_def 2 ; object constants
-	const CIANWOODGYM_CHUCK
+	const CIANWOODGYM_Okera
 	const CIANWOODGYM_GYMGUY2
 	const CIANWOODGYM_COOLTRAINER
 
@@ -8,7 +8,7 @@ StandGym_MapScripts:
 
 	db 0 ; callbacks
 	
-StandGymChuckScript:
+StandGymOkeraScript:
 	faceplayer
 	checkevent EVENT_REMATCH_AVAILABLE_OKERA
 	iftrue rematchscriptOkera
@@ -16,16 +16,16 @@ StandGymChuckScript:
 	iftrue postrematchscriptOkera
 	
 	opentext
-	checkevent EVENT_BEAT_CHUCK
+	checkevent EVENT_BEAT_Okera
 	iftrue .FightDone
-	writetext ChuckIntroText1
+	writetext OkeraIntroText1
 	waitbutton
 	closetext
-	winlosstext ChuckLossText, 0
-	loadtrainer CHUCK, CHUCK1
+	winlosstext OkeraLossText, 0
+	loadtrainer Okera, Okera1
 	startbattle
 	reloadmapafterbattle
-	setevent EVENT_BEAT_CHUCK
+	setevent EVENT_BEAT_Okera
 	opentext
 	writetext GetStormBadgeText
 	playsound SFX_GET_BADGE
@@ -41,18 +41,18 @@ StandGymChuckScript:
 ;	setevent EVENT_BEAT_BLACKBELT_LAO
 ;	setevent EVENT_BEAT_BLACKBELT_NOB
 ;	setevent EVENT_BEAT_BLACKBELT_LUNG
-	writetext ChuckExplainBadgeText
+	writetext OkeraExplainBadgeText
 	buttonsound
 	verbosegiveitem TM_THIEF
 	iffalse .BagFull
 	setevent EVENT_GOT_TM01_DYNAMICPUNCH
-	writetext ChuckExplainTMText
+	writetext OkeraExplainTMText
 	waitbutton
 	closetext
 	end
 
 .AlreadyGotTM:
-	writetext ChuckAfterText
+	writetext OkeraAfterText
 	waitbutton
 .BagFull:
 	closetext
@@ -64,7 +64,7 @@ rematchscriptOkera:
 	waitbutton
 	closetext
 	winlosstext OkeraRematchWinText, 0
-	loadtrainer CHUCK, CHUCK2
+	loadtrainer Okera, Okera2
 	startbattle
 	reloadmapafterbattle
 	clearevent EVENT_REMATCH_AVAILABLE_OKERA
@@ -134,13 +134,13 @@ StandGymStatue:
 	iftrue .Beaten
 	jumpstd gymstatue1
 .Beaten:
-	trainertotext CHUCK, CHUCK1, MEM_BUFFER_1
+	trainertotext Okera, Okera1, MEM_BUFFER_1
 	jumpstd gymstatue2
 	
 
 StandGymGuyScript2:
 	faceplayer
-	checkevent EVENT_BEAT_CHUCK
+	checkevent EVENT_BEAT_Okera
 	iftrue .StandGymGuyWinScript2
 	opentext
 	writetext StandGymGuyText2
@@ -295,7 +295,7 @@ StandGymGuyWinText2:
 	cont "dark!"
 	done
 
-ChuckIntroText1:
+OkeraIntroText1:
 	text "Tch..."
 	
 	para "Another trainer"
@@ -320,7 +320,7 @@ ChuckIntroText1:
 	done
 
 
-ChuckLossText:
+OkeraLossText:
 	text "Tch!"
 	para "I lost."
 
@@ -336,7 +336,7 @@ GetStormBadgeText:
 	line "DUSKBADGE."
 	done
 
-ChuckExplainBadgeText:
+OkeraExplainBadgeText:
 	text "The DUSKBADGE"
 	line "makes all #MON"
 	cont "up to Level 70"
@@ -355,7 +355,7 @@ ChuckExplainBadgeText:
 	para "Take this as well."
 	done
 
-ChuckExplainTMText:
+OkeraExplainTMText:
 	text "That move is"
 	line "THIEF."
 
@@ -367,10 +367,10 @@ ChuckExplainTMText:
 	para "Take what is right"
 	line "-fully yours."
 	
-	para "That's what I say"
+	para "That's what I say."
 	done
 
-ChuckAfterText:
+OkeraAfterText:
 	text "That was a good"
 	line "battle."
 	
@@ -475,7 +475,7 @@ StandGym_MapEvents:
 	bg_event 21, 12, BGEVENT_READ, LightSwitch
 
 	db 8 ; object events
-	object_event 10, 11, SPRITE_CHUCK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, StandGymChuckScript, EVENT_OKERA_AT_BASE
+	object_event 10, 11, SPRITE_Okera, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, StandGymOkeraScript, EVENT_OKERA_AT_BASE
 	object_event  8, 21, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, StandGymGuyScript2, -1
 	object_event 20, 14, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerCooltrainermAaron, -1
 	object_event 23,  3, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerCooltrainerfKelly, -1
