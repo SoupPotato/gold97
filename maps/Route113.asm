@@ -42,6 +42,7 @@ TrainerPicnickerGina1:
 	writetext PicnickerGina1AfterText
 	waitbutton
 	closetext
+	end
 
 OfficerKeithScript:
 	faceplayer
@@ -84,7 +85,6 @@ TrainerPokefanmBrandon:
 	waitbutton
 	closetext
 	end
-
 
 
 Route113IlexForestSign:
