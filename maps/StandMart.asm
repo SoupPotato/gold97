@@ -33,7 +33,7 @@ StandMartFisherScript:
 StandMartCooltrainerFScript:
 	faceplayer
 	opentext
-	checkevent EVENT_BEAT_CHUCK
+	checkevent EVENT_BEAT_OKERA
 	iftrue .StandMartCooltrainerFRocketsGone
 	writetext StandMartCooltrainerFText
 	waitbutton

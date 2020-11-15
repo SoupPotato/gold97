@@ -1,7 +1,7 @@
 	const_def 2 ; object constants
-	const CIANWOODGYM_Okera
-	const CIANWOODGYM_GYMGUY2
-	const CIANWOODGYM_COOLTRAINER
+	const STANDGYM_OKERA
+	const STANDGYM_GYMGUY2
+	const STANDGYM_COOLTRAINER
 
 StandGym_MapScripts:
 	db 0 ; scene scripts
@@ -16,16 +16,16 @@ StandGymOkeraScript:
 	iftrue postrematchscriptOkera
 	
 	opentext
-	checkevent EVENT_BEAT_Okera
+	checkevent EVENT_BEAT_OKERA
 	iftrue .FightDone
 	writetext OkeraIntroText1
 	waitbutton
 	closetext
 	winlosstext OkeraLossText, 0
-	loadtrainer Okera, Okera1
+	loadtrainer OKERA, OKERA1
 	startbattle
 	reloadmapafterbattle
-	setevent EVENT_BEAT_Okera
+	setevent EVENT_BEAT_OKERA
 	opentext
 	writetext GetStormBadgeText
 	playsound SFX_GET_BADGE
@@ -64,7 +64,7 @@ rematchscriptOkera:
 	waitbutton
 	closetext
 	winlosstext OkeraRematchWinText, 0
-	loadtrainer Okera, Okera2
+	loadtrainer OKERA, OKERA2
 	startbattle
 	reloadmapafterbattle
 	clearevent EVENT_REMATCH_AVAILABLE_OKERA
@@ -134,13 +134,13 @@ StandGymStatue:
 	iftrue .Beaten
 	jumpstd gymstatue1
 .Beaten:
-	trainertotext Okera, Okera1, MEM_BUFFER_1
+	trainertotext OKERA, OKERA1, MEM_BUFFER_1
 	jumpstd gymstatue2
 	
 
 StandGymGuyScript2:
 	faceplayer
-	checkevent EVENT_BEAT_Okera
+	checkevent EVENT_BEAT_OKERA
 	iftrue .StandGymGuyWinScript2
 	opentext
 	writetext StandGymGuyText2
@@ -475,7 +475,7 @@ StandGym_MapEvents:
 	bg_event 21, 12, BGEVENT_READ, LightSwitch
 
 	db 8 ; object events
-	object_event 10, 11, SPRITE_Okera, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, StandGymOkeraScript, EVENT_OKERA_AT_BASE
+	object_event 10, 11, SPRITE_OKERA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, StandGymOkeraScript, EVENT_OKERA_AT_BASE
 	object_event  8, 21, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, StandGymGuyScript2, -1
 	object_event 20, 14, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerCooltrainermAaron, -1
 	object_event 23,  3, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerCooltrainerfKelly, -1

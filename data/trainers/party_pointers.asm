@@ -8,7 +8,7 @@ TrainerGroups:
 	dw MortyGroup
 	dw PryceGroup
 	dw JasmineGroup
-	dw ChuckGroup
+	dw OkeraGroup
 	dw ClairGroup
 	dw Rival1Group
 	dw PokemonProfGroup

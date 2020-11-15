@@ -145,7 +145,7 @@ StandGroupSprites:
 	db SPRITE_SURGE
 	db SPRITE_MONSTER
 	db SPRITE_FAIRY
-	db SPRITE_CHUCK
+	db SPRITE_OKERA
 	; 9 of max 9 wallking sprites
 	db SPRITE_ROCKET
 	db SPRITE_POKEFAN_F

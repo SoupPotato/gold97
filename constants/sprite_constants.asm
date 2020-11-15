@@ -23,7 +23,7 @@
 	const SPRITE_WHITNEY ; 13
 	const SPRITE_BUGSY ; 14
 	const SPRITE_MORTY ; 15
-	const SPRITE_CHUCK ; 16
+	const SPRITE_OKERA ; 16
 	const SPRITE_JASMINE ; 17
 	const SPRITE_PRYCE ; 18
 	const SPRITE_CLAIR ; 19

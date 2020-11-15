@@ -11,7 +11,7 @@ GymLeaders:
 	db MORTY
 	db PRYCE
 	db JASMINE
-	db CHUCK
+	db OKERA
 	db CLAIR
 	db WILL
 	db BRUNO

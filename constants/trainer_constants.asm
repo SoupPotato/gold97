@@ -49,9 +49,9 @@ KRIS EQU __enum__
 	const JASMINE1
 	const JASMINE2
 
-	trainerclass CHUCK ; 7
-	const CHUCK1
-	const CHUCK2
+	trainerclass OKERA ; 7
+	const OKERA1
+	const OKERA2
 
 	trainerclass CLAIR ; 8
 	const CLAIR1
