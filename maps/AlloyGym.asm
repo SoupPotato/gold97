@@ -17,15 +17,15 @@ AlloyGym_MapScripts:
 
 
 .BouldersOlivine:
-	checkevent EVENT_CHARCOAL_KILN_FARFETCH_D
+	checkevent EVENT_ALLOY_GYM_BOULDER_1
 	iffalse .skip1olivine
 	changeblock 10, 12, $2f
 .skip1olivine
-	checkevent EVENT_CHARCOAL_KILN_APPRENTICE
+	checkevent EVENT_ALLOY_GYM_BOULDER_2
 	iffalse .skip2olivine
 	changeblock 4, 14, $2f
 .skip2olivine
-	checkevent EVENT_CHARCOAL_KILN_BOSS
+	checkevent EVENT_ALLOY_GYM_BOULDER_3
 	iffalse .skip3olivine
 	changeblock 4, 0, $2f
 .skip3olivine
@@ -55,7 +55,7 @@ AlloyGym_MapScripts:
 	writetext AlloyGymBoulderFilled
 	waitbutton
 	closetext
-	setevent EVENT_CHARCOAL_KILN_FARFETCH_D
+	setevent EVENT_ALLOY_GYM_BOULDER_1
 	end
 
 .Boulder2:
@@ -68,7 +68,7 @@ AlloyGym_MapScripts:
 	writetext AlloyGymBoulderFilled
 	waitbutton
 	closetext
-	setevent EVENT_CHARCOAL_KILN_APPRENTICE
+	setevent EVENT_ALLOY_GYM_BOULDER_2
 	end
 
 .Boulder3:
@@ -81,7 +81,7 @@ AlloyGym_MapScripts:
 	writetext AlloyGymBoulderFilled
 	waitbutton
 	closetext
-	setevent EVENT_CHARCOAL_KILN_BOSS
+	setevent EVENT_ALLOY_GYM_BOULDER_3
 	end
 
 AlloyGymJasmineScript:
@@ -433,9 +433,9 @@ AlloyGym_MapEvents:
 	db 8 ; object events
 	object_event  1,  4, SPRITE_JASMINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AlloyGymJasmineScript, -1
 	object_event 19, 13, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AlloyGymGuyScript, -1
-	object_event 16,  9, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AlloyGymBoulder, EVENT_CHARCOAL_KILN_FARFETCH_D
-	object_event 10, 10, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AlloyGymBoulder, EVENT_CHARCOAL_KILN_APPRENTICE
-	object_event 12,  3, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AlloyGymBoulder, EVENT_CHARCOAL_KILN_BOSS
+	object_event 16,  9, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AlloyGymBoulder, EVENT_ALLOY_GYM_BOULDER_1
+	object_event 10, 10, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AlloyGymBoulder, EVENT_ALLOY_GYM_BOULDER_2
+	object_event 12,  3, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AlloyGymBoulder, EVENT_ALLOY_GYM_BOULDER_3
 	object_event 18,  7, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerGentlemanPreston, -1
 	object_event 16,  1, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerGentlemanAlfred, -1
 	object_event 11,  7, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerSuperNerdTom, -1

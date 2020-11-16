@@ -1867,9 +1867,9 @@
 	const EVENT_6A2
 	const EVENT_ILEX_FOREST_APPRENTICE; used, this marks that imposter oak has given his speech
 	const EVENT_ILEX_FOREST_CHARCOAL_MASTER
-	const EVENT_CHARCOAL_KILN_FARFETCH_D ;used for boulder in olivine gym
-	const EVENT_CHARCOAL_KILN_APPRENTICE ;used for boulder in olivine gym
-	const EVENT_CHARCOAL_KILN_BOSS ;used for boulder in olivine gym
+	const EVENT_ALLOY_GYM_BOULDER_1
+	const EVENT_ALLOY_GYM_BOULDER_2
+	const EVENT_ALLOY_GYM_BOULDER_3
 	const EVENT_ROUTE_36_SILVER
 	const EVENT_AZALEA_TOWN_SLOWPOKES; raikou event
 	const EVENT_AZALEA_TOWN_SLOWPOKETAIL_ROCKET
