@@ -37,7 +37,7 @@ AlloyCafeStrengthSailorText:
 	text "Hah! Sailing is"
 	line "such an outdated"
 	cont "way to travel!"
-	para "Walking is too!"
+	para "Walking, is too!"
 	para "Why not have your"
 	line "#MON FLY you"
 	cont "everywhere?"

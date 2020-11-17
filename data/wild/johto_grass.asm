@@ -622,7 +622,7 @@ JohtoGrassWildMons:
 	db 16, IGGLYBUFF
 	db 18, SPEAROW
 	db 18, CUBONE
-	db 20, BUTTERFREE
+	db 20, BEEDRILL
 	db 19, CLEFAIRY
 	; day
 	db 16, CLEFFA
@@ -630,7 +630,7 @@ JohtoGrassWildMons:
 	db 16, IGGLYBUFF
 	db 18, SPEAROW
 	db 18, CUBONE
-	db 20, BUTTERFREE
+	db 20, BEEDRILL
 	db 19, CLEFAIRY
 	; nite
 	db 16, CLEFFA
@@ -1600,7 +1600,7 @@ JohtoGrassWildMons:
 	; morn
 	db 39, PIDGEOTTO
 	db 39, RATICATE
-	db 40, BUTTERFREE
+	db 40, BEEDRILL
 	db 40, JIGGLYPUFF
 	db 43, FEAROW
 	db 40, PIKACHU
@@ -1608,7 +1608,7 @@ JohtoGrassWildMons:
 	; day
 	db 39, PIDGEOTTO
 	db 39, RATICATE
-	db 40, BUTTERFREE
+	db 40, BEEDRILL
 	db 40, JIGGLYPUFF
 	db 43, FEAROW
 	db 40, PIKACHU

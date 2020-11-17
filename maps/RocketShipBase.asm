@@ -353,9 +353,10 @@ GruntM22AfterBattleText:
 	cont "...who knows?"
 	
 	para "Once the rest of"
-	line "crew return from"
-	cont "the SANSKRIT post,"
-	cont "we are outta here!"	
+	line "the crew return"
+	cont "from the SANSKRIT"
+	cont "post, we are outta"
+	cont "here!"
 	done
 
 GruntM11SeenText:
@@ -481,7 +482,7 @@ CaptainRFinishesSpeech:
 	cont "convince."
 	
 	para "Our plans are none"
-	line "of your buisness."
+	line "of your business."
 	
 	para "Nosey children"
 	line "need to be"
@@ -515,9 +516,9 @@ CaptainRAfterText:
 	cont "all #MON"
 	cont "globally!"
 
-	para "Farwell child."
+	para "Farewell child."
 	
-	para "Im sure our paths"
+	para "I'm sure our paths"
 	line "will cross again."
 	done
 

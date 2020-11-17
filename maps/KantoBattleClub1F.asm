@@ -185,7 +185,7 @@ PassGiveText:
 	para "for serious"
 	line "trainers!"
 	para "And judging by how"
-	line "many BADGEs you"
+	line "many BADGES you"
 	para "have, I can tell"
 	line "you're quite the"
 	cont "serious trainer!"

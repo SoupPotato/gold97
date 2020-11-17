@@ -13,7 +13,7 @@ Route107AlloyGateOfficerText:
 	text "Be careful if you"
 	line "intend to cross"
 	para "the ocean to get"
-	line "to SUGAR TOWN."
+	line "to KOBAN ISLAND."
 	para "The waters are"
 	line "rough. You'll need"
 	cont "a #MON's help."

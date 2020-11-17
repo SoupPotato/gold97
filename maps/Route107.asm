@@ -89,8 +89,8 @@ SwimmermSethBeatenText:
 SwimmermSethAfterBattleText:
 	text "One day I'd like"
 	line "to train with the"
-	para "DRAGON MASTER in"
-	line "SUGAR TOWN."
+	para "DRAGON MASTER at"
+	line "KOBAN ISLAND."
 	done
 
 SwimmerfNikkiSeenText:
@@ -145,7 +145,7 @@ SwimmermBerkeAfterBattleText:
 
 	para "..."
 	
-	para "O-ok, s-so Im a"
+	para "O-ok, s-so I'm a"
 	line "bit ch-chilly..."
 	done
 	
@@ -195,7 +195,7 @@ Route107_MapEvents:
 
 	db 6 ; object events
 	object_event 10, 31, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSwimmerfNikki, -1
-	object_event  9, 39, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerSwimmermSeth, -1
+	object_event  9, 40, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerSwimmermSeth, -1
 	object_event 12, 26, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerFisherArnold, -1
 	object_event  6,  9, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerFisherHenry, -1
 	object_event  5, 13, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerSwimmermBerke, -1

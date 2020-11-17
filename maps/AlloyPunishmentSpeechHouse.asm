@@ -18,9 +18,9 @@ AlloyPunishmentSpeechHouseRadio:
 	jumpstd radio2
 
 AlloyPunishmentSpeechHouseDadText:
-	text "SUGAR TOWN is such"
-	line "a quaint little"
-	cont "island."
+	text "KOBAN ISLAND has"
+	line "such a quaint"
+	cont "little town."
 	para "But reaching it"
 	line "is difficult."
 	para "The waters north"

@@ -1,5 +1,5 @@
 	const_def 2 ; object constants
-	const SUGARHOUSE_1_CLAIR
+	const KOBANHOUSE_1_CLAIR
 
 KobanClairsHouse_MapScripts:
 	db 0 ; scene scripts

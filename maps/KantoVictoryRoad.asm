@@ -161,7 +161,7 @@ CTEverittAfterBattleText:
 	
 	para "And I'll have to"
 	line "go get 8 new"
-	cont "BADGEs!?"
+	cont "BADGES!?"
 	
 	para "Haha! Hahahahah!"
 	done
@@ -252,7 +252,7 @@ CTKenzieAfterBattleText:
 
 CTAllySeenText:
 	text "I've got 7 of"
-	line "NIHON's BADGEs"
+	line "NIHON's BADGES"
 	cont "so far! You look"
 	cont "like a tough"
 	cont "opponent to"
@@ -266,7 +266,7 @@ CTAllyBeatenText:
 CTAllyAfterBattleText:
 	text "Well of course you"
 	line "would have 7"
-	cont "BADGEs, why else"
+	cont "BADGES, why else"
 	cont "would you be here"
 	cont "braving the caves!"
 	done

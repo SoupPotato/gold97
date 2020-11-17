@@ -92,7 +92,7 @@ HontoTownCooltrainermText:
 	para "I got him in a"
 	line "trade from a pal,"
 	para "but I don't have"
-	line "enough BADGEs for"
+	line "enough BADGES for"
 	cont "him to obey me."
 	done
 

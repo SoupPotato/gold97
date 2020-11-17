@@ -197,7 +197,7 @@ PsychicPhilBeatenText:
 PsychicPhilAfterBattleText:
 	text "My mentor left to"
 	line "train elsewhere"
-	cont "so I've decicated"
+	cont "so I've dedicated"
 	cont "myself to keeping"
 	cont "the PSYCHIC arts"
 	cont "alive in KANTO."

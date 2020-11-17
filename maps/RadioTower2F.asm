@@ -361,7 +361,7 @@ GruntM26SeenText:
 	line "antenna!"
 	para "Why build another"
 	line "when we could just"
-	cont "take this one!"
+	cont "take this one?"
 	done
 	
 GruntM26BeatenText:

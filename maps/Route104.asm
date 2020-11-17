@@ -227,9 +227,10 @@ Route104LassText:
 
 Route104TeacherText:
 	text "I'm confused."
-	para "I came though this"
-	line "route by going"
-	cont "down this ledge."
+	para "I came through"
+	line "this route by"
+	cont "going down this"
+	cont "ledge."
 	para "But I can't figure"
 	line "out my way back"
 	cont "to BIRDON TOWN."

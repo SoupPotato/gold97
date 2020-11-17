@@ -1,7 +1,7 @@
 	const_def 2 ; object constants
-	const SUGARMART_CLERK
-	const SUGARMART_GRANNY
-	const SUGARMART_COOLTRAINER_M
+	const KOBANMART_CLERK
+	const KOBANMART_GRANNY
+	const KOBANMART_COOLTRAINER_M
 
 KobanMart_MapScripts:
 	db 0 ; scene scripts

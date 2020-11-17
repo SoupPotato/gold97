@@ -94,7 +94,7 @@ CrownCityTrainerHouseSuperNerdText:
 CrownCityTrainerHouseCooltrainerfText:
 	text "I had a tough time"
 	line "getting eight"
-	cont "BADGEs."
+	cont "BADGES."
 	para "I might need to"
 	line "train more before"
 	para "I take on the"
