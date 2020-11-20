@@ -80,7 +80,7 @@ AideGivingLevelBallText:
 	text "PROF.OAK ordered"
 	line "a whole bunch of"
 	cont "custom # BALLs"
-	cont "for his research"
+	cont "for his research."
 	
 	para "I keep finding"
 	line "them while"

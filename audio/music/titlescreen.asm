@@ -1,1233 +1,1614 @@
 Music_TitleScreen:
-	musicheader 4, 1, Music_TitleScreen_Ch1
-	musicheader 1, 2, Music_TitleScreen_Ch2
-	musicheader 1, 3, Music_TitleScreen_Ch3
-	musicheader 1, 4, Music_TitleScreen_Ch4
+	musicheader 4, 1, title2_3_Ch1
+	musicheader 1, 2, title2_3_Ch2
+	musicheader 1, 3, title2_3_Ch3
+	musicheader 1, 4, title2_3_Ch4
+;	include	group.def
+;bank3d	group	G_MUSIC4
+;
+;;	title2_3
+;
+;;	Converting on Fri Jul 30 19:00:35 1999
+;
+;;				by ver 1.01
+;
+;	public	mustitle3
+;mustitle3:
 
-Music_TitleScreen_Ch1:
-	tempo 256
-	volume $77
-	dutycycle $3
-	tone $0002
-	vibrato $10, $12
-	stereopanning $f0
-	notetype $c, $a7
-	octave 3
-	note D_, 6
+
+
+
+
+
+
+
+;----------------------------------------
+title2_3_Ch1:
+;----------------------------------------
+	tempo 144
+	volume 7, 7
+	pitch_offset 1
+	duty_cycle 3
+; P1-1
+	note_type 12, 8, 0
+; P1-2
 	octave 2
-	note B_, 2
-	note B_, 4
+	note G_,16
+; P1-3
+	note G#,16
+; P1-4
 	octave 3
-	note D_, 4
-	intensity $a0
-	note C_, 6
-	intensity $a7
-	note C_, 6
-	note D#, 4
-	note D_, 6
-	octave 2
-	note G_, 2
-	note G_, 4
-	octave 3
-	note D_, 4
-	note D#, 8
-	tempo 184
-	note G#, 8
-	tempo 134
-	octave 2
-	note G_, 1
-	note __, 2
-	note A_, 1
-	note B_, 8
-	note G_, 4
-	octave 3
-	note C_, 1
-	note __, 2
-	note D_, 1
-	note E_, 8
-	note C_, 4
-	octave 2
-	note B_, 1
-	note __, 2
-	octave 3
-	note C_, 1
-	octave 2
-	note B_, 8
-	note A_, 4
-	note A_, 1
-	note __, 2
-	note B_, 1
-	octave 3
-	note C_, 6
-	note E_, 4
-	note F#, 2
-	stereopanning $ff
-	octave 4
-	note G_, 1
-	stereopanning $f0
-	octave 3
-	note D_, 5
-	octave 2
-	note B_, 2
-	octave 3
-	note D_, 4
-	octave 2
-	note B_, 4
-	octave 3
-	note C_, 6
-	note F_, 6
-	note C_, 4
-	note D_, 6
-	intensity $b7
-	note D#, 1
-	note E_, 1
-	note F_, 6
-	note E_, 1
-	note D#, 1
-	note D_, 8
-	notetype $8, $a7
-	note C_, 4
-	octave 2
-	note B_, 4
-	octave 3
-	note C_, 4
-	note D_, 9
-	octave 2
-	note B_, 3
-	octave 3
-	note D_, 6
-	octave 2
-	note B_, 6
-	octave 3
-	note C_, 3
-	note D_, 6
-	note E_, 3
-	note E_, 4
-	note E_, 4
-	note C_, 4
-	notetype $8, $a0
-	octave 2
-	note B_, 6
-	notetype $8, $a7
-	note B_, 6
-	notetype $8, $a7
-	octave 3
-	note F_, 4
-	note E_, 4
-	note C_, 4
-	notetype $8, $a0
-	note D_, 6
-	notetype $8, $a7
-	note D_, 6
-	notetype $8, $a7
-	note __, 3
-	octave 2
-	note B_, 3
-	octave 3
-	note C_, 3
-	note D_, 3
-	note D_, 9
-	octave 2
-	note B_, 3
-	octave 3
-	note D_, 6
-	octave 2
-	note B_, 6
-	octave 3
-	note C_, 9
-	note F_, 9
-	note C_, 6
-	note D_, 9
-	notetype $c, $b7
-	note D#, 1
-	note E_, 1
-	note F_, 6
-	note E_, 1
-	note D#, 1
-	note D_, 8
-	notetype $8, $a7
-	note C_, 4
-	octave 2
-	note B_, 4
-	octave 3
-	note C_, 4
-	note D_, 9
-	octave 2
-	note B_, 3
-	octave 3
-	note D_, 9
-	notetype $8, $b7
-	note G_, 3
-	note A_, 4
-	note G_, 4
-	note F_, 4
-	note F_, 6
-	note E_, 6
-	note D_, 9
-	note F_, 3
-	note G_, 3
-	note D_, 6
-	note G_, 3
-	notetype $8, $54
-	octave 2
-	note G_, 3
-	note B_, 3
-	notetype $8, $94
-	octave 3
-	note D_, 3
-	note G_, 3
+	note C_,16
+; P1-5
+	note C_,16
+; P1-6
 	tempo 136
-	notetype $8, $b4
-	note F_, 3
-	note A_, 3
-	notetype $8, $d4
-	octave 4
-	note C_, 3
-	note F_, 3
-	tempo 138
-	notetype $8, $b4
-	note D_, 9
-	note C_, 9
-	octave 3
-	note A#, 6
-	notetype $c, $b7
-	note F_, 1
-	note E_, 1
-	note D_, 1
-	note E_, 1
-	note F_, 4
-	octave 4
-	note D_, 4
-	note F_, 4
-	note E_, 6
-	octave 3
-	note G_, 2
-	notetype $8, $b7
-	note A_, 4
-	note G_, 4
-	note F_, 4
-	note G_, 12
-	octave 4
-	note C_, 6
-	tempo 136
-	note C#, 6
-	tempo 134
-	callchannel Music_TitleScreen_branch_eb96d
-	octave 4
-	note C_, 4
-	note C_, 4
-	note C#, 4
-	callchannel Music_TitleScreen_branch_eb96d
-	octave 4
-	note C_, 4
-	note C_, 4
-	note C#, 4
-	callchannel Music_TitleScreen_branch_eb96d
-	octave 3
-	note E_, 4
-	note E_, 4
-	note C_, 4
-	notetype $c, $a0
-	note D_, 6
-	notetype $c, $a7
-	note D_, 10
-	intensity $a0
-	note C_, 8
-	intensity $a7
-	note C_, 8
-	intensity $a0
+	note_type 12, 11, 3
+	note D_,4
 	octave 2
-	note B_, 8
-	intensity $a7
-	note B_, 8
+	note G_,2
 	octave 3
-	note C_, 8
+	note D_,4
 	octave 2
-	note B_, 8
+	note G_,2
 	octave 3
-	note D_, 8
+	note D_,2
 	octave 2
-	note B_, 8
+	note G_,2
+; P1-7
 	octave 3
-	note C_, 8
-	note F_, 8
-	note A_, 8
-	note G_, 6
-	note G_, 1
-	note F#, 1
-	note F_, 8
-	note E_, 8
-	intensity $a0
-	note D_, 16
-	intensity $a7
-	note D_, 16
-	intensity $a3
+	note C_,4
 	octave 2
-	note G_, 1
-	note __, 3
-	note G_, 1
-	note __, 5
-	note G_, 1
-	note G_, 1
-	note G_, 1
-	note __, 3
-	note G_, 1
-	note __, 3
-	note G_, 1
-	note __, 3
-	notetype $8, $b2
-	note A_, 2
-	note A_, 2
-	note A_, 2
-	note A_, 2
-	note A_, 2
-	note F#, 2
-	notetype $c, $b7
-	note G_, 1
-	note __, 3
+	note F_,2
+	octave 3
+	note C_,4
+	octave 2
+	note F_,2
+	octave 3
+	note C_,2
+	octave 2
+	note F_,2
+; P1-8
+	note B_,4
+	note G_,2
+	note B_,4
+	note G_,2
+	note B_,2
+	note G_,2
+; P1-9
+	note A_,4
+	note D_,2
+	note A_,4
+	note D_,2
+	note A_,2
+	octave 3
+	note C_,2
+; P1-10
+	note D_,6
+	octave 2
+	note B_,2
+	octave 3
+	note D_,4
+	octave 2
+	note B_,4
+; P1-11
+	octave 3
+	note C_,6
+	note F_,6
+	note C_,4
+; P1-12
+	note D_,6
+	note D#,1
+	note E_,1
+	note F_,6
+	note E_,1
+	note D#,1
+; P1-13
+	note D_,8
+	note_type 8, 11, 3
+	note C_,4
+	octave 2
+	note B_,4
+	octave 3
+	note C_,4
+; P1-14
+	note D_,9
+	octave 2
+	note B_,3
+	octave 3
+	note D_,6
+	octave 2
+	note B_,6
+; P1-15
+	octave 3
+	note C_,3
+	note D_,6
+	note E_,3
+	note E_,4
+	note E_,4
+	note C_,4
+; P1-16
+	octave 2
+	note B_,12
+	octave 3
+	note F_,4
+	note E_,4
+	note C_,4
+; P1-17
+	note D_,12
+	rest 3
+	octave 2
+	note B_,3
+	octave 3
+	note C_,3
+	note D_,3
+; P1-18
+	note D_,9
+	octave 2
+	note B_,3
+	octave 3
+	note D_,6
+	octave 2
+	note B_,6
+; P1-19
+	octave 3
+	note C_,9
+	note F_,9
+	note C_,6
+; P1-20
+	note D_,9
+	note_type 12, 11, 3
+	note D#,1
+	note E_,1
+	note F_,6
+	note E_,1
+	note D#,1
+; P1-21
+	note D_,8
+	note_type 8, 11, 3
+	note C_,4
+	octave 2
+	note B_,4
+	octave 3
+	note C_,4
+; P1-22
+	note D_,9
+	octave 2
+	note B_,3
+	octave 3
+	note D_,9
+	note G_,3
+; P1-23
+	note A_,4
+	note G_,4
+	note F_,4
+	note F_,6
+	note E_,6
+; P1-24
+	note D_,9
+	note F_,3
+	note G_,3
+	note D_,6
+	note G_,3
+; P1-25
+	note G_,9
+	note A_,6
+	note F_,3
+	note A_,3
+	octave 4
+	note C_,3
+; P1-26
+	note_type 12, 11, 3
+	octave 3
+	note D_,12
+	note E_,4
+; P1-27
+	note F_,8
+	note G_,4
+	note F_,4
+; P1-28
+	note E_,8
+	note_type 8, 11, 3
+	note G_,4
+	note F_,4
+	note E_,4
+; P1-29
+	note G_,12
+	octave 4
+	note C_,6
+	note C#,6
+; P1-30
+	note_type 12, 11, 3
+	note D_,1
+	rest 1
+	octave 2
+	note D_,1
 	octave 1
-	note G_, 1
-	note __, 11
-	endchannel
-
-Music_TitleScreen_branch_eb96d:
-	notetype $c, $c3
-	note D_, 1
-Music_TitleScreen_branch_eb971:
-	note __, 1
+	note A_,1
 	octave 2
-	note D_, 1
+	note D_,1
+	rest 1
+	note D_,1
 	octave 1
-	note A_, 1
+	note A_,1
 	octave 2
-	note D_, 1
-	loopchannel 5, Music_TitleScreen_branch_eb971
-	note __, 1
-	note D_, 1
+	note D_,1
+	rest 1
+	note D_,1
 	octave 1
-	note A_, 1
-	notetype $8, $b7
-	endchannel
-
-Music_TitleScreen_Ch2:
-	dutycycle $3
-	vibrato $14, $12
-	notetype $c, $c7
-	octave 3
-	note G_, 6
-	note D_, 2
-	note D_, 4
-	note G_, 4
-	intensity $b0
-	note F_, 8
-	intensity $b7
-	note F_, 8
-	intensity $c7
-	note G_, 6
-	note D_, 2
-	note D_, 4
-	note G_, 4
-	intensity $b0
-	note G#, 4
-	intensity $b7
-	note G#, 4
-	intensity $b0
-	octave 4
-	note C_, 4
-	intensity $b7
-	note C_, 4
-	intensity $c2
-	octave 3
-	note B_, 1
-	note __, 2
-	note A_, 1
-	intensity $b0
-	note G_, 6
-	intensity $b7
-	note G_, 6
-	note __, 16
-	note __, 16
-	intensity $c7
-	octave 4
-	note C_, 1
-	note __, 2
-	note D_, 1
-	note E_, 8
-	note F#, 2
-	note E_, 1
-	note F#, 1
-	octave 3
-	note G_, 6
-	note B_, 2
-	octave 4
-	note D_, 8
-	stereopanning $f0
-	intensity $97
+	note A_,1
 	octave 2
-	note A_, 4
-	note F_, 4
-	stereopanning $ff
-	intensity $c7
-	octave 4
-	note F_, 6
-	note E_, 1
-	note D#, 1
-	note D_, 8
-	stereopanning $f0
-	intensity $97
-	octave 2
-	note A_, 6
-	octave 3
-	note C_, 2
-	stereopanning $f
-	intensity $a3
-	octave 4
-	note D_, 4
-	note D_, 2
-	note C_, 4
-	note C_, 2
-	octave 3
-	note B_, 4
-	stereopanning $ff
-	intensity $c7
-	octave 3
-	note G_, 6
-	note B_, 2
-	octave 4
-	note D_, 8
-	stereopanning $f0
-	intensity $97
-	octave 2
-	note A_, 2
-	note F_, 4
-	note A_, 2
-	stereopanning $ff
-	notetype $8, $c7
-	octave 4
-	note C_, 4
-	octave 3
-	note B_, 4
-	octave 4
-	note C_, 4
-	note D_, 12
-	stereopanning $f0
-	notetype $8, $b7
-	octave 2
-	note A_, 9
-	stereopanning $f
-	notetype $c, $c7
-	note G_, 1
-	note A_, 1
-	note B_, 6
-	note E_, 1
-	note F#, 1
-	note G_, 4
-	notetype $c, $4b
-	note A_, 4
-	stereopanning $ff
-	notetype $c, $c7
-	octave 3
-	note G_, 6
-	note B_, 2
-	octave 4
-	note D_, 8
-	stereopanning $f0
-	intensity $97
-	octave 2
-	note A_, 2
-	note F_, 6
-	stereopanning $ff
-	intensity $c7
-	octave 4
-	note F_, 6
-	note E_, 1
-	note D#, 1
-	note D_, 8
-	stereopanning $f0
-	intensity $97
-	octave 3
-	note C_, 2
-	octave 2
-	note A_, 6
-	note B_, 6
-	note G_, 2
-	notetype $8, $c7
-	note F_, 4
-	note G_, 4
-	note F_, 4
-	stereopanning $ff
-	octave 3
-	note G_, 9
-	note B_, 3
-	octave 4
-	note D_, 12
-	stereopanning $f0
-	notetype $8, $a7
-	octave 3
-	note D_, 4
-	note C_, 4
-	note D_, 4
-	stereopanning $ff
-	notetype $8, $c7
-	octave 4
-	note F_, 4
-	note E_, 4
-	note F_, 4
-	note G_, 9
-	note A#, 3
-	notetype $c, $b0
-	note G_, 8
-	notetype $c, $b7
-	note G_, 8
-	intensity $c6
-	note A_, 4
-	intensity $5d
-	note A_, 4
-	intensity $c7
-	note A#, 6
-	intensity $c3
-	note F_, 2
-	intensity $c7
-	note F_, 8
-	intensity $a7
-	octave 3
-	note A#, 8
-	intensity $c7
-	octave 4
-	note A#, 4
-	note B_, 4
-	octave 5
-	note C_, 6
-	intensity $c3
-	octave 4
-	note G_, 2
-	intensity $c7
-	note G_, 8
-	intensity $a7
-	octave 3
-	note E_, 8
-	intensity $c7
-	octave 5
-	note C_, 4
-	note C#, 4
-	tone $0001
-	stereopanning $f
-	callchannel Music_TitleScreen_branch_ebae7
-	note C#, 4
-	callchannel Music_TitleScreen_branch_ebae7
-	note C#, 4
-	callchannel Music_TitleScreen_branch_ebae7
-	octave 4
-	note A_, 4
-	stereopanning $ff
-	tone 0
-	notetype $c, $b0
-	octave 3
-	note B_, 6
-	notetype $c, $b7
-	note B_, 10
-	intensity $c7
-	note A_, 8
-	note F_, 6
-	note E_, 1
-	note D#, 1
-	note D_, 8
-	note G_, 8
-	note F_, 8
-	note A_, 8
-	intensity $b0
-	note G_, 8
-	intensity $b7
-	note G_, 8
-	intensity $c7
-	note F_, 8
-	octave 4
-	note F_, 6
-	note E_, 1
-	note D#, 1
-	note D_, 8
-	octave 2
-	note B_, 8
-	octave 3
-	note C_, 8
-	note A_, 6
-	note F_, 1
-	note A_, 1
-	intensity $b0
-	note G_, 16
-	intensity $b7
-	note G_, 16
-	intensity $c2
-	octave 4
-	note G_, 1
-	note __, 3
-	note G_, 1
-	note __, 5
-	note G_, 1
-	note G_, 1
-	note G_, 1
-	note __, 3
-	note G_, 1
-	note __, 3
-	intensity $90
-	note G_, 4
-	notetype $8, $c2
-	octave 3
-	note F_, 2
-	note F_, 2
-	note F_, 2
-	note F_, 2
-	note F_, 2
-	note F#, 2
-	notetype $c, $c7
-	note G_, 1
-	note __, 3
-	octave 2
-	note G_, 1
-	note __, 11
-	endchannel
-
-Music_TitleScreen_branch_ebae7:
-	notetype $c, $b2
-	note D_, 1
-Music_TitleScreen_branch_ebaeb:
-	octave 3
-	note A_, 1
-	octave 4
-	note D_, 1
-	note A_, 1
-	note D_, 1
-	loopchannel 5, Music_TitleScreen_branch_ebaeb
-	octave 3
-	note A_, 1
-	octave 4
-	note D_, 1
-	note A_, 1
-	notetype $8, $b7
-	octave 5
-	note C_, 4
-	note C_, 4
-	endchannel
-
-Music_TitleScreen_Ch3:
-	stereopanning $f
-	vibrato $10, $14
-	tone $0001
-	notetype $c, $16
-	octave 3
-	note B_, 6
-	note D_, 2
-	note G_, 4
-	note D_, 4
-	note F_, 2
-	note C_, 2
-	note F_, 2
-	note A_, 4
-	note G_, 4
-	note F_, 2
-	note G_, 2
-	note D_, 2
-	note G_, 2
-	note B_, 4
-	note A_, 4
-	note G_, 2
-	note G#, 2
-	note D#, 2
-	note G#, 2
-	octave 4
-	note C_, 2
-	note C_, 2
-	octave 3
-	note A#, 4
-	note G#, 2
-	octave 2
-	note G_, 2
-	note D_, 1
-	note C#, 1
-	note D_, 1
-	note __, 1
-	note G_, 2
-	note D_, 1
-	note __, 1
-	note D_, 2
-	note G_, 2
-	note D_, 2
-	note F_, 2
-	note C_, 1
+	note D_,1
+	rest 1
+	note D_,1
 	octave 1
-	note B_, 1
+	note A_,1
+; P1-31
 	octave 2
-	note C_, 1
-	note __, 1
-	note F_, 2
-	note C_, 1
-	note __, 1
-	note C_, 2
-	note F_, 2
-	note C_, 2
-	note G_, 2
-	note D_, 1
-	note C#, 1
-	note D_, 1
-	note __, 1
-	note G_, 2
-	note D_, 1
-	note __, 1
-	note D_, 2
-	note G_, 2
-	note D_, 2
-	note A_, 2
-	note F_, 1
-	note E_, 1
-	note F_, 1
-	note __, 1
-	note A_, 2
-	note F_, 2
-	note A_, 4
-	octave 3
-	note C_, 2
-	octave 2
-	note G_, 4
-	note D_, 2
-	note G_, 4
-	note D_, 2
-	note G_, 2
-	note D_, 2
-	note A_, 4
-	note F_, 2
-	note A_, 4
-	note F_, 2
-	note A_, 2
-	octave 3
-	note C_, 2
-	octave 2
-	note B_, 4
-	note G_, 2
-	note B_, 4
-	note G_, 2
-	note B_, 2
-	note G_, 2
-	note G_, 4
-	note B_, 2
-	note A_, 4
-	note B_, 2
-	octave 3
-	note C_, 4
-	octave 2
-	note G_, 4
-	note D_, 2
-	note G_, 4
-	note D_, 2
-	note G_, 2
-	note D_, 2
-	note A_, 4
-	note F_, 2
-	note A_, 4
-	note F_, 2
-	note A_, 2
-	octave 3
-	note C_, 2
-	octave 2
-	note B_, 4
-	note G_, 2
-	note B_, 4
-	note G_, 2
-	note B_, 2
-	octave 3
-	note C_, 2
-	octave 2
-	note B_, 4
-	note G_, 2
-	note B_, 4
-	note G_, 2
-	octave 3
-	note D_, 4
-	octave 2
-	note G_, 4
-	note D_, 2
-	note G_, 4
-	note D_, 2
-	note G_, 2
-	note D_, 2
-	note A_, 4
-	note F_, 2
-	note A_, 4
-	note F_, 2
-	note A_, 2
-	octave 3
-	note C_, 2
-	octave 2
-	note B_, 4
-	note G_, 2
-	note B_, 4
-	note G_, 2
-	note B_, 2
-	note G_, 2
-	octave 3
-	note D_, 4
-	octave 2
-	note G_, 2
-	octave 3
-	note D_, 4
-	octave 2
-	note G_, 2
-	octave 3
-	note D_, 2
-	octave 2
-	note A_, 2
-	note G_, 4
-	note D_, 2
-	note G_, 4
-	note D_, 2
-	note G_, 2
-	note D_, 2
-	note A_, 4
-	note F_, 2
-	note A_, 4
-	note F_, 2
-	note A_, 2
-	octave 3
-	note C_, 2
-	octave 2
-	note B_, 4
-	note G_, 2
-	note B_, 4
-	note G_, 2
-	octave 3
-	note D_, 2
-	octave 2
-	note G_, 2
-	note G_, 2
-	note D_, 2
-	note G_, 2
-	note A_, 2
-	note A_, 2
-	note F_, 2
-	note A_, 2
-	octave 3
-	note C_, 2
-	note D_, 6
-	octave 2
-	note A#, 6
-	octave 3
-	note F_, 4
-	note A#, 6
-	note F_, 6
-	note D_, 4
-	note E_, 6
-	note C_, 6
-	note E_, 4
-	octave 4
-	note C_, 6
-	octave 3
-	note G_, 6
-	note E_, 4
-	note D_, 1
-	note __, 1
-	stereopanning $ff
-	notetype $c, $16
-	tone 0
-	octave 4
-	note A_, 2
-	octave 5
-	note D_, 2
-	note A_, 6
-	note G_, 2
-	note F#, 2
-	note D_, 1
-	note __, 2
-	note E_, 1
-	note F#, 4
-	notetype $8, $16
-	octave 3
-	note C_, 4
-	note C_, 4
-	note C#, 4
-	notetype $c, $16
-	note D_, 1
-	note __, 1
-	octave 4
-	note A_, 2
-	octave 5
-	note D_, 2
-	note A_, 6
-	note G_, 2
-	note F#, 2
-	note B_, 1
-	note __, 2
-	note A_, 1
-	note A_, 4
-	notetype $8, $16
-	octave 3
-	note C_, 4
-	note C_, 4
-	note C#, 4
-	notetype $c, $16
-	note D_, 1
-	note __, 1
-	notetype $c, $16
-	octave 4
-	note A_, 2
-	octave 5
-	note D_, 2
-	note G_, 6
-	note E_, 2
-	note G_, 2
-	note F#, 1
-	note E_, 1
-	note D_, 6
-	tone $0001
-	notetype $8, $16
-	octave 3
-	note C_, 4
-	note C_, 4
-	note E_, 2
-	note F#, 2
-	stereopanning $f
-	notetype $c, $16
-	note G_, 16
-	note F_, 16
-	note G_, 8
-	note D_, 6
-	note D_, 1
-	note E_, 1
-	note F_, 2
-	note F_, 12
-	note E_, 1
-	note D#, 1
-	note D_, 8
-	note G_, 8
-	note F_, 8
-	note A_, 8
-	note G_, 8
-	note D_, 6
-	note D_, 1
-	note E_, 1
-	note F_, 16
-	note G_, 1
-	note __, 3
-	note G_, 1
-	note __, 5
-	note G_, 1
-	note G_, 1
-	note G_, 1
-	note __, 3
-	note G_, 1
-	note __, 3
-	note G_, 1
-	note __, 5
-	note G_, 1
-	note G_, 1
-	note G_, 1
-	note __, 3
-	octave 2
-	note G_, 1
-	note __, 3
-	note G_, 1
-	note __, 5
-	note G_, 1
-	note G_, 1
-	note G_, 1
-	note __, 3
-	note G_, 1
-	note __, 3
-	note G_, 1
-	note __, 3
-	notetype $8, $16
-	note F_, 2
-	note F_, 2
-	note F_, 2
-	note F_, 2
-	note F_, 2
-	note A_, 2
-	notetype $c, $16
-	note G_, 1
-	note __, 3
+	note D_,1
+	rest 1
+	note D_,1
 	octave 1
-	note G_, 1
-	note __, 11
-	endchannel
-
-Music_TitleScreen_Ch4:
-	togglenoise $5
-	stereopanning $f0
-	notetype $c
-	note __, 16
-	note __, 16
-	note __, 16
-	note __, 8
-	note C_, 2
-	note C_, 2
-	note C_, 1
-	note C_, 1
-	note C_, 1
-	note C_, 1
-	note C_, 2
-	note C_, 1
-	note C_, 1
-	note C_, 2
-	note C_, 1
-	note C_, 1
-	note C_, 1
-	note C_, 1
-	note C_, 6
-	note C_, 2
-	note C_, 1
-	note C_, 1
-	note C_, 2
-	note C_, 1
-	note C_, 1
-	note C_, 1
-	note C_, 1
-	note C_, 3
-	note C_, 1
-	note C_, 1
-	note C_, 1
-	note C_, 2
-	note C_, 1
-	note C_, 1
-	note C_, 2
-	note C_, 1
-	note C_, 1
-	note C_, 1
-	note C_, 1
-	note C_, 4
-	note D#, 2
-	note C_, 2
-	note C_, 1
-	note C_, 1
-	note C_, 2
-	note C_, 1
-	note C_, 1
-	note C_, 1
-	note C_, 1
-	note C_, 2
-	notetype $6
-	note D_, 1
-	note D_, 1
-	note C#, 1
-	note C#, 1
-	note C#, 1
-	note C#, 1
-	note C_, 1
-	note C_, 1
-	notetype $c
-	callchannel Music_TitleScreen_branch_ebd77
-	callchannel Music_TitleScreen_branch_ebd81
-	callchannel Music_TitleScreen_branch_ebd81
-	note C_, 2
-	note D#, 2
-	note C_, 2
-	note D#, 2
-	note D#, 2
-	note C_, 1
-	note C_, 1
-	note C_, 2
-	notetype $6
-	note C#, 1
-	note C#, 1
-	note C_, 1
-	note C_, 1
-	notetype $c
-	callchannel Music_TitleScreen_branch_ebd77
-	note C_, 2
-	note D#, 2
-	note C_, 2
-	note F_, 2
-	note D#, 2
-	note C_, 1
-	note C_, 1
-	note C_, 2
-	note C_, 2
-	callchannel Music_TitleScreen_branch_ebd81
-	note C_, 2
-	note D#, 2
-	note C_, 2
-	note D#, 2
-	note D#, 2
-	note C_, 1
-	note C_, 1
-	note C_, 2
-	note C_, 1
-	note C_, 1
-	callchannel Music_TitleScreen_branch_ebd77
-	callchannel Music_TitleScreen_branch_ebd81
-	callchannel Music_TitleScreen_branch_ebd81
-	note C_, 2
-	note D#, 2
-	note C_, 2
-	note D#, 2
-	note D#, 2
-	note C_, 1
-	note C_, 1
-	note C_, 2
-	notetype $6
-	note C#, 1
-	note D_, 1
-	note D_, 1
-	note C#, 1
-	notetype $c
-	callchannel Music_TitleScreen_branch_ebd77
-	callchannel Music_TitleScreen_branch_ebd81
-	note C_, 2
-	note D#, 2
-	note C_, 2
-	note F_, 2
-	note D#, 2
-	note C_, 1
-	note C_, 1
-	note C_, 2
-	note C_, 1
-	note C_, 1
-	note C_, 2
-	note D#, 2
-	note C_, 2
-	note D#, 2
-	note D#, 2
-	note C_, 1
-	note C_, 1
-	note C_, 2
-	notetype $6
-	note D_, 1
-	note D_, 1
-	note C#, 1
-	note C#, 1
-	notetype $c
-	note A_, 2
-	note D#, 4
-	note A_, 4
-	note D#, 2
-	note A_, 4
-	note A_, 2
-	note D#, 4
-	note A_, 4
-	note D#, 2
-	note A_, 2
-	note A_, 2
-	note A_, 2
-	note D#, 4
-	note A_, 4
-	note D#, 2
-	note A_, 4
-	note A_, 4
-	note A_, 4
-	note A_, 2
-	note D_, 1
-	note D_, 1
-	note C#, 1
-	note C#, 1
-	note C_, 1
-	note C_, 1
-	callchannel Music_TitleScreen_branch_ebd8b
-	callchannel Music_TitleScreen_branch_ebd93
-	note C#, 1
-	note D_, 1
-	note D_, 1
-	note C#, 1
-	notetype $c
-	callchannel Music_TitleScreen_branch_ebd8b
-	callchannel Music_TitleScreen_branch_ebd93
-	note D_, 1
-	note D_, 1
-	note C#, 1
-	note C#, 1
-	notetype $c
-	callchannel Music_TitleScreen_branch_ebd8b
-	callchannel Music_TitleScreen_branch_ebd93
-	note C#, 1
-	note C#, 1
-	note C#, 1
-	note C#, 1
-	notetype $c
-	note G#, 16
-Music_TitleScreen_branch_ebd40:
-	note __, 16
-	loopchannel 6, Music_TitleScreen_branch_ebd40
-	note __, 12
-	notetype $6
-	note D_, 1
-	note C#, 1
-	note D_, 1
-	note C#, 1
-	note D_, 1
-	note C#, 1
-	note C_, 1
-	note C_, 1
-	notetype $c
-	note C_, 4
-	note C_, 6
-	note C_, 1
-	note C_, 1
-	note C_, 4
-	note C_, 4
-	note C_, 6
-	note C_, 1
-	note C_, 1
-	note C_, 4
-	note C_, 4
-	note C_, 6
-	note C_, 1
-	note C_, 1
-	note C_, 4
-	note C_, 4
-	note C_, 4
-	notetype $8
-	note C_, 2
-	note C_, 2
-	note C_, 2
-	notetype $6
-	note C#, 1
-	note C#, 1
-	note D_, 1
-	note D_, 1
-	note C#, 1
-	note C#, 1
-	note C_, 1
-	note C_, 1
-	notetype $c
-	note C_, 4
-	note B_, 4
-	endchannel
-
-Music_TitleScreen_branch_ebd77:
-	note C_, 2
-	note D#, 2
-	note C_, 2
-	note D#, 2
-	note F_, 2
-	note C_, 1
-	note C_, 1
-	note C_, 2
-	note D#, 2
-	endchannel
-
-Music_TitleScreen_branch_ebd81:
-	note C_, 2
-	note D#, 2
-	note C_, 2
-	note F_, 2
-	note D#, 2
-	note C_, 1
-	note C_, 1
-	note C_, 2
-	note D#, 2
-	endchannel
-
-Music_TitleScreen_branch_ebd8b:
-	note C_, 2
-	note C_, 1
-	note C_, 1
-	loopchannel 4, Music_TitleScreen_branch_ebd8b
-	endchannel
-
-Music_TitleScreen_branch_ebd93:
-	note C_, 2
-	note C_, 1
-	note C_, 1
-	note C_, 2
-	note C_, 1
-	note C_, 1
-	notetype $8
-	note C_, 4
-	note C_, 4
-	endchannel
+	note A_,1
+	octave 2
+	note D_,1
+	rest 1
+	note D_,1
+	octave 1
+	note A_,1
+	note_type 8, 11, 3
+	octave 4
+	note C_,4
+	note C_,4
+	note C#,4
+; P1-32
+	note_type 12, 11, 3
+	note D_,1
+	rest 1
+	octave 2
+	note D_,1
+	octave 1
+	note A_,1
+	octave 2
+	note D_,1
+	rest 1
+	note D_,1
+	octave 1
+	note A_,1
+	octave 2
+	note D_,1
+	rest 1
+	note D_,1
+	octave 1
+	note A_,1
+	octave 2
+	note D_,1
+	rest 1
+	note D_,1
+	octave 1
+	note A_,1
+; P1-33
+	octave 2
+	note D_,1
+	rest 1
+	note D_,1
+	octave 1
+	note A_,1
+	octave 2
+	note D_,1
+	rest 1
+	note D_,1
+	octave 1
+	note A_,1
+	note_type 8, 11, 3
+	octave 3
+	note E_,4
+	note E_,4
+	note C_,4
+; P1-34
+	note_type 12, 11, 7
+	note D_,16
+; P1-35
+	note C_,16
+; P1-36
+	octave 2
+	note B_,16
+; P1-37
+	octave 3
+	note C_,8
+	octave 2
+	note B_,8
+; P1-38
+	octave 3
+	note D_,8
+	octave 2
+	note B_,8
+; P1-39
+	octave 3
+	note C_,8
+	note F_,8
+; P1-40
+	note A_,8
+	note G_,6
+	note G_,1
+	note F#,1
+; P1-41
+	note F_,8
+	note E_,8
+; P1-42
+	note D_,16
+; P1-43
+	note D_,16
+; P1-44
+	octave 2
+	note G_,1
+	rest 3
+	note G_,1
+	rest 5
+	note G_,1
+	note G_,1
+	note G_,1
+	rest 3
+; P1-45
+	note G_,1
+	rest 3
+	note G_,1
+	rest 3
+	note_type 8, 11, 3
+	note A_,2
+	note A_,2
+	note A_,2
+	note A_,2
+	note A_,2
+	note F#,2
+; P1-46
+	note_type 12, 11, 2
+	note G_,16
+	sound_ret 
+;----------------------------------------
+title2_3_Ch2:
+;----------------------------------------
+	duty_cycle 3
+	vibrato 16, 1, 4
+; P2-1
+	note_type 12, 10, 0
+; P2-2
+	octave 3
+	note D_,16
+; P2-3
+	volume_envelope 11, 0
+	note C_,8
+	note G#,6
+	note G_,1
+	note F#,1
+; P2-4
+	note F_,16
+; P2-5
+	note G#,16
+	note_type 12, 12, 7
+; P2-6
+	rest 16
+; P2-7
+	rest 16
+; P2-8
+	rest 16
+; P2-9
+	note E_,4
+	note D_,2
+	note C_,4
+	note D_,2
+	note E_,4
+; P2-10
+	note G_,6
+	note B_,2
+	octave 4
+	note D_,8
+; P2-11
+	octave 2
+	note A_,4
+	note F_,4
+	octave 4
+	note F_,6
+	note E_,1
+	note D#,1
+; P2-12
+	note D_,8
+	octave 2
+	note A_,8
+; P2-13
+	octave 4
+	note D_,4
+	note D_,2
+	note C_,4
+	note C_,2
+	octave 3
+	note B_,4
+; P2-14
+	note G_,6
+	note B_,2
+	octave 4
+	note D_,8
+; P2-15
+	octave 2
+	note A_,6
+	note F_,2
+	note_type 8, 12, 7
+	octave 4
+	note C_,4
+	octave 3
+	note B_,4
+	octave 4
+	note C_,4
+; P2-16
+	note D_,12
+	octave 2
+	note A_,9
+	note_type 12, 12, 7
+	note G_,1
+	note A_,1
+; P2-17
+	note B_,6
+	note E_,1
+	note F#,1
+	note G_,4
+	note A_,4
+; P2-18
+	octave 3
+	note G_,6
+	note B_,2
+	octave 4
+	note D_,8
+; P2-19
+	octave 2
+	note A_,2
+	note F_,6
+	octave 4
+	note F_,6
+	note E_,1
+	note D#,1
+; P2-20
+	note D_,8
+	octave 3
+	note C_,2
+	octave 2
+	note A_,6
+; P2-21
+	note B_,6
+	note G_,2
+	note_type 8, 12, 7
+	note F_,4
+	note G_,4
+	note F_,4
+; P2-22
+	octave 3
+	note G_,9
+	note B_,3
+	octave 4
+	note D_,12
+; P2-23
+	octave 3
+	note D_,4
+	note C_,4
+	note D_,4
+	octave 4
+	note F_,4
+	note E_,4
+	note F_,4
+; P2-24
+	note G_,9
+	note A#,3
+	note G_,12
+; P2-25
+	note G_,12
+	note A_,12
+; P2-26
+	note A#,9
+	note F_,3
+	note F_,12
+; P2-27
+	octave 3
+	note D_,12
+	octave 4
+	note A#,6
+	note B_,6
+; P2-28
+	octave 5
+	note C_,9
+	octave 4
+	note G_,3
+	note G_,12
+; P2-29
+	octave 3
+	note E_,12
+	octave 5
+	note C_,6
+	note C#,6
+; P2-30
+	note_type 12, 12, 7
+	note D_,1
+	octave 3
+	note A_,1
+	octave 4
+	note D_,1
+	note A_,1
+	note D_,1
+	octave 3
+	note A_,1
+	octave 4
+	note D_,1
+	note A_,1
+	note D_,1
+	octave 3
+	note A_,1
+	octave 4
+	note D_,1
+	note A_,1
+	note D_,1
+	octave 3
+	note A_,1
+	octave 4
+	note D_,1
+	note A_,1
+; P2-31
+	note D_,1
+	octave 3
+	note A_,1
+	octave 4
+	note D_,1
+	note A_,1
+	note D_,1
+	octave 3
+	note A_,1
+	octave 4
+	note D_,1
+	note A_,1
+	note_type 8, 12, 7
+	octave 5
+	note C_,4
+	note C_,4
+	note C#,4
+; P2-32
+	note_type 12, 12, 7
+	note D_,1
+	octave 3
+	note A_,1
+	octave 4
+	note D_,1
+	note A_,1
+	note D_,1
+	octave 3
+	note A_,1
+	octave 4
+	note D_,1
+	note A_,1
+	note D_,1
+	octave 3
+	note A_,1
+	octave 4
+	note D_,1
+	note A_,1
+	note D_,1
+	octave 3
+	note A_,1
+	octave 4
+	note D_,1
+	note A_,1
+; P2-33
+	note D_,1
+	octave 3
+	note A_,1
+	octave 4
+	note D_,1
+	note A_,1
+	note D_,1
+	octave 3
+	note A_,1
+	octave 4
+	note D_,1
+	note A_,1
+	note_type 8, 12, 7
+	octave 5
+	note C_,4
+	note C_,4
+	octave 4
+	note A_,4
+; P2-34
+	note_type 12, 12, 7
+	octave 3
+	note B_,16
+; P2-35
+	note A_,8
+	note F_,6
+	note E_,1
+	note D#,1
+; P2-36
+	note D_,8
+	note G_,8
+; P2-37
+	note F_,8
+	note A_,8
+; P2-38
+	note G_,16
+; P2-39
+	note F_,8
+	octave 4
+	note F_,6
+	note E_,1
+	note D#,1
+; P2-40
+	note D_,8
+	octave 2
+	note B_,8
+; P2-41
+	octave 3
+	note C_,8
+	note A_,6
+	note F_,1
+	note A_,1
+; P2-42
+	note G_,16
+; P2-43
+	note G_,16
+; P2-44
+	octave 4
+	note G_,1
+	rest 3
+	note G_,1
+	rest 5
+	note G_,1
+	note G_,1
+	note G_,1
+	rest 3
+; P2-45
+	note G_,1
+	rest 3
+	note G_,4
+	note_type 8, 11, 3
+	octave 3
+	note F_,2
+	note F_,2
+	note F_,2
+	note F_,2
+	note F_,2
+	note F#,2
+; P2-46
+	note_type 12, 12, 2
+	note G_,16
+	sound_ret 
+;----------------------------------------
+title2_3_Ch3:
+;----------------------------------------
+	note_type 12, 2, 7
+; P3-2
+	octave 3
+	note D_,16
+; P3-3
+	note D#,16
+; P3-4
+	note F_,16
+; P3-5
+	note_type 12, 1, 7
+;					g#
+	octave 2
+	note G#,4
+	note D#,2
+	note G#,4
+	note D#,2
+	note G#,2
+	note D#,2
+; P3-6
+	octave 2
+	note G_,4
+	note D_,2
+	note G_,4
+	note D_,2
+	note G_,2
+	note D_,2
+; P3-7
+	note A_,4
+	note F_,2
+	note A_,4
+	note F_,2
+	note A_,2
+	note F_,2
+; P3-8
+	note G_,4
+	note D_,2
+	note G_,4
+	note D_,2
+	note G_,2
+	note D_,2
+; P3-9
+	note F_,4
+	note A_,2
+	note F_,4
+	note A_,2
+	octave 3
+	note C_,2
+	octave 2
+	note A_,2
+; P3-10
+	note G_,4
+	note D_,2
+	note G_,4
+	note D_,2
+	note G_,2
+	note D_,2
+; P3-11
+	note A_,4
+	note F_,2
+	note A_,4
+	note F_,2
+	note A_,2
+	octave 3
+	note C_,2
+; P3-12
+	octave 2
+	note B_,4
+	note G_,2
+	note B_,4
+	note G_,2
+	note B_,2
+	note G_,2
+; P3-13
+	note G_,4
+	note B_,2
+	note A_,4
+	note B_,2
+	octave 3
+	note C_,2
+	note C_,2
+; P3-14
+	octave 2
+	note G_,4
+	note D_,2
+	note G_,4
+	note D_,2
+	note G_,2
+	note D_,2
+; P3-15
+	note A_,4
+	note F_,2
+	note A_,4
+	note F_,2
+	note A_,2
+	octave 3
+	note C_,2
+; P3-16
+	octave 2
+	note B_,4
+	note G_,2
+	note B_,4
+	note G_,2
+	note B_,2
+	octave 3
+	note C_,2
+; P3-17
+	octave 2
+	note B_,4
+	note G_,2
+	note B_,4
+	note G_,2
+	octave 3
+	note D_,4
+; P3-18
+	octave 2
+	note G_,4
+	note D_,2
+	note G_,4
+	note D_,2
+	note G_,2
+	note D_,2
+; P3-19
+	note A_,4
+	note F_,2
+	note A_,4
+	note F_,2
+	note A_,2
+	octave 3
+	note C_,2
+; P3-20
+	octave 2
+	note B_,4
+	note G_,2
+	note B_,4
+	note G_,2
+	note B_,2
+	note G_,2
+; P3-21
+	octave 3
+	note D_,4
+	octave 2
+	note G_,2
+	octave 3
+	note D_,4
+	octave 2
+	note G_,2
+	octave 3
+	note D_,2
+	octave 2
+	note A_,2
+; P3-22
+	note G_,4
+	note D_,2
+	note G_,4
+	note D_,2
+	note G_,2
+	note D_,2
+; P3-23
+	note A_,4
+	note F_,2
+	note A_,4
+	note F_,2
+	note A_,2
+	octave 3
+	note C_,2
+; P3-24
+	octave 2
+	note B_,4
+	note G_,2
+	note B_,4
+	note G_,2
+	octave 3
+	note D_,2
+	octave 2
+	note G_,2
+; P3-25
+	note G_,2
+	note D_,2
+	note G_,2
+	note A_,4
+	note F_,2
+	note A_,2
+	octave 3
+	note C_,2
+; P3-26
+	octave 2
+	note A#,4
+	note F_,2
+	note A#,4
+	note F_,2
+	note A#,2
+	note F_,2
+; P3-27
+	note A#,4
+	note F_,2
+	note A#,4
+	note F_,2
+	note B_,2
+	note G_,2
+; P3-28
+	octave 3
+	note C_,4
+	octave 2
+	note G_,2
+	octave 3
+	note C_,4
+	octave 2
+	note G_,2
+	octave 3
+	note C_,2
+	octave 2
+	note G_,2
+; P3-29
+	octave 3
+	note C_,4
+	octave 2
+	note G_,2
+	octave 3
+	note C_,4
+	octave 2
+	note G_,2
+	octave 3
+	note C#,2
+	octave 2
+	note A_,2
+; P3-30
+	octave 3
+	note D_,1
+	rest 1
+	note A_,2
+	rest 2
+	octave 4
+	note D_,4
+	octave 3
+	note A_,2
+	rest 2
+	octave 5
+	note D_,2
+; P3-31 -tie
+	note D_,2
+	octave 4
+	note D_,4
+	octave 3
+	note A_,2
+	note_type 8, 1, 7
+	note C_,4
+	note C_,4
+	note C#,4
+; P3-32
+	note_type 12, 1, 7
+	note D_,1
+	rest 1
+	note A_,2
+	rest 2
+	octave 5
+	note D_,4
+	octave 3
+	note A_,2
+	rest 2
+	octave 4
+	note D_,2
+; P3-33 -tie
+	note D_,2
+	octave 3
+	note A_,2
+	octave 4
+	note C_,2
+	octave 3
+	note B_,2
+	note_type 8, 1, 7
+	note C_,4
+	note C_,4
+	note E_,2
+	note F#,2
+; P3-34
+	note_type 12, 1, 7
+	note G_,16
+; P3-35
+	note F_,16
+; P3-36
+	note G_,8
+	note D_,6
+	note D_,1
+	note E_,1
+; P3-37
+	note F_,2
+	note F_,12
+	note E_,1
+	note D#,1
+; P3-38
+	note D_,8
+	note G_,8
+; P3-39
+	note F_,8
+	note A_,8
+; P3-40
+	note G_,8
+	note D_,6
+	note D_,1
+	note E_,1
+; P3-41
+	note F_,16
+; P3-42
+	note G_,1
+	rest 3
+	note G_,1
+	rest 5
+	note G_,1
+	note G_,1
+	note G_,1
+	rest 3
+; P3-43
+	note G_,1
+	rest 3
+	note G_,1
+	rest 5
+	note G_,1
+	note G_,1
+	note G_,1
+	rest 3
+; P3-44
+	octave 2
+	note G_,1
+	rest 3
+	note G_,1
+	rest 5
+	note G_,1
+	note G_,1
+	note G_,1
+	rest 3
+; P3-45
+	note G_,1
+	rest 3
+	note G_,1
+	rest 3
+	note_type 8, 1, 7
+	note F_,2
+	note F_,2
+	note F_,2
+	note F_,2
+	note F_,2
+	note A_,2
+; P3-46
+	note_type 12, 1, 7
+	note G_,1
+	rest 15
+	sound_ret 
+;----------------------------------------
+title2_3_Ch4:
+;----------------------------------------
+	toggle_noise 0
+	drum_speed 12
+; P4-2
+	rest 16
+; P4-3
+	rest 16
+; P4-4
+	rest 16
+; P4-5
+	rest 8
+	octave 1
+	drum_note 2,1
+	rest 1
+	drum_note 2,1
+	rest 1
+	drum_note 2,1
+	drum_note 2,1
+	drum_note 2,1
+	drum_note 2,1
+; P4-6
+	drum_note 2,1
+	rest 1
+	drum_note 6,1
+	rest 1
+	drum_note 2,1
+	rest 1
+	drum_note 6,1
+	rest 1
+	drum_note 8,1
+	rest 1
+	drum_note 2,1
+	drum_note 2,1
+	drum_note 2,1
+	rest 1
+	drum_note 6,1
+	rest 1
+; P4-7
+	drum_note 2,1
+	rest 1
+	drum_note 6,1
+	rest 1
+	drum_note 2,1
+	rest 1
+	drum_note 8,1
+	rest 1
+	drum_note 6,1
+	rest 1
+	drum_note 2,1
+	drum_note 2,1
+	drum_note 2,1
+	rest 1
+	drum_note 6,1
+	rest 1
+; P4-8
+	drum_note 2,1
+	rest 1
+	drum_note 6,1
+	rest 1
+	drum_note 2,1
+	rest 1
+	drum_note 8,1
+	rest 1
+	drum_note 6,1
+	rest 1
+	drum_note 2,1
+	drum_note 2,1
+	drum_note 2,1
+	rest 1
+	drum_note 6,1
+	rest 1
+; P4-9
+	drum_note 2,1
+	rest 1
+	drum_note 6,1
+	rest 1
+	drum_note 2,1
+	rest 1
+	drum_note 6,1
+	rest 1
+	drum_note 6,1
+	rest 1
+	drum_note 2,1
+	drum_note 2,1
+	drum_note 2,1
+	rest 1
+	drum_speed 6
+	drum_note 2,1
+	drum_note 2,1
+	drum_note 2,1
+	drum_note 2,1
+; P4-10
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 8,2
+	rest 2
+	drum_note 2,2
+	drum_note 2,2
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+; P4-11
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 2,2
+	rest 2
+	drum_note 8,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 2,2
+	drum_note 2,2
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+; P4-12
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 2,2
+	rest 2
+	drum_note 8,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 2,2
+	drum_note 2,2
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+; P4-13
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 2,2
+	drum_note 2,2
+	drum_note 2,2
+	rest 2
+	drum_note 2,1
+	drum_note 2,1
+	drum_note 2,1
+	drum_note 2,1
+; P4-14
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 8,2
+	rest 2
+	drum_note 2,2
+	drum_note 2,2
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+; P4-15
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 2,2
+	rest 2
+	drum_note 8,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 2,2
+	drum_note 2,2
+	drum_note 2,2
+	rest 2
+	drum_note 2,2
+	rest 2
+; P4-16
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 2,2
+	rest 2
+	drum_note 8,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 2,2
+	drum_note 2,2
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+; P4-17
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 2,2
+	drum_note 2,2
+	drum_note 2,2
+	rest 2
+	drum_note 2,2
+	drum_note 2,2
+; P4-18
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 8,2
+	rest 2
+	drum_note 2,2
+	drum_note 2,2
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+; P4-19
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 2,2
+	rest 2
+	drum_note 8,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 2,2
+	drum_note 2,2
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+; P4-20
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 2,2
+	rest 2
+	drum_note 8,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 2,2
+	drum_note 2,2
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+; P4-21
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 2,2
+	drum_note 2,2
+	drum_note 2,2
+	rest 2
+	drum_note 2,1
+	drum_note 2,1
+	drum_note 2,1
+	drum_note 2,1
+; P4-22
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 8,2
+	rest 2
+	drum_note 2,2
+	drum_note 2,2
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+; P4-23
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 2,2
+	rest 2
+	drum_note 8,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 2,2
+	drum_note 2,2
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+; P4-24
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 2,2
+	rest 2
+	drum_note 8,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 2,2
+	drum_note 2,2
+	drum_note 2,2
+	rest 2
+	drum_note 2,2
+	drum_note 2,2
+; P4-25
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 2,2
+	drum_note 2,2
+	drum_note 2,2
+	rest 2
+	drum_note 2,1
+	drum_note 2,1
+	drum_note 2,1
+	drum_note 2,1
+; P4-26
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 8,2
+	rest 2
+	drum_note 2,2
+	drum_note 2,2
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+; P4-27
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 2,2
+	rest 2
+	drum_note 8,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 2,2
+	drum_note 2,2
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+; P4-28
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 2,2
+	rest 2
+	drum_note 8,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 2,2
+	drum_note 2,2
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+; P4-29
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 2,2
+	rest 2
+	drum_note 2,2
+	rest 2
+	drum_note 6,2
+	rest 2
+	drum_note 2,2
+	drum_note 2,2
+	drum_note 2,2
+	drum_note 2,2
+	drum_note 2,2
+	drum_note 2,2
+; P4-30
+	drum_note 2,2
+	rest 2
+	drum_note 2,2
+	drum_note 2,2
+	drum_note 2,2
+	rest 2
+	drum_note 2,2
+	drum_note 2,2
+	drum_note 2,2
+	rest 2
+	drum_note 2,2
+	drum_note 2,2
+	drum_note 2,2
+	rest 2
+	drum_note 2,2
+	drum_note 2,2
+; P4-31
+	drum_note 2,2
+	rest 2
+	drum_note 2,2
+	drum_note 2,2
+	drum_note 2,2
+	rest 2
+	drum_note 2,2
+	drum_note 2,2
+	drum_speed 8
+	drum_note 2,2
+	rest 2
+	drum_note 2,2
+	rest 2
+	drum_note 2,1
+	drum_note 2,1
+	drum_note 2,1
+	drum_note 2,1
+; P4-32
+	drum_speed 12
+	drum_note 2,1
+	rest 1
+	drum_note 2,1
+	drum_note 2,1
+	drum_note 2,1
+	rest 1
+	drum_note 2,1
+	drum_note 2,1
+	drum_note 2,1
+	rest 1
+	drum_note 2,1
+	drum_note 2,1
+	drum_note 2,1
+	rest 1
+	drum_note 2,1
+	drum_note 2,1
+; P4-33
+	drum_note 2,1
+	rest 1
+	drum_note 2,1
+	drum_note 2,1
+	drum_note 2,1
+	rest 1
+	drum_note 2,1
+	drum_note 2,1
+	drum_speed 8
+	drum_note 2,2
+	rest 2
+	drum_note 2,2
+	rest 2
+	drum_note 2,1
+	drum_note 2,1
+	drum_note 2,1
+	drum_note 2,1
+; P4-34
+	drum_note 5,12
+	drum_speed 12
+	rest 8
+; P4-35
+	rest 16
+; P4-36
+	rest 16
+; P4-37
+	rest 16
+; P4-38
+	rest 16
+; P4-39
+	rest 16
+; P4-40
+	rest 16
+; P4-41
+	rest 12
+	drum_speed 6
+	drum_note 2,1
+	drum_note 2,1
+	drum_note 2,1
+	drum_note 2,1
+	drum_note 2,1
+	drum_note 2,1
+	drum_note 2,1
+	drum_note 2,1
+; P4-42
+	drum_note 2,2
+	rest 6
+	drum_note 2,2
+	rest 10
+	drum_note 2,2
+	drum_note 2,2
+	drum_note 2,2
+	rest 6
+; P4-43
+	drum_note 2,2
+	rest 6
+	drum_note 2,2
+	rest 10
+	drum_note 2,2
+	drum_note 2,2
+	drum_note 2,2
+	rest 6
+; P4-44
+	drum_note 2,2
+	rest 6
+	drum_note 2,2
+	rest 10
+	drum_note 2,2
+	drum_note 2,2
+	drum_note 2,2
+	rest 6
+; P4-45
+	drum_note 2,2
+	rest 6
+	drum_note 2,2
+	rest 6
+	drum_speed 8
+	drum_note 2,2
+	drum_note 2,2
+	drum_note 2,2
+	drum_speed 6
+	drum_note 2,1
+	drum_note 2,1
+	drum_note 2,1
+	drum_note 2,1
+	drum_note 2,1
+	drum_note 2,1
+	drum_note 2,1
+	drum_note 2,1
+; P4-46
+	drum_note 2,8
+	drum_speed 12
+	rest 12
+	sound_ret 

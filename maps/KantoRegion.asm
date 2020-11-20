@@ -330,11 +330,11 @@ PalletTownSignText2:
 	done
 	
 RedsHouseSignText2:
-	text "RED's house"
+	text "RED's House"
 	done
 	
 BluesHouseSignText2:
-	text "BLUE's house"
+	text "BLUE's House"
 	done
 
 OaksLabSign2Text:

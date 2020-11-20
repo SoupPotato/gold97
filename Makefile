@@ -77,11 +77,11 @@ endif
 
 pokegold97.gbc: $(gold_obj) pokecrystal.link
 	$(RGBLINK) -n pokegold97.sym -m pokegold97.map -l pokecrystal.link -o $@ $(gold_obj)
-	$(RGBFIX) -Cjv -i BYTE -k 01 -l 0x33 -m 0x10 -p 0 -r 3 -t PM_CRYSTAL $@
+	$(RGBFIX) -Cjv -i AURF -k 01 -l 0x33 -m 0x10 -p 0 -r 3 -t PM_GOLD $@
 
 pokesilver97.gbc: $(silver_obj) pokecrystal.link
 	$(RGBLINK) -n pokesilver97.sym -m pokesilver97.map -l pokecrystal.link -o $@ $(silver_obj)
-	$(RGBFIX) -Cjv -i BYTE -k 01 -l 0x33 -m 0x10 -p 0 -r 3 -t PM_CRYSTAL $@
+	$(RGBFIX) -Cjv -i AGRF -k 01 -l 0x33 -m 0x10 -p 0 -r 3 -t PM_SILVER $@
 
 
 # For files that the compressor can't match, there will be a .lz file suffixed with the md5 hash of the correct uncompressed file.

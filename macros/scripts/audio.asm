@@ -119,7 +119,11 @@ ENDM
 	enum volume_cmd ; $e5
 volume: MACRO
 	db volume_cmd
-	db \1 ; volume
+	IF _NARG > 1
+		dn \1, \2 ; left volume, right volume
+	ELSE
+		db \1 ; LEGACY: Support for 1-arg volume
+	ENDC
 ENDM
 
 	enum tone_cmd ; $e6
@@ -251,6 +255,7 @@ jumpchannel: MACRO
 ENDM
 
 	enum loopchannel_cmd ; $fd
+sound_loop_cmd equ loopchannel_cmd
 loopchannel: MACRO
 	db loopchannel_cmd
 	db \1 ; count
@@ -258,6 +263,7 @@ loopchannel: MACRO
 ENDM
 
 	enum callchannel_cmd ; $fe
+sound_call_cmd equ callchannel_cmd
 callchannel: MACRO
 	db callchannel_cmd
 	dw \1 ; address
@@ -267,3 +273,56 @@ ENDM
 endchannel: MACRO
 	db endchannel_cmd
 ENDM
+
+; forward compat
+
+pitch_offset: MACRO
+	db tone_cmd
+	bigdw \1 ; pitch offset
+ENDM
+duty_cycle: MACRO
+	dutycycle \1
+ENDM
+note_type: MACRO
+	db notetype_cmd
+	db \1 ; note_length
+if _NARG >= 3
+	dn \2, \3 ; intensity
+endc
+ENDM
+rest: MACRO
+	note __, \1
+ENDM
+drum_note: MACRO
+	note \1, \2
+ENDM
+drum_speed: MACRO
+	note_type \1
+ENDM
+sound_ret: MACRO
+	endchannel
+ENDM
+volume_envelope: MACRO
+	db intensity_cmd
+	IF \2 < 0
+		dn \1, %1000 | (\2 * -1) ; volume envelope
+	ELSE
+		dn \1, \2 ; volume envelope
+	ENDC
+ENDM
+toggle_noise: MACRO
+	togglenoise \1
+ENDM
+channel_count: MACRO
+_num_channels = \1 - 1
+ENDM
+
+channel: MACRO
+	dn (_num_channels << 2), \1 - 1 ; channel id
+	dw \2 ; address
+_num_channels = 0
+ENDM
+stereo_panning: MACRO
+	stereopanning \1
+ENDM
+

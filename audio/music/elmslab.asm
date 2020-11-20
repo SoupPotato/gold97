@@ -5,7 +5,7 @@ Music_ElmsLab:
 	musicheader 1, 4, Music_ElmsLab_Ch4
 
 Music_ElmsLab_Ch1:
-	tempo 144
+	tempo 140
 	volume $77
 	dutycycle $3
 	tone $0001
