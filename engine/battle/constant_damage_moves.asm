@@ -153,3 +153,5 @@ ConstantDamage:
     pop hl
     ld [hl], 1
     ret
+	
+INCLUDE "data/moves/flail_reversal_power.asm"
