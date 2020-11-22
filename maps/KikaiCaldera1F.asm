@@ -58,7 +58,7 @@ KenjiSeenText:
 	
 KenjiBeatenText:
 	text "I can smell what"
-	line "you're cookin up!"
+	line "you're cookin'!"
 	done
 	
 KenjiAfterBattleText:
