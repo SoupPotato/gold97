@@ -93,6 +93,7 @@ TrainerBugCatcherWade1:
 	endifjustbattled
 	opentext
 	writetext BugCatcherWade1AfterText
+	waitbutton
 	closetext
 	end
 
@@ -103,6 +104,7 @@ TrainerHikerAnthony:
 	endifjustbattled
 	opentext
 	writetext HikerAnthony2AfterText
+	waitbutton
 	closetext
 	end
 	

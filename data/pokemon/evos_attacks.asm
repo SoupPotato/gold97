@@ -3259,11 +3259,11 @@ KurstrawEvosAttacks:
 	db 19, MEAN_LOOK
 	db 24, PSYBEAM
 	db 28, CONFUSE_RAY
-	db 33, BODY_SLAM
-	db 37, PAIN_SPLIT
-	db 42, SHADOW_BALL
-	db 46, TAKE_DOWN
-	db 50, PERISH_SONG
+	db 33, NIGHT_SHADE
+	db 37, BODY_SLAM
+	db 32, PAIN_SPLIT
+	db 46, SHADOW_BALL
+	db 51, PERISH_SONG
 	db 0 ; no more level-up moves
 
 PangshiEvosAttacks:
@@ -3278,11 +3278,11 @@ PangshiEvosAttacks:
 	db 24, PSYBEAM
 	db 28, CONFUSE_RAY
 	db 29, CRUNCH
-	db 35, BODY_SLAM
-	db 43, PAIN_SPLIT
-	db 50, SHADOW_BALL
-	db 58, TAKE_DOWN
-	db 65, PERISH_SONG
+	db 35, NIGHT_SHADE
+	db 42, BODY_SLAM
+	db 48, PAIN_SPLIT
+	db 55, SHADOW_BALL
+	db 61, PERISH_SONG
 	db 0 ; no more level-up moves
 
 PuddipupEvosAttacks:

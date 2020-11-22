@@ -1,6 +1,6 @@
 	db GELANIA ; 162
 
-	db  90, 85, 60,  75, 100, 125
+	db  90, 85, 125,  75, 100, 60
 	;   hp  atk  def  spd  sat  sdf
 
 	db GRASS, GRASS ; type

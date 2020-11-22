@@ -85,8 +85,8 @@ LassIntroText:
 	
 LassAsksToHeal:
 	text "How about it?"
-	para "Your #MON need"
-	line "healed?"
+	para "Do your #MON"
+	line "need to be healed?"
 	done
 	
 NoHealThisTime:

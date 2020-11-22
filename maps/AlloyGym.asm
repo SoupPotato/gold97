@@ -19,7 +19,7 @@ AlloyGym_MapScripts:
 .BouldersOlivine:
 	checkevent EVENT_ALLOY_GYM_BOULDER_1
 	iffalse .skip1olivine
-	changeblock 10, 12, $2f
+	changeblock 10, 12, $54
 .skip1olivine
 	checkevent EVENT_ALLOY_GYM_BOULDER_2
 	iffalse .skip2olivine
@@ -50,7 +50,7 @@ AlloyGym_MapScripts:
 	pause 30
 	playsound SFX_STRENGTH
 	earthquake 80
-	changeblock 10, 12, $2f
+	changeblock 10, 12, $54
 	opentext
 	writetext AlloyGymBoulderFilled
 	waitbutton
