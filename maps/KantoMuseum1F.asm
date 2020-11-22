@@ -134,10 +134,11 @@ KantoMuseum1F_MapEvents:
 
 	db 0 ; coord events
 
-	db 3 ; bg events
+	db 4 ; bg events
 	bg_event 2,  3, BGEVENT_READ, KabutopsFossil
 	bg_event 2,  6, BGEVENT_READ, AerodactylFossil
 	bg_event 11,  4, BGEVENT_READ, MuseumCounterScientist
+	bg_event 12,  5, BGEVENT_READ, MuseumCounterScientist
 
 	db 5 ; object events
 	object_event  $c, $4, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MuseumCounterScientistBehind, -1
