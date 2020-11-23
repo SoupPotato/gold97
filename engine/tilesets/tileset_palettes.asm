@@ -113,13 +113,6 @@ LoadSpecialMapPalette:
 	jp z, .LavaOverRedCoalOverBrownBGPalette
 .not_charred_summit_cave
 	ld a, [wMapGroup]
-	cp GROUP_KIKAI_VILLAGE
-	jp nz, .not_kikai_village
-	ld a, [wMapNumber]
-	cp MAP_KIKAI_VILLAGE
-	jp z, .SkyOverYellowBGPalette
-.not_kikai_village
-	ld a, [wMapGroup]
 	cp GROUP_TIDAL_GROTTO_1F
 	jp nz, .not_tidal_grotto_1f
 	ld a, [wMapNumber]
@@ -273,18 +266,6 @@ LoadSpecialMapPalette:
 .TealOverBrownBGPalette
 	ld hl, TealOverBrown
 	ld bc, 8 palettes
-	ld de, wBGPals1
-	ld a, BANK(wBGPals1)
-	call FarCopyWRAM
-	scf
-	ret
-	
-.SkyOverYellowBGPalette
-	ld hl, SkyOverYellow
-	ld a, [wTimeOfDayPal]
-	maskbits NUM_DAYTIMES
-	ld bc, 8 palettes
-	call AddNTimes
 	ld de, wBGPals1
 	ld a, BANK(wBGPals1)
 	call FarCopyWRAM

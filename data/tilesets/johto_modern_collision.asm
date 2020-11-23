@@ -197,3 +197,5 @@
 	tilecoll WALL, WALL, WALL, WALL ; c4
 	tilecoll WALL, UP_WALL, WALL, FLOOR ; c5
 	tilecoll UP_WALL, WALL, FLOOR, WALL ; c6
+	tilecoll WALL, WALL, WALL, WALL ; c7
+	tilecoll WALL, WALL, WALL, WALL ; c8
