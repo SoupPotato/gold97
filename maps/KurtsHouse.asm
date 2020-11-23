@@ -453,8 +453,8 @@ FalknerTalks:
 	
 	para "..."
 	
-	para "Ah, so you're tak"
-	line "-ing the #MON"
+	para "Ah, so you're tak-"
+	line "ing the #MON"
 	cont "League challenge."
 	
 	para "My name is"
@@ -482,8 +482,8 @@ FalknerTalks2:
 	cont "blessing."
 	
 	para "Very well, I"
-	line "accept your chal"
-	cont "-lenge."
+	line "accept your chal-"
+	cont "lenge."
 	
 	para "I shall return to"
 	line "the GYM and await"

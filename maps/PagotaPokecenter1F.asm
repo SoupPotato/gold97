@@ -135,8 +135,8 @@ UnknownText_0x695c5:
 	line "<PLAY_G>."
 	
 	para "I'm sure it could"
-	line "be a helpful add"
-	cont "-ition to your"
+	line "be a helpful add-"
+	cont "ition to your"
 	cont "party!"
 	
 	para "Also, I heard that"

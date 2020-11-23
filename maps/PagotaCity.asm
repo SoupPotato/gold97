@@ -121,7 +121,7 @@ PagotaCitySuperNerdText:
 	done
 
 PagotaCityGrampsText:
-	text "FALKNER, is a fine"
+	text "FALKNER is a fine"
 	line "GYM LEADER."
 
 	para "His FLYING-TYPE"
@@ -155,8 +155,8 @@ PagotaCityYoungsterText:
 	
 	para "Many trainers try"
 	line "to climb it to get"
-	cont "the ELDER's bles"
-	cont "-sing."
+	cont "the ELDER's bles-"
+	cont "sing."
 	
 	para "Without it, you"
 	line "can't challenge"

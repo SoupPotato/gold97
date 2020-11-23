@@ -345,8 +345,7 @@ Route102RivalBeforeText:
 	para "This will be a"
 	line "great way to show"
 	cont "the world how my"
-	cont "team is the strong"
-	cont "-est there is!"
+	cont "team is the best!"
 
 	para "Let's battle to"
 	line "see which of us"

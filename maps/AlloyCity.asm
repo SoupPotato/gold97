@@ -242,14 +242,14 @@ AlloyCity_MapEvents:
 	warp_event  7,  8, ALLOY_POKECENTER_1F, 1
 	warp_event 30,  9, ALLOY_GYM, 1
 	warp_event 35, 30, ALLOY_TIMS_HOUSE, 1
-	warp_event 34, 15, FIGHTING_DOJO, 2
+	warp_event 32, 15, FIGHTING_DOJO, 2
 	warp_event 11, 28, ALLOY_PUNISHMENT_SPEECH_HOUSE, 1
 	warp_event 23, 22, ALLOY_GOOD_ROD_HOUSE, 1
 	warp_event  5, 23, ALLOY_CAFE, 1
 	warp_event  7, 14, ALLOY_MART, 1
 	warp_event 23, 13, ALLOY_CAPTAINS_HOUSE, 1
 	warp_event 18,  5, ROUTE_107_ALLOY_GATE, 3
-	warp_event 33, 15, FIGHTING_DOJO, 1
+	warp_event 31, 15, FIGHTING_DOJO, 1
 	warp_event 19,  5, ROUTE_107_ALLOY_GATE, 4
 	warp_event 31,  9, ALLOY_GYM, 2
 
@@ -260,7 +260,7 @@ AlloyCity_MapEvents:
 	db 5 ; bg events
 	bg_event 30, 21, BGEVENT_READ, AlloyCitySign
 	bg_event 32, 10, BGEVENT_READ, OlivineGymSign
-	bg_event 30, 15, BGEVENT_READ, OlivineLighthouseSign
+	bg_event 28, 15, BGEVENT_READ, OlivineLighthouseSign
 	bg_event  8,  8, BGEVENT_READ, AlloyCityPokecenterSign
 	bg_event  8, 14, BGEVENT_READ, AlloyCityMartSign
 

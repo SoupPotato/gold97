@@ -3462,7 +3462,6 @@ Porygon2EvosAttacks:
 	db 0 ; no more level-up moves
 
 BallerineEvosAttacks:
-	db EVOLVE_HAPPINESS, TR_ANYTIME, MR__MIME
 	db EVOLVE_LEVEL, 30, MR__MIME
 	db 0 ; no more evolutions
 	db 1, BARRIER

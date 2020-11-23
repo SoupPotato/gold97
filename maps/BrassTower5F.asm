@@ -161,8 +161,8 @@ Text_5FSage:
 	line "place that should"
 	cont "only be visited by"
 	cont "those willing to"
-	cont "show proper re"
-	cont "-spect."
+	cont "show proper re-"
+	cont "spect."
 	
 	para "I understand that"
 	line "FALKNER has asked"

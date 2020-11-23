@@ -269,8 +269,7 @@ SilverHasItFiguredOut2:
 	done
 	
 WestportCityMonText:
-	text "BLISSEY:"
-	line "BIBI!"
+	text "BLISSEY: BIBI!"
 	done
 	
 WestportCityDocksSignText:
