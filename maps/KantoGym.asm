@@ -74,7 +74,7 @@ RedRematchWinText:
 	done
 
 RedAfterRematchText:
-	text "..."
+	text "…"
 	done
 
 

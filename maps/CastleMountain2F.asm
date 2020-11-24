@@ -57,7 +57,7 @@ GruntM35AfterBattleText:
 	line "always plans the"
 	cont "best missions."
 	
-	para "...Even if this"
+	para "…Even if this"
 	line "mission involves"
 	cont "hiding as far"
 	cont "away from the"
@@ -96,7 +96,7 @@ GruntM36AfterBattleText:
 	cont "better name than"
 	cont "just TEAM ROCKET."
 	
-	para "Something like..."
+	para "Something like…"
 	
 	para "TEAM GREAT ROCKET!"
 	done

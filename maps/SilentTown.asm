@@ -381,7 +381,7 @@ SilentTownRivalText1:
 	done
 
 SilentTownRivalText2:
-	text "..."
+	text "…"
 	para "You got one too?!"
 	para "Man, that's no"
 	line "fun!"

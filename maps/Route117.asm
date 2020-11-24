@@ -140,16 +140,16 @@ EngineerHarrisSeenText:
 	
 EngineerHarrisBeatenText:
 	text "I just can't find"
-	line "it..."
+	line "it…"
 	
-	para "Wait..."
+	para "Wait…"
 	
 	para "It's in my hand!"
 	done
 
 EngineerHarrisAfterBattleText:
 	text "Well, that was"
-	line "embarrassing..."
+	line "embarrassing…"
 	done
 
 

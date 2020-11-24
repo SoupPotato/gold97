@@ -70,7 +70,7 @@ GruntM38SeenText:
 	
 GruntM38BeatenText:
 	text "Left in the"
-	line "dust..."
+	line "dust…"
 	done
 	
 GruntM38AfterBattleText:
@@ -144,7 +144,7 @@ GruntF12BeatenText:
 	done
 	
 GruntF12AfterBattleText:
-	text "Whoops..."
+	text "Whoops…"
 	done
 
 

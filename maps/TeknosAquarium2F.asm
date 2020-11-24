@@ -134,7 +134,7 @@ WhitneyWayToGoText:
 	cont "aquatic #MON"
 	cont "anymore."
 	
-	para "Hey..."
+	para "Hey…"
 	
 	para "You're actually"
 	line "pretty strong!"
@@ -188,7 +188,7 @@ TrainerGruntM1WhenTalkText:
 	cont "foiled by a kid!"
 
 	para "This is"
-	line "embarrassing..."
+	line "embarrassing…"
 
 	para "But no matter."
 	

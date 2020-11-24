@@ -322,7 +322,7 @@ FlashedTheTicketText:
 	done
 
 SailorNoTicketText:
-	text "..."
+	text "…"
 	para "Sorry!"
 	line "Trips to the"
 	para "islands require"

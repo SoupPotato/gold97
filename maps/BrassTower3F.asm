@@ -132,7 +132,7 @@ SageNealBeatenText:
 	done
 
 SageNealAfterBattleText:
-	text "If FLAKNER asked"
+	text "If FALKNER asked"
 	line "you to make this"
 	para "journey, he must"
 	line "sense an important"

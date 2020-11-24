@@ -248,7 +248,7 @@ ComputerIsOn:
 	text "Looks like theres"
 	line "something still"
 	cont "on the computer"
-	cont "screen..."
+	cont "screen…"
 	done
 	
 RocketBossRoomGrunt1Text:
@@ -409,7 +409,7 @@ ImposterConfront:
 	text "You little skunk!"
 
 	para "I knew you were"
-	line "strong,..."
+	line "strong,…"
 	
 	para "But to defeat all"
 	line "of our guards?"
@@ -440,7 +440,7 @@ ImposterConfront2:
 	line "be disturbed."
 	
 	para "I will remove you"
-	line "by any means..."
+	line "by any means…"
 	done
 	
 OkeraWatchIt:	
@@ -459,7 +459,7 @@ OkeraConfront:
 	
 	para "Disruptin' my"
 	line "peaceful, quiet"
-	cont "life..."
+	cont "life…"
 	
 	para "You've got a lotta"
 	line "nerve!"
@@ -475,10 +475,10 @@ OkeraConfront2:
 	done
 	
 ImposterFighting:
-	text "...ugh."
+	text "…ugh."
 	
 	para "Our plans will"
-	line "proceed..."
+	line "proceed…"
 	done
 	
 OkeraFighting:

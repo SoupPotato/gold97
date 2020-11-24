@@ -173,7 +173,7 @@ EarlIntroText:
 	line "and I'm an artist."
 	
 	para "But inspiration"
-	line "has left me..."
+	line "has left me…"
 	
 	para "The only sculpture"
 	line "I've finished so"

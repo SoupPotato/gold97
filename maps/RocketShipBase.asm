@@ -348,9 +348,9 @@ GruntM22AfterBattleText:
 	line "probably has it."
 	
 	para "Maybe here on the"
-	line "on the SHIP..."
-	cont "or not..."
-	cont "...who knows?"
+	line "on the SHIP…"
+	cont "or not…"
+	cont "…who knows?"
 	
 	para "Once the rest of"
 	line "the crew return"
@@ -438,7 +438,7 @@ CaptainRBeforeText:
 	para "It seems my crew"
 	line "couldn't stop you."
 	
-	para "Useless grunts..."
+	para "Useless grunts…"
 	
 	para "But our operations"
 	line "here are finished."
@@ -490,7 +490,7 @@ CaptainRFinishesSpeech:
 	done
 
 CaptainRWinText:
-	text "Hmm..."
+	text "Hmm…"
 	para "Impressive for a"
 	line "child."
 	done
@@ -501,7 +501,7 @@ CaptainRLossText:
 	
 CaptainRAfterText:
 	text "Your #MON are"
-	line "quite strong..."
+	line "quite strong…"
 
 	para "But our shipments"
 	line "are complete."

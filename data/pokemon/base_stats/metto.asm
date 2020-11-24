@@ -1,6 +1,6 @@
 	db METTO ; 207
 
-	db  76,  48,  58, 104,  48,  58
+	db  96,  48,  48, 104,  48,  48
 	;   hp  atk  def  spd  sat  sdf
 
 	db STEEL, STEEL ; type

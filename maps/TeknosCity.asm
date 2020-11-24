@@ -256,7 +256,7 @@ TeknosCityRocket2Text:
 	
 	para "Go play in the"
 	line "MINES or"	
-	cont "something..."
+	cont "something…"
 	done
 
 TeknosCityGramps1Text:
@@ -273,7 +273,7 @@ TeknosCityGramps2Text:
 	line "as many tourists"
 	cont "with the road to"
 	cont "the BOARDWALK"
-	cont "damaged..."
+	cont "damaged…"
 	done
 	
 TeknosCityGramps2Text2:
@@ -395,7 +395,7 @@ TekuCityDocksText:
 	done
 	
 RocketsAreCommin:
-	text "...Eeek!"
+	text "…Eeek!"
 	done
 	
 RocketsAreCommin2:
@@ -409,7 +409,7 @@ RocketsAreCommin2:
 WorkerText:
 	text "Those ROCKET thugs"
 	line "damaged the bridge"
-	cont "to the GATE..."
+	cont "to the GATE…"
 	
 	para "We need some time"
 	line "to repair it."

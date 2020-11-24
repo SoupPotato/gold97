@@ -290,7 +290,7 @@ WhitneyIRememberYouText:
 	text "Hey! I remember"
 	line "you from the MINE!"
 	
-	para "Listen..."
+	para "Listen…"
 	
 	para "TEAM ROCKET are"
 	line "trying to take"
@@ -306,13 +306,13 @@ WhitneyIRememberYouText:
 	
 	para "Their commander"
 	line "must be on the"
-	cont "2nd Floor..."
+	cont "2nd Floor…"
 	
-	para "Lets get 'em!"
+	para "Let's get 'em!"
 	done
 	
 WhitneyWontGoEasyOnYouText:
-	text "...giggle..."
+	text "…giggle…"
 	
 	para "Don't expect me to"
 	line "go easy on you"
@@ -322,7 +322,7 @@ WhitneyWontGoEasyOnYouText:
 	
 WhitneyIwillHandlethisText:
 	text "I'll handle these"
-	line "jerks..."
+	line "jerks…"
 	
 	para "You go after the"
 	line "commander!"

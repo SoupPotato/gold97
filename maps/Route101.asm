@@ -389,14 +389,14 @@ TeacherColetteAfterBattleText:
 	done
 	
 FledglingHugoSeenText:
-	text "Um..."
+	text "Um…"
 	para "Are you a new"
 	line "trainer too?"
 	done
 
 FledglingHugoBeatenText:
 	text "Wow, you don't"
-	line "seem new..."
+	line "seem new…"
 	done
 
 FledglingHugoAfterBattleText:
@@ -411,8 +411,8 @@ SwimmerfHikariSeenText:
 	done
 
 SwimmerfHikariBeatenText:
-	text "Aw..."
-	line "...bubble..."
+	text "Aw…"
+	line "…bubble…"
 	done
 
 SwimmerfHikariAfterBattleText:

@@ -2691,13 +2691,17 @@ MarillEvosAttacks:
 	db EVOLVE_ITEM, HEART_STONE, AZUMARILL
 	db 0 ; no more evolutions
 	db 1, TACKLE
-	db 3, DEFENSE_CURL
-	db 6, TAIL_WHIP
-	db 10, WATER_GUN
+	db 1, TAIL_WHIP
+	db 6, WATER_GUN
+	db 10, DEFENSE_CURL
 	db 15, ROLLOUT
-	db 21, BUBBLEBEAM
-	db 28, DOUBLE_EDGE
-	db 36, RAIN_DANCE
+	db 19, SLAM
+	db 24, BUBBLEBEAM
+	db 28, CHARM
+	db 33, BELLY_DRUM
+	db 37, RAIN_DANCE
+	db 42, HYDRO_PUMP
+	db 46, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 AzumarillEvosAttacks:
@@ -2705,26 +2709,28 @@ AzumarillEvosAttacks:
 	db 1, WATER_GUN
 	db 1, DEFENSE_CURL
 	db 1, ROLLOUT
-	db 1, DOUBLE_EDGE
-	db 36, RAIN_DANCE
+	db 1, SLAM
+	db 33, BELLY_DRUM
+	db 37, RAIN_DANCE
 	db 42, HYDRO_PUMP
-	db 50, BELLY_DRUM
+	db 46, DOUBLE_EDGE
 	db 0 ; no more level-up moves
-	
 
 BomshealEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
-	db 1, WATER_GUN
 	db 1, TAIL_WHIP
-	db 1, EMBER
-	db 4, LICK
-	db 9, SUNNY_DAY
-	db 10, RAIN_DANCE
-	db 15, FLAME_WHEEL
-	db 23, BUBBLEBEAM
-	db 31, FIRE_SPIN
-	db 43, TAKE_DOWN
+	db 1, SMOG
+	db 7, EMBER
+	db 12, WATER_GUN
+	db 18, ENCORE
+	db 23, SUPERSONIC
+	db 29, FLAME_WHEEL
+	db 34, BUBBLEBEAM
+	db 40, MIMIC
+	db 45, BODY_SLAM
+	db 51, FIRE_BLAST
+	db 56, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 BelmittEvosAttacks:
@@ -2949,12 +2955,14 @@ SlowkingEvosAttacks:
 	db 1, CURSE
 	db 1, TACKLE
 	db 6, GROWL
-	db 15, WATER_GUN
-	db 20, CONFUSION
-	db 29, DISABLE
-	db 34, HEADBUTT
-	db 43, SWAGGER
-	db 48, PSYCHIC_M
+	db 11, WATER_GUN
+	db 17, CONFUSION
+	db 22, DISABLE
+	db 27, HEADBUTT
+	db 33, SWAGGER
+	db 38, PSYCHIC_M
+	db 43, RAIN_DANCE
+	db 49, PSYCH_UP
 	db 0 ; no more level-up moves
 
 TritalesEvosAttacks:
@@ -3099,12 +3107,15 @@ QuagsireEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, WATER_GUN
 	db 1, TAIL_WHIP
-	db 11, SLAM
-	db 23, AMNESIA
-	db 35, EARTHQUAKE
-	db 47, RAIN_DANCE
-	db 59, MIST
-	db 59, HAZE
+	db 7, MUD_SLAP
+	db 12, MIST
+	db 12, HAZE
+	db 15, SLAM
+	db 21, RAIN_DANCE
+	db 27, AMNESIA
+	db 32, SURF
+	db 39, TOXIC
+	db 47, EARTHQUAKE
 	db 0 ; no more level-up moves
 
 PraxeEvosAttacks:

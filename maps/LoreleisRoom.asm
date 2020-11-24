@@ -110,7 +110,7 @@ WillScript_WillBeforeText:
 	cont "mercy when they"
 	cont "are frozen solid!"
 
-	para "Hehe..."
+	para "Hehe…"
 	
 	para "Let us begin!"
 	done

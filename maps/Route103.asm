@@ -219,7 +219,7 @@ BirdKeeperBryanAfterBattleText:
 
 	para "If you can get"
 	line "ahold of KURT's"
-	para "custom FAST BALLs,"
+	para "custom FAST BALLS,"
 	line "they're great for"
 	cont "quick #MON."
 	done
@@ -260,7 +260,7 @@ Route103SignText:
 	done
 	
 SlowpokeGuyText1:
-	text "Yeah..."
+	text "Yeah…"
 	
 	para "These SLOWPOKE"
 	line "are always lazing"
@@ -268,7 +268,7 @@ SlowpokeGuyText1:
 	
 	para "It might be a"
 	line "while before the"
-	cont "road is clear..."
+	cont "road is clear…"
 	done
 	
 SlowpokeGuyText2:

@@ -33,7 +33,7 @@ KikaiMartWomanText:
 	line "many injured"
 	cont "fighters that I"
 	cont "started carrying"
-	cont "HYPER POTIONs"
+	cont "HYPER POTIONS"
 	cont "everywhere I go."
 	done
 

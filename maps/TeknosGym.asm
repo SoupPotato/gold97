@@ -242,9 +242,9 @@ WhitneyBeforeText:
 	para "But now it's"
 	line "different!"
 	
-	para "So..."
+	para "So…"
 	
-	para "Ahem..."
+	para "Ahem…"
 	
 	para "I am WHITNEY."
 	
@@ -256,7 +256,7 @@ WhitneyBeforeText:
 	line "will stomp you"
 	cont "flat!"
 	
-	para "...giggle.."
+	para "…giggle.."
 
 	para "Think you can"
 	line "beat me?"

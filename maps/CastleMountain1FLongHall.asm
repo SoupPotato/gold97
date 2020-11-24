@@ -45,7 +45,7 @@ GruntM31SeenText:
 	done
 	
 GruntM31BeatenText:
-	text "Party's over..."
+	text "Party's over…"
 	done
 	
 GruntM31AfterBattleText:

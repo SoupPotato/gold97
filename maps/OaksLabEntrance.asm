@@ -225,10 +225,10 @@ DaisySpeechText2:
 	cont "a map right in"
 	cont "your #GEAR!"
 	
-	para "Now..."
+	para "Now…"
 	line "How can I help?"
 	
-	para "..."
+	para "…"
 	
 	para "Oh I know!"	
 	done

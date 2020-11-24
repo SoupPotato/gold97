@@ -51,7 +51,7 @@ IeTownNPC1Text:
 	line "the GREEN DRAGON"
 	cont "that supposedly"
 	cont "lives somewhere"
-	cont "inside..."
+	cont "inside…"
 	done
 
 IeTownNPC2Text:

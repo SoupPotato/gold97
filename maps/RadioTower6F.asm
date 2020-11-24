@@ -185,7 +185,7 @@ DirectorThanksText:
 	
 	para "I was being held"
 	line "captive in the"
-	cont "basement..."
+	cont "basement…"
 	
 	para "but suddenly those"
 	line "goons took off!"
@@ -221,9 +221,9 @@ DirectorThanksText2:
 GiovanniWinText:
 	text "No! Not again!"
 	
-	para "My plans..."
+	para "My plans…"
 	
-	para "My efforts..."
+	para "My efforts…"
 	
 	para "Was it all for"
 	line "naught!?"
@@ -243,9 +243,9 @@ GiovanniGreeting:
 	
 GiovanniSpeech:	
 	text "You must be very"
-	line "brave..."
+	line "brave…"
 	
-	para "...or very"
+	para "…or very"
 	line "foolish."
 	
 	para "I am the leader of"
@@ -295,10 +295,10 @@ GiovanniAfterText:
 	
 	para "Twice, I have"
 	line "tried to conquer"	
-	cont "the world..."
+	cont "the world…"
 	
 	para "Twice, I have"
-	line "failed..."	
+	line "failed…"	
 	
 	para "And both times to"
 	line "a child no less!"
@@ -309,13 +309,13 @@ GiovanniAfterText:
 	done
 	
 GiovanniExitingText:
-	text "Very well..."
+	text "Very well…"
 	
 	para "You have bested"
 	line "me."
 	
 	para "But TEAM ROCKET"
-	line "is not over..."	
+	line "is not over…"	
 	
 	para "We will return"
 	line "someday."	
@@ -324,7 +324,7 @@ GiovanniExitingText:
 	line "succeed."
 	
 	para "Until that day"
-	line "comes..."
+	line "comes…"
 	
 	para "Prepare yourself"
 	line "for our next"
@@ -385,7 +385,7 @@ RadioTower6fTeacherTextTakeover:
 	text "Where did they do"
 	line "with the DIRECTOR?"
 	
-	para "I hope he's ok..."
+	para "I hope he's ok…"
 	done
 
 RadioTower6fGentlemanText:

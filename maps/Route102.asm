@@ -558,7 +558,7 @@ GardenerTreeText:
 	para "I think I can chop"
 	line "it down but it's"
 	cont "gonna take some"
-	cont "time..."
+	cont "time…"
 	done
 	
 GardenerTreeChoppedText:

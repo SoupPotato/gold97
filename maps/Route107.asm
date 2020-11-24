@@ -127,26 +127,26 @@ FisherArnoldAfterBattleText:
 	done
 	
 SwimmermBerkeSeenText:
-	text "C-cold?..."
+	text "C-cold?…"
 	line "M-me?"
 
 	para "N-not a chance!"
 	done
 
 SwimmermBerkeBeatenText:
-	text "N-nope..."
+	text "N-nope…"
 	line "N-not c-cold!"
 	done
 
 SwimmermBerkeAfterBattleText:
-	text "..."
+	text "…"
 
-	para "..."
+	para "…"
 
-	para "..."
+	para "…"
 	
 	para "O-ok, s-so I'm a"
-	line "bit ch-chilly..."
+	line "bit ch-chilly…"
 	done
 	
 FisherHenrySeenText:

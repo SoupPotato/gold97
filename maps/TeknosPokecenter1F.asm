@@ -121,7 +121,7 @@ TeknosPokecenter1F_BillText1:
 	cont "the city."
 	
 	para "I pray she didn't"
-	line "go there..."
+	line "go there…"
 
 	para "Oh dear, oh dear."
 	done

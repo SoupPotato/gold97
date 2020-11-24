@@ -132,7 +132,7 @@ PagotaCityGrampsText:
 	done
 	
 PagotaCityGramps2Text:
-	text "I'm sorry..."
+	text "I'm sorry…"
 	para "The TOWER is being"
 	line "cleaned right now."
 

@@ -529,7 +529,7 @@ ImposterText3:
 	
 	para "And you can trust"
 	line "me, because as you"
-	cont "can see..."
+	cont "can see…"
 	
 	para "I am PROF.OAK!"
 	
@@ -537,9 +537,9 @@ ImposterText3:
 	done
 	
 OkenaText:
-	text "Tch..."
+	text "Tch…"
 	
-	para "What a bother..."
+	para "What a bother…"
 	
 	para "First that storm"
 	line "and now some old"

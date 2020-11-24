@@ -92,7 +92,7 @@ BrunoScript_BrunoBeforeText:
 	para "So, old OAK has"
 	line "sent another child"
 	cont "on one of his"
-	cont "foolish errands..."
+	cont "foolish errands…"
 
 	para "I am AGATHA of"
 	line "the ELITE FOUR."
@@ -118,7 +118,7 @@ BrunoScript_BrunoBeforeText:
 	cont "#DEX?"
 	
 	para "Let's find out."
-    line "Fufufufu..."
+    line "Fufufufu…"
 	done
 
 BrunoScript_BrunoBeatenText:
@@ -129,7 +129,7 @@ BrunoScript_BrunoBeatenText:
 	done
 
 BrunoScript_BrunoDefeatText:
-	text "Hmm..."
+	text "Hmm…"
 	
 	para "Perhaps that old"
 	line "fool does know"

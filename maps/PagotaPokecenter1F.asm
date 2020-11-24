@@ -124,7 +124,7 @@ UnknownText_0x69555:
 	
 	para "learn and grow"
 	line "under the care of"
-	cont "a Trainer."
+	cont "a trainer."
 	
 	para "So could you keep"
 	line "this EGG with you?"

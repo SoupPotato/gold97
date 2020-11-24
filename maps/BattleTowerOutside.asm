@@ -49,8 +49,8 @@ ThiefNewBTScript:
 	end
 	
 ThiefManIntroText:
-	text "Psst..."
-	line "Hey kid..."
+	text "Psst…"
+	line "Hey kid…"
 	
 	para "Ya wanna know"
 	line "how to win at"
@@ -81,7 +81,7 @@ ThiefManSecondText:
 	cont "offering rematch"
 	cont "battles, you'll"
 	cont "find all kinds"
-	cont "of things..."
+	cont "of things…"
 	done
 
 

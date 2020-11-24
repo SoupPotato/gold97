@@ -78,11 +78,11 @@ ArianaDungeonScript:
 	end
 	
 OuchFallText:
-	text "Ouch... I should"
+	text "Ouch… I should"
 	line "have looked at"
 	cont "the trap door"
 	cont "levers more"
-	cont "carefully..."
+	cont "carefully…"
 	
 	para "This is all"
 	line "your fault!"
@@ -99,7 +99,7 @@ OuchFallText:
 	done
 
 DidYouHearThatText:
-	text "...Did you hear"
+	text "…Did you hear"
 	line "something?"
 	done
 
@@ -120,7 +120,7 @@ IThinkHesAngryText:
 	done
 
 DontForgetTRText:
-	text "Whew..."
+	text "Whew…"
 	
 	para "Don't think I'll"
 	line "just let what"

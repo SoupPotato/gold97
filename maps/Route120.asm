@@ -229,7 +229,7 @@ FisherTullyBeatenText:
 
 FisherTullyAfterBattleText:
 	text "I want to become"
-	line "the trainer CHAMP"
+	line "the CHAMPION"
 
 	para "using the #MON"
 	line "I caught."
@@ -263,7 +263,7 @@ GrampsRelievedText:
 
 	para "How many times do"
 	line "I have to tell"
-	cont "you..."
+	cont "you…"
 	
 	para "Don't wander off"
 	line "where I can't find"
@@ -271,7 +271,7 @@ GrampsRelievedText:
 	done
 	
 GirlText:
-	text "Oh Grandpa..."
+	text "Oh Grandpa…"
 	
 	para "I was only"
 	line "playing hide-and"
@@ -282,16 +282,16 @@ GirlText:
 	
 GrampsAnnoyedText:
 	text "Honestly,"
-	line "this lass..."
+	line "this lass…"
 	
 	para "But she is safe"
-	line "thankfully..."
+	line "thankfully…"
 	
 	para "Thank you Trainer,"
 	
 	para "Let's head back to"
 	line "to my house for"
-	cont "now..."
+	cont "now…"
 	done
 
 WalkDown:

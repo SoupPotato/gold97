@@ -414,11 +414,11 @@ KurtTalks:
 		
 	para "That old coot"
 	line "always acts before"
-	cont "he thinks..."
+	cont "he thinks…"
 	
 	para "Anyhow, OAK has"
 	line "said good things"
-	cont "about you..."
+	cont "about you…"
 	cont "So that's all I"
 	cont "need to know."
 	
@@ -430,7 +430,7 @@ KurtTalks:
 	cont "challenge."
 	
 	para "There are many"
-	line "GYMs across NIHON"
+	line "GYMS across NIHON"
 
 	para "and taking on each"
 	line "one will be a"
@@ -451,7 +451,7 @@ FalknerTalks:
 	line "What brings you"
 	cont "here?"
 	
-	para "..."
+	para "…"
 	
 	para "Ah, so you're tak-"
 	line "ing the #MON"
@@ -504,7 +504,7 @@ KurtICanMakeBalls:
 	line "pleting the tower."
 	
 	para "OAK was right"
-	line "about you..."
+	line "about you…"
 	
 	para "So I will make"
 	line "special #BALLs"

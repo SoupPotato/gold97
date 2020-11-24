@@ -32,7 +32,7 @@ CrownMartCooltrainerMText:
 
 CrownMartYoungsterText:
 	text "Pick up some ULTRA"
-	line "BALLs if you want"
+	line "BALLS if you want"
 	para "to catch #MON"
 	line "in MT.FUJI."
 	done

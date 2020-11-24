@@ -296,7 +296,7 @@ StandGymGuyWinText2:
 	done
 
 OkeraIntroText1:
-	text "Tch..."
+	text "Tch…"
 	
 	para "Another trainer"
 	line "wants some pain?"
@@ -340,9 +340,9 @@ OkeraExplainBadgeText:
 	text "The DUSKBADGE"
 	line "makes all #MON"
 	cont "up to Level 70"
-	cont "obey..."
+	cont "obey…"
 	
-	para "Or else..."
+	para "Or else…"
 
 	para "Your #MON can"
 	line "use ROCK SMASH"
@@ -425,7 +425,7 @@ CooltrainermBenBeatenText:
 CooltrainermBenAfterBattleText:
 	text "Would be nice if"
 	line "lights were"
-	cont "working..."
+	cont "working…"
 	done
 	
 CooltrainermRobSeenText:
@@ -435,7 +435,7 @@ CooltrainermRobSeenText:
 	done
 
 CooltrainermRobBeatenText:
-	text "Can't see..."
+	text "Can't see…"
 	done
 
 CooltrainermRobAfterBattleText:
@@ -447,7 +447,7 @@ CooltrainermRobAfterBattleText:
 	
 ItsASwitch:
 	text "Looks like a"
-	line "LIGHT SWITCH..."
+	line "LIGHT SWITCH…"
 	
 	para "It says 'FAULTY'."
 	

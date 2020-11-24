@@ -143,7 +143,7 @@ CimbWaterfallMove:
 	
 ItsAWaterfallText:
 	text "It's a mysterious"
-	line "waterfall..."
+	line "waterfall…"
 	done
 	
 AttemptToClimbText:

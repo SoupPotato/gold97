@@ -272,30 +272,30 @@ SlowpokeWellB2FGymGuyText_GotKingsRock:
 	done
 	
 OakSpeechText:
-	text "OAK: Well..."
+	text "OAK: Well…"
 	
 	para "This research trip"
 	line "didn't go as"
 	cont "planned…"
 	
-	para "Regardless..."
+	para "Regardless…"
 	
 	para "We have rescued"
 	line "the SLOWPOKE."
 	
 	para "Now they can live"
 	line "without losing"
-	cont "their TAILs to"
+	cont "their TAILS to"
 	cont "TEAM ROCKET."
 	
 	para "But TEAM ROCKET"
-	line "returning..."
+	line "returning…"
 	
 	para "What could they"
 	line "be up to?"
 	
-	para "BLUE, we best re"
-	line "-turn to the lab"
+	para "BLUE, we best re-"
+	line "turn to the lab"
 	cont "and investigate."
 	
 	para "<PLAY_G>, <RIVAL>!"
@@ -402,7 +402,7 @@ OakStopThisText:
 	cont "innocent SLOWPOKE!"
 	
 	para "It's not right to"
-	line "cut their TAILs"
+	line "cut their TAILS"
 	cont "off to sell them"
 	cont "for profit!"
 	done
@@ -425,7 +425,7 @@ ElderThisSurfText:
 	
 	para "They began cutting"
 	line "off the poor "
-	cont "SLOWPOKE's tails!"
+	cont "SLOWPOKE's TAILS!"
 	
 	para "I was about to"
 	line "chase them off but"
@@ -433,7 +433,7 @@ ElderThisSurfText:
 	cont "trouble."
 	
 	para "I must thank you"
-	line "somehow..."
+	line "somehow…"
 	
 	para "Please take this,"
 	line "don't be shy, now."

@@ -326,7 +326,7 @@ AmamiPortSSTicketText:
 	done
 	
 AmamiSailorNoTicketText:
-	text "..."
+	text "…"
 	para "Sorry!"
 	line "Trips to"
 	para "WESTPORT require"

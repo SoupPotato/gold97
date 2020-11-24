@@ -206,7 +206,7 @@ OlivineElderHoOhStoryText:
 	
 	para "No longer com"
 	line "-pelled to stay,"
-	cont "the bird left..."
+	cont "the bird left…"
 	
 	para "As it flew, ashes"
 	line "fell from its"
@@ -236,7 +236,7 @@ OlivineElderHoOhStoryText:
 	
 	para "I feel we may be"
 	line "upon that day"
-	cont "soon..."
+	cont "soon…"
 	done
 	
 OlivineElderLugiaStoryText:
@@ -262,7 +262,7 @@ OlivineElderLugiaStoryText:
 	
 	para "No longer com"
 	line "-pelled to stay,"
-	cont "the bird left..."
+	cont "the bird left…"
 	
 	para "As it dived, its"
 	line "song created many"
@@ -297,7 +297,7 @@ OlivineElderLugiaStoryText:
 	
 	para "I feel we may be"
 	line "upon that day"
-	cont "soon..."
+	cont "soon…"
 	done
 	
 HoOhAppearsText:

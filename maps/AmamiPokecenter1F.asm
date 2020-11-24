@@ -45,7 +45,7 @@ AmamiPokecenter1FSailorText:
 
 AmamiPokecenter1FBugCatcherText:
 	text "Oh? You have many"
-	line "badges."
+	line "BADGES."
 	para "You say you"
 	line "beat the LEAGUE?"
 	done

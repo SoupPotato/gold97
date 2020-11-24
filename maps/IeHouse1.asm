@@ -23,7 +23,7 @@ Ie1NPC1Text:
 	para "Now it's fallen"
 	line "into ruin."
 	cont "Truly it is a"
-	cont "shame..."
+	cont "shame…"
 	done
 	
 Ie1NPC2Text:

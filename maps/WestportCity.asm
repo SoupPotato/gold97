@@ -251,7 +251,7 @@ SilverHasItFiguredOut2:
 	para "Bet I can beat you"
 	line "to it!"
 	
-	para "One more thing..."
+	para "One more thing…"
 	
 	para "There is an old"
 	line "sea captain in"

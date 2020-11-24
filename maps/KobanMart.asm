@@ -30,7 +30,7 @@ KobanMartGrannyText:
 
 KobanMartCooltrainerMText:
 	text "I'm going to get"
-	line "some HYPER POTIONs"
+	line "some HYPER POTIONS"
 	para "to use on my"
 	line "#MON when I go"
 	para "train them in the"

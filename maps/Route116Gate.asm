@@ -43,14 +43,14 @@ Route116GateRocket1Text:
 	para "Our SLOWPOKE team"
 	line "should be back"
 	para "with the next"
-	line "batch of TAILs"
+	line "batch of TAILS"
 	cont "soon…"
 	done
 	
 Route116GateRocket2Text:
 	text "Hehehehe…"
 	para "No one will even"
-	line "notice the TAILs"
+	line "notice the TAILS"
 	para "missing from those"
 	line "SLOWPOKE until"
 	cont "it's too late…"

@@ -138,9 +138,9 @@ RyukyuFakeGym_MapScripts:
 	
 RyukyuFakeGymPokefanMScript:
 	faceplayer
+	opentext
 	checkevent EVENT_EXPLODING_TRAP_19
 	iftrue .AfterBattle
-	opentext
 	writetext TrevorBeforeText
 	waitbutton
 	checkevent EVENT_GOT_CHIKORITA_FROM_ELM

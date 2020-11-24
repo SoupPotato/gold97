@@ -580,7 +580,7 @@ WowItsShuttingDown:
 	cont "to control the"
 	cont "minds of #MON!"
 	
-	para "How despicable..."
+	para "How despicable…"
 
 	para "I don't think"
 	line "it's enough to"

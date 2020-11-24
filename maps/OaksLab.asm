@@ -708,7 +708,7 @@ Text_OakSpeech:
 	
 	para "I have called you"
 	line "both here for an"
-	cont "important task..."
+	cont "important task…"
 
 	para "Since I was a "
 	line "young boy, I have"
@@ -717,13 +717,13 @@ Text_OakSpeech:
 	cont "on every species"
 	cont "of #MON."
 	
-	para "However..."
+	para "However…"
 	para "More and more are"
 	line "being discovered"
 	cont "every day!"
 	
 	para "But my age is"
-	line "catching on me..."
+	line "catching on me…"
 	
 	para "So!"
 	
@@ -753,7 +753,7 @@ BlueText_Pokedex:
 	
 	para "I tried to com"
 	line "-plete the #DEX"
-	cont "once..."
+	cont "once…"
 	
 	para "But I got too"
 	line "arrogant…"
@@ -794,7 +794,7 @@ Text_OakDream:
 Text_RivalGenerous:
 	text "<RIVAL>: You"
 	line "can choose first"
-	cont "<PLAY_G>..."
+	cont "<PLAY_G>…"
 	
 	para "I want some time"
 	line "to decide."
