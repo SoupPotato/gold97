@@ -198,8 +198,8 @@ OlivineElderHoOhStoryText:
 	cont "now known as the"
 	cont "BRASS TOWER."
 	
-	para "However, the ever"
-	line "-growing malice,"
+	para "However, the ever-"
+	line "growing malice,"
 	cont "within the region"
 	cont "made the bird grow"
 	cont "restless."
@@ -260,8 +260,8 @@ OlivineElderLugiaStoryText:
 	cont "made the bird grow"
 	cont "restless."
 	
-	para "No longer com"
-	line "-pelled to stay,"
+	para "No longer com-"
+	line "pelled to stay,"
 	cont "the bird left…"
 	
 	para "As it dived, its"

@@ -463,8 +463,8 @@ FalknerTalks:
 	para "I'm the GYM LEADER"
 	line "of this town."
 	
-	para "If you wish to cha"
-	line "-llenge me, you"
+	para "If you wish to"
+	line "challenge me, you"
 	cont "must first prove"
 	cont "yourself at the"
 	cont "BRASS TOWER."

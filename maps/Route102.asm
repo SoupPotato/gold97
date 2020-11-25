@@ -552,8 +552,8 @@ FledglingJohnnyAfterBattleText:
 	
 GardenerTreeText:
 	text "Bah!"
-	para "This tree is block"
-	line "-ing the path!"
+	para "This tree is"
+	line "blocking the path!"
 	
 	para "I think I can chop"
 	line "it down but it's"

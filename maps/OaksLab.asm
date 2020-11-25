@@ -751,8 +751,8 @@ BlueText_Pokedex:
 	para "It won't be easy"
 	line "however."
 	
-	para "I tried to com"
-	line "-plete the #DEX"
+	para "I tried to com-"
+	line "plete the #DEX"
 	cont "once…"
 	
 	para "But I got too"
@@ -928,8 +928,8 @@ ElmDirectionsText1:
 	para "But just in case,"
 	line "here's my phone"
 	cont "number."
-	para "Call me if any"
-	line "-thing comes up!"
+	para "Call me if any-"
+	line "thing comes up!"
 	done
 
 ElmDirectionsText3:

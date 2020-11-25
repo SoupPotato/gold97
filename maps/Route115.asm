@@ -328,8 +328,8 @@ Route115FisherLoveThisJobText:
 Route115LookieText:
 	text "Oh! Looky there!"
 	
-	para "Looks like some"
-	line "-thing was inside"
+	para "Looks like some-"
+	line "thing was inside"
 	cont "that boulder."
 
 	para "Why don't you take"

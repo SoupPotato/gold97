@@ -202,8 +202,8 @@ Text_RootingText:
 	done
 	
 DaisySpeechText:
-	text "Oh, are you leav"
-	line "-ing on a journey?"
+	text "Oh, are you leav-"
+	line "ing on a journey?"
 	
 	para "BLUE is my little"
 	line "brother."

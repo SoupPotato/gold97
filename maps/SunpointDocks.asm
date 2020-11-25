@@ -81,9 +81,8 @@ DocksSailorScript:
 	
 DocksRocket1Text:
 	text "Just an innocent"
-	line "dock worker bring"
-	cont "-ing in some"
-	cont "cargo!"
+	line "dock worker bring-"
+	cont "ing in some cargo!"
 	
 	para "Nothing weird"
 	line "going on here!"

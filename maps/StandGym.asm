@@ -33,14 +33,9 @@ StandGymOkeraScript:
 	setflag ENGINE_STORMBADGE
 	setmapscene STAND_CITY, SCENE_FUCHSIA_CITY_IMPOSTER
 	checkcode VAR_BADGES
-;	scall StandGymActivateRockets
 .FightDone:
 	checkevent EVENT_GOT_TM01_DYNAMICPUNCH
 	iftrue .AlreadyGotTM
-;	setevent EVENT_BEAT_BLACKBELT_YOSHI
-;	setevent EVENT_BEAT_BLACKBELT_LAO
-;	setevent EVENT_BEAT_BLACKBELT_NOB
-;	setevent EVENT_BEAT_BLACKBELT_LUNG
 	writetext OkeraExplainBadgeText
 	buttonsound
 	verbosegiveitem TM_THIEF
@@ -114,19 +109,11 @@ OkeraAfterRematchText:
 	line "way, aren't you?"
 	done
 
-
-
-;StandGymActivateRockets:
-;	ifequal 7, .RadioTowerRockets
-;	ifequal 6, .GoldenrodRockets
-;	end
-
 .GoldenrodRockets:
 	jumpstd goldenrodrockets
 
 .RadioTowerRockets:
 	jumpstd radiotowerrockets
-
 
 
 StandGymStatue:
@@ -364,8 +351,8 @@ OkeraExplainTMText:
 	cont "an opponent's held"
 	cont "item."
 	
-	para "Take what is right"
-	line "-fully yours."
+	para "Take what is"
+	line "rightfully yours."
 	
 	para "That's what I say."
 	done
@@ -440,7 +427,7 @@ CooltrainermRobBeatenText:
 
 CooltrainermRobAfterBattleText:
 	text "Which do you"
-	line "prefere?"
+	line "prefer?"
 	
 	para "Light or Dark?"
 	done

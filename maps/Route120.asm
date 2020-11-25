@@ -273,9 +273,8 @@ GrampsRelievedText:
 GirlText:
 	text "Oh Grandpa…"
 	
-	para "I was only"
-	line "playing hide-and"
-	cont "-seek!"
+	para "I was only playing"
+	line "hide-and-seek!"
 	
 	para "I had lots of fun!"
 	done
