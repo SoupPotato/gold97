@@ -783,7 +783,7 @@ Text_OakDream:
 	cont "journey."
 	
 	para "There are three"
-	line "#BALLs on the"
+	line "#BALLS on the"
 	cont "table."
 	
 	para "Both of you can"

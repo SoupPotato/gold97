@@ -79,7 +79,7 @@ AideGivenLevelBall:
 AideGivingLevelBallText:
 	text "PROF.OAK ordered"
 	line "a whole bunch of"
-	cont "custom # BALLs"
+	cont "custom # BALLS"
 	cont "for his research."
 	
 	para "I keep finding"
@@ -95,7 +95,7 @@ AideGivingLevelBallText:
 AideGivenLevelBallText:
 	text "He told me that"
 	line "a lot of these"
-	cont "BALLs were made"
+	cont "BALLS were made"
 	cont "by none other"
 	cont "than the famous"
 	cont "KURT from PAGOTA"

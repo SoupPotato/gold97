@@ -1149,8 +1149,6 @@ MagnetonEvosAttacks:
 	db 1, TACKLE
 	db 1, THUNDERSHOCK
 	db 1, SUPERSONIC
-	db 1, SONICBOOM
-	db 5, THUNDERSHOCK
 	db 10, SUPERSONIC
 	db 14, SONICBOOM
 	db 19, THUNDER_WAVE
@@ -1398,12 +1396,17 @@ KrabbyEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, BUBBLE
 	db 5, LEER
-	db 12, VICEGRIP
-	db 16, HARDEN
-	db 23, STOMP
-	db 27, GUILLOTINE
-	db 34, PROTECT
-	db 41, CRABHAMMER
+	db 9, VICEGRIP
+	db 13, HARDEN
+	db 17, BUBBLEBEAM
+	db 21, METAL_CLAW
+	db 25, STOMP
+	db 29, PROTECT
+	db 33, SLAM
+	db 36, SWORDS_DANCE
+	db 40, CRABHAMMER
+	db 44, FLAIL
+	db 48, GUILLOTINE
 	db 0 ; no more level-up moves
 
 KinglerEvosAttacks:
@@ -1411,13 +1414,17 @@ KinglerEvosAttacks:
 	db 1, BUBBLE
 	db 1, LEER
 	db 1, VICEGRIP
-	db 5, LEER
-	db 12, VICEGRIP
-	db 16, HARDEN
-	db 23, STOMP
-	db 27, GUILLOTINE
-	db 38, PROTECT
-	db 49, CRABHAMMER
+	db 9, VICEGRIP
+	db 13, HARDEN
+	db 17, BUBBLEBEAM
+	db 21, METAL_CLAW
+	db 25, STOMP
+	db 30, PROTECT
+	db 36, SLAM
+	db 41, SWORDS_DANCE
+	db 47, CRABHAMMER
+	db 52, FLAIL
+	db 58, GUILLOTINE
 	db 0 ; no more level-up moves
 
 VoltorbEvosAttacks:
@@ -1507,8 +1514,6 @@ MarowakEvosAttacks:
 	db 1, TAIL_WHIP
 	db 1, BONE_CLUB
 	db 1, HEADBUTT
-	db 5, TAIL_WHIP
-	db 9, BONE_CLUB
 	db 13, HEADBUTT
 	db 17, LEER
 	db 21, FOCUS_ENERGY
@@ -1594,9 +1599,9 @@ WeezingEvosAttacks:
 	db 24, SLUDGE
 	db 30, HAZE
 	db 35, SLUDGE_BOMB
-	db 44, EXPLOSION
-	db 50, DESTINY_BOND
-	db 54, TOXIC
+	db 42, EXPLOSION
+	db 49, DESTINY_BOND
+	db 56, TOXIC
 	db 0 ; no more level-up moves
 
 RhyhornEvosAttacks:
@@ -1708,7 +1713,6 @@ SeadraEvosAttacks:
     db 1, BUBBLE
 	db 1, LEER
 	db 1, SMOKESCREEN
-	db 1, WATER_GUN
 	db 7, SMOKESCREEN
 	db 10, WATER_GUN
 	db 16, TWISTER

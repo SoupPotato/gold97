@@ -507,7 +507,7 @@ KurtICanMakeBalls:
 	line "about you…"
 	
 	para "So I will make"
-	line "special #BALLs"
+	line "special #BALLS"
 	cont "for you if you"
 	cont "bring me APRICORN."
 	
