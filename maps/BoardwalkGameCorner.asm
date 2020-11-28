@@ -295,7 +295,7 @@ BoardwalkGameCornerItemVendorMenuHeader:
 	
 BoardwalkGameCornerItemVendorMenu2Header:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 3, 19, TEXTBOX_Y - 2
+	menu_coords 0, 2, 19, TEXTBOX_Y - 1
 	dw .MenuDataItems2
 	db 1 ; default option
 	

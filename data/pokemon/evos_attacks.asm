@@ -2116,14 +2116,15 @@ ArticunoEvosAttacks:
 	db 1, GUST
 	db 1, POWDER_SNOW
 	db 8, MIST
-	db 17, ICY_WIND
-	db 24, MIND_READER
-	db 33, ANCIENTPOWER
-	db 40, AGILITY
-	db 49, ICE_BEAM
-	db 56, REFLECT
-	db 65, BLIZZARD
-	db 73, SKY_ATTACK
+	db 15, REFLECT
+	db 22, ICY_WIND
+	db 29, AGILITY
+	db 36, ANCIENTPOWER
+	db 43, WING_ATTACK
+	db 50, ICE_BEAM
+	db 57, MIND_READER
+	db 64, BLIZZARD
+	db 71, SKY_ATTACK
 	db 0 ; no more level-up moves
 
 ZapdosEvosAttacks:
@@ -2131,29 +2132,31 @@ ZapdosEvosAttacks:
 	db 1, PECK
 	db 1, THUNDERSHOCK
 	db 8, DETECT
-	db 17, SPARK
-	db 24, THUNDER_WAVE
-	db 33, ANCIENTPOWER
-	db 40, AGILITY
-	db 49, THUNDERBOLT
-	db 56, LIGHT_SCREEN
-	db 65, THUNDER
-	db 73, SKY_ATTACK
+	db 15, LIGHT_SCREEN
+	db 22, SPARK
+	db 29, AGILITY
+	db 36, ANCIENTPOWER
+	db 43, DRILL_PECK
+	db 50, THUNDERBOLT
+	db 57, THUNDER_WAVE
+	db 64, THUNDER
+	db 71, SKY_ATTACK
 	db 0 ; no more level-up moves
 
 MoltresEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, WING_ATTACK
+	db 1, GUST
 	db 1, EMBER
 	db 8, ENDURE
-	db 17, FIRE_SPIN
-	db 24, SAFEGUARD
-	db 33, ANCIENTPOWER
-	db 40, AGILITY
-	db 49, FLAMETHROWER
-	db 56, SUNNY_DAY
-	db 65, SOLARBEAM
-	db 73, SKY_ATTACK
+	db 15, SAFEGUARD
+	db 22, FIRE_SPIN
+	db 29, AGILITY
+	db 36, ANCIENTPOWER
+	db 43, WING_ATTACK
+	db 50, FLAMETHROWER
+	db 57, SUNNY_DAY
+	db 64, SOLARBEAM
+	db 71, SKY_ATTACK
 	db 0 ; no more level-up moves
 
 DratiniEvosAttacks:
