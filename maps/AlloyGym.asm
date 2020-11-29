@@ -20,6 +20,7 @@ AlloyGym_MapScripts:
 	checkevent EVENT_ALLOY_GYM_BOULDER_1
 	iffalse .skip1olivine
 	changeblock 10, 12, $54
+	changeblock 12, 12, $29
 .skip1olivine
 	checkevent EVENT_ALLOY_GYM_BOULDER_2
 	iffalse .skip2olivine
@@ -51,6 +52,7 @@ AlloyGym_MapScripts:
 	playsound SFX_STRENGTH
 	earthquake 80
 	changeblock 10, 12, $54
+	changeblock 12, 12, $29
 	opentext
 	writetext AlloyGymBoulderFilled
 	waitbutton
@@ -422,7 +424,7 @@ AlloyGym_MapEvents:
 	warp_event 17, 15, ALLOY_CITY, 13
 	warp_event  4,  1, ALLOY_CITY, 1; boulder 3
 	warp_event  4, 15, ALLOY_CITY, 1; boulder 2
-	warp_event 10, 13, ALLOY_CITY, 1; boulder 1
+	warp_event 11, 13, ALLOY_CITY, 1; boulder 1
 
 	db 0 ; coord events
 

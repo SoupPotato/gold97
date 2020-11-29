@@ -1709,6 +1709,7 @@ HorseaEvosAttacks:
 SeadraEvosAttacks:
 	db EVOLVE_ITEM, DRAGON_SCALE, KINGDRA
 	db EVOLVE_TRADE, DRAGON_SCALE, KINGDRA
+KingdraEvosAttacks:
 	db 0 ; no more evolutions
     db 1, BUBBLE
 	db 1, LEER
@@ -3324,26 +3325,31 @@ RemoraidEvosAttacks:
 	db EVOLVE_LEVEL, 25, OCTILLERY
 	db 0 ; no more evolutions
 	db 1, WATER_GUN
-	db 11, LOCK_ON
-	db 22, PSYBEAM
-	db 22, AURORA_BEAM
-	db 22, BUBBLEBEAM
-	db 33, FOCUS_ENERGY
-	db 44, LOCK_ON
-	db 55, ZAP_CANNON
+	db 7, PSYBEAM
+	db 12, AURORA_BEAM
+	db 18, BUBBLEBEAM
+	db 23, FOCUS_ENERGY
+	db 29, ICE_BEAM
+	db 34, LOCK_ON
+	db 40, HYDRO_PUMP
+	db 45, ZAP_CANNON
+	db 51, HYPER_BEAM
 	db 0 ; no more level-up moves
 
 OctilleryEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, WATER_GUN
-	db 11, CONSTRICT
-	db 22, PSYBEAM
-	db 22, AURORA_BEAM
-	db 22, BUBBLEBEAM
+	db 1, CONSTRICT
+	db 7, PSYBEAM
+	db 12, AURORA_BEAM
+	db 18, BUBBLEBEAM
+	db 23, FOCUS_ENERGY
 	db 25, OCTAZOOKA
-	db 38, FOCUS_ENERGY
-	db 54, LOCK_ON
-	db 70, ZAP_CANNON
+	db 30, ICE_BEAM
+	db 38, LOCK_ON
+	db 45, HYDRO_PUMP
+	db 53, ZAP_CANNON
+	db 60, HYPER_BEAM
 	db 0 ; no more level-up moves
 
 DelibirdEvosAttacks:
@@ -3396,40 +3402,28 @@ HoundourEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, LEER
 	db 1, EMBER
-	db 7, SMOG
-	db 13, BITE
-	db 19, ROAR
-	db 25, FIRE_SPIN
-	db 31, FAINT_ATTACK
-	db 38, FLAMETHROWER
-	db 45, CRUNCH
+	db 6, SMOG
+	db 12, BITE
+	db 17, ROAR
+	db 23, BEAT_UP
+	db 29, FLAME_WHEEL
+	db 35, FAINT_ATTACK
+	db 40, FLAMETHROWER
+	db 46, CRUNCH
 	db 0 ; no more level-up moves
 
 HoundoomEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, LEER
 	db 1, EMBER
-	db 7, SMOG
-	db 13, BITE
-	db 20, ROAR
-	db 26, FIRE_SPIN
-	db 33, FAINT_ATTACK
-	db 41, FLAMETHROWER
-	db 50, CRUNCH
-	db 0 ; no more level-up moves
-
-KingdraEvosAttacks:
-	db 0 ; no more evolutions
-	db 1, BUBBLE
-	db 1, SMOKESCREEN
-	db 1, LEER
-	db 1, WATER_GUN
-	db 8, SMOKESCREEN
-	db 15, LEER
-	db 22, WATER_GUN
-	db 29, TWISTER
-	db 40, AGILITY
-	db 51, HYDRO_PUMP
+	db 6, SMOG
+	db 12, BITE
+	db 17, ROAR
+	db 23, BEAT_UP
+	db 30, FLAME_WHEEL
+	db 37, FAINT_ATTACK
+	db 44, FLAMETHROWER
+	db 51, CRUNCH
 	db 0 ; no more level-up moves
 
 PhanpyEvosAttacks:
