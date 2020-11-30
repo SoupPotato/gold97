@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db GRASS, GRASS ; type
-	db 60 ; catch rate
+	db 140 ; catch rate
 	db 85 ; base exp
 	db LONG_VINE, LONG_VINE ; items
 	db GENDER_F50 ; gender ratio

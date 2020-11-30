@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db PSYCHIC, PSYCHIC ; type
-	db 45 ; catch rate
+	db 130 ; catch rate
 	db 78 ; base exp
 	db MYSTERYBERRY, ENERGY_WALL ; items
 	db GENDER_F50 ; gender ratio

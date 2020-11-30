@@ -280,7 +280,7 @@ JohtoGrassWildMons:
 	db 14, EXEGGCUTE
 	db 14, EXEGGCUTE
 	; nite
-	db 12, MAREEP
+	db 12, EKANS
 	db 13, RINRING
 	db 13, KOTORA
 	db 14, BELLSPROUT
@@ -804,6 +804,33 @@ JohtoGrassWildMons:
 	db 24, TANGELA
 	db 24, VENOMOTH
 	db 26, VENOMOTH
+	
+	map_id ROUTE_119
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 18, EKANS
+	db 19, VOLTORB
+	db 17, BELLSPROUT
+	db 18, WEEPINBELL
+	db 19, SKIPLOOM
+	db 20, FEAROW
+	db 22, FEAROW
+	; day
+	db 18, EKANS
+	db 19, VOLTORB
+	db 17, BELLSPROUT
+	db 18, WEEPINBELL
+	db 19, SKIPLOOM
+	db 20, FEAROW
+	db 22, FEAROW
+	; nite
+	db 18, EKANS
+	db 19, VOLTORB
+	db 17, BELLSPROUT
+	db 18, WEEPINBELL
+	db 19, CLEFAIRY
+	db 20, MEOWTH
+	db 22, MEOWTH
 
 	map_id ROUTE_104
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite

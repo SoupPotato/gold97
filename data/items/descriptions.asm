@@ -857,7 +857,7 @@ BerserkGeneDesc:
 	next "causes confusion.@"
 
 TeruSama18Desc: ; thunder tail
-	db   "Prevents paralysis."
+	db   "Prevents paralyze."
 	next "(HOLD)@"
 
 TeruSama19Desc: ; wisdom orb
