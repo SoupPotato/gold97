@@ -642,6 +642,34 @@ JohtoGrassWildMons:
 	db 19, CLEFAIRY
 	ENDC
 	
+	map_id ROUTE_117
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	IF DEF(_GOLD)
+	db 16, HOPPIP
+	db 17, PIDGEY
+	db 16, PIDGEY
+	db 18, SPEAROW
+	db 18, CUBONE
+	db 20, SKIPLOOM
+	db 19, PIDGEOTTO
+	; day
+	db 16, HOPPIP
+	db 17, PIDGEY
+	db 16, PIDGEY
+	db 18, SPEAROW
+	db 18, CUBONE
+	db 20, SKIPLOOM
+	db 19, PIDGEOTTO
+	; nite
+	db 16, ODDISH
+	db 17, PARAS
+	db 16, HOOTHOOT
+	db 18, POLIWAG
+	db 18, NYANYA
+	db 20, PARASECT
+	db 19, NOCTOWL
+	
 	map_id ENDON_CAVE_1F
 	db 8 percent, 8 percent, 8 percent ; encounter rates: morn/day/nite
 	; morn
@@ -990,9 +1018,9 @@ JohtoGrassWildMons:
 	; nite
 	db 27, WEEPINBELL
 	db 27, GLOOM
-	db 28, HOPPIP
-	db 28, SKIPLOOM
-	db 28, SUNFLORA
+	db 28, ODDISH
+	db 28, KURSTRAW
+	db 28, MURKROW
 	db 30, AIPOM
 	db 30, AIPOM
 	
