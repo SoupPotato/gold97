@@ -645,29 +645,29 @@ JohtoGrassWildMons:
 	map_id ROUTE_117
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	IF DEF(_GOLD)
+
 	db 16, HOPPIP
 	db 17, PIDGEY
-	db 16, PIDGEY
+	db 16, MANKEY
 	db 18, SPEAROW
-	db 18, CUBONE
+	db 18, PIDGEY
 	db 20, SKIPLOOM
 	db 19, PIDGEOTTO
 	; day
 	db 16, HOPPIP
 	db 17, PIDGEY
-	db 16, PIDGEY
+	db 16, MANKEY
 	db 18, SPEAROW
-	db 18, CUBONE
+	db 18, PIDGEY
 	db 20, SKIPLOOM
 	db 19, PIDGEOTTO
 	; nite
 	db 16, ODDISH
-	db 17, PARAS
-	db 16, HOOTHOOT
+	db 17, HOOTHOOT
+	db 16, MANKEY
 	db 18, POLIWAG
-	db 18, NYANYA
-	db 20, PARASECT
+	db 18, PSYDUCK
+	db 20, PSYDUCK
 	db 19, NOCTOWL
 	
 	map_id ENDON_CAVE_1F
