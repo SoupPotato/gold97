@@ -23,7 +23,7 @@ KantoGrassWildMons:
 	; nite
 	db 44, GOLDUCK
 	db 45, MURKROW
-	db 45, GOLBAT
+	db 45, NOCTOWL
 	db 48, NOCTOWL
 	db 44, RAPIDASH
 	db 46, QUAGSIRE
@@ -214,7 +214,7 @@ KantoGrassWildMons:
 	; nite
 	db 52, NOCTOWL
 	db 53, BELLRUN
-	db 54, GOLBAT
+	db 54, MURKROW
 	db 53, GOLDUCK
 	db 52, PERSIAN
 	db 53, NOCTOWL
@@ -240,7 +240,7 @@ KantoGrassWildMons:
 	; nite
 	db 52, NOCTOWL
 	db 53, PERSIAN
-	db 54, GOLBAT
+	db 54, MURKROW
 	db 53, GOLDUCK
 	db 52, BELLRUN
 	db 53, NOCTOWL
@@ -542,7 +542,7 @@ KantoGrassWildMons:
 	; nite
 	db 44, GLOOM
 	db 45, MURKROW
-	db 45, GOLBAT
+	db 45, HAUNTER
 	db 48, NOCTOWL
 	db 44, POLIWHIRL
 	db 46, VILEPLUME

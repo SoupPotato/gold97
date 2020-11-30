@@ -1018,7 +1018,7 @@ JohtoGrassWildMons:
 	db 28, EKANS
 	db 28, GLOOM
 	db 30, ARBOK
-	db 29, GOLBAT
+	db 29, NOCTOWL
 	db 30, PHANPY
 	db 30, PINSIR
 	db 32, PINSIR
@@ -1560,7 +1560,7 @@ JohtoGrassWildMons:
 	; nite
 	db 39, NOCTOWL
 	db 39, RATICATE
-	db 40, GOLBAT
+	db 40, TANGELA
 	db 40, JIGGLYPUFF
 	db 43, SKARMORY
 	db 41, MR__MIME
