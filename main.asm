@@ -309,7 +309,6 @@ INCLUDE "engine/battle/battle_transition.asm"
 INCLUDE "engine/events/field_moves.asm"
 INCLUDE "engine/events/magnet_train.asm"
 INCLUDE "engine/battle/battlestart_copytilemapatonce.asm"
-INCLUDE "engine/gfx/sprites.asm"
 INCLUDE "engine/gfx/mon_icons.asm"
 
 
@@ -320,7 +319,6 @@ INCLUDE "engine/rtc/timeset.asm"
 INCLUDE "engine/pokegear/pokegear.asm"
 INCLUDE "engine/events/fish.asm"
 INCLUDE "engine/games/slot_machine.asm"
-
 
 SECTION "Phone Engine", ROMX
 
@@ -400,6 +398,7 @@ SECTION "Font Inversed", ROMX
 
 FontInversed:
 INCBIN "gfx/font/font_inversed.1bpp"
+INCLUDE "engine/gfx/sprites.asm"
 
 
 
@@ -421,6 +420,7 @@ INCBIN "gfx/splash/copyright.2bpp"
 
 INCLUDE "engine/menus/options_menu.asm"
 INCLUDE "engine/movie/crystal_intro.asm"
+INCLUDE "engine/movie/gs_intro.asm"
 
 
 SECTION "bank3E", ROMX
