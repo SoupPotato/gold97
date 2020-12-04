@@ -94,10 +94,9 @@ NEXTU ; ffb3
 hMGStatusFlags:: db ; ffbc
 ENDU ; ffbd
 
-UNION
 hUsedSpriteIndex:: db ; ffbd
 hUsedSpriteTile::  db ; ffbe
-NEXTU
+UNION
 hFFBF::            db ; ffbf
 hFFC0::            db ; ffc0
 hFFC1::            db ; ffc1
