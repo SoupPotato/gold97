@@ -1279,7 +1279,13 @@ wCurHPPal:: db
 
 	ds 7
 
+UNION
 wSGBPals:: ds 48 ; cda9
+NEXTU
+wIntroTilemapPointer:: dw
+wIntroTilesPointer:: dw
+wIntroSpriteStateFlag:: db
+ENDU
 
 wAttrMap:: ; cdd9
 ; 20x18 grid of bg tile attributes for 8x8 tiles
@@ -1679,7 +1685,11 @@ NEXTU ; d002
 wMovementBufferCount:: db
 wMovementBufferObject:: db
 wUnusedMovementBufferBank:: db
+UNION
 wUnusedMovementBufferPointer:: dw
+NEXTU
+wIntroBGMapPointer:: dw
+ENDU
 wMovementBuffer:: ds 55
 
 NEXTU ; d002
@@ -1933,7 +1943,12 @@ wMailboxEnd:: ; d0fe
 ENDU ; d100
 
 wListPointer:: dw ; d100
-wUnusedD102:: dw ; d102
+UNION
+wIntroFrameCounter1:: db
+wIntroFrameCounter2:: db
+NEXTU
+wUnusedD102:: dw
+ENDU
 wItemAttributesPtr:: dw ; d104
 
 wCurItem:: db ; d106

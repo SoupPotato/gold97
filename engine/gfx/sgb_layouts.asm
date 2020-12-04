@@ -1,7 +1,7 @@
 LoadSGBLayout:
 	call CheckCGB
 	jp nz, LoadSGBLayoutCGB
-
+	ret
 	ld a, b
 	cp SCGB_RAM
 	jr nz, .not_ram

@@ -230,6 +230,9 @@ gfx/mobile/pichu_animated.2bpp: tools/gfx += --trim-whitespace
 
 gfx/unknown/unknown_egg.2bpp: rgbgfx += -h
 
+gfx/intro/gs/fire1.2bpp: gfx/intro/gs/charizard1.2bpp gfx/intro/gs/charizard2_top.2bpp gfx/intro/gs/space.2bpp ; cat $^ > $@
+gfx/intro/gs/fire2.2bpp: gfx/intro/gs/charizard2_bottom.2bpp gfx/intro/gs/charizard3.2bpp ; cat $^ > $@
+gfx/intro/gs/fire3.2bpp: gfx/intro/gs/fire.2bpp gfx/intro/gs/unused_blastoise_venusaur.2bpp ; cat $^ > $@
 
 ### Catch-all graphics rules
 
