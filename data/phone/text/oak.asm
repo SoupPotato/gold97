@@ -70,7 +70,7 @@ OakPhoneRocketsText:
 	para "I worry that TEAM"
 	line "ROCKET is planning"
 	para "something truly"
-	line "terrible..."
+	line "terrible…"
 	para "But you don't need"
 	line "to dwell on that!"
 	para "Keep up the great"
@@ -156,7 +156,7 @@ OakPhoneDisasterText:
 	text "Hello, <PLAY_G>?"
 	para "How goes the"
 	line "LEAGUE challenge?"
-	para "..."
+	para "…"
 	
 	para "Ah! You've already"
 	line "acquired three GYM"
@@ -222,7 +222,7 @@ OakPhoneRocketText:
 	line "know anything"
 	cont "about it?"
 
-	para "..."
+	para "…"
 	
 	para "Hm? You just dealt"
 	line "with TEAM ROCKET"
