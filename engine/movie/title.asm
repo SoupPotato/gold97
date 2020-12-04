@@ -384,6 +384,14 @@ TitleScreenLoadGFX:
 	xor a
 	ldh [hBGMapMode], a
 
+; Clear out tile $7F from GS intro
+	ld hl, vTiles1 tile 255
+	ld c, $10
+.clear7f
+	ld [hli], a
+	dec c
+	jr nz, .clear7f
+
 ; Decompress graphics
 	ld de, vTiles1
 	ld hl, TitleLogoGFX

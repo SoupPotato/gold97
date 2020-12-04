@@ -1341,6 +1341,7 @@ wIntroFrameCounter2:: db
 wIntroTilemapPointer:: dw
 wIntroTilesPointer:: dw
 wIntroSpriteStateFlag:: db
+wIntroBGMapPointer:: dw
 NEXTU
 wIntroSceneTimer:: db
 wIntroSceneFrameCounter:: db
@@ -1685,11 +1686,7 @@ NEXTU ; d002
 wMovementBufferCount:: db
 wMovementBufferObject:: db
 wUnusedMovementBufferBank:: db
-UNION
 wUnusedMovementBufferPointer:: dw
-NEXTU
-wIntroBGMapPointer:: dw
-ENDU
 wMovementBuffer:: ds 55
 
 NEXTU ; d002
