@@ -256,7 +256,7 @@ WhitneyBeforeText:
 	line "will stomp you"
 	cont "flat!"
 	
-	para "…giggle.."
+	para "…giggle…"
 
 	para "Think you can"
 	line "beat me?"
