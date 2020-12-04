@@ -87,7 +87,7 @@ OaksLabSignText:
 	done
 
 BluesHouseSignText:
-	text "CAVE OF DRAGONS"
+	text "DRAGON'S MAW"
 	done
 	
 ClairGreetingsText:
@@ -104,7 +104,7 @@ ClairGreetingsText:
 	para "But what matters"
 	line "here is that"
 	para "behind me is the"
-	line "CAVE OF DRAGONS."
+	line "DRAGON'S MAW."
 	para "It is a mystical"
 	line "place where it"
 	para "is said DRAGON"
