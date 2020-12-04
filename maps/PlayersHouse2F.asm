@@ -115,23 +115,7 @@ PlayersHousePosterScript:
 	describedecoration DECODESC_POSTER
 
 PlayersHouseRadioScript:
-	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
-	iftrue .NormalRadio
-	opentext
-	writetext PlayersRadioText1
-	waitbutton
-	closetext
-	end
-
-.NormalRadio:
 	jumpstd radio1
-
-.AbbreviatedRadio:
-	opentext
-	writetext PlayersRadioText4
-	pause 45
-	closetext
-	end
 
 PlayersHouseBookshelfScript:
 	jumpstd picturebookshelf
@@ -169,48 +153,6 @@ PlayersDollText:
 	cont "relative in KANTO."
 	done
 
-PlayersRadioText1:
-	text "<PLAY_G> turned"
-	line "on the radio."
-	
-	para "…"
-
-	para "You're listening"
-	line "to JOPM, the"
-	para "#MON broadcast"
-	line "station!"
-	
-	para "Coming up next is"
-	line "#MON News!"
-	
-	para "… World famous"
-	line "#MON researcher"
-	para "PROF. OAK has"
-	line "disappeared from"
-	cont "KANTO!"
-	
-	para "Although some"
-	line "consider he may"
-	para "have moved in"
-	line "search of a new"
-	para "place to study,"
-	line "there is also"
-	para "the possibility"
-	line "he was involved"
-	para "in some sort of"
-	line "incident."
-	
-	para "Concerned parties"
-	line "are very worried."
-	
-	para "…"
-	
-	para "And that was"
-	line "#MON News."
-	
-	para "…"
-	done
-
 PlayersRadioText2:
 	text "<PLAY_G> turned"
 	line "on the PC."
@@ -233,16 +175,6 @@ PlayersRadioText2:
 	para "#MON researcher"
 	line "OAK"
 	
-	done
-
-PlayersRadioText3:
-	text "This is DJ MARY,"
-	line "your co-host!"
-	done
-
-PlayersRadioText4:
-	text "#MON!"
-	line "#MON CHANNEL…"
 	done
 
 PlayersHouse2F_MapEvents:

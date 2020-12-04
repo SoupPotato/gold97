@@ -13,9 +13,9 @@ JohtoWaterWildMons:
 	
 	map_id WESTPORT_CITY
 	db 2 percent ; encounter rate
-	db 18, TENTACOOL
+	db 18, GUPGOLD
 	db 15, STARYU
-	db 18, TENTACRUEL
+	db 18, GOLDEEN
 
 	map_id ROUTE_116
 	db 6 percent ; encounter rate
@@ -33,19 +33,19 @@ JohtoWaterWildMons:
 	db 6 percent ; encounter rate
 	db 20, TENTACOOL
 	db 18, CORASUN
-	db 20, TENTACRUEL
+	db 20, HORSEA
 	
 	map_id SUNPOINT_CITY
 	db 6 percent ; encounter rate
 	db 22, TENTACOOL
 	db 20, CORASUN
-	db 24, TENTACRUEL
+	db 24, HORSEA
 	
 	map_id SANSKRIT_TOWN
 	db 6 percent ; encounter rate
-	db 20, TENTACOOL
+	db 20, GOLDEEN
 	db 25, CORASUN
-	db 25, TENTACRUEL
+	db 25, SEAKING
 	
 	map_id ROUTE_118
 	db 6 percent ; encounter rate
@@ -57,7 +57,7 @@ JohtoWaterWildMons:
 	db 6 percent ; encounter rate
 	db 20, TENTACOOL
 	db 18, CORASUN
-	db 20, TENTACRUEL
+	db 20, HORSEA
 	
 	map_id ROUTE_120
 	db 6 percent ; encounter rate
@@ -67,9 +67,9 @@ JohtoWaterWildMons:
 	
 	map_id BOARDWALK
 	db 6 percent ; encounter rate
-	db 18, TENTACOOL
-	db 15, STARYU
-	db 18, TENTACRUEL
+	db 18, GOLDEEN
+	db 15, MARILL
+	db 18, SEAKING
 	
 	map_id SLOWPOKE_WELL_B1F
 	db 2 percent ; encounter rate
@@ -133,9 +133,9 @@ JohtoWaterWildMons:
 	
 	map_id SUNPOINT_DOCKS
 	db 4 percent ; encounter rate
-	db 18, TENTACOOL
-	db 15, CORASUN
-	db 18, TENTACRUEL
+	db 20, TENTACOOL
+	db 18, CORASUN
+	db 22, ANCHORAGE
 	
 	map_id JADE_FOREST
 	db 4 percent ; encounter rate
@@ -145,16 +145,9 @@ JohtoWaterWildMons:
 	
 	map_id ALLOY_CITY
 	db 4 percent ; encounter rate
-	IF DEF(_GOLD)
-	db 18, TENTACOOL
-	db 15, MANTINE
-	db 18, TENTACRUEL
-	
-	ELIF DEF(_SILVER)
-	db 18, TENTACOOL
-	db 18, TENTACRUEL
-	db 15, MANTINE
-	ENDC
+	db 18, GOLDEEN
+	db 15, MARILL
+	db 18, SEAKING
 	
 	map_id ROUTE_109
 	db 4 percent ; encounter rate
@@ -170,8 +163,8 @@ JohtoWaterWildMons:
 	
 	map_id ROUTE_110
 	db 4 percent ; encounter rate
-	db 25, TENTACOOL
-	db 27, SEEL
+	db 25, SEEL
+	db 27, STARYU
 	db 25, SHELLDER
 	
 	map_id ROUTE_111
@@ -202,9 +195,9 @@ JohtoWaterWildMons:
 
 	map_id DEEPWATER_PASSAGE_B2F
 	db 4 percent ; encounter rate
-	db 18, SLOWPOKE
-	db 15, SLOWPOKE
-	db 18, SEEL
+	db 28, SEEL
+	db 25, SHELLDER
+	db 28, DEWGONG
 
 	map_id DRAGONS_MAW
 	db 4 percent ; encounter rate
@@ -232,13 +225,13 @@ JohtoWaterWildMons:
 	
 	map_id WHIRL_ISLAND_B1F
 	db 4 percent ; encounter rate
-	db 30, TENTACOOL
+	db 30, SHELLDER
 	db 28, SEEL
 	db 30, HORSEA
 	
 	map_id WHIRL_ISLAND_B2F
 	db 4 percent ; encounter rate
-	db 30, TENTACOOL
+	db 30, SHELLDER
 	db 28, SEEL
 	db 30, HORSEA
 	
@@ -274,9 +267,9 @@ JohtoWaterWildMons:
 	
 	map_id ROUTE_115
 	db 6 percent ; encounter rate
-	db 20, TENTACOOL
-	db 15, TENTACOOL
-	db 20, TENTACRUEL
+	db 32, GOLDEEN
+	db 30, MARILL
+	db 38, SEAKING
 	
 	map_id VICTORY_ROAD
 	db 4 percent ; encounter rate

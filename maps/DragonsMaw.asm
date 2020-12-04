@@ -284,7 +284,7 @@ DragonShrineSignpostText:
 	line "the dragon #MON"
 
 	para "said to have lived"
-	line "in DRAGON'S DEN."
+	line "in DRAGON'S MAW."
 	done
 
 CooltrainermDarinSeenText:
