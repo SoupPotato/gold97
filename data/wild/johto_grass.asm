@@ -663,11 +663,11 @@ JohtoGrassWildMons:
 	db 19, PIDGEOTTO
 	; nite
 	db 16, ODDISH
-	db 17, PARAS
+	db 17, HOOTHOOT
 	db 16, MANKEY
 	db 18, POLIWAG
 	db 18, PSYDUCK
-	db 20, HOOTHOOT
+	db 20, PSYDUCK
 	db 19, NOCTOWL
 	
 	map_id ENDON_CAVE_1F
