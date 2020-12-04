@@ -450,8 +450,6 @@ Intro_UpdateTilemapAndBGMap:
 	ld d, a
 	ld hl, hCurSpriteYCoord
 	add hl, de
-	inc hl
-	inc hl
 	ld a, l
 	ld [wIntroBGMapPointer + 0], a
 	ld [wRequested2bppDest + 0], a
