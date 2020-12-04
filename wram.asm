@@ -1279,13 +1279,7 @@ wCurHPPal:: db
 
 	ds 7
 
-UNION
 wSGBPals:: ds 48 ; cda9
-NEXTU
-wIntroTilemapPointer:: dw
-wIntroTilesPointer:: dw
-wIntroSpriteStateFlag:: db
-ENDU
 
 wAttrMap:: ; cdd9
 ; 20x18 grid of bg tile attributes for 8x8 tiles
@@ -1342,8 +1336,14 @@ wcf66:: db
 NEXTU ; cf64
 ; intro and title data
 UNION ; cf65
-wIntroSceneFrameCounter:: db
+wIntroFrameCounter1:: db
+wIntroFrameCounter2:: db
+wIntroTilemapPointer:: dw
+wIntroTilesPointer:: dw
+wIntroSpriteStateFlag:: db
+NEXTU
 wIntroSceneTimer:: db
+wIntroSceneFrameCounter:: db
 NEXTU ; cf65
 wTitleScreenSelectedOption:: db
 wTitleScreenTimer:: dw
@@ -1943,12 +1943,7 @@ wMailboxEnd:: ; d0fe
 ENDU ; d100
 
 wListPointer:: dw ; d100
-UNION
-wIntroFrameCounter1:: db
-wIntroFrameCounter2:: db
-NEXTU
 wUnusedD102:: dw
-ENDU
 wItemAttributesPtr:: dw ; d104
 
 wCurItem:: db ; d106
