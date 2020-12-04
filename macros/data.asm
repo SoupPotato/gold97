@@ -101,6 +101,11 @@ dsprite: MACRO
 	db (\1 * 8) % $100 + \2, (\3 * 8) % $100 + \4, \5, \6
 ENDM
 
+dbsprite: MACRO	; pokegold compat
+; x tile, y tile, x pixel, y pixel, vtile offset, attributes
+	db (\2 * TILE_WIDTH) % $100 + \4, (\1 * TILE_WIDTH) % $100 + \3, \5, \6
+ENDM
+
 menu_coords: MACRO
 ; x1, y1, x2, y2
 	db \2, \1 ; start coords

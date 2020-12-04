@@ -458,7 +458,7 @@ _CGB_GSIntro:
 	call LoadHLPaletteIntoDE
 	ld hl, .ShellderLaprasOBPals
 	ld de, wOBPals1
-	ld bc, 2 palettes
+	ld bc, 3 palettes
 	ld a, BANK(wOBPals1)
 	call FarCopyWRAM
 	call WipeAttrMap
@@ -472,14 +472,16 @@ _CGB_GSIntro:
 
 .ShellderLaprasOBPals:
 	RGB 29, 29, 29
-	RGB 20, 19, 20
-	RGB 19, 06, 04
+	RGB 29, 27, 15
+	RGB 07, 14, 21
 	RGB 03, 04, 06
 
 	RGB 31, 31, 31
 	RGB 31, 31, 31
 	RGB 31, 00, 00
 	RGB 03, 04, 06
+
+	db $ff,$7f,$f5,$49,$6d,$21,$00,$00
 
 .JigglypuffPikachuScene:
 	ld de, wBGPals1
