@@ -394,3 +394,40 @@ RegisteredNumber2Text:
 	text_ram wStringBuffer3
 	text "'s number."
 	done
+
+OakMissingRadioText:
+	text "You're listening"
+	line "to JOPM, the"
+	para "#MON broadcast"
+	line "station!"
+
+	para "Coming up next is"
+	line "#MON News!"
+
+	para "… World famous"
+	line "#MON researcher"
+	para "PROF. OAK has"
+	line "disappeared from"
+	cont "KANTO!"
+
+	para "Although some"
+	line "consider he may"
+	para "have moved in"
+	line "search of a new"
+	para "place to study,"
+	line "there is also"
+	para "the possibility"
+	line "he was involved"
+	para "in some sort of"
+	line "incident."
+
+	para "Concerned parties"
+	line "are very worried."
+
+	para "…"
+
+	para "And that was"
+	line "#MON News."
+
+	para "…"
+	done
