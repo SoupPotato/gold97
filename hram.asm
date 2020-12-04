@@ -96,10 +96,19 @@ ENDU ; ffbd
 
 hUsedSpriteIndex:: db ; ffbd
 hUsedSpriteTile::  db ; ffbe
+UNION
 hFFBF::            db ; ffbf
 hFFC0::            db ; ffc0
 hFFC1::            db ; ffc1
 hFFC2::            db ; ffc2
+NEXTU
+hCurSpriteXCoord::   db
+hCurSpriteYCoord::   db
+hCurSpriteXPixel::   db
+hCurSpriteYPixel::   db
+hCurSpriteTile::     db
+hCurSpriteOAMFlags:: db
+ENDU
 
 UNION ; ffc3
 hMoneyTemp:: ds 3 ; ffc3

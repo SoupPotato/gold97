@@ -133,7 +133,7 @@ SGB_ApplyPartyMenuHPPals:
 	ld [hl], e
 	ret
 
-Unreferenced_Function8b07:
+Intro_LoadMagikarpPalettes:
 	call CheckCGB
 	ret z
 ; CGB only
@@ -166,7 +166,7 @@ Unreferenced_Function8b07:
 	RGB 08, 16, 28
 	RGB 00, 00, 00
 
-Unreferenced_Function8b3f:
+Intro_LoadAllPal0:
 	call CheckCGB
 	ret nz
 	ld a, [hSGB]
@@ -205,7 +205,7 @@ Unreferenced_Function8b67:
 	call GetPredefPal
 	jp LoadHLPaletteIntoDE
 
-Unreferenced_Function8b81:
+Intro_LoadMonPalette:
 	call CheckCGB
 	jr nz, .cgb
 	ld a, [hSGB]

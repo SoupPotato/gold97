@@ -793,7 +793,7 @@ TeruSama10Desc: ; pretty tail
 	next "(HOLD)@"
 
 TeruSama11Desc: ; earthen clay
-	db   "Prevents paralysis."
+	db   "Prevents paralyze."
 	next "(HOLD)@"
 
 CharcoalDesc:

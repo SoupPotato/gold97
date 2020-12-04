@@ -1336,8 +1336,15 @@ wcf66:: db
 NEXTU ; cf64
 ; intro and title data
 UNION ; cf65
-wIntroSceneFrameCounter:: db
+wIntroFrameCounter1:: db
+wIntroFrameCounter2:: db
+wIntroTilemapPointer:: dw
+wIntroTilesPointer:: dw
+wIntroSpriteStateFlag:: db
+wIntroBGMapPointer:: dw
+NEXTU
 wIntroSceneTimer:: db
+wIntroSceneFrameCounter:: db
 NEXTU ; cf65
 wTitleScreenSelectedOption:: db
 wTitleScreenTimer:: dw
@@ -1933,7 +1940,7 @@ wMailboxEnd:: ; d0fe
 ENDU ; d100
 
 wListPointer:: dw ; d100
-wUnusedD102:: dw ; d102
+wUnusedD102:: dw
 wItemAttributesPtr:: dw ; d104
 
 wCurItem:: db ; d106
