@@ -50,7 +50,7 @@ SunpointPhotoStudioFishingGuruText_No:
 	done
 
 CianwoodFishGuruText:
-	text "The MOUNTAIN CAVE"
+	text "The MAGMA SHAFT"
 	line "on the west side"
 	para "of town is"
 	line "dangerously hot"

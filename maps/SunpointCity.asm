@@ -99,7 +99,7 @@ SunpointCityYoungsterText:
 SunpointCityPokefanMText:
 	text "Rare #MON are"
 	line "said to live in"
-	cont "the MOUNTAIN CAVE."
+	cont "the MAGMA SHAFT."
 	para "It's hard to get"
 	line "into the cave"
 	para "because rocks from"
@@ -145,8 +145,8 @@ SunpointPokeSeerSignText:
 	text "NOTICE:"
 	para "Dangerous rocks"
 	line "frequently fall"
-	para "from the MOUNTAIN"
-	line "CAVE."
+	para "from the MAGMA"
+	line "SHAFT."
 	para "Use proper caution"
 	line "if approaching."
 	done
