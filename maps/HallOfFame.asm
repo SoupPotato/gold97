@@ -42,6 +42,7 @@ HallOfFame_MapScripts:
 	setevent EVENT_REMATCH_AVAILABLE_RED
 	setevent EVENT_BATTLE_AVAILABLE_CLAIR
 	clearevent EVENT_BRUNO_BATTLE_DONE
+	clearevent EVENT_EXPLODING_TRAP_16 ; silver in nanjo forest
 
 	checkevent EVENT_PACKAGE_TAKEN_NO_SHOW
 	iffalse .skipPackages ; if package is sitting there unopened

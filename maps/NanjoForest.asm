@@ -10,21 +10,7 @@
 NanjoForest_MapScripts:
 	db 0 ; scene scripts
 
-	db 1 ; callbacks
-	callback MAPCALLBACK_OBJECTS, .CheckDayOfWeekSZ
-	
-.CheckDayOfWeekSZ:
-	checkcode VAR_WEEKDAY
-	ifequal WEDNESDAY, .WednesdaySZ
-.disapearSZSilver
-	disappear SAFARI_ZONE_BETA_SILVER
-	return
-	
-.WednesdaySZ
-	checkevent EVENT_EXPLODING_TRAP_16
-	iftrue .disapearSZSilver
-	appear SAFARI_ZONE_BETA_SILVER
-	return
+	db 0 ; callbacks
 
 TriWingYoungsterScript:
 	faceplayer
@@ -166,17 +152,17 @@ NanjoForestSilverBefore:
 	para "It's been a while!"
 	para "I'm here out on"
 	line "the ISLANDS to"
-	para "continue training"
-	line "and bonding with"
+	cont "continue training"
+	cont "and bonding with"
 	cont "my #MON."
 	para "I've learned more"
 	line "about how to work"
-	para "with them as a"
-	line "team."
+	cont "with them as a"
+	cont "team."
 	para "We've grown a lot"
 	line "closer recently."
-	para "But we've also"
-	line "grown a lot"
+	cont "But we've also"
+	cont "grown a lot"
 	cont "stronger!"
 	para "You know what that"
 	line "means!"
@@ -195,10 +181,13 @@ NanjoForestSilverAfter:
 	line "great battle."
 	para "I think I'm about"
 	line "done training"
-	cont "here."
-	para "Maybe I'll catch"
-	line "you around some-"
-	cont "place else!"
+	cont "here for today."
+	para "I also heard that"
+	line "BLUE is around"
+	cont "the ISLANDS doing"
+	cont "research, maybe"
+	cont "you'll see him"
+	cont "sometime!"
 	done
 	
 WhatDoesTriWingDoText:
@@ -274,7 +263,7 @@ NanjoForest_MapEvents:
 	db 7 ; object events
 	object_event 27, 11, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TriWingYoungsterScript, -1
 	object_event 27, 10, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TriWingBugCatcherScript, -1
-	object_event  6, 12, SPRITE_SILVER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, NanjoForestSilverScript, EVENT_EXPLODING_TRAP_15
+	object_event  6, 12, SPRITE_SILVER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, NanjoForestSilverScript, EVENT_EXPLODING_TRAP_16
 	object_event 26, 34, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, NanjoForestMaxRevive, EVENT_PICKED_UP_BERRY_FROM_KABUTO_ITEM_ROOM
 	object_event 15,  8, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, NanjoForestUltraBall, EVENT_PICKED_UP_PSNCUREBERRY_FROM_KABUTO_ITEM_ROOM
 	object_event  8, 19, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, NanjoForestFullHeal, EVENT_PICKED_UP_HEAL_POWDER_FROM_KABUTO_ITEM_ROOM
