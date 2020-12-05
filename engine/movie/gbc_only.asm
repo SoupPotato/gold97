@@ -130,4 +130,8 @@ GBCOnlyString:
 	next "Game Boy Color.@"
 
 GBCOnlyGFX:
-INCBIN "gfx/sgb/gbc_only.2bpp.lz"
+IF DEF(_GOLD)
+INCBIN "gfx/sgb/gbc_only_gold.2bpp.lz"
+ELIF DEF(_SILVER)
+INCBIN "gfx/sgb/gbc_only_silver.2bpp.lz"
+ENDC
