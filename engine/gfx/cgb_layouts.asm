@@ -465,23 +465,10 @@ _CGB_GSIntro:
 	ret
 
 .ShellderLaprasBGPalette:
-	RGB 19, 31, 19
-	RGB 18, 23, 31
-	RGB 11, 21, 28
-	RGB 04, 16, 24
+INCLUDE "gfx/intro/gs/shellder_lapras_bg.pal"
 
 .ShellderLaprasOBPals:
-	RGB 29, 29, 29
-	RGB 29, 27, 15
-	RGB 07, 14, 21
-	RGB 03, 04, 06
-
-	RGB 31, 31, 31
-	RGB 31, 31, 31
-	RGB 31, 00, 00
-	RGB 03, 04, 06
-
-	db $ff,$7f,$f5,$49,$6d,$21,$00,$00
+INCLUDE "gfx/intro/gs/shellder_lapras_ob.pal"
 
 .JigglypuffPikachuScene:
 	ld de, wBGPals1
