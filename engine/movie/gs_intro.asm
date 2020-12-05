@@ -32,6 +32,7 @@ GS_Intro:
 .Finish:
 	callfar ClearSpriteAnims
 	call ClearSprites
+	call Intro_ResetLYOverrides
 	call DelayFrame
 	xor a
 	ldh [hSCX], a
@@ -1215,6 +1216,9 @@ Intro_Draw2x2Tiles:
 
 Intro_ResetLYOverrides:
 	ld hl, wLYOverrides
+	call .reset
+	ld hl, wLYOverridesBackup
+.reset
 	xor a
 	ld c, wLYOverridesBackup - wLYOverrides - 1
 .loop
