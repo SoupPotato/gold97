@@ -29,6 +29,7 @@ title2_3_Ch1:
 	volume 7, 7
 	pitch_offset 1
 	duty_cycle 3
+	stereo_panning TRUE, FALSE
 ; P1-1
 	note_type 12, 8, 0
 ; P1-2
@@ -221,6 +222,7 @@ title2_3_Ch1:
 	note_type 12, 11, 3
 	note D_,1
 	rest 1
+	stereo_panning TRUE, TRUE
 	octave 2
 	note D_,1
 	octave 1
@@ -257,11 +259,13 @@ title2_3_Ch1:
 	octave 1
 	note A_,1
 	note_type 8, 11, 3
+	stereo_panning TRUE, FALSE
 	octave 4
 	note C_,4
 	note C_,4
 	note C#,4
 ; P1-32
+	stereo_panning TRUE, TRUE
 	note_type 12, 11, 3
 	note D_,1
 	rest 1
@@ -301,6 +305,7 @@ title2_3_Ch1:
 	octave 1
 	note A_,1
 	note_type 8, 11, 3
+	stereo_panning TRUE, FALSE
 	octave 3
 	note E_,4
 	note E_,4
@@ -364,7 +369,7 @@ title2_3_Ch1:
 ; P1-46
 	note_type 12, 11, 2
 	note G_,16
-	sound_ret 
+	sound_ret
 ;----------------------------------------
 title2_3_Ch2:
 ;----------------------------------------
@@ -374,6 +379,7 @@ title2_3_Ch2:
 	note_type 12, 10, 0
 ; P2-2
 	octave 3
+	stereo_panning TRUE, TRUE
 	note D_,16
 ; P2-3
 	volume_envelope 11, 0
@@ -399,23 +405,28 @@ title2_3_Ch2:
 	note D_,2
 	note E_,4
 ; P2-10
+	stereo_panning TRUE, TRUE ;;;
 	note G_,6
 	note B_,2
 	octave 4
 	note D_,8
 ; P2-11
+	stereo_panning FALSE, TRUE ;;;
 	octave 2
 	note A_,4
 	note F_,4
+	stereo_panning TRUE, TRUE ;;;
 	octave 4
 	note F_,6
 	note E_,1
 	note D#,1
 ; P2-12
 	note D_,8
+	stereo_panning FALSE, TRUE ;;;
 	octave 2
 	note A_,8
 ; P2-13
+	stereo_panning TRUE, TRUE ;;;
 	octave 4
 	note D_,4
 	note D_,2
@@ -429,9 +440,11 @@ title2_3_Ch2:
 	octave 4
 	note D_,8
 ; P2-15
+	stereo_panning FALSE, TRUE ;;;
 	octave 2
 	note A_,6
 	note F_,2
+	stereo_panning TRUE, TRUE ;;;
 	note_type 8, 12, 7
 	octave 4
 	note C_,4
@@ -441,6 +454,7 @@ title2_3_Ch2:
 	note C_,4
 ; P2-16
 	note D_,12
+	stereo_panning FALSE, TRUE ;;;
 	octave 2
 	note A_,9
 	note_type 12, 12, 7
@@ -453,21 +467,25 @@ title2_3_Ch2:
 	note G_,4
 	note A_,4
 ; P2-18
+	stereo_panning TRUE, TRUE ;;;
 	octave 3
 	note G_,6
 	note B_,2
 	octave 4
 	note D_,8
 ; P2-19
+	stereo_panning FALSE, TRUE ;;;
 	octave 2
 	note A_,2
 	note F_,6
+	stereo_panning TRUE, TRUE ;;;
 	octave 4
 	note F_,6
 	note E_,1
 	note D#,1
 ; P2-20
 	note D_,8
+	stereo_panning FALSE, TRUE ;;;
 	octave 3
 	note C_,2
 	octave 2
@@ -480,6 +498,7 @@ title2_3_Ch2:
 	note G_,4
 	note F_,4
 ; P2-22
+	stereo_panning TRUE, TRUE ;;;
 	octave 3
 	note G_,9
 	note B_,3
@@ -508,60 +527,76 @@ title2_3_Ch2:
 ; P2-27
 	octave 3
 	note D_,12
+	stereo_panning TRUE, TRUE ;;;
 	octave 4
 	note A#,6
 	note B_,6
 ; P2-28
 	octave 5
 	note C_,9
+	stereo_panning TRUE, TRUE ;;;
 	octave 4
 	note G_,3
 	note G_,12
 ; P2-29
 	octave 3
 	note E_,12
+	stereo_panning TRUE, TRUE ;;;
 	octave 5
 	note C_,6
 	note C#,6
 ; P2-30
 	note_type 12, 12, 7
+	stereo_panning TRUE, FALSE ;;;
 	note D_,1
 	octave 3
 	note A_,1
+	stereo_panning FALSE, TRUE ;;;
 	octave 4
 	note D_,1
 	note A_,1
+	stereo_panning TRUE, FALSE ;;;
 	note D_,1
 	octave 3
 	note A_,1
+	stereo_panning FALSE, TRUE ;;;
 	octave 4
 	note D_,1
 	note A_,1
+	stereo_panning TRUE, FALSE ;;;
 	note D_,1
 	octave 3
 	note A_,1
+	stereo_panning FALSE, TRUE ;;;
 	octave 4
 	note D_,1
 	note A_,1
+	stereo_panning TRUE, FALSE ;;;
 	note D_,1
 	octave 3
 	note A_,1
+	stereo_panning FALSE, TRUE ;;;
 	octave 4
 	note D_,1
 	note A_,1
 ; P2-31
+	stereo_panning TRUE, FALSE ;;;
 	note D_,1
 	octave 3
 	note A_,1
+	stereo_panning FALSE, TRUE ;;;
 	octave 4
 	note D_,1
 	note A_,1
+	stereo_panning TRUE, FALSE ;;;
 	note D_,1
 	octave 3
 	note A_,1
+	stereo_panning FALSE, TRUE ;;;
 	octave 4
 	note D_,1
 	note A_,1
+	stereo_panning TRUE, TRUE ;;;
 	note_type 8, 12, 7
 	octave 5
 	note C_,4
@@ -569,43 +604,56 @@ title2_3_Ch2:
 	note C#,4
 ; P2-32
 	note_type 12, 12, 7
+	stereo_panning TRUE, FALSE ;;;
 	note D_,1
 	octave 3
 	note A_,1
+	stereo_panning FALSE, TRUE ;;;
 	octave 4
 	note D_,1
 	note A_,1
+	stereo_panning TRUE, FALSE ;;;
 	note D_,1
 	octave 3
 	note A_,1
+	stereo_panning FALSE, TRUE ;;;
 	octave 4
 	note D_,1
 	note A_,1
+	stereo_panning TRUE, FALSE ;;;
 	note D_,1
 	octave 3
 	note A_,1
+	stereo_panning FALSE, TRUE ;;;
 	octave 4
 	note D_,1
 	note A_,1
+	stereo_panning TRUE, FALSE ;;;
 	note D_,1
 	octave 3
 	note A_,1
+	stereo_panning FALSE, TRUE ;;;
 	octave 4
 	note D_,1
 	note A_,1
-; P2-33
+; P2-31
+	stereo_panning TRUE, FALSE ;;;
 	note D_,1
 	octave 3
 	note A_,1
+	stereo_panning FALSE, TRUE ;;;
 	octave 4
 	note D_,1
 	note A_,1
+	stereo_panning TRUE, FALSE ;;;
 	note D_,1
 	octave 3
 	note A_,1
+	stereo_panning FALSE, TRUE ;;;
 	octave 4
 	note D_,1
 	note A_,1
+	stereo_panning TRUE, TRUE ;;;
 	note_type 8, 12, 7
 	octave 5
 	note C_,4
@@ -679,6 +727,7 @@ title2_3_Ch2:
 title2_3_Ch3:
 ;----------------------------------------
 	note_type 12, 2, 7
+	stereo_panning FALSE, TRUE
 ; P3-2
 	octave 3
 	note D_,16
@@ -687,6 +736,7 @@ title2_3_Ch3:
 ; P3-4
 	note F_,16
 ; P3-5
+	stereo_panning TRUE, TRUE
 	note_type 12, 1, 7
 ;					g#
 	octave 2
@@ -1050,65 +1100,91 @@ title2_3_Ch4:
 ; P4-6
 	drum_note 2,1
 	rest 1
+	stereo_panning TRUE, FALSE
 	drum_note 6,1
 	rest 1
+	stereo_panning TRUE, TRUE
 	drum_note 2,1
 	rest 1
+	stereo_panning TRUE, FALSE
 	drum_note 6,1
 	rest 1
+	stereo_panning FALSE, TRUE
 	drum_note 8,1
+	stereo_panning TRUE, TRUE
 	rest 1
 	drum_note 2,1
 	drum_note 2,1
 	drum_note 2,1
 	rest 1
+	stereo_panning TRUE, FALSE
 	drum_note 6,1
 	rest 1
 ; P4-7
+	stereo_panning TRUE, TRUE
 	drum_note 2,1
 	rest 1
+	stereo_panning TRUE, FALSE
 	drum_note 6,1
 	rest 1
+	stereo_panning TRUE, TRUE
 	drum_note 2,1
 	rest 1
+	stereo_panning FALSE, TRUE
 	drum_note 8,1
 	rest 1
+	stereo_panning TRUE, FALSE
 	drum_note 6,1
 	rest 1
+	stereo_panning TRUE, TRUE
 	drum_note 2,1
 	drum_note 2,1
 	drum_note 2,1
 	rest 1
+	stereo_panning TRUE, FALSE
 	drum_note 6,1
 	rest 1
 ; P4-8
+	stereo_panning TRUE, TRUE
 	drum_note 2,1
 	rest 1
+	stereo_panning TRUE, FALSE
 	drum_note 6,1
 	rest 1
+	stereo_panning TRUE, TRUE
 	drum_note 2,1
 	rest 1
+	stereo_panning FALSE, TRUE
 	drum_note 8,1
 	rest 1
+	stereo_panning TRUE, FALSE
 	drum_note 6,1
 	rest 1
+	stereo_panning TRUE, TRUE
 	drum_note 2,1
 	drum_note 2,1
 	drum_note 2,1
 	rest 1
+	stereo_panning TRUE, FALSE
 	drum_note 6,1
 	rest 1
 ; P4-9
+	stereo_panning TRUE, TRUE
 	drum_note 2,1
 	rest 1
+	stereo_panning TRUE, FALSE
 	drum_note 6,1
 	rest 1
+	stereo_panning TRUE, TRUE
 	drum_note 2,1
 	rest 1
+	stereo_panning TRUE, FALSE
 	drum_note 6,1
 	rest 1
+	stereo_panning TRUE, FALSE
 	drum_note 6,1
 	rest 1
+	stereo_panning TRUE, TRUE
 	drum_note 2,1
 	drum_note 2,1
 	drum_note 2,1
@@ -1121,64 +1197,87 @@ title2_3_Ch4:
 ; P4-10
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
+	stereo_panning FALSE, TRUE
 	drum_note 8,2
 	rest 2
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	drum_note 2,2
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
 ; P4-11
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
 	drum_note 2,2
 	rest 2
+	stereo_panning FALSE, TRUE
 	drum_note 8,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	drum_note 2,2
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
 ; P4-12
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	rest 2
+	stereo_panning FALSE, TRUE
 	drum_note 8,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	drum_note 2,2
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
 ; P4-13
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
 	drum_note 6,2
+	stereo_panning TRUE, TRUE
 	rest 2
 	drum_note 2,2
 	drum_note 2,2
@@ -1189,33 +1288,46 @@ title2_3_Ch4:
 	drum_note 2,1
 	drum_note 2,1
 ; P4-14
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
+	stereo_panning FALSE, TRUE
 	drum_note 8,2
 	rest 2
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	drum_note 2,2
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
 ; P4-15
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	rest 2
+	stereo_panning FALSE, TRUE
 	drum_note 8,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	drum_note 2,2
 	drum_note 2,2
@@ -1223,33 +1335,45 @@ title2_3_Ch4:
 	drum_note 2,2
 	rest 2
 ; P4-16
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	rest 2
+	stereo_panning FALSE, TRUE
 	drum_note 8,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	drum_note 2,2
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
 ; P4-17
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
 	drum_note 6,2
 	rest 2
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	drum_note 2,2
 	drum_note 2,2
@@ -1257,67 +1381,93 @@ title2_3_Ch4:
 	drum_note 2,2
 	drum_note 2,2
 ; P4-18
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
+	stereo_panning FALSE, TRUE
 	drum_note 8,2
 	rest 2
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	drum_note 2,2
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
 ; P4-19
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	rest 2
+	stereo_panning FALSE, TRUE
 	drum_note 8,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	drum_note 2,2
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
 ; P4-20
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	rest 2
+	stereo_panning FALSE, TRUE
 	drum_note 8,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	drum_note 2,2
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
 ; P4-21
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
 	drum_note 6,2
 	rest 2
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	drum_note 2,2
 	drum_note 2,2
@@ -1327,50 +1477,70 @@ title2_3_Ch4:
 	drum_note 2,1
 	drum_note 2,1
 ; P4-22
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
+	stereo_panning FALSE, TRUE
 	drum_note 8,2
 	rest 2
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	drum_note 2,2
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
 ; P4-23
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	rest 2
+	stereo_panning FALSE, TRUE
 	drum_note 8,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	drum_note 2,2
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
 ; P4-24
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	rest 2
+	stereo_panning FALSE, TRUE
 	drum_note 8,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	drum_note 2,2
 	drum_note 2,2
@@ -1378,16 +1548,21 @@ title2_3_Ch4:
 	drum_note 2,2
 	drum_note 2,2
 ; P4-25
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
 	drum_note 6,2
 	rest 2
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	drum_note 2,2
 	drum_note 2,2
@@ -1397,67 +1572,93 @@ title2_3_Ch4:
 	drum_note 2,1
 	drum_note 2,1
 ; P4-26
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
+	stereo_panning FALSE, TRUE
 	drum_note 8,2
 	rest 2
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	drum_note 2,2
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
 ; P4-27
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	rest 2
+	stereo_panning FALSE, TRUE
 	drum_note 8,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	drum_note 2,2
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
 ; P4-28
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	rest 2
+	stereo_panning FALSE, TRUE
 	drum_note 8,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	drum_note 2,2
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
 ; P4-29
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	rest 2
 	drum_note 2,2
 	rest 2
+	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	drum_note 2,2
 	drum_note 2,2
@@ -1612,3 +1813,5 @@ title2_3_Ch4:
 	drum_speed 12
 	rest 12
 	sound_ret 
+
+

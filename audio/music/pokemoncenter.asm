@@ -1,5 +1,4 @@
 Music_PokemonCenter:
-PMC:
 	channel_count 3
 	channel 1, PMC_Ch1
 	channel 2, PMC_Ch2
@@ -31,6 +30,7 @@ PMC_Ch1:
 	pitch_offset 1
 ; P1-1
 .loop10
+	stereo_panning FALSE, TRUE
 	note_type 12, 8, 3
 	octave 3
 	note F#,2
@@ -119,6 +119,7 @@ PMC_Ch1:
 	note A_,2
 	note B_,2
 ; P1-9
+	stereo_panning TRUE, FALSE
 	note F#,2
 	note E_,2
 	note D_,4
@@ -195,25 +196,30 @@ PMC_Ch2:
 	vibrato 16, 2, 5
 ; P2-1
 .loop20
+	stereo_panning TRUE, TRUE
 	db sound_call_cmd
 	dw .d_a_d
+	stereo_panning FALSE, TRUE
 	duty_cycle 3
 	note_type 12, 10, 5
 	octave 3
 	note A_,4
 	note E_,4
 ; P2-3
+	stereo_panning TRUE, TRUE
 	db sound_call_cmd
 	dw .cs_a_cs
 ; P2-4
 	note D_,2
 	note F#,6
+	stereo_panning FALSE, TRUE
 	duty_cycle 3
 	note_type 12, 10, 5
 	octave 3
 	note A_,4
 	note E_,4
 ; P2-5
+	stereo_panning TRUE, TRUE
 	db sound_call_cmd
 	dw .d_a_d
 	duty_cycle 3
@@ -222,10 +228,12 @@ PMC_Ch2:
 	note A_,4
 	note E_,4
 ; P2-7
+	stereo_panning TRUE, TRUE
 	db sound_call_cmd
 	dw .cs_a_cs
 ; P2-8
 	note D_,8
+	stereo_panning FALSE, TRUE
 	duty_cycle 3
 	note_type 12, 10, 5
 	octave 3
@@ -311,6 +319,7 @@ PMC_Ch3:
 	note_type 12, 1, 6
 ; P3-1
 .loop30
+	stereo_panning TRUE, FALSE
 	octave 3
 	note D_,1
 	rest 5
@@ -373,6 +382,7 @@ PMC_Ch3:
 ;					b
 ;					a
 ;					g
+	stereo_panning TRUE, TRUE
 ; P3-9
 	db sound_call_cmd
 	dw .fs_a_fs_a
