@@ -168,6 +168,7 @@ IntroScene3:
 	call IntroScene3_ScrollToSurface
 	ret nc
 ; next scene if carry flag is set
+	call Intro_InitAerodactyl
 	call Intro_ResetLYOverrides
 	ld hl, hSCY
 	inc [hl]
@@ -1220,6 +1221,12 @@ Intro_ResetLYOverrides:
 	ld [hli], a
 	dec c
 	jr nz, .loop
+	ret
+
+Intro_InitAerodactyl:
+	depixel 8, 0
+	ld a, SPRITE_ANIM_INDEX_INTRO_AERODACTYL
+	call _InitSpriteAnimStruct
 	ret
 
 Intro_WaterGFX1:

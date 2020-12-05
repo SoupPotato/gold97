@@ -82,6 +82,8 @@ NUM_SPRITE_ANIM_STRUCTS EQU 10 ; see wSpriteAnimationStructs
 	const SPRITE_ANIM_INDEX_GS_INTRO_MAGIKARP
 	const SPRITE_ANIM_INDEX_GS_INTRO_BUBBLE
 
+	const SPRITE_ANIM_INDEX_INTRO_AERODACTYL
+
 ; DoAnimFrame.Jumptable indexes (see engine/gfx/sprite_anims.asm)
 	const_def
 	const SPRITE_ANIM_SEQ_NULL                    ; 00
@@ -132,6 +134,8 @@ NUM_SPRITE_ANIM_STRUCTS EQU 10 ; see wSpriteAnimationStructs
 	const SPRITE_ANIM_SEQ_GS_INTRO_SHELLDER
 	const SPRITE_ANIM_SEQ_GS_INTRO_MAGIKARP
 	const SPRITE_ANIM_SEQ_GS_INTRO_BUBBLE
+
+	const SPRITE_ANIM_SEQ_INTRO_AERODACTYL
 
 ; SpriteAnimFrameData indexes (see data/sprite_anims/framesets.asm)
 	const_def
@@ -221,6 +225,8 @@ NUM_SPRITE_ANIM_STRUCTS EQU 10 ; see wSpriteAnimationStructs
 	const SPRITE_ANIM_FRAMESET_GS_INTRO_MAGIKARP
 	const SPRITE_ANIM_FRAMESET_GS_INTRO_BUBBLE
 
+	const SPRITE_ANIM_FRAMESET_INTRO_AERODACTYL
+
 ; SpriteAnimOAMData indexes (see data/sprite_anims/oam.asm)
 	const_def
 	const SPRITE_ANIM_OAMSET_RED_WALK_1                 ; 00
@@ -231,10 +237,10 @@ NUM_SPRITE_ANIM_STRUCTS EQU 10 ; see wSpriteAnimationStructs
 	const SPRITE_ANIM_OAMSET_GS_INTRO_SHELLDER_2        ; 05
 	const SPRITE_ANIM_OAMSET_GS_INTRO_MAGIKARP_1        ; 06
 	const SPRITE_ANIM_OAMSET_GS_INTRO_MAGIKARP_2        ; 07
-	const SPRITE_ANIM_OAMSET_GS_INTRO_LAPRAS_1          ; 08
-	const SPRITE_ANIM_OAMSET_GS_INTRO_LAPRAS_2          ; 09
-	const SPRITE_ANIM_OAMSET_GS_INTRO_LAPRAS_3          ; 0a
-	const SPRITE_ANIM_OAMSET_GS_INTRO_LAPRAS_4          ; 0b
+	const SPRITE_ANIM_OAMSET_INTRO_AERODACTYL_1          ; 08
+	const SPRITE_ANIM_OAMSET_GS_INTRO_LAPRAS_1          ; 09
+	const SPRITE_ANIM_OAMSET_GS_INTRO_LAPRAS_2          ; 0a
+	const SPRITE_ANIM_OAMSET_GS_INTRO_LAPRAS_3          ; 0b
 	const SPRITE_ANIM_OAMSET_GS_INTRO_NOTE              ; 0c
 	const SPRITE_ANIM_OAMSET_GS_INTRO_INVISIBLE_NOTE    ; 0d
 	const SPRITE_ANIM_OAMSET_GS_INTRO_JIGGLYPUFF_1      ; 0e
@@ -363,3 +369,4 @@ NUM_SPRITE_ANIM_STRUCTS EQU 10 ; see wSpriteAnimationStructs
 	const SPRITE_ANIM_OAMSET_GAMEFREAK_LOGO_9           ; 89
 	const SPRITE_ANIM_OAMSET_GAMEFREAK_LOGO_10          ; 8a
 	const SPRITE_ANIM_OAMSET_GAMEFREAK_LOGO_11          ; 8b
+	const SPRITE_ANIM_OAMSET_INTRO_AERODACTYL_2

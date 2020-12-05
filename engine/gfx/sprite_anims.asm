@@ -61,6 +61,7 @@ DoAnimFrame:
 	dw .AnimSeq_GSIntroShellder
 	dw .AnimSeq_GSIntroMagikarp
 	dw .AnimSeq_GSIntroBubble
+	dw .AnimSeq_GSIntroAerodactyl
 
 
 .Null:
@@ -1234,4 +1235,26 @@ DoAnimFrame:
 	ld hl, SPRITEANIMSTRUCT_XOFFSET
 	add hl, bc
 	ld [hl], a
+	ret
+
+.AnimSeq_GSIntroAerodactyl:
+	ld hl, SPRITEANIMSTRUCT_0C
+	add hl, bc
+	ld a, [hl]
+	inc [hl]
+	cp $02
+	ret nz
+	xor a
+	ld [hl], a
+	ld hl, SPRITEANIMSTRUCT_XCOORD
+	add hl, bc
+	ld a, [hl]
+	cp $b0
+	jr nc, .a_delete
+
+	inc [hl]
+	ret
+
+.a_delete
+	call DeinitializeSprite
 	ret

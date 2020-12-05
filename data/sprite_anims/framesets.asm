@@ -84,6 +84,7 @@ SpriteAnimFrameData:
 	dw .Frameset_GS_INTRO_SHELLDER
 	dw .Frameset_GS_INTRO_MAGIKARP
 	dw .Frameset_GS_INTRO_BUBBLE
+	dw .Frameset_GS_INTRO_AERODACTYL
 
 
 .Frameset_00:
@@ -565,4 +566,8 @@ SpriteAnimFrameData:
 .Frameset_GS_INTRO_BUBBLE:
 	frame SPRITE_ANIM_OAMSET_GS_INTRO_BUBBLE_1,  8
 	frame SPRITE_ANIM_OAMSET_GS_INTRO_BUBBLE_2,  8
+	dorestart
+.Frameset_GS_INTRO_AERODACTYL:
+	frame SPRITE_ANIM_OAMSET_INTRO_AERODACTYL_1,  20, OAM_X_FLIP
+	frame SPRITE_ANIM_OAMSET_INTRO_AERODACTYL_2,  18, OAM_X_FLIP
 	dorestart

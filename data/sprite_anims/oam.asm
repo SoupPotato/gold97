@@ -9,10 +9,10 @@ SpriteAnimOAMData:
 	dbw $6e, .OAMData_GSIntroShellder          ; SPRITE_ANIM_OAMSET_GS_INTRO_SHELLDER_2
 	dbw $2d, .OAMData_GSIntroMagikarp          ; SPRITE_ANIM_OAMSET_GS_INTRO_MAGIKARP_1
 	dbw $4d, .OAMData_GSIntroMagikarp          ; SPRITE_ANIM_OAMSET_GS_INTRO_MAGIKARP_2
-	dbw $06, .OAMData_GSIntroLapras            ; SPRITE_ANIM_OAMSET_GS_INTRO_LAPRAS_1
-	dbw $00, .OAMData_GSIntroLapras            ; SPRITE_ANIM_OAMSET_GS_INTRO_LAPRAS_2
-	dbw $00, .OAMData_GSIntroLapras            ; SPRITE_ANIM_OAMSET_GS_INTRO_LAPRAS_3
-	dbw $06, .OAMData_GSIntroLapras            ; SPRITE_ANIM_OAMSET_GS_INTRO_LAPRAS_4
+	dbw $60, .OAMData_IntroAerodactyl1    ; SPRITE_ANIM_OAMSET_UNUSED_INTRO_AERODACTYL
+	dbw $00, .OAMData_GSIntroLapras1            ; SPRITE_ANIM_OAMSET_GS_INTRO_LAPRAS_1
+	dbw $00, .OAMData_GSIntroLapras2            ; SPRITE_ANIM_OAMSET_GS_INTRO_LAPRAS_2
+	dbw $06, .OAMData_GSIntroLapras3            ; SPRITE_ANIM_OAMSET_GS_INTRO_LAPRAS_3
 	dbw $0c, .OAMData_GSIntroNote              ; SPRITE_ANIM_OAMSET_GS_INTRO_NOTE
 	dbw $0d, .OAMData_1x1_Palette0             ; SPRITE_ANIM_OAMSET_GS_INTRO_INVISIBLE_NOTE
 	dbw $00, .OAMData_GSIntroJigglypuffPikachu ; SPRITE_ANIM_OAMSET_GS_INTRO_JIGGLYPUFF_1
@@ -141,6 +141,7 @@ SpriteAnimOAMData:
 	dbw $08, .OAMData_GameFreakLogo4_11        ; SPRITE_ANIM_OAMSET_GAMEFREAK_LOGO_9
 	dbw $04, .OAMData_GameFreakLogo4_11        ; SPRITE_ANIM_OAMSET_GAMEFREAK_LOGO_10
 	dbw $00, .OAMData_GameFreakLogo4_11        ; SPRITE_ANIM_OAMSET_GAMEFREAK_LOGO_11
+	dbw $60, .OAMData_IntroAerodactyl2    ; SPRITE_ANIM_OAMSET_UNUSED_INTRO_AERODACTYL_2
 
 .OAMData_1x1_Palette0:
 	db 1
@@ -395,37 +396,97 @@ SpriteAnimOAMData:
 	dsprite  0,  0, -1,  4, $11, 1
 	dsprite  0,  0,  0,  4, $12, 1
 
-.OAMData_GSIntroLapras:
+.OAMData_GSIntroLapras1:
+	db 27
+	dbsprite -3, -3,  0,  0, $00, 0
+	dbsprite -2, -3,  0,  0, $01, 0
+	dbsprite -1, -3,  0,  0, $02, 0
+	dbsprite -3, -2,  0,  0, $10, 0
+	dbsprite -2, -2,  0,  0, $11, 0
+	dbsprite -1, -2,  0,  0, $12, 0
+	dbsprite -3, -1,  0,  0, $20, 0
+	dbsprite -2, -1,  0,  0, $21, 0
+	dbsprite -1, -1,  0,  0, $22, 0
+	dbsprite  0, -1,  0,  0, $23, 0
+	dbsprite -3,  0,  0,  0, $30, 0 | PRIORITY
+	dbsprite -2,  0,  0,  0, $31, 0 | PRIORITY
+	dbsprite -1,  0,  0,  0, $32, 0 | PRIORITY
+	dbsprite  0,  0,  0,  0, $33, 0 | PRIORITY
+	dbsprite  1,  0,  0,  0, $34, 0 | PRIORITY
+	dbsprite -3,  1,  0,  0, $40, 0 | PRIORITY
+	dbsprite -2,  1,  0,  0, $41, 0 | PRIORITY
+	dbsprite -1,  1,  0,  0, $42, 0 | PRIORITY
+	dbsprite  0,  1,  0,  0, $43, 0 | PRIORITY
+	dbsprite  1,  1,  0,  0, $44, 0 | PRIORITY
+	dbsprite  2,  1,  0,  0, $45, 0 | PRIORITY
+	dbsprite -3,  2,  0,  0, $50, 0 | PRIORITY
+	dbsprite -2,  2,  0,  0, $51, 0 | PRIORITY
+	dbsprite -1,  2,  0,  0, $52, 0 | PRIORITY
+	dbsprite  0,  2,  0,  0, $53, 0 | PRIORITY
+	dbsprite  1,  2,  0,  0, $54, 0 | PRIORITY
+	dbsprite  2,  2,  0,  0, $55, 0 | PRIORITY
+
+.OAMData_GSIntroLapras2:
+	db 27
+	dbsprite -3, -3,  0,  0, $0d, 0
+	dbsprite -2, -3,  0,  0, $0e, 0
+	dbsprite -1, -3,  0,  0, $0f, 0
+	dbsprite -3, -2,  0,  0, $1d, 0
+	dbsprite -2, -2,  0,  0, $1e, 0
+	dbsprite -1, -2,  0,  0, $1f, 0
+	dbsprite -3, -1,  0,  0, $20, 0
+	dbsprite -2, -1,  0,  0, $21, 0
+	dbsprite -1, -1,  0,  0, $22, 0
+	dbsprite  0, -1,  0,  0, $23, 0
+	dbsprite -3,  0,  0,  0, $30, 0 | PRIORITY
+	dbsprite -2,  0,  0,  0, $31, 0 | PRIORITY
+	dbsprite -1,  0,  0,  0, $32, 0 | PRIORITY
+	dbsprite  0,  0,  0,  0, $33, 0 | PRIORITY
+	dbsprite  1,  0,  0,  0, $34, 0 | PRIORITY
+	dbsprite -3,  1,  0,  0, $40, 0 | PRIORITY
+	dbsprite -2,  1,  0,  0, $41, 0 | PRIORITY
+	dbsprite -1,  1,  0,  0, $42, 0 | PRIORITY
+	dbsprite  0,  1,  0,  0, $43, 0 | PRIORITY
+	dbsprite  1,  1,  0,  0, $44, 0 | PRIORITY
+	dbsprite  2,  1,  0,  0, $45, 0 | PRIORITY
+	dbsprite -3,  2,  0,  0, $50, 0 | PRIORITY
+	dbsprite -2,  2,  0,  0, $51, 0 | PRIORITY
+	dbsprite -1,  2,  0,  0, $52, 0 | PRIORITY
+	dbsprite  0,  2,  0,  0, $53, 0 | PRIORITY
+	dbsprite  1,  2,  0,  0, $54, 0 | PRIORITY
+	dbsprite  2,  2,  0,  0, $55, 0 | PRIORITY
+
+.OAMData_GSIntroLapras3:
 	db 29
-	dsprite -3,  0, -3,  0, $00, 0
-	dsprite -3,  0, -2,  0, $01, 0
-	dsprite -3,  0, -1,  0, $02, 0
-	dsprite -3,  0,  0,  0, $03, 0
-	dsprite -2,  0, -3,  0, $10, 0
-	dsprite -2,  0, -2,  0, $11, 0
-	dsprite -2,  0, -1,  0, $12, 0
-	dsprite -2,  0,  0,  0, $13, 0
-	dsprite -1,  0, -3,  0, $20, 0
-	dsprite -1,  0, -2,  0, $21, 0
-	dsprite -1,  0, -1,  0, $22, 0
-	dsprite -1,  0,  0,  0, $23, 0
-	dsprite -1,  0,  1,  0, $24, 0
-	dsprite  0,  0, -3,  0, $30, 0 | PRIORITY
-	dsprite  0,  0, -2,  0, $31, 0 | PRIORITY
-	dsprite  0,  0, -1,  0, $32, 0 | PRIORITY
-	dsprite  0,  0,  0,  0, $33, 0 | PRIORITY
-	dsprite  0,  0,  1,  0, $34, 0 | PRIORITY
-	dsprite  1,  0, -3,  0, $40, 0 | PRIORITY
-	dsprite  1,  0, -2,  0, $41, 0 | PRIORITY
-	dsprite  1,  0, -1,  0, $42, 0 | PRIORITY
-	dsprite  1,  0,  0,  0, $43, 0 | PRIORITY
-	dsprite  1,  0,  1,  0, $44, 0 | PRIORITY
-	dsprite  1,  0,  2,  0, $45, 0 | PRIORITY
-	dsprite  2,  0, -2,  0, $51, 0 | PRIORITY
-	dsprite  2,  0, -1,  0, $52, 0 | PRIORITY
-	dsprite  2,  0,  0,  0, $53, 0 | PRIORITY
-	dsprite  2,  0,  1,  0, $54, 0 | PRIORITY
-	dsprite  2,  0,  2,  0, $55, 0 | PRIORITY
+	dbsprite -3, -3,  0,  0, $00, 0
+	dbsprite -2, -3,  0,  0, $01, 0
+	dbsprite -1, -3,  0,  0, $02, 0
+	dbsprite  0, -3,  0,  0, $03, 0
+	dbsprite -3, -2,  0,  0, $10, 0
+	dbsprite -2, -2,  0,  0, $11, 0
+	dbsprite -1, -2,  0,  0, $12, 0
+	dbsprite  0, -2,  0,  0, $13, 0
+	dbsprite -3, -1,  0,  0, $20, 0
+	dbsprite -2, -1,  0,  0, $21, 0
+	dbsprite -1, -1,  0,  0, $22, 0
+	dbsprite  0, -1,  0,  0, $23, 0
+	dbsprite  1, -1,  0,  0, $24, 0
+	dbsprite -3,  0,  0,  0, $30, 0 | PRIORITY
+	dbsprite -2,  0,  0,  0, $31, 0 | PRIORITY
+	dbsprite -1,  0,  0,  0, $32, 0 | PRIORITY
+	dbsprite  0,  0,  0,  0, $33, 0 | PRIORITY
+	dbsprite  1,  0,  0,  0, $34, 0 | PRIORITY
+	dbsprite -3,  1,  0,  0, $40, 0 | PRIORITY
+	dbsprite -2,  1,  0,  0, $41, 0 | PRIORITY
+	dbsprite -1,  1,  0,  0, $42, 0 | PRIORITY
+	dbsprite  0,  1,  0,  0, $43, 0 | PRIORITY
+	dbsprite  1,  1,  0,  0, $44, 0 | PRIORITY
+	dbsprite  2,  1,  0,  0, $45, 0 | PRIORITY
+	dbsprite -2,  2,  0,  0, $51, 0 | PRIORITY
+	dbsprite -1,  2,  0,  0, $52, 0 | PRIORITY
+	dbsprite  0,  2,  0,  0, $53, 0 | PRIORITY
+	dbsprite  1,  2,  0,  0, $54, 0 | PRIORITY
+	dbsprite  2,  2,  0,  0, $55, 0 | PRIORITY
 
 .OAMData_GSIntroNote:
 	db 2
@@ -1126,3 +1187,32 @@ SpriteAnimOAMData:
 	dsprite  0,  0, -1,  4, $51, 1
 	dsprite  0,  0,  0,  4, $52, 1
 	dsprite  0,  0,  1,  4, $53, 1
+
+.OAMData_IntroAerodactyl1:
+; These OAM sprite definitions, with the vtile offset $60 from SpriteAnimOAMData,
+; correspond to unused Aerodactyl graphics in pokegold-spaceworld's gfx/intro/water_pokemon.png.
+	db 10
+	dbsprite -2, -2,  0,  4, $00, PAL_OW_GREEN
+	dbsprite -1, -2,  0,  4, $01, PAL_OW_GREEN
+	dbsprite  0, -2,  0,  4, $02, PAL_OW_GREEN
+	dbsprite  1, -2,  0,  4, $03, PAL_OW_GREEN
+	dbsprite -2, -1,  0,  4, $04, PAL_OW_GREEN
+	dbsprite -1, -1,  0,  4, $05, PAL_OW_GREEN
+	dbsprite  0, -1,  0,  4, $06, PAL_OW_GREEN
+	dbsprite -2,  0,  0,  4, $08, PAL_OW_GREEN
+	dbsprite -1,  0,  0,  4, $09, PAL_OW_GREEN
+	dbsprite  0,  0,  0,  4, $0a, PAL_OW_GREEN
+
+.OAMData_IntroAerodactyl2:
+; New in reforged
+	db 10
+	dbsprite -2, -2,  0,  4, $10, PAL_OW_GREEN
+	dbsprite -1, -2,  0,  4, $11, PAL_OW_GREEN
+	dbsprite  0, -2,  0,  4, $12, PAL_OW_GREEN
+	dbsprite  1, -2,  0,  4, $13, PAL_OW_GREEN
+	dbsprite -2, -1,  0,  4, $14, PAL_OW_GREEN
+	dbsprite -1, -1,  0,  4, $15, PAL_OW_GREEN
+	dbsprite  0, -1,  0,  4, $16, PAL_OW_GREEN
+	dbsprite -1,  0,  0,  4, $19, PAL_OW_GREEN
+	dbsprite -0,  0,  0,  4, $1a, PAL_OW_GREEN
+	dbsprite  1,  0,  0,  4, $1b, PAL_OW_GREEN
