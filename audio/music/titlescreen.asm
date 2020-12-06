@@ -526,6 +526,7 @@ title2_3_Ch2:
 	note F_,3
 	note F_,12
 ; P2-27
+	stereo_panning FALSE, TRUE ;;;
 	octave 3
 	note D_,12
 	stereo_panning TRUE, TRUE ;;;
@@ -535,11 +536,11 @@ title2_3_Ch2:
 ; P2-28
 	octave 5
 	note C_,9
-	stereo_panning TRUE, TRUE ;;;
 	octave 4
 	note G_,3
 	note G_,12
 ; P2-29
+	stereo_panning FALSE, TRUE ;;;
 	octave 3
 	note E_,12
 	stereo_panning TRUE, TRUE ;;;
@@ -1201,6 +1202,7 @@ title2_3_Ch4:
 	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	rest 2
 	stereo_panning TRUE, FALSE
@@ -1224,6 +1226,7 @@ title2_3_Ch4:
 	stereo_panning TRUE, FALSE
 	drum_note 6,2
 	rest 2
+	stereo_panning TRUE, TRUE
 	drum_note 2,2
 	rest 2
 	stereo_panning FALSE, TRUE
