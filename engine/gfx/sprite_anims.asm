@@ -1238,21 +1238,49 @@ DoAnimFrame:
 	ret
 
 .AnimSeq_GSIntroAerodactyl:
-	ld hl, SPRITEANIMSTRUCT_0C
+	ld hl, SPRITEANIMSTRUCT_0D	; frame counter (y offset)
+	add hl, bc
+	ld a, [hl]			; apply sine
+	ld d, 2
+	call .Sprites_Sine
+	ld hl, SPRITEANIMSTRUCT_YOFFSET
+	add hl, bc
+	ld [hl], a
+
+	ld hl, SPRITEANIMSTRUCT_0C	; frame counter (x)
 	add hl, bc
 	ld a, [hl]
 	inc [hl]
 	cp $02
-	ret nz
+	ret nz				; move aerodactyl every 2 frames
 	xor a
-	ld [hl], a
+	ld [hl], a			; clear frame counter
+
+	ld hl, SPRITEANIMSTRUCT_0D	; frame counter (y)
+	add hl, bc
+	inc [hl]			; increase the y-offset counter
+					; at the same rate as x
+
 	ld hl, SPRITEANIMSTRUCT_XCOORD
 	add hl, bc
 	ld a, [hl]
 	cp $b0
-	jr nc, .a_delete
+	jr nc, .a_delete		; delete when off the screen
 
+	inc [hl]			; move aerodactyl to the right
+
+	ld hl, SPRITEANIMSTRUCT_0E	; frame counter (y location)
+	add hl, bc
+	ld a, [hl]
 	inc [hl]
+	cp $04
+	ret nz				; move aerodactyl every 4 * 2 frames
+	xor a
+	ld [hl], a			; clear frame counter
+
+	ld hl, SPRITEANIMSTRUCT_YCOORD
+	add hl, bc
+	inc [hl]			; move aerodactyl to the bottom
 	ret
 
 .a_delete

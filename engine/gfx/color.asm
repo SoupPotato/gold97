@@ -155,16 +155,10 @@ Intro_LoadMagikarpPalettes:
 	ret
 
 .BGPal:
-	RGB 31, 31, 31
-	RGB 18, 23, 31
-	RGB 15, 20, 31
-	RGB 00, 00, 00
+INCLUDE "gfx/intro/gs/magikarp_bg.pal"
 
 .OBPal:
-	RGB 31, 31, 31
-	RGB 31, 31, 12
-	RGB 08, 16, 28
-	RGB 00, 00, 00
+INCLUDE "gfx/intro/gs/magikarp_ob.pal"
 
 Intro_LoadAllPal0:
 	call CheckCGB
