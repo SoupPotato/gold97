@@ -1228,7 +1228,7 @@ Intro_ResetLYOverrides:
 	ret
 
 Intro_InitAerodactyl:
-	depixel 5, 0
+	depixel 6, 0
 	ld a, SPRITE_ANIM_INDEX_INTRO_AERODACTYL
 	call _InitSpriteAnimStruct
 	ret
