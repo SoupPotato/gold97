@@ -30,6 +30,7 @@ title2_3_Ch1:
 	pitch_offset 1
 	duty_cycle 3
 	stereo_panning TRUE, FALSE
+	soundinput 0
 ; P1-1
 	note_type 12, 8, 0
 ; P1-2
