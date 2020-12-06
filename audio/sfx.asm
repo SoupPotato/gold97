@@ -4736,12 +4736,11 @@ Sfx_Burn_Ch8:
 	endchannel
 
 Sfx_TitleScreenEntrance_Ch8:
-	noise __,  3, $70, $22
-	noise __,  3, $80, $23
-	noise __,  3, $90, $24
-	noise __,  3, $a0, $25
-	noise __,  3, $b0, $26
-	noise __, 16, $c2, $26
+	noise __, 8-1,  $3c, $20
+	noise __, 6-1,  $a0, $20
+	noise __, 8-1,  $b0, $21
+	noise __, 10-1, $c0, $22
+	noise __, 15, $d2, $23
 	endchannel
 
 Sfx_Unknown66_Ch5:
