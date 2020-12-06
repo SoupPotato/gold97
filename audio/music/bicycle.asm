@@ -1,10 +1,8 @@
 Music_Bicycle:
-town04:
-	channel_count 4
-	channel 1, town04_Ch1
-	channel 2, town04_Ch2
-	channel 3, town04_Ch3
-	channel 4, town04_Ch4
+	musicheader 4, 1, town04_Ch1
+	musicheader 1, 2, town04_Ch2
+	musicheader 1, 3, town04_Ch3
+	musicheader 1, 4, town04_Ch4
 ;	include	group.def
 ;bank3d	group	G_MUSIC4
 ;
@@ -31,6 +29,7 @@ town04_Ch1:
 	volume 7, 7
 	duty_cycle 3
 	pitch_offset 1
+	stereo_panning FALSE, TRUE
 	vibrato 8, 1, 5
 ; P1-1
 	note_type 12, 11, 4
@@ -46,6 +45,7 @@ town04_Ch1:
 	note_type 12, 11, 2
 	note F#,2
 .loop10
+	stereo_panning FALSE, TRUE
 	note_type 12, 11, 2
 ; P1-3
 	note G_,2
@@ -130,6 +130,7 @@ town04_Ch1:
 	note G#,2
 	note A_,2
 ; P1-11
+	stereo_panning TRUE, FALSE
 	note_type 12, 11, 6
 	note B_,4
 	note G_,4
@@ -212,6 +213,7 @@ town04_Ch2:
 	duty_cycle 3
 	vibrato 9, 2, 4
 ; P2-1
+	stereo_panning TRUE, FALSE
 	note_type 12, 12, 6
 	octave 4
 	note D_,6
@@ -234,6 +236,7 @@ town04_Ch2:
 	note B_,2
 	note A_,2
 .loop20
+	stereo_panning TRUE, TRUE
 ; P2-3
 	duty_cycle 2
 	note_type 12, 12, 4
@@ -299,6 +302,7 @@ town04_Ch2:
 	note E_,2
 	note_type 12, 12, 7
 	note F#,8
+	stereo_panning FALSE, TRUE
 ; P2-11
 	db sound_call_cmd
 	dw .sub11
@@ -579,6 +583,7 @@ town04_Ch4:
 .loop40
 	rest 2
 .loop41
+	stereo_panning TRUE, FALSE
 ; P4-2
 	drum_note 8,4
 	db sound_loop_cmd, 12
@@ -586,6 +591,7 @@ town04_Ch4:
 ; P4-3
 	drum_note 8,4
 	drum_note 8,4
+	stereo_panning TRUE, TRUE
 	drum_note 8,2
 	drum_note 8,2
 	drum_note 8,2

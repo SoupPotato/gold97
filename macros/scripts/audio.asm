@@ -184,6 +184,11 @@ stereopanning: MACRO
 	db \1 ; tracks
 ENDM
 
+stereo_panning: MACRO	;;; forward compat
+	db stereopanning_cmd
+	dn %1111 * (1 && \1), %1111 * (1 && \2) ; left enable, right enable
+ENDM
+
 	enum sfxtogglenoise_cmd ; $f0
 sfxtogglenoise: MACRO
 	db sfxtogglenoise_cmd
@@ -321,8 +326,5 @@ channel: MACRO
 	dn (_num_channels << 2), \1 - 1 ; channel id
 	dw \2 ; address
 _num_channels = 0
-ENDM
-stereo_panning: MACRO
-	stereopanning \1
 ENDM
 
