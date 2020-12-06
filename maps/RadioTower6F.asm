@@ -382,7 +382,7 @@ RadioTower6fTeacherText:
 	done
 	
 RadioTower6fTeacherTextTakeover:
-	text "Where did they do"
+	text "What did they do"
 	line "with the DIRECTOR?"
 	
 	para "I hope he's ok…"
