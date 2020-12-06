@@ -1241,7 +1241,7 @@ DoAnimFrame:
 	ld hl, SPRITEANIMSTRUCT_0D	; frame counter (y offset)
 	add hl, bc
 	ld a, [hl]			; apply sine
-	ld d, 2
+	ld d, 3				; amplitude
 	call .Sprites_Sine
 	ld hl, SPRITEANIMSTRUCT_YOFFSET
 	add hl, bc
@@ -1251,7 +1251,7 @@ DoAnimFrame:
 	add hl, bc
 	ld a, [hl]
 	inc [hl]
-	cp $02
+	cp $01
 	ret nz				; move aerodactyl every 2 frames
 	xor a
 	ld [hl], a			; clear frame counter
