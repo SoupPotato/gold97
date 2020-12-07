@@ -248,6 +248,7 @@ BlueBattleScript:
 .bluerematch
 	opentext
 	writetext BlueSecondChallengeText
+	waitbutton
 	winlosstext BlueSecondWinText, 0
 	loadtrainer BLUE, BLUE1
 	startbattle
