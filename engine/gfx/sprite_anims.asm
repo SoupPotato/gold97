@@ -1241,7 +1241,7 @@ DoAnimFrame:
 	ld hl, SPRITEANIMSTRUCT_0D	; frame counter (y offset)
 	add hl, bc
 	ld a, [hl]			; apply sine
-	ld d, 3				; amplitude
+	ld d, 5				; amplitude
 	call .Sprites_Sine
 	ld hl, SPRITEANIMSTRUCT_YOFFSET
 	add hl, bc
