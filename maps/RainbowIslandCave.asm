@@ -163,6 +163,9 @@ LegendsDanceStep7:
 
 BlueAfterEventText:
 	text "Quick! Outside!"
+	
+	para "Meet me on the"
+	line "northmost point!"
 	done
 
 BlueDontHaveMonsText:
