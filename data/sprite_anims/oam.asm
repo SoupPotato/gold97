@@ -141,7 +141,7 @@ SpriteAnimOAMData:
 	dbw $08, .OAMData_GameFreakLogo4_11        ; SPRITE_ANIM_OAMSET_GAMEFREAK_LOGO_9
 	dbw $04, .OAMData_GameFreakLogo4_11        ; SPRITE_ANIM_OAMSET_GAMEFREAK_LOGO_10
 	dbw $00, .OAMData_GameFreakLogo4_11        ; SPRITE_ANIM_OAMSET_GAMEFREAK_LOGO_11
-	dbw $60, .OAMData_IntroAerodactyl2    ; SPRITE_ANIM_OAMSET_UNUSED_INTRO_AERODACTYL_2
+	dbw $70, .OAMData_IntroAerodactyl1    ; SPRITE_ANIM_OAMSET_UNUSED_INTRO_AERODACTYL_2
 
 .OAMData_1x1_Palette0:
 	db 1
@@ -1202,17 +1202,3 @@ SpriteAnimOAMData:
 	dbsprite -2,  0,  0,  4, $08, PAL_OW_GREEN
 	dbsprite -1,  0,  0,  4, $09, PAL_OW_GREEN
 	dbsprite  0,  0,  0,  4, $0a, PAL_OW_GREEN
-
-.OAMData_IntroAerodactyl2:
-; New in reforged
-	db 10
-	dbsprite -2, -2,  0,  4, $10, PAL_OW_GREEN
-	dbsprite -1, -2,  0,  4, $11, PAL_OW_GREEN
-	dbsprite  0, -2,  0,  4, $12, PAL_OW_GREEN
-	dbsprite  1, -2,  0,  4, $13, PAL_OW_GREEN
-	dbsprite -2, -1,  0,  4, $14, PAL_OW_GREEN
-	dbsprite -1, -1,  0,  4, $15, PAL_OW_GREEN
-	dbsprite  0, -1,  0,  4, $16, PAL_OW_GREEN
-	dbsprite -1,  0,  0,  4, $19, PAL_OW_GREEN
-	dbsprite -0,  0,  0,  4, $1a, PAL_OW_GREEN
-	dbsprite  1,  0,  0,  4, $1b, PAL_OW_GREEN
