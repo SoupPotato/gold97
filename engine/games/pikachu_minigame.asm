@@ -72,7 +72,11 @@ PikachuMiniGame::
 	ld a, 1
 	ldh [rVBK], a
 
-; Logo
+	ld hl, $9800
+	ld bc, BG_MAP_WIDTH * BG_MAP_HEIGHT
+	xor a
+	call ByteFill
+
 	ld hl, $9C00
 	ld bc, 7 * BG_MAP_WIDTH
 	ld a, 1
