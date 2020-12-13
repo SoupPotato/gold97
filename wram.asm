@@ -1433,7 +1433,8 @@ wWhichIndexSet:: db ; cf76
 wScrollingMenuCursorPosition:: db ; cf77
 wWindowStackSize:: db ; cf78
 
-	ds 8
+wTitleScreenToggled:: db
+	ds 7
 
 ; menu header
 wMenuHeader:: ; cf81

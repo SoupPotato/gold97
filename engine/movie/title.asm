@@ -203,7 +203,7 @@ TitleScreenMain:
 	ld a, [hl]
 	ldh [hTitleScreenLastPressed], a
 
-	ld hl, wTitleScreenSelectedOption
+	ld hl, wTitleScreenToggled
 	ld a, [hl]
 	xor 1
 	ld [hl], a
@@ -400,7 +400,7 @@ TitleScreenLoadGFX:
 	call Decompress
 	ld hl, TitleHoohLugiaGFX
 	call Decompress
-	xor a
+	ld a, [wTitleScreenToggled]
 	call TitleScreenSwitchObjectGFX
 
 ; Clear the background map

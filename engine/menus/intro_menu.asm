@@ -955,7 +955,16 @@ Intro_PlacePlayerSprite:
 CrystalIntroSequence:
 	callfar Copyright_GFPresents
 	jr c, StartTitleScreen
+
+	ld a, [wTitleScreenToggled]
+	and a
+	jr z, .intro
+
 	farcall PikachuMiniGame
+	jr StartTitleScreen
+
+.intro
+	farcall GS_Intro
 
 StartTitleScreen:
 	farcall TitleScreen
