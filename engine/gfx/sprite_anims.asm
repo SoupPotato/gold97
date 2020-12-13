@@ -63,6 +63,10 @@ DoAnimFrame:
 	dw .AnimSeq_GSIntroBubble
 	dw .AnimSeq_GSIntroAerodactyl
 
+	dw .AnimSeq_UnusedPikachu
+	dw .AnimSeq_UnusedPikachuTail
+	dw .AnimSeq_UnusedNote
+	dw .AnimSeq_UnusedJigglypuff
 
 .Null:
 	ret
@@ -1285,4 +1289,91 @@ DoAnimFrame:
 
 .a_delete
 	call DeinitializeSprite
+	ret
+
+
+.AnimSeq_UnusedPikachu:
+	push bc
+	farcall Animate_MinigamePikachu
+	pop bc
+	ld hl, wPikachuMinigamePikachuNextAnim
+	ld a, [hl]
+	and $3
+	ret z
+	ld [hl], 0
+	ld e, a
+	ld d, 0
+	ld hl, .Data_8d8b4
+	add hl, de
+	ld a, [hl]
+	call _ReinitSpriteAnimFrame
+	ret
+
+.Data_8d8b4
+	db SPRITE_ANIM_FRAMESET_GS_INTRO_PIKACHU
+	db SPRITE_ANIM_FRAMESET_GS_INTRO_PIKACHU_2
+	db SPRITE_ANIM_FRAMESET_GS_INTRO_PIKACHU
+	db SPRITE_ANIM_FRAMESET_GS_INTRO_PIKACHU_4
+
+.AnimSeq_UnusedPikachuTail:
+	farcall Animate_MinigamePikachuTail
+	ret
+
+.AnimSeq_UnusedNote:
+	call .AnonymousJumptable
+	jp hl
+
+; anonymous jumptable
+	dw .Function8d8c7
+	dw .Function8d8d9
+
+.Function8d8c7
+	call .Function8d8e1
+	ld a, [wPikachuMinigameScrollSpeed]
+	ld hl, SPRITEANIMSTRUCT_XCOORD
+	add hl, bc
+	add [hl]
+	ld [hl], a
+	cp $c0
+	ret nc
+	cp $a8
+	ret c
+.Function8d8d9
+	call DeinitializeSprite
+	ld hl, wSpriteAnimCount
+	dec [hl]
+	ret
+
+.Function8d8e1
+	ld hl, SPRITEANIMSTRUCT_0C
+	add hl, bc
+	ld a, [hl]
+	inc [hl]
+	and $1f
+	srl a
+	ld e, a
+	ld d, 0
+	ld hl, .Data_8d8f9
+	add hl, de
+	ld a, [hl]
+	ld hl, SPRITEANIMSTRUCT_YOFFSET
+	add hl, bc
+	ld [hl], a
+	ret
+
+.Data_8d8f9
+	db  4,  7,  9,  10,  9,  7,  4,  0
+	db -4, -7, -9, -10, -9, -7, -4,  0
+
+.AnimSeq_UnusedJigglypuff:
+	ld a, [wPikachuMinigameScrollSpeed]
+
+	ld hl, SPRITEANIMSTRUCT_XCOORD
+	add hl, bc
+	add [hl]
+	ld [hl], a
+	cp $30
+	ret nz
+	xor a
+	ld [wPikachuMinigameScrollSpeed], a
 	ret

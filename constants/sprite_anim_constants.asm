@@ -84,6 +84,12 @@ NUM_SPRITE_ANIM_STRUCTS EQU 10 ; see wSpriteAnimationStructs
 
 	const SPRITE_ANIM_INDEX_INTRO_AERODACTYL
 
+; these are used :p
+	const SPRITE_ANIM_INDEX_UNUSED_PIKACHU
+	const SPRITE_ANIM_INDEX_UNUSED_PIKACHU_TAIL
+	const SPRITE_ANIM_INDEX_UNUSED_NOTE
+	const SPRITE_ANIM_INDEX_UNUSED_JIGGLYPUFF
+
 ; DoAnimFrame.Jumptable indexes (see engine/gfx/sprite_anims.asm)
 	const_def
 	const SPRITE_ANIM_SEQ_NULL                    ; 00
@@ -136,6 +142,12 @@ NUM_SPRITE_ANIM_STRUCTS EQU 10 ; see wSpriteAnimationStructs
 	const SPRITE_ANIM_SEQ_GS_INTRO_BUBBLE
 
 	const SPRITE_ANIM_SEQ_INTRO_AERODACTYL
+
+; these are used :p
+	const SPRITE_ANIM_SEQ_UNUSED_PIKACHU
+	const SPRITE_ANIM_SEQ_UNUSED_PIKACHU_TAIL
+	const SPRITE_ANIM_SEQ_UNUSED_NOTE
+	const SPRITE_ANIM_SEQ_UNUSED_JIGGLYPUFF
 
 ; SpriteAnimFrameData indexes (see data/sprite_anims/framesets.asm)
 	const_def

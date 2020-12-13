@@ -399,7 +399,7 @@ SECTION "Font Inversed", ROMX
 FontInversed:
 INCBIN "gfx/font/font_inversed.1bpp"
 INCLUDE "engine/gfx/sprites.asm"
-
+INCLUDE "engine/games/pikachu_minigame.asm"
 
 
 

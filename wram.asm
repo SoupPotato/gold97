@@ -3021,8 +3021,62 @@ wMagnetTrainHoldPosition:: db
 wMagnetTrainFinalPosition:: db
 wMagnetTrainPlayerSpriteInitX:: db
 
-	ds 106
+SECTION "Pikachu Minigame", WRAMX
+; Pikachu minigame
 
+wPikachuMinigamePikachuObjectPointer:: ds 2
+wPikachuMinigamePikachuTailObjectPointer:: ds 2
+wPikachuMinigamePikachuNextAnim:: ds 1
+
+wPikachuMinigameControlEnable:: ds 1
+
+wc606:: ds 1	; written to, but is this read from?
+
+wPikachuMinigamePikachuYOffset:: ds 1
+wPikachuMinigameNoteTimer:: ds 1
+wPikachuMinigameScore:: ds 2
+wPikachuMinigameNoteCounter:: ds 2	; not used for anything meaningful?
+
+wPikachuMinigameSpawnTypeIndex:: ds 1
+wPikachuMinigameSpawnDataIndex:: ds 1
+wPikachuMinigameScoreModifier:: ds 1
+
+wPikachuMinigameNoteCaught:: ds 1
+
+; Time keeping
+wPikachuMinigameTimeFrames:: ds 1
+wPikachuMinigameTimeSeconds:: ds 1
+
+; are these two used?
+wc613:: ds 1
+wc614:: ds 1
+
+wPikachuMinigameRedrawTimer:: ds 1
+wc616:: ds 1
+wPikachuMinigameScrollSpeed:: ds 1
+
+wPikachuMinigameColumnFlags:: ds 1
+wPikachuMinigameSavedColumnPointer:: ds 2
+wPikachuMinigameColumnPointer:: ds 2
+
+wPikachuMinigameRepeatColumnCounter:: ds 1
+wPikachuMinigameRepeatColumnCounter2:: ds 1
+
+wPikachuMinigameSceneTimer:: ds 1
+
+wPikachuMinigameJumptableIndex:: ds 1
+
+wPikachuMinigameBGMapPointer:: ds 2
+wPikachuMinigameTilemapPointer:: ds 2
+wPikachuMinigameTilesPointer:: ds 2
+
+wPikachuMinigameColumnBuffer:: ds 16
+
+wRedrawRowOrColumnSrcTiles::
+; the tiles of the row or column to be redrawn by RedrawRowOrColumn
+	ds SCREEN_WIDTH * 2
+
+SECTION "LY Overrides", WRAMX
 wLYOverridesBackup:: ds SCREEN_HEIGHT_PX ; d200
 wLYOverridesBackupEnd::
 
