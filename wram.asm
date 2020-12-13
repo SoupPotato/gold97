@@ -3024,6 +3024,7 @@ wMagnetTrainPlayerSpriteInitX:: db
 SECTION "Pikachu Minigame", WRAMX
 ; Pikachu minigame
 
+wPikachuMinigameBegin::
 wPikachuMinigamePikachuObjectPointer:: ds 2
 wPikachuMinigamePikachuTailObjectPointer:: ds 2
 wPikachuMinigamePikachuNextAnim:: ds 1
@@ -3076,6 +3077,7 @@ wRedrawRowOrColumnSrcTiles::
 ; the tiles of the row or column to be redrawn by RedrawRowOrColumn
 	ds SCREEN_WIDTH * 2
 
+wPikachuMinigameEnd::
 SECTION "LY Overrides", WRAMX
 wLYOverridesBackup:: ds SCREEN_HEIGHT_PX ; d200
 wLYOverridesBackupEnd::

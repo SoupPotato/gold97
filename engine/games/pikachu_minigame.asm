@@ -34,7 +34,11 @@ PikachuMiniGame::
 	ldh [hBGMapAddress + 1], a
 	ld de, MUSIC_NONE
 	call PlayMusic
-	ret
+
+	xor a
+	ld hl, wPikachuMinigameBegin
+	ld bc, wPikachuMinigameEnd - wPikachuMinigameBegin
+	jp ByteFill
 
 .Init:
 	call DisableLCD
