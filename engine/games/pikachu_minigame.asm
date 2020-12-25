@@ -21,8 +21,8 @@ PikachuMiniGame::
 	;ld de, MUSIC_PIKACHU_MINIGAME
 	;call PlayMusic
 	call DelayFrame
-	;ld a, 6
-	;ld [hVBlank], a
+	ld a, 7
+	ld [hVBlank], a
 .loop
 	call PikachuMiniGame_RunFrame
 	jr nc, .loop
@@ -368,8 +368,6 @@ PikachuMiniGame_RunFrame:
 	call PikachuMiniGame_PrintBCD
 
 	call PikachuMiniGame_BlinkText
-
-	call _RedrawRowOrColumn
 	call DelayFrame
 	and a
 	ret
