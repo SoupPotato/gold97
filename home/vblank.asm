@@ -427,4 +427,7 @@ VBlank7::
 	ld hl, hVBlankCounter
 	inc [hl]
 	homecall _RedrawRowOrColumn
+	call Serve2bppRequest	; call Serve2bppRequest early
+				; the next call to it will be skipped since
+				; we are too far into vblank to do that
 	jp VBlank0_Cont
