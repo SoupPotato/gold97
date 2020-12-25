@@ -1185,11 +1185,17 @@ PikachuMiniGame_RenderColumn:
 .ColumnSet:
 ; The "level" block set
 ; top to bottom
+; Blank tiles
+	db $04, $0c, $03, $08, $14, $14, $14, $0b ; 00
+	db $06, $0e, $02, $09, $14, $14, $14, $0b ; 01
+	db $16, $17, $02, $08, $14, $14, $14, $0b ; 02
+	db $04, $0c, $01, $09, $14, $14, $14, $0b ; 03
 
-	db $05, $0d, $02, $09, $14, $14, $14, $0b ; 00
-	db $04, $0c, $02, $08, $14, $14, $14, $0b ; 01
-	db $05, $0d, $02, $09, $15, $14, $14, $0b ; 02
-	db $04, $0c, $02, $08, $15, $14, $14, $0b ; 03
+; Log tiles
+	db $04, $0c, $03, $08, $15, $14, $14, $0b ; 04
+	db $06, $0e, $02, $09, $15, $14, $14, $0b ; 05
+	db $16, $17, $02, $08, $15, $14, $14, $0b ; 06
+	db $04, $0c, $01, $09, $15, $14, $14, $0b ; 07
 
 PikachuMiniGame_UpdateColumn:
 	push de
@@ -1417,13 +1423,13 @@ PikachuMiniGame_Columns:
 ; See also PikachuMiniGame_RenderColumn.ColumnSet
 
 	db $00, $01
+	db $02, $03
 	db $00, $01
-	db $00, $01
-	db $00, $01
 	db $02, $03
-	db $02, $03
-	db $02, $03
-	db $02, $03
+	db $04, $05
+	db $06, $07
+	db $04, $05
+	db $06, $07
 	db $FC
 	dw PikachuMiniGame_Columns
 	db $FF
