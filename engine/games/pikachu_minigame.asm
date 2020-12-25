@@ -121,8 +121,8 @@ PikachuMiniGame::
 	ld [wPikachuMinigameNoteCounter + 1], a
 	ld [wPikachuMinigameTimeFrames], a
 	ld [wPikachuMinigameTimeSeconds], a
-	ld [wc613], a
-	ld [wc614], a
+	ld [wPikachuMinigameFadeOutCounter], a
+	ld [wPikachuMinigameFadeOutIndex], a
 	ld [wPikachuMinigameNoteTimer], a
 	ld [wPikachuMinigameSpawnTypeIndex], a
 	ld [wPikachuMinigameSpawnDataIndex], a
@@ -583,6 +583,10 @@ PikachuMiniGame_ShowJigglypuff:
 
 	xor a
 	ld [wPikachuMinigameSceneTimer], a
+
+	ld a, 24
+	ld [wPikachuMinigameFadeOutCounter], a
+
 	ld hl, wPikachuMinigameJumptableIndex
 	inc [hl]
 
@@ -591,11 +595,15 @@ PikachuMiniGame_FadeOut:
 	and a
 	ret nz
 
-	ld a, [wPikachuMinigameSceneTimer]
-	srl a
-	srl a
-	srl a
-	srl a
+	ld hl, wPikachuMinigameFadeOutCounter
+	dec [hl]
+	ret nz
+
+; this should prevent GBC lagging to shit
+	ld a, 24
+	ld [wPikachuMinigameFadeOutCounter], a
+
+	ld a, [wPikachuMinigameFadeOutIndex]
 
 	ld e, a
 	ld d, 0
@@ -616,7 +624,7 @@ PikachuMiniGame_FadeOut:
 	call DmgToCgbObjPals
 
 ; from this point, the timer increments*instead
-	ld hl, wPikachuMinigameSceneTimer
+	ld hl, wPikachuMinigameFadeOutIndex
 	inc [hl]
 	ret
 
@@ -629,15 +637,13 @@ PikachuMiniGame_FadeOut:
 	ret
 
 .DMGPals:
-	db $94, $94
-	db $94, $94
+	db $94
 	db $94, $50
 	db $40, $00
 	db -1
 
 .Obj_SGBPals:
-	db $e4, $e4
-	db $e4, $e4
+	db $e4
 	db $e4, $90
 	db $40, $00
 	db -1

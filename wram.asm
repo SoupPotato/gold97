@@ -3049,9 +3049,8 @@ wPikachuMinigameNoteCaught:: ds 1
 wPikachuMinigameTimeFrames:: ds 1
 wPikachuMinigameTimeSeconds:: ds 1
 
-; are these two used?
-wc613:: ds 1
-wc614:: ds 1
+wPikachuMinigameFadeOutCounter:: ds 1
+wPikachuMinigameFadeOutIndex:: ds 1
 
 wPikachuMinigameRedrawTimer:: ds 1
 wc616:: ds 1
