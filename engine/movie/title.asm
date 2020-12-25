@@ -44,9 +44,17 @@ TitleScreen:
 	farcall PlaySpriteAnimationsAndDelayFrame
 	ld a, [wJumptableIndex]
 	bit 7, a
-	ret nz
+	jr nz, .ok
 	call TitleScreenScene
 	jr .loop
+
+.ok
+	; Toggle fire / notes
+	ld hl, wTitleScreenToggled
+	ld a, [hl]
+	xor 1
+	ld [hl], a
+	ret
 
 TitleScreenScene:
 	ld e, a
@@ -191,29 +199,24 @@ TitleScreenMain:
 	ld hl, hJoyDown
 
 ; Change to musical notes and back with Left + B
-	ld a, [hl]
-	and D_LEFT + B_BUTTON
-	cp  D_LEFT + B_BUTTON
-	jr nz, .reset_last_pressed
+;	ld a, [hl]
+;	and D_LEFT + B_BUTTON
+;	cp  D_LEFT + B_BUTTON
+;	jr nz, .reset_last_pressed
 
-	ldh a, [hTitleScreenLastPressed]
-	cp D_LEFT + B_BUTTON
-	jr z, .no_switch
+;	ldh a, [hTitleScreenLastPressed]
+;	cp D_LEFT + B_BUTTON
+;	jr z, .no_switch
 
-	ld a, [hl]
-	ldh [hTitleScreenLastPressed], a
+;	ld a, [hl]
+;	ldh [hTitleScreenLastPressed], a
 
-	ld hl, wTitleScreenToggled
-	ld a, [hl]
-	xor 1
-	ld [hl], a
+;	jp TitleScreenSwitchObjectGFX
 
-	jp TitleScreenSwitchObjectGFX
-
-.reset_last_pressed
-	xor a
-	ldh [hTitleScreenLastPressed], a
-.no_switch
+;.reset_last_pressed
+;	xor a
+;	ldh [hTitleScreenLastPressed], a
+;.no_switch
 
 ; Save data can be deleted by pressing Up + B + Select.
 	ld a, [hl]
