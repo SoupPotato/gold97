@@ -464,8 +464,8 @@ TrevorWaterText:
 	done
 	
 JasonSeenText:
-	text "Can you handle this"
-	line "GYM?"
+	text "Can you handle"
+	line "this GYM?"
 	done
 	
 JasonWinText:
