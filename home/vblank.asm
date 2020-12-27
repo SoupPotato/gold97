@@ -42,7 +42,7 @@ VBlank::
 	dw VBlank4
 	dw VBlank5
 	dw VBlank6
-	dw VBlank0 ; just in case
+	dw VBlank7 ; just in case
 
 VBlank0::
 ; normal operation
@@ -62,6 +62,7 @@ VBlank0::
 	ld hl, hVBlankCounter
 	inc [hl]
 
+VBlank0_Cont:
 	; advance random variables
 	ldh a, [rDIV]
 	ld b, a
@@ -419,3 +420,14 @@ VBlank6::
 	ldh a, [hROMBankBackup]
 	rst Bankswitch
 	ret
+
+
+VBlank7::
+	; inc frame counter
+	ld hl, hVBlankCounter
+	inc [hl]
+	homecall _RedrawRowOrColumn
+	call Serve2bppRequest	; call Serve2bppRequest early
+				; the next call to it will be skipped since
+				; we are too far into vblank to do that
+	jp VBlank0_Cont

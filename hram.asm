@@ -169,4 +169,9 @@ hDMATransfer:: db ; ffe8
 hMobile:: db ; ffe9
 hSystemBooted:: db ; ffea
 hTitleScreenLastPressed:: db ; ffeb
+UNION
 hFFEC:: db ; ffec
+NEXTU
+hRedrawRowOrColumnMode:: db
+hRedrawRowOrColumnDest:: ds 2
+ENDU

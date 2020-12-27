@@ -325,6 +325,8 @@ WRAMX 3
 	"Battle Tower RAM"
 WRAMX 5
 	"GBC Video"
+	org $d200
+	"LY Overrides"
 	org $d300
 	"Battle Animations"
 	org $d800
