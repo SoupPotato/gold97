@@ -70,6 +70,9 @@ Script_BattleRoomClosed:
 LinkReceptionistScript_Trade:
 	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
 	iffalse Script_TradeCenterClosed
+	writebyte EGG
+	special FindPartyMonThatSpecies
+	iftrue .EggBlocker
 	opentext
 	writetext Text_TradeReceptionistIntro
 	yesorno
@@ -102,6 +105,13 @@ LinkReceptionistScript_Trade:
 	closetext
 	scall Pokecenter2F_CheckGender
 	warpcheck
+	end
+
+.EggBlocker
+	opentext
+	writetext EggsNotAllowedText
+	waitbutton
+	closetext
 	end
 
 .FriendNotReady:
@@ -172,6 +182,9 @@ BattleTradeMobile_WalkIn:
 LinkReceptionistScript_Battle:
 	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
 	iffalse Script_BattleRoomClosed
+	writebyte EGG
+	special FindPartyMonThatSpecies
+	iftrue .EggBlockerBattle
 	opentext
 	writetext Text_BattleReceptionistIntro
 	yesorno
@@ -204,6 +217,13 @@ LinkReceptionistScript_Battle:
 	closetext
 	scall Pokecenter2F_CheckGender
 	warpcheck
+	end
+
+.EggBlockerBattle
+	opentext
+	writetext EggsNotAllowedText
+	waitbutton
+	closetext
 	end
 
 .FriendNotReady:
@@ -1018,6 +1038,17 @@ Text_BrokeStadiumRules:
 
 	para "Please come back"
 	line "when you're ready."
+	done
+
+EggsNotAllowedText:
+	text "I'm sorry, no"
+	line "#MON EGGS are"
+	cont "allowed in the"
+	cont "link rooms…"
+	
+	para "Please deposit"
+	line "your EGG and"
+	cont "try again!"
 	done
 
 Pokecenter2F_MapEvents:

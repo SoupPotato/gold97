@@ -1071,30 +1071,30 @@ PokegearPhone_UpdateDisplayList:
 	call PokegearPhone_UpdateCursor
 	ret
 
-PokegearPhone_DeletePhoneNumber:
-	ld hl, wPhoneList
-	ld a, [wPokegearPhoneScrollPosition]
-	ld e, a
-	ld d, 0
-	add hl, de
-	ld a, [wPokegearPhoneCursorPosition]
-	ld e, a
-	ld d, 0
-	add hl, de
-	ld [hl], 0
-	ld hl, wPhoneList
-	ld c, CONTACT_LIST_SIZE
-.loop
-	ld a, [hli]
-	and a
-	jr nz, .skip
-	ld a, [hld]
-	ld [hli], a
-	ld [hl], 0
-.skip
-	dec c
-	jr nz, .loop
-	ret
+;PokegearPhone_DeletePhoneNumber:
+;	ld hl, wPhoneList
+;	ld a, [wPokegearPhoneScrollPosition]
+;	ld e, a
+;	ld d, 0
+;	add hl, de
+;	ld a, [wPokegearPhoneCursorPosition]
+;	ld e, a
+;	ld d, 0
+;	add hl, de
+;	ld [hl], 0
+;	ld hl, wPhoneList
+;	ld c, CONTACT_LIST_SIZE
+;.loop
+;	ld a, [hli]
+;	and a
+;	jr nz, .skip
+;	ld a, [hld]
+;	ld [hli], a
+;	ld [hl], 0
+;.skip
+;	dec c
+;	jr nz, .loop
+;	ret
 
 PokegearPhoneContactSubmenu:
 	ld hl, wPhoneList
@@ -1107,18 +1107,17 @@ PokegearPhoneContactSubmenu:
 	ld d, 0
 	add hl, de
 	ld c, [hl]
-	farcall CheckCanDeletePhoneNumber
-	ld a, c
-	and a
-	jr z, .cant_delete
-	ld hl, .CallDeleteCancelJumptable
-	ld de, .CallDeleteCancelStrings
+	;farcall CheckCanDeletePhoneNumber
+	;ld a, c
+	;and a
+	;jr z, .cant_delete
+	;ld hl, .CallDeleteCancelJumptable
+	;ld de, .CallDeleteCancelStrings
 	jr .got_menu_data
 
-.cant_delete
+.got_menu_data
 	ld hl, .CallCancelJumptable
 	ld de, .CallCancelStrings
-.got_menu_data
 	xor a
 	ldh [hBGMapMode], a
 	push hl
@@ -1130,13 +1129,13 @@ PokegearPhoneContactSubmenu:
 	ld h, a
 	inc de
 	push hl
-	ld bc, hBGMapAddress + 1
+	ld bc, hBGMapAddress
 	add hl, bc
 	ld a, [de]
 	inc de
 	sla a
-	ld b, a
-	ld c, 8
+	ld b, 4 ; a
+	ld c, 6 ; 8
 	push de
 	call TextBox
 	pop de
@@ -1211,22 +1210,22 @@ PokegearPhoneContactSubmenu:
 	scf
 	ret
 
-.Delete:
-	ld hl, PokegearText_DeleteStoredNumber
-	call MenuTextBox
-	call YesNoBox
-	call ExitMenu
-	jr c, .CancelDelete
-	call PokegearPhone_DeletePhoneNumber
-	xor a
-	ldh [hBGMapMode], a
-	call PokegearPhone_UpdateDisplayList
-	ld hl, PokegearText_WhomToCall
-	call PrintText
-	call WaitBGMap
-.CancelDelete:
-	scf
-	ret
+;.Delete:
+;	ld hl, PokegearText_DeleteStoredNumber
+;	call MenuTextBox
+;	call YesNoBox
+;	call ExitMenu
+;	jr c, .CancelDelete
+;	call PokegearPhone_DeletePhoneNumber
+;	xor a
+;	ldh [hBGMapMode], a
+;	call PokegearPhone_UpdateDisplayList
+;	ld hl, PokegearText_WhomToCall
+;	call PrintText
+;	call WaitBGMap
+;.CancelDelete:
+;	scf
+;	ret
 
 .Call:
 	and a
@@ -1258,18 +1257,18 @@ PokegearPhoneContactSubmenu:
 	pop de
 	ret
 
-.CallDeleteCancelStrings:
-	dwcoord 10, 6
-	db 3
-	db   "CALL"
-	next "DELETE"
-	next "CANCEL"
-	db   "@"
+;.CallDeleteCancelStrings:
+;	dwcoord 10, 6
+;	db 3
+;	db   "CALL"
+;	next "DELETE"
+;	next "CANCEL"
+;	db   "@"
 
-.CallDeleteCancelJumptable:
-	dw .Call
-	dw .Delete
-	dw .Cancel
+;.CallDeleteCancelJumptable:
+;	dw .Call
+;	dw .Delete
+;	dw .Cancel
 
 .CallCancelStrings:
 	dwcoord 10, 8
@@ -1361,10 +1360,10 @@ PokegearText_PressAnyButtonToExit:
 	text_far UnknownText_0x1c5862
 	text_end
 
-PokegearText_DeleteStoredNumber:
+;PokegearText_DeleteStoredNumber:
 	; Delete this stored phone number?
-	text_far UnknownText_0x1c587d
-	text_end
+;	text_far UnknownText_0x1c587d
+;	text_end
 
 PokegearSpritesGFX:
 INCBIN "gfx/pokegear/pokegear_sprites.2bpp.lz"
