@@ -40,9 +40,10 @@ MeetKenScript:
 PlayersHouse2F_Ken:
 	faceplayer
 	opentext
+	writetext KenGreeting1
+	waitbutton
 	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
 	iftrue .KenPart2
-	writetext KenGreeting1
 	setevent EVENT_TALKED_TO_KEN_AT_BEGINNING
 	checkevent EVENT_READ_OAKS_EMAIL
 	iffalse .KenEmailScript
@@ -52,9 +53,7 @@ PlayersHouse2F_Ken:
 	end
 	
 .KenEmailScript
-	waitbutton
-	writetext KenGreeting1
-	waitbutton
+	
 	closetext
 	checkcode VAR_FACING
 	ifequal UP, .DontNeedToWalk
