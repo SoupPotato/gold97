@@ -934,8 +934,8 @@
 	const EVENT_38C
 	const EVENT_38D
 	const EVENT_38E
-	const EVENT_38F
-	const EVENT_390
+	const EVENT_READ_OAKS_EMAIL
+	const EVENT_TALKED_TO_KEN_AT_BEGINNING
 	const EVENT_391
 	const EVENT_392
 	const EVENT_393

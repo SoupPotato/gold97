@@ -42,10 +42,27 @@ PlayersHouse2F_Ken:
 	opentext
 	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
 	iftrue .KenPart2
-	writetext KenGreeting
+	writetext KenGreeting1
+	setevent EVENT_TALKED_TO_KEN_AT_BEGINNING
+	checkevent EVENT_READ_OAKS_EMAIL
+	iffalse .KenEmailScript
 	waitbutton
 	closetext
 	setscene SCENE_PLAYERS_HOUSE_2F_NOTHING
+	end
+	
+.KenEmailScript
+	waitbutton
+	writetext KenGreeting1
+	waitbutton
+	closetext
+	checkcode VAR_FACING
+	ifequal UP, .DontNeedToWalk
+	applymovement PLAYER, PlayerToReadEmailMovement
+	turnobject PLAYERSHOUSE2F_KEN, DOWN
+	end
+
+.DontNeedToWalk
 	end
 	
 .KenPart2
@@ -62,7 +79,7 @@ PlayersHouse2F_Ken:
 	closetext
 	end
 
-KenGreeting:
+KenGreeting1:
 	text "KEN: Hey <PLAYER>!"
 	para "I think I saw that"
 	line "you got a new"
@@ -73,7 +90,7 @@ KenGreeting:
 	done
 	
 KenGreeting2:
-	text "KEN: Hey <PLAYER>!"
+	text "KEN: Hey, <PLAYER>!"
 	para "PROF.OAK asked you"
 	line "to help him make"
 	cont "a new #DEX?"
@@ -127,7 +144,15 @@ PlayersHousePCScript:
 	writetext PlayersRadioText2
 	waitbutton
 	closetext
+	setevent EVENT_READ_OAKS_EMAIL
+	checkevent EVENT_TALKED_TO_KEN_AT_BEGINNING
+	iffalse .DontSetKenScene
+	setscene SCENE_PLAYERS_HOUSE_2F_NOTHING
 	end
+	
+.DontSetKenScene
+	end
+	
 .Warp:
 	warp NONE, 0, 0
 	end
@@ -145,6 +170,10 @@ PlayersDollScript:
 	waitbutton
 	closetext
 	end
+	
+PlayerToReadEmailMovement:
+	step DOWN
+	step_end
 
 PlayersDollText:
 	text "It's a doll you"

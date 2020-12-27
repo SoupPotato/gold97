@@ -51,6 +51,11 @@ SilentTown_RivalGreets:
 	opentext
 	writetext SilentTownRivalText2
 	waitbutton
+	special NameMom
+	closetext
+	showemote EMOTE_SHOCK, SilentTown_SILVER, 15
+	opentext
+	writetext SilentTownRivalText3
 	closetext
 	applymovement SilentTown_SILVER, RivalGoesToLab
 	disappear SilentTown_SILVER
@@ -387,6 +392,21 @@ SilentTownRivalText2:
 	line "fun!"
 	
 	para "Hmph!"
+	
+	para "Hmm…well…you…uh…"
+
+	para "What do you call"
+	line "your mother again?"
+	done
+	
+SilentTownRivalText3:
+	text "Bahaha!"
+	para "Don't make me"
+	line "laugh!"
+	para "Calling her"
+	line "something so"
+	cont "childish is"
+	para "hilarious!"
 	
 	para "Well, I'm off to"
 	line "OAK's!"
