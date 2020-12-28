@@ -100,14 +100,14 @@ NameMom:
 	ld b, NAME_MOM
 	ld de, wMomsName
 	farcall _NamingScreen
-	; default to "MOMMY"
+	; default to "MOM"
 	ld hl, wMomsName
 	ld de, .default
 	call InitName
 	ret
 	
 	.default
-	db "MOMMY@"
+	db "MOM@"
 
 NameRater:
 	farcall _NameRater
