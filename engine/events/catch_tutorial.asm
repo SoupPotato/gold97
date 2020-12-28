@@ -17,9 +17,9 @@ CatchTutorial::
 	dw .DudeTutorial
 
 .DudeTutorial:
-; Back up your name to your Mom's name.
+; Back up your name to an unused byte.
 	ld hl, wPlayerName
-	ld de, wMomsName
+	ld de, wc7e8
 	ld bc, NAME_LENGTH
 	call CopyBytes
 ; Copy Dude's name to your name
@@ -34,7 +34,7 @@ CatchTutorial::
 	ldh [hJoyDown], a
 	ldh [hJoyPressed], a
 	ld a, [wOptions]
-	push af
+	push af 
 	and $f8
 	add $3
 	ld [wOptions], a
@@ -46,7 +46,7 @@ CatchTutorial::
 	pop af
 
 	ld [wOptions], a
-	ld hl, wMomsName
+	ld hl, wc7e8
 	ld de, wPlayerName
 	ld bc, NAME_LENGTH
 	call CopyBytes

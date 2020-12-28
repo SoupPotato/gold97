@@ -310,7 +310,7 @@ DoorLockedText:
 	done
 	
 OaksLabEntranceSilverText:
-	text "Yo <PLAY_G>!"
+	text "Yo, <PLAY_G>!"
 	
 	para "Looks like PROF."
 	line "OAK isn't here!"

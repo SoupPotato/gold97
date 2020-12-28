@@ -1129,13 +1129,13 @@ PokegearPhoneContactSubmenu:
 	ld h, a
 	inc de
 	push hl
-	ld bc, hBGMapAddress
+	ld bc, hBGMapAddress - 1
 	add hl, bc
 	ld a, [de]
 	inc de
 	sla a
-	ld b, 4 ; a
-	ld c, 6 ; 8
+	ld b, a ; a
+	ld c, 8 ; 8
 	push de
 	call TextBox
 	pop de

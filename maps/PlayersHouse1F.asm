@@ -18,6 +18,8 @@ PlayersHouse1F_MapScripts:
 	setevent EVENT_DECO_CARPET_1
 	setevent EVENT_DECO_BED_1
 	setevent EVENT_DECO_POSTER_1
+	setevent EVENT_TALKED_TO_KEN_AT_BEGINNING
+	setevent EVENT_READ_OAKS_EMAIL
 	return
 
 .DummyScene0:
