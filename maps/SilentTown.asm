@@ -400,9 +400,11 @@ SilentTownRivalText2:
 	done
 	
 SilentTownRivalText3:
-	text "Bahaha!"
-	para "Don't make me"
-	line "laugh!"
+	text "<MOM>?"
+
+	para "Bahaha!"
+	line "Don't make me"
+	cont "laugh!"
 	para "Calling her"
 	line "something so"
 	cont "childish is"

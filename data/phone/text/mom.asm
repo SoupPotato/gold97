@@ -36,8 +36,8 @@ MomPhoneNewBarkText:
 	text_ram wStringBuffer3
 	text "?"
 
-	para "Come see your MOM"
-	line "sometime!"
+	para "Come see your"
+	line "<MOM> soon!"
 	done
 
 MomPhoneIndigoText:
@@ -144,7 +144,7 @@ MomPhoneNoPokemonText:
 	text "Hello?"
 
 	para "Oh, hi, <PLAYER>!"
-	line "Wasn't PROF.ELM"
+	line "Wasn't PROF.OAK"
 	cont "waiting for you?"
 	done
 
