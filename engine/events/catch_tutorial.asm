@@ -17,7 +17,7 @@ CatchTutorial::
 	dw .DudeTutorial
 
 .DudeTutorial:
-; Back up your name to your Mom's name.
+; Back up your name to an unused byte.
 	ld hl, wPlayerName
 	ld de, wc7e8
 	ld bc, NAME_LENGTH
