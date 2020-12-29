@@ -943,7 +943,7 @@
 	const EVENT_395
 	const EVENT_396
 	const EVENT_397
-	const EVENT_398
+	const EVENT_NAMED_MOM_CHECK_FOR_SAVES
 	const EVENT_399
 	const EVENT_39A
 	const EVENT_39B

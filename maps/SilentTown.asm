@@ -35,6 +35,46 @@ SilentTown_MapScripts:
 	clearevent EVENT_FIRST_TIME_BANKING_WITH_MOM
 	return
 	
+MomHasBeenRenamed:
+	text "Your Mother's name"
+	line "is now <MOM>!"
+	done
+	
+NameMomAgainText:
+	text "Hello!"
+	para "This message only"
+	line "appears on older"
+	para "save files that"
+	line "may have your MOM"
+	para "incorrectly named"
+	line "in the # GEAR"
+	cont "phone."
+	para "Check to see if"
+	line "MOM's name appears"
+	para "correct in the"
+	line "phone."
+	para "A common issue is"
+	line "having the name of"
+	para "the Player instead"
+	line "of MOM."
+	para "You can rename her"
+	line "here to fix any"
+	para "issues or if you"
+	line "just want to give"
+	para "her a different"
+	line "name."
+	para "This can only be"
+	line "done one time."
+	para "Rename your MOM?"
+	done
+	
+NameMomAgainText2:
+	text "Talk to this sign"
+	line "again to name your"
+	cont "MOM."
+	done
+
+
 SilentTownPokecenterSign:
 	jumpstd pokecentersign
 	
@@ -53,6 +93,7 @@ SilentTown_RivalGreets:
 	waitbutton
 	special NameMom
 	closetext
+	setevent EVENT_NAMED_MOM_CHECK_FOR_SAVES
 	showemote EMOTE_SHOCK, SilentTown_SILVER, 15
 	opentext
 	writetext SilentTownRivalText3
@@ -174,7 +215,35 @@ SilentTownSign:
 	jumptext SilentTownSignText
 
 SilentTownPlayersHouseSign:
-	jumptext SilentTownPlayersHouseSignText
+	opentext
+	checkevent EVENT_NAMED_MOM_CHECK_FOR_SAVES
+	iffalse .NameMomAgain
+	writetext SilentTownPlayersHouseSignText
+	waitbutton
+	closetext
+	end
+	
+.NameMomAgain
+	writetext NameMomAgainText
+	yesorno
+	iffalse .DontNameMomAgain
+	special NameMom 
+	closetext 
+	setevent EVENT_NAMED_MOM_CHECK_FOR_SAVES
+	opentext
+	writetext MomHasBeenRenamed
+	waitbutton
+	closetext
+	end
+	
+.DontNameMomAgain
+	writetext NameMomAgainText2
+	waitbutton
+	closetext
+	end
+
+SilentTownOakLabBackRoomSign:
+	jumptext SilentTownOakLabBackRoomSignText
 
 SilentTownOaksLabSign:
 	jumptext SilentTownOaksLabSignText
