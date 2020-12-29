@@ -47,7 +47,7 @@ NameMomAgainText:
 	para "save files that"
 	line "may have your MOM"
 	para "incorrectly named"
-	line "in the # GEAR"
+	line "in the #GEAR"
 	cont "phone."
 	para "Check to see if"
 	line "MOM's name appears"
@@ -241,9 +241,6 @@ SilentTownPlayersHouseSign:
 	waitbutton
 	closetext
 	end
-
-SilentTownOakLabBackRoomSign:
-	jumptext SilentTownOakLabBackRoomSignText
 
 SilentTownOaksLabSign:
 	jumptext SilentTownOaksLabSignText
