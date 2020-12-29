@@ -79,7 +79,7 @@ PlayersHouse2F_Ken:
 	end
 
 KenGreeting1:
-	text "KEN: Hey <PLAYER>!"
+	text "KEN: Hey, <PLAYER>!"
 	para "I think I saw that"
 	line "you got a new"
 	cont "e-mail on your PC."
@@ -186,16 +186,17 @@ PlayersRadioText2:
 	line "on the PC."
 	
 	para "What's this?"
-	line "A new email?"
+	line "A new e-mail?"
 	
 	para "…"
 	
 	para "I hope you'll"
 	line "excuse the sudden"
-	para "email, but there's"
-	line "something that I"
-	para "would like to"
-	line "entrust you with."
+	para "e-mail, but"
+	line "there's something"
+	para "that I would"
+	line "like to entrust"
+	para "you with."
 	
 	para "Won't you come by"
 	line "to collect it?"

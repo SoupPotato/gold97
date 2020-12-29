@@ -447,7 +447,7 @@ SilentTownRivalText1:
 	line "I gotta brag to"
 	cont "you about!"
 	
-	para "I got an email"
+	para "I got an e-mail"
 	line "from PROF.OAK!"
 
 	para "Yeah, the famous"
