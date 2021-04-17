@@ -1,6 +1,6 @@
 	db KURSTRAW ; 220
 
-	db  55,  40,  90,  78,  80,  77
+	db  45,  40,  80,  75,  80,  67
 	;   hp  atk  def  spd  sat  sdf
 
 	db GHOST, GHOST ; type
