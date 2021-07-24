@@ -1313,9 +1313,9 @@ GruntMGroup:
 
 	; GRUNTM (20)
 	db "GRUNT@", TRAINERTYPE_NORMAL; used, base b3f
-	db 28, MAROWAK
-	db 29, UMBREON
-	db 26, RHYHORN
+	db 38, MAROWAK
+	db 39, UMBREON
+	db 36, RHYHORN
 	db -1 ; end
 
 	; GRUNTM (21)
