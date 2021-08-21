@@ -136,10 +136,17 @@ ENDC
 .AfterEverythingBirdFight
 	faceplayer
 	opentext
-	writetext SometimesYouLiveLongEnough
+IF DEF(_GOLD)
+	writetext SometimesYouLiveLongEnoughGold
+	closetext
+	end
+	
+ELIF DEF(_SILVER)
+	writetext SometimesYouLiveLongEnoughSilver
 	waitbutton
 	closetext
 	end
+ENDC
 	
 OlivineElderNoStory:
 	writetext AlloyOldCaptainsHouseElderAnotherTime
@@ -163,7 +170,7 @@ ElderWalksOutMovement:
 	step DOWN
 	step_end
 	
-SometimesYouLiveLongEnough:
+SometimesYouLiveLongEnoughGold:
 	text "Sometimes you live"
 	line "long enough to"
 	para "witness things you"
@@ -182,7 +189,27 @@ SometimesYouLiveLongEnough:
 	line "anything is"
 	cont "possible."
 	done
-	
+
+SometimesYouLiveLongEnoughSilver:
+	text "Sometimes you live"
+	line "long enough to"
+	para "witness things you"
+	line "never thought you"
+	cont "would see."
+	para "I had an encounter"
+	line "with the bird of"
+	cont "legend."
+	para "Truly a magical"
+	line "event."
+	para "You know, you"
+	line "should search"
+	para "NIHON for the"
+	line "legendary beasts."
+	para "If LUGIA returned,"
+	line "anything is"
+	cont "possible."
+	done
+
 OlivineElderHoOhStoryText:
 	text "Listen closely…"
 	
