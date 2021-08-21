@@ -38,7 +38,7 @@ OakPhoneAssistantText:
 	line "in PAGOTA CITY."
 	done
 
-OakPhoneEggUnhatchedText:
+OakPhoneTakingOnLeagueText:
 	text "Hello, <PLAY_G>?"
 	line "I hear you're"
 	para "taking the NIHON"

@@ -100,7 +100,7 @@ BattleScript:
 .FinishRival:
 	applymovement ELMENTRANCE_SILVER, SilverLeavesLab
 	disappear ELMENTRANCE_SILVER
-	setscene SCENE_ELM_ENTRANCE_DAISY
+	setscene SCENE_OAK_ENTRANCE_DAISY
 	special HealParty
 	playmapmusic
 	end
@@ -130,7 +130,7 @@ DaisyStopsScript1:
 	waitbutton
 	closetext
 	applymovement ELMENTRANCE_DAISY, DaisyLeftMovement
-	setscene SCENE_ELM_ENTRANCE_NOTHING
+	setscene SCENE_OAK_ENTRANCE_NOTHING
 	setmapscene ROUTE_101, SCENE_ROUTE29_CATCH_TUTORIAL
 	end
 	
@@ -157,7 +157,7 @@ DaisyStopsScript2:
 	waitbutton
 	closetext
 	applymovement ELMENTRANCE_DAISY, DaisyLeftMovement
-	setscene SCENE_ELM_ENTRANCE_NOTHING
+	setscene SCENE_OAK_ENTRANCE_NOTHING
 	setmapscene ROUTE_101, SCENE_ROUTE29_CATCH_TUTORIAL
 	end
 	
@@ -359,10 +359,6 @@ Movement_SilverDownOne:
 Movement_DownOne:
 	step DOWN
 	turn_head UP
-	step_end	
-	
-CatchUp_Movement:
-	step UP
 	step_end
 
 DoorLocked_Movement:
@@ -402,9 +398,9 @@ OaksLabEntrance_MapEvents:
 
 	db 4 ; coord events
 	coord_event  4,  1, SCENE_DEFAULT, DoorLockedScript
-	coord_event  4,  1, SCENE_ELM_ENTRANCE_BATTLE, BattleScript
-	coord_event  3, 11, SCENE_ELM_ENTRANCE_DAISY, DaisyStopsScript1
-	coord_event  4, 11, SCENE_ELM_ENTRANCE_DAISY, DaisyStopsScript2
+	coord_event  4,  1, SCENE_OAK_ENTRANCE_BATTLE, BattleScript
+	coord_event  3, 11, SCENE_OAK_ENTRANCE_DAISY, DaisyStopsScript1
+	coord_event  4, 11, SCENE_OAK_ENTRANCE_DAISY, DaisyStopsScript2
 
 	db 14 ; bg events
 	bg_event  6,  1, BGEVENT_READ, OaksLabEntranceComputerScript

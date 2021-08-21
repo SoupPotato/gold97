@@ -217,13 +217,13 @@ OakPhoneScript1:
 	iftrue .elmafterradiotower
 	checkevent EVENT_RIVAL_BURNED_TOWER
 	iftrue .discovery
-	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
+	checkevent EVENT_GOT_ODD_EGG_FROM_ELMS_AIDE
 	iffalse .next
 	checkevent EVENT_TOGEPI_HATCHED
 	iftrue .egghatched
 .next
-	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
-	iftrue .eggunhatched
+	checkevent EVENT_GOT_ODD_EGG_FROM_ELMS_AIDE
+	iftrue .taking_on_league
 	checkevent EVENT_ELMS_AIDE_IN_LAB
 	iftrue .assistant
 	checkevent EVENT_ELM_CALLED_ABOUT_STOLEN_POKEMON
@@ -245,8 +245,8 @@ OakPhoneScript1:
 	farwritetext OakPhoneAssistantText
 	end
 
-.eggunhatched
-	farwritetext OakPhoneEggUnhatchedText
+.taking_on_league
+	farwritetext OakPhoneTakingOnLeagueText
 	end
 
 .egghatched

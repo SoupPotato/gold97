@@ -27,11 +27,8 @@ PagotaPokecenter1F_ElmsAideScript:
 	special GiveOddEgg
 	stringtotext .eggname, MEM_BUFFER_1
 	scall .AideGivesEgg
-	setevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
-	;setevent EVENT_TOGEPI_HATCHED
+	setevent EVENT_GOT_ODD_EGG_FROM_ELMS_AIDE
 	clearevent EVENT_ELMS_AIDE_IN_LAB
-	clearevent EVENT_TOGEPI_HATCHED
-	;setmapscene ROUTE_112, SCENE_ROUTE32_OFFER_SLOWPOKETAIL
 	writetext UnknownText_0x695c5
 	waitbutton
 	closetext

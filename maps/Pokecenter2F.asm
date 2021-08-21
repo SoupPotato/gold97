@@ -68,7 +68,7 @@ Script_BattleRoomClosed:
 	end
 
 LinkReceptionistScript_Trade:
-	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
+	checkevent EVENT_GOT_ODD_EGG_FROM_ELMS_AIDE
 	iffalse Script_TradeCenterClosed
 	writebyte EGG
 	special FindPartyMonThatSpecies
@@ -180,7 +180,7 @@ BattleTradeMobile_WalkIn:
 	end
 
 LinkReceptionistScript_Battle:
-	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
+	checkevent EVENT_GOT_ODD_EGG_FROM_ELMS_AIDE
 	iffalse Script_BattleRoomClosed
 	writebyte EGG
 	special FindPartyMonThatSpecies
