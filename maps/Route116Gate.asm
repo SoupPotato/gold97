@@ -37,6 +37,65 @@ Route116GateScientistScript:
 	waitbutton
 	closetext
 	end
+
+Route116GateAideScript:
+	faceplayer
+	opentext
+	checkevent EVENT_GOT_EVERSTONE_FROM_ELM
+	iftrue .AlreadyGotEverstone
+	writetext AideGivesEverstoneText1
+	buttonsound
+	verbosegiveitem EVERSTONE
+	iffalse .NoRoomForEverstone
+	writetext AideGivesEverstoneText2
+	waitbutton
+	setevent EVENT_GOT_EVERSTONE_FROM_ELM
+	closetext
+	end
+
+.NoRoomForEverstone:
+	writetext AideGivesEverstoneText3
+	waitbutton
+	closetext
+	end
+	
+.AlreadyGotEverstone
+	writetext AideGivesEverstoneText2
+	buttonsound
+	closetext
+	end
+
+AideGivesEverstoneText1:
+	text "Hi there,"
+	line "<PLAY_G>!"
+	
+	para "Remember me?"
+	
+	para "I'm one of PROF."
+	line "OAK's AIDES."
+	
+	para "OAK forgot to give"
+	line "you this before he"
+	cont "left."
+	done
+
+AideGivesEverstoneText2:
+	text "That EVERSTONE can"
+	line "prevent it's hold"
+	cont "-er from evolving!"
+	
+	para "It's a handy stone"
+	line "when you don't a"
+	cont "certain #MON"
+	cont "to evolve."
+	done
+
+AideGivesEverstoneText3:
+	text "Oh dear…"
+
+	para "You have no room"
+	cont "for this!"
+	done
 	
 Route116GateRocket1Text:
 	text "Fufufufu…"
@@ -90,8 +149,8 @@ Route116Gate_MapEvents:
 
 	db 0 ; bg events
 
-	db 3 ; object events
+	db 4 ; object events
 	object_event  0,  4, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route116GateScientistScript, -1
 	object_event  4,  1, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route116GateRocket1Script, EVENT_RIVAL_BURNED_TOWER
 	object_event  5,  1, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route116GateRocket2Script, EVENT_RIVAL_BURNED_TOWER
-	
+	object_event  3,  1, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route116GateAideScript, EVENT_BIRDON_AIDE_HIDDEN
