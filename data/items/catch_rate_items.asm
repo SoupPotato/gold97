@@ -4,8 +4,6 @@
 
 TimeCapsule_CatchRateItems:
 	db OLD_AMBER, GOLD_BERRY
-	db LONG_TONGUE, BERRY
-	db LONG_VINE, BERRY
 	db APPLE, BERRY
 	db SNAKESKIN, BERRY
 ;	db ITEM_BE, BERRY

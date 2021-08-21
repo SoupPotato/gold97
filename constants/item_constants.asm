@@ -11,7 +11,7 @@
 	const BRIGHTPOWDER ; 03
 	const GREAT_BALL   ; 04
 	const POKE_BALL    ; 05
-	const ITEM_06     ; 06 
+	const ITEM_06      ; 06 
 	const BICYCLE      ; 07
 	const MOON_STONE   ; 08
 	const ANTIDOTE     ; 09
@@ -55,7 +55,7 @@
 	const SODA_POP     ; 2f
 	const LEMONADE     ; 30
 	const X_ATTACK     ; 31
-	const OLD_AMBER      ; 32
+	const OLD_AMBER    ; 32
 	const X_DEFEND     ; 33
 	const X_SPEED      ; 34
 	const X_SPECIAL    ; 35
@@ -95,7 +95,7 @@
 	const BIG_MUSHROOM ; 57
 	const SILVERPOWDER ; 58
 	const BLU_APRICORN ; 59
-	const LONG_TONGUE      ; 5a
+	const LONG_TONGUE  ; 5a
 	const AMULET_COIN  ; 5b
 	const YLW_APRICORN ; 5c
 	const GRN_APRICORN ; 5d
@@ -105,7 +105,7 @@
 	const WHT_APRICORN ; 61
 	const BLACKBELT    ; 62
 	const BLK_APRICORN ; 63
-	const LONG_VINE      ; 64
+	const LONG_VINE    ; 64
 	const PNK_APRICORN ; 65
 	const BLACKGLASSES ; 66
 	const SLOWPOKETAIL ; 67
@@ -125,7 +125,7 @@
 	const MIRACLE_SEED ; 75
 	const THICK_CLUB   ; 76
 	const FOCUS_BAND   ; 77
-	const APPLE      ; 78
+	const APPLE        ; 78
 	const ENERGYPOWDER ; 79
 	const ENERGY_ROOT  ; 7a
 	const HEAL_POWDER  ; 7b
@@ -140,51 +140,51 @@
 	const STAR_PIECE   ; 84
 	const BASEMENT_KEY ; 85
 	const PASS         ; 86
-	const SNAKESKIN      ; 87
-	const PRETTY_TAIL      ; 88
-	const EARTHEN_CLAY      ; 89
+	const SNAKESKIN    ; 87
+	const PRETTY_TAIL  ; 88
+	const EARTHEN_CLAY ; 89
 	const CHARCOAL     ; 8a
 	const BERRY_JUICE  ; 8b
 	const SCOPE_LENS   ; 8c
-	const STIMULUS_ORB      ; 8d
-	const CONFUSE_CLAW      ; 8e
+	const STIMULUS_ORB ; 8d
+	const CONFUSE_CLAW ; 8e
 	const METAL_COAT   ; 8f
 	const DRAGON_FANG  ; 90
-	const FOCUS_ORB      ; 91
+	const FOCUS_ORB    ; 91
 	const LEFTOVERS    ; 92
-	const CALM_SEED      ; 93
-	const WATER_TAIL      ; 94
-	const FIRE_TAIL      ; 95
+	const CALM_SEED    ; 93
+	const WATER_TAIL   ; 94
+	const FIRE_TAIL    ; 95
 	const MYSTERYBERRY ; 96
 	const DRAGON_SCALE ; 97
 	const BERSERK_GENE ; 98
-	const THUNDER_TAIL      ; 99
-	const WISDOM_ORB      ; 9a
-	const DETECT_ORB      ; 9b
+	const THUNDER_TAIL ; 99
+	const WISDOM_ORB   ; 9a
+	const DETECT_ORB   ; 9b
 	const SACRED_ASH   ; 9c
 	const HEAVY_BALL   ; 9d
 	const FLOWER_MAIL  ; 9e
 	const LEVEL_BALL   ; 9f
 	const LURE_BALL    ; a0
 	const FAST_BALL    ; a1
-	const SHARP_HORNS      ; a2
+	const SHARP_HORNS  ; a2
 	const LIGHT_BALL   ; a3
 	const FRIEND_BALL  ; a4
 	const MOON_BALL    ; a5
 	const LOVE_BALL    ; a6
 	const NORMAL_BOX   ; a7
 	const GORGEOUS_BOX ; a8
-	const HEART_STONE    ; a9
+	const HEART_STONE  ; a9
 	const POLKADOT_BOW ; aa
-	const POWER_WINGS      ; ab
+	const POWER_WINGS  ; ab
 	const UP_GRADE     ; ac
 	const BERRY        ; ad
 	const GOLD_BERRY   ; ae
 	const SQUIRTBOTTLE ; af
-	const ENERGY_WALL      ; b0
+	const ENERGY_WALL  ; b0
 	const PARK_BALL    ; b1
 	const RAINBOW_WING ; b2
-	const STEEL_SHELL      ; b3
+	const STEEL_SHELL  ; b3
 	const BRICK_PIECE  ; b4
 	const SURF_MAIL    ; b5
 	const LITEBLUEMAIL ; b6
@@ -195,7 +195,7 @@
 	const BLUESKY_MAIL ; bb
 	const MUSIC_MAIL   ; bc
 	const MIRAGE_MAIL  ; bd
-	const SKATEBOARD      ; be
+	const SKATEBOARD   ; be
 
 add_tm: MACRO
 if !DEF(TM01)
