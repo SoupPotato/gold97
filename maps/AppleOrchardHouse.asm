@@ -18,18 +18,21 @@ AppleFarmerText:
 	cont "to my ORCHARD!"
 	
 	para "I could use your"
-	line "help kid, my"
-	cont "APPLEs sell for"
-	cont "a pretty penny"
-	cont "on the mainland"
-	cont "for their crisp"
-	cont "and fresh taste!"
+	line "help kid."
+	
+	para "My APPLEs sell for"
+	line "a pretty penny on"
+	cont "the mainland for"
+	cont "their crisp and"
+	cont "fresh taste!"
 	
 	para "It's awfully hard"
-	line "to sell them far"
-	cont "though, so you"
-	cont "take them and"
-	cont "do it for me."
+	line "to sell them so"
+	cont "far away though."
+	
+	para "So, why don't you"
+	cont "take them and do"
+	cont "it for me?"
 	
 	para "You can keep some"
 	line "of the profits!"
