@@ -31,7 +31,7 @@ AppleFarmerText:
 	cont "far away though."
 	
 	para "So, why don't you"
-	cont "take them and do"
+	line "take them and do"
 	cont "it for me?"
 	
 	para "You can keep some"
