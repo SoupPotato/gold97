@@ -446,7 +446,7 @@ ENDM
 
 	map_const CROWN_MART,                                   8,  4 ;  4
 	map_const CROWN_POKECENTER_1F,                          8,  4 ;  5
-	map_const CROWN_CITY,                                  10, 13 ;  3
+	map_const CROWN_CITY,                                  10, 14 ;  3
 	map_const VICTORY_ROAD_OUTSIDE,                        10,  9 ; 10
 	map_const CROWN_CITY_SCOPE_LENS_HOUSE,                  5,  4 ;  9
 	map_const CROWN_CITY_SPEECH_HOUSE,                      5,  4 ;  7
