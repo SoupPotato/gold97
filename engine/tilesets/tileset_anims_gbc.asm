@@ -133,12 +133,21 @@ TilesetPortAnim:
 	dw NULL,  DoneTileAnimation
 
 TilesetEliteFourRoomAnim:
-	dw NULL,  LavaBubbleAnim2
+	dw vTiles2 tile $60, AnimateWaterTile
+	dw NULL,  WaitTileAnimation
+	dw NULL,  LavaBubbleAnim3
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
-	dw NULL,  LavaBubbleAnim1
+	dw NULL,  LavaBubbleAnim4
 	dw NULL,  WaitTileAnimation
+	dw wTileAnimBuffer, ScrollTileDown
+	dw wTileAnimBuffer, ScrollTileDown
+	dw wTileAnimBuffer, ScrollTileDown
+	dw WhirlpoolFrames5, AnimateWhirlpoolTile
+	dw WhirlpoolFrames6, AnimateWhirlpoolTile
+	dw WhirlpoolFrames7, AnimateWhirlpoolTile
+	dw WhirlpoolFrames8, AnimateWhirlpoolTile
 	dw NULL,  StandingTileFrame8
 	dw NULL,  DoneTileAnimation
 

@@ -102,7 +102,7 @@ KarenScript_KarenBeforeText:
 	
 	para "My ambition to"
 	line "restore my "
-	cont "organisation has"
+	cont "organization has"
 	cont "not changed,"
 	
 	para "but until then I"
@@ -114,7 +114,7 @@ KarenScript_KarenBeforeText:
 	line "<PLAY_G>,"
 	
 	para "I hope you have"
-	line "prepared yourself."
+	line "prepared yourself,"
 	
 	para "because your"
 	line "journey ends here!"
