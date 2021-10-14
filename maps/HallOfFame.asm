@@ -43,6 +43,14 @@ HallOfFame_MapScripts:
 	setevent EVENT_BATTLE_AVAILABLE_CLAIR
 	clearevent EVENT_BRUNO_BATTLE_DONE
 	clearevent EVENT_EXPLODING_TRAP_16 ; silver in nanjo forest
+	checkevent EVENT_MEW_FOUGHT
+	iffalse .NoMew
+	writebyte MEW
+	special MonCheck
+	iftrue .NoMew ; if player caught
+	clearevent EVENT_MEW_SPOT_8_FOUND
+	clearevent EVENT_MEW_FOUGHT
+.NoMew:
 	
 clearifnotcaught: MACRO
     writebyte \1
@@ -60,7 +68,6 @@ ENDM
     clearifnotcaught LUGIA,    EVENT_FOUGHT_LUGIA
     clearifnotcaught HO_OH,    EVENT_FOUGHT_HO_OH
     clearifnotcaught MEWTWO,   EVENT_SWITCH_11
-    clearifnotcaught MEW,      EVENT_MEW_SPOT_8_FOUND
 
 	checkevent EVENT_PACKAGE_TAKEN_NO_SHOW
 	iffalse .skipPackages ; if package is sitting there unopened
