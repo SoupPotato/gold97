@@ -88,7 +88,7 @@ ConfrontationScript:
 	waitbutton
 	closetext
 	winlosstext Imposter2WinText, Imposter2LossText
-	loadtrainer SABRINA, SABRINA2
+	loadtrainer IMPOSTER, IMPOSTER2
 	startbattle
 	reloadmapafterbattle	
 	opentext

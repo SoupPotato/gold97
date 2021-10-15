@@ -51,7 +51,7 @@ KarenScript_Battle:
 	winlosstext KarenScript_KarenBeatenText, 0
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue GiovanniRematchTeam
-	loadtrainer KAREN, KAREN1
+	loadtrainer GIOVANNI_E4, GIOVANNI_E41
 returntomainGiovanni:
 	startbattle
 	reloadmapafterbattle
@@ -75,7 +75,7 @@ KarenScript_AfterBattle:
 	end
 
 GiovanniRematchTeam:
-	loadtrainer KAREN, KAREN2
+	loadtrainer GIOVANNI_E4, GIOVANNI_E42
 	jump returntomainGiovanni
 
 GiovannisRoom_EnterMovement:

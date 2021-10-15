@@ -13,17 +13,13 @@ GymLeaders:
 	db JASMINE
 	db OKERA
 	db CLAIR
-	db WILL
-	db BRUNO
-	db KAREN
+	db LORELEI
+	db AGATHA
 	db KOGA
-	db JANINE
+	db BRUNO
 	db CHAMPION
 ; fallthrough
 KantoGymLeaders:
-	db MISTY
 	db LT_SURGE
-	db ERIKA
-	db BLAINE
 	db RED
 	db -1

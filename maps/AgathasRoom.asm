@@ -51,7 +51,7 @@ BrunoScript_Battle:
 	winlosstext BrunoScript_BrunoBeatenText, 0
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue AgathaRematchTeam
-	loadtrainer BRUNO, BRUNO1
+	loadtrainer AGATHA, AGATHA1
 returntomainAgatha:
 	startbattle
 	reloadmapafterbattle
@@ -75,7 +75,7 @@ BrunoScript_AfterBattle:
 	end
 
 AgathaRematchTeam:
-	loadtrainer BRUNO, BRUNO2
+	loadtrainer AGATHA, AGATHA2
 	jump returntomainAgatha
 
 

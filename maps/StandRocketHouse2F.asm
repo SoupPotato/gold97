@@ -76,7 +76,7 @@ ImposterSceneMainScript:
 	waitbutton
 	closetext
 	winlosstext ImposterWinText, ImposterLossText
-	loadtrainer SABRINA, SABRINA1
+	loadtrainer IMPOSTER, IMPOSTER1
 	startbattle
 	reloadmapafterbattle
 	opentext

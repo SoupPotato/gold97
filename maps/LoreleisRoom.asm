@@ -51,7 +51,7 @@ WillScript_Battle:
 	winlosstext WillScript_WillBeatenText, 0
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue LoreleiRematchTeam
-	loadtrainer WILL, WILL1
+	loadtrainer LORELEI, LORELEI1
 returntomainLorelei:
 	startbattle
 	reloadmapafterbattle
@@ -69,7 +69,7 @@ returntomainLorelei:
 	end
 
 LoreleiRematchTeam:
-	loadtrainer WILL, WILL2
+	loadtrainer LORELEI, LORELEI2
 	jump returntomainLorelei
 
 

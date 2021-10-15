@@ -26,7 +26,7 @@ KantoGymErikaScript:
 	waitbutton
 	closetext
 	winlosstext ErikaBeatenText, 0
-	loadtrainer ERIKA, ERIKA1
+	loadtrainer RED, RED1
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ERIKA
@@ -48,7 +48,7 @@ rematchscriptRed:
 	waitbutton
 	closetext
 	winlosstext RedRematchWinText, 0
-	loadtrainer RED, RED1
+	loadtrainer RED, RED2
 	startbattle
 	reloadmapafterbattle
 	clearevent EVENT_REMATCH_AVAILABLE_RED
@@ -84,7 +84,7 @@ KantoGymStatue:
 	iftrue .Beaten
 	jumpstd gymstatue1
 .Beaten:
-	trainertotext ERIKA, ERIKA1, MEM_BUFFER_1
+	trainertotext RED, RED1, MEM_BUFFER_1
 	jumpstd gymstatue2
 
 

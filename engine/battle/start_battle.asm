@@ -99,9 +99,9 @@ PlayBattleMusic:
 	jr z, .done
 	cp SCIENTIST
 	jr z, .done
-	cp SABRINA; this is imposter oak
+	cp IMPOSTER
 	jr z, .done
-	cp BROCK; this is giovanni
+	cp BOSS
 	jr z, .done
 
 	ld de, MUSIC_KANTO_GYM_LEADER_BATTLE

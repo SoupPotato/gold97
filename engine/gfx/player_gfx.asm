@@ -3,7 +3,7 @@ Unreferenced_Function88248:
 	ld a, [wPlayerGender]
 	bit PLAYERGENDER_FEMALE_F, a
 	jr z, .okay
-	ld c, KAREN
+	ld c, KRIS
 
 .okay
 	ld a, c

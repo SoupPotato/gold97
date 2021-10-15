@@ -62,7 +62,7 @@ KikaiBrunoScript:
 	writetext BrunoPrebattleText
 	waitbutton
 	winlosstext BrunoWinText, 0
-	loadtrainer JANINE, JANINE1 ; bruno is over janine
+	loadtrainer BRUNO, BRUNO1
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BRUNO_BATTLE_DONE

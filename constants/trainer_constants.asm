@@ -72,54 +72,52 @@ KRIS EQU __enum__
 	const RIVAL1_5_CHIKORITA
 	const RIVAL1_5_FLAMBEAR
 	const RIVAL1_5_CRUIZE
+	
+	trainerclass POKEMON_PROF ; 8
 
-	trainerclass POKEMON_PROF ; a
+	trainerclass LORELEI ; a
+	const LORELEI1
+	const LORELEI2
 
-	trainerclass WILL ; b
-	const WILL1
-	const WILL2
-
-	trainerclass CAL ; c
+	trainerclass CAL ;b
 	const CAL1
 	const CAL2
 	const CAL3
 
-	trainerclass BRUNO ; d
-	const BRUNO1
-	const BRUNO2
+	trainerclass AGATHA ; c
+	const AGATHA1
+	const AGATHA2
 
-	trainerclass KAREN ; e
-	const KAREN1
-	const KAREN2
+	trainerclass GIOVANNI_E4 ; d
+	const GIOVANNI_E41
+	const GIOVANNI_E42
 
-	trainerclass KOGA ; f
+	trainerclass KOGA ; e
 	const KOGA1
 	const KOGA2
 
-	trainerclass CHAMPION ; 10
+	trainerclass CHAMPION ; f
 	const LANCE
 	const LANCE2
 
-	trainerclass BROCK ; 11
-	const BROCK1
+	trainerclass BOSS ; 10
+	const GIOVANNI1
 
-	trainerclass MISTY ; 12
-	const MISTY1
-
-	trainerclass LT_SURGE ; 13
+	trainerclass LT_SURGE ; 11
 	const LT_SURGE1
 
-	trainerclass SCIENTIST ; 14
+	trainerclass SCIENTIST ; 12
 	const ROSS
 	const MITCH
 	const JED
 	const MARC
 	const RICH
 
-	trainerclass ERIKA ; 15
-	const ERIKA1
+	trainerclass RED ; 13
+	const RED1
+	const RED2
 
-	trainerclass YOUNGSTER ; 16
+	trainerclass YOUNGSTER ; 14
 	const JOEY
 	const MIKEY
 	const ALBERT
@@ -131,7 +129,7 @@ KRIS EQU __enum__
 	const JASON2
 	const JASON3
 
-	trainerclass SCHOOLBOY ; 17
+	trainerclass SCHOOLBOY ; 15
 	const ALAN
 	const JACK
 	const DANNY
@@ -143,7 +141,7 @@ KRIS EQU __enum__
 	const NATE
 	const RICKY
 
-	trainerclass BIRD_KEEPER ; 18
+	trainerclass BIRD_KEEPER ; 16
 	const ROD
 	const ABE
 	const BRYAN
@@ -160,7 +158,7 @@ KRIS EQU __enum__
 	const PERRY
 	const BRET
 
-	trainerclass LASS ; 19
+	trainerclass LASS ; 17
 	const VICTORIA
 	const CARRIE
 	const BRIDGET
@@ -175,20 +173,20 @@ KRIS EQU __enum__
 	const LINDA2
 	const LINDA3
 
-	trainerclass JANINE ; 1a
-	const JANINE1
+	trainerclass BRUNO ; 18
+	const BRUNO1
 
-	trainerclass COOLTRAINERM ; 1b
+	trainerclass COOLTRAINERM ; 19
 	const NICK
 	const AARON
 	const PAUL
 	const CODY
 	const MIKE
-	const GAVEN ;changed
-	const EVERITT ; changed
+	const GAVEN
+	const EVERITT
 	const RYAN
 	const JAKE
-	const CHESTER ; changed
+	const CHESTER
 	const BLAKE
 	const BRIAN
 	const ERICK
@@ -202,7 +200,7 @@ KRIS EQU __enum__
 	const BEN
 	const ROB
 
-	trainerclass COOLTRAINERF ; 1c
+	trainerclass COOLTRAINERF ; 1a
 	const GWEN
 	const LOIS
 	const FRAN
@@ -211,20 +209,20 @@ KRIS EQU __enum__
 	const IRENE
 	const KELLY
 	const JOYCE
-	const BETH ; changed
+	const BETH
 	const REENA
 	const MEGAN
-	const KENZIE ; changed
+	const KENZIE
 	const CAROL
 	const QUINN
 	const EMMA
 	const CYBIL
 	const JENN
-	const ALLY ; changed
+	const ALLY
 	const CARA
 	const JULIA
 
-	trainerclass BEAUTY ; 1d
+	trainerclass BEAUTY ; 1b
 	const SAMANTHA
 	const JULIE
 	const JACLYN
@@ -241,7 +239,7 @@ KRIS EQU __enum__
 	const VALERIE
 	const OLIVIA
 
-	trainerclass POKEMANIAC ; 1e
+	trainerclass POKEMANIAC ; 1c
 	const LARRY
 	const ANDREW
 	const CALVIN
@@ -254,7 +252,7 @@ KRIS EQU __enum__
 	const ZACH
 	const MILLER
 
-	trainerclass GRUNTM ; 1f
+	trainerclass GRUNTM ; 1d
 	const GRUNTM_1
 	const GRUNTM_2
 	const GRUNTM_3
@@ -291,31 +289,30 @@ KRIS EQU __enum__
 	const GRUNTM_37
 	const GRUNTM_38
 	const GRUNTM_39
-	
 	const GRUNTM_40
 	const GRUNTM_41
 
-	trainerclass GENTLEMAN ; 20
+	trainerclass GENTLEMAN ; 1e
 	const PRESTON
 	const EDWARD
 	const GREGORY
 	const VIRGIL
 	const ALFRED
 
-	trainerclass SKIER ; 21
+	trainerclass SKIER ; 1f
 	const ROXANNE
 	const CLARISSA
 
-	trainerclass TEACHER ; 22
+	trainerclass TEACHER ; 20
 	const HILLARY
 	const SHIRLEY
 	const HOLLY
 
-	trainerclass SABRINA ; 23
-	const SABRINA1
-	const SABRINA2
+	trainerclass IMPOSTER ; 21
+	const IMPOSTER1
+	const IMPOSTER2
 
-	trainerclass BUG_CATCHER ; 24
+	trainerclass BUG_CATCHER ; 22
 	const DON
 	const ED
 	const WADE
@@ -327,7 +324,7 @@ KRIS EQU __enum__
 	const DOUG
 	const WAYNE
 
-	trainerclass FISHER ; 25
+	trainerclass FISHER ; 23
 	const JUSTIN
 	const RALPH
 	const ARNOLD
@@ -335,17 +332,17 @@ KRIS EQU __enum__
 	const HENRY
 	const MARVIN
 	const TULLY
-	const ANDRE ; used now
-	const STIRNER ; used now
+	const ANDRE
+	const STIRNER
 	const WILTON
-	const EDGAR ; used now
+	const EDGAR
 	const JONAH
 	const MARTIN
 	const STEPHEN
 	const BARNEY
 	const SCOTT
 
-	trainerclass SWIMMERM ; 26
+	trainerclass SWIMMERM ; 24
 	const HAROLD
 	const SIMON
 	const RANDALL
@@ -368,7 +365,7 @@ KRIS EQU __enum__
 	const LEWIS
 	const PARKER
 
-	trainerclass SWIMMERF ; 27
+	trainerclass SWIMMERF ; 25
 	const ELAINE
 	const PAULA
 	const KAYLEE
@@ -390,20 +387,20 @@ KRIS EQU __enum__
 	const BRIANA
 	const HIKARI
 
-	trainerclass SAILOR ; 28
-	const EUGENE ; used now
+	trainerclass SAILOR ; 26
+	const EUGENE
 	const HUEY
 	const TERRELL
-	const KENT ; used 
-	const ERNEST ; used
+	const KENT
+	const ERNEST
 	const JEFF
 	const GARRETT
 	const KENNETH
 	const STANLY
 	const HARRY
-	const SVEN ; used new
+	const SVEN
 
-	trainerclass SUPER_NERD ; 29
+	trainerclass SUPER_NERD ; 27
 	const STAN
 	const ERIC
 	const GREGG
@@ -415,20 +412,20 @@ KRIS EQU __enum__
 	const SHAWN
 	const TERU
 	const RUSS
-	const NORTON ; used now
+	const NORTON
 	const HUGH
 	const MARKUS
 
-	trainerclass RIVAL2 ; 2a
+	trainerclass RIVAL2 ; 28
 	const RIVAL2_1_CHIKORITA
 	const RIVAL2_1_FLAMBEAR
 	const RIVAL2_1_CRUIZE
 
-	trainerclass GUITARIST ; 2b
+	trainerclass GUITARIST ; 29
 	const CLYDE
 	const VINCENT
 
-	trainerclass HIKER ; 2c
+	trainerclass HIKER ; 2a
 	const ANTHONY
 	const RUSSELL
 	const PHILLIP
@@ -445,24 +442,21 @@ KRIS EQU __enum__
 	const DANIEL
 	const PARRY
 
-	trainerclass BIKER ; 2d
+	trainerclass BIKER ; 2b
 	const BIKER_BENNY
 	const KAZU
-	const ZEKE ; used
-	const CHARLES ; used
+	const ZEKE
+	const CHARLES
 	const RILEY
 	const JOEL
 	const GLENN
 
-	trainerclass BLAINE ; 2e
-	const BLAINE1
-
-	trainerclass BURGLAR ; 2f
+	trainerclass BURGLAR ; 2c
 	const DUNCAN
 	const EDDIE
 	const COREY
 
-	trainerclass FIREBREATHER ; 30
+	trainerclass FIREBREATHER ; 2d
 	const OTIS
 	const DICK
 	const NED
@@ -472,31 +466,31 @@ KRIS EQU __enum__
 	const RAY
 	const LYLE
 
-	trainerclass JUGGLER ; 31
+	trainerclass JUGGLER ; 2e
 	const IRWIN
 	const FRITZ
 	const HORTON
 	const DWAYNE
 
-	trainerclass BLACKBELT_T ; 32
-	const IZO ; new
+	trainerclass BLACKBELT_T ; 2f
+	const IZO
 	const YOSHI
-	const KENJI ; new
+	const KENJI
 	const LAO
 	const NOB
 	const KIYO
 	const LUNG
-	const TARO ; new
+	const TARO
 	const WAI
-	const OKUMA ; new
+	const OKUMA
 
-	trainerclass EXECUTIVEM ; 33
+	trainerclass EXECUTIVEM ; 30
 	const EXECUTIVEM_1
 	const EXECUTIVEM_2
 	const EXECUTIVEM_3
 	const EXECUTIVEM_4
 
-	trainerclass PSYCHIC_T ; 34
+	trainerclass PSYCHIC_T ; 31
 	const NATHAN
 	const FRANKLIN
 	const HERMAN
@@ -504,13 +498,13 @@ KRIS EQU __enum__
 	const GREG
 	const NORMAN
 	const MARK
-	const PHIL ; used now
+	const PHIL
 	const RICHARD
 	const GILBERT
 	const JARED
 	const RODNEY
 
-	trainerclass PICNICKER ; 35
+	trainerclass PICNICKER ; 32
 	const LIZ
 	const GINA
 	const BROOKE
@@ -524,7 +518,7 @@ KRIS EQU __enum__
 	const EDNA
 	const TIFFANY
 
-	trainerclass CAMPER ; 36
+	trainerclass CAMPER ; 33
 	const SAMUEL
 	const ROLAND
 	const TODD
@@ -545,10 +539,10 @@ KRIS EQU __enum__
 	const SPENCER
 	const QUENTIN
 
-	trainerclass EXECUTIVEF ; 37
+	trainerclass EXECUTIVEF ; 34
 	const EXECUTIVEF_1
 
-	trainerclass SAGE ; 38
+	trainerclass SAGE ; 35
 	const CHOW
 	const NICO
 	const JIN
@@ -561,25 +555,25 @@ KRIS EQU __enum__
 	const GAKU
 	const MASA
 	const KOJI
-	const WANG ; new
+	const WANG
 
-	trainerclass MEDIUM ; 39
+	trainerclass MEDIUM ; 36
 	const MARTHA
 	const GRACE
 	const BETHANY
 	const MARGRET
-	const ETHEL ; used
+	const ETHEL
 	const REBECCA
 	const DORIS
-	const MURIEL ; new
-	const ESTHER ; new
+	const MURIEL
+	const ESTHER
 
-	trainerclass BOARDER ; 3a
+	trainerclass BOARDER ; 37
 	const RONALD
 	const BRAD
 	const DOUGLAS
 
-	trainerclass POKEFANM ; 3b
+	trainerclass POKEFANM ; 38
 	const WILLIAM
 	const DEREK
 	const ROBERT
@@ -594,7 +588,7 @@ KRIS EQU __enum__
 	const ALEX
 	const ALLAN
 
-	trainerclass KIMONO_GIRL ; 3c
+	trainerclass KIMONO_GIRL ; 39
 	const NAOKO1
 	const NAOKO2
 	const SAYO
@@ -602,7 +596,7 @@ KRIS EQU __enum__
 	const KUNI
 	const MIKI
 
-	trainerclass TWINS ; 3d
+	trainerclass TWINS ; 3a
 	const AMYANDMAY1
 	const ANNANDANNE1
 	const ANNANDANNE2
@@ -611,24 +605,21 @@ KRIS EQU __enum__
 	const MEGANDPEG2
 	const LEAANDPIA1
 
-	trainerclass POKEFANF ; 3e
+	trainerclass POKEFANF ; 3b
 	const COLETTE
 	const BEVERLY
 	const RUTH
 	const GEORGIA
 	const JAIME
 
-	trainerclass RED ; 3f
-	const RED1
-
-	trainerclass BLUE ; 40
+	trainerclass BLUE ; 3c
 	const BLUE1
 
-	trainerclass OFFICER ; 41
+	trainerclass OFFICER ; 3d
 	const KEITH
 	const DIRK
 
-	trainerclass GRUNTF ; 42
+	trainerclass GRUNTF ; 3e
 	const GRUNTF_1
 	const GRUNTF_2
 	const GRUNTF_3
@@ -642,40 +633,36 @@ KRIS EQU __enum__
 	const GRUNTF_11
 	const GRUNTF_12
 	const GRUNTF_13
-	
 	const GRUNTF_14
 	const GRUNTF_15
 	const GRUNTF_16
-
-	trainerclass MYSTICALMAN ; 43
-	const EUSINE
 	
-	trainerclass ENGINEER
+	trainerclass ENGINEER ;3f
 	const DAVIDSON
 	const LANDON
 	const RICARDO
 	const HARRIS
 	
-	trainerclass SPORTSMAN
+	trainerclass SPORTSMAN ;40
 	const JACOB
 	const MANNY
 	const ARTHUR
 	const BRYSON
 	
-	trainerclass SOLDIER
+	trainerclass SOLDIER ;41
 	const GERALD
 	const ANTONIO
 	const DAN
 	const WARNELL
 	
-	trainerclass INSTRUCTOR
+	trainerclass INSTRUCTOR ;42
 	const CLIFF
 	const RAND
 	const MORGAN
 	const GEOFF
 	const MOSHE
 	
-	trainerclass FLEDGLING
+	trainerclass FLEDGLING ;43
 	const CLAYTON
 	const EARNEST
 	const HIDALGO

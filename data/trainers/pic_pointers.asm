@@ -8,26 +8,25 @@ TrainerPicPointers::
 	dba_pic MortyPic
 	dba_pic PrycePic
 	dba_pic JasminePic
-	dba_pic ChuckPic
+	dba_pic OkeraPic
 	dba_pic ClairPic
 	dba_pic Rival1Pic
 	dba_pic PokemonProfPic
-	dba_pic WillPic
+	dba_pic LoreleiPic
 	dba_pic CalPic
-	dba_pic BrunoPic
-	dba_pic BrockPic
+	dba_pic AgathaPic
+	dba_pic GiovanniPic
 	dba_pic KogaPic
 	dba_pic ChampionPic
-	dba_pic BrockPic
-	dba_pic MistyPic
+	dba_pic GiovanniPic
 	dba_pic LtSurgePic
 	dba_pic ScientistPic
-	dba_pic ErikaPic
+	dba_pic RedPic
 	dba_pic YoungsterPic
 	dba_pic SchoolboyPic
 	dba_pic BirdKeeperPic
 	dba_pic LassPic
-	dba_pic JaninePic
+	dba_pic BrunoPic
 	dba_pic CooltrainermPic
 	dba_pic CooltrainerfPic
 	dba_pic BeautyPic
@@ -36,7 +35,7 @@ TrainerPicPointers::
 	dba_pic GentlemanPic
 	dba_pic SkierPic
 	dba_pic TeacherPic
-	dba_pic SabrinaPic
+	dba_pic ImposterOakPic
 	dba_pic BugCatcherPic
 	dba_pic FisherPic
 	dba_pic SwimmermPic
@@ -47,7 +46,6 @@ TrainerPicPointers::
 	dba_pic GuitaristPic
 	dba_pic HikerPic
 	dba_pic BikerPic
-	dba_pic BlainePic
 	dba_pic BurglarPic
 	dba_pic FirebreatherPic
 	dba_pic JugglerPic
@@ -64,11 +62,9 @@ TrainerPicPointers::
 	dba_pic KimonoGirlPic
 	dba_pic TwinsPic
 	dba_pic PokefanfPic
-	dba_pic RedPic
 	dba_pic BluePic
 	dba_pic OfficerPic
 	dba_pic GruntfPic
-	dba_pic MysticalmanPic
 	dba_pic EngineerPic
 	dba_pic SportsmanPic
 	dba_pic SoldierPic

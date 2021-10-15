@@ -12,22 +12,21 @@ TrainerGroups:
 	dw ClairGroup
 	dw Rival1Group
 	dw PokemonProfGroup
-	dw WillGroup
+	dw LoreleiGroup
 	dw PKMNTrainerGroup
-	dw BrunoGroup
-	dw KarenGroup
+	dw AgathaGroup
+	dw GiovanniE4Group
 	dw KogaGroup
 	dw ChampionGroup
-	dw BrockGroup
-	dw MistyGroup
+	dw GiovanniGroup
 	dw LtSurgeGroup
 	dw ScientistGroup
-	dw ErikaGroup
+	dw RedGroup
 	dw YoungsterGroup
 	dw SchoolboyGroup
 	dw BirdKeeperGroup
 	dw LassGroup
-	dw JanineGroup
+	dw BrunoGroup
 	dw CooltrainerMGroup
 	dw CooltrainerFGroup
 	dw BeautyGroup
@@ -36,7 +35,7 @@ TrainerGroups:
 	dw GentlemanGroup
 	dw SkierGroup
 	dw TeacherGroup
-	dw SabrinaGroup
+	dw ImposterOakGroup
 	dw BugCatcherGroup
 	dw FisherGroup
 	dw SwimmerMGroup
@@ -47,7 +46,6 @@ TrainerGroups:
 	dw GuitaristGroup
 	dw HikerGroup
 	dw BikerGroup
-	dw BlaineGroup
 	dw BurglarGroup
 	dw FirebreatherGroup
 	dw JugglerGroup
@@ -64,11 +62,9 @@ TrainerGroups:
 	dw KimonoGirlGroup
 	dw TwinsGroup
 	dw PokefanFGroup
-	dw RedGroup
 	dw BlueGroup
 	dw OfficerGroup
 	dw GruntFGroup
-	dw MysticalmanGroup
 	dw EngineerGroup
 	dw SportsmanGroup
 	dw SoldierGroup
