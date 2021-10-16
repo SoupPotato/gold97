@@ -1,7 +1,7 @@
 	const_def 2 ; object constants
-	const VERMILIONMART_CLERK
-	const VERMILIONMART_SUPER_NERD
-	const VERMILIONMART_BUENA
+	const AMAMIMART_CLERK
+	const AMAMIMART_SUPER_NERD
+	const AMAMIMART_BUENA
 
 AmamiMart_MapScripts:
 	db 0 ; scene scripts
@@ -10,7 +10,7 @@ AmamiMart_MapScripts:
 
 AmamiMartClerkScript:
 	opentext
-	pokemart MARTTYPE_STANDARD, MART_VERMILION
+	pokemart MARTTYPE_STANDARD, MART_AMAMI
 	closetext
 	end
 
@@ -39,8 +39,8 @@ AmamiMart_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  4,  7, AMAMI_TOWN, 7
-	warp_event  5,  7, AMAMI_TOWN, 7
+	warp_event  4,  7, AMAMI_TOWN, 6
+	warp_event  5,  7, AMAMI_TOWN, 6
 
 	db 0 ; coord events
 

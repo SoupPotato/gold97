@@ -1,5 +1,5 @@
 	const_def 2 ; object constants
-	const BRUNOSROOM_BRUNO
+	const AGATHAS_ROOM_AGATHA
 
 AgathasRoom_MapScripts:
 	db 2 ; scene scripts
@@ -10,24 +10,24 @@ AgathasRoom_MapScripts:
 	callback MAPCALLBACK_TILES, .AgathasRoomDoors
 
 .LockDoor:
-	priorityjump .BrunosDoorLocksBehindYou
+	priorityjump .AgathasDoorLocksBehindYou
 	end
 
 .DummyScene:
 	end
 
 .AgathasRoomDoors:
-	checkevent EVENT_BRUNOS_ROOM_ENTRANCE_CLOSED
+	checkevent EVENT_AGATHAS_ROOM_ENTRANCE_CLOSED
 	iffalse .KeepEntranceOpen
 	changeblock 4, 14, $2a ; wall
 .KeepEntranceOpen:
-	checkevent EVENT_BRUNOS_ROOM_EXIT_OPEN
+	checkevent EVENT_AGATHAS_ROOM_EXIT_OPEN
 	iffalse .KeepExitClosed
 	changeblock 4, 2, $16 ; open door
 .KeepExitClosed:
 	return
 
-.BrunosDoorLocksBehindYou:
+.AgathasDoorLocksBehindYou:
 	applymovement PLAYER, AgathasRoom_EnterMovement
 	refreshscreen $86
 	playsound SFX_STRENGTH
@@ -36,40 +36,40 @@ AgathasRoom_MapScripts:
 	reloadmappart
 	closetext
 	setscene SCENE_FINISHED
-	setevent EVENT_BRUNOS_ROOM_ENTRANCE_CLOSED
+	setevent EVENT_AGATHAS_ROOM_ENTRANCE_CLOSED
 	waitsfx
 	end
 
-BrunoScript_Battle:
+AgathaScript_Battle:
 	faceplayer
 	opentext
-	checkevent EVENT_BEAT_ELITE_4_BRUNO
-	iftrue BrunoScript_AfterBattle
-	writetext BrunoScript_BrunoBeforeText
+	checkevent EVENT_BEAT_ELITE_4_AGATHA
+	iftrue AgathaScript_AfterBattle
+	writetext AgathaScript_AgathaBeforeText
 	waitbutton
 	closetext
-	winlosstext BrunoScript_BrunoBeatenText, 0
+	winlosstext AgathaScript_AgathaBeatenText, 0
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue AgathaRematchTeam
 	loadtrainer AGATHA, AGATHA1
 returntomainAgatha:
 	startbattle
 	reloadmapafterbattle
-	setevent EVENT_BEAT_ELITE_4_BRUNO
+	setevent EVENT_BEAT_ELITE_4_AGATHA
 	opentext
-	writetext BrunoScript_BrunoDefeatText
+	writetext AgathaScript_AgathaDefeatText
 	waitbutton
 	closetext
 	playsound SFX_ENTER_DOOR
 	changeblock 4, 2, $16 ; open door
 	reloadmappart
 	closetext
-	setevent EVENT_BRUNOS_ROOM_EXIT_OPEN
+	setevent EVENT_AGATHAS_ROOM_EXIT_OPEN
 	waitsfx
 	end
 
-BrunoScript_AfterBattle:
-	writetext BrunoScript_BrunoDefeatText
+AgathaScript_AfterBattle:
+	writetext AgathaScript_AgathaDefeatText
 	waitbutton
 	closetext
 	end
@@ -86,7 +86,7 @@ AgathasRoom_EnterMovement:
 	step UP
 	step_end
 
-BrunoScript_BrunoBeforeText:
+AgathaScript_AgathaBeforeText:
 	text "Oho!"
 
 	para "So, old OAK has"
@@ -121,14 +121,14 @@ BrunoScript_BrunoBeforeText:
     line "Fufufufu…"
 	done
 
-BrunoScript_BrunoBeatenText:
+AgathaScript_AgathaBeatenText:
 	text "My gracious!"
 	
 	para "You certainly have"
 	line "it, my child."
 	done
 
-BrunoScript_BrunoDefeatText:
+AgathaScript_AgathaDefeatText:
 	text "Hmm…"
 	
 	para "Perhaps that old"
@@ -155,4 +155,4 @@ AgathasRoom_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event  5,  7, SPRITE_BLAINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BrunoScript_Battle, -1
+	object_event  5,  7, SPRITE_AGATHA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AgathaScript_Battle, -1

@@ -382,7 +382,7 @@ ENDM
 	map_attributes AlloyGym, ALLOY_GYM, $00, 0
 	map_attributes AlloyTimsHouse, ALLOY_TIMS_HOUSE, $00, 0
 	map_attributes AlloyOldCaptainsHouse, ALLOY_CAPTAINS_HOUSE, $00, 0
-	map_attributes AlloyPunishmentSpeechHouse, ALLOY_PUNISHMENT_SPEECH_HOUSE, $00, 0
+	map_attributes AlloySpeechHouse, ALLOY_SPEECH_HOUSE, $00, 0
 	map_attributes AlloyGoodRodHouse, ALLOY_GOOD_ROD_HOUSE, $00, 0
 	map_attributes AlloyCafe, ALLOY_CAFE, $00, 0
 	map_attributes AlloyMart, ALLOY_MART, $00, 0
@@ -461,7 +461,7 @@ ENDM
 	map_attributes AmamiPokecenter1F, AMAMI_POKECENTER_1F, $00, 0
 	map_attributes NagoCharmanderHouse, NAGO_CHARMANDER_HOUSE, $00, 0
 	map_attributes AmamiMart, AMAMI_MART, $00, 0
-	map_attributes NagoSpeechHouse, NAGO_SPEECH_HOUSE, $00, 0
+	map_attributes AmamiSpeechHouse, AMAMI_SPEECH_HOUSE, $00, 0
 	map_attributes AmamiSwimmingPool, AMAMI_SWIMMING_POOL, $00, 0
 	map_attributes RyukyuUrasoeGate, RYUKYU_URASOE_GATE, $00, 0
 	map_attributes RedsHouse1F, REDS_HOUSE_1F, $00, 0
@@ -492,7 +492,7 @@ ENDM
 	map_attributes HallOfFame, HALL_OF_FAME, $00, 0
 	map_attributes StandMart, STAND_MART, $00, 0
 	map_attributes StandZooMainOffice, STAND_ZOO_MAIN_OFFICE, $00, 0
-	map_attributes BillsBrothersHouse, BILLS_BROTHERS_HOUSE, $00, 0
+	map_attributes StandSpeechHouse, STAND_SPEECH_HOUSE, $00, 0
 	map_attributes StandPokecenter1F, STAND_POKECENTER_1F, $00, 0
 	map_attributes StandRocketHouse1F, STAND_ROCKET_HOUSE_1F, $00, 0
 	map_attributes StandRocketHouse2F, STAND_ROCKET_HOUSE_2F, $00, 0
@@ -503,7 +503,7 @@ ENDM
 	map_attributes FrostpointMart, FROSTPOINT_MART, $00, 0
 	map_attributes SanskritRocketHouse, SANSKRIT_ROCKET_HOUSE, $00, 0
 	map_attributes UrasoeParkUrasoeTrailGate, URASOE_PARK_URASOE_TRAIL_GATE, $00, 0
-	map_attributes UrasoeTrailSuperRodHouse, URASOE_TRAIL_SUPER_ROD_HOUSE, $00, 0
+	map_attributes AmamiSuperRodHouse, AMAMI_SUPER_ROD_HOUSE, $00, 0
 	map_attributes Pokecenter2F, POKECENTER_2F, $00, 0
 	map_attributes TradeCenter, TRADE_CENTER, $00, 0
 	map_attributes Colosseum, COLOSSEUM, $00, 0

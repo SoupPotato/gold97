@@ -125,32 +125,6 @@ MediumBethanyAfterBattleText:
 	cont "all can feel it."
 	done
 	
-;TrainerMediumMargret:
-;	trainer MEDIUM, MARGRET, EVENT_BEAT_MEDIUM_MARGRET, MediumMargretSeenText, MediumMargretBeatenText, 0, .Script
-
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext MediumMargretAfterBattleText
-;	waitbutton
-;	closetext
-;	end
-
-
-;MediumMargretSeenText:
-;	text "Ah! You disturbed"
-;	line "me!"
-;	done
-
-;MediumMargretBeatenText:
-;	text "It is important to"
-;	line "keep focused."
-;	done
-
-;MediumMargretAfterBattleText:
-;	text "Focus on the"
-;	line "messages."
-;	done
 
 
 BrassTower2F_MapEvents:
@@ -166,8 +140,7 @@ BrassTower2F_MapEvents:
 	bg_event  8,  1, BGEVENT_READ, BrassTower2FSign
 
 	db 4 ; object events
-	object_event 10,  2, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerMediumMartha, EVENT_OLD_CITY_EARL
-	object_event  1,  7, SPRITE_GRANNY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerMediumGrace, EVENT_OLD_CITY_EARL
-	object_event  9,  6, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerMediumBethany, EVENT_OLD_CITY_EARL
-	;object_event  7, 10, SPRITE_GRANNY, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerMediumMargret, EVENT_OLD_CITY_EARL
+	object_event 10,  2, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerMediumMartha, EVENT_ALLOY_CAPTAIN_AND_TOWER_SAGES_GONE
+	object_event  1,  7, SPRITE_GRANNY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerMediumGrace, EVENT_ALLOY_CAPTAIN_AND_TOWER_SAGES_GONE
+	object_event  9,  6, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerMediumBethany, EVENT_ALLOY_CAPTAIN_AND_TOWER_SAGES_GONE
 	object_event 11,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, BrassTower2FXAccuracy, EVENT_SPROUT_TOWER2F_X_ACCURACY

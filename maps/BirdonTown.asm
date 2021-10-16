@@ -1,13 +1,11 @@
 	const_def 2 ; object constants
-	const AZALEATOWN_GRAMPS
-	const AZALEATOWN_TEACHER
-	const AZALEATOWN_YOUNGSTER
+	const BIRDONTOWN_GRAMPS
+	const BIRDONTOWN_TEACHER
+	const BIRDONTOWN_YOUNGSTER
 
 BirdonTown_MapScripts:
 	db 3 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_AZALEATOWN_NOTHING
-	scene_script .DummyScene1 ; SCENE_AZALEATOWN_RIVAL_BATTLE
-	scene_script .DummyScene2 ; SCENE_AZALEATOWN_KURT_RETURNS_GS_BALL
+	scene_script .DummyScene0 ; SCENE_BIRDONTOWN_NOTHING
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .Flypoint
@@ -15,14 +13,8 @@ BirdonTown_MapScripts:
 .DummyScene0:
 	end
 
-.DummyScene1:
-	end
-
-.DummyScene2:
-	end
-
 .Flypoint:
-	setflag ENGINE_FLYPOINT_AZALEA
+	setflag ENGINE_FLYPOINT_BIRDON
 	return
 
 BirdonTownGrampsScript:
@@ -39,30 +31,10 @@ BirdonTownSign:
 	jumptext BirdonTownSignText
 
 
-AzaleaGymSign:
-	jumptext AzaleaGymSignText
+BirdonGymSign:
+	jumptext BirdonGymSignText
 
 SlowpokeWellSign:
-	;setflag ENGINE_EEVEE_SWARM
-	;swarm SWARM_EEVEE, ROUTE_31
-	;giveitem HM_ROCK_SMASH
-	;clearflag ENGINE_ZEPHYRBADGE
-	;jumpstd radiotowerrockets
-	;setevent EVENT_ROUTE_30_BATTLE
-	;opentext
-	;verbosegiveitem CLEAR_BELL
-	;verbosegiveitem SILVER_WING
-	;setevent EVENT_GOT_WATER_STONE_FROM_BILLS_GRANDPA
-	;clearevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_1
-	;clearevent EVENT_GOLDENROD_UNDERGROUND_WAREHOUSE_BLOCKED_OFF
-	;setevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_1
-	;setevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_2
-	;setevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_3; makes lass disappear in kume house
-	;setevent EVENT_GOLDENROD_UNDERGROUND_WAREHOUSE_BLOCKED_OFF;
-	;setevent EVENT_EXPLODING_TRAP_5
-	;giveitem HM_SURF
-	;givepoke BALLERINE, 5
-	;givepoke ABRA, 5
 	jumptext SlowpokeWellSignText
 
 
@@ -70,26 +42,16 @@ BirdonTownIlextForestSign:
 	jumptext BirdonTownIlexForestSignText
 
 BirdonTownPokecenterSign:
-;	setevent EVENT_CLEARED_RADIO_TOWER
-;	clearflag ENGINE_ROCKETS_IN_RADIO_TOWER
-;	setevent EVENT_GOLDENROD_CITY_ROCKET_TAKEOVER
-;	setevent EVENT_RADIO_TOWER_ROCKET_TAKEOVER
-;	clearevent EVENT_GOLDENROD_CITY_CIVILIANS
-;	clearevent EVENT_RADIO_TOWER_CIVILIANS_AFTER
-;	setevent EVENT_TEAM_ROCKET_DISBANDED
-;	clearevent EVENT_ILEX_FOREST_FARFETCHD
-;	setevent EVENT_GOT_SHUCKIE
-;	clearevent EVENT_TELEPORT_GUY
 	jumpstd pokecentersign
 
 BirdonTownMartSign:
 	jumpstd martsign
 
 WhiteApricornTree:
-	fruittree FRUITTREE_AZALEA_TOWN
+	fruittree FRUITTREE_BIRDON_TOWN
 
 BirdonTownHiddenFullHeal:
-	hiddenitem FULL_HEAL, EVENT_AZALEA_TOWN_HIDDEN_FULL_HEAL
+	hiddenitem FULL_HEAL, EVENT_BIRDON_TOWN_HIDDEN_FULL_HEAL
 
 
 BirdonTownGrampsTextBefore:
@@ -152,8 +114,8 @@ BirdonTownSignText:
 	done
 
 
-AzaleaGymSignText:
-	text "AZALEA TOWN"
+BirdonGymSignText:
+	text "BIRDON TOWN"
 	line "#MON GYM"
 	cont "LEADER: BUGSY"
 
@@ -189,7 +151,6 @@ BirdonTown_MapEvents:
 	warp_event  4,  9, BIRDON_ELDERS_HOUSE, 1
 	warp_event 14, 15, BIRDON_GYM, 1
 	warp_event  9,  9, SLOWPOKE_WELL_B1F, 1
-	;warp_event  9,  9, AMAMI_POKECENTER_1F, 1
 	warp_event  8,  5, ROUTE_116_GATE, 3
 	warp_event  9,  5, ROUTE_116_GATE, 4
 	warp_event 15, 15, BIRDON_GYM, 2
@@ -199,7 +160,7 @@ BirdonTown_MapEvents:
 
 	db 7 ; bg events
 	bg_event  6, 14, BGEVENT_READ, BirdonTownSign
-	bg_event 13, 14, BGEVENT_READ, AzaleaGymSign
+	bg_event 13, 14, BGEVENT_READ, BirdonGymSign
 	bg_event 11, 10, BGEVENT_READ, SlowpokeWellSign
 	bg_event 16,  4, BGEVENT_READ, BirdonTownPokecenterSign
 	bg_event  4,  4, BGEVENT_READ, BirdonTownMartSign

@@ -1,7 +1,7 @@
 	const_def 2 ; object constants
-	const VERMILIONPORTPASSAGE_TEACHER
-	const INDIGOPLATEAUPOKECENTER1F_GRAMPS
-	const INDIGOPLATEAUPOKECENTER1F_ABRA
+	const AMAMIPORTPASSAGE_TEACHER
+	const AMAMIPORTPASSAGE_GRAMPS
+	const AMAMIPORTPASSAGE_ABRA
 	const AMAMIPORTPASSAGE_CLERK
 
 AmamiPortPassage_MapScripts:
@@ -21,8 +21,6 @@ AmamiPortPassage_MapScripts:
 	return
 	
 
-;-------------
-	
 TravelingDollSalesmanFriday:
 	faceplayer
 	opentext
@@ -164,7 +162,6 @@ DollSalesmanTextFriday_AskWhichPrizeText:
 	line "would you like?"
 	done
 	
-;---------------------------------
 
 AmamiPortPassageTeacherScript:
 	jumptextfaceplayer AmamiPortPassageTeacherText
@@ -172,11 +169,11 @@ AmamiPortPassageTeacherScript:
 TeleportGuyScript:
 	faceplayer
 	opentext
-	checkevent EVENT_EXPLODING_TRAP_1
+	checkevent EVENT_ABRA_TELEPORT_GUY_AMAMI
 	iftrue .SkipTeleportTextAmami
 	writetext TeleportGuyText1
 	buttonsound
-	setevent EVENT_EXPLODING_TRAP_1
+	setevent EVENT_ABRA_TELEPORT_GUY_AMAMI
 .SkipTeleportTextAmami
 	writetext TeleportGuyText1_2
 	yesorno

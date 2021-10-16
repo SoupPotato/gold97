@@ -130,7 +130,7 @@ WestportPortSailorGuardScript:
 	clearevent EVENT_BEAT_FISHER_JONAH
 	clearevent EVENT_BEAT_BLACKBELT_WAI
 .FirstTimetoIslands
-	clearevent EVENT_FAST_SHIP_DESTINATION_OLIVINE
+	clearevent EVENT_FAST_SHIP_DESTINATION_WESTPORT
 	appear WestportPort_SAILOR1
 	setmapscene FAST_SHIP_1F, SCENE_FASTSHIP1F_ENTER_SHIP
 	warp FAST_SHIP_1F, 25, 1

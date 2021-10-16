@@ -1,11 +1,11 @@
 	const_def 2 ; object constants
-	const ECRUTEAKGYM_MORTY
-	const ECRUTEAKGYM_GYM_GUY
-	const ECRUTEAKGYM_GRAMPS
-	const ECRUTEAKGYM_GRANNY1
-	const ECRUTEAKGYM_GRANNY2
-	const ECRUTEAKGYM_SAGE1
-	const ECRUTEAKGYM_SAGE2
+	const BIRDONGYM_MORTY
+	const BIRDONGYM_GYM_GUY
+	const BIRDONGYM_GRAMPS
+	const BIRDONGYM_GRANNY1
+	const BIRDONGYM_GRANNY2
+	const BIRDONGYM_SAGE1
+	const BIRDONGYM_SAGE2
 
 BirdonGym_MapScripts:
 	db 2 ; scene scripts
@@ -93,16 +93,9 @@ BirdonGymMortyScript:
 	setflag ENGINE_FOGBADGE
 	checkcode VAR_BADGES
 	scall BirdonGymActivateRockets
-	;setmapscene ECRUTEAK_TIN_TOWER_ENTRANCE, SCENE_FINISHED
-	;setevent EVENT_RANG_CLEAR_BELL_1
-	;setevent EVENT_RANG_CLEAR_BELL_2
 .FightDone:
 	checkevent EVENT_GOT_TM30_SHADOW_BALL
 	iftrue .GotShadowBall
-	;setevent EVENT_BEAT_SAGE_JEFFREY
-	;setevent EVENT_BEAT_SAGE_PING
-	;setevent EVENT_BEAT_MEDIUM_MARTHA
-	;setevent EVENT_BEAT_MEDIUM_GRACE
 	writetext MortyText_FogBadgeSpeech
 	buttonsound
 	verbosegiveitem TM_SHADOW_BALL
@@ -175,10 +168,6 @@ MortyAfterRematchText:
 	cont "to be you."
 	done
 
-
-
-
-
 BirdonGymActivateRockets:
 	ifequal 7, .RadioTowerRockets
 	ifequal 6, .GoldenrodRockets
@@ -189,11 +178,6 @@ BirdonGymActivateRockets:
 
 .RadioTowerRockets:
 	jumpstd radiotowerrockets
-
-
-
-
-
 
 
 BirdonGymGuyScript:

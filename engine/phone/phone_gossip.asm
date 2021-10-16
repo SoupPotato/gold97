@@ -259,7 +259,7 @@ BrentBillTriviaScript:
 IrwinRumorScript:
 	checkevent EVENT_REPAIRED_SHIP_FUEL_LINE
 	iftrue .MtSilver
-	checkflag ENGINE_FLYPOINT_VERMILION
+	checkflag ENGINE_FLYPOINT_AMAMI
 	iftrue .VermilionCity
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .EliteFour

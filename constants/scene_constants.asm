@@ -90,8 +90,6 @@ SCENE_FINISHED EQU 1
 ; wAzaleaTownSceneID
 	const_def
 	const SCENE_AZALEATOWN_NOTHING              ; 0
-	const SCENE_AZALEATOWN_RIVAL_BATTLE         ; 1
-	const SCENE_AZALEATOWN_KURT_RETURNS_GS_BALL ; 2
 
 ; wRoute42SceneID
 	const_def
@@ -157,11 +155,11 @@ SCENE_FINISHED EQU 1
 
 ; wOlivinePortSceneID
 	const_def 1
-	const SCENE_OLIVINEPORT_LEAVE_SHIP ; 1
+	const SCENE_WESTPORT_PORT_LEAVE_SHIP ; 1
 
 ; wVermilionPortSceneID
 	const_def 1
-	const SCENE_VERMILIONPORT_LEAVE_SHIP ; 1
+	const SCENE_AMAMIPORT_LEAVE_SHIP ; 1
 
 ; wFastShip1FSceneID
 	const_def 1

@@ -1,12 +1,12 @@
 	const_def 2 ; object constants
-	const VERMILIONPORT_SAILOR1
-	const VERMILIONPORT_SAILOR2
-	const VERMILIONPORT_SUPER_NERD
+	const AMAMIPORT_SAILOR1
+	const AMAMIPORT_SAILOR2
+	const AMAMIPORT_SUPER_NERD
 
 AmamiPort_MapScripts:
 	db 2 ; scene scripts
 	scene_script .DummyScene0 ; SCENE_DEFAULT
-	scene_script .LeaveFastShip ; SCENE_VERMILIONPORT_LEAVE_SHIP
+	scene_script .LeaveFastShip ; SCENE_AMAMIPORT_LEAVE_SHIP
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
@@ -19,21 +19,21 @@ AmamiPort_MapScripts:
 	end
 
 .FlyPoint:
-	setflag ENGINE_FLYPOINT_VERMILION
+	setflag ENGINE_FLYPOINT_AMAMI
 	return
 
 .LeaveFastShipScript:
-	disappear VERMILIONPORT_SAILOR1
+	disappear AMAMIPORT_SAILOR1
 	checkevent EVENT_REPAIRED_SHIP_FUEL_LINE
 	iffalse .NeedNewPart
 	applymovement PLAYER, AmamiPlayerLeavesShip
-	applymovement VERMILIONPORT_SAILOR2, AmamiSailorMovesAway
+	applymovement AMAMIPORT_SAILOR2, AmamiSailorMovesAway
 	applymovement PLAYER, AmamiPlayerLeavesShip2
-	applymovement VERMILIONPORT_SAILOR2, AmamiSailorBlocksEntry
-	appear VERMILIONPORT_SAILOR1
+	applymovement AMAMIPORT_SAILOR2, AmamiSailorBlocksEntry
+	appear AMAMIPORT_SAILOR1
 	setscene SCENE_DEFAULT
 	setevent EVENT_FAST_SHIP_PASSENGERS_FIRST_TRIP
-	clearevent EVENT_OLIVINE_PORT_PASSAGE_POKEFAN_M
+	clearevent EVENT_WESTPORT_PORT_PASSAGE_POKEFAN_M
 	setevent EVENT_FAST_SHIP_FIRST_TIME
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	blackoutmod AMAMI_TOWN
@@ -42,19 +42,19 @@ AmamiPort_MapScripts:
 .NeedNewPart
 	applymovement PLAYER, AmamiPlayerLeavesShip3
 	pause 10
-	appear VERMILIONPORT_SAILOR1
+	appear AMAMIPORT_SAILOR1
 	turnobject PLAYER, DOWN
 	opentext
 	writetext NeedANewPartText
 	waitbutton
 	closetext
 	applymovement PLAYER, AmamiPlayerLeavesShip4
-	applymovement VERMILIONPORT_SAILOR2, AmamiSailorMovesAway
+	applymovement AMAMIPORT_SAILOR2, AmamiSailorMovesAway
 	applymovement PLAYER, AmamiPlayerLeavesShip2
-	applymovement VERMILIONPORT_SAILOR2, AmamiSailorBlocksEntry
+	applymovement AMAMIPORT_SAILOR2, AmamiSailorBlocksEntry
 	setscene SCENE_DEFAULT
 	setevent EVENT_FAST_SHIP_PASSENGERS_FIRST_TRIP
-	clearevent EVENT_OLIVINE_PORT_PASSAGE_POKEFAN_M
+	clearevent EVENT_WESTPORT_PORT_PASSAGE_POKEFAN_M
 	setevent EVENT_FAST_SHIP_FIRST_TIME
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	blackoutmod AMAMI_TOWN
@@ -77,7 +77,7 @@ AmamiPortSailorGuardScript:
 	waitbutton
 	closetext
 	applymovement PLAYER, AmamiPlayerWalkRight
-	applymovement VERMILIONPORT_SAILOR2, AmamiSailorMovesAway
+	applymovement AMAMIPORT_SAILOR2, AmamiSailorMovesAway
 	applymovement PLAYER, AmamiPlayerWalksToShip
 	opentext
 	writetext AmamiPortSailorBoardingSoonText
@@ -85,7 +85,7 @@ AmamiPortSailorGuardScript:
 	turnobject WestportPort_SAILOR1, DOWN
 	pause 10
 	playsound SFX_EXIT_BUILDING
-	disappear VERMILIONPORT_SAILOR1
+	disappear AMAMIPORT_SAILOR1
 	waitsfx
 	applymovement PLAYER, AmamiPlayerEntersShip
 	playsound SFX_EXIT_BUILDING
@@ -103,8 +103,8 @@ AmamiPortSailorGuardScript:
 	clearevent EVENT_BEAT_TEACHER_SHIRLEY
 	clearevent EVENT_BEAT_SCHOOLBOY_NATE
 	clearevent EVENT_BEAT_SCHOOLBOY_RICKY
-	setevent EVENT_FAST_SHIP_DESTINATION_OLIVINE
-	appear VERMILIONPORT_SAILOR1
+	setevent EVENT_FAST_SHIP_DESTINATION_WESTPORT
+	appear AMAMIPORT_SAILOR1
 	setmapscene FAST_SHIP_1F, SCENE_FASTSHIP1F_ENTER_SHIP
 	warp FAST_SHIP_1F, 25, 1
 	end
@@ -119,13 +119,13 @@ AmamiPortSailorGuardScript:
 	end
 
 .GiveFuelLine
-	showemote EMOTE_SHOCK, VERMILIONPORT_SAILOR2, 15
+	showemote EMOTE_SHOCK, AMAMIPORT_SAILOR2, 15
 	opentext
 	writetext YouHaveTheFuelLine
 	waitbutton
 	closetext
 	takeitem CARD_KEY
-	applymovement VERMILIONPORT_SAILOR2, SailorWalksToShipAndBack
+	applymovement AMAMIPORT_SAILOR2, SailorWalksToShipAndBack
 	opentext
 	writetext ThanksForTheFuelLine
 	waitbutton
@@ -156,7 +156,7 @@ AmamiPortSuperNerdScript:
 	end
 
 AmamiPortHiddenIron:
-	hiddenitem IRON, EVENT_VERMILION_PORT_HIDDEN_IRON
+	hiddenitem IRON, EVENT_AMAMI_PORT_HIDDEN_IRON
 	
 SailorWalksToShipAndBack:
 	step DOWN

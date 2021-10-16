@@ -1,15 +1,15 @@
 	const_def 2 ; object constants
-	const CHERRYGROVEEVOLUTIONSPEECHHOUSE_LASS
+	const BIRDONSPEECHHOUSE_GRANNY
 
 BirdonSpeechHouse_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
-BirdonSpeechHouseLassScript:
-	jumptextfaceplayer BirdonSpeechHouseLassText
+BirdonSpeechHouseGrannyScript:
+	jumptextfaceplayer BirdonSpeechHouseGrannyText
 
-BirdonSpeechHouseLassText:
+BirdonSpeechHouseGrannyText:
 	text "Many years ago, my"
 	line "mother told me of"
 	para "a mythical #MON"
@@ -42,4 +42,4 @@ BirdonSpeechHouse_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event  7,  5, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, BirdonSpeechHouseLassScript, -1
+	object_event  7,  5, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, BirdonSpeechHouseGrannyScript, -1

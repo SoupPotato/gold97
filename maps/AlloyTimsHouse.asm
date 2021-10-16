@@ -1,5 +1,5 @@
 	const_def 2 ; object constants
-	const OLIVINETIMSHOUSE_TIM
+	const ALLOYTIMSHOUSE_TIM
 
 AlloyTimsHouse_MapScripts:
 	db 0 ; scene scripts

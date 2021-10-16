@@ -91,7 +91,7 @@ FastShipBed:
 .CanArrive:
 	playsound SFX_ELEVATOR_END
 	pause 30
-	checkevent EVENT_FAST_SHIP_DESTINATION_OLIVINE
+	checkevent EVENT_FAST_SHIP_DESTINATION_WESTPORT
 	iftrue .ArrivedOlivine
 	opentext
 	writetext FastShipArrivedVermilionText

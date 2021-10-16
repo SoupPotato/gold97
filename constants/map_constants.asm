@@ -32,7 +32,7 @@ ENDM
 	map_const ALLOY_GYM,                                   10,  8 ;  2
 	map_const ALLOY_TIMS_HOUSE,                             5,  4 ;  3
 	map_const ALLOY_CAPTAINS_HOUSE,                         5,  4 ;  4
-	map_const ALLOY_PUNISHMENT_SPEECH_HOUSE,                5,  4 ;  5
+	map_const ALLOY_SPEECH_HOUSE,                           5,  4 ;  5
 	map_const ALLOY_GOOD_ROD_HOUSE,                         5,  4 ;  6
 	map_const ALLOY_CAFE,                                   4,  4 ;  7
 	map_const ALLOY_MART,                                   8,  4 ;  8
@@ -40,8 +40,8 @@ ENDM
 	map_const ROUTE_108,                                   15,  9 ; 10
 	map_const ROUTE_109,                                   10, 45 ; 11
 	map_const ALLOY_CITY,                                  20, 18 ; 12
-	map_const ROUTE_107_ALLOY_GATE,						    5,  4 ; 13
-	map_const ROUTE_107_ALLOY_GATE_2F,						4,  3 ; 14
+	map_const ROUTE_107_ALLOY_GATE,                         5,  4 ; 13
+	map_const ROUTE_107_ALLOY_GATE_2F,                      4,  3 ; 14
 	map_const ROUTE_106,                                   30,  9 ; 15
 	map_const ROUTE_106_POKECENTER_1F,                      8,  4 ; 16
 	map_const DAY_CARE,                                     5,  4 ; 17
@@ -259,44 +259,44 @@ ENDM
 	map_const AMAMI_FISHING_SPEECH_HOUSE,                   5,  4 ;  2
 	map_const AMAMI_POKECENTER_1F,                          8,  4 ;  3
 	map_const AMAMI_MART,                                   8,  4 ;  4
-	map_const NAGO_SPEECH_HOUSE,                            5,  4 ;  5
+	map_const AMAMI_SPEECH_HOUSE,                           5,  4 ;  5
 	map_const AMAMI_SWIMMING_POOL,                         10,  9 ;  6
 	map_const RYUKYU_URASOE_GATE,                           5,  4 ;  7
 	map_const SEASIDE_PATH,                                30,  9 ;  8
-	map_const URASOE_TRAIL_SUPER_ROD_HOUSE,                 5,  4 ;  9
+	map_const AMAMI_SUPER_ROD_HOUSE,                        5,  4 ;  9
 	map_const AMAMI_BATTLE_TOWER_GATE,                      5, 4  ; new
 
 	newgroup                                                      ; 13
 
 	map_const KOBAN_ISLAND,                                10,  9 ;  1
 	map_const KOBAN_POKECENTER_1F,                          8,  4 ;  2
-	map_const KOBAN_MART,									8,  4 ;  3
-	map_const KOBAN_FISHER_HOUSE,      				        4,  4 ;  4
-	map_const KOBAN_CLAIRS_HOUSE,      				        5,  4 ;  5
+	map_const KOBAN_MART,                                   8,  4 ;  3
+	map_const KOBAN_FISHER_HOUSE,                           4,  4 ;  4
+	map_const KOBAN_CLAIRS_HOUSE,                           5,  4 ;  5
 	map_const ROUTE_107,                                   10, 27 ;  6
 
 	newgroup                                                      ; 14
 
-	map_const KUME_CITY,                                  20, 18 ;  1
-	map_const KUME_PARTS_SHOP,                             4,  4 ;  2
-	map_const KUME_SOCIAL_HOUSE,                           5,  4 ;  3
-	map_const KUME_POKECENTER_1F,                          8,  4 ;  4
-	map_const KUME_SNOOZE_SPEECH_HOUSE,                    5,  4 ;  5
+	map_const KUME_CITY,                                   20, 18 ;  1
+	map_const KUME_PARTS_SHOP,                              4,  4 ;  2
+	map_const KUME_SOCIAL_HOUSE,                            5,  4 ;  3
+	map_const KUME_POKECENTER_1F,                           8,  4 ;  4
+	map_const KUME_SNOOZE_SPEECH_HOUSE,                     5,  4 ;  5
 	map_const NAGO_MART,                                    8,  4 ;  6
 	map_const URASOE_TRAIL,                                10, 18 ;  7
 	map_const KERAMA_STRAIT,                               30,  9 ;  8
-	map_const KUME_POINT,                                 10,  9 ;  9
-	map_const FORKED_STRAIT,                               10, 27 ; new
-	map_const FORKED_STRAIT_GATE,                          11, 8  ; new
-	map_const FORKED_STRAIT_EAST_EXIT,                     13, 8  ; new
-	map_const TROPICAL_ISLAND,                             30, 30 ; new
-	map_const TROPICAL_ISLAND_JUNGLE,                      15, 20 ; new
+	map_const KUME_POINT,                                  10,  9 ;  9
+	map_const FORKED_STRAIT,                              10, 27 ; new
+	map_const FORKED_STRAIT_GATE,                         11, 8  ; new
+	map_const FORKED_STRAIT_EAST_EXIT,                    13, 8  ; new
+	map_const TROPICAL_ISLAND,                            30, 30 ; new
+	map_const TROPICAL_ISLAND_JUNGLE,                     15, 20 ; new
 
 
 	newgroup                                                      ; 15
 
 	map_const WESTPORT_PORT,                               10, 18 ;  1
-	map_const TEKNOS_PORT,								   10,  9 ;  2
+	map_const TEKNOS_PORT,                                 10,  9 ;  2
 	map_const AMAMI_PORT,                                  10, 18 ;  3
 	map_const FAST_SHIP_1F,                                16,  9 ;  4
 	map_const FAST_SHIP_CABINS_NNW_NNE_NE,                  4, 16 ;  5
@@ -322,13 +322,13 @@ ENDM
 	map_const STAND_CITY,                                  20, 18 ;  1
 	map_const STAND_MART,                                   8,  4 ;  2
 	map_const STAND_ZOO_MAIN_OFFICE,                        8,  4 ;  3
-	map_const BILLS_BROTHERS_HOUSE,                         5,  4 ;  4
+	map_const STAND_SPEECH_HOUSE,                           5,  4 ;  4
 	map_const STAND_POKECENTER_1F,                          8,  4 ;  5
 	map_const STAND_ROCKET_HOUSE_1F,                       10,  4 ;  6
 	map_const STAND_ROCKET_HOUSE_2F,                       10,  4 ;  7
 	map_const ROUTE_113,                                   10, 27 ;  8
 	map_const STAND_GYM,                                   12, 12 ;  9
-	map_const STAND_ZOO_INFIRMARY,						    4,  4 ; 10
+	map_const STAND_ZOO_INFIRMARY,                          4,  4 ; 10
 	map_const NATIONAL_PARK_STAND_GATE,                     5,  4 ; 11
 
 	newgroup                                                      ; 20
@@ -366,12 +366,12 @@ ENDM
 	map_const REDS_HOUSE_1F,                                4,  4 ; 22
 	map_const REDS_HOUSE_2F,                                4,  4 ; 23
 	map_const KANTO_POKECENTER_1F,                          8,  4 ; 24
-	map_const KANTO_BATTLE_CLUB_1F, 					    5,  4 ; 25
-	map_const KANTO_BATTLE_CLUB_B1F,					   10,  9 ; 26
-	map_const KANTO_HOUSE_1,							    5,  4 ; 27
-	map_const KANTO_HOUSE_2,							    5,  4 ; 28
-	map_const KANTO_HOUSE_3,							    5,  4 ; 29
-	map_const KANTO_HOUSE_4,							    5,  4 ; 30
+	map_const KANTO_BATTLE_CLUB_1F,                         5,  4 ; 25
+	map_const KANTO_BATTLE_CLUB_B1F,                       10,  9 ; 26
+	map_const KANTO_HOUSE_1,                                5,  4 ; 27
+	map_const KANTO_HOUSE_2,                                5,  4 ; 28
+	map_const KANTO_HOUSE_3,                                5,  4 ; 29
+	map_const KANTO_HOUSE_4,                                5,  4 ; 30
 	map_const KANTO_FOSSIL_LAB,                            10,  8 ; 31
 	map_const KANTO_CAFE,                                   5,  5 ; 32
 	map_const DIGLETTS_CAVE,                               10, 18 ; newly added kanto maps start here
@@ -380,7 +380,7 @@ ENDM
 	map_const MOUNT_MOON,                                  15,  9 ; 85
 	map_const MOUNT_MOON_SQUARE,                           15,  9 ; 10
 	map_const MOUNT_MOON_GIFT_SHOP,                         4,  4 ; 11
-	map_const KANTO_VICTORY_ROAD,                                10, 36 ; 91
+	map_const KANTO_VICTORY_ROAD,                          10, 36 ; 91
 	map_const SAFARI_ZONE_FUCHSIA_GATE_BETA,                5,  4 ; 89
 	map_const SAFARI_ZONE_BETA,                            10, 18 ; 90
 	map_const KANTO_POWER_PLANT,                           20, 18

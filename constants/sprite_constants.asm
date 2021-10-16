@@ -11,14 +11,13 @@
 	const SPRITE_BLUE ; 07
 	const SPRITE_BILL ; 08
 	const SPRITE_ELDER ; 09
-	const SPRITE_JANINE ; 0a
+	const SPRITE_BETA_GIRL ; 0a
 	const SPRITE_KURT ; 0b
 	const SPRITE_MOM ; 0c
-	const SPRITE_BLAINE ; 0d
+	const SPRITE_AGATHA ; 0d
 	const SPRITE_REDS_MOM ; 0e
 	const SPRITE_DAISY ; 0f
-	const SPRITE_ELM ; 10
-	const SPRITE_WILL ; 11
+	const SPRITE_LORELEI ; 11
 	const SPRITE_FALKNER ; 12
 	const SPRITE_WHITNEY ; 13
 	const SPRITE_BUGSY ; 14
@@ -27,15 +26,12 @@
 	const SPRITE_JASMINE ; 17
 	const SPRITE_PRYCE ; 18
 	const SPRITE_CLAIR ; 19
-	const SPRITE_BROCK ; 1a
-	const SPRITE_KAREN ; 1b
+	const SPRITE_GIOVANNI ; 1a
 	const SPRITE_BRUNO ; 1c
-	const SPRITE_MISTY ; 1d
 	const SPRITE_LANCE ; 1e
-	const SPRITE_SURGE ; 1f
-	const SPRITE_ERIKA ; 20
+	const SPRITE_IMPOSTER_OAK ; 1f
+	const SPRITE_ROCKET_EXECUTIVE_F ; 20
 	const SPRITE_KOGA ; 21
-	const SPRITE_SABRINA ; 22
 	const SPRITE_COOLTRAINER_M ; 23
 	const SPRITE_COOLTRAINER_F ; 24
 	const SPRITE_BUG_CATCHER ; 25
@@ -53,7 +49,7 @@
 	const SPRITE_SWIMMER_GUY ; 31
 	const SPRITE_SWIMMER_GIRL ; 32
 	const SPRITE_BIG_SNORLAX ; 33
-	const SPRITE_SURFING_PIKACHU ; 34
+	const SPRITE_POLIWHIRL ; 34
 	const SPRITE_ROCKET ; 35
 	const SPRITE_ROCKET_GIRL ; 36
 	const SPRITE_NURSE ; 37
@@ -64,12 +60,10 @@
 	const SPRITE_SCIENTIST ; 3c
 	const SPRITE_KIMONO_GIRL ; 3d
 	const SPRITE_SAGE ; 3e
-	;const SPRITE_UNUSED_GUY ; 3f (got rid of this guy and cal to free up bank space for lt. surge and old amber)
 	const SPRITE_GENTLEMAN ; 40
 	const SPRITE_BLACK_BELT ; 41
 	const SPRITE_RECEPTIONIST ; 42
 	const SPRITE_OFFICER ; 43
-	;const SPRITE_CAL ; 44
 	const SPRITE_SLOWPOKE ; 45
 	const SPRITE_CAPTAIN ; 46
 	const SPRITE_BIG_LAPRAS ; 47
@@ -101,13 +95,8 @@
 	const SPRITE_SILVER_TROPHY ; 5f
 	const SPRITE_KRIS ; 60
 	const SPRITE_KRIS_BIKE ; 61
-	const SPRITE_KURT_OUTSIDE ; 62
-	const SPRITE_SUICUNE ; 63
-	const SPRITE_ENTEI ; 64
-	const SPRITE_RAIKOU ; 65
-	const SPRITE_STANDING_YOUNGSTER ; 66
 	const SPRITE_OLD_AMBER
-	const SPRITE_SURGE_NEW
+	const SPRITE_SURGE
 	const SPRITE_CHRIS_SKATE
 	const SPRITE_KRIS_SKATE
 
@@ -170,4 +159,3 @@ SPRITE_VARS EQU const_value
 	const SPRITE_FUCHSIA_GYM_3 ; f9
 	const SPRITE_FUCHSIA_GYM_4 ; fa
 	const SPRITE_COPYCAT ; fb
-	const SPRITE_JANINE_IMPERSONATOR ; fc

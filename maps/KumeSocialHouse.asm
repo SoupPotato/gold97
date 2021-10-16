@@ -25,8 +25,8 @@ KumeSocialHouseN64LassRightScript:
 	applymovement PEWTER_GYM_N64_LASS, KumeSocialHouseN64LassRightMovement
 	playsound SFX_EXIT_BUILDING
 	disappear PEWTER_GYM_N64_LASS
-	setevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_3
-	clearevent EVENT_GOLDENROD_UNDERGROUND_WAREHOUSE_BLOCKED_OFF
+	setevent EVENT_KUME_N64_LASS_AT_SOCIAL_HOUSE
+	clearevent EVENT_KUME_LASS_AT_N64_HOUSE
 	waitsfx
 	end
 	
@@ -34,8 +34,8 @@ KumeSocialHouseN64LassUpScript:
 	applymovement PEWTER_GYM_N64_LASS, KumeSocialHouseN64LassUpMovement
 	playsound SFX_EXIT_BUILDING
 	disappear PEWTER_GYM_N64_LASS
-	setevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_3
-	clearevent EVENT_GOLDENROD_UNDERGROUND_WAREHOUSE_BLOCKED_OFF
+	setevent EVENT_KUME_N64_LASS_AT_SOCIAL_HOUSE
+	clearevent EVENT_KUME_LASS_AT_N64_HOUSE
 	waitsfx
 	end
 	
@@ -144,7 +144,7 @@ KumeSocialHouse_MapEvents:
 
 
 	db 5 ; object events
-	object_event  5,  1, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KumeSocialHouseN64LassScript, EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_3
+	object_event  5,  1, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KumeSocialHouseN64LassScript, EVENT_KUME_N64_LASS_AT_SOCIAL_HOUSE
 	object_event  3,  3, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KumeSocialHouseYoungsterScript, -1
 	object_event  0,  3, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KumeSocialHouseCooltrainerfScript, -1
 	object_event  6,  5, SPRITE_POKEFAN_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KumeSocialHousePokefanfScript, -1

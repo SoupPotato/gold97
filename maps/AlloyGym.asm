@@ -1,35 +1,35 @@
 	const_def 2 ; object constants
-	const OLIVINEGYM_JASMINE
-	const OLIVINEGYM_GYM_GUY
-	const OLIVINEGYM_BOULDER1
-	const OLIVINEGYM_BOULDER2
-	const OLIVINEGYM_BOULDER3
-	const OLIVINEGYM_GENTLEMAN
-	const OLIVINEGYM_GENTLEMAN2
-	const OLIVINEGYM_SUPERNERD
+	const ALLOYGYM_JASMINE
+	const ALLOYGYM_GYM_GUY
+	const ALLOYGYM_BOULDER1
+	const ALLOYGYM_BOULDER2
+	const ALLOYGYM_BOULDER3
+	const ALLOYGYM_GENTLEMAN
+	const ALLOYGYM_GENTLEMAN2
+	const ALLOYGYM_SUPERNERD
 
 AlloyGym_MapScripts:
 	db 0 ; scene scripts
 
 	db 2 ; callbacks
-	callback MAPCALLBACK_TILES, .BouldersOlivine
+	callback MAPCALLBACK_TILES, .BouldersAlloyGym
 	callback MAPCALLBACK_CMDQUEUE, .SetUpStoneTable
 
 
-.BouldersOlivine:
+.BouldersAlloyGym:
 	checkevent EVENT_ALLOY_GYM_BOULDER_1
-	iffalse .skip1olivine
+	iffalse .skip1AlloyGym
 	changeblock 10, 12, $54
 	changeblock 12, 12, $29
-.skip1olivine
+.skip1AlloyGym
 	checkevent EVENT_ALLOY_GYM_BOULDER_2
-	iffalse .skip2olivine
+	iffalse .skip2AlloyGym
 	changeblock 4, 14, $2f
-.skip2olivine
+.skip2AlloyGym
 	checkevent EVENT_ALLOY_GYM_BOULDER_3
-	iffalse .skip3olivine
+	iffalse .skip3AlloyGym
 	changeblock 4, 0, $2f
-.skip3olivine
+.skip3AlloyGym
 	return
 	
 
@@ -41,13 +41,13 @@ AlloyGym_MapScripts:
 	cmdqueue CMDQUEUE_STONETABLE, .StoneTable ; check if any stones are sitting on a warp
 
 .StoneTable:
-	stonetable 5, OLIVINEGYM_BOULDER1, .Boulder1
-	stonetable 4, OLIVINEGYM_BOULDER2, .Boulder2
-	stonetable 3, OLIVINEGYM_BOULDER3, .Boulder3
+	stonetable 5, ALLOYGYM_BOULDER1, .Boulder1
+	stonetable 4, ALLOYGYM_BOULDER2, .Boulder2
+	stonetable 3, ALLOYGYM_BOULDER3, .Boulder3
 	db -1 ; end
 
 .Boulder1:
-	disappear OLIVINEGYM_BOULDER1
+	disappear ALLOYGYM_BOULDER1
 	pause 30
 	playsound SFX_STRENGTH
 	earthquake 80
@@ -61,7 +61,7 @@ AlloyGym_MapScripts:
 	end
 
 .Boulder2:
-	disappear OLIVINEGYM_BOULDER2
+	disappear ALLOYGYM_BOULDER2
 	pause 30
 	playsound SFX_STRENGTH
 	earthquake 80
@@ -74,7 +74,7 @@ AlloyGym_MapScripts:
 	end
 
 .Boulder3:
-	disappear OLIVINEGYM_BOULDER3
+	disappear ALLOYGYM_BOULDER3
 	pause 30
 	playsound SFX_STRENGTH
 	earthquake 80

@@ -1,23 +1,22 @@
 	const_def 2 ; object constants
-	const OLIVINEHOUSEBETA_ELDER
-;	const OLIVINEHOUSEBETA_RHYDON
+	const ALLOYOLDCAPTAINSHOUSE_CAPTAIN
 
 AlloyOldCaptainsHouse_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
-AlloyOldCaptainsHouseElderScript:
+AlloyOldCaptainsHouseCaptainScript:
 IF DEF(_GOLD)
 	checkevent EVENT_FOUGHT_HO_OH
 	iftrue .AfterEverythingBirdFight
 	faceplayer
 	opentext
-	writetext AlloyOldCaptainsHouseElderIntroText
+	writetext AlloyOldCaptainsHouseCaptainIntroText
 	buttonsound
 	checkevent EVENT_CLEARED_RADIO_TOWER
 	iftrue .NoEvilLeft
-	writetext AlloyOldCaptainsHouseElderEvilText
+	writetext AlloyOldCaptainsHouseCaptainEvilText
 	waitbutton
 	closetext
 	end
@@ -27,11 +26,11 @@ ELIF DEF(_SILVER)
 	iftrue .AfterEverythingBirdFight
 	faceplayer
 	opentext
-	writetext AlloyOldCaptainsHouseElderIntroText
+	writetext AlloyOldCaptainsHouseCaptainIntroText
 	buttonsound
 	checkevent EVENT_CLEARED_RADIO_TOWER
 	iftrue .NoEvilLeft
-	writetext AlloyOldCaptainsHouseElderEvilText
+	writetext AlloyOldCaptainsHouseCaptainEvilText
 	waitbutton
 	closetext
 	end
@@ -40,44 +39,44 @@ ENDC
 .NoEvilLeft
 	checkevent EVENT_GOT_HM07_WATERFALL
 	iffalse .NoWaterfall
-	writetext AlloyOldCaptainsHouseElderText2
+	writetext AlloyOldCaptainsHouseCaptainText2
 	yesorno
-	iffalse OlivineElderNoStory
+	iffalse AlloyOldCaptainNoStory
 IF DEF(_GOLD)
-	writetext OlivineElderHoOhStoryText
+	writetext AlloyOldCaptainHoOhStoryText
 	waitbutton
 	closetext
 	special FadeOutMusic
 	pause 20
 	cry HO_OH
 	playsound SFX_FLY
-	showemote EMOTE_SHOCK, OLIVINEHOUSEBETA_ELDER, 20
+	showemote EMOTE_SHOCK, ALLOYOLDCAPTAINSHOUSE_CAPTAIN, 20
 	pause 15
 	opentext
 	writetext HoOhAppearsText
 	waitbutton
 	closetext
 	checkcode VAR_FACING
-	ifequal UP, .ElderWalkAroundPlayerGold
-	applymovement OLIVINEHOUSEBETA_ELDER, ElderWalksOutMovement
+	ifequal UP, .CaptainWalkAroundPlayerGold
+	applymovement ALLOYOLDCAPTAINSHOUSE_CAPTAIN, CaptainWalksOutMovement
 	playsound SFX_EXIT_BUILDING
-	disappear OLIVINEHOUSEBETA_ELDER
-	setevent EVENT_OLD_CITY_EARL
+	disappear ALLOYOLDCAPTAINSHOUSE_CAPTAIN
+	setevent EVENT_ALLOY_CAPTAIN_AND_TOWER_SAGES_GONE
 	setevent EVENT_HO_OH_STAIRS_APPEAR
-	clearevent EVENT_BRASS_TOWER_SAGE_GONE
+	clearevent EVENT_BRASS_TOWER_ELDER_SAGE_GONE
 	setmapscene PAGOTA_CITY, SCENE_KURTS_HOUSE_LOCKED
 	setmapscene BRASS_TOWER_5F, SCENE_HO_OH_EVENT
 	pause 15
 	special RestartMapMusic
 	end
 	
-.ElderWalkAroundPlayerGold
-	applymovement OLIVINEHOUSEBETA_ELDER, ElderWalksAroundPlayerMovement
+.CaptainWalkAroundPlayerGold
+	applymovement ALLOYOLDCAPTAINSHOUSE_CAPTAIN, CaptainWalksAroundPlayerMovement
 	playsound SFX_EXIT_BUILDING
-	disappear OLIVINEHOUSEBETA_ELDER
-	setevent EVENT_OLD_CITY_EARL
+	disappear ALLOYOLDCAPTAINSHOUSE_CAPTAIN
+	setevent EVENT_ALLOY_CAPTAIN_AND_TOWER_SAGES_GONE
 	setevent EVENT_HO_OH_STAIRS_APPEAR
-	clearevent EVENT_BRASS_TOWER_SAGE_GONE
+	clearevent EVENT_BRASS_TOWER_ELDER_SAGE_GONE
 	setmapscene PAGOTA_CITY, SCENE_KURTS_HOUSE_LOCKED
 	setmapscene BRASS_TOWER_5F, SCENE_HO_OH_EVENT
 	pause 15
@@ -85,25 +84,25 @@ IF DEF(_GOLD)
 	end
 	
 ELIF DEF(_SILVER)
-	writetext OlivineElderLugiaStoryText
+	writetext AlloyOldCaptainLugiaStoryText
 	waitbutton
 	closetext
 	special FadeOutMusic
 	pause 20
 	cry LUGIA
 	playsound SFX_BUBBLEBEAM
-	showemote EMOTE_SHOCK, OLIVINEHOUSEBETA_ELDER, 20
+	showemote EMOTE_SHOCK, ALLOYOLDCAPTAINSHOUSE_CAPTAIN, 20
 	pause 15
 	opentext
 	writetext LugiaAppearsText
 	waitbutton
 	closetext
 	checkcode VAR_FACING
-	ifequal UP, .ElderWalkAroundPlayerSilver
-	applymovement OLIVINEHOUSEBETA_ELDER, ElderWalksOutMovement
+	ifequal UP, .CaptainWalkAroundPlayerSilver
+	applymovement ALLOYOLDCAPTAINSHOUSE_CAPTAIN, CaptainWalksOutMovement
 	playsound SFX_EXIT_BUILDING
-	disappear OLIVINEHOUSEBETA_ELDER
-	setevent EVENT_OLD_CITY_EARL
+	disappear ALLOYOLDCAPTAINSHOUSE_CAPTAIN
+	setevent EVENT_ALLOY_CAPTAIN_AND_TOWER_SAGES_GONE
 	setevent EVENT_LUGIA_CAVE_OPEN
 	clearevent EVENT_WHIRL_ISLANDS_SAGE_GONE
 	setmapscene PAGOTA_CITY, SCENE_KURTS_HOUSE_LOCKED
@@ -113,11 +112,11 @@ ELIF DEF(_SILVER)
 	end
 
 	
-.ElderWalkAroundPlayerSilver
-	applymovement OLIVINEHOUSEBETA_ELDER, ElderWalksAroundPlayerMovement
+.CaptainWalkAroundPlayerSilver
+	applymovement ALLOYOLDCAPTAINSHOUSE_CAPTAIN, CaptainWalksAroundPlayerMovement
 	playsound SFX_EXIT_BUILDING
-	disappear OLIVINEHOUSEBETA_ELDER
-	setevent EVENT_OLD_CITY_EARL
+	disappear ALLOYOLDCAPTAINSHOUSE_CAPTAIN
+	setevent EVENT_ALLOY_CAPTAIN_AND_TOWER_SAGES_GONE
 	setevent EVENT_LUGIA_CAVE_OPEN
 	clearevent EVENT_WHIRL_ISLANDS_SAGE_GONE
 	setmapscene PAGOTA_CITY, SCENE_KURTS_HOUSE_LOCKED
@@ -128,7 +127,7 @@ ELIF DEF(_SILVER)
 ENDC
 	
 .NoWaterfall
-	writetext AlloyOldCaptainsHouseElderNoWaterfallText
+	writetext AlloyOldCaptainsHouseCaptainNoWaterfallText
 	waitbutton
 	closetext
 	end
@@ -148,13 +147,13 @@ ELIF DEF(_SILVER)
 	end
 ENDC
 	
-OlivineElderNoStory:
-	writetext AlloyOldCaptainsHouseElderAnotherTime
+AlloyOldCaptainNoStory:
+	writetext AlloyOldCaptainsHouseCaptainAnotherTime
 	waitbutton
 	closetext
 	end
 	
-ElderWalksAroundPlayerMovement:
+CaptainWalksAroundPlayerMovement:
 	step LEFT
 	step DOWN
 	step DOWN
@@ -162,7 +161,7 @@ ElderWalksAroundPlayerMovement:
 	step DOWN
 	step_end
 	
-ElderWalksOutMovement:
+CaptainWalksOutMovement:
 	step DOWN
 	step DOWN
 	step LEFT
@@ -210,7 +209,7 @@ SometimesYouLiveLongEnoughSilver:
 	cont "possible."
 	done
 
-OlivineElderHoOhStoryText:
+AlloyOldCaptainHoOhStoryText:
 	text "Listen closely…"
 	
 	para "Many years ago,"
@@ -266,7 +265,7 @@ OlivineElderHoOhStoryText:
 	cont "soon…"
 	done
 	
-OlivineElderLugiaStoryText:
+AlloyOldCaptainLugiaStoryText:
 	text "Listen closely…"
 	
 	para "Many years ago,"
@@ -353,25 +352,25 @@ LugiaAppearsText:
 	line "being realised!"
 	done
 	
-AlloyOldCaptainsHouseElderAnotherTime:
+AlloyOldCaptainsHouseCaptainAnotherTime:
 	text "Another time,"
 	line "then."
 	done
 
-AlloyOldCaptainsHouseElderText2:
+AlloyOldCaptainsHouseCaptainText2:
 	text "Do you want to"
 	line "hear the story of"
 	cont "the bird?"
 	done
 	
-AlloyOldCaptainsHouseElderIntroText:
+AlloyOldCaptainsHouseCaptainIntroText:
 	text "One day I hope I"
 	line "can experience the"
 	para "conclusion of the"
 	line "legend."
 	done
 
-AlloyOldCaptainsHouseElderEvilText:
+AlloyOldCaptainsHouseCaptainEvilText:
 	text "I sense an evil"
 	line "presence looming"
 	cont "over NIHON."
@@ -380,7 +379,7 @@ AlloyOldCaptainsHouseElderEvilText:
 	cont "until it is gone."
 	done
 	
-AlloyOldCaptainsHouseElderNoWaterfallText:
+AlloyOldCaptainsHouseCaptainNoWaterfallText:
 	text "The time could be"
 	line "any day now, yet"
 	para "I do not beleive"
@@ -400,4 +399,4 @@ AlloyOldCaptainsHouse_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event  6,  3, SPRITE_CAPTAIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AlloyOldCaptainsHouseElderScript, EVENT_OLD_CITY_EARL
+	object_event  6,  3, SPRITE_CAPTAIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AlloyOldCaptainsHouseCaptainScript, EVENT_ALLOY_CAPTAIN_AND_TOWER_SAGES_GONE

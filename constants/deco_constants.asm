@@ -20,7 +20,7 @@ const_value = 1
 	const VIRTUAL_BOY
 	const GOLD_TROPHY
 	const SILVER_TROPHY
-	const SURF_PIKA_DOLL
+	const POLIWHIRL_DOLL
 	const _BED
 	const _CARPET
 	const _POSTER

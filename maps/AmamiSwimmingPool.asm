@@ -1,10 +1,10 @@
 	const_def 2 ; object constants
-	const VERMILION_GYM_SQUIRTLE_GIRL
-	const VERMILION_GYM_SWIMMER_GUY
-	const VERMILION_GYM_SWIMMER_GIRL
-	const VERMILION_GYM_GRANNY
-	const VERMILION_GYM_BUG_CATCHER
-	const VERMILION_GYM_LASS
+	const AMAMI_GYM_SQUIRTLE_GIRL
+	const AMAMI_GYM_SWIMMER_GUY
+	const AMAMI_GYM_SWIMMER_GIRL
+	const AMAMI_GYM_GRANNY
+	const AMAMI_GYM_BUG_CATCHER
+	const AMAMI_GYM_LASS
 
 AmamiSwimmingPool_MapScripts:
 	db 0 ; scene scripts
@@ -14,7 +14,7 @@ AmamiSwimmingPool_MapScripts:
 AmamiSwimmingPoolSwimmerSquirtle:
 	faceplayer
 	opentext
-	checkevent EVENT_EXPLODING_TRAP_13
+	checkevent EVENT_AMAMI_SWIMMING_POOL_GOT_SQUIRTLE
 	iftrue .AlreadyGotSquirtle
 	writetext ILoveSquirtleText
 	yesorno
@@ -28,7 +28,7 @@ AmamiSwimmingPoolSwimmerSquirtle:
 	writetext GiveSquirtleText
 	waitbutton
 	closetext
-	setevent EVENT_EXPLODING_TRAP_13
+	setevent EVENT_AMAMI_SWIMMING_POOL_GOT_SQUIRTLE
 	end
 	
 .AlreadyGotSquirtle
@@ -156,8 +156,8 @@ AmamiSwimmingPool_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  6, 17, AMAMI_TOWN, 5
-	warp_event  7, 17, AMAMI_TOWN, 6
+	warp_event  6, 17, AMAMI_TOWN, 4
+	warp_event  7, 17, AMAMI_TOWN, 5
 
 	db 0 ; coord events
 

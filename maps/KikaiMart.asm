@@ -10,7 +10,7 @@ KikaiMart_MapScripts:
 
 KikaiMartClerkScript:
 	opentext
-	pokemart MARTTYPE_STANDARD, MART_VERMILION
+	pokemart MARTTYPE_STANDARD, MART_AMAMI
 	closetext
 	end
 

@@ -1,7 +1,7 @@
 	const_def 2 ; object constants
-	const OLIVINEMART_CLERK
-	const OLIVINEMART_COOLTRAINER_F
-	const OLIVINEMART_LASS
+	const ALLOYMART_CLERK
+	const ALLOYMART_COOLTRAINER_F
+	const ALLOYMART_LASS
 
 AlloyMart_MapScripts:
 	db 0 ; scene scripts
@@ -10,7 +10,7 @@ AlloyMart_MapScripts:
 
 AlloyMartClerkScript:
 	opentext
-	pokemart MARTTYPE_STANDARD, MART_OLIVINE
+	pokemart MARTTYPE_STANDARD, MART_ALLOY
 	closetext
 	end
 

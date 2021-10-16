@@ -758,7 +758,7 @@ StandCity_MapEvents:
 	warp_event 35, 26, STAND_MART, 1
 	warp_event 16, 21, STAND_ZOO_MAIN_OFFICE, 1
 	warp_event 34, 31, STAND_GYM, 1
-	warp_event 26, 29, BILLS_BROTHERS_HOUSE, 1
+	warp_event 26, 29, STAND_SPEECH_HOUSE, 1
 	warp_event 33, 20, STAND_POKECENTER_1F, 1
 	warp_event 17, 31, STAND_ROCKET_HOUSE_1F, 1
 	warp_event 30, 13, ROUTE_112_STAND_CITY_GATE, 3

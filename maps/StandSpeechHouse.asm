@@ -1,29 +1,29 @@
 	const_def 2 ; object constants
-	const BILLSBROTHERSHOUSE_YOUNGSTER
+	const STANDSPEECHHOUSE_YOUNGSTER
 
-BillsBrothersHouse_MapScripts:
+StandSpeechHouse_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
-BillsBrothersHouseYoungsterScript:
+StandSpeechHouseYoungsterScript:
 	faceplayer
 	opentext
 	checkevent EVENT_CLEARED_RADIO_TOWER
 	iftrue .BillsBrotherRocketsGone
-	writetext BillsBrothersHouseYoungsterText
+	writetext StandSpeechHouseYoungsterText
 	waitbutton
 	closetext
 	end
 	
 .BillsBrotherRocketsGone
-	writetext BillsBrothersHouseYoungsterAllGoodText
+	writetext StandSpeechHouseYoungsterAllGoodText
 	waitbutton
 	closetext
 	end
 	
 
-BillsBrothersHouseYoungsterText:
+StandSpeechHouseYoungsterText:
 	text "The house next"
 	line "door is really"
 	cont "suspicious."
@@ -34,14 +34,14 @@ BillsBrothersHouseYoungsterText:
 	cont "and going from."
 	done
 
-BillsBrothersHouseYoungsterAllGoodText:
+StandSpeechHouseYoungsterAllGoodText:
 	text "STAND CITY is no"
 	line "place for crime."
 	para "Good riddance to"
 	line "TEAM ROCKET!"
 	done
 
-BillsBrothersHouse_MapEvents:
+StandSpeechHouse_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
@@ -53,4 +53,4 @@ BillsBrothersHouse_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event  2,  3, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BillsBrothersHouseYoungsterScript, -1
+	object_event  2,  3, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StandSpeechHouseYoungsterScript, -1

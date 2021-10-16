@@ -13,18 +13,18 @@ Route102N64House_MapScripts:
 N64HouseScientistScript:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_FIRE_STONE_FROM_BILLS_GRANDPA
+	checkevent EVENT_N64_HOUSE_LOOKING_FOR_PLAYERS
 	iftrue .AlreadyAskedToSearchN64
 	writetext N64HouseScientistText
 	buttonsound
 	writetext N64HouseScientistText2
 	waitbutton
 	closetext
-	setevent EVENT_GOT_FIRE_STONE_FROM_BILLS_GRANDPA
+	setevent EVENT_N64_HOUSE_LOOKING_FOR_PLAYERS
 	end
 
 .AlreadyAskedToSearchN64
-	checkevent EVENT_GOT_WATER_STONE_FROM_BILLS_GRANDPA
+	checkevent EVENT_BIRDON_YOUNGSTER_AT_N64_HOUSE
 	iffalse .N64OnePersonSoFar
 	writetext N64HouseScientistText2
 	waitbutton
@@ -32,7 +32,7 @@ N64HouseScientistScript:
 	end
 	
 .N64OnePersonSoFar
-	checkevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_2
+	checkevent EVENT_KANTO_ROCKER_AT_N64_HOUSE
 	iffalse .N64TwoPeopleNow
 	writetext N64HouseScientistText3
 	waitbutton
@@ -40,7 +40,7 @@ N64HouseScientistScript:
 	end
 	
 .N64TwoPeopleNow
-	checkevent EVENT_GOLDENROD_UNDERGROUND_WAREHOUSE_BLOCKED_OFF
+	checkevent EVENT_KUME_LASS_AT_N64_HOUSE
 	iffalse .N643PeopleTimeForStarter3
 	writetext N64HouseScientistText4
 	waitbutton
@@ -122,7 +122,7 @@ N64HouseRockerScript:
 N64HouseYoungsterScript:
 	faceplayer
 	opentext
-	checkevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_2
+	checkevent EVENT_KANTO_ROCKER_AT_N64_HOUSE
 	iffalse .RockerTwoPeopleNow
 	writetext RockerN64AloneText
 	waitbutton
@@ -324,8 +324,8 @@ Route102N64House_MapEvents:
 
 	db 6 ; object events
 	object_event 6,  6, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 2, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, N64HouseScientistScript, -1
-	object_event 4,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, N64HouseYoungsterScript, EVENT_GOT_WATER_STONE_FROM_BILLS_GRANDPA
-	object_event 3,  3, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, N64HouseRockerScript, EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_2
-	object_event 0,  4, SPRITE_LASS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, N64HouseLassScript, EVENT_GOLDENROD_UNDERGROUND_WAREHOUSE_BLOCKED_OFF
-	object_event 1,  3, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, N64HouseCooltrainerMScript, EVENT_GOLDENROD_UNDERGROUND_WAREHOUSE_BLOCKED_OFF
-	object_event 7,  2, SPRITE_FISHER, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, N64HouseFisherScript, EVENT_GOLDENROD_UNDERGROUND_WAREHOUSE_BLOCKED_OFF
+	object_event 4,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, N64HouseYoungsterScript, EVENT_BIRDON_YOUNGSTER_AT_N64_HOUSE
+	object_event 3,  3, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, N64HouseRockerScript, EVENT_KANTO_ROCKER_AT_N64_HOUSE
+	object_event 0,  4, SPRITE_LASS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, N64HouseLassScript, EVENT_KUME_LASS_AT_N64_HOUSE
+	object_event 1,  3, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, N64HouseCooltrainerMScript, EVENT_KUME_LASS_AT_N64_HOUSE
+	object_event 7,  2, SPRITE_FISHER, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, N64HouseFisherScript, EVENT_KUME_LASS_AT_N64_HOUSE

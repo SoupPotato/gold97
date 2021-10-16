@@ -76,7 +76,7 @@ Route108_Blocks:
 	INCBIN "maps/Route108.blk"
 
 AlloyTimsHouse_Blocks:
-AlloyPunishmentSpeechHouse_Blocks:
+AlloySpeechHouse_Blocks:
 AlloyGoodRodHouse_Blocks:
 SanskritCoinCaseSpeechHouse_Blocks:
 BlueForestEmysHouse_Blocks:
@@ -86,13 +86,13 @@ RyukyuTradeSpeechHouse_Blocks:
 WestportHappinessRater_Blocks:
 WestportNameRater_Blocks:
 NagoCharmanderHouse_Blocks:
-NagoSpeechHouse_Blocks:
+AmamiSpeechHouse_Blocks:
 BluesHouse_Blocks:
 KumeSnoozeSpeechHouse_Blocks:
-BillsBrothersHouse_Blocks:
+StandSpeechHouse_Blocks:
 PrycesFamilyHouse_Blocks:
 FrostpointNameRater_Blocks:
-UrasoeTrailSuperRodHouse_Blocks:
+AmamiSuperRodHouse_Blocks:
 CrownCitySpeechHouse_Blocks:
 SunpointPhotoStudio_Blocks:
 CrownCityScopeLensHouse_Blocks:

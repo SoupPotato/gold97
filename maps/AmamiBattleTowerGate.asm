@@ -87,8 +87,8 @@ AmamiBattleTowerGate_MapEvents:
 	db 0, 0 ; filler
 
 	db 6 ; warp events
-	warp_event  0,  4, AMAMI_TOWN, 11
-	warp_event  0,  5, AMAMI_TOWN, 10
+	warp_event  0,  4, AMAMI_TOWN, 10
+	warp_event  0,  5, AMAMI_TOWN, 9
 	warp_event  7,  0, BATTLE_TOWER_OUTSIDE, 3
 	warp_event  8,  0, BATTLE_TOWER_OUTSIDE, 4
 	warp_event  9,  4, BATTLE_TOWER_OUTSIDE, 5

@@ -45,7 +45,7 @@ FastShip1FSailor1Script:
 	opentext
 	checkevent EVENT_FAST_SHIP_HAS_ARRIVED
 	iftrue .Arrived
-	checkevent EVENT_FAST_SHIP_DESTINATION_OLIVINE
+	checkevent EVENT_FAST_SHIP_DESTINATION_WESTPORT
 	iftrue .Olivine
 	writetext FastShip1FSailor1Text_ToVermilion
 	waitbutton
@@ -59,7 +59,7 @@ FastShip1FSailor1Script:
 	end
 
 .Arrived:
-	checkevent EVENT_FAST_SHIP_DESTINATION_OLIVINE
+	checkevent EVENT_FAST_SHIP_DESTINATION_WESTPORT
 	iftrue ._Olivine
 	writetext FastShip1FSailor1Text_InVermilion
 	waitbutton
@@ -69,7 +69,7 @@ FastShip1FSailor1Script:
 	special FadeOutPalettes
 	waitsfx
 	setevent EVENT_VERMILION_PORT_SAILOR_AT_GANGWAY
-	setmapscene AMAMI_PORT, SCENE_VERMILIONPORT_LEAVE_SHIP
+	setmapscene AMAMI_PORT, SCENE_AMAMIPORT_LEAVE_SHIP
 	warp AMAMI_PORT, 7, 17
 	end
 
@@ -82,7 +82,7 @@ FastShip1FSailor1Script:
 	special FadeOutPalettes
 	waitsfx
 	setevent EVENT_OLIVINE_PORT_SAILOR_AT_GANGWAY
-	setmapscene WESTPORT_PORT, SCENE_OLIVINEPORT_LEAVE_SHIP
+	setmapscene WESTPORT_PORT, SCENE_WESTPORT_PORT_LEAVE_SHIP
 	warp WESTPORT_PORT, 7, 23
 	end
 

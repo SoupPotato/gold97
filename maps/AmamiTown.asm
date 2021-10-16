@@ -1,7 +1,7 @@
 	const_def 2 ; object constants
-	const VERMILION_CITY_BUG_CATCHER
-	const VERMILION_CITY_LASS
-	const VERMILION_GRAMPS
+	const AMAMI_CITY_BUG_CATCHER
+	const AMAMI_CITY_LASS
+	const AMAMI_GRAMPS
 
 AmamiTown_MapScripts:
 	db 0 ; scene scripts
@@ -10,7 +10,7 @@ AmamiTown_MapScripts:
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
 
 .FlyPoint:
-	setflag ENGINE_FLYPOINT_VERMILION
+	setflag ENGINE_FLYPOINT_AMAMI
 	return
 
 AmamiTownPokecenterSign:
@@ -102,16 +102,15 @@ AmamiBTSignText:
 AmamiTown_MapEvents:
 	db 0, 0 ; filler
 
-	db 11 ; warp events
+	db 10 ; warp events
 	warp_event  4,  2, AMAMI_PORT_PASSAGE, 1
 	warp_event  4,  3, AMAMI_PORT_PASSAGE, 2
 	warp_event 17,  4, AMAMI_POKECENTER_1F, 1
-	warp_event 35, 15, SILENT_POKECENTER_1F, 1
 	warp_event 24,  5, AMAMI_SWIMMING_POOL, 1
 	warp_event 25,  5, AMAMI_SWIMMING_POOL, 2
 	warp_event 23, 10, AMAMI_MART, 1
-	warp_event 31,  5, URASOE_TRAIL_SUPER_ROD_HOUSE, 1
-	warp_event 31, 13, NAGO_SPEECH_HOUSE, 1
+	warp_event 31,  5, AMAMI_SUPER_ROD_HOUSE, 1
+	warp_event 31, 13, AMAMI_SPEECH_HOUSE, 1
 	warp_event 33,  9, AMAMI_BATTLE_TOWER_GATE, 2
 	warp_event 33,  8, AMAMI_BATTLE_TOWER_GATE, 1
 

@@ -1,25 +1,25 @@
 	const_def 2 ; object constants
-	const OLIVINECAFE_SAILOR1
-	const OLIVINECAFE_FISHING_GURU
-	const OLIVINECAFE_SAILOR2
-	const OLIVINECAFE_CLERK
+	const ALLOYCAFE_SAILOR1
+	const ALLOYCAFE_FISHING_GURU
+	const ALLOYCAFE_SAILOR2
+	const ALLOYCAFE_CLERK
 
 AlloyCafe_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
-AlloyCafeStrengthSailorScript:
+AlloyCafeFlyGirlScript:
 	faceplayer
 	opentext
 	checkevent EVENT_GOT_HM02_FLY
-	iftrue .GotStrength
-	writetext AlloyCafeStrengthSailorText
+	iftrue .GotFly
+	writetext AlloyCafeFlyGirlText
 	buttonsound
 	verbosegiveitem HM_FLY
 	setevent EVENT_GOT_HM02_FLY
-.GotStrength:
-	writetext AlloyCafeStrengthSailorText_GotStrength
+.GotFly:
+	writetext AlloyCafeFlyGirlText_GotFly
 	waitbutton
 	closetext
 	end
@@ -33,7 +33,7 @@ AlloyCafeFishingGuruScript:
 AlloyCafeSailorScript:
 	jumptextfaceplayer AlloyCafeSailorText
 
-AlloyCafeStrengthSailorText:
+AlloyCafeFlyGirlText:
 	text "Hah! Sailing is"
 	line "such an outdated"
 	cont "way to travel!"
@@ -43,7 +43,7 @@ AlloyCafeStrengthSailorText:
 	cont "everywhere?"
 	done
 
-AlloyCafeStrengthSailorText_GotStrength:
+AlloyCafeFlyGirlText_GotFly:
 	text "Ships still have"
 	line "to set sail since"
 	para "FLYING #MON"
@@ -89,7 +89,7 @@ AlloyCafe_MapEvents:
 	db 0 ; bg events
 
 	db 4 ; object events
-	object_event  6,  3, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AlloyCafeStrengthSailorScript, -1
+	object_event  6,  3, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AlloyCafeFlyGirlScript, -1
 	object_event  3,  1, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AlloyCafeFishingGuruScript, -1
-	object_event  5,  6, SPRITE_JANINE, SPRITEMOVEDATA_STANDING_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AlloyCafeSailorScript, -1
+	object_event  5,  6, SPRITE_BETA_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AlloyCafeSailorScript, -1
 	object_event  1,  1, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AlloyCafeClerkScript, -1

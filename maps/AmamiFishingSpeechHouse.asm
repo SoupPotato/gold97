@@ -1,5 +1,5 @@
 	const_def 2 ; object constants
-	const VERMILIONFISHINGSPEECHHOUSE_FISHING_GURU
+	const AMAMIFISHINGSPEECHHOUSE_FISHING_GURU
 
 AmamiFishingSpeechHouse_MapScripts:
 	db 0 ; scene scripts
@@ -11,10 +11,6 @@ FishingDude:
 
 FishingDudesHousePhoto:
 	jumptext FishingDudesHousePhotoText
-
-FishingDudesHouseBookshelf:
-; unused
-	jumpstd picturebookshelf
 
 FishingDudeText:
 	text "I am the FISHING"

@@ -48,9 +48,9 @@ DollSalesmanMonday_LoopScript:
 	writetext SendItemToPCTextDollMonday
 	yesorno
 	iffalse DollSalesmanMonday_Cancel
-	checkevent EVENT_DECO_SURFING_PIKACHU_DOLL
+	checkevent EVENT_DECO_POLIWHIRL_DOLL
 	iftrue .AlreadyHaveDecorItem
-	setevent EVENT_DECO_SURFING_PIKACHU_DOLL
+	setevent EVENT_DECO_POLIWHIRL_DOLL
 	takemoney YOUR_MONEY, 5000
 	jump DollSalesmanMonday_FinishScript
 	end
@@ -172,11 +172,11 @@ DollSalesmanTextMonday_AskWhichPrizeText:
 TeleportGuyScript2:
 	faceplayer
 	opentext
-	checkevent EVENT_EXPLODING_TRAP_2
+	checkevent EVENT_ABRA_TELEPORT_GUY_WESTPORT
 	iftrue .SkipTeleportTextWest
 	writetext TeleportGuyText12
 	buttonsound
-	setevent EVENT_EXPLODING_TRAP_2
+	setevent EVENT_ABRA_TELEPORT_GUY_WESTPORT
 .SkipTeleportTextWest
 	writetext TeleportGuyText12_2	
 	yesorno
@@ -268,7 +268,7 @@ WestportPortPassage_MapEvents:
 	db 0 ; bg events
 
 	db 4 ; object events
-	object_event 18,  2, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WestportPortPassagePokefanMScript, EVENT_OLIVINE_PORT_PASSAGE_POKEFAN_M
+	object_event 18,  2, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WestportPortPassagePokefanMScript, EVENT_WESTPORT_PORT_PASSAGE_POKEFAN_M
 	object_event 13,  1, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TeleportGuyScript2, EVENT_TELEPORT_GUY
 	object_event 14,  1, SPRITE_JYNX, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AbraScript2, EVENT_TELEPORT_GUY
 	object_event  1, 10, SPRITE_CLERK, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TravelingDollSalesmanMonday, EVENT_DOLL_SALESMAN_MONDAY

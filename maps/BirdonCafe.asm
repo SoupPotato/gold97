@@ -1,117 +1,117 @@
 	const_def 2 ; object constants
-	const CHARCOAL_POKEFAN_M
-	const CHARCOAL_POKEFAN_F
-	const BAR_FISHER
-	const BAR_LASS
-	const BAR_N64_YOUNGSTER
+	const BIRDONCAFE_POKEFAN_M
+	const BIRDONCAFE_POKEFAN_F
+	const BIRDONCAFE_FISHER
+	const BIRDONCAFE_LASS
+	const BIRDONCAFE_N64_YOUNGSTER
 
 BirdonCafe_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 	
-BarFisherScript:
-	jumptextfaceplayer BarFisherScriptText
+BirdonCafeFisherScript:
+	jumptextfaceplayer BirdonCafeFisherScriptText
 	
-BarLassScript:
-	jumptextfaceplayer BarLassScriptText
+BirdonCafeLassScript:
+	jumptextfaceplayer BirdonCafeLassScriptText
 
-PokefanM_DairyFarmer:
+BirdonCafe_DairyFarmer:
 	faceplayer
 	opentext
 	checkitem MOOMOO_MILK
-	iftrue FarmerMScript_Milking
-	writetext FarmerMText_BuyMilk
+	iftrue DairyFarmerScript_Milking
+	writetext DairyFarmerText_BuyMilk
 	special PlaceMoneyTopRight
 	yesorno
-	iffalse FarmerMScript_NoSale
+	iffalse DairyFarmerScript_NoSale
 	checkmoney YOUR_MONEY, 500
-	ifequal HAVE_LESS, FarmerMScript_NoMoney
+	ifequal HAVE_LESS, DairyFarmerScript_NoMoney
 	giveitem MOOMOO_MILK
-	iffalse FarmerMScript_NoRoom
+	iffalse DairyFarmerScript_NoRoom
 	takemoney YOUR_MONEY, 500
 	special PlaceMoneyTopRight
 	waitsfx
 	playsound SFX_TRANSACTION
-	writetext FarmerMText_GotMilk
+	writetext DairyFarmerText_GotMilk
 	buttonsound
 	itemnotify
 	closetext
 	end
 
-FarmerMScript_NoMoney:
-	writetext FarmerMText_NoMoney
+DairyFarmerScript_NoMoney:
+	writetext DairyFarmerText_NoMoney
 	waitbutton
 	closetext
 	end
 
-FarmerMScript_NoRoom:
-	writetext FarmerMText_NoRoom
+DairyFarmerScript_NoRoom:
+	writetext DairyFarmerText_NoRoom
 	waitbutton
 	closetext
 	end
 
-FarmerMScript_NoSale:
-	writetext FarmerMText_NoSale
+DairyFarmerScript_NoSale:
+	writetext DairyFarmerText_NoSale
 	waitbutton
 	closetext
 	end
 
-FarmerMScript_Milking:
-	writetext FarmerMText_Milking
+DairyFarmerScript_Milking:
+	writetext DairyFarmerText_Milking
 	waitbutton
 	closetext
 	end
 
-PokefanF_SnoreFarmer:
-	jumptextfaceplayer FarmerFText_SnoreSpeech
+BirdonCafe_PokefanF:
+	jumptextfaceplayer BirdonCafe_PokefanFText_SnoreSpeech
 
 
 FarmhouseBookshelf:
 	jumpstd picturebookshelf
 	
-BarN64YoungsterScript:
+BirdonCafeN64YoungsterScript:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_FIRE_STONE_FROM_BILLS_GRANDPA
+	checkevent EVENT_N64_HOUSE_LOOKING_FOR_PLAYERS
 	iftrue .SendN64YoungsterOff
-	writetext BarN64YoungsterBoredText
+	writetext BirdonCafeN64YoungsterBoredText
 	waitbutton
 	closetext
 	end
 
 .SendN64YoungsterOff
-	writetext BarN64YoungsterBoredText
+	writetext BirdonCafeN64YoungsterBoredText
 	buttonsound
 	writetext SendN64YoungsterOffText
 	waitbutton
 	closetext
 	checkcode VAR_FACING
-	ifequal DOWN, BarN64YoungsterDownScript
-	jump BarN64YoungsterLeftScript
+	ifequal DOWN, BirdonCafeN64YoungsterDownScript
+	jump BirdonCafeN64YoungsterLeftScript
 	end
 	
-BarN64YoungsterDownScript:
-	applymovement BAR_N64_YOUNGSTER, BarN64YoungsterDownMovement
+BirdonCafeN64YoungsterDownScript:
+	applymovement BIRDONCAFE_N64_YOUNGSTER, BirdonCafeN64YoungsterDownMovement
 	playsound SFX_EXIT_BUILDING
-	disappear BAR_N64_YOUNGSTER
-	setevent EVENT_GOT_LEAF_STONE_FROM_BILLS_GRANDPA
-	clearevent EVENT_GOT_WATER_STONE_FROM_BILLS_GRANDPA
-	clearevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_1
+	disappear BIRDONCAFE_N64_YOUNGSTER
+	setevent EVENT_BIRDON_N64_YOUNGSTER_LEFT_CAFE
+	clearevent EVENT_BIRDON_YOUNGSTER_AT_N64_HOUSE
+	clearevent EVENT_KANTO_N64_ROCKER_AT_GAME_CORNER
 	waitsfx
 	end
 	
-BarN64YoungsterLeftScript:
-	applymovement BAR_N64_YOUNGSTER, BarN64YoungsterLeftMovement
+BirdonCafeN64YoungsterLeftScript:
+	applymovement BIRDONCAFE_N64_YOUNGSTER, BirdonCafeN64YoungsterLeftMovement
 	playsound SFX_EXIT_BUILDING
-	disappear BAR_N64_YOUNGSTER
-	setevent EVENT_GOT_LEAF_STONE_FROM_BILLS_GRANDPA
-	clearevent EVENT_GOT_WATER_STONE_FROM_BILLS_GRANDPA
-	clearevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_1
+	disappear BIRDONCAFE_N64_YOUNGSTER
+	setevent EVENT_BIRDON_N64_YOUNGSTER_LEFT_CAFE
+	clearevent EVENT_BIRDON_YOUNGSTER_AT_N64_HOUSE
+	clearevent EVENT_KANTO_N64_ROCKER_AT_GAME_CORNER
 	waitsfx
 	end
 	
-BarN64YoungsterLeftMovement:
+BirdonCafeN64YoungsterLeftMovement:
 	step UP
 	step RIGHT
 	step RIGHT
@@ -120,14 +120,14 @@ BarN64YoungsterLeftMovement:
 	step DOWN
 	step_end
 	
-BarN64YoungsterDownMovement:
+BirdonCafeN64YoungsterDownMovement:
 	step RIGHT
 	step RIGHT
 	step DOWN
 	step DOWN
 	step_end
 	
-BarN64YoungsterBoredText:
+BirdonCafeN64YoungsterBoredText:
 	text "Man, I'm bored."
 	para "There's nothing to"
 	line "do in this town."
@@ -153,7 +153,7 @@ SendN64YoungsterOffText:
 	line "thanks!"
 	done
 	
-BarFisherScriptText:
+BirdonCafeFisherScriptText:
 	text "I come here just"
 	line "about every day."
 	para "I swear, that"
@@ -161,7 +161,7 @@ BarFisherScriptText:
 	cont "be addictive."
 	done
 	
-BarLassScriptText:
+BirdonCafeLassScriptText:
 	text "There isn't too"
 	line "much to do in this"
 	cont "town."
@@ -170,7 +170,7 @@ BarLassScriptText:
 	cont "drinking milk."
 	done
 
-FarmerMText_BuyMilk:
+DairyFarmerText_BuyMilk:
 	text "How'd you like a"
 	line "drink?"
 	para "We serve MOOMOO"
@@ -178,27 +178,27 @@ FarmerMText_BuyMilk:
 	para "Ya want some?"
 	done
 
-FarmerMText_GotMilk:
+DairyFarmerText_GotMilk:
 	text "Here ya go!"
 	line "Drink up'n enjoy!"
 	done
 
-FarmerMText_NoMoney:
+DairyFarmerText_NoMoney:
 	text "Sorry, there."
 	line "No cash, no sale!"
 	done
 
-FarmerMText_NoRoom:
+DairyFarmerText_NoRoom:
 	text "I reckon yer"
 	line "PACK's full."
 	done
 
-FarmerMText_NoSale:
+DairyFarmerText_NoSale:
 	text "You don't want it?"
 	line "Come again, hear?"
 	done
 
-FarmerMText_Milking:
+DairyFarmerText_Milking:
 	text "It goes down real"
 	line "smooth."
 	para "#MON love it"
@@ -206,7 +206,7 @@ FarmerMText_Milking:
 	done
 
 
-FarmerFText_SnoreSpeech:
+BirdonCafe_PokefanFText_SnoreSpeech:
 	text "MOOMOO MILK is"
 	line "just plain"
 	cont "delicious!"
@@ -224,8 +224,8 @@ BirdonCafe_MapEvents:
 	db 0 ; bg events
 
 	db 5 ; object events
-	object_event  4,  1, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PokefanM_DairyFarmer, -1
-	object_event  7,  5, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, PokefanF_SnoreFarmer, -1
-	object_event  3,  3, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, BarFisherScript, -1
-	object_event  2,  3, SPRITE_LASS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, BarLassScript, -1
-	object_event  0,  5, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, BarN64YoungsterScript, EVENT_GOT_LEAF_STONE_FROM_BILLS_GRANDPA
+	object_event  4,  1, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BirdonCafe_DairyFarmer, -1
+	object_event  7,  5, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, BirdonCafe_PokefanF, -1
+	object_event  3,  3, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, BirdonCafeFisherScript, -1
+	object_event  2,  3, SPRITE_LASS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, BirdonCafeLassScript, -1
+	object_event  0,  5, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, BirdonCafeN64YoungsterScript, EVENT_BIRDON_N64_YOUNGSTER_LEFT_CAFE

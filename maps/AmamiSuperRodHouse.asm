@@ -1,12 +1,12 @@
 	const_def 2 ; object constants
-	const ROUTE12SUPERRODHOUSE_FISHING_GURU
+	const AMAMISUPERRODHOUSE_FISHING_GURU
 
-UrasoeTrailSuperRodHouse_MapScripts:
+AmamiSuperRodHouse_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
-UrasoeTrailSuperRodHouseFishingGuruScript:
+AmamiSuperRodHouseFishingGuruScript:
 	faceplayer
 	opentext
 	checkevent EVENT_GOT_SUPER_ROD
@@ -31,10 +31,6 @@ UrasoeTrailSuperRodHouseFishingGuruScript:
 .NoRoom:
 	closetext
 	end
-
-SuperRodHouseBookshelf:
-; unused
-	jumpstd picturebookshelf
 
 OfferSuperRodText:
 	text "I can see that you"
@@ -77,16 +73,16 @@ DontWantSuperRodText:
 	line "deceived me?"
 	done
 
-UrasoeTrailSuperRodHouse_MapEvents:
+AmamiSuperRodHouse_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  4,  7, AMAMI_TOWN, 8
-	warp_event  5,  7, AMAMI_TOWN, 8
+	warp_event  4,  7, AMAMI_TOWN, 7
+	warp_event  5,  7, AMAMI_TOWN, 7
 
 	db 0 ; coord events
 
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event  7,  4, SPRITE_FISHING_GURU, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, UrasoeTrailSuperRodHouseFishingGuruScript, -1
+	object_event  7,  4, SPRITE_FISHING_GURU, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AmamiSuperRodHouseFishingGuruScript, -1

@@ -194,7 +194,7 @@ CrownGroupSprites:; actually do whatever now
 	db SPRITE_LASS
 	db SPRITE_COOLTRAINER_M
 	db SPRITE_ROCKER
-	db SPRITE_JANINE
+	db SPRITE_BETA_GIRL
 	db SPRITE_BLUE
 	; 6 of 9 walking sprites
 	db SPRITE_POKE_BALL
@@ -287,7 +287,7 @@ AlloyGroupSprites:
 	db SPRITE_GRAMPS
 	db SPRITE_COOLTRAINER_M
 	db SPRITE_YOUNGSTER
-	db SPRITE_JANINE
+	db SPRITE_BETA_GIRL
 	db SPRITE_POKEFAN_M
 	db SPRITE_FISHER
 	; 9 of max 9 walking sprites

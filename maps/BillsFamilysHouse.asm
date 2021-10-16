@@ -11,66 +11,21 @@ BillsFamilysHouse_MapScripts:
 BillScript:
 	faceplayer
 	opentext
-	checkflag ENGINE_ZEPHYRBADGE
-	iftrue .GiveCut
-	writetext BillGoGetBadge
-	waitbutton
-	closetext
-	
-	end
-	
-;BillScript:
-;	faceplayer
-;	opentext
-;	checkevent EVENT_GOT_EEVEE
-;	iftrue .GotEevee
-;	writetext BillTakeThisEeveeText
-;	yesorno
-;	iffalse .Refused
-;	writetext BillImCountingOnYouText
-;	buttonsound
-;	waitsfx
-;	checkcode VAR_PARTYCOUNT
-;	ifequal PARTY_LENGTH, .NoRoom
-;	writetext ReceivedEeveeText
-;	playsound SFX_CAUGHT_MON
-;	waitsfx
-;	givepoke EEVEE, 20
-;	setevent EVENT_GOT_EEVEE
-;	writetext BillEeveeMayEvolveText
-;	waitbutton
-;	closetext
-;	end
-
-.GiveCut
 	checkevent EVENT_GOT_HM01_CUT
 	iftrue .GotCut
 	writetext BillTakeThisCutText
-	yesorno
-	iffalse .Refused
+	waitbutton
 	verbosegiveitem HM_CUT
 	setevent EVENT_GOT_HM01_CUT
 	setevent EVENT_ROUTE36_GARDENER
 	clearevent EVENT_ROUTE36_GARDENER_CHOPPED
-	writetext BillImCountingOnYouText
-	waitbutton
-	closetext
-	end
-
-.NoRoom:
-	writetext BillPartyFullText
-	waitbutton
-	closetext
-	end
-
-.Refused:
-	writetext BillNoEeveeText
+	writetext BillGoodLuckText
 	waitbutton
 	closetext
 	end
 
 .GotCut:
-	writetext BillPopWontWorkText
+	writetext BillAdventuresGoingWellText
 	waitbutton
 	closetext
 	end
@@ -80,7 +35,7 @@ BillsMomScript:
 	opentext
 	checkevent EVENT_MET_BILL
 	iffalse .HaventMetBill
-	writetext BillsPopText
+	writetext BillsMomText
 	waitbutton
 	closetext
 	end
@@ -131,19 +86,6 @@ BillsHouseBookshelf2:
 
 BillsHouseRadio:
 	jumpstd radio2
-	
-BillGoGetBadge:
-	text "Hm! You shouldn't"
-	line "see this text!"
-	para "I changed the"
-	line "sequence of events"
-	para "so that I shouldnt"
-	line "be here if you"
-	para "don't have the"
-	line "badge. So"
-	para "somethings wrong"
-	line "here!"
-	done
 
 BillTakeThisCutText:
 	text "BILL: Hello!"
@@ -162,11 +104,9 @@ BillTakeThisCutText:
 	line "I have something"
 	para "else that you may"
 	line "find useful."
-	para "Won't you take"
-	line "this?"
 	done
 
-BillImCountingOnYouText:
+BillGoodLuckText:
 	text "CUT allows your"
 	line "#MON to chop"
 	cont "away small trees!"
@@ -183,42 +123,11 @@ BillImCountingOnYouText:
 	para "I'll be around!"
 	done
 
-ReceivedEeveeText:
-	text "<PLAYER> received"
-	line "EEVEE!"
-	done
-
-BillEeveeMayEvolveText:
-	text "BILL: PROF.OAK"
-	line "claims EEVEE may"
-
-	para "evolve in new and"
-	line "unknown ways."
-	done
-
-BillPartyFullText:
-	text "Whoa, wait. You"
-	line "can't carry any"
-	cont "more #MON."
-	done
-
-BillNoEeveeText:
-	text "Oh… Well you might"
-	line "need this at some"
-	cont "point…"
-	done
-
-BillPopWontWorkText:
+BillAdventuresGoingWellText:
 	text "BILL: Hi, <PLAY_G>!"
 	line "I hope your"
 	para "adventures are"
 	line "going well!"
-	done
-
-BillsPopText:
-	text "Oh, you collect"
-	line "#MON? My son"
-	cont "BILL is an expert."
 	done
 
 BillsMomText:

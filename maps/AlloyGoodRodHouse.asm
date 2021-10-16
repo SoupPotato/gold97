@@ -1,5 +1,5 @@
 	const_def 2 ; object constants
-	const OLIVINEGOODRODHOUSE_FISHING_GURU
+	const ALLOYGOODRODHOUSE_FISHING_GURU
 
 AlloyGoodRodHouse_MapScripts:
 	db 0 ; scene scripts
@@ -34,10 +34,6 @@ GoodRodGuru:
 	waitbutton
 	closetext
 	end
-
-GoodRodHouseBookshelf:
-; unused
-	jumpstd picturebookshelf
 
 OfferGoodRodText:
 	text "The canal that"

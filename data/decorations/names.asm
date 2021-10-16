@@ -12,7 +12,7 @@ DecorationNames:
 	db "VIRTUAL BOY@"
 	db "GOLD TROPHY@"
 	db "SILVER TROPHY@"
-	db "POLIWRATH DOLL@"
+	db "POLIWHIRL DOLL@"
 	db " BED@"
 	db " CARPET@"
 	db " POSTER@"
