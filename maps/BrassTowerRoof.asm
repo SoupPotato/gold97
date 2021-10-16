@@ -1,5 +1,5 @@
 	const_def 2 ; object constants
-	const TINTOWERROOF_HO_OH
+	const BRASSTOWERROOF_HO_OH
 
 BrassTowerRoof_MapScripts:
 	db 0 ; scene scripts
@@ -18,13 +18,13 @@ IF DEF(_GOLD)
 	clearevent EVENT_ALLOY_CAPTAIN_AND_TOWER_SAGES_GONE
 	setmapscene PAGOTA_CITY, SCENE_DEFAULT
 	setevent EVENT_BRASS_TOWER_ELDER_SAGE_GONE
-	clearevent EVENT_RIVAL_AZALEA_TOWN
-	clearevent EVENT_RIVAL_TEAM_ROCKET_BASE
+	clearevent EVENT_MAGMA_SHAFT_ENTEI
+	clearevent EVENT_TIDAL_GROTTO_SUICUNE
 	clearevent EVENT_AMPARE_CAVERN_RAIKOU
 	writecode VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
 	loadwildmon HO_OH, 45
 	startbattle
-	disappear TINTOWERROOF_HO_OH
+	disappear BRASSTOWERROOF_HO_OH
 	setevent EVENT_RELEASED_THE_BEASTS
 	reloadmapafterbattle
 	end
@@ -34,7 +34,7 @@ ELIF DEF(_SILVER)
 	writecode VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
 	loadwildmon HO_OH, 70
 	startbattle
-	disappear TINTOWERROOF_HO_OH
+	disappear BRASSTOWERROOF_HO_OH
 	setevent EVENT_RELEASED_THE_BEASTS
 	reloadmapafterbattle
 	end

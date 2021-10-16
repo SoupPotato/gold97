@@ -545,7 +545,6 @@ KRIS EQU __enum__
 	trainerclass SAGE ; 35
 	const CHOW
 	const NICO
-	const JIN
 	const TROY
 	const JEFFREY
 	const PING

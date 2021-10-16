@@ -1,6 +1,6 @@
 	const_def 2 ; object constants
-	const ROUTE43MAHOGANYGATE_OFFICER
-	const ROUTE43MAHOGANYGATE_LASS
+	const BOARDWALKGATE_OFFICER
+	const BOARDWALKGATE_LASS
 
 BoardwalkTeknosGate_MapScripts:
 	db 0 ; scene scripts

@@ -1,7 +1,5 @@
-
-
 	const_def 2 ; object constants
-	const ROUTE43GATE_OFFICER
+	const SANSKRITGATE_OFFICER
 
 BoardwalkSanskritGate_MapScripts:
 	db 1 ; scene scripts
@@ -9,29 +7,26 @@ BoardwalkSanskritGate_MapScripts:
 
 	db 0 ; callbacks
 
-
 .DummyScene:
 	end
 
-
-
-OfficerScript_GuardWithSnore:
+OfficerScript_GuardWithSleepTalk:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_TM13_SNORE_FROM_MOOMOO_FARM
-	iftrue .GotSnore
+	checkevent EVENT_GOT_TM35_FROM_SANSKRIT_GATE_OFFICER
+	iftrue .GotSleepTalk
 	writetext OfficerText_FoundTM
 	buttonsound
 	verbosegiveitem TM_SLEEP_TALK
-	iffalse .NoRoomForSnore
-	setevent EVENT_GOT_TM13_SNORE_FROM_MOOMOO_FARM
+	iffalse .NoRoomForSleepTalk
+	setevent EVENT_GOT_TM35_FROM_SANSKRIT_GATE_OFFICER
 	closetext
 	end
 
-.GotSnore:
-	writetext OfficerText_AvoidGrass
+.GotSleepTalk:
+	writetext OfficerText_BeCareful
 	waitbutton
-.NoRoomForSnore:
+.NoRoomForSleepTalk:
 	closetext
 	end
 
@@ -48,12 +43,7 @@ OfficerText_FoundTM:
 	cont "asleep, with this."
 	done
 
-Text_ReceivedTM30:
-	text "<PLAYER> received"
-	line "TM35."
-	done
-
-OfficerText_AvoidGrass:
+OfficerText_BeCareful:
 	text "Zzz…"
 	para "Be careful out"
 	line "there…"
@@ -73,4 +63,4 @@ BoardwalkSanskritGate_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event  0,  4, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OfficerScript_GuardWithSnore, -1
+	object_event  0,  4, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OfficerScript_GuardWithSleepTalk, -1

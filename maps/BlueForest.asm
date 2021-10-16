@@ -1,13 +1,9 @@
 	const_def 2 ; object constants
-;	const BLACKTHORNCITY_SUPER_NERD1
-;	const BLACKTHORNCITY_SUPER_NERD2
-;	const BLACKTHORNCITY_GRAMPS1
-;	const BLACKTHORNCITY_GRAMPS2
-	const BLACKTHORNCITY_BLACK_BELT
-	const BLACKTHORNCITY_COOLTRAINER_F1
-	const BLACKTHORNCITY_YOUNGSTER1
-	const BLACKTHORNCITY_SANTOS
-	const BLACKTHORNCITY_COOLTRAINER_F2
+	const BLUEFOREST_BLACK_BELT
+	const BLUEFOREST_COOLTRAINER_F1
+	const BLUEFOREST_YOUNGSTER1
+	const BLUEFOREST_SANTOS
+	const BLUEFOREST_COOLTRAINER_F2
 
 BlueForest_MapScripts:
 	db 0 ; scene scripts
@@ -17,42 +13,42 @@ BlueForest_MapScripts:
 	callback MAPCALLBACK_OBJECTS, .Santos
 
 .FlyPoint:
-	setflag ENGINE_FLYPOINT_BLACKTHORN
+	setflag ENGINE_FLYPOINT_BLUEFOREST
 	return
 
 .Santos:
 	checkcode VAR_WEEKDAY
 	ifequal SATURDAY, .SantosAppears
-	disappear BLACKTHORNCITY_SANTOS
+	disappear BLUEFOREST_SANTOS
 	return
 
 .SantosAppears:
-	appear BLACKTHORNCITY_SANTOS
+	appear BLUEFOREST_SANTOS
 	return
 
-BlackthornBlackBeltScript:
+BlueForestBlackBeltScript:
 	jumptextfaceplayer BlackBeltText_WeirdRadio
 
 
 
-BlackthornCooltrainerF1Script:
-	jumptextfaceplayer BlackthornCooltrainerF1Text
+BlueForestCooltrainerF1Script:
+	jumptextfaceplayer BlueForestCooltrainerF1Text
 
-BlackthornYoungsterScript:
-	jumptextfaceplayer BlackthornYoungsterText
+BlueForestYoungsterScript:
+	jumptextfaceplayer BlueForestYoungsterText
 
-BlackthornCooltrainerF2Script:
+BlueForestCooltrainerF2Script:
 	faceplayer
 	opentext
 	checkevent EVENT_PRYCE_IN_GYM
 	iffalse .HotshotWow
-	writetext BlackthornCooltrainerF2TextNotWow
+	writetext BlueForestCooltrainerF2TextNotWow
 	waitbutton
 	closetext
 	end
 	
 .HotshotWow
-	writetext BlackthornCooltrainerF2Text
+	writetext BlueForestCooltrainerF2Text
 	waitbutton
 	closetext
 	end
@@ -96,9 +92,8 @@ SantosScript:
 BlueForestSign:
 	jumptext BlueForestSignText
 
-BlackthornGymSign:
-;	verbosegiveitem HM_WHIRLPOOL
-	jumptext BlackthornGymSignText
+BlueForestGymSign:
+	jumptext BlueForestGymSignText
 
 MoveDeletersHouseSign:
 	jumptext MoveDeletersHouseSignText
@@ -110,8 +105,6 @@ BlueForestTrainerTips:
 	jumptext BlueForestTrainerTipsText
 
 BlueForestPokecenterSign:
-	;setmapscene ROUTE_112_STAND_CITY_GATE, SCENE_DEFAULT
-	;clearevent EVENT_GAVE_KENYA
 	jumpstd pokecentersign
 
 BlueForestMartSign:
@@ -126,7 +119,7 @@ BlackBeltText_WeirdRadio:
 	line "of gold."
 	done
 
-BlackthornCooltrainerF1Text:
+BlueForestCooltrainerF1Text:
 	text "Are you going to"
 	line "make your #MON"
 	cont "forget some moves?"
@@ -135,7 +128,7 @@ BlackthornCooltrainerF1Text:
 	cont "of here."
 	done
 
-BlackthornYoungsterText:
+BlueForestYoungsterText:
 	text "There are lots of"
 	line "ICE type #MON"
 	para "in the DEEPWATER"
@@ -182,7 +175,7 @@ SantosNotSaturdayText:
 	line "not Saturday…"
 	done
 
-BlackthornCooltrainerF2Text:
+BlueForestCooltrainerF2Text:
 	text "Wow, you went"
 	line "through the"
 	cont "DEEPWATER PASSAGE?"
@@ -190,7 +183,7 @@ BlackthornCooltrainerF2Text:
 	line "hotshot trainer!"
 	done
 	
-BlackthornCooltrainerF2TextNotWow:
+BlueForestCooltrainerF2TextNotWow:
 	text "I've never gone to"
 	line "FROSTPOINT TOWN."
 	para "Traveling through"
@@ -206,7 +199,7 @@ BlueForestSignText:
 	line "Retreat"
 	done
 
-BlackthornGymSignText:
+BlueForestGymSignText:
 	text "BLUE FOREST"
 	line "#MON GYM"
 	cont "LEADER: PRYCE"
@@ -256,7 +249,7 @@ BlueForest_MapEvents:
 
 	db 7 ; bg events
 	bg_event  2, 26, BGEVENT_READ, BlueForestSign
-	bg_event 28, 22, BGEVENT_READ, BlackthornGymSign
+	bg_event 28, 22, BGEVENT_READ, BlueForestGymSign
 	bg_event  0, 18, BGEVENT_READ, MoveDeletersHouseSign
 	bg_event  4,  8, BGEVENT_READ, DragonDensSign
 	bg_event  0, 17, BGEVENT_READ, BlueForestTrainerTips
@@ -264,10 +257,6 @@ BlueForest_MapEvents:
 	bg_event 14, 18, BGEVENT_READ, BlueForestPokecenterSign
 
 	db 5 ; object events
-;	object_event 15,  6, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BlackthornSuperNerdScript, EVENT_BLACKTHORN_CITY_SUPER_NERD_BLOCKS_GYM
-;	object_event 23,  9, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BlackthornSuperNerdScript, EVENT_BLACKTHORN_CITY_SUPER_NERD_DOES_NOT_BLOCK_GYM
-;	object_event  4,  6, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BlackthornGramps1Script, EVENT_BLACKTHORN_CITY_GRAMPS_BLOCKS_DRAGONS_DEN
-;	object_event  6,  6, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BlackthornGramps2Script, EVENT_BLACKTHORN_CITY_GRAMPS_NOT_BLOCKING_DRAGONS_DEN
 	object_event 26, 23, SPRITE_BLACK_BELT, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BlackthornBlackBeltScript, -1
 	object_event 16, 23, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BlackthornCooltrainerF1Script, -1
 	object_event 13, 14, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BlackthornYoungsterScript, -1

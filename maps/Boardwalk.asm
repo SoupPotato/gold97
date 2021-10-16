@@ -14,7 +14,7 @@ Boardwalk_MapScripts:
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_OBJECTS, .MoveTutor
-	
+
 .MoveTutor:
 	checkevent EVENT_CLEARED_RADIO_TOWER
 	iffalse .MoveTutorDisappear
@@ -22,11 +22,11 @@ Boardwalk_MapScripts:
 	iffalse .MoveTutorDisappear
 	appear BOARDWALK_POKEFAN_M
 	return
-	
+
 .MoveTutorDisappear:
 	disappear BOARDWALK_POKEFAN_M
-	return	
-	
+	return
+
 MoveTutorScript:
 	faceplayer
 	opentext

@@ -1,8 +1,7 @@
 	const_def 2 ; object constants
-	const TINTOWER4F_POKE_BALL1
-	const TINTOWER4F_SAGE1
-	const TINTOWER4F_SAGE2
-	;const TINTOWER4F_SAGE3
+	const BRASSTOWER4F_POKE_BALL1
+	const BRASSTOWER4F_SAGE1
+	const BRASSTOWER4F_SAGE2
 
 BrassTower4F_MapScripts:
 	db 0 ; scene scripts
@@ -10,7 +9,6 @@ BrassTower4F_MapScripts:
 	db 0 ; callbacks
 	
 SproutTower4FSign:
-	setevent EVENT_READ_5F4F_SIGN
 	jumptext SproutTower4FSignText
 	
 SproutTower4FSignText:
@@ -103,6 +101,6 @@ BrassTower4F_MapEvents:
 	bg_event  8,  1, BGEVENT_READ, SproutTower4FSign
 
 	db 3 ; object events
-	object_event  0,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, BrassTower4FEscapeRope, EVENT_TIN_TOWER_4F_ESCAPE_ROPE
+	object_event  0,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, BrassTower4FEscapeRope, EVENT_BRASS_TOWER_4F_ESCAPE_ROPE
 	object_event  3,  1, SPRITE_SAGE, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerSageLi, EVENT_ALLOY_CAPTAIN_AND_TOWER_SAGES_GONE
 	object_event  9,  9, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerSageGaku, EVENT_ALLOY_CAPTAIN_AND_TOWER_SAGES_GONE

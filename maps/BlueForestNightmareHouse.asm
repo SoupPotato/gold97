@@ -1,6 +1,6 @@
 	const_def 2 ; object constants
-	const BLUEFORESTHOUSE_1_GRANNY
-	const BLUEFORESTHOUSE_1_METTO
+	const BLUEFORESTNIGHTMAREHOUSE_GRANNY
+	const BLUEFORESTNIGHTMAREHOUSE_METTO
 
 BlueForestNightmareHouse_MapScripts:
 	db 0 ; scene scripts

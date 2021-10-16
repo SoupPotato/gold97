@@ -1,11 +1,11 @@
 	const_def 2 ; object constants
-	const MAHOGANYGYM_PRYCE
-	const MAHOGANYGYM_BUENA1
-	const MAHOGANYGYM_ROCKER1
-	const MAHOGANYGYM_BUENA2
-	const MAHOGANYGYM_ROCKER2
-	const MAHOGANYGYM_ROCKER3
-	const MAHOGANYGYM_GYM_GUY
+	const BLUEFORESTGYM_PRYCE
+	const BLUEFORESTGYM_BUENA1
+	const BLUEFORESTGYM_ROCKER1
+	const BLUEFORESTGYM_BUENA2
+	const BLUEFORESTGYM_ROCKER2
+	const BLUEFORESTGYM_ROCKER3
+	const BLUEFORESTGYM_GYM_GUY
 
 BlueForestGym_MapScripts:
 	db 0 ; scene scripts
@@ -15,10 +15,9 @@ BlueForestGym_MapScripts:
 BlueForestGymPryceScript:
 	faceplayer
 	checkevent EVENT_REMATCH_AVAILABLE_PRYCE
-	iftrue rematchscriptpryce
+	iftrue Rematchscriptpryce
 	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue postrematchscriptpryce
-	
+	iftrue Postrematchscriptpryce
 	opentext
 	checkevent EVENT_BEAT_PRYCE
 	iftrue .FightDone
@@ -64,7 +63,7 @@ BlueForestGym_NoRoomForIcyWind:
 	closetext
 	end
 
-rematchscriptpryce:
+Rematchscriptpryce:
 	opentext
 	writetext PryceRematchText
 	waitbutton
@@ -80,7 +79,7 @@ rematchscriptpryce:
 	closetext
 	end
 
-postrematchscriptpryce:
+Postrematchscriptpryce:
 	opentext
 	writetext PryceAfterRematchText
 	waitbutton
@@ -122,8 +121,6 @@ PryceAfterRematchText:
 	cont "will overcome all"
 	cont "life's obstacles!"
 	done
-
-
 
 BlueForestGymActivateRockets:
 	ifequal 7, .RadioTowerRockets

@@ -1,7 +1,7 @@
 	const_def 2 ; object constants
-	const TINTOWER5F_SAGE1
-	const TINTOWER5F_KURT
-	const TINTOWER5F_CAPTAIN
+	const BRASSTOWER5F_SAGE1
+	const BRASSTOWER5F_KURT
+	const BRASSTOWER5F_CAPTAIN
 
 BrassTower5F_MapScripts:
 	db 0 ; scene scripts
@@ -70,17 +70,17 @@ HoOhEventSceneLeft:
 	end
 	
 HoOhEventMainScene:
-	showemote EMOTE_SHOCK, TINTOWER5F_KURT, 15
+	showemote EMOTE_SHOCK, BRASSTOWER5F_KURT, 15
 	opentext
 	writetext KurtKnewIt
 	waitbutton
 	closetext
-	showemote EMOTE_SHOCK, TINTOWER5F_CAPTAIN, 15
+	showemote EMOTE_SHOCK, BRASSTOWER5F_CAPTAIN, 15
 	opentext
 	writetext CaptainCantBelieve
 	waitbutton
 	closetext
-	applymovement TINTOWER5F_SAGE1, SageOneStepDown
+	applymovement BRASSTOWER5F_SAGE1, SageOneStepDown
 	opentext
 	writetext SageTellsYouToSeeBird
 	waitbutton
@@ -184,7 +184,6 @@ Text_5FSage:
 	done
 
 SproutTower5FSign:
-	setevent EVENT_READ_5F5F_SIGN
 	jumptext SproutTower5FSignText
 
 	

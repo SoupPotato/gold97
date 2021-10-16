@@ -29,8 +29,8 @@ TrainerGruntM1:
 	clearflag ENGINE_ROCKETS_IN_MAHOGANY
 	pause 8
 	special PlayMapMusic
-	setevent EVENT_MAHOGANY_TOWN_POKEFAN_M_BLOCKS_GYM; this is the event for the rocket objects
-	setevent EVENT_BURNED_TOWER_MORTY
+	setevent EVENT_AQUARIUM_ROCKET_TAKEOVER_ACTIVE
+	setevent EVENT_WHITNEY_IN_BOULDER_MINES
 	setevent EVENT_WHITNEY_BACK_IN_GYM
 	setevent WHITNEY_FIGHTING_ROCKETS
 	appear AQUA2F_WHITNEY
@@ -77,7 +77,7 @@ TrainerGruntM3:
 AquaPokefanMScript:
 	faceplayer
 	opentext
-	checkevent EVENT_MAHOGANY_TOWN_POKEFAN_M_BLOCKS_GYM
+	checkevent EVENT_AQUARIUM_ROCKET_TAKEOVER_ACTIVE
 	iftrue .PokefanMNoRockets
 	writetext AquaPokefanMRocketsText
 	waitbutton
@@ -93,7 +93,7 @@ AquaPokefanMScript:
 AquaPokefanFScript:
 	faceplayer
 	opentext
-	checkevent EVENT_MAHOGANY_TOWN_POKEFAN_M_BLOCKS_GYM
+	checkevent EVENT_AQUARIUM_ROCKET_TAKEOVER_ACTIVE
 	iftrue .PokefanFNoRockets
 	writetext AquaPokefanFRocketsText
 	waitbutton
@@ -264,8 +264,8 @@ TeknosAquarium2F_MapEvents:
 	bg_event 11,  3, BGEVENT_READ, Aqua2FExhibit3Script
 
 	db 5 ; object events
-	object_event 15,  4, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 0, TrainerGruntM1, EVENT_MAHOGANY_TOWN_POKEFAN_M_BLOCKS_GYM
-	object_event  5,  4, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 4, TrainerGruntM3, EVENT_MAHOGANY_TOWN_POKEFAN_M_BLOCKS_GYM
+	object_event 15,  4, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 0, TrainerGruntM1, EVENT_AQUARIUM_ROCKET_TAKEOVER_ACTIVE
+	object_event  5,  4, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 4, TrainerGruntM3, EVENT_AQUARIUM_ROCKET_TAKEOVER_ACTIVE
 	object_event  7,  6, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AquaPokefanMScript, -1
 	object_event 10,  4, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AquaPokefanFScript, -1
 	object_event  9,  5, SPRITE_WHITNEY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, WhitneyAquariumScript, WHITNEY_DEFEATS_ROCKETS

@@ -6,7 +6,6 @@ BluesHouse_MapScripts:
 
 	db 0 ; callbacks
 
-
 DaisysLetter:
 	jumptext DaisysLetterText
 	

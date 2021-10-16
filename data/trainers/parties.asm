@@ -2808,42 +2808,37 @@ SageGroup:
 	db -1 ; end
 
 	; SAGE (3)
-	db "JIN@", TRAINERTYPE_NORMAL ; unused
-	db  9, PUDDIPUP
-	db -1 ; end
-
-	; SAGE (4)
 	db "TROY@", TRAINERTYPE_NORMAL ;used
 	db  7, PIDGEY
 	db  8, HOOTHOOT
 	db -1 ; end
 
-	; SAGE (5)
+	; SAGE (4)
 	db "JEFFREY@", TRAINERTYPE_NORMAL ;used
 	db 8, RINRING
 	db 8, PUDDIPUP
 	db -1 ; end
 
-	; SAGE (6)
+	; SAGE (5)
 	db "PING@", TRAINERTYPE_NORMAL ;used
 	db 7, TWINZ
 	db 9, GRIMBY
 	db -1 ; end
 
-	; SAGE (7)
+	; SAGE (6)
 	db "EDMOND@", TRAINERTYPE_MOVES ;used
 	db 19, GASTLY, NIGHT_SHADE, CURSE, HYPNOSIS, MEAN_LOOK
 	db 19, KURSTRAW, PSYWAVE, SPITE, FAINT_ATTACK, CURSE
 	db 20, HAUNTER, NIGHT_SHADE, CURSE, HYPNOSIS, MEAN_LOOK
 	db -1 ; end
 
-	; SAGE (8)
+	; SAGE (7)
 	db "NEAL@", TRAINERTYPE_NORMAL ;used
 	db  8, HOOTHOOT
 	db  9, KURSTRAW
 	db -1 ; end
 
-	; SAGE (9)
+	; SAGE (8)
 	db "LI@", TRAINERTYPE_NORMAL ;used
 	db 7, BELLSPROUT
 	db 7, ODDISH

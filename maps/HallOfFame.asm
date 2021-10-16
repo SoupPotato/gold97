@@ -63,8 +63,8 @@ ENDM
     clearifnotcaught ZAPDOS,   EVENT_EXPLODING_TRAP_3
     clearifnotcaught MOLTRES,  EVENT_EXPLODING_TRAP_4
     clearifnotcaught RAIKOU,   EVENT_AMPARE_CAVERN_RAIKOU
-    clearifnotcaught ENTEI,    EVENT_RIVAL_AZALEA_TOWN
-    clearifnotcaught SUICUNE,  EVENT_RIVAL_TEAM_ROCKET_BASE
+    clearifnotcaught ENTEI,    EVENT_MAGMA_SHAFT_ENTEI
+    clearifnotcaught SUICUNE,  EVENT_TIDAL_GROTTO_SUICUNE
     clearifnotcaught LUGIA,    EVENT_FOUGHT_LUGIA
     clearifnotcaught HO_OH,    EVENT_FOUGHT_HO_OH
     clearifnotcaught MEWTWO,   EVENT_SWITCH_11

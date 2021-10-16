@@ -1,7 +1,7 @@
 	const_def 2 ; object constants
-	const BLACKTHORNMART_CLERK
-	const BLACKTHORNMART_COOLTRAINER_M
-	const BLACKTHORNMART_BLACK_BELT
+	const BLUEFORESTMART_CLERK
+	const BLUEFORESTMART_COOLTRAINER_M
+	const BLUEFORESTMART_BLACK_BELT
 
 BlueForestMart_MapScripts:
 	db 0 ; scene scripts
@@ -10,7 +10,7 @@ BlueForestMart_MapScripts:
 
 BlueForestMartClerkScript:
 	opentext
-	pokemart MARTTYPE_STANDARD, MART_BLACKTHORN
+	pokemart MARTTYPE_STANDARD, MART_BLUEFOREST
 	closetext
 	end
 

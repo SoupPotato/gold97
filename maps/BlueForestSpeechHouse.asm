@@ -1,6 +1,6 @@
 	const_def 2 ; object constants
-	const BLACKTHORNDRAGONSPEECHHOUSE_GRANNY
-	const BLACKTHORNDRAGONSPEECHHOUSE_SLOWPOKE
+	const BLUEFORESTSPEECHHOUSE_GRANNY
+	const BLUEFORESTSPEECHHOUSE_SLOWPOKE
 
 BlueForestSpeechHouse_MapScripts:
 	db 0 ; scene scripts
@@ -17,14 +17,6 @@ BlueForestSpeechHouseDratiniScript:
 	waitbutton
 	closetext
 	end
-
-; unused
-BlueForestSpeechHousePictureBookshelf:
-	jumpstd picturebookshelf
-
-; unused
-BlueForestSpeechHouseMagazineBookshelf:
-	jumpstd magazinebookshelf
 
 BlueForestSpeechHouseGrannyText:
 	text "North of town, out"

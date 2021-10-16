@@ -1,16 +1,16 @@
 	const_def 2 ; object constants
-	const GOLDENRODGAMECORNER_CLERK
-	const GOLDENRODGAMECORNER_RECEPTIONIST1
-	const GOLDENRODGAMECORNER_RECEPTIONIST2
-	const GOLDENRODGAMECORNER_PHARMACIST1
-	const GOLDENRODGAMECORNER_PHARMACIST2
-	const GOLDENRODGAMECORNER_POKEFAN_M1
-	const GOLDENRODGAMECORNER_COOLTRAINER_M
-	const GOLDENRODGAMECORNER_POKEFAN_F
-	const GOLDENRODGAMECORNER_COOLTRAINER_F
-	const GOLDENRODGAMECORNER_GENTLEMAN
-	const GOLDENRODGAMECORNER_POKEFAN_M2
-	const GOLDENRODGAMECORNER_MOVETUTOR
+	const BOARDWALKGAMECORNER_CLERK
+	const BOARDWALKGAMECORNER_RECEPTIONIST1
+	const BOARDWALKGAMECORNER_RECEPTIONIST2
+	const BOARDWALKGAMECORNER_PHARMACIST1
+	const BOARDWALKGAMECORNER_PHARMACIST2
+	const BOARDWALKGAMECORNER_POKEFAN_M1
+	const BOARDWALKGAMECORNER_COOLTRAINER_M
+	const BOARDWALKGAMECORNER_POKEFAN_F
+	const BOARDWALKGAMECORNER_COOLTRAINER_F
+	const BOARDWALKGAMECORNER_GENTLEMAN
+	const BOARDWALKGAMECORNER_POKEFAN_M2
+	const BOARDWALKGAMECORNER_MOVETUTOR
 	const BOARDWALKGAMECORNER_RECEPTIONIST3
 
 BoardwalkGameCorner_MapScripts:
@@ -28,13 +28,13 @@ BoardwalkGameCorner_MapScripts:
 	ifequal WEDNESDAY, .move_tutor_outside
 	ifequal SATURDAY, .move_tutor_outside
 .move_tutor_inside
-	appear GOLDENRODGAMECORNER_MOVETUTOR
+	appear BOARDWALKGAMECORNER_MOVETUTOR
 	return
 
 .move_tutor_outside
 	checkflag ENGINE_DAILY_MOVE_TUTOR
 	iftrue .finish
-	disappear GOLDENRODGAMECORNER_MOVETUTOR
+	disappear BOARDWALKGAMECORNER_MOVETUTOR
 .finish
 	return
 
@@ -44,7 +44,7 @@ MoveTutorInsideScript:
 	writetext MoveTutorInsideText
 	waitbutton
 	closetext
-	turnobject GOLDENRODGAMECORNER_MOVETUTOR, RIGHT
+	turnobject BOARDWALKGAMECORNER_MOVETUTOR, RIGHT
 	end
 
 BoardwalkGameCornerCoinVendorScript:
@@ -451,7 +451,7 @@ BoardwalkGameCornerPokefanM1Script:
 	writetext BoardwalkGameCornerPokefanM1Text
 	waitbutton
 	closetext
-	turnobject GOLDENRODGAMECORNER_POKEFAN_M1, RIGHT
+	turnobject BOARDWALKGAMECORNER_POKEFAN_M1, RIGHT
 	end
 
 BoardwalkGameCornerCooltrainerMScript:
@@ -460,7 +460,7 @@ BoardwalkGameCornerCooltrainerMScript:
 	writetext BoardwalkGameCornerCooltrainerMText
 	waitbutton
 	closetext
-	turnobject GOLDENRODGAMECORNER_COOLTRAINER_M, LEFT
+	turnobject BOARDWALKGAMECORNER_COOLTRAINER_M, LEFT
 	end
 
 BoardwalkGameCornerPokefanFScript:
@@ -469,7 +469,7 @@ BoardwalkGameCornerPokefanFScript:
 	writetext BoardwalkGameCornerPokefanFText
 	waitbutton
 	closetext
-	turnobject GOLDENRODGAMECORNER_POKEFAN_F, RIGHT
+	turnobject BOARDWALKGAMECORNER_POKEFAN_F, RIGHT
 	end
 
 BoardwalkGameCornerCooltrainerFScript:
@@ -481,7 +481,7 @@ BoardwalkGameCornerGentlemanScript:
 	writetext BoardwalkGameCornerGentlemanText
 	waitbutton
 	closetext
-	turnobject GOLDENRODGAMECORNER_GENTLEMAN, RIGHT
+	turnobject BOARDWALKGAMECORNER_GENTLEMAN, RIGHT
 	end
 
 BoardwalkGameCornerPokefanM2Script:
@@ -936,5 +936,5 @@ BoardwalkGameCorner_MapEvents:
 	object_event 10,  3, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WANDER, 2, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, BoardwalkGameCornerCooltrainerFScript, -1
 	object_event  5, 10, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BoardwalkGameCornerGentlemanScript, -1
 	object_event  2,  9, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, BoardwalkGameCornerPokefanM2Script, -1
-	object_event 17, 10, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, MoveTutorInsideScript, EVENT_GOLDENROD_GAME_CORNER_MOVE_TUTOR
+	object_event 17, 10, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, MoveTutorInsideScript, EVENT_BOARDWALK_GAME_CORNER_MOVE_TUTOR
 	object_event 15,  2, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BoardwalkGameCornerDecorVendorScript, -1

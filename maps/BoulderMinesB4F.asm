@@ -1,7 +1,7 @@
 	const_def 2 ; object constants
-	const MOUNT_MOON_ITEMBALL
-	const MOUNT_MOON_ITEMBALL_2
-	const MOUNT_MOON_ITEMBALL_3
+	const BOULDERMINESB4F_ITEMBALL
+	const BOULDERMINESB4F_ITEMBALL_2
+	const BOULDERMINESB4F_ITEMBALL_3
 
 BoulderMinesB4F_MapScripts:
 	db 2 ; scene scripts
@@ -15,7 +15,6 @@ BoulderMinesB4F_MapScripts:
 
 .DummyScene:
 	end
-	
 
 BoulderMinesB4FDomeFossil:
 	itemball DOME_FOSSIL
@@ -23,7 +22,7 @@ BoulderMinesB4FDomeFossil:
 BoulderMinesB4FTMGigaDrain:
 	itemball TM_GIGA_DRAIN
 
-UnionCave1FAwakening:
+BoulderMinesB4FHMStrength:
 	itemball HM_STRENGTH
 
 BoulderMinesB4F_MapEvents:
@@ -39,6 +38,6 @@ BoulderMinesB4F_MapEvents:
 	db 0 ; bg events
 
 	db 3 ; object events
-	object_event 24,  9, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, UnionCave1FAwakening, EVENT_UNION_CAVE_1F_AWAKENING
-	object_event 18, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, BoulderMinesB4FTMGigaDrain, EVENT_ROUTE_44_ULTRA_BALL
-	object_event  4, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, BoulderMinesB4FDomeFossil, EVENT_ROUTE_44_MAX_REPEL
+	object_event 24,  9, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, BoulderMinesB4FHMStrength, EVENT_BOULDER_MINES_B4F_AWAKENING
+	object_event 18, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, BoulderMinesB4FTMGigaDrain, EVENT_BOULDER_MINES_B4F_ULTRA_BALL
+	object_event  4, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, BoulderMinesB4FDomeFossil, EVENT_BOULDER_MINES_B4F_MAX_REPEL

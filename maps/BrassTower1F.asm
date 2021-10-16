@@ -1,15 +1,13 @@
 	const_def 2 ; object constants
-	const SPROUTTOWER1F_SAGE1
-	const SPROUTTOWER1F_SAGE2
-	const SPROUTTOWER1F_SAGE3
-	;const SPROUTTOWER1F_SAGE4
-	const SPROUTTOWER1F_POKE_BALL
+	const BRASSTOWER1F_SAGE1
+	const BRASSTOWER1F_SAGE2
+	const BRASSTOWER1F_SAGE3
+	const BRASSTOWER1F_POKE_BALL
 
 BrassTower1F_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
-
 
 TrainerSageChow:
 	trainer SAGE, CHOW, EVENT_BEAT_SAGE_CHOW, SageChowSeenText, SageChowBeatenText, 0, .Script
@@ -27,12 +25,9 @@ BrassTower1FParlyzHeal:
 
 BrassTower1FStatue:
 	jumptext BrassTower1FStatueText
-	
-	
+
 BrassTower1FSign:
-	setevent EVENT_READ_5F1F_SIGN
 	jumptext BrassTower1FSignText
-	
 
 SageChowSeenText:
 	text "We stand guard in"
@@ -55,7 +50,7 @@ SageChowAfterBattleText:
 	para "We must always be"
 	line "thankful for this."
 	done
-	
+
 TrainerSageNico:
 	trainer SAGE, NICO, EVENT_BEAT_SAGE_NICO, SageNicoSeenText, SageNicoBeatenText, 0, .Script
 
@@ -91,39 +86,6 @@ SageNicoAfterBattleText:
 	cont "already stood."
 	done
 
-;TrainerSageJin:
-;	trainer SAGE, JIN, EVENT_BEAT_SAGE_JIN, SageJinSeenText, SageJinBeatenText, 0, .Script
-
-;.Script:
-;	endifjustbattled
-;	opentext
-;	writetext SageJinAfterBattleText
-;	waitbutton
-;	closetext
-;	end
-
-
-;SageJinSeenText:
-;	text "All #MON have"
-;	line "a lesson to teach"
-;	cont "us."
-;	para "It is our"
-;	line "responsibility to"
-;	para "take the time to"
-;	line "stop and listen."	
-;	done
-
-;SageJinBeatenText:
-;	text "Do you hear?"
-;	done
-
-;SageJinAfterBattleText:
-;	text "#MON teach much"
-;	line "to humans."
-;	para "More than most"
-;	line "people realize."
-;	done
-	
 TrainerSageTroy:
 	trainer SAGE, TROY, EVENT_BEAT_SAGE_TROY, SageTroySeenText, SageTroyBeatenText, 0, .Script
 
@@ -198,6 +160,5 @@ BrassTower1F_MapEvents:
 	db 4 ; object events
 	object_event  0,  2, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSageChow, EVENT_ALLOY_CAPTAIN_AND_TOWER_SAGES_GONE
 	object_event  2, 11, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerSageNico, EVENT_ALLOY_CAPTAIN_AND_TOWER_SAGES_GONE
-	;object_event  7,  1, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerSageJin, EVENT_ALLOY_CAPTAIN_AND_TOWER_SAGES_GONE
 	object_event 10,  6, SPRITE_SAGE, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerSageTroy, EVENT_ALLOY_CAPTAIN_AND_TOWER_SAGES_GONE
-	object_event  0,  5, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, BrassTower1FParlyzHeal, EVENT_SPROUT_TOWER1F_PARLYZ_HEAL
+	object_event  0,  5, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, BrassTower1FParlyzHeal, EVENT_BRASS_TOWER_1F_PARLYZ_HEAL
