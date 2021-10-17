@@ -21,30 +21,18 @@ SSAquaCaptain:
 	opentext
 	checkevent EVENT_FAST_SHIP_FIRST_TIME
 	iftrue .LaterTrip
-	checkevent EVENT_FAST_SHIP_CABINS_SE_SSE_CAPTAINS_CABIN_TWIN_2
+	checkevent EVENT_FAST_SHIP_CABINS_TALKED_WITH_CAPTAIN_FIRST_TIME
 	iffalse .FirstCaptainTalk
 	writetext SSAquaCaptainExhaustingText
 	waitbutton
 	closetext
 	end
-	
 .FirstCaptainTalk
 	writetext SSAquaCaptainShipIsBrokenText
 	waitbutton
 	closetext
-;	turnobject FASTSHIPCABINS_SE_SSE_CAPTAINSCABIN_CAPTAIN, DOWN
-;	pause 20
-;	playsound SFX_ELEVATOR_END
-;	pause 30
-;	opentext
-;	writetext SSAquaHasArrivedVermilionText
-;	waitbutton
-;	setevent EVENT_FAST_SHIP_HAS_ARRIVED
-	setevent EVENT_FAST_SHIP_FOUND_GIRL
-	setevent EVENT_FAST_SHIP_CABINS_SE_SSE_CAPTAINS_CABIN_TWIN_2
-;	closetext
+	setevent EVENT_FAST_SHIP_CABINS_TALKED_WITH_CAPTAIN_FIRST_TIME
 	end
-	
 
 .LaterTrip:
 	checkevent EVENT_GOT_METAL_COAT_FROM_GRANDPA_ON_SS_AQUA
@@ -64,25 +52,12 @@ SSAquaCaptain:
 	waitbutton
 	closetext
 	end
-	
+
 SSCaptain_NoRoom:
 	writetext SSCaptain_NoRoomText
 	waitbutton
 	closetext
 	end
-	
-;.NoRoom:
-;	closetext
-;	waitsfx
-;	playsound SFX_ELEVATOR_END
-;	pause 30
-;	opentext
-;	writetext SSAquaHasArrivedVermilionText
-;	waitbutton
-;	setevent EVENT_FAST_SHIP_HAS_ARRIVED
-;	setevent EVENT_FAST_SHIP_FOUND_GIRL
-;	closetext
-;	end
 
 TrainerPokefanmColin:
 	trainer POKEFANM, COLIN, EVENT_BEAT_POKEFANM_COLIN, PokefanmColinSeenText, PokefanmColinBeatenText, 0, .Script

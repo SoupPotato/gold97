@@ -48,7 +48,7 @@ TeknosPortSailorAtGangwayScript:
 	disappear TEKUPORT_SAILOR2
 	waitsfx
 	applymovement PLAYER, MovementData_0x74a301
-	clearevent EVENT_OLIVINE_PORT_SAILOR_AT_GANGWAY
+	clearevent EVENT_WESTPORT_PORT_SAILOR_AT_GANGWAY
 	playsound SFX_EXIT_BUILDING
 	special FadeOutPalettes
 	waitsfx

@@ -81,7 +81,7 @@ FastShipBed:
 	closetext
 	checkevent EVENT_FAST_SHIP_HAS_ARRIVED
 	iftrue .AlreadyArrived
-	checkevent EVENT_FAST_SHIP_FOUND_GIRL
+	checkevent EVENT_FAST_SHIP_CABINS_TALKED_WITH_CAPTAIN_FIRST_TIME
 	iftrue .CanArrive
 	checkevent EVENT_FAST_SHIP_FIRST_TIME
 	iftrue .CanArrive

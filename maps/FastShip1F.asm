@@ -2,13 +2,12 @@
 	const FASTSHIP1F_SAILOR1
 	const FASTSHIP1F_SAILOR2
 	const FASTSHIP1F_SAILOR3
-	const FASTSHIP1F_GENTLEMAN
 
 FastShip1F_MapScripts:
 	db 3 ; scene scripts
 	scene_script .DummyScene0 ; SCENE_DEFAULT
 	scene_script .EnterFastShip ; SCENE_FASTSHIP1F_ENTER_SHIP
-	scene_script .DummyScene2 ; SCENE_FASTSHIP1F_MEET_GRANDPA
+	scene_script .DummyScene2 ; SCENE_FASTSHIP1F_CAPTAIN_ANNOUNCMENT
 
 	db 0 ; callbacks
 
@@ -32,11 +31,11 @@ FastShip1F_MapScripts:
 	blackoutmod FAST_SHIP_CABINS_SW_SSW_NW
 	clearevent EVENT_FAST_SHIP_HAS_ARRIVED
 	checkevent EVENT_FAST_SHIP_FIRST_TIME
-	iftrue .SkipGrandpa
-	setscene SCENE_FASTSHIP1F_MEET_GRANDPA
+	iftrue .SkipAnnouncement
+	setscene SCENE_FASTSHIP1F_CAPTAIN_ANNOUNCEMENT
 	end
 
-.SkipGrandpa:
+.SkipAnnouncement:
 	setscene SCENE_DEFAULT
 	end
 
@@ -46,42 +45,42 @@ FastShip1FSailor1Script:
 	checkevent EVENT_FAST_SHIP_HAS_ARRIVED
 	iftrue .Arrived
 	checkevent EVENT_FAST_SHIP_DESTINATION_WESTPORT
-	iftrue .Olivine
-	writetext FastShip1FSailor1Text_ToVermilion
+	iftrue .Westport
+	writetext FastShip1FSailor1Text_ToAmami
 	waitbutton
 	closetext
 	end
 
-.Olivine:
-	writetext FastShip1FSailor1Text_ToOlivine
+.Westport:
+	writetext FastShip1FSailor1Text_ToWestport
 	waitbutton
 	closetext
 	end
 
 .Arrived:
 	checkevent EVENT_FAST_SHIP_DESTINATION_WESTPORT
-	iftrue ._Olivine
-	writetext FastShip1FSailor1Text_InVermilion
+	iftrue ._Westport
+	writetext FastShip1FSailor1Text_InAmami
 	waitbutton
 	closetext
 	scall .LetThePlayerOut
 	playsound SFX_EXIT_BUILDING
 	special FadeOutPalettes
 	waitsfx
-	setevent EVENT_VERMILION_PORT_SAILOR_AT_GANGWAY
+	setevent EVENT_AMAMI_PORT_SAILOR_AT_GANGWAY
 	setmapscene AMAMI_PORT, SCENE_AMAMIPORT_LEAVE_SHIP
 	warp AMAMI_PORT, 7, 17
 	end
 
-._Olivine:
-	writetext FastShip1FSailor1Text_InOlivine
+._Westport:
+	writetext FastShip1FSailor1Text_InWestport
 	waitbutton
 	closetext
 	scall .LetThePlayerOut
 	playsound SFX_EXIT_BUILDING
 	special FadeOutPalettes
 	waitsfx
-	setevent EVENT_OLIVINE_PORT_SAILOR_AT_GANGWAY
+	setevent EVENT_WESTPORT_PORT_SAILOR_AT_GANGWAY
 	setmapscene WESTPORT_PORT, SCENE_WESTPORT_PORT_LEAVE_SHIP
 	warp WESTPORT_PORT, 7, 23
 	end
@@ -102,13 +101,13 @@ FastShip1FSailor2Script:
 	faceplayer
 	opentext
 	checkevent EVENT_FAST_SHIP_FIRST_TIME
-	iftrue .Vermilion
+	iftrue .Amami
 	writetext FastShip1FSailor2Text_FirstTime
 	waitbutton
 	closetext
 	end
 
-.Vermilion:
+.Amami:
 	writetext FastShip1FSailor2Text
 	waitbutton
 	closetext
@@ -118,20 +117,7 @@ FastShip1FSailor3Script:
 	jumptextfaceplayer FastShip1FSailor3Text
 
 
-WorriedGrandpaSceneLeft:
-;	appear FASTSHIP1F_GENTLEMAN
-;	applymovement FASTSHIP1F_GENTLEMAN, MovementData_0x7521b
-;	playsound SFX_TACKLE
-;	applymovement PLAYER, MovementData_0x7522e
-;	applymovement FASTSHIP1F_GENTLEMAN, MovementData_0x75220
-;	opentext
-;	writetext FastShip1FGrandpaText
-;	waitbutton
-;	closetext
-;	turnobject PLAYER, RIGHT
-;	applymovement FASTSHIP1F_GENTLEMAN, MovementData_0x75222
-;	disappear FASTSHIP1F_GENTLEMAN
-;	setscene SCENE_DEFAULT
+CaptainAnnouncementScene:
 	playsound SFX_TACKLE
 	earthquake 80
 	waitsfx
@@ -240,7 +226,7 @@ CaptainSpeakingText:
 	done
 
 
-FastShip1FSailor1Text_ToVermilion:
+FastShip1FSailor1Text_ToAmami:
 	text "FAST SHIP S.S.AQUA"
 	line "is en route to"
 	cont "AMAMI TOWN."
@@ -250,7 +236,7 @@ FastShip1FSailor1Text_ToVermilion:
 	cont "we arrive."
 	done
 
-FastShip1FSailor1Text_ToOlivine:
+FastShip1FSailor1Text_ToWestport:
 	text "FAST SHIP S.S.AQUA"
 	line "is en route to"
 	cont "WESTPORT CITY."
@@ -292,27 +278,13 @@ FastShip1FSailor3Text:
 	cont "their cabins."
 	done
 
-;FastShip1FGrandpaText:
-;	text "Whoa! Excuse me."
-;	line "I was in a hurry!"
-;
-;	para "My granddaughter"
-;	line "is missing!"
-;
-;	para "She's just a wee"
-;	line "girl. If you see"
-;
-;	para "her, please let me"
-;	line "know!"
-;	done
-
-FastShip1FSailor1Text_InOlivine:
+FastShip1FSailor1Text_InWestport:
 	text "FAST SHIP S.S.AQUA"
 	line "has arrived in"
 	cont "WESTPORT CITY."
 	done
 
-FastShip1FSailor1Text_InVermilion:
+FastShip1FSailor1Text_InAmami:
 	text "FAST SHIP S.S.AQUA"
 	line "has arrived in"
 	cont "AMAMI TOWN."
@@ -336,16 +308,15 @@ FastShip1F_MapEvents:
 	warp_event 30, 14, FAST_SHIP_B1F, 2
 
 	db 5 ; coord events
-	coord_event 30,  9, SCENE_FASTSHIP1F_MEET_GRANDPA, WorriedGrandpaSceneLeft
-	coord_event 25, 16, SCENE_FASTSHIP1F_MEET_GRANDPA, WorriedGrandpaSceneLeft
-	coord_event 31, 10, SCENE_FASTSHIP1F_MEET_GRANDPA, WorriedGrandpaSceneLeft
-	coord_event 11, 11, SCENE_FASTSHIP1F_MEET_GRANDPA, WorriedGrandpaSceneLeft
-	coord_event 10, 12, SCENE_FASTSHIP1F_MEET_GRANDPA, WorriedGrandpaSceneLeft
+	coord_event 30,  9, SCENE_FASTSHIP1F_CAPTAIN_ANNOUNCEMENT, CaptainAnnouncementScene
+	coord_event 25, 16, SCENE_FASTSHIP1F_CAPTAIN_ANNOUNCEMENT, CaptainAnnouncementScene
+	coord_event 31, 10, SCENE_FASTSHIP1F_CAPTAIN_ANNOUNCEMENT, CaptainAnnouncementScene
+	coord_event 11, 11, SCENE_FASTSHIP1F_CAPTAIN_ANNOUNCEMENT, CaptainAnnouncementScene
+	coord_event 10, 12, SCENE_FASTSHIP1F_CAPTAIN_ANNOUNCEMENT, CaptainAnnouncementScene
 
 	db 0 ; bg events
 
-	db 4 ; object events
+	db 3 ; object events
 	object_event 25,  2, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FastShip1FSailor1Script, -1
 	object_event 14,  7, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FastShip1FSailor2Script, -1
 	object_event 22, 17, SPRITE_SAILOR, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FastShip1FSailor3Script, -1
-	object_event 19,  6, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FAST_SHIP_1F_GENTLEMAN
