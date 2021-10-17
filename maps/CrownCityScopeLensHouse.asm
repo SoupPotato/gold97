@@ -1,5 +1,5 @@
 	const_def 2 ; object constants
-	const CIANWOOD_BLISSEY_SPEECH_HOUSE_GRANNY
+	const CROWN_SCOPE_LENS_HOUSE_GRANNY
 
 CrownCityScopeLensHouse_MapScripts:
 	db 0 ; scene scripts
@@ -9,13 +9,13 @@ CrownCityScopeLensHouse_MapScripts:
 CrownCityScopeLensHouseGrannyScript:
 	faceplayer
 	opentext
-	checkevent EVENT_SWITCH_10
+	checkevent EVENT_GOT_SCOPE_LENS_IN_CROWN_CITY
 	iftrue .alreadygavescopelens
 	writetext CrownCityScopeLensHouseGrannyText1
 	waitbutton
 	verbosegiveitem SCOPE_LENS
 	iffalse .Done
-	setevent EVENT_SWITCH_10
+	setevent EVENT_GOT_SCOPE_LENS_IN_CROWN_CITY
 	jump .alreadygavescopelens
 	end
 	

@@ -2629,39 +2629,39 @@ wFastShipB1FSceneID::                             db ; d9bd
 wMountMoonSquareSceneID::                         db ; d9be
 wMobileTradeRoomSceneID::                         db ; d9bf
 wMobileBattleRoomSceneID::                        db ; d9c0
-wKurtsHouseSceneID::							  db ; hope this works
-wTekuPortSceneID::								  db ; it did, hope this works too
-wSlowpokeWellB1FSceneID::						  db ; lets do another, finally got it to work, don't forget data\maps\scenes.asm
-wSlowpokeWellB2FSceneID::						  db 
-wRoute35SceneID::								  db
-wViridianGymSceneID::							  db
-wRoute33SceneID::								  db
-wRoute36RuinsOfAlphGateSceneID::				  db
-wFuchsiaCitySceneID::							  db
-wSafariZoneWardensHomeSceneID::					  db
-wSafariZoneWardensHome2FSceneID::				  db
-wRadioTower6FSceneID::							  db
-wGoldenrodCitySceneID::							  db
-wOldCitySceneID::							  db
-wTinTower5FSceneID::							  db
+wKurtsHouseSceneID::                              db ; hope this works
+wTekuPortSceneID::                                db ; it did, hope this works too
+wSlowpokeWellB1FSceneID::                         db ; lets do another, finally got it to work, don't forget data\maps\scenes.asm
+wSlowpokeWellB2FSceneID::                         db 
+wRoute35SceneID::                                 db
+wViridianGymSceneID::                             db
+wRoute33SceneID::                                 db
+wRoute36RuinsOfAlphGateSceneID::                  db
+wFuchsiaCitySceneID::                             db
+wSafariZoneWardensHomeSceneID::                   db
+wSafariZoneWardensHome2FSceneID::                 db
+wRadioTower6FSceneID::                            db
+wGoldenrodCitySceneID::                           db
+wOldCitySceneID::                                 db
+wTinTower5FSceneID::                              db
 wCeladonGymSceneID::                              db
-wKantoBattleClubB1FSceneID::					  db
-wKantoBattleClub1FSceneID::						  db
-wUndergroundPathSceneID::						  db
-wSaffronGymSceneID::							  db
-wRoute8SceneID::                                 db 
-wEcruteakCitySceneID::                             db 
-wOlivineLighthouse1FID::						db
-wOlivineLighthouse2FID::						db
-wWhirlIslandB3FSceneID::						db
-wPlayersHouse2FSceneID::                        db ; new 18 to 17
-wForkedStraitGateSceneID::                      db ; new, DS went from 23 to 22
-wRainbowIslandCaveSceneID::                     db ; new, DS went from 22 to 21
-wCastleMountainDanceHallSceneID::               db ; new, 21 to 20
-wCastleMountain3FBSceneID::                     db ; new 20 to 19
-wCastleMountainB1FSceneID::                     db ; new 19 to 18
-wTidalGrotto1FSceneID::                         db ; new
-wTidalGrottoB1FSceneID::                        db ; new
+wKantoBattleClubB1FSceneID::                      db
+wKantoBattleClub1FSceneID::                       db
+wCrownPassPathSceneID::                           db
+wSaffronGymSceneID::                              db
+wRoute8SceneID::                                  db 
+wEcruteakCitySceneID::                            db 
+wOlivineLighthouse1FID::                          db
+wOlivineLighthouse2FID::                          db
+wWhirlIslandB3FSceneID::                          db
+wPlayersHouse2FSceneID::                          db ; new 18 to 17
+wForkedStraitGateSceneID::                        db ; new, DS went from 23 to 22
+wRainbowIslandCaveSceneID::                       db ; new, DS went from 22 to 21
+wCastleMountainDanceHallSceneID::                 db ; new, 21 to 20
+wCastleMountain3FBSceneID::                       db ; new 20 to 19
+wCastleMountainB1FSceneID::                       db ; new 19 to 18
+wTidalGrotto1FSceneID::                           db ; new
+wTidalGrottoB1FSceneID::                          db ; new
 	ds 15 
 
 ; fight counts

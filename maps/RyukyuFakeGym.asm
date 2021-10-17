@@ -18,11 +18,11 @@ RyukyuFakeGym_MapScripts:
 	callback MAPCALLBACK_TILES, .RyukyuFakeGymTypeChange
 	
 .Trainers
-	checkevent EVENT_GOT_CRUIZE_FROM_ELM
+	checkevent EVENT_GOT_CRUIZE_FROM_OAK
 	iftrue .GrassGym
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
+	checkevent EVENT_GOT_CHIKORITA_FROM_OAK
 	iftrue .FireGym
-	checkevent EVENT_GOT_FLAMBEAR_FROM_ELM
+	checkevent EVENT_GOT_FLAMBEAR_FROM_OAK
 	iftrue .WaterGym
 	return
 	
@@ -48,9 +48,9 @@ RyukyuFakeGym_MapScripts:
 	return
 	
 .RyukyuFakeGymTypeChange:
-	checkevent EVENT_GOT_CRUIZE_FROM_ELM
+	checkevent EVENT_GOT_CRUIZE_FROM_OAK
 	iftrue .GrassGymBlocks
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
+	checkevent EVENT_GOT_CHIKORITA_FROM_OAK
 	iftrue .FireGymBlocks
 	jump .doneGym
 .GrassGymBlocks:
@@ -143,11 +143,11 @@ RyukyuFakeGymPokefanMScript:
 	iftrue .AfterBattle
 	writetext TrevorBeforeText
 	waitbutton
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
+	checkevent EVENT_GOT_CHIKORITA_FROM_OAK
 	iftrue .TrevorFire
-	checkevent EVENT_GOT_CRUIZE_FROM_ELM
+	checkevent EVENT_GOT_CRUIZE_FROM_OAK
 	iftrue .TrevorGrass
-	checkevent EVENT_GOT_FLAMBEAR_FROM_ELM
+	checkevent EVENT_GOT_FLAMBEAR_FROM_OAK
 	iftrue .TrevorWater
 	
 .TrevorFire	
@@ -189,11 +189,11 @@ RyukyuFakeGymPokefanMScript:
 	opentext ; was missing lmao
 	writetext HaveStarter2Egg
 	waitbutton
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
+	checkevent EVENT_GOT_CHIKORITA_FROM_OAK
 	iftrue .FireEgg
-	checkevent EVENT_GOT_CRUIZE_FROM_ELM
+	checkevent EVENT_GOT_CRUIZE_FROM_OAK
 	iftrue .GrassEgg
-	checkevent EVENT_GOT_FLAMBEAR_FROM_ELM
+	checkevent EVENT_GOT_FLAMBEAR_FROM_OAK
 	iftrue .WaterEgg
 
 .GrassEgg
@@ -310,9 +310,9 @@ RyukyuFakeGymGuyScript:
 	waitbutton
 	checkevent EVENT_EXPLODING_TRAP_19
 	iftrue .GymGuyFakeGymAfter
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
+	checkevent EVENT_GOT_CHIKORITA_FROM_OAK
 	iftrue .GymGuyFire
-	checkevent EVENT_GOT_CRUIZE_FROM_ELM
+	checkevent EVENT_GOT_CRUIZE_FROM_OAK
 	iftrue .GymGuyGrass
 	writetext GymGuyWaterText
 	waitbutton

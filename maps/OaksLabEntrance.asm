@@ -50,9 +50,9 @@ BattleScript:
 	writetext TimeToBattle
 	waitbutton
 	closetext
-	checkevent EVENT_GOT_CRUIZE_FROM_ELM
+	checkevent EVENT_GOT_CRUIZE_FROM_OAK
 	iftrue .Cruise
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
+	checkevent EVENT_GOT_CHIKORITA_FROM_OAK
 	iftrue .CHIKORITA
 	winlosstext SilverEntranceWinText, SilverEntranceLossText
 	loadtrainer RIVAL1, RIVAL1_1_CRUIZE

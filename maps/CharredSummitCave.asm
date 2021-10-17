@@ -1,6 +1,6 @@
 	const_def 2 ; object constants
-	const MOUNTMORTAR1FOUTSIDE_POKE_BALL1
-	const MOUNTMORTAR1FOUTSIDE_POKE_BALL2
+	const CHARREDSUMMIT_POKE_BALL1
+	const CHARREDSUMMIT_POKE_BALL2
 
 CharredSummitCave_MapScripts:
 	db 0 ; scene scripts
@@ -14,7 +14,7 @@ CharredSummitCaveRevive:
 	itemball MAX_REVIVE
 
 CharredSummitCaveHiddenHyperPotion:
-	hiddenitem HYPER_POTION, EVENT_MOUNT_MORTAR_1F_OUTSIDE_HIDDEN_HYPER_POTION
+	hiddenitem HYPER_POTION, EVENT_CHARRED_SUMMIT_HIDDEN_HYPER_POTION
 
 CharredSummitCave_MapEvents:
 	db 0, 0 ; filler
@@ -30,5 +30,5 @@ CharredSummitCave_MapEvents:
 	bg_event 10, 22, BGEVENT_ITEM, CharredSummitCaveHiddenHyperPotion
 
 	db 2 ; object events
-	object_event 30, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, CharredSummitCaveEther, EVENT_MOUNT_MORTAR_1F_OUTSIDE_ETHER
-	object_event 35,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, CharredSummitCaveRevive, EVENT_MOUNT_MORTAR_1F_OUTSIDE_REVIVE
+	object_event 30, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, CharredSummitCaveEther, EVENT_CHARRED_SUMMIT_ETHER
+	object_event 35,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, CharredSummitCaveRevive, EVENT_CHARRED_SUMMIT_REVIVE

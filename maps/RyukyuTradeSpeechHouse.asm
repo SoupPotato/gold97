@@ -28,8 +28,6 @@ RyukyuTradeSpeechHouseZubatScript:
 	writetext RyukyuTradeSpeechHouseZubatText
 	cry ZUBAT
 	waitbutton
-	;verbosegiveitem RED_SCALE;
-	;waitbutton;
 	closetext
 	end
 

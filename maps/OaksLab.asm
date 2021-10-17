@@ -146,7 +146,7 @@ OakCheckTogepiEgg:
 	iftrue OakAfterRadioTowerInPerson
 	checkevent EVENT_RIVAL_BURNED_TOWER
 	iftrue OakRocketsReturnedScript
-	checkevent EVENT_GOT_ODD_EGG_FROM_ELMS_AIDE
+	checkevent EVENT_GOT_ODD_EGG_FROM_OAKS_AIDE
 	iftrue OakHearAboutLeagueHatchScript
 	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
 	iftrue OakOpportunityScript
@@ -202,7 +202,7 @@ FlambearPokeBallScript:
 	yesorno
 	iffalse DidntChooseStarterScript
 	disappear OAKSLAB_POKE_BALL1
-	setevent EVENT_GOT_FLAMBEAR_FROM_ELM
+	setevent EVENT_GOT_FLAMBEAR_FROM_OAK
 	writetext ChoseStarterText
 	buttonsound
 	waitsfx
@@ -244,7 +244,7 @@ CruisePokeBallScript:
 	yesorno
 	iffalse DidntChooseStarterScript
 	disappear OAKSLAB_POKE_BALL2
-	setevent EVENT_GOT_CRUIZE_FROM_ELM
+	setevent EVENT_GOT_CRUIZE_FROM_OAK
 	writetext ChoseStarterText
 	buttonsound
 	waitsfx
@@ -286,7 +286,7 @@ CHIKORITAPokeBallScript:
 	yesorno
 	iffalse DidntChooseStarterScript
 	disappear OAKSLAB_POKE_BALL3
-	setevent EVENT_GOT_CHIKORITA_FROM_ELM
+	setevent EVENT_GOT_CHIKORITA_FROM_OAK
 	writetext ChoseStarterText
 	buttonsound
 	waitsfx

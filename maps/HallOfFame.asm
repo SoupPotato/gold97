@@ -61,10 +61,10 @@ clearifnotcaught: MACRO
 ENDM
     clearifnotcaught ARTICUNO, EVENT_EXPLODING_TRAP_9
     clearifnotcaught ZAPDOS,   EVENT_EXPLODING_TRAP_3
-    clearifnotcaught MOLTRES,  EVENT_EXPLODING_TRAP_4
-    clearifnotcaught RAIKOU,   EVENT_AMPARE_CAVERN_RAIKOU
-    clearifnotcaught ENTEI,    EVENT_MAGMA_SHAFT_ENTEI
-    clearifnotcaught SUICUNE,  EVENT_TIDAL_GROTTO_SUICUNE
+    clearifnotcaught MOLTRES,  EVENT_FOUGHT_MOLTRES
+    clearifnotcaught RAIKOU,   EVENT_FOUGHT_RAIKOU
+    clearifnotcaught ENTEI,    EVENT_FOUGHT_ENTEI
+    clearifnotcaught SUICUNE,  EVENT_FOUGHT_SUICUNE
     clearifnotcaught LUGIA,    EVENT_FOUGHT_LUGIA
     clearifnotcaught HO_OH,    EVENT_FOUGHT_HO_OH
     clearifnotcaught MEWTWO,   EVENT_SWITCH_11

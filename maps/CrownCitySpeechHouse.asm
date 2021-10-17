@@ -1,5 +1,5 @@
 	const_def 2 ; object constants
-	const CIANWOOD_PHARMACY_POKEFAN_M
+	const CROWN_CITY_SPEECH_HOUSE_POKEFAN_M
 
 CrownCitySpeechHouse_MapScripts:
 	db 0 ; scene scripts

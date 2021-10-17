@@ -1,7 +1,7 @@
 	const_def 2 ; object constants
-	const DIGLETTSCAVE_POKEFAN_M
-	const DIGLETTSCAVE_POKEMANIAC
-	const DIGLETTSCAVE_ITEM_1
+	const ENDONCAVE1F_POKEFAN_M
+	const ENDONCAVE1F_POKEMANIAC
+	const ENDONCAVE1F_ITEM_1
 
 EndonCave1F_MapScripts:
 	db 0 ; scene scripts
@@ -13,30 +13,26 @@ EndonCave1FTMDynamicpunch:
 	itemball TM_DYNAMICPUNCH
 
 EndonCave1FHiddenMaxRevive:
-	hiddenitem MAX_REVIVE, EVENT_DIGLETTS_CAVE_HIDDEN_MAX_REVIVE
+	hiddenitem MAX_REVIVE, EVENT_ENDON_CAVE_1F_HIDDEN_MAX_REVIVE
 
 
-Route2NuggetHouseFisherScript:
+EndonCave1FNuggetGuyScript:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_NUGGET_FROM_GUY
+	checkevent EVENT_GOT_NUGGET_FROM_ENDON_CAVE_NUGGET_GUY
 	iftrue .GotNugget
-	writetext Route2NuggetHouseFisherText
+	writetext EndonCave1FNuggetGuyText
 	buttonsound
 	verbosegiveitem NUGGET
 	iffalse .NoRoom
-	setevent EVENT_GOT_NUGGET_FROM_GUY
+	setevent EVENT_GOT_NUGGET_FROM_ENDON_CAVE_NUGGET_GUY
 .GotNugget:
-	writetext Route2NuggetHouseFisherText_GotNugget
+	writetext EndonCave1FNuggetGuyText_GotNugget
 	waitbutton
 .NoRoom:
 	closetext
 	end
 
-Route2NuggetHouseBookshelf:
-; unused
-	jumpstd difficultbookshelf
-	
 TrainerPokemaniacCalvin:
 	trainer POKEMANIAC, CALVIN, EVENT_BEAT_POKEMANIAC_CALVIN, PokemaniacCalvinSeenText, PokemaniacCalvinBeatenText, 0, .Script
 
@@ -48,7 +44,7 @@ TrainerPokemaniacCalvin:
 	closetext
 	end
 
-Route2NuggetHouseFisherText:
+EndonCave1FNuggetGuyText:
 	text "Hello!"
 	para "I may not look it,"
 	line "but I'm fabulously"
@@ -81,7 +77,7 @@ Route2NuggetHouseFisherText:
 	para "Here, take this!"
 	done
 
-Route2NuggetHouseFisherText_GotNugget:
+EndonCave1FNuggetGuyText_GotNugget:
 	text "That's a NUGGET."
 
 	para "It's worth a lot"
@@ -132,7 +128,7 @@ EndonCave1F_MapEvents:
 	bg_event  7, 10, BGEVENT_ITEM, EndonCave1FHiddenMaxRevive
 
 	db 3 ; object events
-	object_event 16,  7, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route2NuggetHouseFisherScript, -1
+	object_event 16,  7, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EndonCave1FNuggetGuyScript, -1
 	object_event 14, 12, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerPokemaniacCalvin, -1
-	object_event  4,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, EndonCave1FTMDynamicpunch, EVENT_ROUTE_45_REVIVE
+	object_event  4,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, EndonCave1FTMDynamicpunch, EVENT_GOT_TM01_DYNAMICPUNCH
 

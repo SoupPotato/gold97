@@ -1,12 +1,12 @@
 	const_def 2 ; object constants
-	const DragonsMaw_POKE_BALL1
-	const DragonsMaw_COOLTRAINER_M
-	const DragonsMaw_COOLTRAINER_F
-	const DragonsMaw_TWIN1
-	const DragonsMaw_TWIN2
-	const DragonsMaw_POKE_BALL2
-	const DragonsMaw_POKE_BALL3
-	const DragonsMaw_GENTLEMAN
+	const DRAGONSMAW_POKE_BALL1
+	const DRAGONSMAW_COOLTRAINER_M
+	const DRAGONSMAW_COOLTRAINER_F
+	const DRAGONSMAW_TWIN1
+	const DRAGONSMAW_TWIN2
+	const DRAGONSMAW_POKE_BALL2
+	const DRAGONSMAW_POKE_BALL3
+	const DRAGONSMAW_GENTLEMAN
 
 DragonsMaw_MapScripts:
 	db 0 ; scene scripts
@@ -45,7 +45,7 @@ TrainerCooltrainermDarin:
 	end
 	
 .DarinOrbCheck
-	checkevent EVENT_FOUND_MACHINE_PART_IN_CERULEAN_GYM
+	checkevent EVENT_GOT_DRAGON_ORB_IN_DRAGONS_MAW
 	iffalse .DarinGetDragonOrb
 	opentext
 	writetext CooltrainermDarinAfterBattleText
@@ -88,7 +88,7 @@ TrainerInstructorRand:
 	end
 	
 .RandOrbCheck
-	checkevent EVENT_FOUND_MACHINE_PART_IN_CERULEAN_GYM
+	checkevent EVENT_GOT_DRAGON_ORB_IN_DRAGONS_MAW
 	iffalse .RandGetDragonOrb
 	opentext
 	writetext InstructorRandAfterBattleText
@@ -132,7 +132,7 @@ TrainerCooltrainerfCara:
 	end
 	
 .CaraOrbCheck
-	checkevent EVENT_FOUND_MACHINE_PART_IN_CERULEAN_GYM
+	checkevent EVENT_GOT_DRAGON_ORB_IN_DRAGONS_MAW
 	iffalse .CaraGetDragonOrb
 	opentext
 	writetext CooltrainerfCaraAfterBattleText
@@ -175,7 +175,7 @@ TrainerTwinsLeaandpia1:
 	end
 	
 .Twin1OrbCheck
-	checkevent EVENT_FOUND_MACHINE_PART_IN_CERULEAN_GYM
+	checkevent EVENT_GOT_DRAGON_ORB_IN_DRAGONS_MAW
 	iffalse .Twin1GetDragonOrb
 	opentext
 	writetext TwinsLeaandpia1AfterBattleText
@@ -218,7 +218,7 @@ TrainerTwinsLeaandpia2:
 	end
 	
 .Twin2OrbCheck
-	checkevent EVENT_FOUND_MACHINE_PART_IN_CERULEAN_GYM
+	checkevent EVENT_GOT_DRAGON_ORB_IN_DRAGONS_MAW
 	iffalse .Twin2GetDragonOrb
 	opentext
 	writetext TwinsLeaandpia2AfterBattleText
@@ -233,34 +233,27 @@ TrainerTwinsLeaandpia2:
 DragonsMawDragonFangScript:
 	itemball DRAGON_FANG
 
-
-
-DragonShrineSignpost:
-	jumptext DragonShrineSignpostText
-
-DragonsMawCalcium:
+DragonsTMDragonbreath:
 	itemball TM_DRAGONBREATH
 
 DragonsMawMaxElixer:
 	itemball MAX_ELIXER
 
 DragonsMawHiddenRevive:
-	hiddenitem REVIVE, EVENT_DRAGONS_DEN_B1F_HIDDEN_REVIVE
+	hiddenitem REVIVE, EVENT_DRAGONS_MAW_HIDDEN_REVIVE
 
 DragonsMawHiddenMaxPotion:
-	hiddenitem MAX_POTION, EVENT_DRAGONS_DEN_B1F_HIDDEN_MAX_POTION
+	hiddenitem MAX_POTION, EVENT_DRAGONS_MAW_HIDDEN_MAX_POTION
 
 DragonsMawHiddenMaxElixer:
-	hiddenitem MAX_ELIXER, EVENT_DRAGONS_DEN_B1F_HIDDEN_MAX_ELIXER
+	hiddenitem MAX_ELIXER, EVENT_DRAGONS_MAW_HIDDEN_MAX_ELIXER
 
 DragonOrbGetScript:
 	opentext
 	writetext HeresTheOrb
 	waitbutton
 	verbosegiveitem MACHINE_PART
-	setevent EVENT_FOUND_MACHINE_PART_IN_CERULEAN_GYM
-;	writetext HeresTheOrb2
-;	waitbutton
+	setevent EVENT_GOT_DRAGON_ORB_IN_DRAGONS_MAW
 	closetext
 	end
 	
@@ -275,16 +268,6 @@ HeresTheOrb:
 	
 HeresTheOrb2:
 	text "got orb"
-	done
-
-DragonShrineSignpostText:
-	text "DRAGON SHRINE"
-
-	para "A shrine honoring"
-	line "the dragon #MON"
-
-	para "said to have lived"
-	line "in DRAGON'S MAW."
 	done
 
 CooltrainermDarinSeenText:
@@ -419,11 +402,11 @@ DragonsMaw_MapEvents:
 	bg_event 28, 16, BGEVENT_ITEM, DragonsMawHiddenMaxElixer
 
 	db 8 ; object events
-	object_event 33, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DragonsMawDragonFangScript, EVENT_DRAGONS_DEN_B1F_DRAGON_FANG
+	object_event 33, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DragonsMawDragonFangScript, EVENT_DRAGONS_MAWS_DRAGON_FANG
 	object_event 23,  7, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerCooltrainermDarin, -1
 	object_event 16,  2, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerCooltrainerfCara, -1
 	object_event  2, 12, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerTwinsLeaandpia1, -1
 	object_event  2, 13, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerTwinsLeaandpia2, -1
-	object_event 19, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DragonsMawCalcium, EVENT_DRAGONS_DEN_B1F_CALCIUM
-	object_event 26, 31, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DragonsMawMaxElixer, EVENT_DRAGONS_DEN_B1F_MAX_ELIXER
+	object_event 19, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DragonsTMDragonbreath, EVENT_GOT_TM24_DRAGONBREATH
+	object_event 26, 31, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DragonsMawMaxElixer, EVENT_DRAGONS_MAW_MAX_ELIXER
 	object_event 24, 25, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerInstructorRand, -1

@@ -65,7 +65,7 @@ ItemDescriptions:
 	dw EtherDesc
 	dw MaxEtherDesc
 	dw ElixerDesc
-	dw RedScaleDesc
+	dw TriWingDesc
 	dw SecretPotionDesc
 	dw SSTicketDesc
 	dw MysteryEggDesc
@@ -514,7 +514,7 @@ ElixerDesc:
 	db   "Restores PP of all"
 	next "moves by 10.@"
 
-RedScaleDesc:
+TriWingDesc:
 	db   "A blue, red, and"
 	next "yellow wing.@"
 

@@ -74,9 +74,9 @@ Route36GateRivalScript:
 	closetext
 	applymovement ROUTE36RUINSOFALPHGATE_RIVAL, SilverChecksGuard2
 	pause 5
-	checkevent EVENT_GOT_CRUIZE_FROM_ELM
+	checkevent EVENT_GOT_CRUIZE_FROM_OAK
 	iftrue .R36GCruise
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
+	checkevent EVENT_GOT_CHIKORITA_FROM_OAK
 	iftrue .R36GCHIKORITA
 	winlosstext Route36GSilverWinText, Route36GSilverLossText
 	loadtrainer RIVAL1, RIVAL1_4_CRUIZE

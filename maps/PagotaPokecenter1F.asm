@@ -27,7 +27,7 @@ PagotaPokecenter1F_ElmsAideScript:
 	special GiveOddEgg
 	stringtotext .eggname, MEM_BUFFER_1
 	scall .AideGivesEgg
-	setevent EVENT_GOT_ODD_EGG_FROM_ELMS_AIDE
+	setevent EVENT_GOT_ODD_EGG_FROM_OAKS_AIDE
 	clearevent EVENT_ELMS_AIDE_IN_LAB
 	writetext UnknownText_0x695c5
 	waitbutton

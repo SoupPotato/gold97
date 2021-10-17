@@ -20,7 +20,7 @@ MapScenes::
 	scene_var LANCES_ROOM,                                 wLancesRoomSceneID
 	scene_var HALL_OF_FAME,                                wHallOfFameSceneID
 	scene_var SILENT_TOWN,                                 wSilentTownSceneID
-	scene_var OAKS_LAB_ENTRANCE,						   wElmEntranceSceneID
+	scene_var OAKS_LAB_ENTRANCE,                           wElmEntranceSceneID
 	scene_var OAKS_LAB,                                    wElmsLabSceneID
 	scene_var PLAYERS_HOUSE_1F,                            wPlayersHouse1FSceneID
 	scene_var ROUTE_101,                                   wRoute29SceneID
@@ -57,28 +57,28 @@ MapScenes::
 	scene_var FAST_SHIP_B1F,                               wFastShipB1FSceneID
 	scene_var MOBILE_TRADE_ROOM,                           wMobileTradeRoomSceneID
 	scene_var MOBILE_BATTLE_ROOM,                          wMobileBattleRoomSceneID
-	scene_var KURTS_HOUSE,								   wKurtsHouseSceneID
-	scene_var TEKNOS_PORT,								   wTekuPortSceneID
-	scene_var SLOWPOKE_WELL_B1F,						   wSlowpokeWellB1FSceneID
-	scene_var SLOWPOKE_WELL_B2F,						   wSlowpokeWellB2FSceneID
-	scene_var ROUTE_103,								   wRoute35SceneID
-	scene_var ROCKET_SHIP_BASE,							   wViridianGymSceneID
-	scene_var ROUTE_104,							       wRoute33SceneID
-	scene_var ROUTE_112_STAND_CITY_GATE,				   wRoute36RuinsOfAlphGateSceneID
-	scene_var STAND_CITY,								   wFuchsiaCitySceneID
-	scene_var STAND_ROCKET_HOUSE_1F,					   wSafariZoneWardensHomeSceneID
-	scene_var STAND_ROCKET_HOUSE_2F,			    	   wSafariZoneWardensHome2FSceneID
-	scene_var RADIO_TOWER_6F,							   wRadioTower6FSceneID
-	scene_var WESTPORT_CITY,							   wGoldenrodCitySceneID
-	scene_var BRASS_TOWER_5F,							   wTinTower5FSceneID
-	scene_var KANTO_GYM,								   wCeladonGymSceneID
-	scene_var KANTO_BATTLE_CLUB_B1F,					   wKantoBattleClubB1FSceneID
-	scene_var KANTO_BATTLE_CLUB_1F,						   wKantoBattleClub1FSceneID
-	scene_var CROWN_PASS,							       wUndergroundPathSceneID
-	scene_var ROUTE_120,								   wRoute8SceneID
-	scene_var TEKNOS_CITY,							       wEcruteakCitySceneID
-	scene_var TEKNOS_AQUARIUM_1F,					       wOlivineLighthouse1FID
-	scene_var TEKNOS_AQUARIUM_2F,					       wOlivineLighthouse2FID
+	scene_var KURTS_HOUSE,                                 wKurtsHouseSceneID
+	scene_var TEKNOS_PORT,                                 wTekuPortSceneID
+	scene_var SLOWPOKE_WELL_B1F,                           wSlowpokeWellB1FSceneID
+	scene_var SLOWPOKE_WELL_B2F,                           wSlowpokeWellB2FSceneID
+	scene_var ROUTE_103,                                   wRoute35SceneID
+	scene_var ROCKET_SHIP_BASE,                            wViridianGymSceneID
+	scene_var ROUTE_104,                                   wRoute33SceneID
+	scene_var ROUTE_112_STAND_CITY_GATE,                   wRoute36RuinsOfAlphGateSceneID
+	scene_var STAND_CITY,                                  wFuchsiaCitySceneID
+	scene_var STAND_ROCKET_HOUSE_1F,                       wSafariZoneWardensHomeSceneID
+	scene_var STAND_ROCKET_HOUSE_2F,                       wSafariZoneWardensHome2FSceneID
+	scene_var RADIO_TOWER_6F,                              wRadioTower6FSceneID
+	scene_var WESTPORT_CITY,                               wGoldenrodCitySceneID
+	scene_var BRASS_TOWER_5F,                              wTinTower5FSceneID
+	scene_var KANTO_GYM,                                   wCeladonGymSceneID
+	scene_var KANTO_BATTLE_CLUB_B1F,                       wKantoBattleClubB1FSceneID
+	scene_var KANTO_BATTLE_CLUB_1F,                        wKantoBattleClub1FSceneID
+	scene_var CROWN_PASS,                                  wCrownPassPathSceneID
+	scene_var ROUTE_120,                                   wRoute8SceneID
+	scene_var TEKNOS_CITY,                                 wEcruteakCitySceneID
+	scene_var TEKNOS_AQUARIUM_1F,                          wOlivineLighthouse1FID
+	scene_var TEKNOS_AQUARIUM_2F,                          wOlivineLighthouse2FID
 	scene_var TRAINER_HOUSE_B1F,                           wTrainerHouseB1FSceneID
 	scene_var MOUNT_MOON_SQUARE,                           wMountMoonSquareSceneID
 	scene_var WHIRL_ISLAND_B3F,                            wWhirlIslandB3FSceneID
@@ -87,7 +87,7 @@ MapScenes::
 	scene_var CASTLE_MOUNTAIN_1F_DANCE_HALL,               wCastleMountainDanceHallSceneID
 	scene_var CASTLE_MOUNTAIN_3FB,                         wCastleMountain3FBSceneID
 	scene_var CASTLE_MOUNTAIN_B1F,                         wCastleMountainB1FSceneID
-	scene_var PLAYERS_HOUSE_2F,							   wPlayersHouse2FSceneID
+	scene_var PLAYERS_HOUSE_2F,                            wPlayersHouse2FSceneID
 	scene_var TIDAL_GROTTO_1F,                             wTidalGrotto1FSceneID
 	scene_var TIDAL_GROTTO_B1F,                            wTidalGrottoB1FSceneID
 	db -1

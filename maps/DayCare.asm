@@ -12,18 +12,18 @@ DayCare_MapScripts:
 	checkflag ENGINE_DAY_CARE_MAN_HAS_EGG
 	iftrue .PutDayCareManOutside
 	clearevent EVENT_DAY_CARE_MAN_IN_DAY_CARE
-	setevent EVENT_DAY_CARE_MAN_ON_ROUTE_34
+	setevent EVENT_DAY_CARE_MAN_ON_ROUTE_106
 	return
 
 .PutDayCareManOutside:
 	setevent EVENT_DAY_CARE_MAN_IN_DAY_CARE
-	clearevent EVENT_DAY_CARE_MAN_ON_ROUTE_34
+	clearevent EVENT_DAY_CARE_MAN_ON_ROUTE_106
 	return
 
 DayCareManScript_Inside:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_ODD_EGG
+	checkevent EVENT_GOT_SECOND_ODD_EGG_AT_DAYCARE
 	iftrue .AlreadyHaveOddEgg
 	writetext DayCareManText_GiveOddEgg
 	buttonsound
@@ -38,7 +38,7 @@ DayCareManScript_Inside:
 	writetext DayCareText_DescribeOddEgg
 	waitbutton
 	closetext
-	setevent EVENT_GOT_ODD_EGG
+	setevent EVENT_GOT_SECOND_ODD_EGG_AT_DAYCARE
 	end
 
 .PartyFull:

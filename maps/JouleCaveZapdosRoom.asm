@@ -10,7 +10,7 @@ JouleCaveZapdosRoom_MapScripts:
 .Zapdos:
 	checkevent EVENT_EXPLODING_TRAP_3
 	iftrue .NoAppearZ
-	checkitem RED_SCALE; change this to whatever becomes the tri-wing
+	checkitem TRI_WING
 	iftrue .AppearZ
 	jump .NoAppearZ
 

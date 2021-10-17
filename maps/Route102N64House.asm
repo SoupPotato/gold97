@@ -52,9 +52,9 @@ N64HouseScientistScript:
 	iftrue .AlreadyGotStarter3
 	writetext N64HouseScientistText5
 	waitbutton
-	checkevent EVENT_GOT_CRUIZE_FROM_ELM
+	checkevent EVENT_GOT_CRUIZE_FROM_OAK
 	iftrue .HaveCruiseGiveFlambear
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
+	checkevent EVENT_GOT_CHIKORITA_FROM_OAK
 	iftrue .HaveCHIKORITAGiveCruise
 	checkcode VAR_PARTYCOUNT
 	ifequal PARTY_LENGTH, .PartyFullStarter3

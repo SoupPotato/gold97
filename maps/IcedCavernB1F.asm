@@ -18,7 +18,7 @@ IcedCavernB1F_MapScripts:
 .Articuno:
 	checkevent EVENT_EXPLODING_TRAP_9
 	iftrue .NoAppearA
-	checkitem RED_SCALE; change this to whatever becomes the tri-wing
+	checkitem TRI_WING
 	iftrue .AppearA
 	jump .NoAppearA
 

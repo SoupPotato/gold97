@@ -62,8 +62,8 @@ SCENE_FINISHED EQU 1
 
 ; wCherrygroveCitySceneID
 	const_def
-	const SCENE_CHERRYGROVECITY_NOTHING    ; 0
-	const SCENE_CHERRYGROVECITY_MEET_RIVAL ; 1
+	const SCENE_CROWNCITY_NOTHING    ; 0
+	const SCENE_CROWN_PASS_MEET_RIVAL ; 1
 
 ; wRoute32SceneID
 	const_def 1
@@ -239,9 +239,9 @@ SCENE_FINISHED EQU 1
 	const_def 1
 	const SCENE_BATTLE_CLUB_1F_NOTHING
 	
-;wUndergroundPathSceneID
+;wCrownPassPathSceneID
 	const_def 1
-	const SCENE_UNDERGROUND_NOTHING
+	const SCENE_CROWN_PASS_NOTHING
 	
 ;wSaffronGymSceneID
 	const_def 1

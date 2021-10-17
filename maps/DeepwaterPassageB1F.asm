@@ -1,6 +1,6 @@
 	const_def 2 ; object constants
-	const ICEPATHB3F_POKE_BALL
-	const ICEPATHB3F_ROCK
+	const DEEPWATERPASSAGEB1F_POKE_BALL
+	const DEEPWATERPASSAGEB1F_ROCK
 
 DeepwaterPassageB1F_MapScripts:
 	db 0 ; scene scripts
@@ -27,5 +27,5 @@ DeepwaterPassageB1F_MapEvents:
 	db 0 ; bg events
 
 	db 2 ; object events
-	object_event 17,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DeepwaterPassageB1FNevermeltice, EVENT_ICE_PATH_B3F_NEVERMELTICE
+	object_event 17,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DeepwaterPassageB1FNevermeltice, EVENT_DEEPWATER_PASSAGE_B1F_NEVERMELTICE
 	object_event -6,  1, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DeepwaterPassageB1FRock, -1

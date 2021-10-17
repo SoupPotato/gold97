@@ -1,9 +1,9 @@
 	const_def 2 ; object constants
-	const ROUTE16FUCHSIASPEECHHOUSE_SUPER_NERD
-	const ROUTE16FUCHSIASPEECHHOUSE_COOLTRAINER_F
-	const ROUTE16FUCHSIASPEECHHOUSE_COOLTRAINER_M
-	const ROUTE16FUCHSIASPEECHHOUSE_ROCKER
-	const ROUTE16FUCHSIASPEECHHOUSE_LASS
+	const CROWN_CITY_TRAINER_HOUSE_SUPER_NERD
+	const CROWN_CITY_TRAINER_HOUSE_COOLTRAINER_F
+	const CROWN_CITY_TRAINER_HOUSE_COOLTRAINER_M
+	const CROWN_CITY_TRAINER_HOUSE_ROCKER
+	const CROWN_CITY_TRAINER_HOUSE_LASS
 
 CrownCityTrainerHouse_MapScripts:
 	db 0 ; scene scripts
@@ -12,38 +12,37 @@ CrownCityTrainerHouse_MapScripts:
 
 CrownCityTrainerHouseSuperNerdScript:
 	jumptextfaceplayer CrownCityTrainerHouseSuperNerdText
-	
+
 CrownCityTrainerHouseCooltrainerfScript:
 	jumptextfaceplayer CrownCityTrainerHouseCooltrainerfText
 
 CrownCityTrainerHouseCooltrainermScript:
 	jumptextfaceplayer CrownCityTrainerHouseCooltrainermText
-	
+
 CrownCityTrainerHouseRockerScript:
 	jumptextfaceplayer CrownCityTrainerHouseRockerText
 
 CrownCityTrainerHouseBookshelf:
 	jumpstd magazinebookshelf
-	
+
 CrownCityTrainerHouseLassScript:
 	faceplayer
 	opentext
 	checkevent EVENT_GOT_TM42_DREAM_EATER
 	iftrue .GotDreamEater
-	writetext ViridianCityDreamEaterFisherText
+	writetext CrownCityDreamEaterFisherText
 	buttonsound
 	verbosegiveitem TM_DREAM_EATER
 	iffalse .NoRoomForDreamEater
 	setevent EVENT_GOT_TM42_DREAM_EATER
 .GotDreamEater:
-	writetext ViridianCityDreamEaterFisherGotDreamEaterText
+	writetext CrownCityDreamEaterFisherGotDreamEaterText
 	waitbutton
 .NoRoomForDreamEater:
 	closetext
 	end
-	
 
-ViridianCityDreamEaterFisherText:
+CrownCityDreamEaterFisherText:
 	text "Yawn!"
 
 	para "I've been training"
@@ -53,28 +52,29 @@ ViridianCityDreamEaterFisherText:
 	
 	para "Did you know"
 	line "there's a move"
+
 	para "that's only"
 	line "effective against"
 	cont "sleeping #MON?"
+
 	para "Here, check this"
 	line "out."
 	done
 
-ViridianCityDreamEaterFisherGotDreamEaterText:
+CrownCityDreamEaterFisherGotDreamEaterText:
 	text "TM42 contains"
 	line "DREAM EATER…"
 
 	para "…Zzzzz…"
 	done
 
-	
 CrownCityTrainerHouseRockerText:
 	text "Which of my #-"
 	line "MON are tough"
 	para "enough to take on"
 	line "the LEAGUE?"
 	done
-	
+
 CrownCityTrainerHouseCooltrainermText:
 	text "I'm ready!"
 	para "I can do this!"
@@ -90,7 +90,7 @@ CrownCityTrainerHouseSuperNerdText:
 	para "GHOST, GROUND,"
 	line "and DRAGON types."
 	done
-	
+
 CrownCityTrainerHouseCooltrainerfText:
 	text "I had a tough time"
 	line "getting eight"

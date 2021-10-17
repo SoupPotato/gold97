@@ -1,7 +1,7 @@
 	const_def 2 ; object constants
-	const ICEPATH1F_POKE_BALL1
-	const ICEPATH1F_POKE_BALL2
-	const ICEPATH1F_POKE_BALL3
+	const DEEPWATERPASSAGEB2F_POKE_BALL1
+	const DEEPWATERPASSAGEB2F_POKE_BALL2
+	const DEEPWATERPASSAGEB2F_POKE_BALL3
 
 DeepwaterPassageB2F_MapScripts:
 	db 0 ; scene scripts

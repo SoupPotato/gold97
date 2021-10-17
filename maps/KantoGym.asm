@@ -18,7 +18,6 @@ KantoGymErikaScript:
 	iftrue rematchscriptRed
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue postrematchscriptRed
-	
 	opentext
 	checkflag ENGINE_RISINGBADGE
 	iftrue .FightDone
@@ -36,8 +35,22 @@ KantoGymErikaScript:
 	waitsfx
 	setflag ENGINE_RISINGBADGE
 .FightDone:
+;	checkevent EVENT_GOT_TM15_HYPER_BEAM
+;	iftrue .AlreadyGotTM
+	writetext ErikaAfterBattleText
+;	buttonsound
+;	verbosegiveitem TM_HYPER_BEAM
+;	iffalse .BagFull
+;	setevent EVENT_GOT_TM15_HYPER_BEAM
+;	writetext ErikaAfterBattleText
+	waitbutton
+	closetext
+	end
+
+.AlreadyGotTM:
 	writetext ErikaAfterBattleText
 	waitbutton
+.BagFull:
 	closetext
 	end
 

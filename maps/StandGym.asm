@@ -34,13 +34,13 @@ StandGymOkeraScript:
 	setmapscene STAND_CITY, SCENE_FUCHSIA_CITY_IMPOSTER
 	checkcode VAR_BADGES
 .FightDone:
-	checkevent EVENT_GOT_TM01_DYNAMICPUNCH
+	checkevent EVENT_GOT_TM46_THIEF
 	iftrue .AlreadyGotTM
 	writetext OkeraExplainBadgeText
 	buttonsound
 	verbosegiveitem TM_THIEF
 	iffalse .BagFull
-	setevent EVENT_GOT_TM01_DYNAMICPUNCH
+	setevent EVENT_GOT_TM46_THIEF
 	writetext OkeraExplainTMText
 	waitbutton
 	closetext

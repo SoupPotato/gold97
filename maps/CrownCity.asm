@@ -1,7 +1,7 @@
 	const_def 2 ; object constants
-	const CHERRYGROVE_CITY_LASS
-	const CHERRYGROVE_CITY_ROCKER
-	const CHERRYGROVE_CITY_JANINE
+	const CROWN_CITY_LASS
+	const CROWN_CITY_ROCKER
+	const CROWN_CITY_JANINE
 
 CrownCity_MapScripts:
 	db 0 ; scene scripts
@@ -10,17 +10,17 @@ CrownCity_MapScripts:
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
 
 .FlyPoint:
-	setflag ENGINE_FLYPOINT_CHERRYGROVE
+	setflag ENGINE_FLYPOINT_CROWN
 	return
 
-CherryGroveLassCoordScript:
+CrownCityLassCoordScript:
 	turnobject PLAYER, RIGHT
-	turnobject CHERRYGROVE_CITY_LASS, LEFT
+	turnobject CROWN_CITY_LASS, LEFT
 	opentext
 	writetext GoTrainerText
 	waitbutton
 	closetext
-	setscene SCENE_CHERRYGROVECITY_NOTHING
+	setscene SCENE_CROWNCITY_NOTHING
 	end
 
 CrownCityLassScript:
@@ -29,7 +29,7 @@ CrownCityLassScript:
 	writetext GoTrainerText
 	waitbutton
 	closetext
-	setscene SCENE_CHERRYGROVECITY_NOTHING
+	setscene SCENE_CROWNCITY_NOTHING
 	end
 	
 CrownCityPokecenterSign:
@@ -108,7 +108,7 @@ CrownCity_MapEvents:
 	warp_event 15, 15, CROWN_CITY_TRAINER_HOUSE, 2
 
 	db 1 ; coord events
-	coord_event  8, 16, SCENE_CHERRYGROVECITY_MEET_RIVAL, CherryGroveLassCoordScript
+	coord_event  8, 16, SCENE_CROWN_PASS_MEET_RIVAL, CrownCityLassCoordScript
 
 	db 4 ; bg events
 	bg_event  6, 22, BGEVENT_READ, CrownCityPokecenterSign

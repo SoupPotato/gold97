@@ -1,5 +1,5 @@
 	const_def 2 ; object constants
-	const CrownPass_SILVER
+	const CROWN_PASS_SILVER
 
 CrownPass_MapScripts:
 	db 0 ; scene scripts
@@ -10,21 +10,20 @@ RivalBattleFinal:
 	showemote EMOTE_SHOCK, PLAYER, 15
 	special FadeOutMusic
 	pause 15
-	turnobject CrownPass_SILVER, DOWN
+	turnobject CROWN_PASS_SILVER, DOWN
 	pause 15
-	applymovement CrownPass_SILVER, UndergroundSilverWalksToPlayer
+	applymovement CROWN_PASS_SILVER, CrownPassSilverWalksToPlayer
 	turnobject PLAYER, LEFT
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	opentext
-	writetext UndergroundSilverBeforeText
+	writetext CrownPassSilverBeforeText
 	waitbutton
 	closetext
-	checkevent EVENT_GOT_CRUIZE_FROM_ELM
+	checkevent EVENT_GOT_CRUIZE_FROM_OAK
 	iftrue .cruise
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
+	checkevent EVENT_GOT_CHIKORITA_FROM_OAK
 	iftrue .CHIKORITA
-	winlosstext UndergroundSilverWinText, UndergroundSilverLossText
-	;setlasttalked SLOWPOKE_WELL_B1F_SILVER
+	winlosstext CrownPassSilverWinText, CrownPassSilverLossText
 	loadtrainer RIVAL1, RIVAL1_5_CRUIZE
 	startbattle
 	dontrestartmapmusic
@@ -32,8 +31,7 @@ RivalBattleFinal:
 	jump .returnfrombattle
 
 .cruise
-	winlosstext UndergroundSilverWinText, UndergroundSilverLossText
-	;setlasttalked SLOWPOKE_WELL_B1F_SILVER
+	winlosstext CrownPassSilverWinText, CrownPassSilverLossText
 	loadtrainer RIVAL1, RIVAL1_5_CHIKORITA
 	startbattle
 	dontrestartmapmusic
@@ -41,8 +39,7 @@ RivalBattleFinal:
 	jump .returnfrombattle
 
 .CHIKORITA
-	winlosstext UndergroundSilverWinText, UndergroundSilverLossText
-	;setlasttalked SLOWPOKE_WELL_B1F_SILVER
+	winlosstext CrownPassSilverWinText, CrownPassSilverLossText
 	loadtrainer RIVAL1, RIVAL1_5_FLAMBEAR
 	startbattle
 	dontrestartmapmusic
@@ -52,15 +49,15 @@ RivalBattleFinal:
 .returnfrombattle
 	playmusic MUSIC_RIVAL_AFTER
 	opentext
-	writetext UndergroundSilverAfterText
+	writetext CrownPassSilverAfterText
 	waitbutton
 	closetext
-	applymovement PLAYER, UndergroundPlayer1StepToTheSide
-	applymovement CrownPass_SILVER, UndergroundSilverLeavesMovement
-	disappear CrownPass_SILVER
-	setscene SCENE_UNDERGROUND_NOTHING
+	applymovement PLAYER, CrownPassPlayer1StepToTheSide
+	applymovement CROWN_PASS_SILVER, CrownPassSilverLeavesMovement
+	disappear CROWN_PASS_SILVER
+	setscene SCENE_CROWN_PASS_NOTHING
 	setevent EVENT_EMERGENCY_SWITCH
-	setmapscene CROWN_CITY, SCENE_CHERRYGROVECITY_MEET_RIVAL
+	setmapscene CROWN_CITY, SCENE_CROWN_PASS_MEET_RIVAL
 	special HealParty
 	special FadeOutMusic
 	waitsfx
@@ -69,12 +66,12 @@ RivalBattleFinal:
 	end
 
 CrownPassHiddenFullRestore:
-	hiddenitem FULL_RESTORE, EVENT_UNDERGROUND_PATH_HIDDEN_FULL_RESTORE
+	hiddenitem FULL_RESTORE, EVENT_CROWN_PASS_HIDDEN_FULL_RESTORE
 
 CrownPassHiddenXSpecial:
-	hiddenitem X_SPECIAL, EVENT_UNDERGROUND_PATH_HIDDEN_X_SPECIAL
-	
-UndergroundSilverWalksToPlayer:
+	hiddenitem X_SPECIAL, EVENT_CROWN_PASS_HIDDEN_X_SPECIAL
+
+CrownPassSilverWalksToPlayer:
 	step DOWN
 	step DOWN
 	step DOWN
@@ -82,13 +79,13 @@ UndergroundSilverWalksToPlayer:
 	step DOWN
 	turn_head RIGHT
 	step_end
-	
-UndergroundPlayer1StepToTheSide:
+
+CrownPassPlayer1StepToTheSide:
 	step RIGHT
 	turn_head LEFT
 	step_end
-	
-UndergroundSilverLeavesMovement:
+
+CrownPassSilverLeavesMovement:
 	step RIGHT
 	step DOWN
 	step DOWN
@@ -97,54 +94,54 @@ UndergroundSilverLeavesMovement:
 	step DOWN
 	step DOWN
 	step_end
-	
-UndergroundSilverBeforeText:
+
+CrownPassSilverBeforeText:
 	text "Hi, <PLAY_G>!"
-	
+
 	para "You're about to"
 	line "climb MT.FUJI,"
 	cont "right?"
-	
+
 	para "It's been a long"
 	line "journey."
-	
+
 	para "We've both been"
 	line "through a lot."
-	
+
 	para "Are your #MON"
 	line "ready?"
 
 	para "Let's face off,"
 	line "right here!"
-	
+
 	para "A battle between"
 	line "friends!"
 	done
-	
-UndergroundSilverWinText:
+
+CrownPassSilverWinText:
 	text "…"
 	done
-	
-UndergroundSilverLossText:
+
+CrownPassSilverLossText:
 	text "…"
 	done
-	
-UndergroundSilverAfterText:
+
+CrownPassSilverAfterText:
 	text "You know what I've"
 	line "realized?"
-	
+
 	para "I was so excited"
 	line "to challenge the"
 	cont "LEAGUE."
-	
+
 	para "I wanted to have"
 	line "the strongest"
 	cont "#MON."
-	
+
 	para "I wanted to be the"
 	line "toughest trainer"
 	cont "there is."
-	
+
 	para "But dealing with"
 	line "TEAM ROCKET has"
 	cont "made me think."
@@ -152,16 +149,16 @@ UndergroundSilverAfterText:
 	para "I've realized I"
 	line "need to treat my"
 	cont "team with love."
-	
+
 	para "So, I don't think"
 	line "I'm quite ready to"
 	cont "face the LEAGUE"
 	cont "until I've worked"
 	cont "on that."
-	
+
 	para "<PLAY_G>,"
 	line "good luck."
-	
+
 	para "I'll see you"
 	line "around soon."
 	done

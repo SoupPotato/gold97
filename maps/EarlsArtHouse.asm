@@ -1,9 +1,9 @@
 	const_def 2 ; object constants
-	const EARLMUSEUM_FISHER
-	const EARLMUSEUM_BIRD
-	const EARLMUSEUM_DRAGON
-	const EARLMUSEUM_LASS
-	const EARLMUSEUM_POKEFAN_M
+	const EARLSARTHOUSE_FISHER
+	const EARLSARTHOUSE_BIRD
+	const EARLSARTHOUSE_DRAGON
+	const EARLSARTHOUSE_LASS
+	const EARLSARTHOUSE_POKEFAN_M
 
 EarlsArtHouse_MapScripts:
 	db 0 ; scene scripts
@@ -62,7 +62,7 @@ EarlScript:
 	scall .ExcitedToSee
 	special BillsGrandfather
 	iffalse .SaidNo
-	ifnotequal DRATINI, .WrongPokemon; edit here, change back to dratini
+	ifnotequal DRATINI, .WrongPokemon
 	writetext EarlShownPokemonText
 	buttonsound
 	setevent EVENT_SHOWED_DRATINI_TO_EARL
@@ -74,7 +74,7 @@ EarlScript:
 	iftrue .GotLuckyEgg
 	scall .ReceiveItem
 	verbosegiveitem LUCKY_EGG
-	iffalse .BagFull	
+	iffalse .BagFull
 	setevent EVENT_GOT_LUCKY_EGG_FROM_EARL
 	clearevent EVENT_EARL_DRATINI_STATUE_GONE
 	closetext
@@ -129,25 +129,25 @@ EarlScript:
 .BagFull:
 	closetext
 	end
-	
+
 EggStatue:
 	jumptext EggStatueText
 
 ArtSign:
 	jumptext ArtSignText
-	
+
 ArtHouseLassScript:
 	jumptextfaceplayer ArtHouseLassText
-	
+
 ArtHousePokefanMScript:
 	jumptextfaceplayer ArtHousePokefanMText
-	
+
 ArtHousePokefanMText:
 	text "This guy's work"
 	line "is really impress-"
 	cont "ive!"
 	done
-	
+
 ArtHouseLassText:
 	text "You know, I like"
 	line "this EGG one the"
@@ -158,7 +158,7 @@ EggStatueText:
 	text "#MON EGG STATUE"
 	line "by EARL"
 	done
-	
+
 ArtSignText:
 	text "EARL'S ART HOUSE"
 	para "Please look, but"
@@ -168,26 +168,26 @@ ArtSignText:
 EarlIntroText:
 	text "Oh, boo."
 	line "I'm a failure."
-	
+
 	para "My name is EARL,"
 	line "and I'm an artist."
-	
+
 	para "But inspiration"
 	line "has left me…"
-	
+
 	para "The only sculpture"
 	line "I've finished so"
 	cont "far is a sculpture"
 	cont "of a #MON EGG."
-	
+
 	para "I need to do"
 	line "something"
 	cont "impressive!"
-	
+
 	para "I've been working"
 	line "on a statue of the"
 	cont "#MON MADAME,"
-	
+
 	para "but it's not quite"
 	line "finished."
 	done
@@ -252,7 +252,6 @@ EarlMadameText:
 	line "feel inspired to"
 	cont "finish my statue."
 	done
-	
 
 EarlDratiniText:
 	text "I've finished my"
@@ -267,12 +266,11 @@ EarlDratiniText:
 	cont "finish my statue."
 	done
 
-	
 BirdText:
 	text "MADAME STATUE"
 	line "by EARL"
 	done
-	
+
 DragonText:
 	text "DRATINI STATUE"
 	line "by EARL"

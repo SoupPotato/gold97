@@ -13,7 +13,7 @@ SuicuneEvent:
 	cry SUICUNE
 	pause 15
 	closetext
-	setevent EVENT_TIDAL_GROTTO_SUICUNE
+	setevent EVENT_FOUGHT_SUICUNE
 	writecode VAR_BATTLETYPE, BATTLETYPE_ROAMING
 	loadwildmon SUICUNE, 40
 	startbattle
@@ -83,4 +83,4 @@ TidalGrotto1F_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event 19, 24, SPRITE_GROWLITHE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SuicuneEvent, EVENT_TIDAL_GROTTO_SUICUNE
+	object_event 19, 24, SPRITE_GROWLITHE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SuicuneEvent, EVENT_FOUGHT_SUICUNE

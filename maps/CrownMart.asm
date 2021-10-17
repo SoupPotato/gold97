@@ -1,7 +1,7 @@
 	const_def 2 ; object constants
-	const CrownMart_CLERK
-	const CrownMart_COOLTRAINER_M
-	const CrownMart_YOUNGSTER
+	const CROWN_MART_CLERK
+	const CROWN_MART_COOLTRAINER_M
+	const CROWN_MART_YOUNGSTER
 
 CrownMart_MapScripts:
 	db 0 ; scene scripts
@@ -10,7 +10,7 @@ CrownMart_MapScripts:
 
 CrownMartClerkScript:
 	opentext
-	pokemart MARTTYPE_STANDARD, MART_CHERRYGROVE_DEX
+	pokemart MARTTYPE_STANDARD, MART_CROWN
 	closetext
 	end
 
@@ -28,7 +28,6 @@ CrownMartCooltrainerMText:
 	line "better selection"
 	cont "there."
 	done
-
 
 CrownMartYoungsterText:
 	text "Pick up some ULTRA"

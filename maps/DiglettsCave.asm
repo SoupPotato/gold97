@@ -10,7 +10,7 @@ DiglettsCavePokefanMScript:
 	jumptextfaceplayer DiglettsCavePokefanMText
 
 DiglettsCaveHiddenMaxRevive:
-	hiddenitem MAX_REVIVE, EVENT_DIGLETTS_CAVE_HIDDEN_MAX_REVIVE_NEW
+	hiddenitem MAX_REVIVE, EVENT_DIGLETTS_CAVE_HIDDEN_MAX_REVIVE
 
 DiglettsCavePokefanMText:
 	text "A bunch of DIGLETT"

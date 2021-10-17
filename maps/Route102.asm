@@ -188,9 +188,9 @@ Route102SilverScript:
 	writetext Route102RivalBeforeText
 	waitbutton
 	closetext
-	checkevent EVENT_GOT_CRUIZE_FROM_ELM
+	checkevent EVENT_GOT_CRUIZE_FROM_OAK
 	iftrue .Cruise
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
+	checkevent EVENT_GOT_CHIKORITA_FROM_OAK
 	iftrue .CHIKORITA
 	winlosstext Route102SilverWinText, Route102SilverLossText
 	loadtrainer RIVAL1, RIVAL1_2_CRUIZE

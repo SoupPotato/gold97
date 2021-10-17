@@ -1,5 +1,5 @@
 	const_def 2 ; object constants
-	const EASTWARD_SUMMIT_MOLTRES
+	const CHARRED_SUMMIT_MOLTRES
 
 CharredSummit_MapScripts:
 	db 0 ; scene scripts
@@ -8,18 +8,18 @@ CharredSummit_MapScripts:
 	callback MAPCALLBACK_OBJECTS, .Moltres
 
 .Moltres:
-	checkevent EVENT_EXPLODING_TRAP_4
+	checkevent EVENT_FOUGHT_MOLTRES
 	iftrue .NoAppearM
-	checkitem RED_SCALE; change this to whatever becomes the tri-wing
+	checkitem TRI_WING
 	iftrue .AppearM
 	jump .NoAppearM
 
 .AppearM:
-	appear EASTWARD_SUMMIT_MOLTRES
+	appear CHARRED_SUMMIT_MOLTRES
 	return
 
 .NoAppearM:
-	disappear EASTWARD_SUMMIT_MOLTRES
+	disappear CHARRED_SUMMIT_MOLTRES
 	return
 	
 MoltresScript:
@@ -29,11 +29,11 @@ MoltresScript:
 	cry MOLTRES
 	pause 15
 	closetext
-	setevent EVENT_EXPLODING_TRAP_4
+	setevent EVENT_FOUGHT_MOLTRES
 	writecode VAR_BATTLETYPE, BATTLETYPE_LEGENDKANTO
 	loadwildmon MOLTRES, 40
 	startbattle
-	disappear EASTWARD_SUMMIT_MOLTRES
+	disappear CHARRED_SUMMIT_MOLTRES
 	reloadmapafterbattle
 	end
 	
@@ -54,4 +54,4 @@ CharredSummit_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event 12,  2, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, MoltresScript, EVENT_EXPLODING_TRAP_7
+	object_event 12,  2, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, MoltresScript, EVENT_HIDE_CHARRED_SUMMIT_MOLTRES
