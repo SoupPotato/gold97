@@ -1,7 +1,7 @@
 	const_def 2 ; object constants
-	const FrostpointNameRater_NAME_RATER
+	const FROSTPOINTSPEECHHOUSE_GENTLEMAN
 
-FrostpointNameRater_MapScripts:
+FrostpointSpeechHouse_MapScripts:
 	db 1 ; scene scripts
 	scene_script .DummyScene
 
@@ -10,11 +10,11 @@ FrostpointNameRater_MapScripts:
 .DummyScene:
 	end
 
-FrostpointNameRater:
-	jumptextfaceplayer FrostpointNameRaterText
+FrostpointSpeechHouseGentleman:
+	jumptextfaceplayer FrostpointSpeechHouseGentlemanText
 	end
 	
-FrostpointNameRaterText:
+FrostpointSpeechHouseGentlemanText:
 	text "FROSTPOINT is"
 	line "cold and remote."
 	para "We don't get many"
@@ -25,10 +25,10 @@ FrostpointNameRaterText:
 	done
 
 
-FrostpointNameRaterRadio:
+FrostpointSpeechHouseRadio:
 	jumpstd radio2
 
-FrostpointNameRater_MapEvents:
+FrostpointSpeechHouse_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
@@ -39,7 +39,7 @@ FrostpointNameRater_MapEvents:
 
 
 	db 1 ; bg events
-	bg_event  4,  1, BGEVENT_READ, FrostpointNameRaterRadio
+	bg_event  4,  1, BGEVENT_READ, FrostpointSpeechHouseRadio
 
 	db 1 ; object events
-	object_event  2,  3, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, FrostpointNameRater, -1
+	object_event  2,  3, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, FrostpointSpeechHouseGentleman, -1

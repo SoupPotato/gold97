@@ -1,8 +1,8 @@
 	const_def 2
-	const FSG_COP
-	const FSG_SCIENTIST1
-	const FSG_SCIENTIST2
-	const FSG_SCIENTIST3
+	const FORKED_STRAIT_GATE_COP
+	const FORKED_STRAIT_GATE_SCIENTIST1
+	const FORKED_STRAIT_GATE_SCIENTIST2
+	const FORKED_STRAIT_GATE_SCIENTIST3
 
 ForkedStraitGate_MapScripts:
 	db 1 ; scene scripts
@@ -18,7 +18,7 @@ NeedToWalkOverOneTile:
 	step_end
 
 CredCheckLeft:
-	checkevent EVENT_DONE_FS_GATE_CHECK
+	checkevent EVENT_DONE_FORKED_STRAIT_GATE_CHECK
 	iftrue .finish
 	opentext
 	writetext EventCopHALT
@@ -29,8 +29,8 @@ CredCheckLeft:
 	writetext EventCopText
 	waitbutton
 	closetext
-	setevent EVENT_DONE_FS_GATE_CHECK
-	setevent EVENT_BLUE_IN_ELMS_LAB ; blue no longer in the lab at silent town
+	setevent EVENT_DONE_FORKED_STRAIT_GATE_CHECK
+	setevent EVENT_BLUE_IN_OAKS_LAB ; blue no longer in the lab at silent town
 	setevent EVENT_MEW_SPOT_2_FOUND ; islands events initializing
 	setevent EVENT_MEW_SPOT_3_FOUND
 	setevent EVENT_MEW_SPOT_4_FOUND
@@ -38,14 +38,14 @@ CredCheckLeft:
 	setevent EVENT_MEW_SPOT_6_FOUND
 	setevent EVENT_MEW_SPOT_7_FOUND
 	setevent EVENT_MEW_SPOT_8_FOUND
-	setevent EVENT_INIT_RIC_OBJECTS_HIDDEN
-	setevent EVENT_RIC_BLUE_HIDDEN
-	setevent EVENT_RI_BLUEBATTLE_HIDDEN
+	setevent EVENT_RAINBOW_ISLE_CAVE_OBJECTS_HIDDEN
+	setevent EVENT_RAINBOW_ISLE_CAVE_BLUE_HIDDEN
+	setevent EVENT_RAINBOW_ISLE_BLUE_BATTLE_HIDDEN
 .finish
 	end
 
 CredCheckRight:
-	checkevent EVENT_DONE_FS_GATE_CHECK
+	checkevent EVENT_DONE_FORKED_STRAIT_GATE_CHECK
 	iftrue .finish
 	opentext
 	writetext EventCopHALT
@@ -57,7 +57,7 @@ CredCheckRight:
 	writetext EventCopText
 	waitbutton
 	closetext
-	setevent EVENT_DONE_FS_GATE_CHECK
+	setevent EVENT_DONE_FORKED_STRAIT_GATE_CHECK
 	setevent EVENT_MEW_SPOT_2_FOUND ; islands events initializing
 	setevent EVENT_MEW_SPOT_3_FOUND
 	setevent EVENT_MEW_SPOT_4_FOUND
@@ -65,9 +65,9 @@ CredCheckRight:
 	setevent EVENT_MEW_SPOT_6_FOUND
 	setevent EVENT_MEW_SPOT_7_FOUND
 	setevent EVENT_MEW_SPOT_8_FOUND
-	setevent EVENT_INIT_RIC_OBJECTS_HIDDEN
-	setevent EVENT_RIC_BLUE_HIDDEN
-	setevent EVENT_RI_BLUEBATTLE_HIDDEN
+	setevent EVENT_RAINBOW_ISLE_CAVE_OBJECTS_HIDDEN
+	setevent EVENT_RAINBOW_ISLE_CAVE_BLUE_HIDDEN
+	setevent EVENT_RAINBOW_ISLE_BLUE_BATTLE_HIDDEN
 .finish
 	end
 
@@ -132,19 +132,19 @@ EventCopText:
 	para "Now, carry on!"
 	done
 
-FSGCopScript:
-	jumptextfaceplayer FSGCopNormalText
+ForkedStraitGateCopScript:
+	jumptextfaceplayer ForkedStraitGateCopNormalText
 	
-FSGCopNormalText:
+ForkedStraitGateCopNormalText:
 	text "<PLAY_G>!"
 	line "You may proceed!"
 	done
 
 
-FSGScientist1Script:
-	jumptextfaceplayer FSGScientist1Text
+ForkedStraitGateScientist1Script:
+	jumptextfaceplayer ForkedStraitGateScientist1Text
 	
-FSGScientist1Text:
+ForkedStraitGateScientist1Text:
 	text "TROPICAL ISLAND"
 	line "to the east is"
 	cont "full of rare"
@@ -156,10 +156,10 @@ FSGScientist1Text:
 	cont "on the island."
 	done
 
-FSGScientist2Script:
-	jumptextfaceplayer FSGScientist2Text
+ForkedStraitGateScientist2Script:
+	jumptextfaceplayer ForkedStraitGateScientist2Text
 	
-FSGScientist2Text:
+ForkedStraitGateScientist2Text:
 	text "I'm one of the"
 	line "lucky few that"
 	cont "could obtain the"
@@ -177,10 +177,10 @@ FSGScientist2Text:
 	done
 
 
-FSGScientist3Script:
-	jumptextfaceplayer FSGScientist3Text
+ForkedStraitGateScientist3Script:
+	jumptextfaceplayer ForkedStraitGateScientist3Text
 	
-FSGScientist3Text:
+ForkedStraitGateScientist3Text:
 	text "There's ancient"
 	line "manuscripts that"
 	cont "describe RAINBOW"
@@ -233,8 +233,8 @@ ForkedStraitGate_MapEvents:
 	bg_event  0,  8, BGEVENT_READ, RainbowSign
 
 	db 4 ; object events
-	object_event  8,  3, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FSGCopScript, -1
-	object_event 16,  9, SPRITE_SCIENTIST, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FSGScientist1Script, -1
-	object_event  9, 11, SPRITE_SCIENTIST, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FSGScientist2Script, -1
-	object_event  4,  9, SPRITE_SCIENTIST, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FSGScientist3Script, -1
+	object_event  8,  3, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ForkedStraitGateCopScript, -1
+	object_event 16,  9, SPRITE_SCIENTIST, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ForkedStraitGateScientist1Script, -1
+	object_event  9, 11, SPRITE_SCIENTIST, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ForkedStraitGateScientist2Script, -1
+	object_event  4,  9, SPRITE_SCIENTIST, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ForkedStraitGateScientist3Script, -1
 	

@@ -499,7 +499,7 @@ ENDM
 	map_attributes Route119SunpointGate, ROUTE_119_SUNPOINT_GATE, $00, 0
 	map_attributes KobanPokecenter1F, KOBAN_POKECENTER_1F, $00, 0
 	map_attributes PrycesFamilyHouse, PRYCES_FAMILY_HOUSE, $00, 0
-	map_attributes FrostpointNameRater, FROSTPOINT_NAME_RATER, $00, 0
+	map_attributes FrostpointSpeechHouse, FROSTPOINT_SPEECH_HOUSE, $00, 0
 	map_attributes FrostpointMart, FROSTPOINT_MART, $00, 0
 	map_attributes SanskritRocketHouse, SANSKRIT_ROCKET_HOUSE, $00, 0
 	map_attributes UrasoeParkUrasoeTrailGate, URASOE_PARK_URASOE_TRAIL_GATE, $00, 0

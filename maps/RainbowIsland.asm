@@ -9,7 +9,7 @@ RainbowIsland_MapScripts:
 	callback MAPCALLBACK_TILES, .RainbowIslandRestored
 	
 .RainbowIslandRestored:
-	checkevent EVENT_RI_RESTORED
+	checkevent EVENT_RAINBOW_ISLE_RESTORED
 	iffalse .Done
 	changeblock $C, $6, $48 ; the rainbow
 	changeblock $C, $4, $44
@@ -143,8 +143,8 @@ BlueFirstScript:
 	special LoadMapPalettes
 	special FadeInPalettes
 	;event setting here
-	clearevent EVENT_RIC_BLUE_HIDDEN
-	setevent EVENT_RI_BLUEINTRO_HIDDEN
+	clearevent EVENT_RAINBOW_ISLE_CAVE_BLUE_HIDDEN
+	setevent EVENT_RAINBOW_ISLE_BLUE_INTRO_HIDDEN
 	end
 
 BluePt1Text:
@@ -229,7 +229,7 @@ BlueBattleScript:
 	special ReloadSpritesNoPalettes
 	disappear RI_BLUE2
 	setevent EVENT_BEAT_BLUE_ONCE_BEFORE
-	setevent EVENT_RI_BLUEBATTLE_HIDDEN
+	setevent EVENT_RAINBOW_ISLE_BLUE_BATTLE_HIDDEN
 	pause 15
 	special FadeInQuickly
 	pause 30
@@ -262,7 +262,7 @@ BlueBattleScript:
 	special FadeBlackQuickly
 	special ReloadSpritesNoPalettes
 	disappear RI_BLUE2
-	setevent EVENT_RI_BLUEBATTLE_HIDDEN
+	setevent EVENT_RAINBOW_ISLE_BLUE_BATTLE_HIDDEN
 	pause 15
 	special FadeInQuickly
 	pause 30
@@ -409,6 +409,6 @@ RainbowIsland_MapEvents:
 	db 0 ; bg events
 
 	db 2 ; object events
-	object_event 32, 42, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BlueFirstScript, EVENT_RI_BLUEINTRO_HIDDEN ; one
-	object_event 31,  5, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BlueBattleScript, EVENT_RI_BLUEBATTLE_HIDDEN ; two
+	object_event 32, 42, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BlueFirstScript, EVENT_RAINBOW_ISLE_BLUE_INTRO_HIDDEN ; one
+	object_event 31,  5, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BlueBattleScript, EVENT_RAINBOW_ISLE_BLUE_BATTLE_HIDDEN ; two
 	

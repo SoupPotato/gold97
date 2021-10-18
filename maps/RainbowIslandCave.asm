@@ -15,13 +15,13 @@ RainbowIslandCave_MapScripts:
 
 BlueScriptRIC:
 	faceplayer
-	checkevent EVENT_BLUE_RIC_TOLD_LEGEND
+	checkevent EVENT_RAINBOW_ISLE_CAVE_BLUE_TOLD_LEGEND
 	iftrue .secondpart
 	opentext
 	writetext BlueTellsLegendText
 	waitbutton
 	closetext
-	setevent EVENT_BLUE_RIC_TOLD_LEGEND
+	setevent EVENT_RAINBOW_ISLE_CAVE_BLUE_TOLD_LEGEND
 .secondpart
 	opentext
 	writetext BlueTellsYouToGoThereText
@@ -30,9 +30,9 @@ BlueScriptRIC:
 	end
 
 StandingOnStartTile:
-	checkevent EVENT_RI_RESTORED
+	checkevent EVENT_RAINBOW_ISLE_RESTORED
 	iftrue .end
-	checkevent EVENT_BLUE_RIC_TOLD_LEGEND
+	checkevent EVENT_RAINBOW_ISLE_CAVE_BLUE_TOLD_LEGEND
 	iffalse .end
 	turnobject RIC_BLUE, LEFT
 	writebyte HO_OH
@@ -100,9 +100,9 @@ StandingOnStartTile:
 	special LoadMapPalettes
 	special FadeInPalettes
 	
-	setevent EVENT_INIT_RIC_OBJECTS_HIDDEN
-	setevent EVENT_RI_RESTORED
-	clearevent EVENT_RI_BLUEBATTLE_HIDDEN
+	setevent EVENT_RAINBOW_ISLE_CAVE_OBJECTS_HIDDEN
+	setevent EVENT_RAINBOW_ISLE_RESTORED
+	clearevent EVENT_RAINBOW_ISLE_BLUE_BATTLE_HIDDEN
 	
 	turnobject RIC_BLUE, LEFT
 	turnobject PLAYER, RIGHT
@@ -114,7 +114,7 @@ StandingOnStartTile:
 	pause 16
 	warpsound
 	disappear RIC_BLUE
-	setevent EVENT_RIC_BLUE_HIDDEN
+	setevent EVENT_RAINBOW_ISLE_CAVE_BLUE_HIDDEN
 	special LoadMapPalettes
 	special FadeInPalettes
 .end
@@ -256,7 +256,7 @@ RainbowIslandCave_MapEvents:
 	db 0 ; bg events
 
 	db 3 ; object events
-	object_event  7,  2, SPRITE_HO_OH, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0,ObjectEvent, EVENT_INIT_RIC_OBJECTS_HIDDEN
-	object_event  7,  2, SPRITE_LUGIA, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_INIT_RIC_OBJECTS_HIDDEN
-	object_event  9,  6, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BlueScriptRIC, EVENT_RIC_BLUE_HIDDEN
+	object_event  7,  2, SPRITE_HO_OH, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0,ObjectEvent, EVENT_RAINBOW_ISLE_CAVE_OBJECTS_HIDDEN
+	object_event  7,  2, SPRITE_LUGIA, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RAINBOW_ISLE_CAVE_OBJECTS_HIDDEN
+	object_event  9,  6, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BlueScriptRIC, EVENT_RAINBOW_ISLE_CAVE_BLUE_HIDDEN
 	

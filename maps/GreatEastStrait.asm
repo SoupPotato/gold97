@@ -1,6 +1,6 @@
 	const_def 2
-	const GES_MADDAN
-	const GES_ITEMBALL
+	const GREAT_EAST_STRAIT_MADDAN
+	const GREAT_EAST_STRAIT_ITEMBALL
 
 GreatEastStrait_MapScripts:
 	db 0 ; scene scripts
@@ -33,7 +33,7 @@ DanSeenText:
 	line "my battleground,"
 	cont "the waves my war"
 	cont "siren."
-	
+
 	para "As long as I'm"
 	line "above water you"
 	cont "will never take"
@@ -43,7 +43,7 @@ DanSeenText:
 DanBeatenText:
 	text "TELSOOOOOON!"
 	done
-	
+
 DanAfterBattleText:
 	text "The war is never"
 	line "over! I fight my"
@@ -51,7 +51,7 @@ DanAfterBattleText:
 	cont "in this place!"
 	done
 
-GESItemball:
+GreatEastStraitItemball:
 	itemball NUGGET
 
 GreatEastStrait_MapEvents:
@@ -68,4 +68,4 @@ GreatEastStrait_MapEvents:
 
 	db 2 ; object events
 	object_event 41,  7, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerSoldierDan, -1
-	object_event 69,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GESItemball, EVENT_GES_NUGGET
+	object_event 69,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GreatEastStraitItemball, EVENT_GREAT_EAST_STRAIT_NUGGET

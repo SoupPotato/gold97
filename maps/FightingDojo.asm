@@ -11,9 +11,6 @@ FightingDojo_MapScripts:
 
 	db 0 ; callbacks
 
-;FightingDojoBlackBelt:
-;	jumptextfaceplayer FightingDojoBlackBeltText
-
 FightingDojoBlackBelt:
 	faceplayer
 	checkevent EVENT_BEAT_BLACKBELT_YOSHI
@@ -95,6 +92,7 @@ FightingDojoSign2:
 
 FightingDojoFocusBand:
 	itemball FOCUS_BAND
+
 TrainerBlackbeltYoshi:
 	trainer BLACKBELT_T, YOSHI, EVENT_BEAT_BLACKBELT_YOSHI, BlackbeltYoshiSeenText, BlackbeltYoshiBeatenText, 0, .Script
 

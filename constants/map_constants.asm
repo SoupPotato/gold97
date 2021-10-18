@@ -159,7 +159,7 @@ ENDM
 	map_const ROUTE_111,                                   10, 27 ;  4
 	map_const FROSTPOINT_MART,                              8,  4 ;  5
 	map_const PRYCES_FAMILY_HOUSE,                          5,  4 ;  6
-	map_const FROSTPOINT_NAME_RATER,                        5,  4 ;  7
+	map_const FROSTPOINT_SPEECH_HOUSE,                      5,  4 ;  7
 
 	newgroup                                                      ;  7
 

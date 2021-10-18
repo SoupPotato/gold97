@@ -1,7 +1,7 @@
 	const_def 2 ; object constants
-	const LAVENDERMART_CLERK
-	const LAVENDERMART_POKEFAN_M
-	const LAVENDERMART_ROCKER
+	const FROSTPOINTMART_CLERK
+	const FROSTPOINTMART_POKEFAN_M
+	const FROSTPOINTMART_ROCKER
 
 FrostpointMart_MapScripts:
 	db 0 ; scene scripts
@@ -10,7 +10,7 @@ FrostpointMart_MapScripts:
 
 FrostpointMartClerkScript:
 	opentext
-	pokemart MARTTYPE_STANDARD, MART_LAVENDER
+	pokemart MARTTYPE_STANDARD, MART_FROSTPOINT
 	closetext
 	end
 

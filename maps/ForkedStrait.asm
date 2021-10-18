@@ -1,18 +1,18 @@
 	const_def 2
-	const FS_FISHER1
-	const FS_FISHER2
-	const FS_ITEMBALL
+	const FORKEDSTRAIT_FISHER1
+	const FORKEDSTRAIT_FISHER2
+	const FORKEDSTRAIT_ITEMBALL
 
 ForkedStrait_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
-FSItemball:
+ForkedStraitItemball:
 	itemball LURE_BALL
 
-TrainerFS1:
-	trainer FISHER, STIRNER, EVENT_BEAT_FS_STIRNER, FisherStirnerSeenText, FisherStirnerBeatenText, 0, .Script
+TrainerForkedStrait1:
+	trainer FISHER, STIRNER, EVENT_BEAT_FORKED_STRAIT_STIRNER, FisherStirnerSeenText, FisherStirnerBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -46,8 +46,8 @@ FisherStirnerAfterBattleText:
 	done
 
 
-TrainerFS2:
-	trainer FISHER, EDGAR, EVENT_BEAT_FS_EDGAR, FisherEdgarSeenText, FisherEdgarBeatenText, 0, .Script
+TrainerForkedStrait2:
+	trainer FISHER, EDGAR, EVENT_BEAT_FORKED_STRAIT_EDGAR, FisherEdgarSeenText, FisherEdgarBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -103,7 +103,7 @@ ForkedStrait_MapEvents:
 	bg_event 12, 41, BGEVENT_READ, CheckpointSignpost
 
 	db 3 ; object events
-	object_event  6,  5, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerFS1, -1
-	object_event  4, 26, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerFS2, -1
-	object_event 15, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, FSItemball, EVENT_FS_LUREBALL_ITEM
+	object_event  6,  5, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerForkedStrait1, -1
+	object_event  4, 26, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerForkedStrait2, -1
+	object_event 15, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, ForkedStraitItemball, EVENT_FORKED_STRAIT_LURE_BALL
 	

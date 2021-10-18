@@ -1,5 +1,5 @@
 	const_def 2 ; object constants
-	const KARENSROOM_KAREN
+	const GIOVANNISROOM_GIOVANNI
 
 GiovannisRoom_MapScripts:
 	db 2 ; scene scripts
@@ -10,24 +10,24 @@ GiovannisRoom_MapScripts:
 	callback MAPCALLBACK_TILES, .GiovannisRoomDoors
 
 .LockDoor:
-	priorityjump .KarensDoorLocksBehindYou
+	priorityjump .GiovannisDoorLocksBehindYou
 	end
 
 .DummyScene:
 	end
 
 .GiovannisRoomDoors:
-	checkevent EVENT_KARENS_ROOM_ENTRANCE_CLOSED
+	checkevent EVENT_GIOVANNIS_ROOM_ENTRANCE_CLOSED
 	iffalse .KeepEntranceOpen
 	changeblock 4, 14, $2a ; wall
 .KeepEntranceOpen:
-	checkevent EVENT_KARENS_ROOM_EXIT_OPEN
+	checkevent EVENT_GIOVANNIS_ROOM_EXIT_OPEN
 	iffalse .KeepExitClosed
 	changeblock 4, 2, $16 ; open door
 .KeepExitClosed:
 	return
 
-.KarensDoorLocksBehindYou:
+.GiovannisDoorLocksBehindYou:
 	applymovement PLAYER, GiovannisRoom_EnterMovement
 	refreshscreen $86
 	playsound SFX_STRENGTH
@@ -36,40 +36,40 @@ GiovannisRoom_MapScripts:
 	reloadmappart
 	closetext
 	setscene SCENE_FINISHED
-	setevent EVENT_KARENS_ROOM_ENTRANCE_CLOSED
+	setevent EVENT_GIOVANNIS_ROOM_ENTRANCE_CLOSED
 	waitsfx
 	end
 
-KarenScript_Battle:
+GiovanniScript_Battle:
 	faceplayer
 	opentext
-	checkevent EVENT_BEAT_ELITE_4_KAREN
-	iftrue KarenScript_AfterBattle
-	writetext KarenScript_KarenBeforeText
+	checkevent EVENT_BEAT_ELITE_4_GIOVANNI
+	iftrue GiovanniScript_AfterBattle
+	writetext GiovanniScript_GiovanniBeforeText
 	waitbutton
 	closetext
-	winlosstext KarenScript_KarenBeatenText, 0
+	winlosstext GiovanniScript_GiovanniBeatenText, 0
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue GiovanniRematchTeam
 	loadtrainer GIOVANNI_E4, GIOVANNI_E41
 returntomainGiovanni:
 	startbattle
 	reloadmapafterbattle
-	setevent EVENT_BEAT_ELITE_4_KAREN
+	setevent EVENT_BEAT_ELITE_4_GIOVANNI
 	opentext
-	writetext KarenScript_KarenDefeatText
+	writetext GiovanniScript_GiovanniDefeatText
 	waitbutton
 	closetext
 	playsound SFX_ENTER_DOOR
 	changeblock 4, 2, $16 ; open door
 	reloadmappart
 	closetext
-	setevent EVENT_KARENS_ROOM_EXIT_OPEN
+	setevent EVENT_GIOVANNIS_ROOM_EXIT_OPEN
 	waitsfx
 	end
 
-KarenScript_AfterBattle:
-	writetext KarenScript_KarenDefeatText
+GiovanniScript_AfterBattle:
+	writetext GiovanniScript_GiovanniDefeatText
 	waitbutton
 	closetext
 	end
@@ -85,7 +85,7 @@ GiovannisRoom_EnterMovement:
 	step UP
 	step_end
 
-KarenScript_KarenBeforeText:
+GiovanniScript_GiovanniBeforeText:
 	text "Fwahaha!"
 
 	para "Your eyes do not"
@@ -120,7 +120,7 @@ KarenScript_KarenBeforeText:
 	line "journey ends here!"
 	done
 
-KarenScript_KarenBeatenText:
+GiovanniScript_GiovanniBeatenText:
 	text "Argh!"
 
 	para "It seems you are"
@@ -128,7 +128,7 @@ KarenScript_KarenBeatenText:
 	cont "than last time!"
 	done
 
-KarenScript_KarenDefeatText:
+GiovanniScript_GiovanniDefeatText:
 	text "I loathe you."
 
 	para "But you have my"
@@ -165,4 +165,4 @@ GiovannisRoom_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event  5,  7, SPRITE_GIOVANNI, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, KarenScript_Battle, -1
+	object_event  5,  7, SPRITE_GIOVANNI, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GiovanniScript_Battle, -1

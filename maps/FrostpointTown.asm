@@ -1,8 +1,8 @@
 	const_def 2 ; object constants
-	const FROSTPOINT_TWIN
-	const FROSTPOINT_ROCKER
-	const FROSTPOINT_TEACHER
-	const FROSTPOINT_FRUIT_TREE
+	const FROSTPOINTTOWN_TWIN
+	const FROSTPOINTTOWN_ROCKER
+	const FROSTPOINTTOWN_TEACHER
+	const FROSTPOINTTOWN_FRUIT_TREE
 
 FrostpointTown_MapScripts:
 	db 0 ; scene scripts
@@ -11,7 +11,7 @@ FrostpointTown_MapScripts:
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
 
 .FlyPoint:
-	setflag ENGINE_FLYPOINT_CINNABAR
+	setflag ENGINE_FLYPOINT_FROSTPOINT
 	return
 
 FrostpointTownFruitTree:
@@ -25,27 +25,23 @@ FrostpointTownSign:
 
 FrostpointTownPokecenterSign:
 	jumpstd pokecentersign
-	
+
 FrostpointTownMartSign:
 	jumpstd martsign
 
 FrostpointTownHiddenRareCandy:
-	hiddenitem RARE_CANDY, EVENT_CINNABAR_ISLAND_HIDDEN_RARE_CANDY
+	hiddenitem RARE_CANDY, EVENT_FROSTPOINT_TOWN_HIDDEN_RARE_CANDY
 
-FrostpointTownBlueTeleport:
-	teleport_from
-	step_end
-	
-NorthIslandTwinScript:
-	jumptextfaceplayer NorthIslandTwinText
+FrostpointTownTwinScript:
+	jumptextfaceplayer FrostpointTownTwinText
 
-NorthIslandRockerScript:
-	jumptextfaceplayer NorthIslandRockerText
+FrostpointTownRockerScript:
+	jumptextfaceplayer FrostpointTownRockerText
 
-NorthIslandTeacherScript:
-	jumptextfaceplayer NorthIslandTeacherText
-	
-NorthIslandTwinText:
+FrostpointTownTeacherScript:
+	jumptextfaceplayer FrostpointTownTeacherText
+
+FrostpointTownTwinText:
 	text "I love the snow!"
 	para "I also love"
 	line "swimming, but it's"
@@ -53,16 +49,16 @@ NorthIslandTwinText:
 	line "spend too long"
 	cont "in the water."
 	done
-	
-NorthIslandRockerText:
+
+FrostpointTownRockerText:
 	text "The air is so"
 	line "crisp and clean"
 	cont "here."
 	para "I could never live"
 	line "in a smoggy city."
 	done
-	
-NorthIslandTeacherText:
+
+FrostpointTownTeacherText:
 	text "Did you come"
 	line "through the"
 	cont "DEEPWATER PASSAGE?"
@@ -98,7 +94,7 @@ FrostpointTown_MapEvents:
 	warp_event 11,  5, DEEPWATER_PASSAGE_1F, 8
 	warp_event 15,  8, FROSTPOINT_MART, 1
 	warp_event  5,  7, PRYCES_FAMILY_HOUSE, 1
-	warp_event  5, 11, FROSTPOINT_NAME_RATER, 1
+	warp_event  5, 11, FROSTPOINT_SPEECH_HOUSE, 1
 
 	db 0 ; coord events
 
@@ -110,7 +106,7 @@ FrostpointTown_MapEvents:
 	bg_event  8,  6, BGEVENT_ITEM, FrostpointTownHiddenRareCandy
 
 	db 4 ; object events
-	object_event  8, 11, SPRITE_TWIN, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NorthIslandTwinScript, -1
-	object_event 13,  7, SPRITE_ROCKER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NorthIslandRockerScript, -1
-	object_event  6,  9, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NorthIslandTeacherScript, -1
+	object_event  8, 11, SPRITE_TWIN, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FrostpointTownTwinScript, -1
+	object_event 13,  7, SPRITE_ROCKER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FrostpointTownRockerScript, -1
+	object_event  6,  9, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FrostpointTownTeacherScript, -1
 	object_event 10,  9, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FrostpointTownFruitTree, -1

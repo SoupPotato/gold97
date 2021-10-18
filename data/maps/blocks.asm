@@ -91,7 +91,7 @@ BluesHouse_Blocks:
 KumeSnoozeSpeechHouse_Blocks:
 StandSpeechHouse_Blocks:
 PrycesFamilyHouse_Blocks:
-FrostpointNameRater_Blocks:
+FrostpointSpeechHouse_Blocks:
 AmamiSuperRodHouse_Blocks:
 CrownCitySpeechHouse_Blocks:
 SunpointPhotoStudio_Blocks:
