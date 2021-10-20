@@ -1,5 +1,5 @@
 	const_def 2 ; object constants
-	const CERULEAN_GYM_SNORLAX
+	const JADE_FOREST_SNORLAX_ROOM_SNORLAX
 
 JadeForestSnorlaxRoom_MapScripts:
 	db 0 ; scene scripts
@@ -7,7 +7,7 @@ JadeForestSnorlaxRoom_MapScripts:
 	db 0 ; callbacks
 
 
-VermilionSnorlax:
+JadeForestSnorlax:
 	opentext
 	writetext SnorlaxText
 	yesorno
@@ -21,10 +21,10 @@ VermilionSnorlax:
 	cry SNORLAX
 	pause 15
 	closetext
-	setevent EVENT_VERMILION_CITY_SNORLAX
+	setevent EVENT_JADE_FOREST_SNORLAX
 	loadwildmon SNORLAX, 30
 	startbattle
-	disappear CERULEAN_GYM_SNORLAX
+	disappear JADE_FOREST_SNORLAX_ROOM_SNORLAX
 	reloadmapafterbattle
 	end
 	
@@ -70,4 +70,4 @@ JadeForestSnorlaxRoom_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event  3,  3, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_BIGDOLLSYM, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionSnorlax, EVENT_VERMILION_CITY_SNORLAX
+	object_event  3,  3, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_BIGDOLLSYM, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, JadeForestSnorlax, EVENT_JADE_FOREST_SNORLAX

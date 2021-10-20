@@ -1,5 +1,5 @@
 	const_def 2 ; object constants
-	const MOUNT_MORTAR_ZAPDOS
+	const JOULE_CAVE_ZAPDOS_ROOM_ZAPDOS
 
 JouleCaveZapdosRoom_MapScripts:
 	db 0 ; scene scripts
@@ -8,18 +8,18 @@ JouleCaveZapdosRoom_MapScripts:
 	callback MAPCALLBACK_OBJECTS, .Zapdos
 
 .Zapdos:
-	checkevent EVENT_EXPLODING_TRAP_3
+	checkevent EVENT_FOUGHT_ZAPDOS
 	iftrue .NoAppearZ
 	checkitem TRI_WING
 	iftrue .AppearZ
 	jump .NoAppearZ
 
 .AppearZ:
-	appear MOUNT_MORTAR_ZAPDOS
+	appear JOULE_CAVE_ZAPDOS_ROOM_ZAPDOS
 	return
 
 .NoAppearZ:
-	disappear MOUNT_MORTAR_ZAPDOS
+	disappear JOULE_CAVE_ZAPDOS_ROOM_ZAPDOS
 	return
 	
 	
@@ -30,11 +30,11 @@ ZapdosScript:
 	cry ZAPDOS
 	pause 15
 	closetext
-	setevent EVENT_EXPLODING_TRAP_3
+	setevent EVENT_FOUGHT_ZAPDOS
 	writecode VAR_BATTLETYPE, BATTLETYPE_LEGENDKANTO
 	loadwildmon ZAPDOS, 40
 	startbattle
-	disappear MOUNT_MORTAR_ZAPDOS
+	disappear JOULE_CAVE_ZAPDOS_ROOM_ZAPDOS
 	reloadmapafterbattle
 	end
 	
@@ -44,7 +44,7 @@ ZapdosText:
 	
 
 ZapdosHiddenBrightPowder:
-	hiddenitem BRIGHTPOWDER, EVENT_PICKED_UP_ENERGY_ROOT_FROM_AERODACTYL_ITEM_ROOM
+	hiddenitem BRIGHTPOWDER, EVENT_JOULE_CAVE_ZAPDOS_ROOM_HIDDEN_BRIGHTPOWDER
 
 JouleCaveZapdosRoom_MapEvents:
 	db 0, 0 ; filler
@@ -58,4 +58,4 @@ JouleCaveZapdosRoom_MapEvents:
 	bg_event  3,  4, BGEVENT_ITEM, ZapdosHiddenBrightPowder
 
 	db 1 ; object events
-	object_event  7,  5, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ZapdosScript, EVENT_EXPLODING_TRAP_8
+	object_event  7,  5, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ZapdosScript, EVENT_HIDE_JOULE_CAVE_ZAPDOS_ROOM_ZAPDOS

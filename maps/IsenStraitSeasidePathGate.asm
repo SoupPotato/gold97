@@ -1,6 +1,6 @@
 	const_def 2 ; object constants
-	const ROUTE17ROUTE18GATE_OFFICER
-	const ROUTE17ROUTE18GATE_BUG_CATCHER
+	const ISEN_STRAIT_SEASIDE_PATH_GATE_OFFICER
+	const ISEN_STRAIT_SEASIDE_PATH_GATE_BUG_CATCHER
 
 IsenStraitSeasidePathGate_MapScripts:
 	db 0 ; scene scripts

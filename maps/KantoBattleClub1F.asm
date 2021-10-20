@@ -7,7 +7,7 @@ KantoBattleClub1F_MapScripts:
 	db 0 ; callbacks
 	
 EntranceCheckClub:
-	checkevent EVENT_GOT_PASS_FROM_COPYCAT
+	checkevent EVENT_GOT_BATTLE_CLUB_PASS
 	iffalse .GivePass
 	checkitem PASS
 	iffalse .NoPass
@@ -26,7 +26,7 @@ EntranceCheckClub:
 	turnobject BATTLECLUB_BOUNCER, RIGHT
 	opentext
 	writetext NoPassText
-	waitbutton	
+	waitbutton
 	closetext
 	applymovement PLAYER, NoEntryAllowed
 	end
@@ -43,7 +43,7 @@ GivePassFullScript:
 	waitbutton
 	verbosegiveitem PASS
 	closetext
-	setevent EVENT_GOT_PASS_FROM_COPYCAT
+	setevent EVENT_GOT_BATTLE_CLUB_PASS
 	checkcode VAR_FACING
 	ifequal LEFT, .FullSceneTime
 	end
@@ -53,7 +53,7 @@ GivePassFullScript:
 	end
 
 BouncerScript:
-	checkevent EVENT_GOT_PASS_FROM_COPYCAT
+	checkevent EVENT_GOT_BATTLE_CLUB_PASS
 	iffalse .GivePass2
 	checkitem PASS
 	iffalse .NoPass2
@@ -70,7 +70,7 @@ BouncerScript:
 	faceplayer
 	opentext
 	writetext NoPassText
-	waitbutton	
+	waitbutton
 	closetext
 	end
 	
@@ -96,73 +96,73 @@ BouncerScript2:
 	ifequal FRIDAY, .FridayBC
 	ifequal SATURDAY, .SaturdayBC
 .SundayBC
-	clearevent EVENT_SWITCH_1
-	setevent EVENT_SWITCH_2
-	setevent EVENT_SWITCH_3
-	setevent EVENT_SWITCH_4
-	setevent EVENT_SWITCH_5
-	setevent EVENT_SWITCH_6
-	setevent EVENT_SWITCH_7
+	clearevent EVENT_BATTLE_CLUB_SUNDAY
+	setevent EVENT_BATTLE_CLUB_MONDAY
+	setevent EVENT_BATTLE_CLUB_TUESDAY
+	setevent EVENT_BATTLE_CLUB_WEDNESDAY
+	setevent EVENT_BATTLE_CLUB_THURSDAY
+	setevent EVENT_BATTLE_CLUB_FRIDAY
+	setevent EVENT_BATTLE_CLUB_SATURDAY
 	end
 	
 .MondayBC
-	setevent EVENT_SWITCH_1
-	clearevent EVENT_SWITCH_2
-	setevent EVENT_SWITCH_3
-	setevent EVENT_SWITCH_4
-	setevent EVENT_SWITCH_5
-	setevent EVENT_SWITCH_6
-	setevent EVENT_SWITCH_7
+	setevent EVENT_BATTLE_CLUB_SUNDAY
+	clearevent EVENT_BATTLE_CLUB_MONDAY
+	setevent EVENT_BATTLE_CLUB_TUESDAY
+	setevent EVENT_BATTLE_CLUB_WEDNESDAY
+	setevent EVENT_BATTLE_CLUB_THURSDAY
+	setevent EVENT_BATTLE_CLUB_FRIDAY
+	setevent EVENT_BATTLE_CLUB_SATURDAY
 	end
 	
 .TuesdayBC
-	setevent EVENT_SWITCH_1
-	setevent EVENT_SWITCH_2
-	clearevent EVENT_SWITCH_3
-	setevent EVENT_SWITCH_4
-	setevent EVENT_SWITCH_5
-	setevent EVENT_SWITCH_6
-	setevent EVENT_SWITCH_7
+	setevent EVENT_BATTLE_CLUB_SUNDAY
+	setevent EVENT_BATTLE_CLUB_MONDAY
+	clearevent EVENT_BATTLE_CLUB_TUESDAY
+	setevent EVENT_BATTLE_CLUB_WEDNESDAY
+	setevent EVENT_BATTLE_CLUB_THURSDAY
+	setevent EVENT_BATTLE_CLUB_FRIDAY
+	setevent EVENT_BATTLE_CLUB_SATURDAY
 	end
 	
 .WednesdayBC
-	setevent EVENT_SWITCH_1
-	setevent EVENT_SWITCH_2
-	setevent EVENT_SWITCH_3
-	clearevent EVENT_SWITCH_4
-	setevent EVENT_SWITCH_5
-	setevent EVENT_SWITCH_6
-	setevent EVENT_SWITCH_7
+	setevent EVENT_BATTLE_CLUB_SUNDAY
+	setevent EVENT_BATTLE_CLUB_MONDAY
+	setevent EVENT_BATTLE_CLUB_TUESDAY
+	clearevent EVENT_BATTLE_CLUB_WEDNESDAY
+	setevent EVENT_BATTLE_CLUB_THURSDAY
+	setevent EVENT_BATTLE_CLUB_FRIDAY
+	setevent EVENT_BATTLE_CLUB_SATURDAY
 	end
 	
 .ThursdayBC
-	setevent EVENT_SWITCH_1
-	setevent EVENT_SWITCH_2
-	setevent EVENT_SWITCH_3
-	setevent EVENT_SWITCH_4
-	clearevent EVENT_SWITCH_5
-	setevent EVENT_SWITCH_6
-	setevent EVENT_SWITCH_7
+	setevent EVENT_BATTLE_CLUB_SUNDAY
+	setevent EVENT_BATTLE_CLUB_MONDAY
+	setevent EVENT_BATTLE_CLUB_TUESDAY
+	setevent EVENT_BATTLE_CLUB_WEDNESDAY
+	clearevent EVENT_BATTLE_CLUB_THURSDAY
+	setevent EVENT_BATTLE_CLUB_FRIDAY
+	setevent EVENT_BATTLE_CLUB_SATURDAY
 	end
 	
 .FridayBC
-	setevent EVENT_SWITCH_1
-	setevent EVENT_SWITCH_2
-	setevent EVENT_SWITCH_3
-	setevent EVENT_SWITCH_4
-	setevent EVENT_SWITCH_5
-	clearevent EVENT_SWITCH_6
-	setevent EVENT_SWITCH_7
+	setevent EVENT_BATTLE_CLUB_SUNDAY
+	setevent EVENT_BATTLE_CLUB_MONDAY
+	setevent EVENT_BATTLE_CLUB_TUESDAY
+	setevent EVENT_BATTLE_CLUB_WEDNESDAY
+	setevent EVENT_BATTLE_CLUB_THURSDAY
+	clearevent EVENT_BATTLE_CLUB_FRIDAY
+	setevent EVENT_BATTLE_CLUB_SATURDAY
 	end
 	
 .SaturdayBC
-	setevent EVENT_SWITCH_1
-	setevent EVENT_SWITCH_2
-	setevent EVENT_SWITCH_3
-	setevent EVENT_SWITCH_4
-	setevent EVENT_SWITCH_5
-	setevent EVENT_SWITCH_6
-	clearevent EVENT_SWITCH_7
+	setevent EVENT_BATTLE_CLUB_SUNDAY
+	setevent EVENT_BATTLE_CLUB_MONDAY
+	setevent EVENT_BATTLE_CLUB_TUESDAY
+	setevent EVENT_BATTLE_CLUB_WEDNESDAY
+	setevent EVENT_BATTLE_CLUB_THURSDAY
+	setevent EVENT_BATTLE_CLUB_FRIDAY
+	clearevent EVENT_BATTLE_CLUB_SATURDAY
 	end
 	
 NoEntryAllowed:

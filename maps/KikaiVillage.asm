@@ -56,7 +56,7 @@ KikaiBrunoScript:
 	setevent EVENT_BRUNO_SMASHED_ROCK
 .skipsmashing:
 	faceplayer
-	checkevent EVENT_BRUNO_BATTLE_DONE
+	checkevent EVENT_KIKAI_BRUNO_DEFEATED
 	iftrue .afterbruno
 	opentext
 	writetext BrunoPrebattleText
@@ -65,7 +65,7 @@ KikaiBrunoScript:
 	loadtrainer BRUNO, BRUNO1
 	startbattle
 	reloadmapafterbattle
-	setevent EVENT_BRUNO_BATTLE_DONE
+	setevent EVENT_KIKAI_BRUNO_DEFEATED
 .afterbruno:
 	opentext
 	writetext BrunoAfterBattletext

@@ -13,7 +13,7 @@ IePokecenter1FNurseScript:
 
 IePCNPC1Script:
 	jumptextfaceplayer IePCNPC1Text
-	
+
 IePCNPC2Script:
 	jumptextfaceplayer IePCNPC2Text
 

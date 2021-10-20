@@ -15,7 +15,7 @@ MewtwoScript:
 	cry MEWTWO
 	pause 15
 	closetext
-	setevent EVENT_SWITCH_11
+	setevent EVENT_FOUGHT_MEWTWO
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	;setflag ENGINE_GOT_SHUCKIE_TODAY (this is never checked anywhere why is it used? Removed to free up a wDailyFlags1 flag)
 	writecode VAR_BATTLETYPE, BATTLETYPE_LEGENDKANTO
@@ -43,4 +43,4 @@ ResearchFacilityBackRoom_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event  5,  2, SPRITE_MONSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, MewtwoScript, EVENT_SWITCH_11
+	object_event  5,  2, SPRITE_MONSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, MewtwoScript, EVENT_FOUGHT_MEWTWO

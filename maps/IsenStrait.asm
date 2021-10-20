@@ -1,7 +1,7 @@
 	const_def 2 ; object constants
-	const ROUTE20_SWIMMER_GIRL1
-	const ROUTE20_SWIMMER_GIRL2
-	const ROUTE20_SWIMMER_GUY
+	const ISEN_STRAIT_SWIMMER_GIRL1
+	const ISEN_STRAIT_SWIMMER_GIRL2
+	const ISEN_STRAIT_SWIMMER_GUY
 
 IsenStrait_MapScripts:
 	db 0 ; scene scripts
@@ -50,8 +50,8 @@ TrainerSwimmermCameron:
 	closetext
 	end
 
-CinnabarGymSign:
-	jumptext CinnabarGymSignText
+ResearchFacilitySign:
+	jumptext ResearchFacilitySignText
 
 SwimmerfNicoleSeenText:
 	text "I feel so much"
@@ -106,7 +106,7 @@ SwimmermCameronAfterBattleText:
 	cont "ponds and rivers."
 	done
 
-CinnabarGymSignText:
+ResearchFacilitySignText:
 	text "#MON RESEARCH"
 	line "FACILITY"
 	para "…The sign reads,"
@@ -125,7 +125,7 @@ IsenStrait_MapEvents:
 	db 0 ; coord events
 
 	db 1 ; bg events
-	bg_event 20,  2, BGEVENT_READ, CinnabarGymSign
+	bg_event 20,  2, BGEVENT_READ, ResearchFacilitySign
 
 	db 3 ; object events
 	object_event 14, 13, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSwimmerfNicole, -1

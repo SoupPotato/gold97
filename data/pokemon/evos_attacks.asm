@@ -1704,8 +1704,9 @@ HorseaEvosAttacks:
 	db 29, DRAGONBREATH
 	db 35, AGILITY
 	db 38, DRAGON_RAGE
-	db 44, HYDRO_PUMP
+	db 44, OCTAZOOKA
 	db 47, RAIN_DANCE
+	db 53, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 SeadraEvosAttacks:
@@ -1713,7 +1714,7 @@ SeadraEvosAttacks:
 	db EVOLVE_TRADE, DRAGON_SCALE, KINGDRA
 KingdraEvosAttacks:
 	db 0 ; no more evolutions
-    db 1, BUBBLE
+	db 1, BUBBLE
 	db 1, LEER
 	db 1, SMOKESCREEN
 	db 7, SMOKESCREEN
@@ -1724,8 +1725,9 @@ KingdraEvosAttacks:
 	db 29, DRAGONBREATH
 	db 37, AGILITY
 	db 41, DRAGON_RAGE
-	db 48, HYDRO_PUMP
+	db 48, OCTAZOOKA
 	db 52, RAIN_DANCE
+	db 59, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 GoldeenEvosAttacks:
@@ -1793,7 +1795,7 @@ MrMimeEvosAttacks:
 	db 9, MEDITATE
 	db 13, DOUBLESLAP
 	db 17, MIMIC
-    db 17, PSYWAVE
+	db 17, PSYWAVE
 	db 21, LIGHT_SCREEN
 	db 21, REFLECT
 	db 25, PSYBEAM
@@ -3498,7 +3500,7 @@ BallerineEvosAttacks:
 	db 9, MEDITATE
 	db 13, DOUBLESLAP
 	db 17, MIMIC
-    db 17, PSYWAVE
+	db 17, PSYWAVE
 	db 21, LIGHT_SCREEN
 	db 21, REFLECT
 	db 25, PSYBEAM
@@ -3732,7 +3734,7 @@ BlisseyEvosAttacks:
 	db 40, LIGHT_SCREEN
 	db 47, DOUBLE_EDGE
 	db 0 ; no more level-up moves
-	
+
 LugiaEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SWIFT

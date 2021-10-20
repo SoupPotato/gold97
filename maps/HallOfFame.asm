@@ -41,8 +41,8 @@ HallOfFame_MapScripts:
 	setevent EVENT_REMATCH_AVAILABLE_OKERA
 	setevent EVENT_REMATCH_AVAILABLE_RED
 	setevent EVENT_BATTLE_AVAILABLE_CLAIR
-	clearevent EVENT_BRUNO_BATTLE_DONE
-	clearevent EVENT_EXPLODING_TRAP_16 ; silver in nanjo forest
+	clearevent EVENT_KIKAI_BRUNO_DEFEATED
+	clearevent EVENT_NANJO_FOREST_RIVAL_DEFEATED
 	checkevent EVENT_MEW_FOUGHT
 	iffalse .NoMew
 	writebyte MEW
@@ -53,21 +53,21 @@ HallOfFame_MapScripts:
 .NoMew:
 	
 clearifnotcaught: MACRO
-    writebyte \1
-    special MonCheck
-    iftrue .skip\@
-    clearevent \2
+	writebyte \1
+	special MonCheck
+	iftrue .skip\@
+	clearevent \2
 .skip\@:
 ENDM
-    clearifnotcaught ARTICUNO, EVENT_EXPLODING_TRAP_9
-    clearifnotcaught ZAPDOS,   EVENT_EXPLODING_TRAP_3
-    clearifnotcaught MOLTRES,  EVENT_FOUGHT_MOLTRES
-    clearifnotcaught RAIKOU,   EVENT_FOUGHT_RAIKOU
-    clearifnotcaught ENTEI,    EVENT_FOUGHT_ENTEI
-    clearifnotcaught SUICUNE,  EVENT_FOUGHT_SUICUNE
-    clearifnotcaught LUGIA,    EVENT_FOUGHT_LUGIA
-    clearifnotcaught HO_OH,    EVENT_FOUGHT_HO_OH
-    clearifnotcaught MEWTWO,   EVENT_SWITCH_11
+	clearifnotcaught ARTICUNO, EVENT_FOUGHT_ARTICUNO
+	clearifnotcaught ZAPDOS,   EVENT_FOUGHT_ZAPDOS
+	clearifnotcaught MOLTRES,  EVENT_FOUGHT_MOLTRES
+	clearifnotcaught RAIKOU,   EVENT_FOUGHT_RAIKOU
+	clearifnotcaught ENTEI,    EVENT_FOUGHT_ENTEI
+	clearifnotcaught SUICUNE,  EVENT_FOUGHT_SUICUNE
+	clearifnotcaught LUGIA,    EVENT_FOUGHT_LUGIA
+	clearifnotcaught HO_OH,    EVENT_FOUGHT_HO_OH
+	clearifnotcaught MEWTWO,   EVENT_FOUGHT_MEWTWO
 
 	checkevent EVENT_PACKAGE_TAKEN_NO_SHOW
 	iffalse .skipPackages ; if package is sitting there unopened
@@ -80,11 +80,10 @@ ENDM
 	iffalse skipblueflag
 	clearevent EVENT_RAINBOW_ISLE_BLUE_BATTLE_HIDDEN
 skipblueflag:
-	setevent EVENT_OLIVINE_PORT_SPRITES_BEFORE_HALL_OF_FAME
-	clearevent EVENT_OLIVINE_PORT_SPRITES_AFTER_HALL_OF_FAME
-;	setmapscene BRASS_TOWER_3F, SCENE_FINISHED
+	setevent EVENT_WESTPORT_PORT_SPRITES_BEFORE_HALL_OF_FAME
+	clearevent EVENT_WESTPORT_PORT_SPRITES_AFTER_HALL_OF_FAME
 	special HealParty
-	checkevent EVENT_GOT_SS_TICKET_FROM_ELM
+	checkevent EVENT_GOT_SS_TICKET_FROM_OAK
 	iftrue .SkipPhoneCall
 	specialphonecall SPECIALCALL_SSTICKET
 .SkipPhoneCall:

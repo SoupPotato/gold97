@@ -123,7 +123,7 @@ OaksLabBlueScript:
 ProfOakScript:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_SS_TICKET_FROM_ELM
+	checkevent EVENT_GOT_SS_TICKET_FROM_OAK
 	iftrue OakCheckMasterBall
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue OakGiveTicketScript
@@ -378,7 +378,7 @@ OakGiveTicketScript:
 	writetext OakGiveTicketText
 	buttonsound
 	verbosegiveitem S_S_TICKET
-	setevent EVENT_GOT_SS_TICKET_FROM_ELM
+	setevent EVENT_GOT_SS_TICKET_FROM_OAK
 	writetext OakGiveTicketText
 	waitbutton
 	closetext
