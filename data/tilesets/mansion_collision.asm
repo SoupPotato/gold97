@@ -48,8 +48,8 @@
 	tilecoll WALL, FLOOR, WALL, FLOOR ; 2f
 	tilecoll FLOOR, WALL, FLOOR, WALL ; 30
 	tilecoll DOOR, WALL, FLOOR, FLOOR ; 31
-	tilecoll WALL, WALL, WALL, WALL ; 32
-	tilecoll WALL, WALL, WALL, FLOOR ; 33
+	tilecoll STAIRCASE, STAIRCASE, FLOOR, FLOOR ; 32
+	tilecoll STAIRCASE, WALL, FLOOR, FLOOR ; 33
 	tilecoll WALL, WALL, WALL, WALL ; 34
 	tilecoll FLOOR, WALL, WALL, WALL ; 35
 	tilecoll WALL, WALL, FLOOR, WALL ; 36

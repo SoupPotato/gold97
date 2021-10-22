@@ -5,12 +5,13 @@
 	const ELMENTRANCE_DAISY
 
 OaksLabEntrance_MapScripts:
-	db 5 ; scene scripts
+	db 6 ; scene scripts
 	scene_script .SceneElmDoorLocked ; SCENE_DEFAULT
 	scene_script .SceneHeadToTheBack ;
 	scene_script .SceneOaksLabEntranceNothing ;does this work?
 	scene_script .SceneOaksLabEntranceBattle ;seems to!
 	scene_script .SceneOaksLabEntranceDaisy
+	scene_script .SceneOakLabFrontRoomAfterTalkingToClerk
 
 	db 0 ; callbacks
 	
@@ -36,6 +37,9 @@ OaksLabEntrance_MapScripts:
 	end
 	
 .SceneOaksLabEntranceDaisy:
+	end
+	
+.SceneOakLabFrontRoomAfterTalkingToClerk
 	end
 
 BattleScript:
@@ -304,11 +308,6 @@ OaksLabEntranceAideText:
 	line "back office."
 	done
 	
-DoorLockedText:
-	text "The door seems to"
-	line "be locked…"
-	done
-	
 OaksLabEntranceSilverText:
 	text "Yo, <PLAY_G>!"
 	
@@ -387,6 +386,26 @@ Movement_PlayerThroughDoor:
 	step UP
 	step_end
 
+DoorLockedScriptWeekends:
+	checkcode VAR_WEEKDAY
+	ifequal SATURDAY, .DoorIsLockedWeekend
+	checkcode VAR_WEEKDAY
+	ifequal SUNDAY, .DoorIsLockedWeekend
+	end
+
+.DoorIsLockedWeekend
+	opentext
+	writetext DoorLockedText
+	waitbutton
+	closetext
+	applymovement PLAYER, DoorLocked_Movement
+	end
+
+DoorLockedText:
+	text "The door seems to"
+	line "be locked…"
+	done
+
 OaksLabEntrance_MapEvents:
 	db 0, 0 ; filler
 
@@ -396,11 +415,12 @@ OaksLabEntrance_MapEvents:
 	warp_event  4,  0, OAKS_LAB, 1
 
 
-	db 4 ; coord events
+	db 5 ; coord events
 	coord_event  4,  1, SCENE_DEFAULT, DoorLockedScript
 	coord_event  4,  1, SCENE_OAK_ENTRANCE_BATTLE, BattleScript
 	coord_event  3, 11, SCENE_OAK_ENTRANCE_DAISY, DaisyStopsScript1
 	coord_event  4, 11, SCENE_OAK_ENTRANCE_DAISY, DaisyStopsScript2
+	coord_event  4,  1, SCENE_OAK_LAB_FRONT_ROOM_AFTER_TALKING_TO_CLERK, DoorLockedScriptWeekends
 
 	db 14 ; bg events
 	bg_event  6,  1, BGEVENT_READ, OaksLabEntranceComputerScript

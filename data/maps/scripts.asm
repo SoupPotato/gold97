@@ -255,6 +255,8 @@ INCLUDE "maps/BrassTower3F.asm"
 INCLUDE "maps/BrassTower4F.asm"
 INCLUDE "maps/BrassTower5F.asm"
 INCLUDE "maps/DaitoGardenerGeoffHouse.asm"
+INCLUDE "maps/RyukyuRestaurant.asm"
+INCLUDE "maps/RyukyuHotelRooms.asm"
 
 
 SECTION "Map Scripts 15", ROMX
@@ -294,8 +296,13 @@ INCLUDE "maps/BirdonCafe.asm"
 INCLUDE "maps/BirdonMart.asm"
 INCLUDE "maps/KurtsHouse.asm"
 INCLUDE "maps/WestportGym.asm"
-
-
+INCLUDE "maps/RyukyuTheatre.asm"
+INCLUDE "maps/RyukyuHotel.asm"
+INCLUDE "maps/RyukyuHotel2F.asm"
+INCLUDE "maps/RyukyuHotel3F.asm"
+INCLUDE "maps/RyukyuHotel4F.asm"
+INCLUDE "maps/RyukyuHotel5F.asm"
+INCLUDE "maps/RyukyuElevator.asm"
 
 
 SECTION "Map Scripts 17", ROMX

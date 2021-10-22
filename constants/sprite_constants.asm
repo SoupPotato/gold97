@@ -99,6 +99,7 @@
 	const SPRITE_SURGE
 	const SPRITE_CHRIS_SKATE
 	const SPRITE_KRIS_SKATE
+	const SPRITE_PLACEHOLDER
 
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)
 	const_def $80

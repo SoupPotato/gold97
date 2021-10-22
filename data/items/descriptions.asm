@@ -55,7 +55,7 @@ ItemDescriptions:
 	dw XSpecialDesc
 	dw CoinCaseDesc
 	dw ItemfinderDesc
-	dw TeruSama5Desc
+	dw RoomPassDesc
 	dw ExpShareDesc
 	dw OldRodDesc
 	dw GoodRodDesc
@@ -475,8 +475,9 @@ ItemfinderDesc:
 	db   "Checks for unseen"
 	next "items in the area.@"
 
-TeruSama5Desc:
-	db   "?@"
+RoomPassDesc:
+	db   "A pass for the"
+	next "RYUKYU HOTEL.@"
 
 ExpShareDesc:
 	db   "Shares battle EXP."

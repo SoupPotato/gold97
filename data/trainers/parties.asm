@@ -260,6 +260,29 @@ Rival1Group:
 	db -1 ; end
 
 PokemonProfGroup:
+	db "OAK@", TRAINERTYPE_MOVES
+	db 66, TAUROS,      THRASH, TAKE_DOWN, SWAGGER, DOUBLE_TEAM
+	db 67, EXEGGUTOR,   LEECH_SEED, CONFUSION, SLEEP_POWDER, SOLARBEAM
+	db 68, ARCANINE,    FLAMETHROWER, SUNNY_DAY, EXTREMESPEED, TAKE_DOWN
+	db 70, GYARADOS,    EARTHQUAKE, SURF, FIRE_BLAST, RAIN_DANCE
+	db 70, AQUARIUS,    BODY_SLAM, ICY_WIND, SURF, BUBBLEBEAM
+	db -1 ; end
+	
+	db "OAK@", TRAINERTYPE_MOVES
+	db 66, TAUROS,      THRASH, TAKE_DOWN, SWAGGER, DOUBLE_TEAM
+	db 67, EXEGGUTOR,   LEECH_SEED, CONFUSION, SLEEP_POWDER, SOLARBEAM
+	db 68, ARCANINE,    FLAMETHROWER, SUNNY_DAY, EXTREMESPEED, TAKE_DOWN
+	db 70, GYARADOS,    EARTHQUAKE, SURF, FIRE_BLAST, RAIN_DANCE
+	db 70, MEGANIUM,  SYNTHESIS, SLAM, RAZOR_LEAF, SOLARBEAM
+	db -1 ; end
+	
+	db "OAK@", TRAINERTYPE_MOVES
+	db 66, TAUROS,      THRASH, TAKE_DOWN, SWAGGER, DOUBLE_TEAM
+	db 67, EXEGGUTOR,   LEECH_SEED, CONFUSION, SLEEP_POWDER, SOLARBEAM
+	db 68, ARCANINE,    FLAMETHROWER, SUNNY_DAY, EXTREMESPEED, TAKE_DOWN
+	db 70, GYARADOS,    EARTHQUAKE, SURF, FIRE_BLAST, RAIN_DANCE
+	db 70, DYNABEAR,    ROAR, FLAME_WHEEL, SCARY_FACE, FLAMETHROWER
+	db -1 ; end
 
 LoreleiGroup:
 	; WILL (1)
@@ -757,6 +780,11 @@ LassGroup:
 	db 52, SEAKING
 	db -1 ; end-
 
+	; LASS (15)
+	db "ELIZA@", TRAINERTYPE_NORMAL
+	db 56, GOLDUCK
+	db 54, AMPHAROS
+	db -1 ; end
 
 BrunoGroup:
 	; BRUNO (1)
@@ -917,6 +945,13 @@ CooltrainerMGroup:
 	db 39, GIRAFARIG
 	db -1 ; end
 	
+	; COOLTRAINERM (11)
+	db "WOZ@", TRAINERTYPE_NORMAL
+	db 53, FLAREON
+	db 55, PRAXE
+	db 54, GELANIA
+	db -1 ; end
+	
 CooltrainerFGroup:
 	; COOLTRAINERF (1)
 	db "GWEN@", TRAINERTYPE_NORMAL ;used, ilex forest
@@ -1055,6 +1090,24 @@ CooltrainerFGroup:
 	db 36, MURKROW
 	db 37, MURKROW
 	db 38, MURKROW
+	db -1 ; end
+	
+	; COOLTRAINERF (22)
+	db "AYANO@", TRAINERTYPE_NORMAL; used
+	db 56, CHARIZARD
+	db 56, DYNABEAR
+	db -1 ; end
+	
+	; COOLTRAINERF (22)
+	db "YUKA@", TRAINERTYPE_NORMAL; used
+	db 56, BLASTOISE
+	db 56, AQUARIUS
+	db -1 ; end
+	
+	; COOLTRAINERF (22)
+	db "AYAKA@", TRAINERTYPE_NORMAL; used
+	db 56, VENUSAUR
+	db 56, MEGANIUM
 	db -1 ; end
 
 BeautyGroup:
@@ -2586,6 +2639,12 @@ PsychicGroup:
 	db 35, DROWZEE
 	db 37, HYPNO
 	db -1 ; end
+	
+	; PSYCHIC_T (13)
+	db "RAPHAEL@", TRAINERTYPE_NORMAL; Hotel
+	db 54, ALAKAZAM
+	db 55, HYPNO
+	db -1 ; end
 
 PicnickerGroup:
 	; PICNICKER (1)
@@ -2775,11 +2834,11 @@ CamperGroup:
 	db 20, ZUBAT
 	db -1 ; end
 
-	; CAMPER (22) ;unused
+	; CAMPER (22) ;Hotel
 	db "QUENTIN@", TRAINERTYPE_NORMAL
-	db 30, FEAROW
-	db 30, PRIMEAPE
-	db 30, TAUROS
+	db 54, FEAROW
+	db 52, PRIMEAPE
+	db 53, TAUROS
 	db -1 ; end
 
 ExecutiveFGroup:
@@ -3032,35 +3091,33 @@ PokefanMGroup:
 
 KimonoGirlGroup:
 	; KIMONO_GIRL (1)
-	db "NAOKO@", TRAINERTYPE_NORMAL
-	db 20, SKIPLOOM
-	db 20, VULPIX
-	db 18, SKIPLOOM
+	db "KYOKO@", TRAINERTYPE_NORMAL
+	db 70, LEAFEON
 	db -1 ; end
 
 	; KIMONO_GIRL (2)
 	db "NAOKO@", TRAINERTYPE_NORMAL
-	db 17, FLAREON
+	db 70, FLAREON
 	db -1 ; end
 
 	; KIMONO_GIRL (3)
 	db "SAYO@", TRAINERTYPE_NORMAL
-	db 17, ESPEON
+	db 70, ESPEON
 	db -1 ; end
 
 	; KIMONO_GIRL (4)
 	db "ZUKI@", TRAINERTYPE_NORMAL
-	db 17, UMBREON
+	db 70, UMBREON
 	db -1 ; end
 
 	; KIMONO_GIRL (5)
 	db "KUNI@", TRAINERTYPE_NORMAL
-	db 17, VAPOREON
+	db 70, VAPOREON
 	db -1 ; end
 
 	; KIMONO_GIRL (6)
 	db "MIKI@", TRAINERTYPE_NORMAL
-	db 17, JOLTEON
+	db 70, JOLTEON
 	db -1 ; end
 
 TwinsGroup:
@@ -3343,8 +3400,9 @@ SoldierGroup:; use officer sprite
 	db -1 ; end
 	
 	; SOLDIER (4)
-	db "WARNELL@", TRAINERTYPE_NORMAL ;unused
-	db 17, GROWLITHE
+	db "WARNELL@", TRAINERTYPE_NORMAL ;Hotel
+	db 52, ARCANINE
+	db 54, CLOYSTER
 	db -1 ; end
 	
 InstructorGroup:; use gentleman sprite

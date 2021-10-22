@@ -304,7 +304,7 @@ MainMenu_PrintCurrentTimeAndDay:
 	
 	
 .VersionNumberPrint:
-	db "v3.SOUP.1@"
+	db "    v4.0@"
 
 
 .Days:

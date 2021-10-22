@@ -22,4 +22,6 @@ GymLeaders:
 KantoGymLeaders:
 	db LT_SURGE
 	db RED
+	db BLUE
+	db POKEMON_PROF
 	db -1

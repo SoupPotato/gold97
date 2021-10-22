@@ -74,6 +74,9 @@ KRIS EQU __enum__
 	const RIVAL1_5_CRUIZE
 	
 	trainerclass POKEMON_PROF ; 8
+	const OAK_HAS_CRUIZE
+	const OAK_HAS_CHIKORITA
+	const OAK_HAS_FLAMBEAR
 
 	trainerclass LORELEI ; a
 	const LORELEI1
@@ -172,6 +175,7 @@ KRIS EQU __enum__
 	const LINDA1
 	const LINDA2
 	const LINDA3
+	const ELIZA
 
 	trainerclass BRUNO ; 18
 	const BRUNO1
@@ -199,6 +203,7 @@ KRIS EQU __enum__
 	const DARIN
 	const BEN
 	const ROB
+	const WOZNIAK
 
 	trainerclass COOLTRAINERF ; 1a
 	const GWEN
@@ -221,6 +226,9 @@ KRIS EQU __enum__
 	const ALLY
 	const CARA
 	const JULIA
+	const AYANO
+	const YUKA
+	const AYAKA
 
 	trainerclass BEAUTY ; 1b
 	const SAMANTHA
@@ -503,6 +511,7 @@ KRIS EQU __enum__
 	const GILBERT
 	const JARED
 	const RODNEY
+	const RAPHAEL
 
 	trainerclass PICNICKER ; 32
 	const LIZ
@@ -588,8 +597,8 @@ KRIS EQU __enum__
 	const ALLAN
 
 	trainerclass KIMONO_GIRL ; 39
-	const NAOKO1
-	const NAOKO2
+	const KYOKO
+	const NAOKO
 	const SAYO
 	const ZUKI
 	const KUNI

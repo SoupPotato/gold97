@@ -917,3 +917,24 @@ TidalGrottoB1F_Blocks:
 
 TidalGrotto1F_Blocks:
 	INCBIN "maps/TidalGrotto1F.blk"
+	
+RyukyuRestaurant_Blocks:
+	INCBIN "maps/RyukyuRestaurant.blk"
+	
+RyukyuTheatre_Blocks:
+	INCBIN "maps/RyukyuTheatre.blk"
+
+RyukyuHotel_Blocks:
+	INCBIN "maps/RyukyuHotel.blk"
+
+RyukyuHotel2F_Blocks:
+RyukyuHotel3F_Blocks:
+RyukyuHotel4F_Blocks:
+RyukyuHotel5F_Blocks:
+	INCBIN "maps/RyukyuHotelFloors.blk"
+	
+RyukyuHotelRooms_Blocks:
+	INCBIN "maps/RyukyuHotelRooms.blk"
+	
+RyukyuElevator_Blocks:
+	INCBIN "maps/RyukyuElevator.blk"

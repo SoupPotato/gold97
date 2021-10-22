@@ -54,6 +54,9 @@ SaffronSwimmerGirlScript:
 RyukyuPokefanM2Script:
 	jumptextfaceplayer RyukyuPokefanM2Text
 	
+RyukyuCityHotelSign:
+	jumptext RyukyuCityHotelSignText
+	
 RyukyuCitySignText:
 	text "RYUKYU CITY -"
 	para "The SOUTHWEST"
@@ -114,10 +117,19 @@ RyukyuPokefanM2Text:
 	cont "on the sea."
 	done
 
+RyukyuCityHotelSignText:
+	text "RYUKYU HOTEL AND"
+	line "RESTAURANT"
+	para "The ultimate"
+	line "SOUTHWEST ISLANDS"
+	cont "travel experience!"
+	done
+
+
 RyukyuCity_MapEvents:
 	db 0, 0 ; filler
 
-	db 10 ; warp events
+	db 13 ; warp events
 	warp_event 31, 26, RYUKYU_MART, 1
 	warp_event 11,  4, RYUKYU_POKECENTER_1F, 1
 	warp_event 33, 11, RYUKYU_CITY_MERIDIAN_PATH_GATE, 1
@@ -128,14 +140,18 @@ RyukyuCity_MapEvents:
 	warp_event 27,  8, RYUKYU_ABORETUM, 1
 	warp_event 28,  8, RYUKYU_ABORETUM, 2
 	warp_event 16, 27, RYUKYU_FAKE_GYM, 1
+	warp_event 14, 16, RYUKYU_RESTAURANT, 1
+	warp_event 18, 19, RYUKYU_HOTEL, 1
+	warp_event 19, 19, RYUKYU_HOTEL, 2
 
 
 	db 0 ; coord events
 
-	db 3 ; bg events
+	db 4 ; bg events
 	bg_event 12,  4, BGEVENT_READ, RyukyuCityPokecenterSign
 	bg_event 32, 26, BGEVENT_READ, RyukyuCityMartSign
 	bg_event 24, 14, BGEVENT_READ, RyukyuCitySign
+	bg_event 14, 18, BGEVENT_READ, RyukyuCityHotelSign
 
 	db 9 ; object events
 	object_event 29, 13, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SaffronPokefanMScript, -1
