@@ -634,3 +634,12 @@ ENDM
 	map_attributes SkateboarderHouse, SKATEBOARDER_HOUSE, $00, 0
 	map_attributes TidalGrottoB1F, TIDAL_GROTTO_B1F, $09, 0
 	map_attributes TidalGrotto1F, TIDAL_GROTTO_1F, $09, 0
+	map_attributes RyukyuTheatre, RYUKYU_THEATRE, $00, 0
+	map_attributes RyukyuHotel, RYUKYU_HOTEL, $00, 0
+	map_attributes RyukyuHotel2F, RYUKYU_HOTEL_2F, $00, 0
+	map_attributes RyukyuHotel3F, RYUKYU_HOTEL_3F, $00, 0
+	map_attributes RyukyuHotel4F, RYUKYU_HOTEL_4F, $00, 0
+	map_attributes RyukyuHotel5F, RYUKYU_HOTEL_5F, $00, 0
+	map_attributes RyukyuHotelRooms, RYUKYU_HOTEL_ROOMS, $00, 0
+	map_attributes RyukyuElevator, RYUKYU_ELEVATOR, $00, 0
+	map_attributes RyukyuRestaurant, RYUKYU_RESTAURANT, $00, 0

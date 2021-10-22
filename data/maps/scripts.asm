@@ -296,6 +296,8 @@ INCLUDE "maps/KurtsHouse.asm"
 INCLUDE "maps/WestportGym.asm"
 
 
+
+
 SECTION "Map Scripts 17", ROMX
 
 INCLUDE "maps/SanskritTown.asm"
@@ -389,7 +391,6 @@ INCLUDE "maps/KumeSocialHouse.asm"
 INCLUDE "maps/KumeMart.asm"
 INCLUDE "maps/KumePokecenter1F.asm"
 INCLUDE "maps/KumeSnoozeSpeechHouse.asm"
-
 INCLUDE "maps/CastleMountain1F.asm"
 INCLUDE "maps/CastleMountain1FDanceHall.asm"
 INCLUDE "maps/CastleMountain1FDiningHall.asm"

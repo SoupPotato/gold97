@@ -51,37 +51,8 @@ SaffronSwimmerGuyScript:
 SaffronSwimmerGirlScript:
 	jumptextfaceplayer SaffronSwimmerGirlText
 
-	
-FireStarterTest:
-	clearevent EVENT_GOT_CRUIZE_FROM_OAK
-	clearevent EVENT_GOT_CHIKORITA_FROM_OAK
-	setevent EVENT_GOT_FLAMBEAR_FROM_OAK
-	jumptext FireStarterTestText
-	
-WaterStarterTest:
-	setevent EVENT_GOT_CRUIZE_FROM_OAK
-	clearevent EVENT_GOT_CHIKORITA_FROM_OAK
-	clearevent EVENT_GOT_FLAMBEAR_FROM_OAK
-	jumptext WaterStarterTestText
-	
-	
-GrassStarterTest:
-	clearevent EVENT_GOT_CRUIZE_FROM_OAK
-	setevent EVENT_GOT_CHIKORITA_FROM_OAK
-	clearevent EVENT_GOT_FLAMBEAR_FROM_OAK
-	jumptext GrassStarterTestText
-	
-GrassStarterTestText:
-	text "grass"
-	done
-
-WaterStarterTestText:
-	text "water"
-	done
-	
-FireStarterTestText:
-	text "fire"
-	done
+RyukyuPokefanM2Script:
+	jumptextfaceplayer RyukyuPokefanM2Text
 	
 RyukyuCitySignText:
 	text "RYUKYU CITY -"
@@ -137,38 +108,42 @@ SaffronSwimmerGirlText:
 	cont "than right here!"
 	done
 
+RyukyuPokefanM2Text:
+	text "I just enjoy"
+	line "watching the waves"
+	cont "on the sea."
+	done
+
 RyukyuCity_MapEvents:
 	db 0, 0 ; filler
 
 	db 10 ; warp events
-	warp_event 29, 26, RYUKYU_MART, 1
+	warp_event 31, 26, RYUKYU_MART, 1
 	warp_event 11,  4, RYUKYU_POKECENTER_1F, 1
 	warp_event 33, 11, RYUKYU_CITY_MERIDIAN_PATH_GATE, 1
 	warp_event 22, 31, RYUKYU_URASOE_GATE, 1
 	warp_event 23, 31, RYUKYU_URASOE_GATE, 2
 	warp_event 23,  7, MR_PSYCHICS_HOUSE, 1
-	warp_event 28, 18, RYUKYU_TRADE_SPEECH_HOUSE, 1
+	warp_event 30, 18, RYUKYU_TRADE_SPEECH_HOUSE, 1
 	warp_event 27,  8, RYUKYU_ABORETUM, 1
 	warp_event 28,  8, RYUKYU_ABORETUM, 2
-	warp_event 14, 23, RYUKYU_FAKE_GYM, 1
+	warp_event 16, 27, RYUKYU_FAKE_GYM, 1
 
 
 	db 0 ; coord events
 
-	db 6 ; bg events
+	db 3 ; bg events
 	bg_event 12,  4, BGEVENT_READ, RyukyuCityPokecenterSign
-	bg_event 30, 26, BGEVENT_READ, RyukyuCityMartSign
-	bg_event 22, 12, BGEVENT_READ, RyukyuCitySign
-	bg_event 16, 22, BGEVENT_READ, FireStarterTest
-	bg_event 16, 21, BGEVENT_READ, WaterStarterTest
-	bg_event 15, 22, BGEVENT_READ, GrassStarterTest
+	bg_event 32, 26, BGEVENT_READ, RyukyuCityMartSign
+	bg_event 24, 14, BGEVENT_READ, RyukyuCitySign
 
-	db 8 ; object events
-	object_event 26, 12, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SaffronPokefanMScript, -1
-	object_event 11, 12, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SaffronTeacherScript, -1
-	object_event 11, 13, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SaffronTwinScript, -1
-	object_event 11, 11, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SaffronBugCatcherScript, -1
-	object_event 20, 25, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SaffronLassScript, -1
+	db 9 ; object events
+	object_event 29, 13, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SaffronPokefanMScript, -1
+	object_event 11, 11, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SaffronTeacherScript, -1
+	object_event 11, 12, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SaffronTwinScript, -1
+	object_event 11, 10, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SaffronBugCatcherScript, -1
+	object_event 21, 21, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SaffronLassScript, -1
 	object_event  9, 19, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, SaffronCooltrainerMScript, -1
 	object_event  5, 20, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SaffronSwimmerGuyScript, -1
 	object_event  6, 10, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SaffronSwimmerGirlScript, -1
+	object_event  8, 29, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RyukyuPokefanM2Script, -1

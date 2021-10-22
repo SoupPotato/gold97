@@ -441,6 +441,16 @@ ENDM
 	map_const URASOE_PARK,                                 20,  9 ;  3
 	map_const RYUKYU_TRADE_SPEECH_HOUSE,                    5,  4 ;  3
 	map_const URASOE_PARK_URASOE_TRAIL_GATE,                5,  4 ; 13
+	
+	map_const RYUKYU_HOTEL,                          15, 5 ; 67
+	map_const RYUKYU_HOTEL_2F,                          10,  9 ; 67
+	map_const RYUKYU_HOTEL_3F,                          10,  9 ; 67
+	map_const RYUKYU_HOTEL_4F,                          10,  9 ; 67
+	map_const RYUKYU_HOTEL_5F,                          10,  9 ; 67
+	map_const RYUKYU_HOTEL_ROOMS,                          20,  9 ; 67
+	map_const RYUKYU_ELEVATOR,                       2,  2 ; 69
+	map_const RYUKYU_RESTAURANT,                           10,  9 ; 69
+	map_const RYUKYU_THEATRE,                          10, 9 ; 66
 
 	newgroup                                                      ; 26
 
