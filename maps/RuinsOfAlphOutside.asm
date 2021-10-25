@@ -221,7 +221,6 @@ PsychicNathanAfterBattleText:
 
 RuinsOfAlphSignText:
 	text "RUINS OF ALPH"
-	line "OBSERVATION CENTER"
 	done
 
 RuinsOfAlphOutsideFisherText1:
