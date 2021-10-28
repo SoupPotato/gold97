@@ -11,7 +11,7 @@ KantoDeptStore4F_MapScripts:
 KantoDeptStore4FClerkScript:
 	faceplayer
 	opentext
-	pokemart MARTTYPE_STANDARD, MART_CELADON_3F_2; yes 3f, this is stone salesman
+	pokemart MARTTYPE_STANDARD, MART_CELADON_4F
 	closetext
 	end
 

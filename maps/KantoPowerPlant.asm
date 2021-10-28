@@ -32,7 +32,7 @@ SurgeScript:
 	reloadmapafterbattle
 	setevent EVENT_WON_SURGE_BATTLE
 	;fallthrough
-	
+
 Surge_afterbattle:
 	checkevent EVENT_TOOK_THE_PICHU
 	iftrue Surge_afterpichu
@@ -51,35 +51,35 @@ Surge_afterbattle:
 	waitbutton
 	closetext
 	end
-	
+
 .PartyFullSurge:
 	writetext SurgePartyFullText
 	waitbutton
 	closetext
 	end
-	
+
 Surge_afterpichu:
 	opentext
 	writetext SurgeFinalText
 	waitbutton
 	closetext
 	end
-	
+
 Surge_beforebattletext:
 	text "SURGE: Hey, you"
 	line "little tyke!"
-	
+
 	para "What would make"
 	line "a kid like you"
 	cont "want to come out"
 	cont "to this abandoned"
 	cont "dump?"
-	
+
 	para "This area is where"
 	line "I come to train"
 	cont "my powerful"
 	cont "ELECTRIC #MON!"
-	
+
 	para "If you came here"
 	line "looking for a"
 	cont "challenge, then"
@@ -89,38 +89,37 @@ Surge_beforebattletext:
 	line "like I did my"
 	cont "enemies in war!"
 	done
-	
-	
+
 Surge_beatentext:
 	text "SURGE: Arrrgh!"
 	line "You are strong!"
-	
+
 	para "You're no normal"
 	line "kid, that's for"
 	cont "sure!"
 	done
-	
+
 SurgeTakeThisPichuText:
 	text "So what gives?"
-	
+
 	para "There's nothing"
 	line "to be found in"
 	cont "this old place"
 	cont "besides the"
 	cont "VOLTORB!"
-	
+
 	para "…"
-	
+
 	para "The gym challenge"
 	line "is what you're"
 	cont "here for?"
-	
+
 	para "Hah! Sorry kid"
 	line "but I'm off duty"
 	cont "since the LEAGUE"
 	cont "expanded to the"
 	cont "whole nation!"
-	
+
 	para "I might not have"
 	line "a THUNDERBADGE to"
 	cont "give, but maybe"
@@ -128,7 +127,7 @@ SurgeTakeThisPichuText:
 	cont "trainer for"
 	cont "this PICHU that"
 	cont "I hatched!"
-	
+
 	para "I'm no good with"
 	line "kids! So take"
 	cont "good care of it!"
@@ -137,7 +136,7 @@ SurgeTakeThisPichuText:
 SurgeExplainPichuMetronomeText:
 	text "That PICHU knows"
 	line "a special move!"
-	
+
 	para "EGG hatched"
 	line "#MON often do!"
 	done
@@ -147,7 +146,7 @@ SurgePlayerReceivedPichuText:
 	text "<PLAYER> received"
 	line "PICHU!"
 	done
-	
+
 SurgePartyFullText:
 	text "Might want to go"
 	line "make room in your"
@@ -157,7 +156,7 @@ SurgePartyFullText:
 SurgeFinalText:
 	text "Good luck with"
 	line "the INDIGO GYM!"
-	
+
 	para "You're gonna need"
 	line "it!"
 	done
@@ -177,7 +176,7 @@ Voltorb1:
 	disappear PP_VOLTORB1
 	reloadmapafterbattle
 	end
-	
+
 Voltorb2:
 	faceplayer
 	opentext
@@ -191,8 +190,7 @@ Voltorb2:
 	disappear PP_VOLTORB2
 	reloadmapafterbattle
 	end
-	
-	
+
 Voltorb3:
 	faceplayer
 	opentext
@@ -206,8 +204,7 @@ Voltorb3:
 	disappear PP_VOLTORB3
 	reloadmapafterbattle
 	end
-	
-	
+
 Voltorb4:
 	faceplayer
 	opentext
@@ -221,8 +218,7 @@ Voltorb4:
 	disappear PP_VOLTORB4
 	reloadmapafterbattle
 	end
-	
-	
+
 Voltorb5:
 	faceplayer
 	opentext
@@ -236,8 +232,7 @@ Voltorb5:
 	disappear PP_VOLTORB5
 	reloadmapafterbattle
 	end
-	
-	
+
 Voltorb6:
 	faceplayer
 	opentext
@@ -251,8 +246,7 @@ Voltorb6:
 	disappear PP_VOLTORB6
 	reloadmapafterbattle
 	end
-	
-	
+
 Voltorb7:
 	faceplayer
 	opentext
@@ -266,8 +260,7 @@ Voltorb7:
 	disappear PP_VOLTORB7
 	reloadmapafterbattle
 	end
-	
-	
+
 Voltorb8:
 	faceplayer
 	opentext
@@ -281,21 +274,20 @@ Voltorb8:
 	disappear PP_VOLTORB8
 	reloadmapafterbattle
 	end
-	
-	
+
 VoltorbText:
 	text "Bzzzt!"
 	done
 
 PPItem1:
 	itemball CARBOS
-	
+
 PPItem2:
 	itemball HP_UP
-	
+
 PPItem3:
 	itemball RARE_CANDY
-	
+
 PPItem4:
 	itemball TM_THUNDERPUNCH
 

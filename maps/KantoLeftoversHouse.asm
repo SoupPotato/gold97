@@ -1,6 +1,6 @@
 	const_def 2 ; object constants
-	const CELADONCAFE_SUPER_NERD
-	const CELADONCAFE_FISHER1
+	const KANTO_LEFTOVERS_HOUSE_SUPER_NERD
+	const KANTO_LEFTOVERS_HOUSE_FISHER1
 
 KantoLeftoversHouse_MapScripts:
 	db 0 ; scene scripts
@@ -8,8 +8,8 @@ KantoLeftoversHouse_MapScripts:
 	db 0 ; callbacks
 
 KantoLeftoversHouseChef:
-	checkevent EVENT_JASMINE_EXPLAINED_AMPHYS_SICKNESS
-	iftrue .TrashEmpty
+	checkevent EVENT_KANTO_LEFTOVERS_HOUSE_GOT_LEFTOVERES
+	iftrue .NoMoreLeftovers
 	faceplayer
 	opentext
 	writetext KantoLeftoversHouseChefText1
@@ -17,14 +17,14 @@ KantoLeftoversHouseChef:
 	verbosegiveitem LEFTOVERS
 	iffalse .PackFull
 	closetext
-	setevent EVENT_JASMINE_EXPLAINED_AMPHYS_SICKNESS
+	setevent EVENT_KANTO_LEFTOVERS_HOUSE_GOT_LEFTOVERES
 	end
 
 .PackFull:
 	closetext
 	end
 
-.TrashEmpty:
+.NoMoreLeftovers:
 	faceplayer
 	opentext
 	writetext AlreadyGotLeftovers

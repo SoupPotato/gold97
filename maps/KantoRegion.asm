@@ -21,9 +21,9 @@ KantoRegion_MapScripts:
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
 
 .FlyPoint:
-	setflag ENGINE_FLYPOINT_CELADON
+	setflag ENGINE_FLYPOINT_KANTO
 	return
-	
+
 KantoRegionTMDetect:
 	itemball TM_ROCK_HEAD
 
@@ -32,63 +32,63 @@ KantoFisherScript:
 
 KantoSign:
 	jumptext KantoSignText
-	
+
 KantoPokecenterSign:
 	jumpstd pokecentersign
-	
+
 KantoGymSign:
 	jumptext KantoGymSignText
-	
+
 PalletTownSign2:
 	jumptext PalletTownSignText2
-	
+
 RedsHouseSign2:
 	jumptext RedsHouseSignText2
-	
+
 BluesHouseSign2:
 	jumptext BluesHouseSignText2
-	
+
 OaksLabSign2:
 	jumptext OaksLabSign2Text
-	
+
 KantoDeptSign:
 	jumptext KantoDeptSignText
-	
+
 KantoMansionSign:
 	jumptext KantoMansionSignText
-	
+
 KantoBattleClubSign:
 	jumptext KantoBattleClubSignText
-	
+
 PokemonTowerSign:
 	jumptext PokemonTowerSignText
-	
+
 KantoCooltrainerMScript:
 	jumptextfaceplayer KantoCooltrainerMText
-	
+
 KantoTeacherScript:
 	jumptextfaceplayer KantoTeacherText
-	
+
 KantoPokefanMScript:
 	jumptextfaceplayer KantoPokefanMText
 
 KantoLassScript:
 	jumptextfaceplayer KantoLassText
-	
+
 KantoSuperNerdScript:
 	jumptextfaceplayer KantoSuperNerdText
-	
+
 KantoYoungsterScript:
 	jumptextfaceplayer KantoYoungsterText
-	
+
 KantoFisher2Script:
 	jumptextfaceplayer KantoFisher2Text
 	
 KantoLass2Script:
 	jumptextfaceplayer KantoLass2Text
-	
+
 ;----------------------------------------------------------
-	
+
 TrainerKBiker1:
 	trainer BIKER, ZEKE, EVENT_BEAT_KR_TRAINER1, BikerZekeSeenText, BikerZekeBeatenText, 0, .Script
 
@@ -99,7 +99,7 @@ TrainerKBiker1:
 	waitbutton
 	closetext
 	end
-	
+
 TrainerKBiker2:
 	trainer BIKER, CHARLES, EVENT_BEAT_KR_TRAINER2, BikerCharlesSeenText, BikerCharlesBeatenText, 0, .Script
 
@@ -110,7 +110,7 @@ TrainerKBiker2:
 	waitbutton
 	closetext
 	end
-	
+
 TrainerKPsychic:
 	trainer PSYCHIC_T, PHIL, EVENT_BEAT_KR_TRAINER3, PsychicPhilSeenText, PsychicPhilBeatenText, 0, .Script
 
@@ -121,7 +121,7 @@ TrainerKPsychic:
 	waitbutton
 	closetext
 	end
-	
+
 TrainerKFisher:
 	trainer FISHER, ANDRE, EVENT_BEAT_KR_TRAINER4, FisherAndreSeenText, FisherAndreBeatenText, 0, .Script
 
@@ -132,14 +132,14 @@ TrainerKFisher:
 	waitbutton
 	closetext
 	end
-	
+
 ;----------------------------------------------------------
 
 BikerZekeSeenText:
 	text "Hey! This is the"
 	line "world famous"
 	cont "CYCLING ROAD!"
-	
+
 	para "Get off your feet"
 	line "and respect the"
 	cont "road rules!"
@@ -154,8 +154,7 @@ BikerZekeAfterBattleText:
 	line "getting around"
 	cont "KANTO on a bike!"
 	done
-	
-	
+
 BikerCharlesSeenText:
 	text "You should learn"
 	line "to pick your"
@@ -170,17 +169,16 @@ BikerCharlesBeatenText:
 
 BikerCharlesAfterBattleText:
 	text "My battles?"
-	
+
 	para "Well right now"
 	line "I'm fighting to"
 	cont "get a row of"
 	cont "windmills put"
 	cont "along this road."
-	
+
 	para "Think of the"
 	line "clean energy!"
 	done
-	
 
 PsychicPhilSeenText:
 	text "My former mentor"
@@ -203,11 +201,10 @@ PsychicPhilAfterBattleText:
 	cont "alive in KANTO."
 	done
 
-	
 FisherAndreSeenText:
 	text "What's with this"
 	line "spot lately!"
-	
+
 	para "I'm having just"
 	line "no luck!"
 	done
@@ -223,16 +220,14 @@ FisherAndreAfterBattleText:
 	cont "when a volcanic"
 	cont "eruption is going"
 	cont "to happen soon."
-	
+
 	para "Maybe I should"
 	line "avoid CINNABAR"
 	cont "ISLAND for a"
 	cont "while, h-heheh."
 	done
-	
-	
+
 ;----------------------------------------------------------
-	
 KantoLass2Text:
 	text "The SCIENTISTs in"
 	line "this lab are"
@@ -242,7 +237,7 @@ KantoLass2Text:
 	para "into a living"
 	line "#MON!"
 	done
-	
+
 KantoFisher2Text:
 	text "Boy, I sure do"
 	line "love fishing!"
@@ -250,7 +245,7 @@ KantoFisher2Text:
 	line "a peaceful spot"
 	cont "to do it!"
 	done
-	
+
 KantoYoungsterText:
 	text "One day, I want"
 	line "to be just as"
@@ -262,7 +257,7 @@ KantoYoungsterText:
 	line "are as good as"
 	cont "him."
 	done
-	
+
 KantoSuperNerdText:
 	text "The owner of this"
 	line "GAME CORNER"
@@ -271,7 +266,7 @@ KantoSuperNerdText:
 	para "newer one over on"
 	line "TEKNOS BOARDWALK."
 	done
-	
+
 KantoLassText:
 	text "Do you know about"
 	line "SILPH CO.?"
@@ -282,7 +277,7 @@ KantoLassText:
 	para "the #BALLS your"
 	line "#MON are in!"
 	done
-	
+
 KantoPokefanMText:
 	text "I've never been a"
 	line "serious trainer."
@@ -296,7 +291,7 @@ KantoPokefanMText:
 	para "CLUB wouldn't let"
 	line "me inside…"
 	done
-	
+
 KantoFisherText:
 	text "Technology is"
 	line "incredible!"
@@ -304,14 +299,14 @@ KantoFisherText:
 	line "#MON across"
 	cont "time!"
 	done
-	
+
 KantoSignText:
 	text "WELCOME TO THE"
 	line "KANTO REGION-"
 	para "NIHON's centre of"
 	line "urban prosperity."
 	done
-	
+
 KantoGymSignText:
 	text "INDIGO PLATEAU"
 	line "#MON GYM"
@@ -320,7 +315,7 @@ KantoGymSignText:
 	para "The Experienced"
 	line "Veteran Trainer"
 	done
-	
+
 PalletTownSignText2:
 	text "PALLET TOWN"
 
@@ -328,11 +323,11 @@ PalletTownSignText2:
 	line "of peace and"
 	cont "purity."
 	done
-	
+
 RedsHouseSignText2:
 	text "RED's House"
 	done
-	
+
 BluesHouseSignText2:
 	text "BLUE's House"
 	done
@@ -344,25 +339,25 @@ OaksLabSign2Text:
 	para "researching in"
 	line "SILENT TOWN."
 	done
-	
+
 KantoDeptSignText:
 	text "Full Selection of"
 	line "#MON Goods!"
 
 	para "CELADON DEPT.STORE"
 	done
-	
+
 KantoMansionSignText:
 	text "CELADON MANSION"
 	done
-	
+
 KantoBattleClubSignText:
 	text "KANTO BATTLE CLUB"
 	para "A members-only"
 	line "club for serious"
 	cont "trainers."
 	done
-	
+
 PokemonTowerSignText:
 	text "#MON TOWER"
 	para "A monument to"
@@ -384,40 +379,40 @@ SeafoamSign:
 SeafoamSignText:
 	text "SEAFOAM ISLANDS"
 	done
-	
+
 SafariZoneSign:
 	jumptext SafariZoneSignText
-	
+
 SafariZoneSignText:
 	text "SAFARI ZONE"
 	para "Now free for"
 	line "public access!"
 	done
-	
+
 FujiHouseSign:
 	jumptext FujiHouseSignText
-	
+
 FujiHouseSignText:
 	text "MR.FUJI's HOUSE"
 	done
-	
+
 DocksSign:
 	jumptext DocksSignText
-	
+
 DocksSignText:
 	text "VERMILLION DOCKS"
 	done
-	
+
 PowerPlantSign:
 	jumptext PowerPlantSignText
-	
+
 PowerPlantSignText:
 	text "POWER PLANT"
 	done
-	
+
 SilphCoSign:
 	jumptext SilphCoSignText
-	
+
 SilphCoSignText:
 	text "SILPH COMPANY"
 	done
@@ -493,7 +488,7 @@ SeaCottageSignText:
 
 DiglettsCaveSign:
 	jumptext DiglettsCaveSignText
-	
+
 DiglettsCaveSignText:
 	text "DIGLETTs CAVE"
 	done
@@ -506,7 +501,7 @@ KantoCooltrainerMText:
 	line "go at it makes me"
 	cont "feel bloated…"
 	done
-	
+
 KantoTeacherText:
 	text "The CELADON DEPT."
 	line "STORE has the best"

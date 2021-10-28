@@ -1,8 +1,8 @@
 	const_def 2 ; object constants
-	const PALLETTOWN_GRANNY
-	const PALLETTOWN_TWIN
-	const PALLETTOWN_GRAMPS
-	const PALLETTOWN_CLAIR
+	const KOBANISLAND_GRANNY
+	const KOBANISLAND_TWIN
+	const KOBANISLAND_GRAMPS
+	const KOBANISLAND_CLAIR
 
 KobanIsland_MapScripts:
 	db 0 ; scene scripts
@@ -11,7 +11,7 @@ KobanIsland_MapScripts:
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
 
 .FlyPoint:
-	setflag ENGINE_FLYPOINT_PALLET
+	setflag ENGINE_FLYPOINT_KOBAN
 	return
 
 KobanIslandTeacherScript:
@@ -23,18 +23,17 @@ KobanIslandGrampsScript:
 KobanIslandFisherScript:
 	jumptextfaceplayer KobanIslandFisherText
 
-KobanIslandSign:
+KobanPokecenterSign:
 	jumpstd pokecentersign
 
-RedsHouseSign:
+KobanMartSign:
 	jumpstd martsign
 
-OaksLabSign:
-	jumptext OaksLabSignText
+KobanIslandSign:
+	jumptext KobanIslandSignText
 
-BluesHouseSign:
-;	clearevent EVENT_BLACKTHORN_CITY_SUPER_NERD_DOES_NOT_BLOCK_GYM
-	jumptext BluesHouseSignText
+DragonsMawSign:
+	jumptext DragonsMawSignText
 	
 KobanIslandClairScript:
 	faceplayer
@@ -45,17 +44,17 @@ KobanIslandClairScript:
 	wait 2
 	checkcode VAR_FACING
 	ifequal RIGHT, .ClairWalksAroundPlayer
-	applymovement PALLETTOWN_CLAIR, ClairLeavesMovement
-	disappear PALLETTOWN_CLAIR
-	setevent EVENT_BLACKTHORN_CITY_GRAMPS_BLOCKS_DRAGONS_DEN
-	clearevent EVENT_BLACKTHORN_CITY_GRAMPS_NOT_BLOCKING_DRAGONS_DEN
+	applymovement KOBANISLAND_CLAIR, ClairLeavesMovement
+	disappear KOBANISLAND_CLAIR
+	setevent EVENT_KOBAN_ISLAND_CLAIR_BLOCKING_DRAGONS_MAW
+	clearevent EVENT_CLAIRS_HOUSE_HIDE_CLAIR
 	end
 
 .ClairWalksAroundPlayer
-	applymovement PALLETTOWN_CLAIR, ClairLeavesMovement2
-	disappear PALLETTOWN_CLAIR
-	setevent EVENT_BLACKTHORN_CITY_GRAMPS_BLOCKS_DRAGONS_DEN
-	clearevent EVENT_BLACKTHORN_CITY_GRAMPS_NOT_BLOCKING_DRAGONS_DEN
+	applymovement KOBANISLAND_CLAIR, ClairLeavesMovement2
+	disappear KOBANISLAND_CLAIR
+	setevent EVENT_KOBAN_ISLAND_CLAIR_BLOCKING_DRAGONS_MAW
+	clearevent EVENT_CLAIRS_HOUSE_HIDE_CLAIR
 	end
 
 KobanIslandTeacherText:
@@ -80,13 +79,13 @@ KobanIslandFisherText:
 	line "to raise a DRAGON!"
 	done
 
-OaksLabSignText:
+KobanIslandSignText:
 	text "KOBAN ISLAND"
 	para "A small island"
 	line "with big history."
 	done
 
-BluesHouseSignText:
+DragonsMawSignText:
 	text "DRAGON'S MAW"
 	done
 	
@@ -164,13 +163,13 @@ KobanIsland_MapEvents:
 	db 0 ; coord events
 
 	db 4 ; bg events
-	bg_event 10, 10, BGEVENT_READ, KobanIslandSign
-	bg_event  6, 10, BGEVENT_READ, RedsHouseSign
-	bg_event 10, 14, BGEVENT_READ, OaksLabSign
-	bg_event 14,  6, BGEVENT_READ, BluesHouseSign
+	bg_event 10, 10, BGEVENT_READ, KobanPokecenterSign
+	bg_event  6, 10, BGEVENT_READ, KobanMartSign
+	bg_event 10, 14, BGEVENT_READ, KobanIslandSign
+	bg_event 14,  6, BGEVENT_READ, DragonsMawSign
 
 	db 4 ; object events
 	object_event  9,  6, SPRITE_GRANNY, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KobanIslandTeacherScript, -1
 	object_event  8, 12, SPRITE_TWIN, SPRITEMOVEDATA_SPINRANDOM_SLOW, 2, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, KobanIslandFisherScript, -1
 	object_event 13, 11, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KobanIslandGrampsScript, -1
-	object_event 13,  6, SPRITE_CLAIR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0 , -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KobanIslandClairScript, EVENT_BLACKTHORN_CITY_GRAMPS_BLOCKS_DRAGONS_DEN
+	object_event 13,  6, SPRITE_CLAIR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0 , -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KobanIslandClairScript, EVENT_KOBAN_ISLAND_CLAIR_BLOCKING_DRAGONS_MAW

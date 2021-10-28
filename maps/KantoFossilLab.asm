@@ -1,7 +1,7 @@
 	const_def 2 ; object constants
-	const DANCE_THEATRE_FOSSIL_SCIENTIST
-	const DANCE_THEATRE_SCIENTIST_1
-	const DANCE_THEATRE_GENTLEMAN
+	const FOSSIL_LAB_SCIENTIST_1
+	const FOSSIL_LAB_SCIENTIST_2
+	const FOSSIL_LAB_GENTLEMAN
 
 KantoFossilLab_MapScripts:
 	db 0 ; scene scripts
@@ -40,21 +40,21 @@ KantoFossilLabFossilScientist:
 	ifequal PARTY_LENGTH, .PartyFullOmanyte
 	closetext
 	pause 15
-	applymovement DANCE_THEATRE_FOSSIL_SCIENTIST, ScientistGoesToMachine1
+	applymovement FOSSIL_LAB_SCIENTIST_1, ScientistGoesToMachine1
 	playsound SFX_POKEBALLS_PLACED_ON_TABLE
 	waitsfx
 	pause 15
-	applymovement DANCE_THEATRE_FOSSIL_SCIENTIST, ScientistGoesToMachine2
+	applymovement FOSSIL_LAB_SCIENTIST_1, ScientistGoesToMachine2
 	playsound SFX_BOOT_PC
 	waitsfx
 	pause 15
 	playsound SFX_POTION
 	waitsfx
-	applymovement DANCE_THEATRE_FOSSIL_SCIENTIST, ScientistGoesToMachine3
+	applymovement FOSSIL_LAB_SCIENTIST_1, ScientistGoesToMachine3
 	playsound SFX_POKEBALLS_PLACED_ON_TABLE
 	waitsfx
 	pause 15
-	applymovement DANCE_THEATRE_FOSSIL_SCIENTIST, ScientistGoesToMachine4
+	applymovement FOSSIL_LAB_SCIENTIST_1, ScientistGoesToMachine4
 	opentext
 	writetext ScientistHereYouGoText
 	waitbutton
@@ -93,21 +93,21 @@ KantoFossilLabFossilScientist:
 	ifequal PARTY_LENGTH, .PartyFullKabuto
 	closetext
 	pause 15
-	applymovement DANCE_THEATRE_FOSSIL_SCIENTIST, ScientistGoesToMachine1
+	applymovement FOSSIL_LAB_SCIENTIST_1, ScientistGoesToMachine1
 	playsound SFX_POKEBALLS_PLACED_ON_TABLE
 	waitsfx
 	pause 15
-	applymovement DANCE_THEATRE_FOSSIL_SCIENTIST, ScientistGoesToMachine2
+	applymovement FOSSIL_LAB_SCIENTIST_1, ScientistGoesToMachine2
 	playsound SFX_BOOT_PC
 	waitsfx
 	pause 15
 	playsound SFX_POTION
 	waitsfx
-	applymovement DANCE_THEATRE_FOSSIL_SCIENTIST, ScientistGoesToMachine3
+	applymovement FOSSIL_LAB_SCIENTIST_1, ScientistGoesToMachine3
 	playsound SFX_POKEBALLS_PLACED_ON_TABLE
 	waitsfx
 	pause 15
-	applymovement DANCE_THEATRE_FOSSIL_SCIENTIST, ScientistGoesToMachine4
+	applymovement FOSSIL_LAB_SCIENTIST_1, ScientistGoesToMachine4
 	opentext
 	writetext ScientistHereYouGoText
 	waitbutton
@@ -146,21 +146,21 @@ KantoFossilLabFossilScientist:
 	ifequal PARTY_LENGTH, .PartyFullAerodactyl
 	closetext
 	pause 15
-	applymovement DANCE_THEATRE_FOSSIL_SCIENTIST, ScientistGoesToMachine1
+	applymovement FOSSIL_LAB_SCIENTIST_1, ScientistGoesToMachine1
 	playsound SFX_POKEBALLS_PLACED_ON_TABLE
 	waitsfx
 	pause 15
-	applymovement DANCE_THEATRE_FOSSIL_SCIENTIST, ScientistGoesToMachine2
+	applymovement FOSSIL_LAB_SCIENTIST_1, ScientistGoesToMachine2
 	playsound SFX_BOOT_PC
 	waitsfx
 	pause 15
 	playsound SFX_POTION
 	waitsfx
-	applymovement DANCE_THEATRE_FOSSIL_SCIENTIST, ScientistGoesToMachine3
+	applymovement FOSSIL_LAB_SCIENTIST_1, ScientistGoesToMachine3
 	playsound SFX_POKEBALLS_PLACED_ON_TABLE
 	waitsfx
 	pause 15
-	applymovement DANCE_THEATRE_FOSSIL_SCIENTIST, ScientistGoesToMachine4
+	applymovement FOSSIL_LAB_SCIENTIST_1, ScientistGoesToMachine4
 	opentext
 	writetext ScientistHereYouGoText
 	waitbutton

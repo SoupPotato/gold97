@@ -10,7 +10,7 @@ KantoMart_MapScripts:
 
 KantoMartClerkScript:; uses same mart stock as stand city
 	opentext
-	pokemart MARTTYPE_STANDARD, MART_FUCHSIA
+	pokemart MARTTYPE_STANDARD, MART_STAND
 	closetext
 	end
 

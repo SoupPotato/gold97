@@ -1,19 +1,19 @@
 	const_def 2
-	const KKHOUSE1_BLACKBELT
-	const KKHOUSE1_GRANNY
+	const KIKAIHOUSE1_BLACKBELT
+	const KIKAIHOUSE1_GRANNY
 
 KikaiHouse1_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
-KKHouse1BBScript:
-	jumptextfaceplayer KKHouse1BBText
+KikaiHouse1BBScript:
+	jumptextfaceplayer KikaiHouse1BBText
 	
-KKHouse1GrannyScript:
-	jumptextfaceplayer KKHouse1GrannyText
+KikaiHouse1GrannyScript:
+	jumptextfaceplayer KikaiHouse1GrannyText
 	
-KKHouse1BBText:
+KikaiHouse1BBText:
 	text "I travelled all"
 	line "the way from the"
 	cont "FIGHTING DOJO in"
@@ -22,7 +22,7 @@ KKHouse1BBText:
 	cont "KIKAI CALDERA!"
 	done
 
-KKHouse1GrannyText:
+KikaiHouse1GrannyText:
 	text "Travelling martial"
 	line "artists seek"
 	cont "lodging here in"
@@ -49,5 +49,5 @@ KikaiHouse1_MapEvents:
 	db 0 ; bg events
 
 	db 2 ; object events
-	object_event  4,  3, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KKHouse1BBScript, -1
-	object_event  7,  4, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KKHouse1GrannyScript, -1
+	object_event  4,  3, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KikaiHouse1BBScript, -1
+	object_event  7,  4, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KikaiHouse1GrannyScript, -1

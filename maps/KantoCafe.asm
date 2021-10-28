@@ -89,7 +89,7 @@ EatathonContestPoster:
 	jumptext EatathonContestPosterText
 
 CeladonCafe2Trashcan:
-	checkevent EVENT_FOUND_LEFTOVERS_IN_CELADON_CAFE
+	checkevent EVENT_FOUND_MYSTERY_BERRY_IN_CELADON_CAFE
 	iftrue .TrashEmpty
 	giveitem MYSTERYBERRY
 	iffalse .PackFull
@@ -100,7 +100,7 @@ CeladonCafe2Trashcan:
 	waitsfx
 	itemnotify
 	closetext
-	setevent EVENT_FOUND_LEFTOVERS_IN_CELADON_CAFE
+	setevent EVENT_FOUND_MYSTERY_BERRY_IN_CELADON_CAFE
 	end
 
 .PackFull:

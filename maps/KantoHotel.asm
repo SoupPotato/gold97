@@ -1,7 +1,7 @@
 	const_def 2 ; object constants
-	const KANTO_HOSPITAL_NURSE
-	const KANTO_HOSPITAL_ROCKER
-	const KANTO_HOSPITAL_JANINE
+	const KANTO_HOTEL_NURSE
+	const KANTO_HOTEL_ROCKER
+	const KANTO_HOTEL_JANINE
 
 KantoHotel_MapScripts:
 	db 0 ; scene scripts

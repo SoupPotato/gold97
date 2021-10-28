@@ -13,8 +13,6 @@ KantoDock_MapScripts:
 KantoDockItemBall:
 	itemball STAR_PIECE
 
-;----------------------------------------------------------
-
 TrainerKDOCK1:
 	trainer SAILOR, KENT, EVENT_BEAT_KDOCKS_TRAINER1, SailorKentSeenText, SailorKentBeatenText, 0, .Script
 
@@ -47,8 +45,6 @@ TrainerKDOCK3:
 	waitbutton
 	closetext
 	end
-
-;----------------------------------------------------------
 
 SailorKentSeenText:
 	text "It'll be a while"

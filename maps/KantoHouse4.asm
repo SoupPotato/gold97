@@ -9,18 +9,18 @@ KantoHouse4_MapScripts:
 KantoHouse4FishingGuru:
 	faceplayer
 	opentext
-	checkevent EVENT_LAKE_OF_RAGE_ELIXIR_ON_STANDBY
+	checkevent EVENT_KANTO_FISHING_GURU_ELIXIR_ON_STANDBY
 	iftrue .GetReward
-	checkevent EVENT_LAKE_OF_RAGE_ASKED_FOR_MAGIKARP
+	checkevent EVENT_KANTO_FISHING_GURU_ASKED_FOR_MAGIKARP
 	iftrue .AskedForMagikarp
 	checkevent EVENT_CLEARED_RADIO_TOWER
 	iftrue .ClearedRocketHideout
-	checkevent EVENT_LAKE_OF_RAGE_EXPLAINED_WEIRD_MAGIKARP
+	checkevent EVENT_KANTO_FISHING_GURU_EXPLAINED_WEIRD_MAGIKARP
 	iftrue .ExplainedHistory
 	writetext MagikarpLengthRaterText_LakeOfRageHistory
 	waitbutton
 	closetext
-	setevent EVENT_LAKE_OF_RAGE_EXPLAINED_WEIRD_MAGIKARP
+	setevent EVENT_KANTO_FISHING_GURU_EXPLAINED_WEIRD_MAGIKARP
 	end
 
 .ExplainedHistory:
@@ -33,7 +33,7 @@ KantoHouse4FishingGuru:
 	writetext MagikarpLengthRaterText_WorldsLargestMagikarp
 	waitbutton
 	closetext
-	setevent EVENT_LAKE_OF_RAGE_ASKED_FOR_MAGIKARP
+	setevent EVENT_KANTO_FISHING_GURU_ASKED_FOR_MAGIKARP
 	end
 
 .AskedForMagikarp:
@@ -46,7 +46,6 @@ KantoHouse4FishingGuru:
 	ifequal MAGIKARPLENGTH_NOT_MAGIKARP, .NotMagikarp
 	ifequal MAGIKARPLENGTH_REFUSED, .Refused
 	ifequal MAGIKARPLENGTH_TOO_SHORT, .TooShort
-	; MAGIKARPLENGTH_BEAT_RECORD
 	jump .GetReward
 
 .GetReward:
@@ -57,12 +56,12 @@ KantoHouse4FishingGuru:
 	writetext MagikarpLengthRaterText_Bonus
 	waitbutton
 	closetext
-	clearevent EVENT_LAKE_OF_RAGE_ELIXIR_ON_STANDBY
+	clearevent EVENT_KANTO_FISHING_GURU_ELIXIR_ON_STANDBY
 	end
 
 .NoRoom:
 	closetext
-	setevent EVENT_LAKE_OF_RAGE_ELIXIR_ON_STANDBY
+	setevent EVENT_KANTO_FISHING_GURU_ELIXIR_ON_STANDBY
 	end
 
 .TooShort:
@@ -82,10 +81,6 @@ KantoHouse4FishingGuru:
 	waitbutton
 	closetext
 	end
-
-LakeOfRageMagikarpHouseUnusedRecordSign:
-; unused
-	jumptext LakeOfRageMagikarpHouseUnusedRecordText
 
 MagikarpHouseBookshelf:
 	jumpstd difficultbookshelf
@@ -164,18 +159,6 @@ MagikarpLengthRaterText_Refused:
 	para "enough to show me?"
 	line "Maybe next time."
 	done
-
-LakeOfRageMagikarpHouseUnusedRecordText:
-	text "CURRENT RECORD"
-
-	para "@"
-	text_ram wStringBuffer3
-	text " caught by"
-	line "@"
-	text_ram wStringBuffer4
-	text_end
-
-	text_end ; unused
 
 
 KantoHouse4_MapEvents:

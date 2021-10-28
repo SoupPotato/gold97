@@ -17,7 +17,6 @@ CeladonPrizeRoomPharmacistScript:
 	jumptextfaceplayer CeladonPrizeRoomPharmacistText
 
 CeladonPrizeRoomTMVendor:
-;	faceplayer
 	opentext
 	writetext CeladonPrizeRoom_PrizeVendorIntroText
 	waitbutton
@@ -118,7 +117,6 @@ CeladonPrizeRoom_TMMenuHeader:
 	db "CANCEL@"
 
 CeladonPrizeRoomPokemonVendor:
-;	faceplayer
 	opentext
 	writetext CeladonPrizeRoom_PrizeVendorIntroText
 	waitbutton
@@ -205,9 +203,6 @@ CeladonPrizeRoomPokemonVendor:
 	
 DummyVendorScript:
 	end
-
-;----------------------------------
-
 
 KantoGameCornerDecorVendorScript:
 	opentext
@@ -345,7 +340,7 @@ KantoGameCornerDecorVendor_LoopScript:
 	takecoins 2500
 	jump KantoGameCornerDecorVendor_FinishScript
 	end
-	
+
 .Lapras
 	checkcoins 2500
 	ifequal HAVE_LESS, CeladonPrizeRoom_notenoughcoins
@@ -360,20 +355,20 @@ KantoGameCornerDecorVendor_LoopScript:
 	end
 
 
-	
+
 .AlreadyHaveDecorItem
 	writetext AlreadyHaveDecorItemTextKanto
 	waitbutton
 	jump KantoGameCornerDecorVendor_LoopScript
 
-	
+
 KantoGameCornerDecorVendor_FinishScript:
 	waitsfx
 	playsound SFX_TRANSACTION
 	writetext CeladonPrizeRoom_HereYouGoText
 	waitbutton
 	jump KantoGameCornerDecorVendor_LoopScript
-	
+
 KantoGameCornerBigDollVendorMenuHeader:
 	db MENU_BACKUP_TILES ; flags
 	menu_coords 0, 2, 19, TEXTBOX_Y - 1
@@ -435,13 +430,11 @@ AlreadyHaveDecorItemTextKanto:
 	text "You already have"
 	line "this item."
 	done
-	
-	
+
 SendItemToHomePCTextKanto:
 	text "Send this item to"
 	line "your bedroom PC?"
 	done
-
 
 CeladonPrizeRoomGentlemanText:
 	text "I wanted PORYGON,"

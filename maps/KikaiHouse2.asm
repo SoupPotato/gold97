@@ -1,15 +1,15 @@
 	const_def 2
-	const KKHOUSE2_GRAMPS
+	const KIKAIHOUSE2_GRAMPS
 
 KikaiHouse2_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
-KKHouse2GrampsScript:
-	jumptextfaceplayer KKHouse2GrampsText
+KikaiHouse2GrampsScript:
+	jumptextfaceplayer KikaiHouse2GrampsText
 	
-KKHouse2GrampsText:
+KikaiHouse2GrampsText:
 	text "A man named BRUNO"
 	line "trains at the"
 	cont "CALDERA's top."
@@ -40,4 +40,4 @@ KikaiHouse2_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event  4,  4, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KKHouse2GrampsScript, -1
+	object_event  4,  4, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KikaiHouse2GrampsScript, -1

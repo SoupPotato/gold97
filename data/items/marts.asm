@@ -26,16 +26,15 @@ Marts:
 	dw MartCeladon2F1
 	dw MartCeladon2F2
 	dw MartCeladon3F
-	dw MartCeladon3F2
 	dw MartCeladon4F
 	dw MartCeladon5F1
 	dw MartCeladon5F2
-	dw MartFuchsia
+	dw MartStand
 	dw MartSaffron
 	dw MartMtMoon
 	dw MartIndigoPlateau
 	dw MartUnderground
-	dw MartSugar
+	dw MartKoban
 	dw MartWestportNewItems
 	dw MartIeTMShop
 .End
@@ -328,7 +327,7 @@ MartCeladon3F:
 	db TM_SANDSTORM
 	db -1 ; end
 
-MartCeladon3F2:
+MartCeladon4F:
 	db 8 ; # items
 	db FIRE_STONE
 	db THUNDERSTONE
@@ -338,11 +337,6 @@ MartCeladon3F2:
 	db HEART_STONE
 	db COVENANT_ORB
 	db POISON_STONE
-	db -1 ; end
-
-MartCeladon4F:
-	db 1 ; # items
-	db POKE_DOLL
 	db -1 ; end
 
 MartCeladon5F1:
@@ -365,7 +359,7 @@ MartCeladon5F2:
 	db X_SPECIAL
 	db -1 ; end
 
-MartFuchsia:
+MartStand:
 	db 7 ; # items
 	db GREAT_BALL
 	db ULTRA_BALL
@@ -422,7 +416,7 @@ DefaultMart:
 	db POTION
 	db -1 ; end
 
-MartSugar:
+MartKoban:
 	db 8 ; # items
 	db GREAT_BALL
 	db SUPER_POTION

@@ -1,5 +1,5 @@
 	const_def 2 ; object constants
-	const BLUESHOUSE_DAISY
+	const KANTOHOUSE_2_DAISY
 	const KANTOHOUSE_2_POKEFANM
 
 KantoHouse2_MapScripts:

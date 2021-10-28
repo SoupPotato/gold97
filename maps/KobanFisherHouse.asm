@@ -1,5 +1,5 @@
 	const_def 2 ; object constants
-	const KOBANHOUSE_2_GURU
+	const KOBANFISHERHOUSE_GURU
 
 KobanFisherHouse_MapScripts:
 	db 0 ; scene scripts

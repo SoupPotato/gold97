@@ -1,19 +1,18 @@
 	const_def 2 ; object constants
-	const VICTORYROAD_POKE_BALL1_NEW
-	const VICTORYROAD_POKE_BALL2_NEW
-	const VICTORYROAD_POKE_BALL3_NEW
-	const VICTORYROAD_POKE_BALL4_NEW
-	const VICTORYROAD_POKE_BALL5_NEW
-	const KVR_COOLTRM1
-	const KVR_COOLTRM2
-	const KVR_COOLTRM3
-	const KVR_COOLTRF1
-	const KVR_COOLTRF2
-	const KVR_COOLTRF3
+	const KANTOVICTORYROAD_POKE_BALL1
+	const KANTOVICTORYROAD_POKE_BALL2
+	const KANTOVICTORYROAD_POKE_BALL3
+	const KANTOVICTORYROAD_POKE_BALL4
+	const KANTOVICTORYROAD_POKE_BALL5
+	const KANTOVICTORYROAD_COOLTRM1
+	const KANTOVICTORYROAD_COOLTRM2
+	const KANTOVICTORYROAD_COOLTRM3
+	const KANTOVICTORYROAD_COOLTRF1
+	const KANTOVICTORYROAD_COOLTRF2
+	const KANTOVICTORYROAD_COOLTRF3
 
 KantoVictoryRoad_MapScripts:
 	db 0 ; scene scripts
-	
 	db 0 ; callbacks
 
 
@@ -33,16 +32,16 @@ KantoVictoryRoadHPUp:
 	itemball HP_UP
 
 KantoVictoryRoadHiddenMaxPotion:
-	hiddenitem MAX_POTION, EVENT_VICTORY_ROAD_HIDDEN_MAX_POTION_NEW
+	hiddenitem MAX_POTION, EVENT_KANTO_VICTORY_ROAD_HIDDEN_MAX_POTION
 
 KantoVictoryRoadHiddenFullHeal:
-	hiddenitem FULL_HEAL, EVENT_VICTORY_ROAD_HIDDEN_FULL_HEAL_NEW
+	hiddenitem FULL_HEAL, EVENT_KANTO_VICTORY_ROAD_HIDDEN_FULL_HEAL
 
 
 ;----------------------------------------------------------
 
 TrainerKVR1:
-	trainer COOLTRAINERM, GAVEN, EVENT_BEAT_KVR_TRAINER1, CTGavenSeenText, CTGavenBeatenText, 0, .Script
+	trainer COOLTRAINERM, GAVEN, EVENT_BEAT_KANTO_VICTORY_ROAD_TRAINER1, CTGavenSeenText, CTGavenBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -53,7 +52,7 @@ TrainerKVR1:
 	end
 
 TrainerKVR2:
-	trainer COOLTRAINERM, EVERITT, EVENT_BEAT_KVR_TRAINER2, CTEverittSeenText, CTEverittBeatenText, 0, .Script
+	trainer COOLTRAINERM, EVERITT, EVENT_BEAT_KANTO_VICTORY_ROAD_TRAINER2, CTEverittSeenText, CTEverittBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -62,9 +61,9 @@ TrainerKVR2:
 	waitbutton
 	closetext
 	end
-	
+
 TrainerKVR3:
-	trainer COOLTRAINERM, CHESTER, EVENT_BEAT_KVR_TRAINER3, CTChesterSeenText, CTChesterBeatenText, 0, .Script
+	trainer COOLTRAINERM, CHESTER, EVENT_BEAT_KANTO_VICTORY_ROAD_TRAINER3, CTChesterSeenText, CTChesterBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -73,9 +72,9 @@ TrainerKVR3:
 	waitbutton
 	closetext
 	end
-	
+
 TrainerKVR4:
-	trainer COOLTRAINERF, BETH, EVENT_BEAT_KVR_TRAINER4, CTBethSeenText, CTBethBeatenText, 0, .Script
+	trainer COOLTRAINERF, BETH, EVENT_BEAT_KANTO_VICTORY_ROAD_TRAINER4, CTBethSeenText, CTBethBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -86,7 +85,7 @@ TrainerKVR4:
 	end
 
 TrainerKVR5:
-	trainer COOLTRAINERF, KENZIE, EVENT_BEAT_KVR_TRAINER5, CTKenzieSeenText, CTKenzieBeatenText, 0, .Script
+	trainer COOLTRAINERF, KENZIE, EVENT_BEAT_KANTO_VICTORY_ROAD_TRAINER5, CTKenzieSeenText, CTKenzieBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -97,7 +96,7 @@ TrainerKVR5:
 	end
 
 TrainerKVR6:
-	trainer COOLTRAINERF, ALLY, EVENT_BEAT_KVR_TRAINER6, CTAllySeenText, CTAllyBeatenText, 0, .Script
+	trainer COOLTRAINERF, ALLY, EVENT_BEAT_KANTO_VICTORY_ROAD_TRAINER6, CTAllySeenText, CTAllyBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -136,11 +135,11 @@ CTGavenAfterBattleText:
 
 CTEverittSeenText:
 	text "Hiyah!"
-	
+
 	para "I've trained in"
 	line "this cavern for"
 	cont "a year now!"
-	
+
 	para "I'll make you"
 	line "my last foe"
 	cont "before I take"
@@ -158,11 +157,11 @@ CTEverittAfterBattleText:
 	line "me the #MON"
 	cont "LEAGUE up and"
 	cont "moved?"
-	
+
 	para "And I'll have to"
 	line "go get 8 new"
 	cont "BADGES!?"
-	
+
 	para "Haha! Hahahahah!"
 	done
 
@@ -187,9 +186,9 @@ CTChesterBeatenText:
 CTChesterAfterBattleText:
 	text "Oh? And where are"
 	line "YOU from exactly?"
-	
+
 	para "…"
-	
+
 	para "SILENT TOWN?"
 	line "Never even heard"
 	cont "of it!"
@@ -197,13 +196,13 @@ CTChesterAfterBattleText:
 
 CTBethSeenText:
 	text "INDIGO PLATEAU…"
-	
+
 	para "This place used to"
 	line "be the pinnacle"
 	cont "of achievement"
 	cont "for all #MON"
 	cont "trainers…"
-	
+
 	para "Prove to me that"
 	line "you deserve to"
 	cont "be here!"
@@ -218,7 +217,7 @@ CTBethAfterBattleText:
 	line "the site of the"
 	cont "#MON LEAGUE,"
 	cont "full stop."
-	
+
 	para "Now it's just a"
 	line "stepping stone"
 	cont "on a larger"
@@ -243,7 +242,7 @@ CTKenzieAfterBattleText:
 	cont "half the charisma"
 	cont "BLUE did as a"
 	cont "CHAMPION!"
-	
+
 	para "He never even"
 	line "says anything!"
 	cont "What's up with"
@@ -293,11 +292,11 @@ KantoVictoryRoad_MapEvents:
 	bg_event  3, 65, BGEVENT_ITEM, KantoVictoryRoadHiddenFullHeal
 
 	db 11 ; object events
-	object_event  3, 28, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, KantoVictoryRoadTMEarthquake, EVENT_VICTORY_ROAD_TM_EARTHQUAKE_NEW
-	object_event 12, 48, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, KantoVictoryRoadMaxRevive, EVENT_VICTORY_ROAD_MAX_REVIVE_NEW
-	object_event 18, 29, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, KantoVictoryRoadFullRestore, EVENT_VICTORY_ROAD_FULL_RESTORE_NEW
-	object_event 15, 48, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, KantoVictoryRoadFullHeal, EVENT_VICTORY_ROAD_FULL_HEAL_NEW
-	object_event  7, 38, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, KantoVictoryRoadHPUp, EVENT_VICTORY_ROAD_HP_UP_NEW
+	object_event  3, 28, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, KantoVictoryRoadTMEarthquake, EVENT_KANTO_VICTORY_ROAD_TM_EARTHQUAKE
+	object_event 12, 48, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, KantoVictoryRoadMaxRevive, EVENT_KANTO_VICTORY_ROAD_MAX_REVIVE
+	object_event 18, 29, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, KantoVictoryRoadFullRestore, EVENT_KANTO_VICTORY_ROAD_FULL_RESTORE
+	object_event 15, 48, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, KantoVictoryRoadFullHeal, EVENT_KANTO_VICTORY_ROAD_FULL_HEAL
+	object_event  7, 38, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, KantoVictoryRoadHPUp, EVENT_KANTO_VICTORY_ROAD_HP_UP
 	object_event  5, 65, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerKVR1, -1
 	object_event 14,  9, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerKVR2, -1
 	object_event 10, 35, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerKVR3, -1

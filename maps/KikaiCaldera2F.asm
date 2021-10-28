@@ -1,6 +1,6 @@
 	const_def 2
-	const KKC2_BB
-	const KKC2_ITEMBALL
+	const KIKAI_CALDERA_2F_BB
+	const KIKAI_CALDERA_2F_ITEMBALL
 
 KikaiCaldera2F_MapScripts:
 	db 0 ; scene scripts
@@ -36,7 +36,7 @@ OkumaAfterBattleText:
 	cont "burning brighter!"
 	done
 
-KKC2Itemball:
+KikaiCaldera2FItemball:
 	itemball FOCUS_ORB
 
 KikaiCaldera2F_MapEvents:
@@ -54,4 +54,4 @@ KikaiCaldera2F_MapEvents:
 
 	db 2 ; object events
 	object_event  0,  9, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerBBOkuma, -1
-	object_event  0, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, KKC2Itemball, EVENT_KKC2_ITEMBALL
+	object_event  0, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, KikaiCaldera2FItemball, EVENT_KIKAI_CALDERA_2F_FOCUS_ORB

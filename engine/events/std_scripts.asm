@@ -487,7 +487,7 @@ InitializeEventsScript:
 	setevent EVENT_TELEPORT_GUY; so he doesn't appear until after returning the fuel line
 	setevent EVENT_BIRDON_YOUNGSTER_AT_N64_HOUSE
 	setevent EVENT_BRASS_TOWER_ELDER_SAGE_GONE
-	setevent EVENT_GOT_SHUCKIE; also added this, makes red disappear until you beat all trainers in gym
+	setevent EVENT_KANTO_GYM_RED_GONE
 	setevent EVENT_RADIO_TOWER_ROCKET_TAKEOVER
 	setevent EVENT_GOLDENROD_CITY_ROCKET_TAKEOVER
 	setevent EVENT_RADIO_TOWER_CIVILIANS_AFTER
@@ -545,7 +545,7 @@ InitializeEventsScript:
 	setevent EVENT_DECO_N64
 	setevent EVENT_GOLDENROD_TRAIN_STATION_GENTLEMAN
 	setevent EVENT_OLIVINE_GYM_JASMINE
-	setevent EVENT_BLACKTHORN_CITY_GRAMPS_NOT_BLOCKING_DRAGONS_DEN
+	setevent EVENT_CLAIRS_HOUSE_HIDE_CLAIR
 	setevent EVENT_MET_BILL
 	setevent EVENT_ECRUTEAK_POKE_CENTER_BILL
 	setevent EVENT_MYSTERY_GIFT_DELIVERY_GUY

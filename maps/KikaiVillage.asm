@@ -1,10 +1,10 @@
 	const_def 2
-	const KIKAIV_BRUNO
-	const KIKAIV_BLACKBELT
-	const KIKAIV_ELDER
-	const KIKAIV_ITEMBALL
-	const KIKAIV_ROCK1
-	const KIKAIV_ROCK2
+	const KIKAIVILLAGE_BRUNO
+	const KIKAIVILLAGE_BLACKBELT
+	const KIKAIVILLAGE_ELDER
+	const KIKAIVILLAGE_ITEMBALL
+	const KIKAIVILLAGE_ROCK1
+	const KIKAIVILLAGE_ROCK2
 
 KikaiVillage_MapScripts:
 	db 0 ; scene scripts
@@ -13,7 +13,7 @@ KikaiVillage_MapScripts:
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
 
 .FlyPoint:
-	setflag ENGINE_FLYPOINT_LAVENDER
+	setflag ENGINE_FLYPOINT_KIKAI
 	return
 
 KikaiPokecenterSign:
@@ -39,7 +39,7 @@ KikaiItemball:
 	
 MovementData_BrunoRockSmash:
 	rock_smash 10
-	step_end	
+	step_end
 
 KikaiBrunoScript:
 	checkevent EVENT_BRUNO_SMASHED_ROCK
@@ -51,8 +51,8 @@ KikaiBrunoScript:
 	special WaitSFX
 	playsound SFX_STRENGTH
 	earthquake 84
-	applymovement KIKAIV_ROCK1, MovementData_BrunoRockSmash
-	disappear KIKAIV_ROCK1
+	applymovement KIKAIVILLAGE_ROCK1, MovementData_BrunoRockSmash
+	disappear KIKAIVILLAGE_ROCK1
 	setevent EVENT_BRUNO_SMASHED_ROCK
 .skipsmashing:
 	faceplayer
@@ -181,6 +181,6 @@ KikaiVillage_MapEvents:
 	object_event 11,  4, SPRITE_BRUNO, SPRITEMOVEDATA_STANDING_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KikaiBrunoScript, -1
 	object_event  7, 20, SPRITE_BLACK_BELT, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KikaiBlackBeltScript, -1
 	object_event 11, 16, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KikaiGrampsScript, -1
-	object_event 14,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, KikaiItemball, EVENT_KIKAI_SUMMIT_ITEMBALL
+	object_event 14,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, KikaiItemball, EVENT_KIKAI_SUMMIT_FIRE_TAIL
 	object_event 12,  4, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KikaiSummitRock2, EVENT_BRUNO_SMASHED_ROCK
 	object_event 11,  5, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KikaiSummitRock, EVENT_KIKAI_SUMMIT_OTHER_ROCK

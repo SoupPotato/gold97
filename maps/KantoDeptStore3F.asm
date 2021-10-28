@@ -1,6 +1,5 @@
 	const_def 2 ; object constants
 	const CELADONDEPTSTORE3F_CLERK
-;	const CELADONDEPTSTORE3F_CLERK2
 	const CELADONDEPTSTORE3F_YOUNGSTER
 	const CELADONDEPTSTORE3F_GAMEBOY_KID1
 	const CELADONDEPTSTORE3F_GAMEBOY_KID2
@@ -17,13 +16,6 @@ KantoDeptStore3FClerkScript:
 	pokemart MARTTYPE_STANDARD, MART_CELADON_3F
 	closetext
 	end
-
-;KantoDeptStore3FClerk2Script:
-;	faceplayer
-;	opentext
-;	pokemart MARTTYPE_STANDARD, MART_CELADON_3F_2
-;	closetext
-;	end
 
 KantoDeptStore3FYoungsterScript:
 	jumptextfaceplayer KantoDeptStore3FYoungsterText
@@ -116,7 +108,6 @@ KantoDeptStore3F_MapEvents:
 
 	db 5 ; object events
 	object_event  7,  1, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KantoDeptStore3FClerkScript, -1
-;	object_event  6,  1, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KantoDeptStore3FClerk2Script, -1
 	object_event  3,  5, SPRITE_BETA_GIRL, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, KantoDeptStore3FYoungsterScript, -1
 	object_event  9,  1, SPRITE_GAMEBOY_KID, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, KantoDeptStore3FGameboyKid1Script, -1
 	object_event 10,  1, SPRITE_GAMEBOY_KID, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KantoDeptStore3FGameboyKid2Script, -1

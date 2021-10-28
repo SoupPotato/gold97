@@ -1,6 +1,6 @@
 	const_def 2
-	const KKS_SWIMMER1
-	const KKS_SWIMMER2
+	const KIKAISTRAIT_SWIMMER1
+	const KIKAISTRAIT_SWIMMER2
 
 KikaiStrait_MapScripts:
 	db 0 ; scene scripts

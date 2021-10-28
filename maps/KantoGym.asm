@@ -1,11 +1,11 @@
 	const_def 2 ; object constants
-	const CELADONGYM_ERIKA
-	const CELADONGYM_COOLTRAINERM1
-	const CELADONGYM_COOLTRAINERM2
-	const CELADONGYM_COOLTRAINERF1
-	const CELADONGYM_COOLTRAINERF2
-	const CELADONGYM_RED_DUMMY
-	const CELADONGYM_GYM_GUY
+	const KANTOGYM_RED
+	const KANTOGYM_COOLTRAINERM1
+	const KANTOGYM_COOLTRAINERM2
+	const KANTOGYM_COOLTRAINERF1
+	const KANTOGYM_COOLTRAINERF2
+	const KANTOGYM_RED_DUMMY
+	const KANTOGYM_GYM_GUY
 
 KantoGym_MapScripts:
 	db 0 ; scene scripts
@@ -28,21 +28,21 @@ KantoGymErikaScript:
 	loadtrainer RED, RED1
 	startbattle
 	reloadmapafterbattle
-	setevent EVENT_BEAT_ERIKA
+	setevent EVENT_BEAT_RED
 	opentext
 	writetext PlayerReceivedRainbowBadgeText
 	playsound SFX_GET_BADGE
 	waitsfx
 	setflag ENGINE_RISINGBADGE
 .FightDone:
-;	checkevent EVENT_GOT_TM15_HYPER_BEAM
-;	iftrue .AlreadyGotTM
+	checkevent EVENT_GOT_TM15_HYPER_BEAM
+	iftrue .AlreadyGotTM
 	writetext ErikaAfterBattleText
-;	buttonsound
-;	verbosegiveitem TM_HYPER_BEAM
-;	iffalse .BagFull
-;	setevent EVENT_GOT_TM15_HYPER_BEAM
-;	writetext ErikaAfterBattleText
+	buttonsound
+	verbosegiveitem TM_HYPER_BEAM
+	iffalse .BagFull
+	setevent EVENT_GOT_TM15_HYPER_BEAM
+	writetext ErikaAfterBattleText
 	waitbutton
 	closetext
 	end
@@ -169,15 +169,15 @@ RedEntersGymScene:
 	
 .ItsRedTime
 	playsound SFX_EXIT_BUILDING
-	moveobject CELADONGYM_RED_DUMMY, 4, 17
-	appear CELADONGYM_RED_DUMMY
-	applymovement CELADONGYM_RED_DUMMY, RedDummyDummyMovement
+	moveobject KANTOGYM_RED_DUMMY, 4, 17
+	appear KANTOGYM_RED_DUMMY
+	applymovement KANTOGYM_RED_DUMMY, RedDummyDummyMovement
 	pause 20
-	applymovement CELADONGYM_RED_DUMMY, RedDummyWalksToSpotRight
-	disappear CELADONGYM_RED_DUMMY
-	appear CELADONGYM_ERIKA
+	applymovement KANTOGYM_RED_DUMMY, RedDummyWalksToSpotRight
+	disappear KANTOGYM_RED_DUMMY
+	appear KANTOGYM_RED
 	setscene SCENE_RED_IS_HERE
-	clearevent EVENT_GOT_SHUCKIE
+	clearevent EVENT_KANTO_GYM_RED_GONE
 	end
 	
 	
@@ -203,23 +203,23 @@ RedEntersGymScene2:
 	
 .ItsRedTime2
 	playsound SFX_EXIT_BUILDING
-	moveobject CELADONGYM_RED_DUMMY, 5, 17
-	appear CELADONGYM_RED_DUMMY
-	applymovement CELADONGYM_RED_DUMMY, RedDummyDummyMovement
+	moveobject KANTOGYM_RED_DUMMY, 5, 17
+	appear KANTOGYM_RED_DUMMY
+	applymovement KANTOGYM_RED_DUMMY, RedDummyDummyMovement
 	pause 20
-	applymovement CELADONGYM_RED_DUMMY, RedDummyWalksToSpotLeft
-	disappear CELADONGYM_RED_DUMMY
-	appear CELADONGYM_ERIKA
+	applymovement KANTOGYM_RED_DUMMY, RedDummyWalksToSpotLeft
+	disappear KANTOGYM_RED_DUMMY
+	appear KANTOGYM_RED
 	setscene SCENE_RED_IS_HERE
-	clearevent EVENT_GOT_SHUCKIE
+	clearevent EVENT_KANTO_GYM_RED_GONE
 	end
 	
 
 KantoGymGuyScript2:
 	faceplayer
-	checkevent EVENT_GOT_SHUCKIE
+	checkevent EVENT_KANTO_GYM_RED_GONE
 	iftrue .KantoGymGuyRedNotHereScript2
-	checkevent EVENT_BEAT_ERIKA
+	checkevent EVENT_BEAT_RED
 	iftrue .KantoGymGuyWinScript2
 	opentext
 	writetext KantoGymGuyText2
@@ -413,7 +413,7 @@ KantoGym_MapEvents:
 	bg_event  6, 15, BGEVENT_READ, KantoGymStatue
 
 	db 7 ; object events
-	object_event  4,  7, SPRITE_RED, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, KantoGymErikaScript, EVENT_GOT_SHUCKIE
+	object_event  4,  7, SPRITE_RED, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, KantoGymErikaScript, EVENT_KANTO_GYM_RED_GONE
 	object_event  4,  1, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerCooltrainermPaul, -1
 	object_event  9,  6, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerCooltrainermMike, -1
 	object_event  5,  1, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerCooltrainerfLola, -1

@@ -10,7 +10,7 @@ KobanMart_MapScripts:
 
 KobanMartClerkScript:
 	opentext
-	pokemart MARTTYPE_STANDARD, MART_SUGAR
+	pokemart MARTTYPE_STANDARD, MART_KOBAN
 	closetext
 	end
 

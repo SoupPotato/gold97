@@ -1,7 +1,7 @@
 	const_def 2 ; object constants
 	const KIKAIPC_NURSE
-	const KPC_BLACKBELT1
-	const KPC_BLACKBELT2
+	const KIKAIPC_BLACKBELT1
+	const KIKAIPC_BLACKBELT2
 
 KikaiPokecenter1F_MapScripts:
 	db 0 ; scene scripts
@@ -11,21 +11,21 @@ KikaiPokecenter1F_MapScripts:
 KikaiPokecenter1FNurseScript:
 	jumpstd pokecenternurse
 	
-KikaiPokecenter1FBB1Script:
-	jumptextfaceplayer KKPCBBText1
+KikaiPokecenter1FBlackBelt1Script:
+	jumptextfaceplayer KikaiPokecenter1FBlackBeltText1
 
-KikaiPokecenter1FBB2Script:
-	jumptextfaceplayer KKPCBBText2
+KikaiPokecenter1FBlackBelt2Script:
+	jumptextfaceplayer KikaiPokecenter1FBlackBeltText2
 
 
-KKPCBBText1:
+KikaiPokecenter1FBlackBeltText1:
 	text "I've been in this"
 	line "#MON CENTER"
 	cont "12 times in the"
 	cont "last week!"
 	done
 
-KKPCBBText2:
+KikaiPokecenter1FBlackBeltText2:
 	text "This place makes"
 	line "me wish people"
 	cont "could be healed"
@@ -51,5 +51,5 @@ KikaiPokecenter1F_MapEvents:
 
 	db 3 ; object events
 	object_event  5,  1, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KikaiPokecenter1FNurseScript, -1
-	object_event  7,  4, SPRITE_BLACK_BELT, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KikaiPokecenter1FBB1Script, -1
-	object_event  11,  6, SPRITE_BLACK_BELT, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KikaiPokecenter1FBB2Script, -1
+	object_event  7,  4, SPRITE_BLACK_BELT, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KikaiPokecenter1FBlackBelt1Script, -1
+	object_event  11,  6, SPRITE_BLACK_BELT, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KikaiPokecenter1FBlackBelt2Script, -1
