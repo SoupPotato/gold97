@@ -1,10 +1,10 @@
 	const_def 2 ; object constants
-	const VERMILION_CHARMANDER_1
-	const VERMILION_CHARMANDER_2
-	const VERMILION_CHARMANDER_3
-	const VERMILION_CHARMANDER_4
-	const VERMILION_CHARMANDER_5
-	const VERMILION_CHARMANDER_6
+	const NAGO_CHARMANDER_HOUSE_NPC1
+	const NAGO_CHARMANDER_HOUSE_NPC2
+	const NAGO_CHARMANDER_HOUSE_NPC3
+	const NAGO_CHARMANDER_HOUSE_NPC4
+	const NAGO_CHARMANDER_HOUSE_NPC5
+	const NAGO_CHARMANDER_HOUSE_NPC6
 
 NagoCharmanderHouse_MapScripts:
 	db 0 ; scene scripts
@@ -21,7 +21,7 @@ NagoCharmanderHouseCharmander:
 NagoCharmanderHouseTeacher:
 	faceplayer
 	opentext
-	checkevent EVENT_EXPLODING_TRAP_6
+	checkevent EVENT_NAGO_VILLAGE_RECEIVED_CHARMANDER
 	iftrue .AlreadyGotCharmander
 	writetext ILoveCharmanderText
 	yesorno
@@ -34,9 +34,9 @@ NagoCharmanderHouseTeacher:
 	givepoke CHARMANDER, 5
 	writetext GiveCharmanderText
 	waitbutton
-	disappear VERMILION_CHARMANDER_1
+	disappear NAGO_CHARMANDER_HOUSE_NPC1
 	closetext
-	setevent EVENT_EXPLODING_TRAP_6
+	setevent EVENT_NAGO_VILLAGE_RECEIVED_CHARMANDER
 	end
 	
 .AlreadyGotCharmander
@@ -115,7 +115,7 @@ NagoCharmanderHouse_MapEvents:
 	db 0 ; bg events
 
 	db 7 ; object events
-	object_event  9,  7, SPRITE_CHARMANDER, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, NagoCharmanderHouseCharmander, EVENT_EXPLODING_TRAP_6
+	object_event  9,  7, SPRITE_CHARMANDER, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, NagoCharmanderHouseCharmander, EVENT_NAGO_VILLAGE_RECEIVED_CHARMANDER
 	object_event  6,  2, SPRITE_CHARMANDER, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, NagoCharmanderHouseCharmander, -1
 	object_event  8,  1, SPRITE_CHARMANDER, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, NagoCharmanderHouseCharmander, -1
 	object_event  4,  5, SPRITE_CHARMANDER, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, NagoCharmanderHouseCharmander, -1

@@ -1,6 +1,6 @@
 	const_def 2 ; object constants
-	const ROUTE12_FISHER1
-	const ROUTE12_FISHER2
+	const KUMEPOINT_FISHER1
+	const KUMEPOINT_FISHER2
 
 KumePoint_MapScripts:
 	db 0 ; scene scripts

@@ -282,7 +282,7 @@ ENDM
 	map_const KUME_SOCIAL_HOUSE,                            5,  4 ;  3
 	map_const KUME_POKECENTER_1F,                           8,  4 ;  4
 	map_const KUME_SNOOZE_SPEECH_HOUSE,                     5,  4 ;  5
-	map_const NAGO_MART,                                    8,  4 ;  6
+	map_const KUME_MART,                                    8,  4 ;  6
 	map_const URASOE_TRAIL,                                10, 18 ;  7
 	map_const KERAMA_STRAIT,                               30,  9 ;  8
 	map_const KUME_POINT,                                  10,  9 ;  9
@@ -409,7 +409,7 @@ ENDM
 	map_const BATTLE_TOWER_HALLWAY,                        11,  2 ; 14
 	map_const SUNPOINT_DOCKS,                              10, 18 ;  1
 	map_const SUNPOINT_DOCKS_SUNPOINT_GATE,                 5,  4 ; 14
-	map_const KUME_MART,                                   8,  4 ;  5
+	map_const SUNPOINT_MART,                                8,  4 ;  5
 	map_const ROUTE_119_SUNPOINT_GATE,                      5,  4 ; 13
 	map_const ROCKET_SHIP_BASE,                            20, 18 ;  4
 	map_const ISEN_STRAIT_SEASIDE_PATH_GATE,                5,  4 ; 26
@@ -436,7 +436,7 @@ ENDM
 	map_const RYUKYU_FAKE_GYM,                             10,  9 ;  4
 	map_const RYUKYU_MART,                                  8,  4 ;  5
 	map_const RYUKYU_POKECENTER_1F,                         8,  4 ;  6
-	map_const MR_PSYCHICS_HOUSE,                            5,  4 ;  8
+	map_const RYUKYU_TRADE_HOUSE,                           5,  4 ;  8
 	map_const RYUKYU_ABORETUM,                             10,  9 ;  9
 	map_const URASOE_PARK,                                 20,  9 ;  3
 	map_const RYUKYU_TRADE_SPEECH_HOUSE,                    5,  4 ;  3

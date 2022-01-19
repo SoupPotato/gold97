@@ -1,6 +1,6 @@
 	const_def 2 ; object constants
-	const NagoImposterHouse_FISHING_GURU
-	const NagoImposterHouse_DIGLETT
+	const NAGOIMPOSTERHOUSE_FISHING_GURU
+	const NAGOIMPOSTERHOUSE_DIGLETT
 
 NagoImposterHouse_MapScripts:
 	db 0 ; scene scripts

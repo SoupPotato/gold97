@@ -14,13 +14,13 @@ KurtsHouse_MapScripts:
 	priorityjump .SceneFalknerVisit2
 	end
 	
-.SceneAAAAAAA
+.SceneFalknerApproves
 	priorityjump .Falknerapproves
 	end
 	
 .SceneFalknerVisit2
 	checkevent EVENT_GOT_5F_SAGE_BLESSING
-	iftrue .SceneAAAAAAA
+	iftrue .SceneFalknerApproves
 	checkevent EVENT_FALKNER_AT_GYM
 	iftrue .SceneKurtsHouseNothing
 	checkevent EVENT_TALKED_TO_KURT_AND_FALKNER
@@ -78,8 +78,6 @@ KurtsHouse_MapScripts:
 	iffalse .NoRoomForLureBall
 	closetext
 	setevent EVENT_KURT_GAVE_YOU_LURE_BALL
-	;setscene SCENE_KURTS_HOUSE_NOTHING
-	setevent EVENT_THIS_WHOLE_SCRIPT_WAS_A_MISTAKE
 	end
 	
 .NoRoomForLureBall:
@@ -87,10 +85,8 @@ KurtsHouse_MapScripts:
 	end
 	
 .SceneKurtsHouseNothing:
-	checkevent EVENT_THIS_WHOLE_SCRIPT_WAS_A_MISTAKE
-	iftrue .endofscene
 	checkevent EVENT_GOT_5F_SAGE_BLESSING
-	iftrue .SceneAAAAAAA
+	iftrue .SceneFalknerApproves
 .endofscene:
 	setmapscene KURTS_HOUSE, 1
 	end

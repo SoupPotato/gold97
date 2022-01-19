@@ -1,8 +1,8 @@
 	const_def 2 ; object constants
-	const VIOLETGYM_FALKNER
-	const VIOLETGYM_YOUNGSTER1
-	const VIOLETGYM_YOUNGSTER2
-	const VIOLETGYM_GYM_GUY
+	const PAGOTA_GYM_FALKNER
+	const PAGOTA_GYM_YOUNGSTER1
+	const PAGOTA_GYM_YOUNGSTER2
+	const PAGOTA_GYM_GYM_GUY
 
 PagotaGym_MapScripts:
 	db 0 ; scene scripts
@@ -16,9 +16,9 @@ PagotaGym_MapScripts:
 	return
 	
 .gone
-	disappear VIOLETGYM_YOUNGSTER1
-	disappear VIOLETGYM_YOUNGSTER2
-	disappear VIOLETGYM_FALKNER
+	disappear PAGOTA_GYM_YOUNGSTER1
+	disappear PAGOTA_GYM_YOUNGSTER2
+	disappear PAGOTA_GYM_FALKNER
 	return
 
 PagotaGymFalknerScript:
@@ -51,9 +51,8 @@ PagotaGymFalknerScript:
 	iftrue .SpeechAfterTM
 	setevent EVENT_BEAT_BIRD_KEEPER_ROD
 	setevent EVENT_BEAT_BIRD_KEEPER_ABE
-	setmapscene ROUTE_102, SCENE_ROUTE36_SILVER
-	clearevent EVENT_ROUTE_36_SILVER
-;	setmapscene OAKS_LAB, SCENE_ELMSLAB_NOTHING
+	setmapscene ROUTE_102, SCENE_ROUTE102_SILVER
+	clearevent EVENT_ROUTE_102_SILVER
 	specialphonecall SPECIALCALL_ASSISTANT
 	writetext FalknerZephyrBadgeText
 	buttonsound

@@ -1,7 +1,7 @@
 	const_def 2 ; object constants
-	const MRPSYCHICSHOUSE_FISHING_GURU
+	const RYUKYU_TRADE_HOUSE
 
-MrPsychicsHouse_MapScripts:
+RyukyuTradeHouse_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
@@ -14,7 +14,7 @@ Kim:
 	closetext
 	end
 
-MrPsychicsHouse_MapEvents:
+RyukyuTradeHouse_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events

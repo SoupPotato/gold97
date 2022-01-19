@@ -98,7 +98,7 @@ SunpointPhotoStudio_Blocks:
 CrownCityScopeLensHouse_Blocks:
 PokeSeersHouse_Blocks:
 Route110SandstormHouse_Blocks:
-MrPsychicsHouse_Blocks:
+RyukyuTradeHouse_Blocks:
 BirdonSpeechHouse_Blocks:
 Route104GardenersHouse_Blocks:
 TeknosGrampsItemfinderHouse_Blocks:
@@ -212,11 +212,11 @@ KobanMart_Blocks:
 AlloyMart_Blocks:
 TeknosMart_Blocks:
 BlueForestMart_Blocks:
-NagoMart_Blocks:
+KumeMart_Blocks:
 BirdonMart_Blocks:
 PagotaMart_Blocks:
 AmamiMart_Blocks:
-KumeMart_Blocks:
+SunpointMart_Blocks:
 StandMart_Blocks:
 FrostpointMart_Blocks:
 SanskritMart_Blocks:

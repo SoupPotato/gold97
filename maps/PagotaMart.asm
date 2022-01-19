@@ -1,7 +1,7 @@
 	const_def 2 ; object constants
-	const VIOLETMART_CLERK
-	const VIOLETMART_GRANNY
-	const VIOLETMART_COOLTRAINER_M
+	const PAGOTA_MART_CLERK
+	const PAGOTA_MART_GRANNY
+	const PAGOTA_MART_COOLTRAINER_M
 
 PagotaMart_MapScripts:
 	db 0 ; scene scripts
@@ -10,7 +10,7 @@ PagotaMart_MapScripts:
 
 PagotaMartClerkScript:
 	opentext
-	pokemart MARTTYPE_STANDARD, MART_VIOLET
+	pokemart MARTTYPE_STANDARD, MART_PAGOTA
 	closetext
 	end
 

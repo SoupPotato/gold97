@@ -157,7 +157,7 @@ SunpointCity_MapEvents:
 	db 11 ; warp events
 	warp_event 18, 13, MAGMA_SHAFT_1F, 1
 	warp_event 33, 16, SUNPOINT_POKECENTER_1F, 1
-	warp_event 19, 24, KUME_MART, 1
+	warp_event 19, 24, SUNPOINT_MART, 1
 	warp_event 33, 25, SUNPOINT_PHOTO_STUDIO, 1
 	warp_event 35, 11, ROUTE_118_SUNPOINT_GATE, 1
 	warp_event 26, 12, POKE_SEERS_HOUSE, 1

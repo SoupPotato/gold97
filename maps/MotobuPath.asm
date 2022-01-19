@@ -1,7 +1,7 @@
-	const_def 2
-	const MOTOBU_SWIMMER1
-	const MOTOBU_SWIMMER2
-	const MOTOBU_SWIMMER3
+	const_def 2 ; object constants
+	const MOTOBU_PATH_SWIMMER1
+	const MOTOBU_PATH_SWIMMER2
+	const MOTOBU_PATH_SWIMMER3
 
 MotobuPath_MapScripts:
 	db 0 ; scene scripts
@@ -42,8 +42,6 @@ TrainerSwimmerfKatie:
 	waitbutton
 	closetext
 	end
-
-
 
 
 SwimmerfJillSeenText:

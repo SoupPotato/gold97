@@ -1,6 +1,6 @@
 	const_def 2 ; object constants
-	const ICEPATHB2FBLACKTHORNSIDE_POKE_BALL
-	const ICEPATHB2FBLACKTHORNSIDE_ENTEI
+	const MAGMARSHAFT1F_POKE_BALL
+	const MAGMARSHAFT1F_ENTEI
 
 MagmaShaft1F_MapScripts:
 	db 0 ; scene scripts
@@ -11,7 +11,7 @@ MagmaShaft1FTMRest:
 	itemball TM_REST
 
 MagmaShaft1FHiddenIceHeal:
-	hiddenitem ICE_HEAL, EVENT_ICE_PATH_B2F_BLACKTHORN_SIDE_HIDDEN_ICE_HEAL
+	hiddenitem ICE_HEAL, EVENT_MAGMA_SHAFT_1F_HIDDEN_ICE_HEAL
 	
 
 EnteiEvent:
@@ -25,7 +25,7 @@ EnteiEvent:
 	writecode VAR_BATTLETYPE, BATTLETYPE_ROAMING
 	loadwildmon ENTEI, 40
 	startbattle
-	disappear ICEPATHB2FBLACKTHORNSIDE_ENTEI
+	disappear MAGMARSHAFT1F_ENTEI
 	reloadmapafterbattle
 	end
 	

@@ -417,7 +417,7 @@ ENDM
 	map_attributes RyukyuTradeSpeechHouse, RYUKYU_TRADE_SPEECH_HOUSE, $00, 0
 	map_attributes NagoPokecenter1F, NAGO_POKECENTER_1F, $00, 0
 	map_attributes JadeForestSnorlaxRoom, JADE_FOREST_SNORLAX_ROOM, $05, 0
-	map_attributes NagoMart, NAGO_MART, $00, 0
+	map_attributes KumeMart, KUME_MART, $00, 0
 	map_attributes Route109Pokecenter1F, ROUTE_109_POKECENTER_1F, $00, 0
 	map_attributes EarlsArtHouse, EARLS_ART_HOUSE, $00, 0
 	map_attributes BirdonPokecenter1F, BIRDON_POKECENTER_1F, $00, 0
@@ -470,7 +470,7 @@ ENDM
 	map_attributes OaksLabKanto, OAKS_KANTO_LAB, $00, 0
 	map_attributes KumePartsShop, KUME_PARTS_SHOP, $00, 0
 	map_attributes KumeSocialHouse, KUME_SOCIAL_HOUSE, $00, 0
-	map_attributes KumeMart, KUME_MART, $00, 0
+	map_attributes SunpointMart, SUNPOINT_MART, $00, 0
 	map_attributes KumePokecenter1F, KUME_POKECENTER_1F, $00, 0
 	map_attributes KumeSnoozeSpeechHouse, KUME_SNOOZE_SPEECH_HOUSE, $00, 0
 	map_attributes WestportPort, WESTPORT_PORT, $0a, 0
@@ -555,7 +555,7 @@ ENDM
 	map_attributes RyukyuFakeGym, RYUKYU_FAKE_GYM, $00, 0
 	map_attributes RyukyuMart, RYUKYU_MART, $00, 0
 	map_attributes RyukyuPokecenter1F, RYUKYU_POKECENTER_1F, $00, 0
-	map_attributes MrPsychicsHouse, MR_PSYCHICS_HOUSE, $00, 0
+	map_attributes RyukyuTradeHouse, RYUKYU_TRADE_HOUSE, $00, 0
 	map_attributes RyukyuArboretum, RYUKYU_ABORETUM, $00, 0
 	map_attributes SilphCo1F, SILPH_CO_1F, $00, 0
 	map_attributes SunPointDocksSunPointGate, SUNPOINT_DOCKS_SUNPOINT_GATE, $00, 0

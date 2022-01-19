@@ -1,10 +1,10 @@
 	const_def 2 ; object constants
-	const EARLSPOKEMONACADEMY_EARL
-	const EARLSPOKEMONACADEMY_JANINE
-	const EARLSPOKEMONACADEMY_GAMEBOY_KID1
-	const EARLSPOKEMONACADEMY_GAMEBOY_KID2
-	const EARLSPOKEMONACADEMY_YOUNGSTER
-	const EARLSPOKEMONACADEMY_POKEDEX
+	const PAGOTA_TRAINER_SCHOOL_EARL
+	const PAGOTA_TRAINER_SCHOOL_GIRL
+	const PAGOTA_TRAINER_SCHOOL_GAMEBOY_KID1
+	const PAGOTA_TRAINER_SCHOOL_GAMEBOY_KID2
+	const PAGOTA_TRAINER_SCHOOL_YOUNGSTER
+	const PAGOTA_TRAINER_SCHOOL_POKEDEX
 
 PagotaTrainerSchool_MapScripts:
 	db 0 ; scene scripts
@@ -12,7 +12,6 @@ PagotaTrainerSchool_MapScripts:
 	db 0 ; callbacks
 
 AcademyEarl:
-;	applymovement EARLSPOKEMONACADEMY_EARL, AcademyEarlSpinMovement
 	faceplayer
 	opentext
 	writetext AcademyEarlIntroText
@@ -42,7 +41,7 @@ PagotaTrainerSchoolYoungster1Script:
 	writetext PagotaTrainerSchoolYoungster1Text
 	waitbutton
 	closetext
-	turnobject EARLSPOKEMONACADEMY_JANINE, UP
+	turnobject PAGOTA_TRAINER_SCHOOL_GIRL, UP
 	end
 
 PagotaTrainerSchoolGameboyKid1Script:
@@ -51,7 +50,7 @@ PagotaTrainerSchoolGameboyKid1Script:
 	writetext PagotaTrainerSchoolGameboyKid1Text
 	waitbutton
 	closetext
-	turnobject EARLSPOKEMONACADEMY_GAMEBOY_KID1, DOWN
+	turnobject PAGOTA_TRAINER_SCHOOL_GAMEBOY_KID1, DOWN
 	end
 
 PagotaTrainerSchoolGameboyKid2Script:
@@ -60,7 +59,7 @@ PagotaTrainerSchoolGameboyKid2Script:
 	writetext PagotaTrainerSchoolGameboyKid2Text
 	waitbutton
 	closetext
-	turnobject EARLSPOKEMONACADEMY_GAMEBOY_KID2, DOWN
+	turnobject PAGOTA_TRAINER_SCHOOL_GAMEBOY_KID2, DOWN
 	end
 
 PagotaTrainerSchoolYoungster2Script:
@@ -140,10 +139,10 @@ AcademyNotebook:
 	iffalse .Done
 	writetext AcademyNotebookText3
 	waitbutton
-	turnobject EARLSPOKEMONACADEMY_JANINE, LEFT
-	writetext AcademyJanineText_Book
+	turnobject PAGOTA_TRAINER_SCHOOL_GIRL, LEFT
+	writetext AcademyGirlText_Book
 	waitbutton
-	turnobject EARLSPOKEMONACADEMY_JANINE, UP
+	turnobject PAGOTA_TRAINER_SCHOOL_GIRL, UP
 .Done:
 	closetext
 	end
@@ -401,7 +400,7 @@ AcademyNotebookText3:
 	line "is… Blank!"
 	done
 	
-AcademyJanineText_Book:
+AcademyGirlText_Book:
 	text "Girl: E-he-he…"
 
 	para "I haven't written"

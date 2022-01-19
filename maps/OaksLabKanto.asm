@@ -1,6 +1,6 @@
 	const_def 2 ; object constants
-	const KANTOLABAIDE1
-	const KANTOLABAIDE2
+	const OAKS_KANTO_LAB_AIDE1
+	const OAKS_KANTO_LAB_AIDE2
 
 OaksLabKanto_MapScripts:
 	db 0 ; scene scripts

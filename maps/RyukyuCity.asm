@@ -135,7 +135,7 @@ RyukyuCity_MapEvents:
 	warp_event 33, 11, RYUKYU_CITY_MERIDIAN_PATH_GATE, 1
 	warp_event 22, 31, RYUKYU_URASOE_GATE, 1
 	warp_event 23, 31, RYUKYU_URASOE_GATE, 2
-	warp_event 23,  7, MR_PSYCHICS_HOUSE, 1
+	warp_event 23,  7, RYUKYU_TRADE_HOUSE, 1
 	warp_event 30, 18, RYUKYU_TRADE_SPEECH_HOUSE, 1
 	warp_event 27,  8, RYUKYU_ABORETUM, 1
 	warp_event 28,  8, RYUKYU_ABORETUM, 2

@@ -1,12 +1,12 @@
 	const_def 2 ; object constants
-	const PagotaCity_LASS
-	const PagotaCity_SUPER_NERD
-	const PagotaCity_GRAMPS
-	const PagotaCity_YOUNGSTER
-	const PagotaCity_FRUIT_TREE
-	const PagotaCity_POKE_BALL1
-	const PagotaCity_POKE_BALL2
-	const PagotaCity_GRAMPS2
+	const PAGOTACITY_LASS
+	const PAGOTACITY_SUPER_NERD
+	const PAGOTACITY_GRAMPS
+	const PAGOTACITY_YOUNGSTER
+	const PAGOTACITY_FRUIT_TREE
+	const PAGOTACITY_POKE_BALL1
+	const PAGOTACITY_POKE_BALL2
+	const PAGOTACITY_GRAMPS2
 
 PagotaCity_MapScripts:
 	db 0 ; scene scripts
@@ -25,7 +25,7 @@ PagotaCity_MapScripts:
 	return
 	
 .gone
-	disappear PagotaCity_GRAMPS2
+	disappear PAGOTACITY_GRAMPS2
 	return
 
 PagotaCityLassScript:
@@ -49,11 +49,11 @@ KurtsHouseSign:
 PagotaCitySign:
 	jumptext PagotaCitySignText
 
-VioletGymSign:
-	jumptext VioletGymSignText
+PagotaGymSign:
+	jumptext PagotaGymSignText
 
-SproutTowerSign:
-	jumptext SproutTowerSignText
+BrassTowerSign:
+	jumptext BrassTowerSignText
 
 EarlsPokemonAcademySign:
 	jumptext EarlsPokemonAcademySignText
@@ -78,7 +78,7 @@ PagotaCityFruitTree:
 	fruittree FRUITTREE_PAGOTA_CITY 
 
 PagotaCityHiddenHyperPotion:
-	hiddenitem HYPER_POTION, EVENT_OLD_CITY_HIDDEN_HYPER_POTION
+	hiddenitem HYPER_POTION, EVENT_PAGOTA_CITY_HIDDEN_HYPER_POTION
 	
 KurtsDoorLockedScript:
 	opentext
@@ -170,7 +170,7 @@ PagotaCitySignText:
 	line "stars above."
 	done
 
-VioletGymSignText:
+PagotaGymSignText:
 	text "PAGOTA CITY"
 	line "#MON GYM"
 	cont "LEADER: FALKNER"
@@ -179,7 +179,7 @@ VioletGymSignText:
 	line "of Flying #MON"
 	done
 
-SproutTowerSignText:
+BrassTowerSignText:
 	text "BRASS TOWER"
 
 	para "Experience the"
@@ -224,8 +224,8 @@ PagotaCity_MapEvents:
 
 	db 9 ; bg events
 	bg_event 20, 29, BGEVENT_READ, PagotaCitySign
-	bg_event 28, 16, BGEVENT_READ, VioletGymSign
-	bg_event  8, 16, BGEVENT_READ, SproutTowerSign
+	bg_event 28, 16, BGEVENT_READ, PagotaGymSign
+	bg_event  8, 16, BGEVENT_READ, BrassTowerSign
 	bg_event  8, 14, BGEVENT_READ, EarlsPokemonAcademySign
 	bg_event 28, 28, BGEVENT_READ, PagotaCityPokecenterSign
 	bg_event  4, 26, BGEVENT_READ, PagotaCityMartSign
@@ -239,6 +239,6 @@ PagotaCity_MapEvents:
 	object_event 15, 25, SPRITE_GRAMPS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PagotaCityGrampsScript, -1
 	object_event 10, 21, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, PagotaCityYoungsterScript, -1
 	object_event 23, 21, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PagotaCityFruitTree, -1
-	object_event 16,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PagotaCityPPUp, EVENT_OLD_CITY_PP_UP
-	object_event 23,  5, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PagotaCityRareCandy, EVENT_OLD_CITY_RARE_CANDY
+	object_event 16,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PagotaCityPPUp, EVENT_PAGOTA_CITY_PP_UP
+	object_event 23,  5, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PagotaCityRareCandy, EVENT_PAGOTA_CITY_RARE_CANDY
 	object_event  9, 19, SPRITE_GRAMPS, SPRITEMOVEDATA_STILL, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, PagotaCityGrampsScript2, 0

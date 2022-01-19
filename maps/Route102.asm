@@ -14,8 +14,8 @@
 
 Route102_MapScripts:
 	db 2 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_ROUTE36_NOTHING
-	scene_script .DummyScene1 ; SCENE_ROUTE36_SILVER
+	scene_script .DummyScene0 ; SCENE_ROUTE102_NOTHING
+	scene_script .DummyScene1 ; SCENE_ROUTE102_SILVER
 
 	db 3 ; callbacks
 	callback MAPCALLBACK_OBJECTS, .ArthurCallback
@@ -583,7 +583,7 @@ Route102_MapEvents:
 	warp_event 16,  4, ROUTE_102_N64_HOUSE, 1
 
 	db 1 ; coord events
-	coord_event  6,  6, SCENE_ROUTE36_SILVER, Route102SilverScript
+	coord_event  6,  6, SCENE_ROUTE102_SILVER, Route102SilverScript
 
 	db 4 ; bg events
 	bg_event 22, 10, BGEVENT_READ, Route102TrainerTips2
@@ -597,7 +597,7 @@ Route102_MapEvents:
 	object_event 50,  7, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route102LassScript, -1
 	object_event 39,  5, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route102FruitTree, -1
 	object_event 40,  8, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ArthurScript, EVENT_ROUTE_36_ARTHUR_OF_THURSDAY
-	object_event  1,  1, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route102SilverTalkScript, EVENT_ROUTE_36_SILVER
+	object_event  1,  1, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route102SilverTalkScript, EVENT_ROUTE_102_SILVER
 	object_event 12, 11, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerCamperSamuel, -1
 	object_event 20,  8, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerYoungsterIan, -1
 	object_event 34,  9, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINCLOCKWISE, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerFledglingJohnny, -1

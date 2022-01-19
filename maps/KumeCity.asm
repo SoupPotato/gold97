@@ -1,10 +1,10 @@
 	const_def 2 ; object constants
-	const PEWTERCITY_FRUIT_TREE1
-	const PEWTERCITY_FRUIT_TREE2
-	const PEWTERCITY_FISHER
-	const PEWTERCITY_LASS
-	const PEWTERCITY_TEACHER
-	const PEWTERCITY_ROCKER
+	const KUMECITY_FRUIT_TREE1
+	const KUMECITY_FRUIT_TREE2
+	const KUMECITY_FISHER
+	const KUMECITY_LASS
+	const KUMECITY_TEACHER
+	const KUMECITY_ROCKER
 
 KumeCity_MapScripts:
 	db 0 ; scene scripts
@@ -13,7 +13,7 @@ KumeCity_MapScripts:
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
 
 .FlyPoint:
-	setflag ENGINE_FLYPOINT_PEWTER
+	setflag ENGINE_FLYPOINT_KUME
 	return
 
 KumeCityPokecenterSign:
@@ -25,8 +25,8 @@ KumeCityMartSign:
 KumeCitySign:
 	jumptext KumeCitySignText
 	
-UrumaCavernSign:
-	jumptext UrumaCavernSignText
+IcedCavernSign:
+	jumptext IcedCavernSignText
 
 KumeCityFruitTree1:
 	fruittree FRUITTREE_KUME_CITY_1
@@ -35,7 +35,7 @@ KumeCityFruitTree2:
 	fruittree FRUITTREE_KUME_CITY_2
 	
 KumeCityFisherScript:
-	jumptextfaceplayer KumeCityFisherText	
+	jumptextfaceplayer KumeCityFisherText
 
 KumeCityLassScript:
 	jumptextfaceplayer KumeCityLassText
@@ -82,7 +82,7 @@ KumeCitySignText:
 	line "town."
 	done
 	
-UrumaCavernSignText:
+IcedCavernSignText:
 	text "ICED CAVERN"
 	line "ENTRANCE"
 	done
@@ -91,7 +91,7 @@ KumeCity_MapEvents:
 	db 0, 0 ; filler
 
 	db 6 ; warp events
-	warp_event  7,  6, NAGO_MART, 1
+	warp_event  7,  6, KUME_MART, 1
 	warp_event 25, 18, KUME_POKECENTER_1F, 1
 	warp_event  7, 25, KUME_PARTS_SHOP, 1
 	warp_event 21, 13, KUME_SNOOZE_SPEECH_HOUSE, 1
@@ -104,7 +104,7 @@ KumeCity_MapEvents:
 	bg_event 26, 18, BGEVENT_READ, KumeCityPokecenterSign
 	bg_event  8,  6, BGEVENT_READ, KumeCityMartSign
 	bg_event 28, 18, BGEVENT_READ, KumeCitySign
-	bg_event 18,  7, BGEVENT_READ, UrumaCavernSign
+	bg_event 18,  7, BGEVENT_READ, IcedCavernSign
 
 	db 6 ; object events
 	object_event 18, 12, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KumeCityFruitTree1, -1

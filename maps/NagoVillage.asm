@@ -1,6 +1,6 @@
 	const_def 2 ; object constants
-	const CERULEAN_CITY_TEACHER
-	const CERULEAN_CITY_FISHING_GURU
+	const NAGO_VILLAGE_TEACHER
+	const NAGO_VILLAGE_FISHING_GURU
 
 NagoVillage_MapScripts:
 	db 0 ; scene scripts
@@ -19,7 +19,7 @@ NagoVillageSign:
 	jumptext NagoVillageSignText
 
 NagoVillageHiddenBerserkGene:
-	hiddenitem BERSERK_GENE, EVENT_FOUND_BERSERK_GENE_IN_CERULEAN_CITY
+	hiddenitem BERSERK_GENE, EVENT_FOUND_BERSERK_GENE_IN_NAGO_VILLAGE
 	
 NagoVillageTeacherScript:
 	jumptextfaceplayer NagoVillageTeacherText

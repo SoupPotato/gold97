@@ -1,9 +1,9 @@
 	const_def 2 ; object constants
-	const VIOLETPOKECENTER1F_NURSE
-	const VIOLETPOKECENTER1F_GAMEBOY_KID
-	const VIOLETPOKECENTER1F_GENTLEMAN
-	const VIOLETPOKECENTER1F_YOUNGSTER
-	const VIOLETPOKECENTER1F_SCIENTIST
+	const PAGOTA_POKECENTER_1F_NURSE
+	const PAGOTA_POKECENTER_1F_GAMEBOY_KID
+	const PAGOTA_POKECENTER_1F_GENTLEMAN
+	const PAGOTA_POKECENTER_1F_YOUNGSTER
+	const PAGOTA_POKECENTER_1F_SCIENTIST
 
 PagotaPokecenter1F_MapScripts:
 	db 0 ; scene scripts
@@ -16,7 +16,7 @@ VioletPokecenterNurse:
 PagotaPokecenter1F_ElmsAideScript:
 	faceplayer
 	opentext
-	checkevent EVENT_REFUSED_TO_TAKE_EGG_FROM_ELMS_AIDE
+	checkevent EVENT_REFUSED_TO_TAKE_EGG_FROM_OAKS_AIDE
 	iftrue .SecondTimeAsking
 	writetext UnknownText_0x69555
 .AskTakeEgg:
@@ -28,26 +28,26 @@ PagotaPokecenter1F_ElmsAideScript:
 	stringtotext .eggname, MEM_BUFFER_1
 	scall .AideGivesEgg
 	setevent EVENT_GOT_ODD_EGG_FROM_OAKS_AIDE
-	clearevent EVENT_ELMS_AIDE_IN_LAB
+	clearevent EVENT_OAKS_AIDE_IN_LAB
 	writetext UnknownText_0x695c5
 	waitbutton
 	closetext
 	checkcode VAR_FACING
 	ifequal UP, .AideWalksAroundPlayer
 	turnobject PLAYER, DOWN
-	applymovement VIOLETPOKECENTER1F_SCIENTIST, MovementData_AideWalksStraightOutOfPokecenter
+	applymovement PAGOTA_POKECENTER_1F_SCIENTIST, MovementData_AideWalksStraightOutOfPokecenter
 	playsound SFX_EXIT_BUILDING
-	disappear VIOLETPOKECENTER1F_SCIENTIST
+	disappear PAGOTA_POKECENTER_1F_SCIENTIST
 	waitsfx
 	clearevent EVENT_MET_BILL
 	end
 
 .AideWalksAroundPlayer:
-	applymovement VIOLETPOKECENTER1F_SCIENTIST, MovementData_AideWalksLeftToExitPokecenter
+	applymovement PAGOTA_POKECENTER_1F_SCIENTIST, MovementData_AideWalksLeftToExitPokecenter
 	turnobject PLAYER, DOWN
-	applymovement VIOLETPOKECENTER1F_SCIENTIST, MovementData_AideFinishesLeavingPokecenter
+	applymovement PAGOTA_POKECENTER_1F_SCIENTIST, MovementData_AideFinishesLeavingPokecenter
 	playsound SFX_EXIT_BUILDING
-	disappear VIOLETPOKECENTER1F_SCIENTIST
+	disappear PAGOTA_POKECENTER_1F_SCIENTIST
 	clearevent EVENT_MET_BILL
 	waitsfx
 	end
@@ -69,7 +69,7 @@ PagotaPokecenter1F_ElmsAideScript:
 	writetext UnknownText_0x696f2
 	waitbutton
 	closetext
-	setevent EVENT_REFUSED_TO_TAKE_EGG_FROM_ELMS_AIDE
+	setevent EVENT_REFUSED_TO_TAKE_EGG_FROM_OAKS_AIDE
 	end
 
 .SecondTimeAsking:
@@ -244,4 +244,4 @@ PagotaPokecenter1F_MapEvents:
 	object_event  11,  4, SPRITE_GAMEBOY_KID, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, PagotaPokecenter1FGameboyKidScript, -1
 	object_event  1,  4, SPRITE_GENTLEMAN, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PagotaPokecenter1FGentlemanScript, -1
 	object_event  8,  1, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, PagotaPokecenter1FYoungsterScript, -1
-	object_event  4,  3, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PagotaPokecenter1F_ElmsAideScript, EVENT_ELMS_AIDE_IN_VIOLET_POKEMON_CENTER
+	object_event  4,  3, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PagotaPokecenter1F_ElmsAideScript, EVENT_OAKS_AIDE_IN_PAGOTA_POKEMON_CENTER

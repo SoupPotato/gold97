@@ -1,9 +1,9 @@
 	const_def 2 ; object constants
-	const PEWTERPOKECENTER1F_NURSE
-	const PEWTERPOKECENTER1F_TEACHER
-	const PEWTERPOKECENTER1F_JIGGLYPUFF
-	const PEWTERPOKECENTER1F_BUG_CATCHER
-	const PEWTERPOKECENTER1F_CHRIS
+	const KUMEPOKECENTER1F_NURSE
+	const KUMEPOKECENTER1F_TEACHER
+	const KUMEPOKECENTER1F_JIGGLYPUFF
+	const KUMEPOKECENTER1F_BUG_CATCHER
+	const KUMEPOKECENTER1F_CHRIS
 
 KumePokecenter1F_MapScripts:
 	db 0 ; scene scripts
@@ -16,9 +16,9 @@ KumePokecenter1FNurseScript:
 KumePokecenter1FTeacherScript:
 	jumptextfaceplayer KumePokecenter1FTeacherText
 
-PewterJigglypuff:
+KumeJigglypuff:
 	opentext
-	writetext PewterJigglypuffText
+	writetext KumeJigglypuffText
 	cry JIGGLYPUFF
 	waitbutton
 	closetext
@@ -44,7 +44,7 @@ KumePokecenter1FTeacherText:
 	line "phone. Go away!"
 	done
 
-PewterJigglypuffText:
+KumeJigglypuffText:
 	text "JIGGLYPUFF: Puu"
 	line "pupuu."
 	done
@@ -78,6 +78,6 @@ KumePokecenter1F_MapEvents:
 	db 5 ; object events
 	object_event  5,  1, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KumePokecenter1FNurseScript, -1
 	object_event 10,  6, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, KumePokecenter1FTeacherScript, -1
-	object_event  2,  3, SPRITE_JIGGLYPUFF, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PewterJigglypuff, -1
+	object_event  2,  3, SPRITE_JIGGLYPUFF, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KumeJigglypuff, -1
 	object_event  3,  3, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KumePokecenter1FBugCatcherScript, -1
 	object_event 10,  1, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Chris, -1

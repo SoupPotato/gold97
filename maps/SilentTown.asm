@@ -105,8 +105,8 @@ SilentTown_RivalGreets:
 	pause 15
 	special RestartMapMusic
 	setevent EVENT_RIVAL_SILENT_TOWN
-	setevent EVENT_BLUE_ELM_ENTRANCE
-	setevent EVENT_DAISY_ELM_ENTRANCE
+	setevent EVENT_BLUE_OAKS_LAB_ENTRANCE
+	setevent EVENT_DAISY_OAKS_LAB_ENTRANCE
 	setevent EVENT_VIOLET_GYM_FALKNER
 	setmapscene RADIO_TOWER_6F, SCENE_RADIOTOWER6F_NOTHING; this makes it so the giovanni scene plays, was missed for a while
 	end
@@ -125,10 +125,10 @@ BlueStopsYouScene1:
 	writetext Text_ItsDangerousToGoAlone
 	waitbutton
 	closetext
-	setevent EVENT_RIVAL_ELM_ENTRANCE
+	setevent EVENT_RIVAL_OAKS_LAB_ENTRANCE
 	setmapscene OAKS_LAB_ENTRANCE, SCENE_HEAD_TO_THE_BACK
 	setmapscene OAKS_LAB, SCENE_DEFAULT
-	clearevent EVENT_BLUE_ELM_ENTRANCE
+	clearevent EVENT_BLUE_OAKS_LAB_ENTRANCE
 	follow SilentTown_BLUE, PLAYER
 	applymovement SilentTown_BLUE, BlueTakesPlayerToLab1
 	stopfollow
@@ -154,10 +154,10 @@ BlueStopsYouScene2:
 	writetext Text_ItsDangerousToGoAlone
 	waitbutton
 	closetext
-	setevent EVENT_RIVAL_ELM_ENTRANCE
+	setevent EVENT_RIVAL_OAKS_LAB_ENTRANCE
 	setmapscene OAKS_LAB_ENTRANCE, SCENE_HEAD_TO_THE_BACK
 	setmapscene OAKS_LAB, SCENE_DEFAULT
-	clearevent EVENT_BLUE_ELM_ENTRANCE
+	clearevent EVENT_BLUE_OAKS_LAB_ENTRANCE
 	follow SilentTown_BLUE, PLAYER
 	applymovement SilentTown_BLUE, BlueTakesPlayerToLab2
 	stopfollow

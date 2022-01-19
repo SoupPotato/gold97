@@ -1,8 +1,8 @@
 	const_def 2 ; object constants
-	const ELMENTRANCE_AIDE
-	const ELMENTRANCE_SILVER
-	const ELMENTRANCE_BLUE
-	const ELMENTRANCE_DAISY
+	const OAKS_LAB_ENTRANCE_AIDE
+	const OAKS_LAB_ENTRANCE_SILVER
+	const OAKS_LAB_ENTRANCE_BLUE
+	const OAKS_LAB_ENTRANCE_DAISY
 
 OaksLabEntrance_MapScripts:
 	db 6 ; scene scripts
@@ -19,11 +19,11 @@ OaksLabEntrance_MapScripts:
 	end
 	
 .SceneHeadToTheBack:
-	follow ELMENTRANCE_BLUE, PLAYER
-	applymovement ELMENTRANCE_BLUE, Movement_BlueToBack
+	follow OAKS_LAB_ENTRANCE_BLUE, PLAYER
+	applymovement OAKS_LAB_ENTRANCE_BLUE, Movement_BlueToBack
 	stopfollow
 	playsound SFX_ENTER_DOOR
-	disappear ELMENTRANCE_BLUE
+	disappear OAKS_LAB_ENTRANCE_BLUE
 	applymovement PLAYER, Movement_PlayerThroughDoor
 	playsound SFX_ENTER_DOOR
 	special FadeOutPalettes
@@ -45,9 +45,9 @@ OaksLabEntrance_MapScripts:
 BattleScript:
 	applymovement PLAYER, Movement_DownOne
 	playsound SFX_EXIT_BUILDING
-	moveobject ELMENTRANCE_SILVER, 4, 0
-	appear ELMENTRANCE_SILVER
-	applymovement ELMENTRANCE_SILVER, Movement_SilverDownOne
+	moveobject OAKS_LAB_ENTRANCE_SILVER, 4, 0
+	appear OAKS_LAB_ENTRANCE_SILVER
+	applymovement OAKS_LAB_ENTRANCE_SILVER, Movement_SilverDownOne
 	special FadeOutMusic
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	opentext
@@ -102,8 +102,8 @@ BattleScript:
 	waitbutton
 	closetext
 .FinishRival:
-	applymovement ELMENTRANCE_SILVER, SilverLeavesLab
-	disappear ELMENTRANCE_SILVER
+	applymovement OAKS_LAB_ENTRANCE_SILVER, SilverLeavesLab
+	disappear OAKS_LAB_ENTRANCE_SILVER
 	setscene SCENE_OAK_ENTRANCE_DAISY
 	special HealParty
 	playmapmusic
@@ -119,7 +119,7 @@ DoorLockedScript:
 	end
 	
 DaisyStopsScript1:
-	applymovement ELMENTRANCE_DAISY, DaisyWalksUp1
+	applymovement OAKS_LAB_ENTRANCE_DAISY, DaisyWalksUp1
 	opentext
 	writetext DaisySpeechText
 	buttonsound
@@ -133,7 +133,7 @@ DaisyStopsScript1:
 	writetext DaisySpeechText3
 	waitbutton
 	closetext
-	applymovement ELMENTRANCE_DAISY, DaisyLeftMovement
+	applymovement OAKS_LAB_ENTRANCE_DAISY, DaisyLeftMovement
 	setscene SCENE_OAK_ENTRANCE_NOTHING
 	setmapscene ROUTE_101, SCENE_ROUTE29_CATCH_TUTORIAL
 	end
@@ -146,7 +146,7 @@ DaisyStopsScript1:
 	db "MAP CARD@"
 	
 DaisyStopsScript2:
-	applymovement ELMENTRANCE_DAISY, DaisyWalksUp2
+	applymovement OAKS_LAB_ENTRANCE_DAISY, DaisyWalksUp2
 	opentext
 	writetext DaisySpeechText
 	buttonsound
@@ -160,7 +160,7 @@ DaisyStopsScript2:
 	writetext DaisySpeechText3
 	waitbutton
 	closetext
-	applymovement ELMENTRANCE_DAISY, DaisyLeftMovement
+	applymovement OAKS_LAB_ENTRANCE_DAISY, DaisyLeftMovement
 	setscene SCENE_OAK_ENTRANCE_NOTHING
 	setmapscene ROUTE_101, SCENE_ROUTE29_CATCH_TUTORIAL
 	end
@@ -441,8 +441,8 @@ OaksLabEntrance_MapEvents:
 
 	db 4 ; object events
 	object_event  6, 13, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OaksLabEntranceAideScript, -1
-	object_event  3,  4, SPRITE_SILVER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OaksLabEntranceSilverScript, EVENT_RIVAL_ELM_ENTRANCE
-	object_event  4, 14, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BLUE_ELM_ENTRANCE
-	object_event  1, 13, SPRITE_DAISY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OaksLabEntranceDaisyScript, EVENT_DAISY_ELM_ENTRANCE
+	object_event  3,  4, SPRITE_SILVER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OaksLabEntranceSilverScript, EVENT_RIVAL_OAKS_LAB_ENTRANCE
+	object_event  4, 14, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BLUE_OAKS_LAB_ENTRANCE
+	object_event  1, 13, SPRITE_DAISY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OaksLabEntranceDaisyScript, EVENT_DAISY_OAKS_LAB_ENTRANCE
 
 	

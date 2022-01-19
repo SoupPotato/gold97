@@ -2,7 +2,7 @@ Marts:
 ; entries correspond to MART_* constants
 	dw MartCherrygrove
 	dw MartCherrygroveDex
-	dw MartViolet
+	dw MartPagota
 	dw MartAzalea
 	dw MartCianwood
 	dw MartGoldenrod2F1
@@ -20,7 +20,7 @@ Marts:
 	dw MartBlackthorn
 	dw MartViridian
 	dw MartPewter
-	dw MartCerulean
+	dw MartKume
 	dw MartLavender
 	dw MartVermilion
 	dw MartCeladon2F1
@@ -32,7 +32,7 @@ Marts:
 	dw MartStand
 	dw MartSaffron
 	dw MartMtMoon
-	dw MartIndigoPlateau
+	dw MartNihonLeague
 	dw MartUnderground
 	dw MartKoban
 	dw MartWestportNewItems
@@ -57,7 +57,7 @@ MartCherrygroveDex:
 	db MAX_REPEL
 	db -1 ; end
 
-MartViolet:
+MartPagota:
 	db 9 ; # items
 	db POKE_BALL
 	db POTION
@@ -258,7 +258,7 @@ MartPewter:
 	db BURN_HEAL
 	db -1 ; end
 
-MartCerulean:
+MartKume:
 	db 8 ; # items
 	db GREAT_BALL
 	db ULTRA_BALL
@@ -391,7 +391,7 @@ MartMtMoon:
 	db PORTRAITMAIL
 	db -1 ; end
 
-MartIndigoPlateau:
+MartNihonLeague:
 	db 7 ; # items
 	db ULTRA_BALL
 	db MAX_REPEL

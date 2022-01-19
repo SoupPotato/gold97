@@ -224,7 +224,7 @@ OakPhoneScript1:
 .next
 	checkevent EVENT_GOT_ODD_EGG_FROM_OAKS_AIDE
 	iftrue .taking_on_league
-	checkevent EVENT_ELMS_AIDE_IN_LAB
+	checkevent EVENT_OAKS_AIDE_IN_LAB
 	iftrue .assistant
 	checkevent EVENT_ELM_CALLED_ABOUT_STOLEN_POKEMON
 	iftrue .stolen
@@ -291,8 +291,8 @@ OakPhoneScript2:
 .assistant
 	farwritetext OakPhoneEggAssistantText
 	specialphonecall SPECIALCALL_NONE
-	clearevent EVENT_ELMS_AIDE_IN_VIOLET_POKEMON_CENTER
-	setevent EVENT_ELMS_AIDE_IN_LAB
+	clearevent EVENT_OAKS_AIDE_IN_PAGOTA_POKEMON_CENTER
+	setevent EVENT_OAKS_AIDE_IN_LAB
 	end
 
 .rocket

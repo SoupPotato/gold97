@@ -5,7 +5,7 @@ NihonLeague_MapScripts:
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
 
 .FlyPoint:
-	setflag ENGINE_FLYPOINT_INDIGO_PLATEAU
+	setflag ENGINE_FLYPOINT_NIHON_LEAGUE
 	return
 
 NihonLeagueSign:

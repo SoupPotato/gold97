@@ -1,11 +1,11 @@
 	const_def 2 ; object constants
-	const SAFARI_ZONE_BETA_YOUNGSTER
-	const SAFARI_ZONE_BETA_BUG_CATCHER
-	const SAFARI_ZONE_BETA_SILVER
-	const SAFARI_ZONE_BETA_ITEMBALL_1
-	const SAFARI_ZONE_BETA_ITEMBALL_2
-	const SAFARI_ZONE_BETA_ITEMBALL_3
-	const SAFARI_ZONE_BETA_ITEMBALL_4
+	const NANJO_FOREST_YOUNGSTER
+	const NANJO_FOREST_BUG_CATCHER
+	const NANJO_FOREST_SILVER
+	const NANJO_FOREST_ITEMBALL_1
+	const NANJO_FOREST_ITEMBALL_2
+	const NANJO_FOREST_ITEMBALL_3
+	const NANJO_FOREST_ITEMBALL_4
 
 NanjoForest_MapScripts:
 	db 0 ; scene scripts
@@ -14,7 +14,7 @@ NanjoForest_MapScripts:
 
 TriWingYoungsterScript:
 	faceplayer
-	checkevent EVENT_EXPLODING_TRAP_12
+	checkevent EVENT_RECEIVED_TRI_WING_FROM_YOUNGSTER
 	iftrue .AlreadyGaveTriWing
 	checkevent EVENT_REPAIRED_SHIP_FUEL_LINE
 	iftrue .TryGivingTriWing
@@ -23,13 +23,13 @@ TriWingYoungsterScript:
 	writetext NoTriWingYetText
 	waitbutton
 	closetext
-	turnobject SAFARI_ZONE_BETA_YOUNGSTER, RIGHT
+	turnobject NANJO_FOREST_YOUNGSTER, RIGHT
 	end
 	
 .TryGivingTriWing
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	iftrue .NoTriWingYet
-	checkevent EVENT_EXPLODING_TRAP_11
+	checkevent EVENT_TRI_WING_YOUNGSTER_SETUP
 	iffalse .SetUpTriWing
 	opentext
 	writetext HeresTriWingText
@@ -38,8 +38,8 @@ TriWingYoungsterScript:
 	writetext WhatDoesTriWingDoText
 	waitbutton
 	closetext
-	setevent EVENT_EXPLODING_TRAP_12
-	turnobject SAFARI_ZONE_BETA_YOUNGSTER, RIGHT
+	setevent EVENT_RECEIVED_TRI_WING_FROM_YOUNGSTER
+	turnobject NANJO_FOREST_YOUNGSTER, RIGHT
 	end
 	
 .SetUpTriWing
@@ -47,9 +47,9 @@ TriWingYoungsterScript:
 	writetext NoTriWingYetText
 	waitbutton
 	closetext
-	setevent EVENT_EXPLODING_TRAP_11
+	setevent EVENT_TRI_WING_YOUNGSTER_SETUP
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
-	turnobject SAFARI_ZONE_BETA_YOUNGSTER, RIGHT
+	turnobject NANJO_FOREST_YOUNGSTER, RIGHT
 	end
 	
 .AlreadyGaveTriWing
@@ -57,7 +57,7 @@ TriWingYoungsterScript:
 	writetext AlreadyGaveTriWingText
 	waitbutton
 	closetext
-	turnobject SAFARI_ZONE_BETA_YOUNGSTER, RIGHT
+	turnobject NANJO_FOREST_YOUNGSTER, RIGHT
 	end
 	
 TriWingBugCatcherScript:
@@ -66,7 +66,7 @@ TriWingBugCatcherScript:
 	writetext TriWingBugCatcherText
 	waitbutton
 	closetext
-	turnobject SAFARI_ZONE_BETA_BUG_CATCHER, RIGHT
+	turnobject NANJO_FOREST_BUG_CATCHER, RIGHT
 	end
 	
 NanjoForestSilverScript:
@@ -264,7 +264,7 @@ NanjoForest_MapEvents:
 	object_event 27, 11, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TriWingYoungsterScript, -1
 	object_event 27, 10, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TriWingBugCatcherScript, -1
 	object_event  6, 12, SPRITE_SILVER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, NanjoForestSilverScript, EVENT_NANJO_FOREST_RIVAL_DEFEATED
-	object_event 26, 34, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, NanjoForestMaxRevive, EVENT_PICKED_UP_BERRY_FROM_KABUTO_ITEM_ROOM
-	object_event 15,  8, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, NanjoForestUltraBall, EVENT_PICKED_UP_PSNCUREBERRY_FROM_KABUTO_ITEM_ROOM
-	object_event  8, 19, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, NanjoForestFullHeal, EVENT_PICKED_UP_HEAL_POWDER_FROM_KABUTO_ITEM_ROOM
-	object_event 31, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, NanjoForestFullRestore, EVENT_PICKED_UP_ENERGYPOWDER_FROM_KABUTO_ITEM_ROOM
+	object_event 26, 34, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, NanjoForestMaxRevive, EVENT_NANJO_FOREST_MAX_REVIVE
+	object_event 15,  8, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, NanjoForestUltraBall, EVENT_NANJO_FOREST_ULTRA_BALL
+	object_event  8, 19, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, NanjoForestFullHeal, EVENT_NANJO_FOREST_FULL_HEAL
+	object_event 31, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, NanjoForestFullRestore, EVENT_NANJO_FOREST_FULL_RESTORE

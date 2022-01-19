@@ -1,6 +1,5 @@
 	const_def 2 ; object constants
 	const LANCESROOM_LANCE
-	const LANCESROOM_MARY
 	const LANCESROOM_OAK
 
 LancesRoom_MapScripts:
@@ -47,8 +46,6 @@ Script_ApproachLanceFromLeft:
 	jump LancesRoomLanceScript
 
 Script_ApproachLanceFromRight:
-;	warp SUNPOINT_DOCKS, 13, 3
-;	end
 	special FadeOutMusic
 	applymovement PLAYER, MovementData_ApproachLanceFromRight
 LancesRoomLanceScript:
@@ -82,24 +79,13 @@ returntomainLance:
 	turnobject LANCESROOM_LANCE, DOWN
 	pause 10
 	turnobject PLAYER, DOWN
-;	appear LANCESROOM_MARY
-;	applymovement LANCESROOM_MARY, LancesRoomMovementData_MaryRushesIn
-;	opentext
-;	writetext UnknownText_0x1811dd
-;	waitbutton
-;	closetext
 	appear LANCESROOM_OAK
 	applymovement LANCESROOM_OAK, LancesRoomMovementData_OakWalksIn
-;	follow LANCESROOM_MARY, LANCESROOM_OAK
-;	applymovement LANCESROOM_MARY, LancesRoomMovementData_MaryYieldsToOak
-;	stopfollow
 	turnobject LANCESROOM_OAK, UP
-;	turnobject LANCESROOM_LANCE, LEFT
 	opentext
 	writetext UnknownText_0x18121b
 	waitbutton
 	closetext
-;	applymovement LANCESROOM_MARY, LancesRoomMovementData_MaryInterviewChampion
 	turnobject PLAYER, RIGHT
 	turnobject LANCESROOM_LANCE, LEFT
 	opentext
@@ -113,7 +99,6 @@ returntomainLance:
 	waitbutton
 	closetext
 	follow LANCESROOM_LANCE, PLAYER
-	turnobject LANCESROOM_MARY, UP
 	turnobject LANCESROOM_OAK, UP
 	applymovement LANCESROOM_LANCE, LancesRoomMovementData_LanceLeadsPlayerToHallOfFame
 	stopfollow
@@ -122,13 +107,11 @@ returntomainLance:
 	applymovement PLAYER, LancesRoomMovementData_PlayerExits
 	playsound SFX_EXIT_BUILDING
 	disappear PLAYER
-	applymovement LANCESROOM_OAK, LancesRoomMovementData_MaryTriesToFollow
-;	showemote EMOTE_SHOCK, LANCESROOM_MARY, 15
+	applymovement LANCESROOM_OAK, LancesRoomMovementData_OakTriesToFollow
 	opentext
 	writetext UnknownText_0x1813c5
 	pause 30
 	closetext
-;	applymovement LANCESROOM_MARY, LancesRoomMovementData_MaryRunsBackAndForth
 	special FadeOutPalettes
 	pause 15
 	warpfacing UP, HALL_OF_FAME, 4, 13
@@ -158,27 +141,15 @@ MovementData_ApproachLanceFromRight:
 	turn_head RIGHT
 	step_end
 
-LancesRoomMovementData_MaryRushesIn:
-	big_step UP
-	big_step UP
-	big_step UP
-	turn_head DOWN
+LancesRoomMovementData_OakTriesToFollow:
+	step UP
+	step UP
 	step_end
 
 LancesRoomMovementData_OakWalksIn:
 	step UP
 	step UP
 	step UP
-	step_end
-
-LancesRoomMovementData_MaryYieldsToOak:
-	step LEFT
-	turn_head RIGHT
-	step_end
-
-LancesRoomMovementData_MaryInterviewChampion:
-	big_step UP
-	turn_head RIGHT
 	step_end
 
 LancesRoomMovementData_LancePositionsSelfToGuidePlayerAway:
@@ -193,25 +164,6 @@ LancesRoomMovementData_LanceLeadsPlayerToHallOfFame:
 
 LancesRoomMovementData_PlayerExits:
 	step UP
-	step_end
-
-LancesRoomMovementData_MaryTriesToFollow:
-	step UP
-	step UP
-	step_end
-
-LancesRoomMovementData_MaryRunsBackAndForth:
-	big_step RIGHT
-	big_step RIGHT
-	big_step LEFT
-	big_step LEFT
-	big_step LEFT
-	big_step RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	big_step LEFT
-	big_step LEFT
-	turn_head UP
 	step_end
 
 LanceBattleIntroText:
@@ -285,14 +237,6 @@ LanceBattleAfterText:
 
 	para "grow strong with"
 	line "your #MON."
-	done
-
-UnknownText_0x1811dd:
-	text "MARY: Oh, no!"
-	line "It's all over!"
-
-	para "PROF.OAK, if you"
-	line "weren't so slow…"
 	done
 
 UnknownText_0x18121b:
@@ -378,7 +322,6 @@ LancesRoom_MapEvents:
 
 	db 0 ; bg events
 
-	db 3 ; object events
+	db 2 ; object events
 	object_event  5,  3, SPRITE_LANCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LancesRoomLanceScript, -1
-	object_event  4,  7, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LANCES_ROOM_OAK_AND_MARY
 	object_event  4,  7, SPRITE_OAK, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LANCES_ROOM_OAK_AND_MARY

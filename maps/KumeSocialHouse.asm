@@ -1,9 +1,9 @@
 	const_def 2 ; object constants
-	const PEWTER_GYM_N64_LASS
-	const PEWTER_GYM_YOUNGSTER
-	const PEWTER_GYM_COOLTRAINER_F
-	const PEWTER_GYM_POKEFAN_F
-	const PEWTER_GYM_FISHER
+	const KUME_SOCIAL_HOUSE_N64_LASS
+	const KUME_SOCIAL_HOUSE_YOUNGSTER
+	const KUME_SOCIAL_HOUSE_COOLTRAINER_F
+	const KUME_SOCIAL_HOUSE_POKEFAN_F
+	const KUME_SOCIAL_HOUSE_FISHER
 
 KumeSocialHouse_MapScripts:
 	db 0 ; scene scripts
@@ -22,18 +22,18 @@ KumeSocialHouseN64LassScript:
 	end
 	
 KumeSocialHouseN64LassRightScript:
-	applymovement PEWTER_GYM_N64_LASS, KumeSocialHouseN64LassRightMovement
+	applymovement KUME_SOCIAL_HOUSE_N64_LASS, KumeSocialHouseN64LassRightMovement
 	playsound SFX_EXIT_BUILDING
-	disappear PEWTER_GYM_N64_LASS
+	disappear KUME_SOCIAL_HOUSE_N64_LASS
 	setevent EVENT_KUME_N64_LASS_AT_SOCIAL_HOUSE
 	clearevent EVENT_KUME_LASS_AT_N64_HOUSE
 	waitsfx
 	end
 	
 KumeSocialHouseN64LassUpScript:
-	applymovement PEWTER_GYM_N64_LASS, KumeSocialHouseN64LassUpMovement
+	applymovement KUME_SOCIAL_HOUSE_N64_LASS, KumeSocialHouseN64LassUpMovement
 	playsound SFX_EXIT_BUILDING
-	disappear PEWTER_GYM_N64_LASS
+	disappear KUME_SOCIAL_HOUSE_N64_LASS
 	setevent EVENT_KUME_N64_LASS_AT_SOCIAL_HOUSE
 	clearevent EVENT_KUME_LASS_AT_N64_HOUSE
 	waitsfx

@@ -1,5 +1,5 @@
 	const_def 2 ; object constants
-	const PEWTERSNOOZESPEECHHOUSE_TEACHER
+	const KUMESNOOZESPEECHHOUSE_TEACHER
 
 KumeSnoozeSpeechHouse_MapScripts:
 	db 0 ; scene scripts

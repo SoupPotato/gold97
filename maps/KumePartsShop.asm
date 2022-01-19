@@ -1,5 +1,5 @@
 	const_def 2 ; object constants
-	const KumePartsShop_GURU
+	const KUMEPARTSSHOP_GURU
 
 KumePartsShop_MapScripts:
 	db 0 ; scene scripts
@@ -11,7 +11,7 @@ FuelLineGuruScript:
 	opentext
 	checkevent EVENT_REPAIRED_SHIP_FUEL_LINE
 	iftrue .SSAquaDoingGreat
-	checkevent EVENT_USED_THE_CARD_KEY_IN_THE_RADIO_TOWER
+	checkevent EVENT_RECEIVED_NEW_FUELINE_FOR_SHIP
 	iffalse .GiveCard
 	writetext AlreadyGotFuelLineText
 	waitbutton
@@ -31,7 +31,7 @@ FuelLineGuruScript:
 	writetext AlreadyGotFuelLineText
 	waitbutton
 	closetext
-	setevent EVENT_USED_THE_CARD_KEY_IN_THE_RADIO_TOWER
+	setevent EVENT_RECEIVED_NEW_FUELINE_FOR_SHIP
 	end
 	
 SSAquaDoingGreatText:
