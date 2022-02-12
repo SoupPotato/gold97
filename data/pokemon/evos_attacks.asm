@@ -179,17 +179,19 @@ MetapodEvosAttacks:
 
 ButterfreeEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, CONFUSION
-	db 10, CONFUSION
+	db 1, GUST
+	db 10, GUST
+	db 11, CONFUSION
 	db 13, POISONPOWDER
 	db 13, STUN_SPORE
 	db 13, SLEEP_POWDER
-	db 16, GUST
+	db 16, PSYBEAM
 	db 20, SUPERSONIC
 	db 24, WHIRLWIND
-	db 29, PSYBEAM
+	db 29, CHARM
 	db 34, WING_ATTACK
 	db 40, SAFEGUARD
+	db 45, PSYCHIC_M
 	db 0 ; no more level-up moves
 
 WeedleEvosAttacks:
@@ -208,15 +210,17 @@ KakunaEvosAttacks:
 
 BeedrillEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, FURY_ATTACK
-	db 10, FURY_ATTACK
-	db 13, FOCUS_ENERGY
-	db 16, TWINEEDLE
-	db 20, RAGE
-	db 25, PURSUIT
-	db 30, PIN_MISSILE
-	db 35, FAINT_ATTACK
+	db 1, TWINEEDLE
+	db 10, TWINEEDLE
+	db 11, FURY_ATTACK
+	db 13, RAGE
+	db 16, PURSUIT
+	db 20, FOCUS_ENERGY
+	db 25, PIN_MISSILE
+	db 30, FAINT_ATTACK
+	db 35, SLUDGE_BOMB
 	db 40, AGILITY
+	db 45, OUTRAGE
 	db 0 ; no more level-up moves
 
 PidgeyEvosAttacks:
@@ -412,10 +416,10 @@ NidoranFEvosAttacks:
 	db EVOLVE_LEVEL, 16, NIDORINA
 	db 0 ; no more evolutions
 	db 1, GROWL
-	db 1, SCRATCH
-	db 6, TAIL_WHIP
-	db 10, DOUBLE_KICK
-	db 14, POISON_STING
+	db 1, POISON_STING
+	db 6, SCRATCH
+	db 10, TAIL_WHIP
+	db 14, DOUBLE_KICK
 	db 19, FURY_SWIPES
 	db 23, BITE
 	db 27, CHARM
@@ -428,10 +432,10 @@ NidorinaEvosAttacks:
 	db EVOLVE_ITEM, MOON_STONE, NIDOQUEEN
 	db 0 ; no more evolutions
 	db 1, GROWL
-	db 1, SCRATCH
-	db 6, TAIL_WHIP
-	db 10, DOUBLE_KICK
-	db 14, POISON_STING
+	db 1, POISON_STING
+	db 6, SCRATCH
+	db 10, TAIL_WHIP
+	db 14, DOUBLE_KICK
 	db 20, FURY_SWIPES
 	db 25, BITE
 	db 31, CHARM
@@ -454,11 +458,11 @@ NidoqueenEvosAttacks:
 NidoranMEvosAttacks:
 	db EVOLVE_LEVEL, 16, NIDORINO
 	db 0 ; no more evolutions
-	db 1, GROWL
-	db 1, PECK
-	db 6, FOCUS_ENERGY
-	db 10, DOUBLE_KICK
-	db 14, POISON_STING
+	db 1, LEER
+	db 1, POISON_STING
+	db 6, PECK
+	db 10, FOCUS_ENERGY
+	db 14, DOUBLE_KICK
 	db 19, FURY_ATTACK
 	db 23, HORN_ATTACK
 	db 27, SWAGGER
@@ -470,11 +474,11 @@ NidoranMEvosAttacks:
 NidorinoEvosAttacks:
 	db EVOLVE_ITEM, MOON_STONE, NIDOKING
 	db 0 ; no more evolutions
-	db 1, GROWL
-	db 1, PECK
-	db 6, FOCUS_ENERGY
-	db 10, DOUBLE_KICK
-	db 14, POISON_STING
+	db 1, LEER
+	db 1, POISON_STING
+	db 6, PECK
+	db 10, FOCUS_ENERGY
+	db 14, DOUBLE_KICK
 	db 20, FURY_ATTACK
 	db 25, HORN_ATTACK
 	db 31, SWAGGER
@@ -485,8 +489,8 @@ NidorinoEvosAttacks:
 
 NidokingEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, SCRATCH
-	db 1, TAIL_WHIP
+	db 1, PECK
+	db 1, FOCUS_ENERGY
 	db 1, DOUBLE_KICK
 	db 1, POISON_STING
 	db 36, THRASH
@@ -2475,13 +2479,13 @@ LedybaEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 5, SUPERSONIC
-	db 8, COMET_PUNCH
+	db 8, SWIFT
 	db 12, LIGHT_SCREEN
 	db 12, REFLECT
 	db 12, SAFEGUARD
 	db 16, MACH_PUNCH
 	db 19, PSYBEAM
-	db 23, SWIFT
+	db 23, COMET_PUNCH
 	db 27, BATON_PASS
 	db 30, AGILITY
 	db 34, DOUBLE_EDGE
@@ -2492,13 +2496,13 @@ TripstarEvosAttacks:
 	db 1, TACKLE
 	db 1, SUPERSONIC
 	db 5, SUPERSONIC
-	db 8, COMET_PUNCH
+	db 8, SWIFT
 	db 12, LIGHT_SCREEN
 	db 12, REFLECT
 	db 12, SAFEGUARD
 	db 16, MACH_PUNCH
 	db 21, PSYBEAM
-	db 25, SWIFT
+	db 25, COMET_PUNCH
 	db 30, BATON_PASS
 	db 34, AGILITY
 	db 39, DOUBLE_EDGE
