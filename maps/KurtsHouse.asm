@@ -73,11 +73,12 @@ KurtsHouse_MapScripts:
 	turnobject PLAYER, UP
 	opentext
 	writetext KurtICanMakeBalls
-	waitbutton	
+	waitbutton
 	verbosegiveitem LURE_BALL
 	iffalse .NoRoomForLureBall
 	closetext
 	setevent EVENT_KURT_GAVE_YOU_LURE_BALL
+	setevent EVENT_BRASS_TOWER_BLESSING_QUEST_COMPLETE
 	end
 	
 .NoRoomForLureBall:
@@ -85,6 +86,8 @@ KurtsHouse_MapScripts:
 	end
 	
 .SceneKurtsHouseNothing:
+	checkevent EVENT_BRASS_TOWER_BLESSING_QUEST_COMPLETE
+	iftrue .endofscene
 	checkevent EVENT_GOT_5F_SAGE_BLESSING
 	iftrue .SceneFalknerApproves
 .endofscene:
