@@ -1,6 +1,6 @@
 	db CHIX ; 241
 
-	db  30,  70,  40,  65,  30,  30
+	db  30,  65,  40,  60,  30,  30
 	;   hp  atk  def  spd  sat  sdf
 
 	db NORMAL, FLYING ; type
