@@ -6,4 +6,5 @@ CriticalHitMoves:
 	db SLASH
 	db AEROBLAST
 	db CROSS_CHOP
+	db CROSS_CUTTER
 	db -1
