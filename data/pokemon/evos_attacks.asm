@@ -2360,10 +2360,10 @@ CruizeEvosAttacks:
 	db 10, WATER_GUN
 	db 13, POWDER_SNOW
 	db 19, SWIFT
-	db 22, BUBBLEBEAM
-	db 25, AURORA_BEAM
-	db 31, SAFEGUARD
-	db 34, HAZE
+	db 22, HAZE
+	db 25, BUBBLEBEAM
+	db 31, AURORA_BEAM
+	db 34, SAFEGUARD
 	db 37, BODY_SLAM
 	db 43, ICE_BEAM
 	db 50, HYDRO_PUMP
@@ -2380,10 +2380,10 @@ AqualloEvosAttacks:
 	db 10, WATER_GUN
 	db 13, POWDER_SNOW
 	db 20, SWIFT
-	db 24, BUBBLEBEAM
-	db 28, AURORA_BEAM
-	db 35, SAFEGUARD
-	db 39, HAZE
+	db 24, HAZE
+	db 28, BUBBLEBEAM
+	db 35, AURORA_BEAM
+	db 39, SAFEGUARD
 	db 43, BODY_SLAM
 	db 49, ICE_BEAM
 	db 56, HYDRO_PUMP
@@ -2399,10 +2399,10 @@ AquariusEvosAttacks:
 	db 10, WATER_GUN
 	db 13, POWDER_SNOW
 	db 20, SWIFT
-	db 24, BUBBLEBEAM
-	db 28, AURORA_BEAM
-	db 36, SAFEGUARD
-	db 41, HAZE
+	db 24, HAZE
+	db 28, BUBBLEBEAM
+	db 36, AURORA_BEAM
+	db 41, SAFEGUARD
 	db 46, BODY_SLAM
 	db 52, ICE_BEAM
 	db 60, HYDRO_PUMP
@@ -2555,10 +2555,10 @@ KotoraEvosAttacks:
 	db 19, SCARY_FACE
 	db 24, SPARK
 	db 28, TAKE_DOWN
-	db 33, SLASH
+	db 33, AGILITY
 	db 37, CRUNCH
 	db 42, THUNDERBOLT
-	db 46, AGILITY
+	db 46, SLASH
 	db 0 ; no more level-up moves
 
 RaitoraEvosAttacks:
@@ -2571,10 +2571,10 @@ RaitoraEvosAttacks:
 	db 19, SCARY_FACE
 	db 24, SPARK
 	db 28, TAKE_DOWN
-	db 35, SLASH
+	db 35, AGILITY
 	db 42, CRUNCH
 	db 49, THUNDERBOLT
-	db 56, AGILITY
+	db 56, SLASH
 	db 0 ; no more level-up moves
 
 PichuEvosAttacks:
@@ -2609,7 +2609,7 @@ IgglybuffEvosAttacks:
 
 TogepiEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, GROWL
+	db 1, POUND
 	db 1, CHARM
 	db 6, METRONOME
 	db 13, SWEET_KISS
@@ -3229,7 +3229,7 @@ QwilfishEvosAttacks:
 	db 1, SPIKES
 	db 1, TACKLE
 	db 1, POISON_STING
-	db 1, WATER_GUN
+	db 5, WATER_GUN
 	db 9, HARDEN
 	db 9, MINIMIZE
 	db 13, THUNDER_WAVE
@@ -3245,7 +3245,7 @@ NumbpuffEvosAttacks:
 	db 1, SPIKES
 	db 1, TACKLE
 	db 1, POISON_STING
-	db 1, WATER_GUN
+	db 5, WATER_GUN
 	db 9, HARDEN
 	db 9, MINIMIZE
 	db 13, THUNDER_WAVE
@@ -3296,8 +3296,8 @@ KurstrawEvosAttacks:
 	db 6, SPITE
 	db 10, FAINT_ATTACK
 	db 15, CURSE
-	db 19, MEAN_LOOK
-	db 24, PSYBEAM
+	db 19, PSYBEAM
+	db 24, MEAN_LOOK
 	db 28, CONFUSE_RAY
 	db 33, NIGHT_SHADE
 	db 37, BODY_SLAM
@@ -3314,8 +3314,8 @@ PangshiEvosAttacks:
 	db 6, SPITE
 	db 10, FAINT_ATTACK
 	db 15, CURSE
-	db 19, MEAN_LOOK
-	db 24, PSYBEAM
+	db 19, PSYBEAM
+	db 24, MEAN_LOOK
 	db 28, CONFUSE_RAY
 	db 29, CRUNCH
 	db 35, NIGHT_SHADE
@@ -3684,8 +3684,8 @@ WolfanEvosAttacks:
 	db 1, LEER
 	db 7, POWDER_SNOW
 	db 12, FURY_SWIPES
-	db 18, SAFEGUARD
-	db 23, LOW_KICK
+	db 18, LOW_KICK
+	db 23, SAFEGUARD
 	db 29, ICY_WIND
 	db 34, SLASH
 	db 40, SCREECH
@@ -3699,8 +3699,8 @@ WarwolfEvosAttacks:
 	db 1, LEER
 	db 7, POWDER_SNOW
 	db 12, FURY_SWIPES
-	db 18, SAFEGUARD
-	db 23, LOW_KICK
+	db 18, LOW_KICK
+	db 23, SAFEGUARD
 	db 29, ICY_WIND
 	db 31, ICE_PUNCH
 	db 35, SLASH

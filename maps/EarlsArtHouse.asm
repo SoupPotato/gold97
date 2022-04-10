@@ -37,9 +37,9 @@ EarlScript:
 .MetEarl:
 	checkevent EVENT_SHOWED_DRATINI_TO_EARL
 	iftrue .ShowedDratini
-	checkevent EVENT_SHOWED_MADAME_TO_EARL
-	iftrue .ShowedMadame
-	writetext EarlMadameText
+	checkevent EVENT_SHOWED_FARFETCHD_TO_EARL
+	iftrue .ShowedFarfetchd
+	writetext EarlFarfetchdText
 	buttonsound
 	writetext EarlAskToSeeMonText
 	yesorno
@@ -47,11 +47,11 @@ EarlScript:
 	scall .ExcitedToSee
 	special BillsGrandfather
 	iffalse .SaidNo
-	ifnotequal MADAME, .WrongPokemon
+	ifnotequal FARFETCH_D, .WrongPokemon
 	writetext EarlShownPokemonText
 	buttonsound
-	setevent EVENT_SHOWED_MADAME_TO_EARL
-	jump .ShowedMadame
+	setevent EVENT_SHOWED_FARFETCHD_TO_EARL
+	jump .ShowedFarfetchd
 
 .GotExpShare:
 	writetext EarlDratiniText
@@ -80,7 +80,7 @@ EarlScript:
 	closetext
 	end
 
-.ShowedMadame:
+.ShowedFarfetchd:
 	checkevent EVENT_GOT_EXP_SHARE_FROM_EARL
 	iftrue .GotExpShare
 	scall .ReceiveItem
@@ -186,10 +186,11 @@ EarlIntroText:
 
 	para "I've been working"
 	line "on a statue of the"
-	cont "#MON MADAME,"
+	cont "wild duck #MON"
+	cont "FARFETCH'D…"
 
-	para "but it's not quite"
-	line "finished."
+	para "It's not quite"
+	line "done yet though…"
 	done
 
 EarlAskToSeeMonText:
@@ -245,17 +246,17 @@ EarlWrongPokemonText:
 	cont "thinking about."
 	done
 
-EarlMadameText:
-	text "If I could only"
-	line "see a MADAME in"
-	para "person, I might"
+EarlFarfetchdText:
+	text "If only I could"
+	line "see a FARFETCH'D"
+	para "in person, I might"
 	line "feel inspired to"
 	cont "finish my statue."
 	done
 
 EarlDratiniText:
 	text "I've finished my"
-	line "MADAME statue!"
+	line "FARFETCH'D statue!"
 	para "Now I'd like to"
 	line "finish my statue"
 	cont "of a DRATINI."
@@ -267,7 +268,7 @@ EarlDratiniText:
 	done
 
 BirdText:
-	text "MADAME STATUE"
+	text "FARFETCH'D STATUE"
 	line "by EARL"
 	done
 
