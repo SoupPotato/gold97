@@ -18,6 +18,7 @@ GymLeaders:
 	db KOGA
 	db GIOVANNI_E4
 	db CHAMPION
+	db BRUNO
 ; fallthrough
 KantoGymLeaders:
 	db LT_SURGE
