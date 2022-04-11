@@ -16,7 +16,7 @@ GymLeaders:
 	db LORELEI
 	db AGATHA
 	db KOGA
-	db BRUNO
+	db GIOVANNI_E4
 	db CHAMPION
 ; fallthrough
 KantoGymLeaders:
