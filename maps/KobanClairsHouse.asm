@@ -10,8 +10,9 @@ KobanClairsHouseClairScript:
 	faceplayer
 	checkevent EVENT_GOT_DRATINI
 	iftrue .AfterDratiniGift
-	checkitem MACHINE_PART
+	checkitem DRAGON_ORB
 	iffalse .NoOrbYet
+	opentext
 	writetext ClairTakeThisDratiniText
 	waitbutton
 	checkcode VAR_PARTYCOUNT
@@ -22,7 +23,7 @@ KobanClairsHouseClairScript:
 	givepoke DRATINI, 15
 	special GiveDratini
 	setevent EVENT_GOT_DRATINI
-	takeitem MACHINE_PART
+	takeitem DRAGON_ORB
 	writetext ClairSymbolicDragonText
 	waitbutton
 	closetext

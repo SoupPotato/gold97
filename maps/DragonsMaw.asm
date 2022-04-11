@@ -252,7 +252,7 @@ DragonOrbGetScript:
 	opentext
 	writetext HeresTheOrb
 	waitbutton
-	verbosegiveitem MACHINE_PART
+	verbosegiveitem DRAGON_ORB
 	setevent EVENT_GOT_DRAGON_ORB_IN_DRAGONS_MAW
 	closetext
 	end
