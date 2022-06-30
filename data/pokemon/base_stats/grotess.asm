@@ -14,7 +14,7 @@
 	INCBIN "gfx/pokemon/grotess/front.dimensions"
 	db 0, 0, 0, 0 ; padding
 	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_WATER_2, EGG_WATER_2 ; egg groups
+	dn EGG_WATER_2, EGG_INDETERMINATE ; egg groups
 
 	; tm/hm learnset
 	tmhm TOXIC, HIDDEN_POWER, BLIZZARD, HYPER_BEAM, PROTECT, RAIN_DANCE, ENDURE, IRON_TAIL, RETURN, MEGAPHONE, MUD_SLAP, DOUBLE_TEAM, SWIFT, DEFENSE_CURL, ROCK_HEAD, REST, SURF, WATERFALL, WHIRLPOOL
