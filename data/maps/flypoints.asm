@@ -25,7 +25,7 @@ Flypoints:
 
 ; Kanto
 KANTO_FLYPOINT EQU const_value
-	flypoint KUME,        KUME_CITY
+	flypoint KUME,         KUME_CITY
 	flypoint DAITO,        DAITO_RANCH
 	flypoint RYUKYU,       RYUKYU_CITY
 	flypoint IE,           IE_TOWN

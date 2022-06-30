@@ -4,14 +4,10 @@
 	const BIRDONTOWN_YOUNGSTER
 
 BirdonTown_MapScripts:
-	db 3 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_BIRDONTOWN_NOTHING
+	db 0 ; scene scripts
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .Flypoint
-
-.DummyScene0:
-	end
 
 .Flypoint:
 	setflag ENGINE_FLYPOINT_BIRDON
