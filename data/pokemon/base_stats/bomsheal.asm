@@ -1,6 +1,6 @@
 	db BOMSHEAL ; 184
 
-	db 65,  102,  67,  77,  112,  77
+	db 65,  102,  67,  67,  112,  77
 	;   hp  atk  def  spd  sat  sdf
 
 	db FIRE, WATER ; type
