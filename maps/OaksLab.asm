@@ -553,7 +553,7 @@ Text_OakSpeech:
 	line "being discovered"
 	cont "every day!"
 	
-	para "But my age is"
+	para "…and my age is"
 	line "catching on me…"
 	
 	para "So!"

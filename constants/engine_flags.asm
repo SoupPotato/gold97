@@ -99,7 +99,7 @@
 ; wDailyFlags1
 	const ENGINE_KURT_MAKING_BALLS ; 50
 	const ENGINE_DAILY_BUG_CONTEST
-	const ENGINE_FISH_SWARM
+	const ENGINE_SWARM
 	const ENGINE_TIME_CAPSULE
 	const ENGINE_ALL_FRUIT_TREES
 	const ENGINE_FOUGHT_IN_TRAINER_HOUSE_TODAY ; replaced the shuckie one to prevent battle club & trainer house locking eachother out daily
@@ -187,6 +187,6 @@
 ; wPlayerSpriteSetupFlags
 	const ENGINE_KRIS_IN_CABLE_CLUB
 ; wSwarmFlags
-	const ENGINE_EEVEE_SWARM ; a0
-	const ENGINE_CORASUN_SWARM
+	const ENGINE_ALT_SWARM ; a0
+	const ENGINE_SWARM_ACTIVE
 NUM_ENGINE_FLAGS EQU const_value

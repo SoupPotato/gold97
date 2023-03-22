@@ -382,7 +382,17 @@ LoadWildMonDataPointer:
 	jr z, _WaterWildmonLookup
 
 _GrassWildmonLookup:
+	ld hl, wSwarmFlags ; check if the flag is set
+	bit SWARMFLAGS_ALT_SWARM_F, [hl]
+	jr z, .check_normal_flag ;if not, then check for the alt swarm flag too
+	ld hl, SwarmGrassWildMonsAlt
+	jr .cont 
+.check_normal_flag
+	ld hl, wDailyFlags1
+	bit DAILYFLAGS_SWARM_F, [hl]
+	jr z, .cont ; if not, then skip generating a swarm
 	ld hl, SwarmGrassWildMons
+.cont
 	ld bc, GRASS_WILDDATA_LENGTH
 	call _SwarmWildmonCheck
 	ret c
@@ -393,7 +403,17 @@ _GrassWildmonLookup:
 	jr _NormalWildmonOK
 
 _WaterWildmonLookup:
+	ld hl, wSwarmFlags ; check if the flag is set
+	bit SWARMFLAGS_ALT_SWARM_F, [hl]
+	jr z, .check_normal_flag ;if not, then check for the alt swarm flag too
+	ld hl, SwarmWaterWildMonsAlt
+	jr .cont 
+.check_normal_flag
+	ld hl, wDailyFlags1
+	bit DAILYFLAGS_SWARM_F, [hl]
+	jr z, .cont ; if not, then skip generating a swarm
 	ld hl, SwarmWaterWildMons
+.cont
 	ld bc, WATER_WILDDATA_LENGTH
 	call _SwarmWildmonCheck
 	ret c
@@ -413,32 +433,10 @@ _JohtoWildmonCheck:
 
 _SwarmWildmonCheck:
 	call CopyCurrMapDE
-	push hl
-	ld hl, wSwarmFlags
-	bit SWARMFLAGS_EEVEE_SWARM_F, [hl]
-	pop hl
-	jr z, .CheckOsunfish
-	ld a, [wEeveeMapGroup]
-	cp d
-	jr nz, .CheckOsunfish
-	ld a, [wEeveeMapNumber]
-	cp e
-	jr nz, .CheckOsunfish
-	call LookUpWildmonsForMapDE
-	jr nc, _NoSwarmWildmon
-	scf
-	ret
-
-.CheckOsunfish:
-	push hl
-	ld hl, wSwarmFlags
-	bit SWARMFLAGS_CORASUN_SWARM_F, [hl]
-	pop hl
-	jr z, _NoSwarmWildmon
-	ld a, [wOsunfishMapGroup]
+	ld a, [wSwarmMapGroup]
 	cp d
 	jr nz, _NoSwarmWildmon
-	ld a, [wOsunfishMapNumber]
+	ld a, [wSwarmMapNumber]
 	cp e
 	jr nz, _NoSwarmWildmon
 	call LookUpWildmonsForMapDE
@@ -964,4 +962,6 @@ INCLUDE "data/wild/johto_water.asm"
 INCLUDE "data/wild/kanto_grass.asm"
 INCLUDE "data/wild/kanto_water.asm"
 INCLUDE "data/wild/swarm_grass.asm"
+INCLUDE "data/wild/swarm_grass_alt.asm"
 INCLUDE "data/wild/swarm_water.asm"
+INCLUDE "data/wild/swarm_water_alt.asm"

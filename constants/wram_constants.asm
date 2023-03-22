@@ -241,7 +241,7 @@ LEAFEONEVENT_FOREST_IS_RESTLESS_F EQU 2
 	const_def
 	const DAILYFLAGS1_KURT_MAKING_BALLS_F             ; 0
 	const DAILYFLAGS1_BUG_CONTEST_F                   ; 1
-	const DAILYFLAGS1_FISH_SWARM_F                    ; 2
+	const DAILYFLAGS_SWARM_F                         ; 2
 	const DAILYFLAGS1_TIME_CAPSULE_F                  ; 3
 	const DAILYFLAGS1_ALL_FRUIT_TREES_F               ; 4
 	const DAILYFLAGS1_GOT_SHUCKIE_TODAY_F             ; 5
@@ -263,8 +263,8 @@ LEAFEONEVENT_FOREST_IS_RESTLESS_F EQU 2
 	const_def
 	const SWARMFLAGS_BUENAS_PASSWORD_F           ; 0
 	const SWARMFLAGS_GOLDENROD_DEPT_STORE_SALE_F ; 1
-	const SWARMFLAGS_EEVEE_SWARM_F           ; 2
-	const SWARMFLAGS_CORASUN_SWARM_F               ; 3
+	const SWARMFLAGS_ALT_SWARM_F                 ; 2
+	const SWARMFLAGS_SWARM_ACTIVE                ; 3
 	const SWARMFLAGS_MOBILE_4_F                  ; 4
 
 ; wLuckyNumberShowFlag:: ; dc9d

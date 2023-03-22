@@ -302,25 +302,51 @@ UnusedCheckUnusedTwoDayTimer:
 ActivateFishingSwarm:
 	ld a, [wScriptVar]
 	ld [wFishingSwarmFlag], a
-	ret
+	jr SetSwarmFlag
 
 StoreSwarmMapIndices::
-	ld a, c
-	and a
-	jr nz, .osunfish
-; swarm dark cave violet entrance
 	ld a, d
-	ld [wEeveeMapGroup], a
+	ld [wSwarmMapGroup], a
 	ld a, e
-	ld [wEeveeMapNumber], a
+	ld [wSwarmMapNumber], a
+	;fallthrough
+SetSwarmFlag:
+	ld hl, wDailyFlags1
+	set DAILYFLAGS_SWARM_F, [hl]
+	ld hl, wSwarmFlags
+	res SWARMFLAGS_ALT_SWARM_F, [hl]
 	ret
 
-.osunfish
+StoreSwarmMapIndicesAlternate::
 	ld a, d
-	ld [wOsunfishMapGroup], a
+	ld [wSwarmMapGroup], a
 	ld a, e
-	ld [wOsunfishMapNumber], a
+	ld [wSwarmMapNumber], a
+	;fallthrough
+SetAltSwarmFlag:
+	ld hl, wSwarmFlags
+	set SWARMFLAGS_ALT_SWARM_F, [hl]
+	ld hl, wDailyFlags1
+	res DAILYFLAGS_SWARM_F, [hl]
 	ret
+
+CheckSwarmFlag::
+	ld hl, wDailyFlags1
+	bit DAILYFLAGS_SWARM_F, [hl]
+	jr z, .clear_swarm
+	xor a
+	ld [wScriptVar], a
+	ret
+
+.clear_swarm
+	ld a, 1
+	ld [wScriptVar], a
+	xor a
+	ld [wFishingSwarmFlag], a
+	ld [wSwarmMapGroup], a
+	ld [wSwarmMapNumber], a
+	ret
+
 
 CheckPokerus:
 ; Check if a monster in your party has Pokerus

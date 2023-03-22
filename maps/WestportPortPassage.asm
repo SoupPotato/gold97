@@ -48,9 +48,9 @@ DollSalesmanMonday_LoopScript:
 	writetext SendItemToPCTextDollMonday
 	yesorno
 	iffalse DollSalesmanMonday_Cancel
-	checkevent EVENT_DECO_POLIWHIRL_DOLL
+	checkevent EVENT_DECO_BUTTERFREE_DOLL
 	iftrue .AlreadyHaveDecorItem
-	setevent EVENT_DECO_POLIWHIRL_DOLL
+	setevent EVENT_DECO_BUTTERFREE_DOLL
 	takemoney YOUR_MONEY, 5000
 	jump DollSalesmanMonday_FinishScript
 	end

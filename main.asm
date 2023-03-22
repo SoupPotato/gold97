@@ -127,7 +127,6 @@ INCLUDE "engine/events/kurt_selectquantity_interpretjoypad.asm"
 SECTION "bankA", ROMX
 
 INCLUDE "engine/link/link.asm"
-INCLUDE "engine/overworld/wildmons.asm"
 INCLUDE "engine/battle/link_result.asm"
 
 ChrisBackpic:
@@ -136,6 +135,10 @@ INCBIN "gfx/player/chris_back.2bpp.lz"
 DudeBackpic:
 INCBIN "gfx/battle/dude.2bpp.lz"
 
+SECTION "Own Section", ROMX
+
+INCLUDE "engine/battle/swarm_shiny.asm"
+INCLUDE "engine/battle/swarm_shiny_alt.asm"
 
 SECTION "bankB", ROMX
 
@@ -150,6 +153,10 @@ INCLUDE "data/moves/descriptions.asm"
 INCLUDE "engine/events/pokerus/pokerus.asm"
 INCLUDE "engine/battle/start_battle.asm"
 INCLUDE "engine/gfx/place_graphic.asm"
+
+SECTION "bankC", ROMX
+
+INCLUDE "engine/overworld/wildmons.asm"
 
 
 SECTION "Effect Commands", ROMX
