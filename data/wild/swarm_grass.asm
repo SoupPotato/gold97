@@ -78,23 +78,6 @@ SwarmGrassWildMons:
 	db 8, NIDORAN_F
 	db 10, TANGTRIP
 	; nite
-	; morn
-	db 8, HOPPIP
-	db 8, TANGTRIP
-	db 8, CHIX
-	db 9, TANGTRIP
-	db 8, NIDORAN_M
-	db 8, NIDORAN_F
-	db 10, TANGTRIP
-	; day
-	db 8, HOPPIP
-	db 8, TANGTRIP
-	db 8, CHIX
-	db 9, TANGTRIP
-	db 8, NIDORAN_M
-	db 8, NIDORAN_F
-	db 10, TANGTRIP
-	; nite
 	db 8, DITTO
 	db 8, DITTO
 	db 8, DITTO
