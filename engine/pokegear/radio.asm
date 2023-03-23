@@ -251,6 +251,8 @@ OaksPKMNTalkSwarm1:
 	and %11111 ; '31' in bit  (increase bit number with each new added swarm)
 	cp 0
 	jp z, .nyanya
+	cp 1
+	jp z, .paramite
 ;	cp 25
 ;	jp z, .gligar
 	jp .generate_number
@@ -264,6 +266,8 @@ OaksPKMNTalkSwarm1:
 	and %11111 ; '31' in bit  (increase bit number with each new added swarm)
 	cp 0
 	jp z, .hoppip
+	cp 1
+	jp z, .kurstraw
 ;	cp 25
 ;	jp z, .skarmory
 	jp .generate_alt_number
@@ -298,6 +302,24 @@ OaksPKMNTalkSwarm1:
 	ld e, MAP_ROUTE_101
 	farcall StoreSwarmMapIndicesAlternate
 	ld e, ROUTE_101
+	jp .finish
+
+.paramite
+	ld a, PARAMITE
+	call .store_mon_name
+	ld d, GROUP_SILENT_HILLS
+	ld e, MAP_SILENT_HILLS
+	farcall StoreSwarmMapIndices
+	ld e, SILENT_HILLS
+	jp .finish
+
+.kurstraw
+	ld a, KURSTRAW
+	call .store_mon_name
+	ld d, GROUP_BRASS_TOWER_2F
+	ld e, MAP_BRASS_TOWER_2F
+	farcall StoreSwarmMapIndicesAlternate
+	ld e, BRASS_TOWER
 	jp .finish
 
 ;.jynx

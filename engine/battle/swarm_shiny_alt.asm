@@ -6,8 +6,8 @@ GenerateAltSwarmShiny:
 	call GetWorldMapLocation
 	cp ROUTE_101
 	jp z, .hoppip
-;	cp DARK_CAVE
-;	jp z, .dunsparce
+	cp BRASS_TOWER
+	jp z, .kurstraw
 ;	cp ROUTE_32
 ;	jp z, .qwilfish
 ;	cp MT_MORTAR
@@ -100,10 +100,10 @@ GenerateAltSwarmShiny:
 	ld a, [wCurPartySpecies]
 	cp HOPPIP
 	jp .next
-;.dunsparce
-;	ld a, [wCurPartySpecies]
-;	cp DUNSPARCE
-;	jp .next
+.kurstraw
+	ld a, [wCurPartySpecies]
+	cp KURSTRAW
+	jp .next
 ;.qwilfish
 ;	ld a, [wCurPartySpecies]
 ;	cp QWILFISH

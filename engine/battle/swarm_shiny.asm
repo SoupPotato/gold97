@@ -6,8 +6,8 @@ GenerateSwarmShiny:
 	call GetWorldMapLocation
 	cp ROUTE_101
 	jp z, .nyanya
-;	cp DARK_CAVE
-;	jp z, .dunsparce
+	cp SILENT_HILLS
+	jp z, .paramite
 ;	cp ROUTE_32
 ;	jp z, .qwilfish
 ;	cp MT_MORTAR
@@ -100,10 +100,10 @@ GenerateSwarmShiny:
 	ld a, [wCurPartySpecies]
 	cp NYANYA
 	jp .next
-;.dunsparce
-;	ld a, [wCurPartySpecies]
-;	cp DUNSPARCE
-;	jp .next
+.paramite
+	ld a, [wCurPartySpecies]
+	cp PARAMITE
+	jp .next
 ;.qwilfish
 ;	ld a, [wCurPartySpecies]
 ;	cp QWILFISH

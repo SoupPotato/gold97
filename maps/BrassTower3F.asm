@@ -143,7 +143,7 @@ BrassTower3F_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event 11,  5, BRASS_TOWER_2F, 2
+	warp_event 11,  4, BRASS_TOWER_2F, 2
 	warp_event 10,  1, BRASS_TOWER_4F, 1
 
 	db 0 ; coord events

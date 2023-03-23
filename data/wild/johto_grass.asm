@@ -147,7 +147,6 @@ JohtoGrassWildMons:
 	db 8, KURSTRAW
 	db 7, RATTATA
 	db 7, RATTATA
-	
 
 	map_id BRASS_TOWER_3F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite

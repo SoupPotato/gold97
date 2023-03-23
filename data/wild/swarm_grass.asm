@@ -30,4 +30,32 @@ SwarmGrassWildMons:
 	db 4, NYANYA
 	db 4, RATTATA
 
+; Paramite swarm
+	map_id SILENT_HILLS
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 4, CATERPIE
+	db 4, PARAMITE
+	db 5, WEEDLE
+	db 5, PARAMITE
+	db 4, HOPPIP
+	db 5, METAPOD
+	db 6, PIDGEY
+	; day
+	db 4, CATERPIE
+	db 4, PARAMITE
+	db 5, WEEDLE
+	db 5, PARAMITE
+	db 4, HOPPIP
+	db 5, METAPOD
+	db 6, KAKUNA
+	; nite
+	db 4, HOOTHOOT
+	db 4, PARAMITE
+	db 5, HOOTHOOT
+	db 5, PARAMITE
+	db 4, PARAMITE
+	db 5, HOOTHOOT
+	db 6, RATTATA
+
 	db -1 ; end

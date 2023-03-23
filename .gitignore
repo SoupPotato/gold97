@@ -19,7 +19,8 @@
 *.rtc
 *.sn*
 *.sa*
-*.sg1
+*.sg*
+*.ss*
 
 # rgbds extras
 *.map
