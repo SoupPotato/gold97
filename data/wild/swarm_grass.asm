@@ -58,4 +58,57 @@ SwarmGrassWildMons:
 	db 5, HOOTHOOT
 	db 6, RATTATA
 
+; Tangtrip swarm
+	map_id ROUTE_102
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 8, HOPPIP
+	db 8, TANGTRIP
+	db 8, CHIX
+	db 9, TANGTRIP
+	db 8, NIDORAN_M
+	db 8, NIDORAN_F
+	db 10, TANGTRIP
+	; day
+	db 8, HOPPIP
+	db 8, TANGTRIP
+	db 8, CHIX
+	db 9, TANGTRIP
+	db 8, NIDORAN_M
+	db 8, NIDORAN_F
+	db 10, TANGTRIP
+	; nite
+	; morn
+	db 8, HOPPIP
+	db 8, TANGTRIP
+	db 8, CHIX
+	db 9, TANGTRIP
+	db 8, NIDORAN_M
+	db 8, NIDORAN_F
+	db 10, TANGTRIP
+	; day
+	db 8, HOPPIP
+	db 8, TANGTRIP
+	db 8, CHIX
+	db 9, TANGTRIP
+	db 8, NIDORAN_M
+	db 8, NIDORAN_F
+	db 10, TANGTRIP
+	; nite
+	db 8, DITTO
+	db 8, DITTO
+	db 8, DITTO
+	db 9, DITTO
+	db 8, DITTO
+	db 8, DITTO
+	db 10, DITTO
+
+;	db 8, ODDISH
+;	db 8, TANGTRIP
+;	db 8, HOOTHOOT
+;	db 9, TANGTRIP
+;	db 8, NIDORAN_M
+;	db 8, NIDORAN_F
+;	db 10, GASTLY
+
 	db -1 ; end

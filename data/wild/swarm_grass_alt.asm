@@ -58,4 +58,32 @@ SwarmGrassWildMonsAlt:
 	db 7, RATTATA
 	db 7, RATTATA
 
+; Chix swarm
+	map_id ROUTE_102
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 8, HOPPIP
+	db 8, CHIX
+	db 8, CHIX
+	db 9, CHIX
+	db 8, NIDORAN_M
+	db 8, NIDORAN_F
+	db 8, TANGTRIP
+	; day
+	db 8, HOPPIP
+	db 8, CHIX
+	db 8, CHIX
+	db 9, CHIX
+	db 8, NIDORAN_M
+	db 8, NIDORAN_F
+	db 8, TANGTRIP
+	; nite
+	db 8, ODDISH
+	db 8, CHIX
+	db 8, HOOTHOOT
+	db 9, CHIX
+	db 8, NIDORAN_M
+	db 8, NIDORAN_F
+	db 8, GASTLY
+
 	db -1 ; end

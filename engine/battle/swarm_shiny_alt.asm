@@ -8,8 +8,8 @@ GenerateAltSwarmShiny:
 	jp z, .hoppip
 	cp BRASS_TOWER
 	jp z, .kurstraw
-;	cp ROUTE_32
-;	jp z, .qwilfish
+	cp ROUTE_103
+	jp z, .chix
 ;	cp MT_MORTAR
 ;	jp z, .marill
 ;	cp ROUTE_38
@@ -104,10 +104,10 @@ GenerateAltSwarmShiny:
 	ld a, [wCurPartySpecies]
 	cp KURSTRAW
 	jp .next
-;.qwilfish
-;	ld a, [wCurPartySpecies]
-;	cp QWILFISH
-;	jp .next
+.chix
+	ld a, [wCurPartySpecies]
+	cp CHIX
+	jp .next
 ;.marill
 ;	ld a, [wCurPartySpecies]
 ;	cp MARILL

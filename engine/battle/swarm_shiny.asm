@@ -8,8 +8,8 @@ GenerateSwarmShiny:
 	jp z, .nyanya
 	cp SILENT_HILLS
 	jp z, .paramite
-;	cp ROUTE_32
-;	jp z, .qwilfish
+	cp ROUTE_103
+	jp z, .tangtrip
 ;	cp MT_MORTAR
 ;	jp z, .marill
 ;	cp ROUTE_38
@@ -104,10 +104,10 @@ GenerateSwarmShiny:
 	ld a, [wCurPartySpecies]
 	cp PARAMITE
 	jp .next
-;.qwilfish
-;	ld a, [wCurPartySpecies]
-;	cp QWILFISH
-;	jp .next
+.tangtrip
+	ld a, [wCurPartySpecies]
+	cp TANGTRIP
+	jp .next
 ;.marill
 ;	ld a, [wCurPartySpecies]
 ;	cp MARILL

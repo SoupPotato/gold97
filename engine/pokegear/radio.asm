@@ -248,11 +248,13 @@ OaksPKMNTalkSwarm1:
 	call .InJohto
 	jp nc, .generate_number_kanto
 	call Random ; generate a random number below 32
-	and %11111 ; '31' in bit  (increase bit number with each new added swarm)
+	and %11 ; '31' in bit  (increase bit number with each new added swarm)
 	cp 0
 	jp z, .nyanya
 	cp 1
 	jp z, .paramite
+	cp 2
+	jp z, .tangtrip
 ;	cp 25
 ;	jp z, .gligar
 	jp .generate_number
@@ -263,11 +265,13 @@ OaksPKMNTalkSwarm1:
 	call .InJohto
 	jp nc, .generate_alt_number_kanto
 	call Random ; generate a random number below 32
-	and %11111 ; '31' in bit  (increase bit number with each new added swarm)
+	and %11 ; '31' in bit  (increase bit number with each new added swarm)
 	cp 0
 	jp z, .hoppip
 	cp 1
 	jp z, .kurstraw
+	cp 2
+	jp z, .chix
 ;	cp 25
 ;	jp z, .skarmory
 	jp .generate_alt_number
@@ -320,6 +324,24 @@ OaksPKMNTalkSwarm1:
 	ld e, MAP_BRASS_TOWER_2F
 	farcall StoreSwarmMapIndicesAlternate
 	ld e, BRASS_TOWER
+	jp .finish
+
+.tangtrip
+	ld a, TANGTRIP
+	call .store_mon_name
+	ld d, GROUP_ROUTE_102
+	ld e, MAP_ROUTE_102
+	farcall StoreSwarmMapIndices
+	ld e, ROUTE_102
+	jp .finish
+
+.chix
+	ld a, CHIX
+	call .store_mon_name
+	ld d, GROUP_ROUTE_102
+	ld e, MAP_ROUTE_102
+	farcall StoreSwarmMapIndicesAlternate
+	ld e, ROUTE_102
 	jp .finish
 
 ;.jynx
