@@ -202,7 +202,7 @@ NewPokedexOrder:
 	db NUMBPUFF
 	db PHANPY
 	db DONPHAN
-	db MANTINE
+	db RAYLEEP
 	db SKARMORY
 	db CHIX
 	db DODUO

@@ -226,7 +226,7 @@ MonMenuIcons:
 	db ICON_FISH        ; REMORAID
 	db ICON_FISH        ; OCTILLERY
 	db ICON_BIRD        ; DELIBIRD
-	db ICON_FISH        ; MANTINE
+	db ICON_FISH        ; RAYLEEP
 	db ICON_BIRD        ; SKARMORY
 	db ICON_FOX         ; HOUNDOUR
 	db ICON_FOX         ; HOUNDOOM

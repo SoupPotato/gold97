@@ -245,7 +245,7 @@ JOHTO_POKEMON EQU const_value
 	const REMORAID   ; df
 	const OCTILLERY  ; e0
 	const DELIBIRD   ; e1
-	const MANTINE    ; e2
+	const RAYLEEP    ; e2
 	const SKARMORY   ; e3
 	const HOUNDOUR   ; e4
 	const HOUNDOOM   ; e5

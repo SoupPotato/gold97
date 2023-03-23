@@ -455,8 +455,8 @@ PokemonPicPointers::
 	dba_pic OctilleryBackpic
 	dba_pic DelibirdFrontpic
 	dba_pic DelibirdBackpic
-	dba_pic MantineFrontpic
-	dba_pic MantineBackpic
+	dba_pic RayleepFrontpic
+	dba_pic RayleepBackpic
 	dba_pic SkarmoryFrontpic
 	dba_pic SkarmoryBackpic
 	dba_pic HoundourFrontpic

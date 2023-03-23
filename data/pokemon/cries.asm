@@ -230,7 +230,7 @@ PokemonCries::
 	mon_cry CRY_SUNFLORA,    $00d,  $100 ; REMORAID
 	mon_cry CRY_CRUIZE,      $000,  $180 ; OCTILLERY
 	mon_cry CRY_QWILFISH,    $002,  $06a ; DELIBIRD
-	mon_cry CRY_MANTINE,    -$0be,  $0f0 ; MANTINE
+	mon_cry CRY_MANTINE,    -$0be,  $0f0 ; RAYLEEP
 	mon_cry CRY_AMPHAROS,    $8a9,  $180 ; SKARMORY
 	mon_cry CRY_FLAMBEAR,    $039,  $140 ; HOUNDOUR
 	mon_cry CRY_CRUIZE,     -$10a,  $100 ; HOUNDOOM

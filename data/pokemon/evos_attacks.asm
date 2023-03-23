@@ -3379,7 +3379,7 @@ DelibirdEvosAttacks:
 	db 49, HEAL_BELL
 	db 0 ; no more level-up moves
 
-MantineEvosAttacks:
+RayleepEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, BUBBLE

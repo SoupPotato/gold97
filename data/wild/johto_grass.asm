@@ -1058,7 +1058,7 @@ JohtoGrassWildMons:
 	db 28, FARFETCH_D
 	db 30, ARBOK
 	db 29, PONYTA
-	db 30, PHANPY
+	db 30, SCYTHER
 	db 30, TAUROS
 	db 32, TAUROS
 	; day
@@ -1066,15 +1066,15 @@ JohtoGrassWildMons:
 	db 28, FARFETCH_D
 	db 30, ARBOK
 	db 29, PONYTA
-	db 30, PHANPY
+	db 30, SCYTHER
 	db 30, TAUROS
 	db 32, TAUROS
 	; nite
 	db 28, EKANS
-	db 28, FARFETCH_D
+	db 28, NOCTOWL
 	db 30, ARBOK
 	db 29, GOLBAT
-	db 30, PHANPY
+	db 30, SCYTHER
 	db 30, GOLBAT
 	db 32, ZUBAT
 	

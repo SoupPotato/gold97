@@ -127,7 +127,6 @@ AlphabeticalPokedexOrder:
 	db MAGNEMITE
 	db MAGNETON
 	db MANKEY
-	db MANTINE
 	db MAREEP
 	db MARILL
 	db MAROWAK
@@ -191,6 +190,7 @@ AlphabeticalPokedexOrder:
 	db RAPIDASH
 	db RATICATE
 	db RATTATA
+	db RAYLEEP
 	db REMORAID
 	db RHYDON
 	db RHYHORN

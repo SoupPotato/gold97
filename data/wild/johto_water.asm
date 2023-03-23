@@ -171,26 +171,26 @@ JohtoWaterWildMons:
 	db 4 percent ; encounter rate
 	IF DEF(_GOLD)
 	db 28, SHELLDER
-	db 28, MANTINE
+	db 28, RAYLEEP
 	db 28, STARYU
 	
 	ELIF DEF(_SILVER)
 	db 28, SHELLDER
 	db 28, STARYU
-	db 28, MANTINE
+	db 28, RAYLEEP
 	ENDC
 	
 	map_id ROUTE_107
 	db 4 percent ; encounter rate
 	IF DEF(_GOLD)
 	db 25, TENTACOOL
-	db 25, MANTINE
+	db 25, RAYLEEP
 	db 28, TENTACRUEL
 	
 	ELIF DEF(_SILVER)
 	db 25, TENTACOOL
 	db 28, TENTACRUEL
-	db 25, MANTINE
+	db 25, RAYLEEP
 	ENDC
 
 	map_id DEEPWATER_PASSAGE_B2F
