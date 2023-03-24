@@ -93,10 +93,8 @@ GetFishGroupIndex:
 ; Return the index of fishgroup d in de.
 
 	ld a, d
-	cp FISHGROUP_QWILFISH
-	jr z, .qwilfish
-	cp FISHGROUP_REMORAID
-	jr z, .remoraid
+	cp FISHGROUP_HORSEA
+	jr z, .horsea
 
 .done
 	dec d
@@ -104,18 +102,11 @@ GetFishGroupIndex:
 	ld d, 0
 	ret
 
-.qwilfish
+.horsea
 	ld a, [wFishingSwarmFlag]
-	cp FISHSWARM_QWILFISH
+	cp FISHSWARM_HORSEA
 	jr nz, .done
-	ld d, FISHGROUP_QWILFISH_SWARM
-	jr .done
-
-.remoraid
-	ld a, [wFishingSwarmFlag]
-	cp FISHSWARM_REMORAID
-	jr nz, .done
-	ld d, FISHGROUP_REMORAID_SWARM
+	ld d, FISHGROUP_HORSEA_SWARM
 	jr .done
 
 INCLUDE "data/wild/fish.asm"

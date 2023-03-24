@@ -1,23 +1,23 @@
 GenerateSwarmShiny:
-	ld a, [wMapGroup]
+	ld a, [wSwarmMapGroup]
 	ld b, a
-	ld a, [wMapNumber]
+	ld a, [wSwarmMapNumber]
 	ld c, a
 	call GetWorldMapLocation
 	cp ROUTE_101
 	jp z, .nyanya
 	cp SILENT_HILLS
 	jp z, .paramite
-	cp ROUTE_103
+	cp ROUTE_102
 	jp z, .tangtrip
-;	cp MT_MORTAR
-;	jp z, .marill
-;	cp ROUTE_38
-;	jp z, .magnemite
-;	cp OLIVINE_CITY
-;	jp z, .chinchou
-;	cp ROUTE_44
-;	jp z, .remoraid
+	cp ROUTE_103
+	jp z, .drowzee
+	cp ROUTE_120
+	jp z, .kotora
+	cp BOULDER_MINES
+	jp z, .koffing
+	cp ROUTE_119
+	jp z, .horsea
 ;	cp ROUTE_46
 ;	jp z, .phanpy
 ;	cp ROUTE_30
@@ -108,22 +108,22 @@ GenerateSwarmShiny:
 	ld a, [wCurPartySpecies]
 	cp TANGTRIP
 	jp .next
-;.marill
-;	ld a, [wCurPartySpecies]
-;	cp MARILL
-;	jp .next
-;.magnemite
-;	ld a, [wCurPartySpecies]
-;	cp MAGNEMITE
-;	jp .next
-;.chinchou
-;	ld a, [wCurPartySpecies]
-;	cp CHINCHOU
-;	jp .next
-;.remoraid
-;	ld a, [wCurPartySpecies]
-;	cp REMORAID
-;	jp .next
+.drowzee
+	ld a, [wCurPartySpecies]
+	cp DROWZEE
+	jp .next
+.kotora
+	ld a, [wCurPartySpecies]
+	cp KOTORA
+	jp .next
+.koffing
+	ld a, [wCurPartySpecies]
+	cp KOFFING
+	jp .next
+.horsea
+	ld a, [wCurPartySpecies]
+	cp HORSEA
+	jp .next
 ;.phanpy
 ;	ld a, [wCurPartySpecies]
 ;	cp PHANPY

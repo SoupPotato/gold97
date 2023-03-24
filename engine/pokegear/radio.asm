@@ -248,13 +248,21 @@ OaksPKMNTalkSwarm1:
 	call .InJohto
 	jp nc, .generate_number_kanto
 	call Random ; generate a random number below 32
-	and %11 ; '31' in bit  (increase bit number with each new added swarm)
+	and %111 ; '31' in bit  (increase bit number with each new added swarm)
 	cp 0
 	jp z, .nyanya
 	cp 1
 	jp z, .paramite
 	cp 2
 	jp z, .tangtrip
+	cp 3
+	jp z, .drowzee
+	cp 4
+	jp z, .kotora
+	cp 5
+	jp z, .koffing
+	cp 6
+	jp z, .horsea
 ;	cp 25
 ;	jp z, .gligar
 	jp .generate_number
@@ -265,13 +273,21 @@ OaksPKMNTalkSwarm1:
 	call .InJohto
 	jp nc, .generate_alt_number_kanto
 	call Random ; generate a random number below 32
-	and %11 ; '31' in bit  (increase bit number with each new added swarm)
+	and %111 ; '31' in bit  (increase bit number with each new added swarm)
 	cp 0
 	jp z, .hoppip
 	cp 1
 	jp z, .kurstraw
 	cp 2
 	jp z, .chix
+	cp 3
+	jp z, .houndour
+	cp 4
+	jp z, .rinring
+	cp 5
+	jp z, .onix
+	cp 6
+	jp z, .voltorb
 ;	cp 25
 ;	jp z, .skarmory
 	jp .generate_alt_number
@@ -342,6 +358,80 @@ OaksPKMNTalkSwarm1:
 	ld e, MAP_ROUTE_102
 	farcall StoreSwarmMapIndicesAlternate
 	ld e, ROUTE_102
+	jp .finish
+
+.drowzee
+	ld a, DROWZEE
+	call .store_mon_name
+	ld d, GROUP_ROUTE_103
+	ld e, MAP_ROUTE_103
+	farcall StoreSwarmMapIndices
+	ld e, ROUTE_103
+	jp .finish
+
+.houndour
+	ld a, HOUNDOUR
+	call .store_mon_name
+	ld d, GROUP_ROUTE_103
+	ld e, MAP_ROUTE_103
+	farcall StoreSwarmMapIndicesAlternate
+	ld e, ROUTE_103
+	jp .finish
+
+.kotora
+	ld a, KOTORA
+	call .store_mon_name
+	ld d, GROUP_ROUTE_120
+	ld e, MAP_ROUTE_120
+	farcall StoreSwarmMapIndices
+	ld e, ROUTE_120
+	jp .finish
+
+.rinring
+	ld a, RINRING
+	call .store_mon_name
+	ld d, GROUP_ROUTE_120
+	ld e, MAP_ROUTE_120
+	farcall StoreSwarmMapIndicesAlternate
+	ld e, ROUTE_120
+	jp .finish
+
+.koffing
+	ld a, KOFFING
+	call .store_mon_name
+	ld d, GROUP_BOULDER_MINES_1F
+	ld e, MAP_BOULDER_MINES_1F
+	farcall StoreSwarmMapIndices
+	ld e, BOULDER_MINES
+	jp .finish
+
+.onix
+	ld a, ONIX
+	call .store_mon_name
+	ld d, GROUP_BOULDER_MINES_1F
+	ld e, MAP_BOULDER_MINES_1F
+	farcall StoreSwarmMapIndicesAlternate
+	ld e, BOULDER_MINES
+	jp .finish
+
+.horsea
+	ld a, HORSEA
+	call .store_mon_name
+	ld d, GROUP_ROUTE_119
+	ld e, MAP_ROUTE_119
+	ld a, 1  ; FISHSWARM_HORSEA (script_constants.asm)
+	ld [wFishingSwarmFlag], a
+	farcall StoreSwarmMapIndices
+	ld e, ROUTE_119
+	jp .finish
+
+.voltorb
+	ld a, VOLTORB
+	call .store_mon_name
+	ld d, GROUP_ROUTE_119
+	ld e, MAP_ROUTE_119
+	farcall StoreSwarmMapIndicesAlternate
+	ld e, ROUTE_119
 	jp .finish
 
 ;.jynx

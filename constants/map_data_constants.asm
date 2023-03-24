@@ -49,6 +49,8 @@ MAP_NONE   EQU 0
 	const FISHGROUP_QWILFISH
 	const FISHGROUP_REMORAID
 	const FISHGROUP_QWILFISH_NO_SWARM
+	const FISHGROUP_HORSEA
+	const FISHGROUP_HORSEA_SWARM
 
 ; connection directions (see data/maps/data.asm)
 	const_def

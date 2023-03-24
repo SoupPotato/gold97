@@ -86,4 +86,116 @@ SwarmGrassWildMonsAlt:
 	db 8, NIDORAN_F
 	db 8, GASTLY
 
+; Houndour swarm
+	map_id ROUTE_103
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 14, SPEAROW
+	db 14, HOUNDOUR
+	db 12, GRIMBY
+	db 12, HOUNDOUR
+	db 13, SANDSHREW
+	db 12, ABRA
+	db 12, ABRA
+	; day
+	db 14, SPEAROW
+	db 14, HOUNDOUR
+	db 12, GRIMBY
+	db 12, HOUNDOUR
+	db 13, SANDSHREW
+	db 12, ABRA
+	db 12, ABRA
+	; nite
+	db 14, ABRA
+	db 14, HOUNDOUR
+	db 12, GRIMBY
+	db 12, HOUNDOUR
+	db 14, DROWZEE
+	db 12, HOOTHOOT
+	db 12, HOOTHOOT
+
+; Rinring swarm
+	map_id ROUTE_120
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 12, RINRING
+	db 13, BELLSPROUT
+	db 13, KOTORA
+	db 14, PETICORN
+	db 12, PHANPY
+	db 14, EXEGGCUTE
+	db 14, KOTORA
+	; day
+	db 12, RINRING
+	db 13, BELLSPROUT
+	db 13, RINRING
+	db 14, PETICORN
+	db 12, PHANPY
+	db 14, EXEGGCUTE
+	db 14, KOTORA
+	; nite
+	db 12, RINRING
+	db 13, RINRING
+	db 13, RINRING
+	db 14, BELLSPROUT
+	db 12, ZUBAT
+	db 14, EXEGGCUTE
+	db 14, KOTORA
+
+; Onix swarm
+	map_id BOULDER_MINES_1F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 12, ONIX
+	db 12, SANDSHREW
+	db 12, ONIX
+	db 14, KOFFING
+	db 13, MACHOP
+	db 12, ZUBAT
+	db 14, GEODUDE
+	; day
+	db 12, ONIX
+	db 12, SANDSHREW
+	db 12, ONIX
+	db 14, KOFFING
+	db 13, MACHOP
+	db 12, ZUBAT
+	db 14, GEODUDE
+	; nite
+	db 12, ONIX
+	db 12, SANDSHREW
+	db 12, ONIX
+	db 14, KOFFING
+	db 13, MACHOP
+	db 12, ZUBAT
+	db 14, GEODUDE
+
+; Voltorb swarm
+	map_id ROUTE_119
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 18, VOLTORB
+	db 19, BELLSPROUT
+	db 17, VOLTORB
+	db 18, WEEPINBELL
+	db 19, SKIPLOOM
+	db 20, FEAROW
+	db 22, EKANS
+	; day
+	db 18, VOLTORB
+	db 19, BELLSPROUT
+	db 17, VOLTORB
+	db 18, WEEPINBELL
+	db 19, SKIPLOOM
+	db 20, FEAROW
+	db 22, EKANS
+	; nite
+	db 18, VOLTORB
+	db 19, BELLSPROUT
+	db 17, VOLTORB
+	db 18, WEEPINBELL
+	db 19, CLEFAIRY
+	db 20, MEOWTH
+	db 22, EKANS
+
 	db -1 ; end

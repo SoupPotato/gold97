@@ -20,16 +20,21 @@ FishGroups:
 	fishgroup 50 percent + 1, .Qwilfish_Old,         .Qwilfish_Good,         .Qwilfish_Super
 	fishgroup 50 percent + 1, .Remoraid_Old,         .Remoraid_Good,         .Remoraid_Super
 	fishgroup 50 percent + 1, .Qwilfish_NoSwarm_Old, .Qwilfish_NoSwarm_Good, .Qwilfish_NoSwarm_Super
+	fishgroup 50 percent + 1, .Horsea_Old,           .Horsea_Good,           .Horsea_Super
+	fishgroup 50 percent + 1, .Horsea_Swarm_Old,     .Horsea_Swarm_Good,     .Horsea_Swarm_Super
 
+.Horsea_Old:
 .Shore_Old:
 	db  70 percent + 1, MAGIKARP,   10
 	db  85 percent + 1, MAGIKARP,   10
 	db 100 percent,     KRABBY,     10
+.Horsea_Good:
 .Shore_Good:
 	db  35 percent,     MAGIKARP,   20
 	db  70 percent,     KRABBY,     20
 	db  90 percent + 1, KRABBY,     20
 	db 100 percent,     time_group 0
+.Horsea_Super:
 .Shore_Super:
 	db  40 percent,     KRABBY,     40
 	db  70 percent,     time_group 1
@@ -203,6 +208,21 @@ FishGroups:
 	db  70 percent,     time_group 13
 	db  90 percent + 1, REMORAID,   40
 	db 100 percent,     REMORAID,   40
+
+.Horsea_Swarm_Old:
+	db  70 percent + 1, MAGIKARP,   10
+	db  85 percent + 1, MAGIKARP,   10
+	db 100 percent,     HORSEA,     10
+.Horsea_Swarm_Good:
+	db  35 percent,     MAGIKARP,   20
+	db  70 percent,     HORSEA,     20
+	db  90 percent + 1, HORSEA,     20
+	db 100 percent,     time_group 0
+.Horsea_Swarm_Super:
+	db  40 percent,     HORSEA,     40
+	db  70 percent,     HORSEA,     40
+	db  90 percent + 1, HORSEA,     40
+	db 100 percent,     KINGLER,    40
 
 TimeFishGroups:
 	;  day              nite

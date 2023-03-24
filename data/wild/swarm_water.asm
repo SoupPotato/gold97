@@ -2,11 +2,11 @@
 
 SwarmWaterWildMons:
 
-;	; qwilfish
-;	map_id ROUTE_32
-;	db 6 percent ; encounter rate
-;	db 15, QWILFISH
-;	db 20, QWILFISH
-;	db 20, TENTACRUEL
+; Horsea swarm
+	map_id ROUTE_119
+	db 6 percent ; encounter rate
+	db 15, HORSEA
+	db 18, CORASUN
+	db 20, HORSEA
 
 	db -1 ; end

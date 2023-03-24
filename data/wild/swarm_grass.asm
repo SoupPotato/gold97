@@ -78,20 +78,96 @@ SwarmGrassWildMons:
 	db 8, NIDORAN_F
 	db 10, TANGTRIP
 	; nite
-	db 8, DITTO
-	db 8, DITTO
-	db 8, DITTO
-	db 9, DITTO
-	db 8, DITTO
-	db 8, DITTO
-	db 10, DITTO
+	db 8, ODDISH
+	db 8, TANGTRIP
+	db 8, HOOTHOOT
+	db 9, TANGTRIP
+	db 8, NIDORAN_M
+	db 8, NIDORAN_F
+	db 10, GASTLY
 
-;	db 8, ODDISH
-;	db 8, TANGTRIP
-;	db 8, HOOTHOOT
-;	db 9, TANGTRIP
-;	db 8, NIDORAN_M
-;	db 8, NIDORAN_F
-;	db 10, GASTLY
+; Drowzee swarm
+	map_id ROUTE_103
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 14, SPEAROW
+	db 14, DROWZEE
+	db 12, GRIMBY
+	db 12, DROWZEE
+	db 13, SANDSHREW
+	db 12, ABRA
+	db 12, ABRA
+	; day
+	db 14, SPEAROW
+	db 14, DROWZEE
+	db 12, GRIMBY
+	db 12, DROWZEE
+	db 13, SANDSHREW
+	db 12, ABRA
+	db 12, ABRA
+	; nite
+	db 14, ABRA
+	db 14, DROWZEE
+	db 12, GRIMBY
+	db 12, DROWZEE
+	db 14, HOOTHOOT
+	db 12, HOUNDOUR
+	db 12, HOUNDOUR
+
+; Kotora swarm
+	map_id ROUTE_120
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 12, KOTORA
+	db 13, BELLSPROUT
+	db 13, KOTORA
+	db 14, PETICORN
+	db 12, PHANPY
+	db 14, EXEGGCUTE
+	db 14, MAREEP
+	; day
+	db 12, KOTORA
+	db 13, BELLSPROUT
+	db 13, KOTORA
+	db 14, PETICORN
+	db 12, PHANPY
+	db 14, EXEGGCUTE
+	db 14, MAREEP
+	; nite
+	db 12, KOTORA
+	db 13, RINRING
+	db 13, KOTORA
+	db 14, BELLSPROUT
+	db 12, ZUBAT
+	db 14, EXEGGCUTE
+	db 14, EKANS
+
+; Koffing swarm
+	map_id BOULDER_MINES_1F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 12, KOFFING
+	db 12, SANDSHREW
+	db 12, KOFFING
+	db 14, ZUBAT
+	db 13, MACHOP
+	db 12, GEODUDE
+	db 14, ONIX
+	; day
+	db 12, KOFFING
+	db 12, SANDSHREW
+	db 12, KOFFING
+	db 14, ZUBAT
+	db 13, MACHOP
+	db 12, GEODUDE
+	db 14, ONIX
+	; nite
+	db 12, KOFFING
+	db 12, SANDSHREW
+	db 12, KOFFING
+	db 14, ZUBAT
+	db 13, MACHOP
+	db 12, GEODUDE
+	db 14, ONIX
 
 	db -1 ; end

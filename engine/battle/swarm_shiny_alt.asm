@@ -1,23 +1,23 @@
 GenerateAltSwarmShiny:
-	ld a, [wMapGroup]
+	ld a, [wSwarmMapGroup]
 	ld b, a
-	ld a, [wMapNumber]
+	ld a, [wSwarmMapNumber]
 	ld c, a
 	call GetWorldMapLocation
 	cp ROUTE_101
 	jp z, .hoppip
 	cp BRASS_TOWER
 	jp z, .kurstraw
-	cp ROUTE_103
+	cp ROUTE_102
 	jp z, .chix
-;	cp MT_MORTAR
-;	jp z, .marill
-;	cp ROUTE_38
-;	jp z, .magnemite
-;	cp OLIVINE_CITY
-;	jp z, .chinchou
-;	cp ROUTE_44
-;	jp z, .remoraid
+	cp ROUTE_103
+	jp z, .houndour
+	cp ROUTE_120
+	jp z, .rinring
+	cp BOULDER_MINES
+	jp z, .onix
+	cp ROUTE_119
+	jp z, .voltorb
 ;	cp ROUTE_46
 ;	jp z, .phanpy
 ;	cp ROUTE_30
@@ -108,22 +108,22 @@ GenerateAltSwarmShiny:
 	ld a, [wCurPartySpecies]
 	cp CHIX
 	jp .next
-;.marill
-;	ld a, [wCurPartySpecies]
-;	cp MARILL
-;	jp .next
-;.magnemite
-;	ld a, [wCurPartySpecies]
-;	cp MAGNEMITE
-;	jp .next
-;.chinchou
-;	ld a, [wCurPartySpecies]
-;	cp CHINCHOU
-;	jp .next
-;.remoraid
-;	ld a, [wCurPartySpecies]
-;	cp REMORAID
-;	jp .next
+.houndour
+	ld a, [wCurPartySpecies]
+	cp HOUNDOUR
+	jp .next
+.rinring
+	ld a, [wCurPartySpecies]
+	cp RINRING
+	jp .next
+.onix
+	ld a, [wCurPartySpecies]
+	cp ONIX
+	jp .next
+.voltorb
+	ld a, [wCurPartySpecies]
+	cp VOLTORB
+	jp .next
 ;.phanpy
 ;	ld a, [wCurPartySpecies]
 ;	cp PHANPY
