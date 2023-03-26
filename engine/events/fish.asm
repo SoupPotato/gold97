@@ -95,6 +95,14 @@ GetFishGroupIndex:
 	ld a, d
 	cp FISHGROUP_HORSEA
 	jr z, .horsea
+	cp FISHGROUP_GUPGOLD
+	jr z, .gupgold
+	cp FISHGROUP_CORASUN
+	jr z, .corasun
+	cp FISHGROUP_QWILFISH
+	jr z, .qwilfish
+	cp FISHGROUP_REMORAID
+	jr z, .remoraid
 
 .done
 	dec d
@@ -107,6 +115,34 @@ GetFishGroupIndex:
 	cp FISHSWARM_HORSEA
 	jr nz, .done
 	ld d, FISHGROUP_HORSEA_SWARM
+	jr .done
+
+.gupgold
+	ld a, [wFishingSwarmFlag]
+	cp FISHSWARM_GUPGOLD
+	jr nz, .done
+	ld d, FISHGROUP_GUPGOLD_SWARM
+	jr .done
+
+.corasun
+	ld a, [wFishingSwarmFlag]
+	cp FISHSWARM_CORASUN
+	jr nz, .done
+	ld d, FISHGROUP_CORASUN_SWARM
+	jr .done
+
+.qwilfish
+	ld a, [wFishingSwarmFlag]
+	cp FISHSWARM_QWILFISH
+	jr nz, .done
+	ld d, FISHGROUP_QWILFISH_SWARM
+	jr .done
+
+.remoraid
+	ld a, [wFishingSwarmFlag]
+	cp FISHSWARM_REMORAID
+	jr nz, .done
+	ld d, FISHGROUP_REMORAID_SWARM
 	jr .done
 
 INCLUDE "data/wild/fish.asm"

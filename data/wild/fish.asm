@@ -19,21 +19,27 @@ FishGroups:
 	fishgroup 50 percent + 1, .WhirlIslands_Old,     .WhirlIslands_Good,     .WhirlIslands_Super
 	fishgroup 50 percent + 1, .Qwilfish_Old,         .Qwilfish_Good,         .Qwilfish_Super
 	fishgroup 50 percent + 1, .Remoraid_Old,         .Remoraid_Good,         .Remoraid_Super
-	fishgroup 50 percent + 1, .Qwilfish_NoSwarm_Old, .Qwilfish_NoSwarm_Good, .Qwilfish_NoSwarm_Super
 	fishgroup 50 percent + 1, .Horsea_Old,           .Horsea_Good,           .Horsea_Super
 	fishgroup 50 percent + 1, .Horsea_Swarm_Old,     .Horsea_Swarm_Good,     .Horsea_Swarm_Super
+	fishgroup 50 percent + 1, .Gupgold_Old,          .Gupgold_Good,          .Gupgold_Super
+	fishgroup 50 percent + 1, .Gupgold_Swarm_Old,    .Gupgold_Swarm_Good,    .Gupgold_Swarm_Super
+	fishgroup 50 percent + 1, .Corasun_Old,          .Corasun_Good,          .Corasun_Super
+	fishgroup 50 percent + 1, .Corasun_Swarm_Old,    .Corasun_Swarm_Good,    .Corasun_Swarm_Super
 
+.Corasun_Old:
 .Horsea_Old:
 .Shore_Old:
 	db  70 percent + 1, MAGIKARP,   10
 	db  85 percent + 1, MAGIKARP,   10
 	db 100 percent,     KRABBY,     10
+.Corasun_Good:
 .Horsea_Good:
 .Shore_Good:
 	db  35 percent,     MAGIKARP,   20
 	db  70 percent,     KRABBY,     20
 	db  90 percent + 1, KRABBY,     20
 	db 100 percent,     time_group 0
+.Corasun_Super:
 .Horsea_Super:
 .Shore_Super:
 	db  40 percent,     KRABBY,     40
@@ -41,15 +47,18 @@ FishGroups:
 	db  90 percent + 1, KRABBY,     40
 	db 100 percent,     KINGLER,    40
 
+.Gupgold_Old:
 .Ocean_Old:
 	db  70 percent + 1, MAGIKARP,   10
 	db  85 percent + 1, MAGIKARP,   10
 	db 100 percent,     TENTACOOL,  10
+.Gupgold_Good:
 .Ocean_Good:
 	db  35 percent,     MAGIKARP,   20
 	db  70 percent,     TENTACOOL,  20
 	db  90 percent + 1, CORASUN,   20
 	db 100 percent,     time_group 2
+.Gupgold_Super:
 .Ocean_Super:
 	db  40 percent,     CORASUN,   40
 	db  70 percent,     time_group 3
@@ -100,21 +109,6 @@ FishGroups:
 	db  70 percent,     time_group 9
 	db  90 percent + 1, MAGIKARP,   40
 	db 100 percent,     DRAGONAIR,  40
-
-.Qwilfish_Swarm_Old:
-	db  70 percent + 1, MAGIKARP,   5
-	db  85 percent + 1, MAGIKARP,   5
-	db 100 percent,     QWILFISH,   5
-.Qwilfish_Swarm_Good:
-	db  35 percent,     MAGIKARP,   20
-	db  70 percent,     QWILFISH,   20
-	db  90 percent + 1, QWILFISH,   20
-	db 100 percent,     time_group 10
-.Qwilfish_Swarm_Super
-	db  40 percent,     QWILFISH,   40
-	db  70 percent,     time_group 11
-	db  90 percent + 1, QWILFISH,   40
-	db 100 percent,     QWILFISH,   40
 
 .Remoraid_Swarm_Old:
 	db  70 percent + 1, MAGIKARP,   10
@@ -176,23 +170,20 @@ FishGroups:
 	db  90 percent + 1, KINGLER,    40
 	db 100 percent,     SEADRA,     40
 
-.Qwilfish_NoSwarm_Old:
-.Qwilfish_Old:
+.Qwilfish_Swarm_Old:
 	db  70 percent + 1, MAGIKARP,   10
 	db  85 percent + 1, MAGIKARP,   10
-	db 100 percent,     TENTACOOL,  10
-.Qwilfish_NoSwarm_Good:
-.Qwilfish_Good:
+	db 100 percent,     QWILFISH,   10
+.Qwilfish_Swarm_Good:
 	db  35 percent,     MAGIKARP,   20
-	db  70 percent,     TENTACOOL,  20
-	db  90 percent + 1, TENTACOOL,  20
-	db 100 percent,     QWILFISH,   20
-.Qwilfish_NoSwarm_Super:
-.Qwilfish_Super:
-	db  40 percent,     TENTACOOL,  40
-	db  70 percent,     time_group  21
-	db  90 percent + 1, MAGIKARP,   40
-	db 100 percent,     QWILFISH,   40
+	db  70 percent,     QWILFISH,   20
+	db  90 percent + 1, QWILFISH,   20
+	db 100 percent,     time_group 0
+.Qwilfish_Swarm_Super:
+	db  40 percent,     QWILFISH,   40
+	db  70 percent,     QWILFISH,   40
+	db  90 percent + 1, QWILFISH,   40
+	db 100 percent,     MAGIKARP,   40
 
 .Remoraid_Old:
 	db  70 percent + 1, MAGIKARP,   10
@@ -223,6 +214,51 @@ FishGroups:
 	db  70 percent,     HORSEA,     40
 	db  90 percent + 1, HORSEA,     40
 	db 100 percent,     KINGLER,    40
+
+.Gupgold_Swarm_Old:
+	db  70 percent + 1, MAGIKARP,   10
+	db  85 percent + 1, MAGIKARP,   10
+	db 100 percent,     GUPGOLD,    10
+.Gupgold_Swarm_Good:
+	db  35 percent,     MAGIKARP,   20
+	db  70 percent,     GUPGOLD,    20
+	db  90 percent + 1, GUPGOLD,    20
+	db 100 percent,     time_group  2
+.Gupgold_Swarm_Super:
+	db  40 percent,     GUPGOLD,    40
+	db  70 percent,     GUPGOLD,    40
+	db  90 percent + 1, GUPGOLD,    40
+	db 100 percent,     ANCHORAGE,  40
+
+.Corasun_Swarm_Old:
+	db  70 percent + 1, MAGIKARP,   10
+	db  85 percent + 1, MAGIKARP,   10
+	db 100 percent,     CORASUN,    10
+.Corasun_Swarm_Good:
+	db  35 percent,     MAGIKARP,   20
+	db  70 percent,     CORASUN,    20
+	db  90 percent + 1, CORASUN,    20
+	db 100 percent,     time_group 0
+.Corasun_Swarm_Super:
+	db  40 percent,     CORASUN,    40
+	db  70 percent,     CORASUN,    40
+	db  90 percent + 1, CORASUN,    40
+	db 100 percent,     KINGLER,    40
+
+.Qwilfish_Old:
+	db  70 percent + 1, MAGIKARP,   10
+	db  85 percent + 1, MAGIKARP,   10
+	db 100 percent,     TENTACOOL,  10
+.Qwilfish_Good:
+	db  35 percent,     MAGIKARP,   20
+	db  70 percent,     TENTACOOL,  20
+	db  90 percent + 1, TENTACOOL,  20
+	db 100 percent,     QWILFISH,   20
+.Qwilfish_Super:
+	db  40 percent,     TENTACOOL,  40
+	db  70 percent,     time_group  21
+	db  90 percent + 1, MAGIKARP,   40
+	db 100 percent,     QWILFISH,   40
 
 TimeFishGroups:
 	;  day              nite

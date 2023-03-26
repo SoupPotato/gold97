@@ -7,20 +7,20 @@ ENDM
 Landmarks:
 ; entries correspond to constants/landmark_constants.asm
 	dbbw       0,   0, SpecialMapName
-	landmark  92, 116, SilentTownName
-	landmark  84, 116, Route101Name
-	landmark  76, 116, SilentHillsName
-	landmark  76, 100, PagotaCityName
-	landmark  75,  99, BrassTowerName
-	landmark  68, 100, Route102Name
+	landmark  100, 116, SilentTownName
+	landmark  92, 116, Route101Name
+	landmark  84, 116, SilentHillsName
+	landmark  84, 100, PagotaCityName
+	landmark  83,  99, BrassTowerName
+	landmark  72, 100, Route102Name
 	landmark  60, 100, WestportCityName
 	landmark  59,  99, RadioTowerName
 	landmark  60,  84, Route103Name
 	landmark  60,  68, BirdonTownName
 	landmark  59,  67, SlowpokeWellName
 	landmark  60,  60, Route116Name
-	landmark  56,  60, Route117Name
-	landmark  52,  60, EndonCaveName
+	landmark  52,  60, Route117Name
+	landmark  52,  52, EndonCaveName
 	landmark  44,  60, SanskritTownName
 	landmark  44,  52, RuinsOfAlphName
 	landmark  50,  48, TidalGrottoName
@@ -57,10 +57,10 @@ Landmarks:
 	landmark 132, 116, Route114Name
 	landmark 124, 116, KantoRegionName
 	landmark 108, 116, Route115Name
-	landmark  92, 108, CrownPassName
-	landmark  92, 100, CrownCityName
+	landmark 100, 108, CrownPassName
+	landmark 100, 100, CrownCityName
 	landmark  96,  96, VictoryRoadName
-	landmark  92,  92, NihonLeagueName
+	landmark 100,  92, NihonLeagueName
 	landmark  20, 124, RainbowIslandName
 	landmark  52, 124, TropicalIslandName
 	landmark  36, 112, ForkedStraitName

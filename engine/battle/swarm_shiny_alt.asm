@@ -18,42 +18,42 @@ GenerateAltSwarmShiny:
 	jp z, .onix
 	cp ROUTE_119
 	jp z, .voltorb
-;	cp ROUTE_46
-;	jp z, .phanpy
-;	cp ROUTE_30
-;	jp z, .caterpie
-;	cp ROUTE_31
-;	jp z, .spinarak
-;	cp ILEX_FOREST
-;	jp z, .paras
-;	cp ROUTE_29
-;	jp z, .hoppip
-;	cp ROUTE_34
-;	jp z, .ditto
-;	cp NATIONAL_PARK
-;	jp z, .sunkern
-;	cp ROUTE_36
-;	jp z, .vulpix
-;	cp ROUTE_39
-;	jp z, .miltank
-;	cp UNION_CAVE
-;	jp z, .sandshrew
-;	cp ROUTE_33
-;	jp z, .ekans
-;	cp RUINS_OF_ALPH
-;	jp z, .smeargle
-;	cp ROUTE_41
-;	jp z, .horsea
-;	cp ROUTE_42
-;	jp z, .mankey
-;	cp ROUTE_47
-;	jp z, .ponyta
-;	cp ROUTE_48
-;	jp z, .diglett
-;	cp DRAGONS_DEN
-;	jp z, .dratini
-;	cp ICE_PATH
-;	jp z, .swinub
+	cp BOARDWALK
+	jp z, .marill
+	cp ROUTE_118
+	jp z, .bellsprout
+	cp MAGMA_SHAFT
+	jp z, .magmar
+	cp RUINS_OF_ALPH
+	jp z, .smeargle
+	cp ENDON_CAVE
+	jp z, .quagsire
+	cp ROUTE_116
+	jp z, .cubone
+	cp SLOWPOKE_WELL
+	jp z, .turban
+	cp ROUTE_104
+	jp z, .twinz
+	cp ROUTE_105
+	jp z, .murkrow
+	cp JADE_FOREST
+	jp z, .aipom
+	cp ROUTE_106
+	jp z, .eevee
+	cp AMPARE_CAVERN
+	jp z, .electabuzz
+	cp ROUTE_108
+	jp z, .pinsir
+	cp ROUTE_109
+	jp z, .scyther
+	cp ROUTE_110
+	jp z, .sneasel
+	cp DEEPWATER_PASSAGE
+	jp z, .jynx
+	cp ROUTE_112
+	jp z, .skarmory
+	cp NATIONAL_PARK
+	jp z, .togepi
 ;	cp ROUTE_45
 ;	jp z, .gligar
 ;	cp VICTORY_ROAD
@@ -124,77 +124,78 @@ GenerateAltSwarmShiny:
 	ld a, [wCurPartySpecies]
 	cp VOLTORB
 	jp .next
-;.phanpy
-;	ld a, [wCurPartySpecies]
-;	cp PHANPY
-;	jp .next
-;.caterpie
-;	ld a, [wCurPartySpecies]
-;	cp CATERPIE
-;	jp .next
-;.spinarak
-;	ld a, [wCurPartySpecies]
-;	cp SPINARAK
-;	jp .next
-;.paras
-;	ld a, [wCurPartySpecies]
-;	cp PARAS
-;	jp .next
-;.hoppip
-;	ld a, [wCurPartySpecies]
-;	cp HOPPIP
-;	jp .next
-;.ditto
-;	ld a, [wCurPartySpecies]
-;	cp DITTO
-;	jp .next
-;.sunkern
-;	ld a, [wCurPartySpecies]
-;	cp SUNKERN
-;	jp .next
-;.vulpix
-;	ld a, [wCurPartySpecies]
-;	cp VULPIX
-;	jp .next
-;.miltank
-;	ld a, [wCurPartySpecies]
-;	cp MILTANK
-;.sandshrew
-;	ld a, [wCurPartySpecies]
-;	cp SANDSHREW
-;	jp .next
-;.ekans
-;	ld a, [wCurPartySpecies]
-;	cp EKANS
-;	jp .next
-;.smeargle
-;	ld a, [wCurPartySpecies]
-;	cp SMEARGLE
-;	jp .next
-;.horsea
-;	ld a, [wCurPartySpecies]
-;	cp HORSEA
-;	jp .next
-;.mankey
-;	ld a, [wCurPartySpecies]
-;	cp MANKEY
-;	jp .next
-;.ponyta
-;	ld a, [wCurPartySpecies]
-;	cp PONYTA
-;	jp .next
-;.diglett
-;	ld a, [wCurPartySpecies]
-;	cp DIGLETT
-;	jp .next
-;.dratini
-;	ld a, [wCurPartySpecies]
-;	cp DRATINI
-;	jp .next
-;.swinub
-;	ld a, [wCurPartySpecies]
-;	cp SWINUB
-;	jp .next
+.marill
+	ld a, [wCurPartySpecies]
+	cp MARILL
+	jp .next
+.bellsprout
+	ld a, [wCurPartySpecies]
+	cp BELLSPROUT
+	jp .next
+.magmar
+	ld a, [wCurPartySpecies]
+	cp MAGMAR
+	jp .next
+.smeargle
+	ld a, [wCurPartySpecies]
+	cp SMEARGLE
+	jp .next
+.quagsire
+	ld a, [wCurPartySpecies]
+	cp QUAGSIRE
+	jp .next
+.cubone
+	ld a, [wCurPartySpecies]
+	cp CUBONE
+	jp .next
+.turban
+	ld a, [wCurPartySpecies]
+	cp TURBAN
+	jp .next
+.twinz
+	ld a, [wCurPartySpecies]
+	cp TWINZ
+	jp .next
+.murkrow
+	ld a, [wCurPartySpecies]
+	cp MURKROW
+	jp .next
+.aipom
+	ld a, [wCurPartySpecies]
+	cp AIPOM
+	jp .next
+.eevee
+	ld a, [wCurPartySpecies]
+	cp EEVEE
+	jp .next
+.electabuzz
+	ld a, [wCurPartySpecies]
+	cp ELECTABUZZ
+	jp .next
+.pinsir
+	ld a, [wCurPartySpecies]
+	cp PINSIR
+	jp .next
+.scyther
+	ld a, [wCurPartySpecies]
+	cp SCYTHER
+	jp .next
+.sneasel
+	ld a, [wCurPartySpecies]
+	cp SNEASEL
+	jp .next
+.jynx
+	ld a, [wCurPartySpecies]
+	cp JYNX
+	jp .next
+.skarmory
+	ld a, [wCurPartySpecies]
+	cp SKARMORY
+	jp .next
+.togepi
+	ld a, [wCurPartySpecies]
+	cp TOGEPI
+	jp .next
 ;.gligar
 ;	ld a, [wCurPartySpecies]
 ;	cp GLIGAR
@@ -279,14 +280,14 @@ GenerateAltSwarmShiny:
 	;fallthrough
 .rollshiny
 	call Random
-	cp 255 ; adjust to desired percentage
+	cp 7 ; adjust to desired percentage
 	jr nc, .trynext
 	ld b, ATKDEFDV_SHINY
 	ld c, SPDSPCDV_SHINY
 	jr .UpdateDVs
 .trynext:
 	call Random
-	cp 255 ; adjust to desired percentage
+	cp 7 ; adjust to desired percentage
 	jr nc, .skipshine
 	ld b, ATKDEFDV_SHINYF
 	ld c, SPDSPCDV_SHINY

@@ -67,9 +67,9 @@ JohtoWaterWildMons:
 	
 	map_id BOARDWALK
 	db 6 percent ; encounter rate
-	db 18, GOLDEEN
+	db 15, GUPGOLD
 	db 15, MARILL
-	db 18, SEAKING
+	db 18, GOLDEEN
 	
 	map_id SLOWPOKE_WELL_B1F
 	db 2 percent ; encounter rate

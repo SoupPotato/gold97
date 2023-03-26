@@ -213,7 +213,7 @@ ENDM
 	connection east, ForkedStraitWestExit, FORKED_STRAIT_WEST_EXIT, 22 ; new
 
 	map_attributes Route116, ROUTE_116, $65, WEST
-	connection west, Route117, ROUTE_117, 0
+	connection west, Route117, ROUTE_117, -1
 
 	map_attributes KobanIsland, KOBAN_ISLAND, $07, SOUTH
 	connection south, Route107, ROUTE_107, 0
@@ -269,7 +269,7 @@ ENDM
 
 	map_attributes Route117, ROUTE_117, $65, WEST | EAST
 	connection west, SanskritTown, SANSKRIT_TOWN, 0
-	connection east, Route116, ROUTE_116, 0
+	connection east, Route116, ROUTE_116, 1
 
 	map_attributes Route118, ROUTE_118, $07, EAST
 	connection east, SanskritTown, SANSKRIT_TOWN, 0

@@ -53,7 +53,7 @@ ENDM
 	map_const SANSKRIT_COIN_CASE_SPEECH_HOUSE,              5,  4 ;  1
 	map_const SANSKRIT_POKECENTER_1F,                       8,  4 ;  2
 	map_const SANSKRIT_TOWN,                               10,  9 ;  3
-	map_const ROUTE_116,                                   10, 18 ;  4
+	map_const ROUTE_116,                                    8, 17 ;  4
 	map_const ROUTE_117,                                   30,  9 ;  5
 	map_const RUINS_OF_ALPH_OUTSIDE,                       10, 18 ;  6
 	map_const BOARDWALK,                                   10, 27 ;  7

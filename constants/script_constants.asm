@@ -227,8 +227,12 @@ NUM_FRUIT_TREES EQU const_value + -1
 
 ; ActivateFishingSwarm writebyte arguments
 	const_def
-	const FISHSWARM_NONE     ; 0
-	const FISHSWARM_HORSEA   ; 1
+	const FISHSWARM_NONE      ; 0
+	const FISHSWARM_HORSEA    ; 1
+	const FISHSWARM_GUPGOLD   ; 2
+	const FISHSWARM_CORASUN   ; 3
+	const FISHSWARM_QWILFISH  ; 4
+	const FISHSWARM_REMORAID  ; 5
 
 
 ; SpecialGameboyCheck return values
