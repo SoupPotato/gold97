@@ -705,7 +705,6 @@ VenomothEvosAttacks:
 	db 1, DISABLE
 	db 1, FORESIGHT
 	db 1, SUPERSONIC
-	db 6, SUPERSONIC
 	db 12, CONFUSION
 	db 17, POISONPOWDER
 	db 22, LEECH_LIFE
@@ -799,9 +798,6 @@ GolduckEvosAttacks:
 	db 1, TAIL_WHIP
 	db 1, WATER_GUN
 	db 1, DISABLE
-	db 5, TAIL_WHIP
-	db 9, WATER_GUN
-	db 14, DISABLE
 	db 18, CONFUSION
 	db 22, FURY_SWIPES
 	db 27, SCREECH
@@ -834,7 +830,6 @@ PrimeapeEvosAttacks:
 	db 1, LEER
 	db 1, LOW_KICK
 	db 1, FOCUS_ENERGY
-	db 6, FOCUS_ENERGY
 	db 11, FURY_SWIPES
 	db 16, KARATE_CHOP
 	db 22, SEISMIC_TOSS
@@ -962,7 +957,6 @@ MachampEvosAttacks:
 	db 1, LOW_KICK
 	db 1, LEER
 	db 1, FOCUS_ENERGY
-	db 8, FOCUS_ENERGY
 	db 15, KARATE_CHOP
 	db 19, SEISMIC_TOSS
 	db 25, FORESIGHT
@@ -1162,7 +1156,6 @@ MagnetonEvosAttacks:
 	db 1, TACKLE
 	db 1, THUNDERSHOCK
 	db 1, SUPERSONIC
-	db 10, SUPERSONIC
 	db 14, SONICBOOM
 	db 19, THUNDER_WAVE
 	db 23, SPARK
@@ -1245,8 +1238,6 @@ DewgongEvosAttacks:
 	db 1, GROWL
 	db 1, ENCORE
 	db 1, ICY_WIND
-	db 8, ENCORE
-	db 12, ICY_WIND
 	db 16, REST
 	db 20, AURORA_BEAM
 	db 26, WATERFALL
@@ -1276,8 +1267,8 @@ MukEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, POISON_GAS
 	db 1, POUND
-	db 7, HARDEN
-	db 11, MUD_SLAP
+	db 1, HARDEN
+	db 1, MUD_SLAP
 	db 15, DISABLE
 	db 21, SLUDGE
 	db 25, MINIMIZE
@@ -1339,7 +1330,7 @@ GengarEvosAttacks:
 	db 1, HYPNOSIS
 	db 1, LICK
 	db 1, SMOG
-	db 8, SPITE
+	db 1, SPITE
 	db 12, MEAN_LOOK
 	db 16, CURSE
 	db 20, NIGHT_SHADE
@@ -1537,30 +1528,39 @@ MarowakEvosAttacks:
 HitmonleeEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, DOUBLE_KICK
-	db 6, MEDITATE
-	db 11, ROLLING_KICK
-	db 16, JUMP_KICK
-	db 21, FOCUS_ENERGY
-	db 26, HI_JUMP_KICK
-	db 31, MIND_READER
-	db 36, FORESIGHT
-	db 41, ENDURE
-	db 46, MEGA_KICK
-	db 51, REVERSAL
+	db 1, FOCUS_ENERGY
+	db 1, FORESIGHT
+	db 1, PURSUIT
+	db 20, DOUBLE_KICK
+	db 24, MEDITATE
+	db 28, ROLLING_KICK
+	db 32, JUMP_KICK
+	db 36, LOW_KICK
+	db 40, ENDURE
+	db 44, MIND_READER
+	db 48, MEGA_KICK
+	db 52, HI_JUMP_KICK
+	db 56, REVERSAL
 	db 0 ; no more level-up moves
 
 HitmonchanEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, COMET_PUNCH
-	db 7, AGILITY
-	db 13, PURSUIT
-	db 26, THUNDERPUNCH
-	db 26, ICE_PUNCH
-	db 26, FIRE_PUNCH
-	db 32, MACH_PUNCH
-	db 38, MEGA_PUNCH
-	db 44, DETECT
-	db 50, COUNTER
+	db 1, MACH_PUNCH
+	db 1, FOCUS_ENERGY
+	db 1, FORESIGHT
+	db 1, PURSUIT
+	db 20, MACH_PUNCH
+	db 24, COMET_PUNCH
+	db 28, THUNDERPUNCH
+	db 28, ICE_PUNCH
+	db 28, FIRE_PUNCH
+	db 32, DETECT
+	db 36, AGILITY
+	db 40, MEGA_PUNCH
+	db 44, MIND_READER
+	db 48, COUNTER
+	db 52, DYNAMICPUNCH
+	db 56, REVERSAL
 	db 0 ; no more level-up moves
 
 LickitungEvosAttacks:
@@ -3525,19 +3525,27 @@ TyrogueEvosAttacks:
 	db EVOLVE_STAT, 20, ATK_EQ_DEF, HITMONTOP
 	db 0 ; no more evolutions
 	db 1, TACKLE
+	db 1, FOCUS_ENERGY
+	db 1, FORESIGHT
+	db 1, PURSUIT
 	db 0 ; no more level-up moves
 
 HitmontopEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, ROLLING_KICK
-	db 7, FOCUS_ENERGY
-	db 13, PURSUIT
-	db 19, QUICK_ATTACK
-	db 25, RAPID_SPIN
-	db 31, COUNTER
-	db 37, AGILITY
-	db 43, DETECT
-	db 49, TRIPLE_KICK
+	db 1, FOCUS_ENERGY
+	db 1, FORESIGHT
+	db 1, PURSUIT
+	db 20, ROLLING_KICK
+	db 24, QUICK_ATTACK
+	db 28, RAPID_SPIN
+	db 32, COUNTER
+	db 36, TRIPLE_KICK
+	db 40, FAINT_ATTACK
+	db 44, AGILITY
+	db 48, DIG
+	db 52, REVERSAL
+	db 56, DETECT
 	db 0 ; no more level-up moves
 
 SmoochumEvosAttacks:
