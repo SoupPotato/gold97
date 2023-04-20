@@ -221,6 +221,14 @@ Route102SilverScript:
 	writetext Route102RivalAfterText
 	waitbutton
 	closetext
+	turnobject ROUTE102_SILVER, UP
+	pause 20
+	showemote EMOTE_SHOCK, ROUTE102_SILVER, 15
+	turnobject ROUTE102_SILVER, DOWN
+	opentext
+	writetext Route102RivalRadioCardText
+	waitbutton
+	closetext
 	applymovement ROUTE102_SILVER, Route102RivalBattleExitMovement
 	playsound SFX_ENTER_DOOR
 	disappear ROUTE102_SILVER
@@ -356,9 +364,22 @@ Route102RivalAfterText:
 	text "Whew! It was good"
 	line "catching up with"
 	cont "you, <PLAY_G>!"
+	done
+
+Route102RivalRadioCardText:
+	text "Oh!"
+	line "I almost forgot!"
 	
-	para "I'm heading back"
-	line "into the city!"
+	para "Be sure to check"
+	line "out the JOPM"
+	cont "RADIO TOWER."
+	
+	para "I hear they are"
+	line "giving out free"
+	cont "RADIO CARDs!"
+	
+	para "Well, I'm heading"
+	line "back to the city!"
 	
 	para "See you around!"
 	done
