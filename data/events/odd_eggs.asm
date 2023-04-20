@@ -660,7 +660,7 @@ OddEgg2:
 
 	db TYROGUE
 	db NO_ITEM
-	db TACKLE, DIZZY_PUNCH, 0, 0
+	db FOCUS_ENERGY, FORESIGHT, PURSUIT, DIZZY_PUNCH
 	dw 02560 ; OT ID
 	dt 125 ; Exp
 	; Stat exp
@@ -686,7 +686,7 @@ OddEgg2:
 
 	db TYROGUE
 	db NO_ITEM
-	db TACKLE, DIZZY_PUNCH, 0, 0
+	db FOCUS_ENERGY, FORESIGHT, PURSUIT, DIZZY_PUNCH
 	dw 00256 ; OT ID
 	dt 125 ; Exp
 	; Stat exp
