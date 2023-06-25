@@ -62,9 +62,9 @@ ROMX $0f
 	"Battle Core"
 ROMX $10
 	"bank10"
+	"Evolutions and Attacks"
 ROMX $11
 	"bank11"
-	"Evolutions and Attacks"
 ROMX $12
 	"Crystal Features 1"
 ROMX $13
