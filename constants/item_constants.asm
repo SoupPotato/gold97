@@ -30,7 +30,7 @@
 	const FIRE_STONE   ; 16
 	const THUNDERSTONE ; 17
 	const WATER_STONE  ; 18
-	const COVENANT_ORB ; 19
+	const LINKING_CORD ; 19
 	const HP_UP        ; 1a
 	const PROTEIN      ; 1b
 	const IRON         ; 1c
@@ -222,7 +222,7 @@ ENDM
 	add_tm PSYCH_UP     ; c8
 	add_tm HIDDEN_POWER ; c9
 	add_tm SUNNY_DAY    ; ca
-	add_tm SWEET_SCENT  ; cb
+	add_tm PAY_DAY      ; cb
 	add_tm MEGAPHONE    ; cc
 	add_tm BLIZZARD     ; cd
 	add_tm HYPER_BEAM   ; ce

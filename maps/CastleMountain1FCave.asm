@@ -21,7 +21,7 @@ CastleMountainCaveBoulder1:
 	jumpstd strengthboulder
 
 CM1FCaveItemball:
-	itemball COVENANT_ORB
+	itemball LINKING_CORD
 
 CastleMountain1FCave_MapEvents:
 	db 0, 0 ; filler

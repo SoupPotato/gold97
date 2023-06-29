@@ -198,6 +198,31 @@ TrainerPicnickerTiffany:
 	closetext
 	end
 
+BoardwalkRinringGuyScript:
+	faceplayer
+	opentext
+	checkevent EVENT_GOT_TM12_PAY_DAY
+	iftrue .GotPayday
+	writetext BoardwalkRinringGuyText
+	buttonsound
+	verbosegiveitem TM_PAY_DAY
+	iffalse .NoRoom
+	setevent EVENT_GOT_TM12_PAY_DAY
+.GotPayday:
+	writetext BoardwalkRinringGuyPaydayText
+	waitbutton
+.NoRoom:
+	closetext
+	end
+
+BoardwalkRinringScript:
+	opentext
+	writetext BoardwalkRinringText
+	cry RINRING
+	waitbutton
+	closetext
+	end
+
 BoardwalkSign1:
 	jumptext BoardwalkSign1Text
 
@@ -464,6 +489,41 @@ UnknownText_0x1991cf:
 	text_start
 	done
 
+BoardwalkRinringGuyText:
+	text "I never have a"
+	line "dull moment at the"
+	cont "GAME CORNER."
+	
+	para "Any loss I get,"
+	line "can become a gain"
+	cont "in the long run…"
+	
+	para "Here, I'll share"
+	line "my secret with"
+	cont "with you!"
+	
+	para "…Don't tell!"
+	done
+
+BoardwalkRinringGuyPaydayText:
+	text "That's PAYDAY."
+	
+	para "You can use it to"
+	line "rack in cash when"
+	cont "you need it."
+	
+	para "But keep it a"
+	line "secret between us."
+	
+	para "You might run the"
+	line "GAME CORNER out of"
+	cont "buisness!"
+	done
+
+BoardwalkRinringText:
+	text "RINRING: Riririri!"
+	done
+
 Boardwalk_MapEvents:
 	db 0, 0 ; filler
 
@@ -484,7 +544,7 @@ Boardwalk_MapEvents:
 	bg_event  8, 24, BGEVENT_READ, BoardwalkSign2
 	bg_event 12, 40, BGEVENT_READ, BoardwalkTrainerTips
 
-	db 9 ; object events
+	db 11 ; object events
 	object_event 15, 16, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerFledglingHidalgo, -1
 	object_event  9, 32, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TrainerPokemaniacBrent, -1
 	object_event  8, 11, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerPokemaniacRon, -1
@@ -494,3 +554,5 @@ Boardwalk_MapEvents:
 	object_event 13, 24, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerInstructorCliff, -1
 	object_event  9, 24, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, MoveTutorScript, 0
 	object_event 14, 28, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, BoardwalkAmuletCoin, EVENT_BOARDWALK_AMULET_COIN
+	object_event  4, 28, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, BoardwalkRinringGuyScript, -1
+	object_event  5, 28, SPRITE_GROWLITHE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BoardwalkRinringScript, -1

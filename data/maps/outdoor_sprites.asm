@@ -317,6 +317,7 @@ SanskritGroupSprites:
 	db SPRITE_MONSTER
 	db SPRITE_SWIMMER_GUY
 	db SPRITE_BUG_CATCHER
+	db SPRITE_GROWLITHE
 	db 0 ;end
 
 BlueForestGroupSprites:

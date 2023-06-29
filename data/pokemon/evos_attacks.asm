@@ -646,19 +646,20 @@ GloomEvosAttacks:
 
 VileplumeEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, ABSORB
+	db 1, MEGA_DRAIN
 	db 1, SWEET_SCENT
 	db 1, STUN_SPORE
-	db 1, PETAL_DANCE
+	db 1, POISONPOWDER
+	db 50, PETAL_DANCE
+	db 60, SOLARBEAM
 	db 0 ; no more level-up moves
 
 ParasEvosAttacks:
 	db EVOLVE_LEVEL, 24, PARASECT
 	db 0 ; no more evolutions
 	db 1, SCRATCH
-	db 4, SLEEP_POWDER
 	db 6, STUN_SPORE
-	db 8, POISONPOWDER
+	db 6, POISONPOWDER
 	db 11, ABSORB
 	db 13, LEECH_LIFE
 	db 17, FURY_CUTTER
@@ -671,9 +672,8 @@ ParasEvosAttacks:
 ParasectEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SCRATCH
-	db 1, SLEEP_POWDER
-	db 6, STUN_SPORE
-	db 8, POISONPOWDER
+	db 1, STUN_SPORE
+	db 1, POISONPOWDER
 	db 11, ABSORB
 	db 13, LEECH_LIFE
 	db 17, FURY_CUTTER
@@ -918,7 +918,7 @@ AbraEvosAttacks:
 
 KadabraEvosAttacks:
 	db EVOLVE_TRADE, $ff, ALAKAZAM
-	db EVOLVE_ITEM, COVENANT_ORB, ALAKAZAM
+	db EVOLVE_ITEM, LINKING_CORD, ALAKAZAM
 AlakazamEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TELEPORT
@@ -951,7 +951,7 @@ MachopEvosAttacks:
 
 MachokeEvosAttacks:
 	db EVOLVE_TRADE, $ff, MACHAMP
-	db EVOLVE_ITEM, COVENANT_ORB, MACHAMP
+	db EVOLVE_ITEM, LINKING_CORD, MACHAMP
 MachampEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, LOW_KICK
@@ -1052,7 +1052,7 @@ GeodudeEvosAttacks:
 
 GravelerEvosAttacks:
 	db EVOLVE_TRADE, $ff, GOLEM
-	db EVOLVE_ITEM, COVENANT_ORB, GOLEM
+	db EVOLVE_ITEM, LINKING_CORD, GOLEM
 GolemEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
@@ -1324,7 +1324,7 @@ GastlyEvosAttacks:
 
 HaunterEvosAttacks:
 	db EVOLVE_TRADE, $ff, GENGAR
-	db EVOLVE_ITEM, COVENANT_ORB, GENGAR
+	db EVOLVE_ITEM, LINKING_CORD, GENGAR
 GengarEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, HYPNOSIS

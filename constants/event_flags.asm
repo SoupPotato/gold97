@@ -133,7 +133,7 @@
 	const EVENT_TOLD_ELM_ABOUT_TOGEPI_OVER_THE_PHONE
 	const EVENT_GOT_CLEAR_BELL
 	const EVENT_GOT_SILVER_WING
-	const EVENT_GOT_TM12_SWEET_SCENT
+	const EVENT_GOT_TM12_PAY_DAY
 	const EVENT_RELEASED_THE_BEASTS; used for 2nd rock check in new bark town /route 27
 	const EVENT_GOT_MASTER_BALL_FROM_OAK
 ; Johto hidden items

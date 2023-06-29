@@ -335,7 +335,7 @@ MartCeladon4F:
 	db LEAF_STONE
 	db MOON_STONE
 	db HEART_STONE
-	db COVENANT_ORB
+	db LINKING_CORD
 	db POISON_STONE
 	db -1 ; end
 

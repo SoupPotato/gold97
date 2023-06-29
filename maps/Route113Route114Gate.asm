@@ -12,21 +12,10 @@ Route113Route114Gate_MapScripts:
 Route113Route114GateTeacherScript:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_TM12_SWEET_SCENT
-	iftrue .GotSweetScent
 	writetext Route113Route114GateTeacherText
-	buttonsound
-	verbosegiveitem TM_SWEET_SCENT
-	iffalse .NoRoom
-	setevent EVENT_GOT_TM12_SWEET_SCENT
-.GotSweetScent:
-	writetext Route113Route114GateTeacher_GotSweetScent
 	waitbutton
-.NoRoom:
 	closetext
 	end
-
-
 
 Route113Route114GateButterfreeScript:
 	opentext
@@ -39,8 +28,6 @@ Route113Route114GateButterfreeScript:
 Route113Route114GateLassScript:
 	jumptextfaceplayer Route113Route114GateLassText
 
-
-
 Route113Route114GateTeacherText:
 	text "Isn't the air so"
 	line "fresh around here?"
@@ -51,18 +38,6 @@ Route113Route114GateTeacherText:
 	cont "sweet."
 	para "Did you know?"
 	done
-
-Route113Route114GateTeacher_GotSweetScent:
-	text "It's SWEET SCENT."
-
-	para "Use it wherever"
-	line "#MON appear."
-
-	para "#MON will be"
-	line "enticed by it."
-	done
-
-
 
 Route113Route114GateButterfreeText:
 	text "BUTTERFREE: Freeh!"

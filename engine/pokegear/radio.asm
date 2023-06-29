@@ -245,8 +245,6 @@ OaksPKMNTalkSwarm1:
 .generate_number
 	ld hl, wSwarmFlags
 	set SWARMFLAGS_SWARM_ACTIVE, [hl]
-	call .InJohto
-	jp nc, .generate_number_kanto
 	ld a, (SwarmLocationDataJohtoEnd - SwarmLocationDataJohto) / 5
 	call RandomRange ; genrate a random number between 0 and a
 	ld hl, SwarmLocationDataJohto
@@ -274,61 +272,9 @@ OaksPKMNTalkSwarm1:
 .generate_alt_number
 	ld hl, wSwarmFlags
 	set SWARMFLAGS_SWARM_ACTIVE, [hl]
-	call .InJohto
-	jp nc, .generate_alt_number_kanto
 	ld a, (SwarmLocationDataJohtoAltEnd - SwarmLocationDataJohtoAlt) / 5
 	call RandomRange ; genrate a random number between 0 and a
 	ld hl, SwarmLocationDataJohtoAlt
-	ld bc, 5
-	call AddNTimes
-	ld a, [hli]
-	push hl
-	call .store_mon_name
-	pop hl
-	ld d, [hl]
-	inc hl
-	ld e, [hl]
-	inc hl
-	push hl
-	farcall StoreSwarmMapIndicesAlternate
-	pop hl
-	ld e, [hl]
-	inc hl
-	ld a, [hl]
-	and a
-	jr z, .finish
-	ld [wFishingSwarmFlag], a
-	jr .finish
-
-.generate_number_kanto
-	ld a, (SwarmLocationDataKantoEnd - SwarmLocationDataKanto) / 5
-	call RandomRange ; genrate a random number between 0 and a
-	ld hl, SwarmLocationDataKanto
-	ld bc, 5
-	call AddNTimes
-	ld a, [hli]
-	push hl
-	call .store_mon_name
-	pop hl
-	ld d, [hl]
-	inc hl
-	ld e, [hl]
-	inc hl
-	push hl
-	farcall StoreSwarmMapIndices
-	pop hl
-	ld e, [hl]
-	inc hl
-	ld a, [hl]
-	and a
-	jr z, .finish
-	ld [wFishingSwarmFlag], a
-	jr .finish
-
-.generate_alt_number_kanto
-	ld a, (SwarmLocationDataKantoAltEnd - SwarmLocationDataKantoAlt) / 5
-	call RandomRange ; genrate a random number between 0 and a
-	ld hl, SwarmLocationDataKantoAlt
 	ld bc, 5
 	call AddNTimes
 	ld a, [hli]

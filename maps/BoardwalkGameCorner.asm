@@ -230,10 +230,10 @@ BoardwalkGameCornerItemVendorScript:
 .CovenantOrb:
 	checkcoins 3000
 	ifequal HAVE_LESS, BoardwalkGameCornerPrizeVendor_NotEnoughCoinsScript
-	itemtotext COVENANT_ORB, MEM_BUFFER_0
+	itemtotext LINKING_CORD, MEM_BUFFER_0
 	scall BoardwalkGameCornerPrizeVendor_ConfirmPurchaseScript
 	iffalse BoardwalkGameCornerPrizeVendor_CancelPurchaseScript
-	giveitem COVENANT_ORB
+	giveitem LINKING_CORD
 	iffalse BoardwalkGameCornerPrizeMonVendor_NoRoomForPrizeScript
 	takecoins 3000
 	jump BoardwalkGameCornerItemVendor_FinishScript

@@ -88,7 +88,7 @@ RocketGruntsSeeYou:
 	
 	
 CMDanceHallItemball:
-	itemball COVENANT_ORB
+	itemball LINKING_CORD
 
 
 CastleMountain1FDanceHall_MapEvents:
