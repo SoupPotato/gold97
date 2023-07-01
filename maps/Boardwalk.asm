@@ -506,7 +506,7 @@ BoardwalkRinringGuyText:
 	done
 
 BoardwalkRinringGuyPaydayText:
-	text "That's PAYDAY."
+	text "That's PAY DAY."
 	
 	para "You can use it to"
 	line "rack in cash when"
@@ -517,7 +517,7 @@ BoardwalkRinringGuyPaydayText:
 	
 	para "You might run the"
 	line "GAME CORNER out of"
-	cont "buisness!"
+	cont "business!"
 	done
 
 BoardwalkRinringText:

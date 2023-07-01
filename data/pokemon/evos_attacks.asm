@@ -2750,6 +2750,7 @@ BelmittEvosAttacks:
 	db 1, SLEEP_POWDER
 	db 1, SWEET_SCENT
 	db 1, RAZOR_LEAF
+	db 44, LOVELY_KISS
 	db 55, GIGA_DRAIN
 	db 0 ; no more level-up moves
 
@@ -2827,12 +2828,13 @@ AipomEvosAttacks:
 	db 1, SCRATCH
 	db 1, TAIL_WHIP
 	db 6, SAND_ATTACK
-	db 12, BATON_PASS
-	db 19, FURY_SWIPES
-	db 24, PURSUIT
-	db 27, SWIFT
-	db 36, MUD_SLAP
-	db 46, MIMIC
+	db 10, BATON_PASS
+	db 16, FURY_SWIPES
+	db 20, SWIFT
+	db 26, MUD_SLAP
+	db 30, SCREECH
+	db 36, AGILITY
+	db 40, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 GupgoldEvosAttacks:
@@ -2950,16 +2952,15 @@ UmbreonEvosAttacks:
 MurkrowEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, PECK
-	db 1, SAND_ATTACK
-	db 7, PURSUIT
-	db 13, HAZE
-	db 19, NIGHT_SHADE
-	db 25, WING_ATTACK
+	db 5, PURSUIT
+	db 11, HAZE
+	db 15, WING_ATTACK
+	db 21, NIGHT_SHADE
+	db 25, MEAN_LOOK
 	db 31, FAINT_ATTACK
-	db 37, DETECT
-	db 43, MEAN_LOOK
-	db 49, DRILL_PECK
-	db 55, PERISH_SONG
+	db 35, SCREECH
+	db 41, DRILL_PECK
+	db 45, PERISH_SONG
 	db 0 ; no more level-up moves
 
 SlowkingEvosAttacks:
@@ -3683,14 +3684,16 @@ WolfanEvosAttacks:
 	db 1, TACKLE
 	db 1, LEER
 	db 7, POWDER_SNOW
-	db 12, FURY_SWIPES
-	db 18, LOW_KICK
-	db 23, SAFEGUARD
-	db 29, ICY_WIND
-	db 34, SLASH
-	db 40, SCREECH
-	db 45, CONFUSE_RAY
-	db 51, BLIZZARD
+	db 11, FURY_SWIPES
+	db 15, LOW_KICK
+	db 21, SCARY_FACE
+	db 25, ICY_WIND
+	db 29, SCREECH
+	db 35, SLASH
+	db 39, CONFUSE_RAY
+	db 43, SWORDS_DANCE
+	db 49, BLIZZARD
+	db 53, REVERSAL
 	db 0 ; no more level-up moves
 
 WarwolfEvosAttacks:
@@ -3698,15 +3701,17 @@ WarwolfEvosAttacks:
 	db 1, TACKLE
 	db 1, LEER
 	db 7, POWDER_SNOW
-	db 12, FURY_SWIPES
-	db 18, LOW_KICK
-	db 23, SAFEGUARD
-	db 29, ICY_WIND
+	db 11, FURY_SWIPES
+	db 15, LOW_KICK
+	db 21, SCARY_FACE
+	db 25, ICY_WIND
+	db 29, SCREECH
 	db 31, ICE_PUNCH
-	db 35, SLASH
-	db 41, SCREECH
-	db 49, CONFUSE_RAY
-	db 56, BLIZZARD
+	db 38, SLASH
+	db 43, CONFUSE_RAY
+	db 48, SWORDS_DANCE
+	db 54, BLIZZARD
+	db 59, REVERSAL
 	db 0 ; no more level-up moves
 
 LickilordEvosAttacks:
@@ -3777,13 +3782,13 @@ LeafeonEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, TAIL_WHIP
-	db 8, SAND_ATTACK
-	db 16, RAZOR_LEAF
-	db 23, QUICK_ATTACK
-	db 30, DOUBLE_KICK
-	db 36, MEGA_DRAIN
-	db 42, SLEEP_POWDER
+	db 6, SAND_ATTACK
+	db 10, RAZOR_LEAF
+	db 14, QUICK_ATTACK
+	db 18, DOUBLE_KICK
+	db 23, MEGA_DRAIN
+	db 27, SLEEP_POWDER
+	db 33, SUNNY_DAY
+	db 38, SYNTHESIS
 	db 45, SOLARBEAM
-	db 47, AGILITY
-	db 52, SYNTHESIS
 	db 0 ; no more level-up moves
