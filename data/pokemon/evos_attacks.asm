@@ -1122,8 +1122,6 @@ SlowbroEvosAttacks:
 	db 1, TACKLE
 	db 1, GROWL
 	db 1, WATER_GUN
-	db 6, GROWL
-	db 12, WATER_GUN
 	db 17, CONFUSION
 	db 23, DISABLE
 	db 28, HEADBUTT
@@ -1173,8 +1171,8 @@ FarfetchDEvosAttacks:
 	db 1, PECK
 	db 1, SAND_ATTACK
 	db 4, LEER
-	db 9, FURY_CUTTER
-	db 13, FURY_ATTACK
+	db 9, FURY_ATTACK
+	db 13, FURY_CUTTER
 	db 19, WING_ATTACK
 	db 25, FAINT_ATTACK
 	db 31, SLASH
@@ -1565,6 +1563,7 @@ HitmonchanEvosAttacks:
 
 LickitungEvosAttacks:
 	db EVOLVE_LEVEL, 33, LICKILORD
+LickilordEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, LICK
 	db 6, DEFENSE_CURL
@@ -1651,6 +1650,7 @@ RhydonEvosAttacks:
 
 ChanseyEvosAttacks:
 	db EVOLVE_HAPPINESS, TR_ANYTIME, BLISSEY
+BlisseyEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, POUND
 	db 4, GROWL
@@ -1752,8 +1752,7 @@ SeakingEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, PECK
 	db 1, TAIL_WHIP
-	db 1, TAIL_WHIP
-	db 8, SUPERSONIC
+	db 1, SUPERSONIC
 	db 15, FURY_ATTACK
 	db 22, FLAIL
 	db 29, HORN_ATTACK
@@ -1832,8 +1831,6 @@ JynxEvosAttacks:
 	db 1, LICK
 	db 1, LOVELY_KISS
 	db 1, POWDER_SNOW
-	db 6, LOVELY_KISS
-	db 10, POWDER_SNOW
 	db 15, DOUBLESLAP
 	db 19, CONFUSION
 	db 24, ICE_PUNCH
@@ -2195,8 +2192,6 @@ DragonairEvosAttacks:
 	db 1, LEER
 	db 1, THUNDER_WAVE
 	db 1, TWISTER
-	db 8, THUNDER_WAVE
-	db 15, TWISTER
 	db 22, DRAGON_RAGE
 	db 29, SLAM
 	db 38, AGILITY
@@ -2211,8 +2206,6 @@ DragoniteEvosAttacks:
 	db 1, LEER
 	db 1, THUNDER_WAVE
 	db 1, TWISTER
-	db 8, THUNDER_WAVE
-	db 15, TWISTER
 	db 22, DRAGON_RAGE
 	db 29, SLAM
 	db 38, AGILITY
@@ -2843,12 +2836,13 @@ GupgoldEvosAttacks:
 	db 1, PECK
 	db 1, TAIL_WHIP
 	db 8, SUPERSONIC
-	db 12, HORN_ATTACK
-	db 20, TACKLE
-	db 25, FURY_ATTACK
-	db 32, WATERFALL
-	db 36, HORN_DRILL
-	db 41, AGILITY
+	db 14, FURY_ATTACK
+	db 21, FLAIL
+	db 27, HORN_ATTACK
+	db 34, WATERFALL
+	db 40, AGILITY
+	db 47, MEGAHORN
+	db 53, HORN_DRILL
 	db 0 ; no more level-up moves
 
 SunfloraEvosAttacks:
@@ -3267,8 +3261,8 @@ MadameEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SAND_ATTACK
 	db 4, LEER
-	db 9, FURY_CUTTER
-	db 13, FURY_ATTACK
+	db 9, FURY_ATTACK
+	db 13, FURY_CUTTER
 	db 19, WING_ATTACK
 	db 25, FAINT_ATTACK
 	db 31, SLASH
@@ -3712,36 +3706,6 @@ WarwolfEvosAttacks:
 	db 48, SWORDS_DANCE
 	db 54, BLIZZARD
 	db 59, REVERSAL
-	db 0 ; no more level-up moves
-
-LickilordEvosAttacks:
-	db 0 ; no more evolutions
-	db 1, LICK
-	db 6, DEFENSE_CURL
-	db 10, SUPERSONIC
-	db 15, WRAP
-	db 19, STOMP
-	db 24, DISABLE
-	db 28, SLAM
-	db 33, ROLLOUT
-	db 37, SCREECH
-	db 42, THRASH
-	db 46, AMNESIA
-	db 0 ; no more level-up moves
-
-BlisseyEvosAttacks:
-	db 0 ; no more evolutions
-	db 1, POUND
-	db 4, GROWL
-	db 7, TAIL_WHIP
-	db 10, DEFENSE_CURL
-	db 13, DOUBLESLAP
-	db 18, SING
-	db 23, MINIMIZE
-	db 28, EGG_BOMB
-	db 33, SOFTBOILED
-	db 40, LIGHT_SCREEN
-	db 47, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 LugiaEvosAttacks:
