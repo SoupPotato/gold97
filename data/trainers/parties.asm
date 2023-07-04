@@ -1144,7 +1144,7 @@ BeautyGroup:
 	db "CAROLINE@", TRAINERTYPE_NORMAL
 	db 30, MARILL
 	db 32, SEEL
-	db 30, MARILL
+	db 30, AZUMARILL
 	db -1 ; end
 
 	; BEAUTY (8)
@@ -1963,7 +1963,7 @@ SwimmerFGroup:
 
 	; SWIMMERF (11)
 	db "KATIE@", TRAINERTYPE_NORMAL ; used, motobu path
-	db 61, MARILL
+	db 61, AZUMARILL
 	db -1 ; end
 
 	; SWIMMERF (12)
@@ -1979,7 +1979,7 @@ SwimmerFGroup:
 	; SWIMMERF (14)
 	db "NICOLE@", TRAINERTYPE_NORMAL; used, route 20
 	db 50, MARILL
-	db 50, MARILL
+	db 50, AZUMARILL
 	db 53, LAPRAS
 	db -1 ; end
 
