@@ -54,8 +54,8 @@ GenerateSwarmShiny:
 	jp z, .wolfan
 	cp NATIONAL_PARK
 	jp z, .snubbull
-;	cp ROUTE_45
-;	jp z, .gligar
+	cp KANTO_REGION_M
+	jp z, .kangaskhan
 ;	cp VICTORY_ROAD
 ;	jp z, .golbat
 ;	cp ROUTE_26
@@ -196,10 +196,10 @@ GenerateSwarmShiny:
 	ld a, [wCurPartySpecies]
 	cp SNUBBULL
 	jp .next
-;.gligar
-;	ld a, [wCurPartySpecies]
-;	cp GLIGAR
-;	jp .next
+.kangaskhan
+	ld a, [wCurPartySpecies]
+	cp KANGASKHAN
+	jp .next
 ;.golbat
 ;	ld a, [wCurPartySpecies]
 ;	cp GOLBAT

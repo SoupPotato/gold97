@@ -533,4 +533,32 @@ SwarmGrassWildMons:
 	db 35, CHANSEY
 	db 36, CHANSEY
 
+; Kangaskhan swarm
+	map_id ROCK_TUNNEL_B1F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 40, KANGASKHAN
+	db 41, CUBONE
+	db 43, KANGASKHAN
+	db 41, GRAVELER
+	db 42, GOLBAT
+	db 41, MAROWAK
+	db 41, ONIX
+	; day
+	db 40, KANGASKHAN
+	db 41, CUBONE
+	db 43, KANGASKHAN
+	db 41, GRAVELER
+	db 42, GOLBAT
+	db 41, MAROWAK
+	db 41, ONIX
+	; nite
+	db 40, KANGASKHAN
+	db 41, GOLBAT
+	db 43, KANGASKHAN
+	db 41, HAUNTER
+	db 42, CROBAT
+	db 41, CROBAT
+	db 41, ONIX
+
 	db -1 ; end

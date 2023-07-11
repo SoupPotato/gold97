@@ -24,6 +24,7 @@ SwarmLocationDataJohto::
 	db DELIBIRD,   GROUP_DEEPWATER_PASSAGE_B2F,    MAP_DEEPWATER_PASSAGE_B2F,       DEEPWATER_PASSAGE,  FISHSWARM_NONE
 	db WOLFAN,     GROUP_ROUTE_112,                MAP_ROUTE_112,                   ROUTE_112,          FISHSWARM_NONE
 	db SNUBBULL,   GROUP_NATIONAL_PARK,            MAP_NATIONAL_PARK,               NATIONAL_PARK,      FISHSWARM_NONE
+	db KANGASKHAN, GROUP_ROCK_TUNNEL_B1F,          MAP_ROCK_TUNNEL_B1F,             KANTO_REGION_M,        FISHSWARM_NONE
 SwarmLocationDataJohtoEnd::
 
 SwarmLocationDataJohtoAlt::
@@ -52,6 +53,7 @@ SwarmLocationDataJohtoAlt::
 	db JYNX,       GROUP_DEEPWATER_PASSAGE_B2F,    MAP_DEEPWATER_PASSAGE_B2F,       DEEPWATER_PASSAGE,  FISHSWARM_NONE
 	db SKARMORY,   GROUP_ROUTE_112,                MAP_ROUTE_112,                   ROUTE_112,          FISHSWARM_NONE
 	db TOGEPI,     GROUP_NATIONAL_PARK,            MAP_NATIONAL_PARK,               NATIONAL_PARK,      FISHSWARM_NONE
+	db DITTO,      GROUP_KANTO_REGION,             MAP_KANTO_REGION,                KANTO_REGION_M,       FISHSWARM_NONE
 SwarmLocationDataJohtoAltEnd::
 
 SwarmLocationDataKanto::

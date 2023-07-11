@@ -54,8 +54,8 @@ GenerateAltSwarmShiny:
 	jp z, .skarmory
 	cp NATIONAL_PARK
 	jp z, .togepi
-;	cp ROUTE_45
-;	jp z, .gligar
+	cp KANTO_REGION_M
+	jp z, .ditto
 ;	cp VICTORY_ROAD
 ;	jp z, .golbat
 ;	cp ROUTE_26
@@ -196,10 +196,10 @@ GenerateAltSwarmShiny:
 	ld a, [wCurPartySpecies]
 	cp TOGEPI
 	jp .next
-;.gligar
-;	ld a, [wCurPartySpecies]
-;	cp GLIGAR
-;	jp .next
+.ditto
+	ld a, [wCurPartySpecies]
+	cp DITTO
+	jp .next
 ;.golbat
 ;	ld a, [wCurPartySpecies]
 ;	cp GOLBAT

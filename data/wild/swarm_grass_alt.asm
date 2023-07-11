@@ -673,4 +673,32 @@ SwarmGrassWildMonsAlt:
 	db 35, CHANSEY
 	db 36, CHANSEY
 
+; Ditto swarm
+	map_id KANTO_REGION
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 39, DITTO
+	db 39, RATICATE
+	db 40, DITTO
+	db 40, JIGGLYPUFF
+	db 43, FEAROW
+	db 40, PIKACHU
+	db 43, DITTO
+	; day
+	db 39, DITTO
+	db 39, RATICATE
+	db 40, DITTO
+	db 40, JIGGLYPUFF
+	db 43, FEAROW
+	db 40, PIKACHU
+	db 43, DITTO
+	; nite
+	db 39, DITTO
+	db 39, RATICATE
+	db 40, DITTO
+	db 40, GLOOM
+	db 43, PERSIAN
+	db 40, PIKACHU
+	db 43, DITTO
+
 	db -1 ; end
