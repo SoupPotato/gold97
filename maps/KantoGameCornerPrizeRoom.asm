@@ -129,7 +129,7 @@ CeladonPrizeRoomPokemonVendor:
 	verticalmenu
 	closewindow
 	ifequal 1, .pikachu
-	ifequal 2, .porygon
+	ifequal 2, .dratini
 	ifequal 3, .wolfan
 	jump CeladonPrizeRoom_cancel
 
@@ -151,21 +151,21 @@ CeladonPrizeRoomPokemonVendor:
 	takecoins 2222
 	jump .loop
 
-.porygon
+.dratini
 	checkcoins 5555
 	ifequal HAVE_LESS, CeladonPrizeRoom_notenoughcoins
 	checkcode VAR_PARTYCOUNT
 	ifequal PARTY_LENGTH, CeladonPrizeRoom_notenoughroom
-	pokenamemem PORYGON, MEM_BUFFER_0
+	pokenamemem DRATINI, MEM_BUFFER_0
 	scall CeladonPrizeRoom_askbuy
 	iffalse CeladonPrizeRoom_cancel
 	waitsfx
 	playsound SFX_TRANSACTION
 	writetext CeladonPrizeRoom_HereYouGoText
 	waitbutton
-	writebyte PORYGON
+	writebyte DRATINI
 	special GameCornerPrizeMonCheckDex
-	givepoke PORYGON, 15
+	givepoke DRATINI, 20
 	takecoins 5555
 	jump .loop
 
@@ -183,7 +183,7 @@ CeladonPrizeRoomPokemonVendor:
 	waitbutton
 	writebyte WOLFAN
 	special GameCornerPrizeMonCheckDex
-	givepoke WOLFAN, 40
+	givepoke WOLFAN, 30
 	takecoins 8888
 	jump .loop
 
@@ -197,8 +197,8 @@ CeladonPrizeRoomPokemonVendor:
 	db STATICMENU_CURSOR ; flags
 	db 4 ; items
 	db "PIKACHU    2222@"
-	db "PORYGON    5555@"
-	db "WOLFMAN    8888@"
+	db "DRATINI    5555@"
+	db "WOLFAN     8888@"
 	db "CANCEL@"
 	
 DummyVendorScript:
@@ -437,7 +437,7 @@ SendItemToHomePCTextKanto:
 	done
 
 CeladonPrizeRoomGentlemanText:
-	text "I wanted PORYGON,"
+	text "I wanted DRATINI,"
 	line "but I was short by"
 	cont "100 coins…"
 	done
