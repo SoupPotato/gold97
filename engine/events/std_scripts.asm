@@ -206,14 +206,6 @@ HomepageScript:
 	farjumptext HomepageText
 
 Radio1Script:
-	checkevent EVENT_ROUTE_102_SILVER
-	iftrue .kentalk
-	opentext
-	farwritetext OakMissingRadioText
-	waitbutton
-	closetext
-	end
-.kentalk
 	opentext
 	writebyte MAPRADIO_POKEMON_CHANNEL
 	special MapRadio
