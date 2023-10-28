@@ -2298,8 +2298,8 @@ FlambearEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, LEER
-	db 6, SAND_ATTACK
-	db 11, EMBER
+	db 6, EMBER
+	db 11, SAND_ATTACK
 	db 17, BITE
 	db 22, SCARY_FACE
 	db 27, FLAME_WHEEL
@@ -2314,8 +2314,8 @@ VolbearEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, LEER
-	db 1, SAND_ATTACK
-	db 11, EMBER
+	db 1, EMBER
+	db 11, SAND_ATTACK
 	db 18, BITE
 	db 24, SCARY_FACE
 	db 29, FLAME_WHEEL
@@ -2329,8 +2329,8 @@ DynabearEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, LEER
-	db 1, SAND_ATTACK
 	db 1, EMBER
+	db 1, SAND_ATTACK
 	db 18, BITE
 	db 24, SCARY_FACE
 	db 29, FLAME_WHEEL
@@ -2345,8 +2345,8 @@ CruizeEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, POUND
 	db 1, GROWL
-	db 7, MIST
-	db 12, WATER_GUN
+	db 7, WATER_GUN
+	db 12, MIST
 	db 17, POWDER_SNOW
 	db 22, ENCORE
 	db 28, BUBBLEBEAM
@@ -2361,8 +2361,8 @@ AqualloEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, POUND
 	db 1, GROWL
-	db 1, MIST
-	db 12, WATER_GUN
+	db 1, WATER_GUN
+	db 12, MIST
 	db 17, POWDER_SNOW
 	db 23, ENCORE
 	db 30, BUBBLEBEAM
@@ -2376,8 +2376,8 @@ AquariusEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, POUND
 	db 1, GROWL
-	db 1, MIST
 	db 1, WATER_GUN
+	db 1, MIST
 	db 17, POWDER_SNOW
 	db 23, ENCORE
 	db 32, BUBBLEBEAM
