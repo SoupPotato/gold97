@@ -202,7 +202,7 @@ BoardwalkGameCornerItemVendorScript:
 	closewindow
 	ifequal 1, .DragonScale
 	ifequal 2, .Up_Grade
-	ifequal 3, .CovenantOrb
+	ifequal 3, .LinkingCord
 	jump BoardwalkGameCornerPrizeVendor_CancelPurchaseScript
 	
 .DragonScale:
@@ -227,7 +227,7 @@ BoardwalkGameCornerItemVendorScript:
 	takecoins 2000
 	jump BoardwalkGameCornerItemVendor_FinishScript
 
-.CovenantOrb:
+.LinkingCord:
 	checkcoins 3000
 	ifequal HAVE_LESS, BoardwalkGameCornerPrizeVendor_NotEnoughCoinsScript
 	itemtotext LINKING_CORD, MEM_BUFFER_0
@@ -304,7 +304,7 @@ BoardwalkGameCornerItemVendorMenu2Header:
 	db 4 ; items
 	db "DRAGON SCALE 2000@"
 	db "UP-GRADE     2000@"
-	db "COVENANT ORB 3000@"
+	db "LINKING CORD 3000@"
 	db "CANCEL@"
 	
 BoardwalkGameCornerStoneVendor_FinishScript:
